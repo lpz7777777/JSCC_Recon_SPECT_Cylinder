@@ -45,7 +45,7 @@ def main():
     intensity_list = [1]
     s_map_d_ratio = 1.0
     data_file_name = "ContrastPhantom_240_30"
-    count_level = "5e9"
+    count_level = "2e10"
     ds = 1
 
     pixel_num_layer, pixel_num_z, rotate_num = 1160, 20, 10
@@ -54,9 +54,9 @@ def main():
     ene_resolution_662keV = 0.1
 
     iter_arg = argparse.Namespace()
-    iter_arg.sc, iter_arg.jsccd, iter_arg.jsccsd = 1000, 500, 1000
+    iter_arg.sc, iter_arg.jsccd, iter_arg.jsccsd = 4000, 2000, 4000
     iter_arg.admm_inner_single, iter_arg.admm_inner_compton, iter_arg.mode = 1, 1, 0
-    iter_arg.save_iter_step = 10
+    iter_arg.save_iter_step = 100
     iter_arg.osem_subset_num = 8
     iter_arg.t_divide_num = 10
     iter_arg.ene_num = len(e0_list)

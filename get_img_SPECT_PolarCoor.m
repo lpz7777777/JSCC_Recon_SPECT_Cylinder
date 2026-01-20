@@ -4,7 +4,7 @@ load(sprintf("%sRotMat.mat", file_path));
 load(sprintf("%sRotMatInv.mat", file_path));
 load(sprintf("%scoor_polar.mat", file_path));
 
-show_center = [-40, 0, 0];
+show_center = [-30, 0, 0];
 generate = 0;
 
 if folderPath ~= 0
@@ -19,8 +19,8 @@ end
 Path = sprintf("./Figure/%s/", Name);
 Sigma_Gaussfit = 0.01;
 Subset_Num = 1;
-iter_max = 2000;
-iter_interval = 10;
+iter_max = 4000;
+iter_interval = 100;
 % iter_show_tmp = 50:50:200;
 % iter_show_tmp = 25:25:100;
 % iter_show_tmp = 10:10:40;
@@ -69,18 +69,18 @@ mkdir(Path_Cartesian);
 
 
 %%
-f = figure;
-f.Position = [100, 100, 1600, 800];
-t = tiledlayout(1, 2);
-
-nexttile;
-plot(coor_polar(:, 1), coor_polar(:, 2), ".", "MarkerSize", 6);axis equal;axis square;
-xlim([-150, 150]);
-ylim([-150, 150]);
-nexttile;
-plot(reshape(coor_cartesian_x, [], 1), reshape(coor_cartesian_y, [], 1), ".", "MarkerSize", 3);axis equal;axis square;
-xlim([-150, 150]);
-ylim([-150, 150]);
+% f = figure;
+% f.Position = [100, 100, 1600, 800];
+% t = tiledlayout(1, 2);
+% 
+% nexttile;
+% plot(coor_polar(:, 1), coor_polar(:, 2), ".", "MarkerSize", 6);axis equal;axis square;
+% xlim([-150, 150]);
+% ylim([-150, 150]);
+% nexttile;
+% plot(reshape(coor_cartesian_x, [], 1), reshape(coor_cartesian_y, [], 1), ".", "MarkerSize", 3);axis equal;axis square;
+% xlim([-150, 150]);
+% ylim([-150, 150]);
 %%
 if generate == 1
 [coor_cartesian_x, coor_cartesian_y] = meshgrid(((-fov_l_x/2 + pixel_l_x/2) : pixel_l_x : (fov_l_x/2 - pixel_l_x/2)), ((-fov_l_y/2 + pixel_l_y/2) : pixel_l_y : (fov_l_y/2 - pixel_l_y/2)));

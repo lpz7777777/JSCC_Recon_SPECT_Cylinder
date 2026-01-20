@@ -103,7 +103,7 @@ def main():
 
     iter_arg.event_level = 2
     iter_arg.event_level = 2
-    iter_arg.num_workers = 10
+    iter_arg.num_workers = 1
 
     # ===== Down Sampling Parameters =====
     flag_save_t = 0
