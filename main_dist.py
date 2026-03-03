@@ -45,16 +45,16 @@ def main():
     intensity_list = [1]
     s_map_d_ratio = 1.0
     data_file_name = "ContrastPhantom_240_30"
-    count_level = "2e10"
+    count_level = "5e10"
     ds = 1
 
-    pixel_num_layer, pixel_num_z, rotate_num = 1160, 20, 10
+    pixel_num_layer, pixel_num_z, rotate_num = 1280, 20, 20
     pixel_num = pixel_num_layer * pixel_num_z
-    delta_r1, delta_r2, alpha = 2, 2, 1
+    delta_r1, delta_r2, alpha = 1.25, 1.25, 1
     ene_resolution_662keV = 0.1
 
     iter_arg = argparse.Namespace()
-    iter_arg.sc, iter_arg.jsccd, iter_arg.jsccsd = 4000, 2000, 4000
+    iter_arg.sc, iter_arg.jsccd, iter_arg.jsccsd = 20000, 10000, 20000
     iter_arg.admm_inner_single, iter_arg.admm_inner_compton, iter_arg.mode = 1, 1, 0
     iter_arg.save_iter_step = 100
     iter_arg.osem_subset_num = 8
@@ -82,7 +82,7 @@ def main():
         ene_threshold_max = 2 * e0 ** 2 / (0.511 + 2 * e0) - 0.001
         ene_threshold_min = 0.05
 
-        factor_path = f"./Factors/{round(1000 * e0)}keV"
+        factor_path = f"./Factors/{round(1000 * e0)}keV_RotateNum{rotate_num}"
         # 1. Sysmat 分片 (按 bin 维度切分)
         full_sysmat = torch.from_numpy(np.fromfile(f"{factor_path}/SysMat_polar", dtype=np.float32).reshape(pixel_num, -1)).transpose(0, 1) * intensity
         total_bins = full_sysmat.size(0)
@@ -93,14 +93,14 @@ def main():
         # print(f"global_rank:{global_rank}, full_sysmat.size(0):{full_sysmat.size(0)}, full_sysmat.size(1):{full_sysmat.size(1)}, idx_start:{idx_start}, idx_end:{idx_end}")
 
         # 2. Proj 分片 (按对应 bin 切分)
-        full_proj = torch.from_numpy(np.genfromtxt(f"./CntStat/CntStat_{data_file_name}_{round(1000 * e0)}keV_{count_level}.csv", delimiter=",", dtype=np.float32).reshape(rotate_num, -1)).transpose(0, 1)
+        full_proj = torch.from_numpy(np.genfromtxt(f"./CntStat/{round(1000 * e0)}keV_RotateNum{rotate_num}/CntStat_{data_file_name}_{count_level}.csv", delimiter=",", dtype=np.float32).reshape(rotate_num, -1)).transpose(0, 1)
         proj_local_all.append(full_proj[idx_start:idx_end, :])
-        single_event_count_total = single_event_count_total + full_proj.sum().item()
+        single_event_count_total = single_event_count_total + round(full_proj.sum().item())
 
         # 3. List 分片 (按事件条数切分)
         list_rotate_local = []
         for i in range(rotate_num):
-            full_list = torch.from_numpy(np.genfromtxt(f"./List/List_{data_file_name}_{round(1000 * e0)}keV_{count_level}/{i + 1}.csv", delimiter=",", dtype=np.float32)[:, 0:4])
+            full_list = torch.from_numpy(np.genfromtxt(f"./List/{round(1000 * e0)}keV_RotateNum{rotate_num}/List_{data_file_name}_{count_level}/{i + 1}.csv", delimiter=",", dtype=np.float32)[:, 0:4])
             ev_per_rank = full_list.size(0) // world_size
             ev_start, ev_end = global_rank * ev_per_rank, ((global_rank + 1) * ev_per_rank if global_rank != world_size - 1 else full_list.size(0))
             list_rotate_local.append(full_list[ev_start:ev_end, :])
@@ -134,9 +134,10 @@ def main():
     # ===== Step 3: Processing Local List =====
     t_local_all = []
     for idx, (list_local, sysmat_l, (e0, er, e_max, e_min, e_sum)) in enumerate(zip(list_local_all, sysmat_local_all, e_params)):
-        detector = torch.from_numpy(np.genfromtxt(f"./Factors/{round(1000 * e0)}keV/Detector.csv", delimiter=",", dtype=np.float32)[:, 1:4]).to(device)
-        coor_polar = torch.from_numpy(np.genfromtxt(f"./Factors/{round(1000 * e0)}keV/coor_polar_full.csv", delimiter=",", dtype=np.float32)).to(device)
-        sysmat_full_gpu = torch.from_numpy(np.fromfile(f"./Factors/{round(1000 * e0)}keV/SysMat_polar", dtype=np.float32).reshape(pixel_num, -1)).transpose(0, 1).to(device)
+        factor_path = f"./Factors/{round(1000 * e0)}keV_RotateNum{rotate_num}"
+        detector = torch.from_numpy(np.genfromtxt(f"{factor_path}/Detector.csv", delimiter=",", dtype=np.float32)[:, 1:4]).to(device)
+        coor_polar = torch.from_numpy(np.genfromtxt(f"{factor_path}/coor_polar_full.csv", delimiter=",", dtype=np.float32)).to(device)
+        sysmat_full_gpu = torch.from_numpy(np.fromfile(f"{factor_path}/SysMat_polar", dtype=np.float32).reshape(pixel_num, -1)).transpose(0, 1).to(device)
 
         t_rotate_local = []
 
@@ -169,8 +170,9 @@ def main():
         s_map_arg.d = s_map_arg.s * s_map_d_ratio
 
     s_map_arg.j = alpha * s_map_arg.s + (2 - alpha) * s_map_arg.d
+    compton_event_count_total = compton_event_count_total * world_size
 
-    save_path = f"./Figure_Dist/SingleEnergy_{data_file_name}_{round(1000 * e0_list[0])}keV_{count_level}_{ds}_SMap{s_map_d_ratio}_Delta{delta_r1}_Alpha{alpha}_ER{ene_resolution_662keV}_OSEM{iter_arg.osem_subset_num}_ITER{iter_arg.jsccsd}_SDU{single_event_count_total}_DDU{compton_event_count_total}/Polar/"
+    save_path = f"./Figure_Dist/SingleEnergy_RotateNum{rotate_num}_{data_file_name}_{round(1000 * e0_list[0])}keV_{count_level}_{ds}_SMap{s_map_d_ratio}_Delta{delta_r1}_Alpha{alpha}_ER{ene_resolution_662keV}_OSEM{iter_arg.osem_subset_num}_ITER{iter_arg.jsccsd}_SDU{single_event_count_total}_DDU{compton_event_count_total}/Polar/"
     if global_rank == 0: os.makedirs(save_path, exist_ok=True)
     dist.barrier()
 

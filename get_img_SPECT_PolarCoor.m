@@ -1,10 +1,10 @@
 folderPath = uigetdir("./Figure/");
-file_path = "./Factors/511keV/";
+file_path = "./Factors/511keV_RotateNum10/";
 load(sprintf("%sRotMat.mat", file_path));
 load(sprintf("%sRotMatInv.mat", file_path));
 load(sprintf("%scoor_polar.mat", file_path));
 
-show_center = [-30, 0, 0];
+show_center = [30, 0, 0];
 generate = 0;
 
 if folderPath ~= 0
@@ -19,7 +19,7 @@ end
 Path = sprintf("./Figure/%s/", Name);
 Sigma_Gaussfit = 0.01;
 Subset_Num = 1;
-iter_max = 4000;
+iter_max = 20000;
 iter_interval = 100;
 % iter_show_tmp = 50:50:200;
 % iter_show_tmp = 25:25:100;
@@ -32,9 +32,9 @@ iter_interval = 100;
 
 % iter_show_tmp = 1250:1250:5000;
 
-% iter_show_tmp = 2000:2000:8000;
+iter_show_tmp = 2000:2000:8000;
 % iter_show_tmp = 1000:1000:4000;
-iter_show_tmp = 500:500:2000;
+% iter_show_tmp = 500:500:2000;
 % iter_show_tmp = 2500:2500:10000;
 % iter_show_tmp = 5000:5000:20000;
 
@@ -60,7 +60,7 @@ Max_Y = Max_X;
 Min_Z = -1/2 * pixel_num_cartesian_z * pixel_l_z;
 Max_Z = -Min_Z;
 
-color = 1 - gray(256);
+color = flipud(gray(1024));
 % color = hot;
 
 Path_Polar = sprintf("%sPolar/", Path);
@@ -203,22 +203,23 @@ for iter_show = iter_show_tmp
     % SC
     % --------Transverse--------
     nexttile(t_outer, [1, 3]);
-    img_tmp = img_sc(:, :, show_center_pixcel(3));
-    img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
+    img_tmp = img_sc(:, :, show_center_pixcel(3)).';
+    img_tmp = flip(imgaussfilt(img_tmp, Sigma_Gaussfit), 1);
     max_colorbar = 1 * max(img_tmp(range_U,range_V), [], "all");
-    imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    % imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp);
     cb = colorbar("westoutside");
     cb.Label.String = sprintf("Iteration=%d", iter_show);
     cb.Label.FontSize = 11;
     axis equal                                                                                                                                             
     colormap(color);
-    ylabel("x (mm)");
+    xlabel("x (mm)");
     ylim([Min_X Max_X]);
     xlim([Min_Y Max_Y]);
 
     hold on
-    line([Min_Y Max_Y]*3/4, [show_center(1), show_center(1)], 'Color','red','LineStyle','--', "LineWidth", 0.5);
-    line([show_center(2), show_center(2)], [Min_X Max_X]*3/4, 'Color','blue','LineStyle','--', "LineWidth", 0.5);
+    line([show_center(1), show_center(1)], [Min_Y Max_Y]*3/4, 'Color','red','LineStyle','--', "LineWidth", 0.5);
+    line([Min_X Max_X]*3/4, [show_center(2), show_center(2)], 'Color','blue','LineStyle','--', "LineWidth", 0.5);
 
     if id_iter_show == 1
         title(sprintf("SC\nTransverse"), "FontSize", 11);
@@ -230,7 +231,8 @@ for iter_show = iter_show_tmp
     nexttile(t_outer, [1, 2]);
     img_tmp = squeeze(img_sc(:, show_center_pixcel(2), :));
     img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
-    imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp, [0, max_colorbar]);
+    % imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp, [0, max_colorbar]);
+    imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp);
     axis equal                                                                                                                                             
     colormap(color);
     ylabel("x (mm)");
@@ -251,7 +253,8 @@ for iter_show = iter_show_tmp
     img_tmp = squeeze(img_sc(show_center_pixcel(1), :, :));
     img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
     % max_colorbar = 1 * max(img_tmp(range_V, :), [], "all");
-    imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    % imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp);
     axis equal                                                                                                                                             
     colormap(color);
     ylabel("y (mm)");
@@ -273,10 +276,11 @@ for iter_show = iter_show_tmp
     % JSCC
     % --------Transverse--------
     nexttile(t_outer, [1, 3]);
-    img_tmp = img_jsccsd(:, :, show_center_pixcel(3));
-    img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
+    img_tmp = img_jsccsd(:, :, show_center_pixcel(3)).';
+    img_tmp = flip(imgaussfilt(img_tmp, Sigma_Gaussfit), 1);
     max_colorbar = 1 * max(img_tmp(range_U,range_V), [], "all");
-    imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    % imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp);
     cb = colorbar("westoutside");
     % cb.Label.String = sprintf("Iteration=%d", iter_show);
     axis equal                                                                                                                                             
@@ -286,8 +290,8 @@ for iter_show = iter_show_tmp
     xlim([Min_Y Max_Y]);
 
     hold on
-    line([Min_Y Max_Y]*3/4, [show_center(1), show_center(1)], 'Color','red','LineStyle','--', "LineWidth", 0.5);
-    line([show_center(2), show_center(2)], [Min_X Max_X]*3/4, 'Color','blue','LineStyle','--', "LineWidth", 0.5);
+    line([show_center(1), show_center(1)], [Min_Y Max_Y]*3/4, 'Color','red','LineStyle','--', "LineWidth", 0.5);
+    line([Min_X Max_X]*3/4, [show_center(2), show_center(2)], 'Color','blue','LineStyle','--', "LineWidth", 0.5);
 
     if id_iter_show == 1
         title(sprintf("JSCC\nTransverse"), "FontSize", 11);
@@ -300,7 +304,8 @@ for iter_show = iter_show_tmp
     img_tmp = squeeze(img_jsccsd(:, show_center_pixcel(2), :));
     img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
     % max_colorbar = 1 * max(img_tmp(range_U, :), [], "all");
-    imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp, [0, max_colorbar]);
+    % imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp, [0, max_colorbar]);
+    imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp);
     axis equal                                                                                                                                             
     colormap(color);
     ylabel("x (mm)");
@@ -321,7 +326,8 @@ for iter_show = iter_show_tmp
     img_tmp = squeeze(img_jsccsd(show_center_pixcel(1), :, :));
     img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
     % max_colorbar = 1 * max(img_tmp(range_V, :), [], "all");
-    imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    % imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
+    imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp);
     axis equal                                                                                                                                             
     colormap(color);
     ylabel("y (mm)");

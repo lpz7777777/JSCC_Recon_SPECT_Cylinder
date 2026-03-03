@@ -71,8 +71,8 @@ def main():
     s_map_d_ratio = 0.6
     s_map_d_ratio = 1
 
-    data_file_name = "ContrastPhantom_240_30"
-    count_level = "1e9"
+    data_file_name = "HotRodPhantom_5_15_30"
+    count_level = "1e12"
     ds = 1
 
     # ===== System & FOV Parameters =====
@@ -88,15 +88,15 @@ def main():
 
     # ===== Reconstruction Parameters =====
     iter_arg = argparse.ArgumentParser().parse_args()
-    iter_arg.sc = 1000
-    iter_arg.jsccd = 500
-    iter_arg.jsccsd = 1000
+    iter_arg.sc = 4000
+    iter_arg.jsccd = 2000
+    iter_arg.jsccsd = 4000
 
     iter_arg.admm_inner_single = 1
     iter_arg.admm_inner_compton = 1
     iter_arg.mode = 0
 
-    iter_arg.save_iter_step = 10
+    iter_arg.save_iter_step = 100
     iter_arg.osem_subset_num = 8
     iter_arg.t_divide_num = 1
     iter_arg.ene_num = len(e0_list)
