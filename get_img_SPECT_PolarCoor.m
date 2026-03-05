@@ -1,5 +1,5 @@
 folderPath = uigetdir("./Figure/");
-file_path = "./Factors/511keV_RotateNum10/";
+file_path = "./Factors/511keV_RotateNum40/";
 load(sprintf("%sRotMat.mat", file_path));
 load(sprintf("%sRotMatInv.mat", file_path));
 load(sprintf("%scoor_polar.mat", file_path));
@@ -32,9 +32,10 @@ iter_interval = 100;
 
 % iter_show_tmp = 1250:1250:5000;
 
-iter_show_tmp = 2000:2000:8000;
+% iter_show_tmp = 2000:2000:8000;
 % iter_show_tmp = 1000:1000:4000;
 % iter_show_tmp = 500:500:2000;
+iter_show_tmp = [250, 500, 1000, 2000, 4000, 8000, 16000];
 % iter_show_tmp = 2500:2500:10000;
 % iter_show_tmp = 5000:5000:20000;
 
@@ -184,7 +185,7 @@ fclose(fid);
 
 %%
 f = figure;
-f.Position = [100 100 1100 800];
+f.Position = [100 100 1100 800/4*length(iter_show_tmp)];
 
 t_outer = tiledlayout(length(iter_show_tmp), 15);
 t_outer.TileSpacing = 'none';

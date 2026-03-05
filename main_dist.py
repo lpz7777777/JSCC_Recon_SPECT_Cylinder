@@ -48,7 +48,7 @@ def main():
     count_level = "5e10"
     ds = 1
 
-    pixel_num_layer, pixel_num_z, rotate_num = 1280, 20, 20
+    pixel_num_layer, pixel_num_z, rotate_num = 1520, 20, 40
     pixel_num = pixel_num_layer * pixel_num_z
     delta_r1, delta_r2, alpha = 1.25, 1.25, 1
     ene_resolution_662keV = 0.1
