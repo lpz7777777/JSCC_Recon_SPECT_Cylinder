@@ -1,22 +1,21 @@
-import sys
-import torch
-import numpy as np
-from process_list_plane import get_coor_plane, get_compton_backproj_list_mp
-from recon_osem_plane import run_recon_osem
-import time
 import argparse
 import os
-import shutil
-import torch.multiprocessing as mp
 import random
+import shutil
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.multiprocessing as mp
 from torch.multiprocessing import Manager
-
-# ===== Import model_denoiser Models =====
-# from Models.dncnn import DnCNN
-# from Models.tv import TV
-
-# ===== Import ComptonGenerator Models =====
-# from Models.ComptonGenerator.attention_unet import AttentionUNet
+# process_list_plane_strict
+from process_list_plane_strict import (
+    get_compton_backproj_list_mp,
+    get_compton_backproj_list_single,
+)
+from recon_osem_plane import run_recon_osem
 
 
 class Tee:
@@ -24,357 +23,714 @@ class Tee:
         self.streams = streams
 
     def write(self, data):
-        for s in self.streams:
-            s.write(data)
-            s.flush()
+        for stream in self.streams:
+            stream.write(data)
+            stream.flush()
 
     def flush(self):
-        for s in self.streams:
-            s.flush()
+        for stream in self.streams:
+            stream.flush()
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Local multi-GPU JSCC reconstruction for plane geometry.")
+    parser.add_argument("--num-gpus", type=int, default=torch.cuda.device_count(), help="Number of local GPUs to use.")
+    parser.add_argument("--e0-list", type=float, nargs="+", default=[0.511], help="Energy list in MeV.")
+    parser.add_argument(
+        "--ene-threshold-sum-list",
+        type=float,
+        nargs="+",
+        default=[0.46],
+        help="Lower bounds for e1 + e2 in MeV.",
+    )
+    parser.add_argument("--intensity-list", type=float, nargs="+", default=[1.0], help="Intensity weights.")
+    parser.add_argument("--s-map-d-ratio", type=float, default=1.0, help="Scale factor applied to file-based Sensi_d.")
+    parser.add_argument("--data-file-name", type=str, default="ContrastPhantom_240_30", help="Dataset name.")
+    parser.add_argument("--count-level", type=str, default="1e9", help="Count level suffix.")
+    parser.add_argument("--ds", type=float, default=1.0, help="Downsampling ratio in (0, 1].")
+    parser.add_argument("--ene-resolution-662keV", type=float, default=0.1, help="Reference energy resolution.")
+    parser.add_argument("--pixel-num-layer", type=int, default=1160, help="Legacy fallback layer pixel count.")
+    parser.add_argument("--pixel-num-z", type=int, default=20, help="Axial slice count.")
+    parser.add_argument("--rotate-num", type=int, default=10, help="Number of views.")
+    parser.add_argument(
+        "--delta-r1",
+        type=float,
+        default=0.0,
+        help="Additional isotropic position sigma for the first interaction, in mm, on top of crystal-size modeling.",
+    )
+    parser.add_argument(
+        "--delta-r2",
+        type=float,
+        default=0.0,
+        help="Additional isotropic position sigma for the second interaction, in mm, on top of crystal-size modeling.",
+    )
+    parser.add_argument("--alpha", type=float, default=1.0, help="JSCC weighting parameter.")
+    parser.add_argument("--sc-iter", type=int, default=4000, help="SC iteration count.")
+    parser.add_argument("--jsccd-iter", type=int, default=2000, help="JSCC-D iteration count.")
+    parser.add_argument("--jsccsd-iter", type=int, default=4000, help="JSCC-SD iteration count.")
+    parser.add_argument("--save-iter-step", type=int, default=100, help="Save interval.")
+    parser.add_argument("--osem-subset-num", type=int, default=8, help="OSEM subset count.")
+    parser.add_argument("--t-divide-num", type=int, default=1, help="Number of t sub-blocks per subset.")
+    parser.add_argument("--num-workers", type=int, default=1, help="Sub-chunks per GPU during list processing.")
+    parser.add_argument("--seed", type=int, default=20260331, help="Random seed.")
+    parser.add_argument("--save-t", action="store_true", help="Keep helper save-t branch enabled.")
+    parser.add_argument("--save-s", action="store_true", help="Dump sensitivity_s.")
+    parser.add_argument("--save-d", action="store_true", help="Dump sensitivity_d recomputed from t.")
+    parser.add_argument("--factors-dir", type=str, default="./Factors", help="Factors root directory.")
+    parser.add_argument("--cntstat-dir", type=str, default="./CntStat", help="CntStat root directory.")
+    parser.add_argument("--list-dir", type=str, default="./List", help="List root directory.")
+    parser.add_argument("--output-root", type=str, default="./Figure", help="Output root directory.")
+    return parser.parse_args()
+
+
+def validate_args(args):
+    if len(args.e0_list) != len(args.ene_threshold_sum_list):
+        raise ValueError("--e0-list and --ene-threshold-sum-list must have the same length.")
+    if len(args.e0_list) != len(args.intensity_list):
+        raise ValueError("--e0-list and --intensity-list must have the same length.")
+    if not (0.0 < args.ds <= 1.0):
+        raise ValueError("--ds must be in (0, 1].")
+    if min(args.sc_iter, args.jsccd_iter, args.jsccsd_iter, args.save_iter_step) <= 0:
+        raise ValueError("Iteration counts and --save-iter-step must be positive.")
+    if args.sc_iter % args.save_iter_step != 0:
+        raise ValueError("--sc-iter must be divisible by --save-iter-step.")
+    if args.jsccd_iter % args.save_iter_step != 0:
+        raise ValueError("--jsccd-iter must be divisible by --save-iter-step.")
+    if args.jsccsd_iter % args.save_iter_step != 0:
+        raise ValueError("--jsccsd-iter must be divisible by --save-iter-step.")
+    if args.osem_subset_num <= 0 or args.t_divide_num <= 0 or args.num_workers <= 0:
+        raise ValueError("--osem-subset-num, --t-divide-num and --num-workers must be positive.")
+    if args.rotate_num <= 0 or args.pixel_num_z <= 0 or args.pixel_num_layer <= 0:
+        raise ValueError("--rotate-num, --pixel-num-layer and --pixel-num-z must be positive.")
+
+
+def resolve_repo_root():
+    return Path(__file__).resolve().parent
+
+
+def resolve_factor_dir(factors_root, e0, rotate_num):
+    rotate_specific = factors_root / f"{round(1000 * e0)}keV_RotateNum{rotate_num}"
+    legacy = factors_root / f"{round(1000 * e0)}keV"
+    if rotate_specific.is_dir():
+        return rotate_specific
+    if legacy.is_dir():
+        return legacy
+    raise FileNotFoundError(f"Factor directory not found for {e0:.3f} MeV under {factors_root}")
+
+
+def resolve_proj_and_list_paths(cntstat_root, list_root, e0, rotate_num, data_file_name, count_level):
+    energy_tag = f"{round(1000 * e0)}keV"
+
+    proj_candidates = [
+        cntstat_root / f"{energy_tag}_RotateNum{rotate_num}" / f"CntStat_{data_file_name}_{count_level}.csv",
+        cntstat_root / f"CntStat_{data_file_name}_{energy_tag}_{count_level}.csv",
+        cntstat_root / f"CntStat_{data_file_name}_{count_level}.csv",
+    ]
+    list_candidates = [
+        list_root / f"{energy_tag}_RotateNum{rotate_num}" / f"List_{data_file_name}_{count_level}",
+        list_root / f"List_{data_file_name}_{energy_tag}_{count_level}",
+        list_root / f"List_{data_file_name}_{count_level}",
+    ]
+
+    proj_path = next((path for path in proj_candidates if path.exists()), None)
+    list_dir = next((path for path in list_candidates if path.is_dir()), None)
+
+    if proj_path is None:
+        raise FileNotFoundError(f"CntStat file not found. Tried: {proj_candidates}")
+    if list_dir is None:
+        raise FileNotFoundError(f"List directory not found. Tried: {list_candidates}")
+    return proj_path, list_dir
+
+
+def resolve_pixel_num(pixel_num_from_args, pixel_num_z, rotmat, rotmat_inv, coor_polar, factor_dir):
+    pixel_num_from_rotmat = rotmat.size(0)
+    pixel_num_from_rotmat_inv = rotmat_inv.size(0)
+    pixel_num_from_coor = coor_polar.size(0)
+
+    if pixel_num_from_rotmat != pixel_num_from_rotmat_inv:
+        raise ValueError(
+            f"Rotation matrix mismatch in {factor_dir}: "
+            f"rotmat rows={pixel_num_from_rotmat}, rotmat_inv rows={pixel_num_from_rotmat_inv}."
+        )
+    if pixel_num_from_rotmat != pixel_num_from_coor:
+        raise ValueError(
+            f"Factor pixel mismatch in {factor_dir}: "
+            f"rotmat rows={pixel_num_from_rotmat}, coor rows={pixel_num_from_coor}."
+        )
+
+    if pixel_num_from_rotmat != pixel_num_from_args:
+        inferred_layer_msg = ""
+        if pixel_num_z > 0 and pixel_num_from_rotmat % pixel_num_z == 0:
+            inferred_layer = pixel_num_from_rotmat // pixel_num_z
+            inferred_layer_msg = f", inferred pixel_num_layer={inferred_layer}"
+        print(
+            "Pixel count mismatch detected. "
+            f"Using factor-defined pixel_num={pixel_num_from_rotmat} instead of "
+            f"args pixel_num_layer * pixel_num_z = {pixel_num_from_args}{inferred_layer_msg}."
+        )
+
+    return pixel_num_from_rotmat
+
+
+def split_tensor_rows(tensor, parts):
+    if parts <= 1:
+        return [tensor]
+    splits = []
+    total_rows = tensor.size(0)
+    for idx in range(parts):
+        start = total_rows * idx // parts
+        end = total_rows * (idx + 1) // parts
+        splits.append(tensor[start:end, :])
+    return splits
+
+
+def load_list_csv(list_file_path):
+    list_np = np.genfromtxt(list_file_path, delimiter=",", dtype=np.float32)
+    if list_np.ndim == 1:
+        list_np = np.expand_dims(list_np, axis=0)
+    return torch.from_numpy(list_np[:, 0:4])
+
+
+def downsample_projection_and_list(proj, list_origin, ds):
+    if ds >= 0.999999:
+        return proj, list_origin
+
+    proj = proj.clone()
+    list_origin = [chunk.clone() for chunk in list_origin]
+
+    for rotate_idx in range(proj.size(1)):
+        proj_tmp = proj[:, rotate_idx]
+        proj_ds_tmp = torch.zeros_like(proj_tmp)
+        proj_indices = torch.tensor(
+            [idx for idx in range(proj_tmp.size(0)) for _ in range(round(proj_tmp[idx].item()))],
+            dtype=torch.long,
+        )
+        if proj_indices.numel() > 0:
+            selected_num = int(torch.round(proj_tmp.sum() * ds).item())
+            selected_num = min(selected_num, proj_indices.numel())
+            selected_indices = torch.randperm(proj_indices.numel())[:selected_num]
+            proj_indices_ds = proj_indices[selected_indices]
+            for bin_idx in range(proj_ds_tmp.size(0)):
+                proj_ds_tmp[bin_idx] = (proj_indices_ds == bin_idx).sum()
+        proj[:, rotate_idx] = proj_ds_tmp
+
+        list_tmp = list_origin[rotate_idx]
+        if list_tmp.size(0) > 0:
+            selected_num = int(list_tmp.size(0) * ds)
+            selected_num = min(max(selected_num, 1), list_tmp.size(0))
+            selected_indices = torch.randperm(list_tmp.size(0))[:selected_num]
+            list_origin[rotate_idx] = list_tmp[selected_indices, :]
+
+    return proj, list_origin
+
+
+def process_list_on_single_gpu(
+    sysmat,
+    detector,
+    coor_polar,
+    list_origin,
+    rotate_num,
+    pixel_num,
+    num_workers,
+    delta_r1,
+    delta_r2,
+    e0,
+    ene_resolution,
+    ene_threshold_max,
+    ene_threshold_min,
+    ene_threshold_sum,
+    start_time,
+    model_compton_generator,
+):
+    device = torch.device("cuda:0")
+    sysmat_gpu = sysmat.to(device)
+    detector_gpu = detector.to(device)
+    coor_polar_gpu = coor_polar.to(device)
+    if model_compton_generator is not None:
+        model_compton_generator = model_compton_generator.to(device)
+
+    t = []
+    size_t = 0
+    compton_event_count_list = torch.zeros(size=[rotate_num, 1], dtype=torch.int64)
+
+    for rotate_idx in range(rotate_num):
+        t_parts = []
+        for sub_chunk in split_tensor_rows(list_origin[rotate_idx], num_workers):
+            if sub_chunk.numel() == 0:
+                continue
+            t_chunk, _, _ = get_compton_backproj_list_single(
+                sysmat_gpu,
+                detector_gpu,
+                coor_polar_gpu,
+                sub_chunk.to(device),
+                delta_r1,
+                delta_r2,
+                e0,
+                ene_resolution,
+                ene_threshold_max,
+                ene_threshold_min,
+                ene_threshold_sum,
+                device,
+                model_compton_generator,
+            )
+            t_parts.append(t_chunk)
+            torch.cuda.empty_cache()
+            print(f"Single GPU: processed rotate {rotate_idx + 1} sub-chunk, time used: {time.time() - start_time:.2f}s")
+
+        if t_parts:
+            t_tmp = torch.cat(t_parts, dim=0)
+        else:
+            t_tmp = torch.empty((0, pixel_num), dtype=torch.float32)
+
+        compton_event_count_list[rotate_idx] = t_tmp.size(0)
+        size_t += t_tmp.nelement() * t_tmp.element_size()
+        t.append(t_tmp)
+        print(f"Rotate Num {rotate_idx + 1} ends, time used: {time.time() - start_time:.2f}s")
+
+    return t, size_t, compton_event_count_list
+
+
+def process_list_on_multi_gpu(
+    num_gpus,
+    sysmat,
+    detector,
+    coor_polar,
+    list_origin,
+    rotate_num,
+    pixel_num,
+    num_workers,
+    delta_r1,
+    delta_r2,
+    e0,
+    ene_resolution,
+    ene_threshold_max,
+    ene_threshold_min,
+    ene_threshold_sum,
+    start_time,
+    flag_save_t,
+    model_compton_generator,
+):
+    t = []
+    size_t = 0
+    compton_event_count_list = torch.zeros(size=[rotate_num, 1], dtype=torch.int64)
+
+    for rotate_idx in range(rotate_num):
+        chunks = split_tensor_rows(list_origin[rotate_idx], num_gpus)
+
+        with Manager() as manager:
+            result_dict = manager.dict()
+            processes = []
+
+            for rank, chunk in enumerate(chunks):
+                if chunk.numel() == 0:
+                    result_dict[rank] = torch.empty((0, pixel_num), dtype=torch.float32)
+                    continue
+
+                process = mp.Process(
+                    target=get_compton_backproj_list_mp,
+                    args=(
+                        rank,
+                        num_gpus,
+                        sysmat,
+                        detector,
+                        coor_polar,
+                        chunk,
+                        delta_r1,
+                        delta_r2,
+                        e0,
+                        ene_resolution,
+                        ene_threshold_max,
+                        ene_threshold_min,
+                        ene_threshold_sum,
+                        result_dict,
+                        num_workers,
+                        start_time,
+                        flag_save_t,
+                        model_compton_generator,
+                    ),
+                )
+                process.start()
+                processes.append(process)
+
+            for process in processes:
+                process.join()
+                if process.exitcode != 0:
+                    raise RuntimeError(f"List worker exited with code {process.exitcode} on rotate {rotate_idx + 1}.")
+
+            t_results = []
+            for rank in range(num_gpus):
+                if rank not in result_dict:
+                    raise RuntimeError(f"Missing result from rank {rank} on rotate {rotate_idx + 1}.")
+                t_results.append(result_dict[rank])
+                print(f"Collected result from rank {rank}")
+
+        t_tmp = torch.cat(t_results, dim=0) if t_results else torch.empty((0, pixel_num), dtype=torch.float32)
+        compton_event_count_list[rotate_idx] = t_tmp.size(0)
+        size_t += t_tmp.nelement() * t_tmp.element_size()
+        t.append(t_tmp)
+        print(f"Rotate Num {rotate_idx + 1} ends, time used: {time.time() - start_time:.2f}s")
+
+    return t, size_t, compton_event_count_list
+
+
+def build_save_path(output_root, e0_list, rotate_num, data_file_name, count_level, ds, s_map_d_ratio, delta_r1, alpha, ene_resolution_662keV, osem_subset_num, jsccsd_iter, single_event_count_total, compton_event_count_total):
+    if len(e0_list) == 1:
+        prefix = f"SingleEnergy_RotateNum{rotate_num}_{data_file_name}_{round(1000 * e0_list[0])}keV"
+    else:
+        e0_list_str = "_".join(str(round(e0 * 1000)) for e0 in e0_list)
+        prefix = f"MultiEnergy_RotateNum{rotate_num}_{data_file_name}_({e0_list_str})keV"
+
+    return (
+        output_root
+        / f"{prefix}_{count_level}_{ds}_SMap{s_map_d_ratio}_Delta{delta_r1}_Alpha{alpha}_ER{ene_resolution_662keV}_"
+        f"OSEM{osem_subset_num}_ITER{jsccsd_iter}_SDU{single_event_count_total}_DDU{compton_event_count_total}"
+        / "Polar"
+    )
 
 
 def main():
-    global start_time
+    args = parse_args()
+    validate_args(args)
+
+    repo_root = resolve_repo_root()
+    factors_root = (repo_root / args.factors_dir).resolve()
+    cntstat_root = (repo_root / args.cntstat_dir).resolve()
+    list_root = (repo_root / args.list_dir).resolve()
+    output_root = (repo_root / args.output_root).resolve()
+
     start_time = time.time()
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
 
-    # ===== Parse arguments =====
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--num_gpus', type=int, default=torch.cuda.device_count(), help='Number of GPUs to use')
-    args = parser.parse_args()
+    log_filename = None
+    logfile = None
+    save_path = None
+    original_stdout = sys.stdout
 
-    # ===== Multi Energy Input =====
-    # e0_list = [0.218, 0.440]
-    # ene_threshold_sum_list = [0.18, 0.40]
-    # intensity_list = [0.1142, 0.261]
+    try:
+        rand_suffix = f"{random.randint(0, 9999):04d}"
+        log_filename = repo_root / f"print_log_{rand_suffix}.txt"
+        logfile = open(log_filename, "w", encoding="utf-8")
+        sys.stdout = Tee(original_stdout, logfile)
 
-    # e0_list = [0.440]
-    # ene_threshold_sum_list = [0.40]
-    # intensity_list = [0.261]
-    # intensity_list = [1]
-    # s_map_d_ratio = 0.75
-    # s_map_d_ratio = 0.6
+        print("=======================================")
+        print("--------Step1: Checking Devices--------")
 
-    # e0_list = [0.218]
-    # ene_threshold_sum_list = [0.18]
-    # intensity_list = [0.1142]
-    # intensity_list = [1]
-    # s_map_d_ratio = 0.5
+        available_gpus = torch.cuda.device_count()
+        if available_gpus <= 0 or not torch.cuda.is_available():
+            raise RuntimeError("main_plane.py requires CUDA. No available GPU was detected.")
 
-    # e0_list = [0.662]
-    # ene_threshold_sum_list = [0.60]
-    # intensity_list = [1]
-    # s_map_d_ratio = 1
+        if args.num_gpus <= 0:
+            raise ValueError("--num-gpus must be positive when CUDA is available.")
 
-    e0_list = [0.511]
-    ene_threshold_sum_list = [0.46]
-    intensity_list = [1]
-    s_map_d_ratio = 0.6
-    s_map_d_ratio = 1
+        args.num_gpus = min(args.num_gpus, available_gpus)
+        print(f"CUDA is available, using {args.num_gpus} / {available_gpus} GPUs")
+        print(f"Repo Root: {repo_root}")
+        print(f"Args: {args}")
 
-    data_file_name = "HotRodPhantom_5_15_30"
-    count_level = "1e12"
-    ds = 1
+        proj_all = []
+        list_all = []
+        sysmat_all = []
+        detector_all = []
+        coor_polar_all = []
+        rotmat_all = []
+        rotmat_inv_all = []
+        sensi_s_all = []
+        sensi_d_all = []
+        e_params = []
 
-    # ===== System & FOV Parameters =====
-    ene_resolution_662keV = 0.1
-    pixel_num_layer = 1160
-    pixel_num_z = 20
-    rotate_num = 10
-    pixel_num = pixel_num_layer * pixel_num_z
+        pixel_num = None
+        print("====================================")
+        print("--------Step2: Loading Files--------")
 
-    delta_r1 = 2
-    delta_r2 = 2
-    alpha = 1
+        for e0, ene_threshold_sum, intensity in zip(args.e0_list, args.ene_threshold_sum_list, args.intensity_list):
+            ene_resolution = args.ene_resolution_662keV * (0.662 / e0) ** 0.5
+            ene_threshold_max = 2 * e0 ** 2 / (0.511 + 2 * e0) - 0.001
+            ene_threshold_min = 0.05
 
-    # ===== Reconstruction Parameters =====
-    iter_arg = argparse.ArgumentParser().parse_args()
-    iter_arg.sc = 4000
-    iter_arg.jsccd = 2000
-    iter_arg.jsccsd = 4000
+            factor_dir = resolve_factor_dir(factors_root, e0, args.rotate_num)
+            proj_file_path, list_dir_path = resolve_proj_and_list_paths(
+                cntstat_root, list_root, e0, args.rotate_num, args.data_file_name, args.count_level
+            )
 
-    iter_arg.admm_inner_single = 1
-    iter_arg.admm_inner_compton = 1
-    iter_arg.mode = 0
+            sysmat_file_path = factor_dir / "SysMat_polar"
+            detector_file_path = factor_dir / "Detector.csv"
+            sensi_s_file_path = factor_dir / "Sensi_s"
+            sensi_d_file_path = factor_dir / "Sensi_d"
+            coor_polar_file_path = factor_dir / "coor_polar_full.csv"
+            rotmat_file_path = factor_dir / "RotMat_full.csv"
+            rotmat_inv_file_path = factor_dir / "RotMatInv_full.csv"
 
-    iter_arg.save_iter_step = 100
-    iter_arg.osem_subset_num = 8
-    iter_arg.t_divide_num = 1
-    iter_arg.ene_num = len(e0_list)
+            for required_path in (
+                sysmat_file_path,
+                detector_file_path,
+                coor_polar_file_path,
+                rotmat_file_path,
+                rotmat_inv_file_path,
+                proj_file_path,
+            ):
+                if not required_path.exists():
+                    raise FileNotFoundError(required_path)
 
-    iter_arg.event_level = 2
-    iter_arg.event_level = 2
-    iter_arg.num_workers = 1
+            detector = torch.from_numpy(np.genfromtxt(detector_file_path, delimiter=",", dtype=np.float32)[:, 1:4])
+            coor_polar = torch.from_numpy(np.genfromtxt(coor_polar_file_path, delimiter=",", dtype=np.float32))
+            rotmat = torch.from_numpy(np.genfromtxt(rotmat_file_path, delimiter=",", dtype=np.int64))
+            rotmat_inv = torch.from_numpy(np.genfromtxt(rotmat_inv_file_path, delimiter=",", dtype=np.int64))
 
-    # ===== Down Sampling Parameters =====
-    flag_save_t = 0
-    flag_save_s = 0
-    flag_save_d = 0
+            pixel_num_current = resolve_pixel_num(
+                args.pixel_num_layer * args.pixel_num_z,
+                args.pixel_num_z,
+                rotmat,
+                rotmat_inv,
+                coor_polar,
+                factor_dir,
+            )
+            if pixel_num is None:
+                pixel_num = pixel_num_current
+            elif pixel_num != pixel_num_current:
+                raise ValueError(f"Inconsistent pixel_num across energies: previous={pixel_num}, current={pixel_num_current}")
 
-    # ===== Denoise Net =====
-    model_denoiser = None
-    # model_denoiser = TV(weight=0.001, iter_num=1)
-    # model_denoiser.eval()
-    # model_denoiser = DnCNN(in_nc=1, out_nc=1, nc=64, nb=17, act_mode="R")
-    # model_denoiser.load_state_dict(torch.load('./Models/DnCNN/dncnn_25.pth'))
-    # model_denoiser.eval()
+            sysmat_np = np.fromfile(sysmat_file_path, dtype=np.float32)
+            if sysmat_np.size % pixel_num != 0:
+                raise ValueError(f"SysMat size in {sysmat_file_path} is incompatible with pixel_num={pixel_num}.")
+            sysmat = torch.from_numpy(sysmat_np.reshape(pixel_num, -1).T.copy()) * intensity
 
-    # ===== ComptonGenerator Net =====
-    model_compton_generator = None
-    # model_compton_generator = AttentionUNet(in_channels=1, out_channels=1)
+            if sensi_s_file_path.exists():
+                sensi_s = torch.from_numpy(np.fromfile(sensi_s_file_path, dtype=np.float32).reshape(pixel_num, 1).copy()) * intensity
+                sensi_s_all.append(sensi_s)
 
-    # ===== Setup logging =====
-    rand_suffix = f"{random.randint(0, 9999):04d}"  # 生成四位随机数
-    log_filename = f"print_log_{rand_suffix}.txt"
-    logfile = open(log_filename, "w", encoding="utf-8")
-    sys.stdout = Tee(sys.__stdout__, logfile)
+            if sensi_d_file_path.exists():
+                sensi_d = torch.from_numpy(np.fromfile(sensi_d_file_path, dtype=np.float32).reshape(pixel_num, 1).copy()) * intensity
+                sensi_d_all.append(sensi_d)
 
-    print("=======================================")
-    print("--------Step1: Checking Devices--------")
-    if torch.cuda.is_available():
-        print(f"CUDA is available, found {args.num_gpus} GPUs")
-    else:
-        print("CUDA is not available, running on CPU")
-        args.num_gpus = 0
+            proj_np = np.genfromtxt(proj_file_path, delimiter=",", dtype=np.float32)
+            proj = torch.from_numpy(proj_np.reshape(args.rotate_num, -1).T.copy())
 
-    # ====== Data List ======
-    proj_all = []
-    list_all = []
-    sysmat_all = []
-    detector_all = []
-    coor_polar_all = []
-    rotmat_all = []
-    rotmat_inv_all = []
+            list_origin = []
+            for rotate_idx in range(args.rotate_num):
+                list_file_path = list_dir_path / f"{rotate_idx + 1}.csv"
+                if not list_file_path.exists():
+                    raise FileNotFoundError(list_file_path)
+                list_origin.append(load_list_csv(list_file_path))
 
-    sensi_s_all = []
-    sensi_d_all = []
-    e_params = []
-    print("====================================")
-    print("--------Step2: Loading Files--------")
-    for e0, ene_threshold_sum, intensity in zip(
-            e0_list, ene_threshold_sum_list, intensity_list
-    ):
-        # Ene Parameters
-        ene_resolution = ene_resolution_662keV * (0.662 / e0) ** 0.5
-        ene_threshold_max = 2 * e0 ** 2 / (0.511 + 2 * e0) - 0.001
-        ene_threshold_min = 0.05
+            proj, list_origin = downsample_projection_and_list(proj, list_origin, args.ds * intensity)
 
-        # Path
-        factor_file_path = f"{round(1000 * e0)}keV"
-        data_file_path = f"{data_file_name}_{round(1000 * e0)}keV_{count_level}"
+            proj_all.append(proj)
+            list_all.append(list_origin)
+            sysmat_all.append(sysmat)
+            detector_all.append(detector)
+            coor_polar_all.append(coor_polar)
+            rotmat_all.append(rotmat)
+            rotmat_inv_all.append(rotmat_inv)
+            e_params.append((e0, ene_resolution, ene_threshold_max, ene_threshold_min, ene_threshold_sum))
 
-        # SysMat + Detector
-        sysmat_file_path = f"./Factors/{factor_file_path}/SysMat_polar"
-        detector_file_path = f"./Factors/{factor_file_path}/Detector.csv"
-        sensi_s_file_path = f"./Factors/{factor_file_path}/Sensi_s"
-        sensi_d_file_path = f"./Factors/{factor_file_path}/Sensi_d"
-        coor_polar_file_path = f"./Factors/{factor_file_path}/coor_polar_full.csv"
-        rotmat_file_path = f"./Factors/{factor_file_path}/RotMat_full.csv"
-        rotmat_inv_file_path = f"./Factors/{factor_file_path}/RotMatInv_full.csv"
+            print(f"Loaded energy {e0:.3f} MeV from {factor_dir.name}")
 
-        sysmat = torch.from_numpy(np.reshape(np.fromfile(sysmat_file_path, dtype=np.float32), [pixel_num, -1])).transpose(0, 1) * intensity
-        detector = torch.from_numpy(np.genfromtxt(detector_file_path, delimiter=",", dtype=np.float32)[:, 1:4])
-        coor_polar = torch.from_numpy(np.genfromtxt(coor_polar_file_path, delimiter=",", dtype=np.float32))
-        rotmat = torch.from_numpy(np.genfromtxt(rotmat_file_path, delimiter=",", dtype=int))
-        rotmat_inv = torch.from_numpy(np.genfromtxt(rotmat_inv_file_path, delimiter=",", dtype=int))
+        print("==================================================")
+        print("--------Step3: Processing List (Multi-GPU)--------")
+        t_all = []
+        proj_d_all = []
+        single_event_count_total = 0
+        compton_event_count_total = 0
 
-        if os.path.exists(sensi_s_file_path):
-            sensi_s = torch.from_numpy(np.reshape(np.fromfile(sensi_s_file_path, dtype=np.float32), [pixel_num, 1])) * intensity
-            sensi_s_all.append(sensi_s)
+        s_map_s_total = torch.zeros([pixel_num, 1], dtype=torch.float32)
+        s_map_d_total = torch.zeros([pixel_num, 1], dtype=torch.float32)
 
-        if os.path.exists(sensi_d_file_path):
-            sensi_d = torch.from_numpy(np.reshape(np.fromfile(sensi_d_file_path, dtype=np.float32), [pixel_num, 1])) * intensity
-            sensi_d_all.append(sensi_d)
+        iter_arg = argparse.Namespace()
+        iter_arg.sc = args.sc_iter
+        iter_arg.jsccd = args.jsccd_iter
+        iter_arg.jsccsd = args.jsccsd_iter
+        iter_arg.admm_inner_single = 1
+        iter_arg.admm_inner_compton = 1
+        iter_arg.mode = 0
+        iter_arg.save_iter_step = args.save_iter_step
+        iter_arg.osem_subset_num = args.osem_subset_num
+        iter_arg.t_divide_num = args.t_divide_num
+        iter_arg.ene_num = len(args.e0_list)
+        iter_arg.event_level = 2
+        iter_arg.num_workers = args.num_workers
+        iter_arg.seed = args.seed
 
-        # Data files
-        proj_file_path = f"./CntStat/CntStat_{data_file_path}.csv"
-        list_file_path = f"./List/List_{data_file_path}/"
-        proj = torch.from_numpy(np.reshape(np.genfromtxt(proj_file_path, delimiter=",", dtype=np.float32), [rotate_num, -1])).transpose(0,1)
-        list_origin = []
-        for i in range(0, rotate_num):
-            list_file_path_tmp = list_file_path + str(i+1) + ".csv"
-            list_origin_tmp = torch.from_numpy(np.genfromtxt(list_file_path_tmp, delimiter=",", dtype=np.float32)[:, 0:4])
-            list_origin.append(list_origin_tmp)
+        s_map_arg = argparse.Namespace()
 
-        print(f"Loaded energy {e0:.3f} MeV")
+        model_denoiser = None
+        model_compton_generator = None
 
-        # Downsampling
-        if ds * intensity < 0.9999:
-            print("--------Data Downsampling--------")
-            for i in range(0, rotate_num):
-                # porj
-                proj_tmp = proj[:, i]
-                proj_ds_tmp = proj[:, i] * 0
-                proj_s_index_tmp = torch.tensor([i for i in range(proj_tmp.size(0)) for _ in range(round(proj_tmp[i].item()))])
-                indices_tmp = torch.randperm(proj_s_index_tmp.size(0))
-                selected_indices_tmp = indices_tmp[0:int(torch.round(proj_tmp.sum() * ds).item())]
-                proj_s_index_ds_tmp = proj_s_index_tmp[selected_indices_tmp]
-                for j in range(0, proj_ds_tmp.size(dim=0)):
-                    proj_ds_tmp[j] = (proj_s_index_ds_tmp == j).sum()
-                proj[:, i] = proj_ds_tmp
+        for proj, list_origin, sysmat, detector, coor_polar, rotmat_inv, e_param in zip(
+            proj_all,
+            list_all,
+            sysmat_all,
+            detector_all,
+            coor_polar_all,
+            rotmat_inv_all,
+            e_params,
+        ):
+            e0, ene_resolution, ene_threshold_max, ene_threshold_min, ene_threshold_sum = e_param
+            print(f"Processing energy {e0:.3f} MeV ...")
 
-                # list
-                list_origin_tmp = list_origin[i]
-                indices_tmp = torch.randperm(list_origin_tmp.size(0))
-                selected_indices_tmp = indices_tmp[0:int(list_origin_tmp.size(0) * ds)]
-                list_origin_tmp = list_origin_tmp[selected_indices_tmp, :]
-                list_origin[i] = list_origin_tmp
-
-        # 保存
-        proj_all.append(proj)
-        list_all.append(list_origin)
-        sysmat_all.append(sysmat)
-        detector_all.append(detector)
-        coor_polar_all.append(coor_polar)
-        rotmat_all.append(rotmat)
-        rotmat_inv_all.append(rotmat_inv)
-        e_params.append((e0, ene_resolution, ene_threshold_max, ene_threshold_min, ene_threshold_sum))
-
-    # ===== Step3: Processing List =====
-    print("==================================================")
-    print("--------Step3: Processing List (Multi-GPU)--------")
-    t_all = []
-    proj_d_all = []
-    single_event_count_total = 0
-    compton_event_count_total = 0
-
-    s_map_arg = argparse.ArgumentParser().parse_args()
-    s_map_arg.s = torch.zeros([1, pixel_num], dtype=torch.float32)
-    s_map_arg.d = torch.zeros([1, pixel_num], dtype=torch.float32)
-
-    for idx, (proj, list_origin, sysmat, detector, coor_polar, rotmat_inv, (e0, ene_resolution, ene_threshold_max, ene_threshold_min, ene_threshold_sum)) in enumerate(
-        zip(proj_all, list_all, sysmat_all, detector_all, coor_polar_all, rotmat_inv_all, e_params)
-    ):
-        print(f"Processing energy {e0:.3f} MeV ...")
-
-        # load model
-        if model_compton_generator is not None:
-            model_compton_generator.load_state_dict(torch.load(f"./Models/ComptonGenerator/AttentionUNet/attention_unet_model_params_{round(1000 * e0)}keV.pth"))
-            model_compton_generator.eval()
-
-        t = []
-        size_t = 0
-        compton_event_count_list = torch.zeros(size=[rotate_num, 1], dtype=torch.int)
-        for i in range(0, rotate_num):
-            # Split list data
-            if args.num_gpus > 1:
-                chunks = torch.chunk(list_origin[i], args.num_gpus, dim=0)
+            if args.num_gpus == 1:
+                t, size_t, compton_event_count_list = process_list_on_single_gpu(
+                    sysmat,
+                    detector,
+                    coor_polar,
+                    list_origin,
+                    args.rotate_num,
+                    pixel_num,
+                    iter_arg.num_workers,
+                    args.delta_r1,
+                    args.delta_r2,
+                    e0,
+                    ene_resolution,
+                    ene_threshold_max,
+                    ene_threshold_min,
+                    ene_threshold_sum,
+                    start_time,
+                    model_compton_generator,
+                )
             else:
-                chunks = [list_origin[i]]
+                t, size_t, compton_event_count_list = process_list_on_multi_gpu(
+                    args.num_gpus,
+                    sysmat,
+                    detector,
+                    coor_polar,
+                    list_origin,
+                    args.rotate_num,
+                    pixel_num,
+                    iter_arg.num_workers,
+                    args.delta_r1,
+                    args.delta_r2,
+                    e0,
+                    ene_resolution,
+                    ene_threshold_max,
+                    ene_threshold_min,
+                    ene_threshold_sum,
+                    start_time,
+                    int(args.save_t),
+                    model_compton_generator,
+                )
 
-            with Manager() as manager:
-                result_dict = manager.dict()
-                processes = []
+            proj_d = torch.zeros_like(proj)
+            for rotate_idx in range(args.rotate_num):
+                proj_tmp = proj[:, rotate_idx]
+                proj_indices = torch.tensor(
+                    [idx for idx in range(proj_tmp.size(0)) for _ in range(round(proj_tmp[idx].item()))],
+                    dtype=torch.long,
+                )
+                if proj_indices.numel() == 0:
+                    continue
+                selected_num = min(int(compton_event_count_list[rotate_idx].item()), proj_indices.numel())
+                selected_indices = torch.randperm(proj_indices.numel())[:selected_num]
+                proj_d_index_tmp = proj_indices[selected_indices]
+                for bin_idx in range(proj_d.size(0)):
+                    proj_d[bin_idx, rotate_idx] = (proj_d_index_tmp == bin_idx).sum()
 
-                for rank in range(args.num_gpus):
-                    p = mp.Process(
-                        target=get_compton_backproj_list_mp,
-                        args=(rank, args.num_gpus, sysmat, detector, coor_polar, chunks[rank],
-                                delta_r1, delta_r2, e0, ene_resolution,
-                                ene_threshold_max, ene_threshold_min, ene_threshold_sum,
-                                result_dict, iter_arg.num_workers, start_time, flag_save_t, model_compton_generator)
-                    )
-                    p.start()
-                    processes.append(p)
+            single_event_count = round(proj.sum().item())
+            compton_event_count = round(proj_d.sum().item())
+            print(f"[Energy {e0:.3f}] Single events = {single_event_count}, Compton events = {compton_event_count}")
+            print(f"[Energy {e0:.3f}] The size of t is {size_t / (1024 ** 3):.2f} GB")
 
-                for p in processes:
-                    p.join()
+            t_all.append(t)
+            proj_d_all.append(proj_d)
 
-                t_results = []
-                for rank in range(args.num_gpus):
-                    if rank in result_dict:
-                        t_results.append(result_dict[rank])
-                        print(f"Collected result from rank {rank}")
-                    else:
-                        print(f"Warning: No result found for rank {rank}")
+            s_map_s_tmp = torch.zeros([1, pixel_num], dtype=torch.float32)
+            for rotate_idx in range(args.rotate_num):
+                rotmat_inv_tmp = rotmat_inv[:, rotate_idx]
+                s_map_s_tmp += torch.sum(sysmat[:, rotmat_inv_tmp - 1], dim=0, keepdim=True).cpu()
+            s_map_s_tmp = s_map_s_tmp.transpose(0, 1) / args.rotate_num
+            s_map_s_total += s_map_s_tmp
 
-                if t_results:
-                    t_tmp = torch.cat(t_results, dim=0)
-                    compton_event_count_list[i] = t_tmp.size(0)
-                    size_t = size_t + t_tmp.element_size() * t_tmp.nelement()
-                    t.append(t_tmp)
-                    print("Rotate Num", str(i + 1), "ends, time used:", time.time() - start_time, "s")
-                else:
-                    print("Error: No results collected from any GPU")
-                    return
+            if single_event_count > 0:
+                s_map_d_total += s_map_s_tmp * (compton_event_count / single_event_count)
 
-        # create a proj that has an equal count
-        proj_d = torch.zeros(size=proj.size(), dtype=torch.float32)
-        for i in range(0, rotate_num):
-            proj_tmp = proj[:, i]
-            proj_s_index_tmp = torch.tensor(
-                [i for i in range(proj_tmp.size(0)) for _ in range(round(proj_tmp[i].item()))])
-            indices_tmp = torch.randperm(proj_s_index_tmp.size(0))
-            selected_indices_tmp = indices_tmp[0:compton_event_count_list[i]]
-            proj_d_index_tmp = proj_s_index_tmp[selected_indices_tmp]
-            for j in range(0, proj_d.size(dim=0)):
-                proj_d[j, i] = (proj_d_index_tmp == j).sum()
+            single_event_count_total += single_event_count
+            compton_event_count_total += compton_event_count
 
-        single_event_count = round(proj.sum().item())
-        compton_event_count = round(proj_d.sum().item())
-        print(f"[Energy {e0:.3f}] Single events = {single_event_count}, Compton events = {compton_event_count}")
-        print(f"[Energy {e0:.3f}] The size of t is {size_t / (1024 ** 3):.2f} GB")
+        if sensi_s_all:
+            print("sensi_s change to file definition")
+            s_map_arg.s = sum(sensi_s_all)
+        else:
+            s_map_arg.s = s_map_s_total
 
-        t_all.append(t)
-        proj_d_all.append(proj_d)
+        if sensi_d_all:
+            print("sensi_d change to file definition")
+            s_map_arg.d = sum(sensi_d_all) * args.s_map_d_ratio
+        else:
+            s_map_arg.d = s_map_d_total
 
-        for i in range(0, rotate_num):
-            rotmat_inv_tmp = rotmat_inv[:, i]
-            s_map_arg.s = s_map_arg.s + torch.sum(sysmat[:, rotmat_inv_tmp - 1], dim=0, keepdim=True).cpu()
-        s_map_arg.s = s_map_arg.s.transpose(0, 1) / rotate_num
-        s_map_arg.d = s_map_arg.s * compton_event_count / single_event_count
+        print("===========================================")
+        print("--------Step4: Image Reconstruction--------")
 
-        single_event_count_total += single_event_count
-        compton_event_count_total += compton_event_count
+        if args.save_s:
+            with open(repo_root / "sensitivity_s", "wb") as file:
+                s_map_arg.s.cpu().numpy().astype("float32").tofile(file)
 
-    if len(sensi_s_all) > 0:
-        print("sensi_s change to file definition")
-        s_map_arg.s = sum(sensi_s_all)
+        if args.save_d:
+            sensi_d = torch.zeros_like(s_map_arg.s)
+            for t in t_all:
+                sensi_d_tmp = torch.sum(torch.cat(t, dim=0), dim=0, keepdim=True).transpose(0, 1)
+                sensi_d_tmp = (
+                    sensi_d_tmp
+                    * torch.sum(s_map_arg.s)
+                    / torch.sum(sensi_d_tmp)
+                    * compton_event_count_total
+                    / max(single_event_count_total, 1)
+                )
+                sensi_d += sensi_d_tmp
+            with open(repo_root / "Sensi_d", "wb") as file:
+                sensi_d.cpu().numpy().astype("float32").tofile(file)
 
-    if len(sensi_d_all)>0:
-        print("sensi_d change to file definition")
-        s_map_arg.d = sum(sensi_d_all)
-        s_map_arg.d = s_map_arg.d * s_map_d_ratio
-        # s_map_arg.d = s_map_arg.d * torch.sum(s_map_arg.s) / torch.sum(s_map_arg.d) * compton_event_count_total / single_event_count_total
+        torch.cuda.empty_cache()
 
-    # ===== Step4: Reconstruction =====
-    print("===========================================")
-    print("--------Step4: Image Reconstruction--------")
+        save_path = build_save_path(
+            output_root,
+            args.e0_list,
+            args.rotate_num,
+            args.data_file_name,
+            args.count_level,
+            args.ds,
+            args.s_map_d_ratio,
+            args.delta_r1,
+            args.alpha,
+            args.ene_resolution_662keV,
+            iter_arg.osem_subset_num,
+            iter_arg.jsccsd,
+            single_event_count_total,
+            compton_event_count_total,
+        )
+        save_path.mkdir(parents=True, exist_ok=True)
 
-    if flag_save_s == 1:
-        with open("sensitivity_s", "w") as file:
-            s_map_arg.s.cpu().numpy().astype('float32').tofile(file)
+        run_recon_osem(
+            sysmat_all,
+            rotmat_all,
+            rotmat_inv_all,
+            proj_all,
+            proj_d_all,
+            t_all,
+            iter_arg,
+            s_map_arg,
+            args.alpha,
+            str(save_path) + os.sep,
+            args.num_gpus,
+            model_denoiser,
+        )
 
-    # calculate sensi_d (only for square)
-    if flag_save_d == 1:
-        sensi_d = 0 * s_map_arg.s
-        for t in t_all:
-            sensi_d_tmp = torch.sum(t, dim=0, keepdim=True).transpose(0, 1)
-            sensi_d_tmp = sensi_d_tmp * torch.sum(s_map_arg.s) / torch.sum(sensi_d_tmp) * compton_event_count_total / single_event_count_total
-            sensi_d = sensi_d + sensi_d_tmp
-        with open("Sensi_d", "w") as file:
-            sensi_d.cpu().numpy().astype('float32').tofile(file)
+        print(f"\nTotal time used: {time.time() - start_time:.2f}s")
 
-    torch.cuda.empty_cache()
+    finally:
+        sys.stdout = original_stdout
+        if logfile is not None:
+            logfile.close()
 
-    if len(e0_list) == 1:
-        save_path = f"./Figure/SingleEnergy_{data_file_name}_{round(1000 * e0_list[0])}keV_{count_level}_{ds}_SMap{s_map_d_ratio}_Delta{delta_r1}_Alpha{alpha}_ER{ene_resolution_662keV}_OSEM{iter_arg.osem_subset_num}_ITER{iter_arg.jsccsd}_SDU{single_event_count_total}_DDU{compton_event_count_total}/Polar/"
-    else:
-        e0_list_str = " ".join(str(round(e0 * 1000)) for e0 in e0_list)
-        save_path = f"./Figure/MultiEnergy_{data_file_name}_({e0_list_str})keV_{count_level}_{ds}_SMap{s_map_d_ratio}_Delta{delta_r1}_Alpha{alpha}_ER{ene_resolution_662keV}_OSEM{iter_arg.osem_subset_num}_ITER{iter_arg.jsccsd}_SDU{single_event_count_total}_DDU{compton_event_count_total}/Polar/"
-    os.makedirs(save_path, exist_ok=True)
-
-    run_recon_osem(sysmat_all, rotmat_all, rotmat_inv_all, proj_all, proj_d_all, t_all, iter_arg, s_map_arg, alpha, save_path, args.num_gpus, model_denoiser)
-
-    print(f"\nTotal time used: {time.time() - start_time:.2f}s")
-
-    logfile.close()
-    sys.stdout = sys.__stdout__
-    final_log_name = "print_log.txt"
-    shutil.move(log_filename, os.path.join(save_path, final_log_name))
+        if log_filename is not None:
+            if save_path is not None and save_path.is_dir():
+                final_log_name = save_path / "print_log.txt"
+                shutil.move(str(log_filename), final_log_name)
+            elif Path(log_filename).exists():
+                print(f"Log kept at {log_filename}")
 
 
-if __name__ == '__main__':
-    # Set multiprocessing start method
-    mp.set_start_method('spawn', force=True)
+if __name__ == "__main__":
+    mp.set_start_method("spawn", force=True)
     with torch.no_grad():
         main()

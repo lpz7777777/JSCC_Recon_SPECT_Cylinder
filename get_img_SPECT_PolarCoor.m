@@ -1,432 +1,440 @@
 folderPath = uigetdir("./Figure/");
-file_path = "./Factors/511keV_RotateNum40/";
-load(sprintf("%sRotMat.mat", file_path));
-load(sprintf("%sRotMatInv.mat", file_path));
-load(sprintf("%scoor_polar.mat", file_path));
+if isequal(folderPath, 0)
+    return;
+end
 
-show_center = [30, 0, 0];
-generate = 0;
 
-if folderPath ~= 0
-    slashPositions = strfind(folderPath, '\');
-    if ~isempty(slashPositions)
-        Name = folderPath(slashPositions(end) + 1 : end);
-    else
-        Name = folderPath;
+generateCartesian = 0;
+sigmaGauss = 0.01;
+mipStartLayer = 1;
+mipEndLayer = 20;
+
+pixelNumX = 100;
+pixelNumY = 100;
+pixelLX = 3;
+pixelLY = 3;
+pixelLZ = 3;
+
+[~, name] = fileparts(folderPath);
+pathPolar = fullfile(folderPath, "Polar");
+pathCartesian = fullfile(folderPath, "Cartesian");
+if ~exist(pathCartesian, "dir")
+    mkdir(pathCartesian);
+end
+
+rotateNum = parse_single_token(name, "(?:RotNum|RotateNum)(\d+)", "rotate number");
+energyKeV = parse_single_token(name, "_(\d+)keV", "energy");
+factorPath = fullfile(".", "Factors", sprintf("%dkeV_RotateNum%d", energyKeV, rotateNum));
+
+rotMat = load_named_array(fullfile(factorPath, "RotMat_full.mat"), fullfile(factorPath, "RotMat_full.csv"), "RotMat");
+rotMatInv = load_named_array(fullfile(factorPath, "RotMatInv_full.mat"), fullfile(factorPath, "RotMatInv_full.csv"), "RotMatInv");
+coorPolar = load_named_array(fullfile(factorPath, "coor_polar.mat"), fullfile(factorPath, "coor_polar.csv"), "coor_polar");
+
+pixelNum = size(rotMat, 1);
+pixelNumPolar = size(coorPolar, 1);
+pixelNumCartesianZ = pixelNum / pixelNumPolar;
+if abs(pixelNumCartesianZ - round(pixelNumCartesianZ)) > 1e-8
+    error("pixel_num mismatch: RotMat rows = %d, coor_polar rows = %d.", pixelNum, pixelNumPolar);
+end
+pixelNumCartesianZ = round(pixelNumCartesianZ);
+[mipStartLayer, mipEndLayer] = normalize_mip_layer_range(mipStartLayer, mipEndLayer, pixelNumCartesianZ);
+
+iterInfoSc = parse_iter_file(pathPolar, "Image_SC_Iter_*");
+iterInfoScd = parse_iter_file_optional(pathPolar, "Image_SCD_Iter_*");
+iterInfoJsccd = parse_iter_file_optional(pathPolar, "Image_JSCCD_Iter_*");
+iterInfoJsccsd = parse_iter_file(pathPolar, "Image_JSCCSD_Iter_*");
+if iterInfoSc.iterMax ~= iterInfoJsccsd.iterMax || iterInfoSc.saveCount ~= iterInfoJsccsd.saveCount
+    error("SC and JSCCSD iteration files are inconsistent.");
+end
+
+iterMax = iterInfoSc.iterMax;
+saveCount = iterInfoSc.saveCount;
+iterInterval = iterInfoSc.iterInterval;
+iterShowPreferred = build_iter_show_list(iterMax, iterInterval);
+iterShow = unique(iterShowPreferred(iterShowPreferred >= iterInterval & iterShowPreferred <= iterMax));
+iterShow = iterShow(mod(iterShow, iterInterval) == 0);
+if isempty(iterShow)
+    sampleCount = min(6, saveCount);
+    iterShow = unique(round(linspace(1, saveCount, sampleCount)) * iterInterval);
+end
+
+[coorCartesianX, coorCartesianY] = meshgrid( ...
+    (-pixelNumX * pixelLX / 2 + pixelLX / 2) : pixelLX : (pixelNumX * pixelLX / 2 - pixelLX / 2), ...
+    (-pixelNumY * pixelLY / 2 + pixelLY / 2) : pixelLY : (pixelNumY * pixelLY / 2 - pixelLY / 2));
+
+cartesianFileSc = fullfile(pathCartesian, iterInfoSc.fileName);
+cartesianFileScd = "";
+cartesianFileJsccd = "";
+cartesianFileJsccsd = fullfile(pathCartesian, iterInfoJsccsd.fileName);
+if ~isempty(iterInfoScd)
+    cartesianFileScd = fullfile(pathCartesian, iterInfoScd.fileName);
+end
+if ~isempty(iterInfoJsccd)
+    cartesianFileJsccd = fullfile(pathCartesian, iterInfoJsccd.fileName);
+end
+
+cartesianJobs = struct( ...
+    "iterInfo", {iterInfoSc, iterInfoJsccsd}, ...
+    "cartesianFile", {cartesianFileSc, cartesianFileJsccsd});
+if ~isempty(iterInfoScd)
+    cartesianJobs(end + 1) = struct("iterInfo", iterInfoScd, "cartesianFile", cartesianFileScd);
+end
+if ~isempty(iterInfoJsccd)
+    cartesianJobs(end + 1) = struct("iterInfo", iterInfoJsccd, "cartesianFile", cartesianFileJsccd);
+end
+
+needGenerateCartesian = generateCartesian == 1;
+for jobIdx = 1 : numel(cartesianJobs)
+    if ~exist(cartesianJobs(jobIdx).cartesianFile, "file")
+        needGenerateCartesian = true;
+        break;
     end
 end
-% Name = "ContrastPhantom_70_5e9_1_ER0.08_OSEM4_SDU5726210_DDU433766";
-Path = sprintf("./Figure/%s/", Name);
-Sigma_Gaussfit = 0.01;
-Subset_Num = 1;
-iter_max = 20000;
-iter_interval = 100;
-% iter_show_tmp = 50:50:200;
-% iter_show_tmp = 25:25:100;
-% iter_show_tmp = 10:10:40;
-% % iter_show_tmp = 5:5:20;
-% iter_show_tmp = 100:100:400;
-% iter_show_tmp = 200:200:800;
-% iter_show_tmp = 250:250:1000;
-% iter_show_tmp = 450:450:1800;
 
-% iter_show_tmp = 1250:1250:5000;
-
-% iter_show_tmp = 2000:2000:8000;
-% iter_show_tmp = 1000:1000:4000;
-% iter_show_tmp = 500:500:2000;
-iter_show_tmp = [250, 500, 1000, 2000, 4000, 8000, 16000];
-% iter_show_tmp = 2500:2500:10000;
-% iter_show_tmp = 5000:5000:20000;
-
-pixel_num_x = 100;
-pixel_num_y = 100;
-pixel_l_x = 3;
-pixel_l_y = 3;
-pixel_l_z = 3;
-fov_l_x = pixel_num_x * pixel_l_x;
-fov_l_y = pixel_num_y * pixel_l_y;
-pixel_num_cartesian_z = 20;
-rotate_num = size(RotMat, 2);
-show_center_pixcel = round(show_center ./ [pixel_l_x, pixel_l_y, pixel_l_z] + [pixel_num_x, pixel_num_y, pixel_num_cartesian_z]/2);
-
-Cut_Range = 5;
-range_U = (1 + Cut_Range) : (pixel_num_x - Cut_Range);
-range_V = (1 + Cut_Range) : (pixel_num_y - Cut_Range);
-
-Min_X = -1/2 * pixel_num_x * pixel_l_x;
-Max_X = -Min_X;
-Min_Y = Min_X;
-Max_Y = Max_X;
-Min_Z = -1/2 * pixel_num_cartesian_z * pixel_l_z;
-Max_Z = -Min_Z;
-
-color = flipud(gray(1024));
-% color = hot;
-
-Path_Polar = sprintf("%sPolar/", Path);
-Path_Cartesian = sprintf("%sCartesian/", Path);
-mkdir(Path_Cartesian);
-
-
-%%
-% f = figure;
-% f.Position = [100, 100, 1600, 800];
-% t = tiledlayout(1, 2);
-% 
-% nexttile;
-% plot(coor_polar(:, 1), coor_polar(:, 2), ".", "MarkerSize", 6);axis equal;axis square;
-% xlim([-150, 150]);
-% ylim([-150, 150]);
-% nexttile;
-% plot(reshape(coor_cartesian_x, [], 1), reshape(coor_cartesian_y, [], 1), ".", "MarkerSize", 3);axis equal;axis square;
-% xlim([-150, 150]);
-% ylim([-150, 150]);
-%%
-if generate == 1
-[coor_cartesian_x, coor_cartesian_y] = meshgrid(((-fov_l_x/2 + pixel_l_x/2) : pixel_l_x : (fov_l_x/2 - pixel_l_x/2)), ((-fov_l_y/2 + pixel_l_y/2) : pixel_l_y : (fov_l_y/2 - pixel_l_y/2)));
-
-%%
-fid = fopen(sprintf("%sImage_SC_Iter_%d_%d", Path_Polar, iter_max, floor(iter_max/iter_interval)), "r");
-img_sc_iter = reshape(fread(fid, "float32"), size(coor_polar, 1), pixel_num_cartesian_z, []);
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_SCD_Iter_%d_%d", Path_Polar, round(iter_max/2), floor(iter_max/2/iter_interval)), "r");
-img_scd_iter = reshape(fread(fid, "float32"), size(coor_polar, 1), pixel_num_cartesian_z, []);
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_JSCCD_Iter_%d_%d", Path_Polar, round(iter_max/2), floor(iter_max/2/iter_interval)), "r");
-img_jsccd_iter = reshape(fread(fid, "float32"), size(coor_polar, 1), pixel_num_cartesian_z, []);
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_JSCCSD_Iter_%d_%d", Path_Polar, iter_max, floor(iter_max/iter_interval)), "r");
-img_jsccsd_iter = reshape(fread(fid, "float32"), size(coor_polar, 1), pixel_num_cartesian_z, []);
-fclose(fid);
-
-%% To Cartesian
-img_sc_iter_cartesian = zeros(pixel_num_x*pixel_num_x, pixel_num_cartesian_z, size(img_sc_iter, 3));
-for iter_id = 1 : size(img_sc_iter, 3)
-    img_tmp = img_sc_iter(:, :, iter_id);
-    for id_z = 1 : pixel_num_cartesian_z
-        Img_Polar_tmp = img_tmp(:, id_z);
-        Img_cartesian_tmp = griddata(coor_polar(:, 1), coor_polar(:, 2), Img_Polar_tmp, coor_cartesian_x, coor_cartesian_y, "linear").';
-        img_sc_iter_cartesian(:, id_z, iter_id) = reshape(Img_cartesian_tmp, 1, []);
+if needGenerateCartesian
+    for jobIdx = 1 : numel(cartesianJobs)
+        imgIterPolar = read_float32_tensor( ...
+            fullfile(pathPolar, cartesianJobs(jobIdx).iterInfo.fileName), ...
+            [pixelNumPolar, pixelNumCartesianZ, cartesianJobs(jobIdx).iterInfo.saveCount]);
+        imgIterCartesian = polar_to_cartesian_stack(imgIterPolar, coorPolar, coorCartesianX, coorCartesianY);
+        write_float32_tensor(cartesianJobs(jobIdx).cartesianFile, imgIterCartesian);
     end
 end
-img_sc_iter_cartesian(isnan(img_sc_iter_cartesian)) = 0;
-
-img_scd_iter_cartesian = zeros(pixel_num_x*pixel_num_x, pixel_num_cartesian_z, size(img_scd_iter, 3));
-for iter_id = 1 : size(img_scd_iter, 3)
-    img_tmp = img_scd_iter(:, :, iter_id);
-    for id_z = 1 : pixel_num_cartesian_z
-        Img_Polar_tmp = img_tmp(:, id_z);
-        Img_cartesian_tmp = griddata(coor_polar(:, 1), coor_polar(:, 2), Img_Polar_tmp, coor_cartesian_x, coor_cartesian_y, "linear").';
-        img_scd_iter_cartesian(:, id_z, iter_id) = reshape(Img_cartesian_tmp, 1, []);
-    end
-end
-img_scd_iter_cartesian(isnan(img_scd_iter_cartesian)) = 0;
-
-img_jsccd_iter_cartesian = zeros(pixel_num_x*pixel_num_x, pixel_num_cartesian_z, size(img_jsccd_iter, 3));
-for iter_id = 1 : size(img_jsccd_iter, 3)
-    img_tmp = img_jsccd_iter(:, :, iter_id);
-    for id_z = 1 : pixel_num_cartesian_z
-        Img_Polar_tmp = img_tmp(:, id_z);
-        Img_cartesian_tmp = griddata(coor_polar(:, 1), coor_polar(:, 2), Img_Polar_tmp, coor_cartesian_x, coor_cartesian_y, "linear").';
-        img_jsccd_iter_cartesian(:, id_z, iter_id) = reshape(Img_cartesian_tmp, 1, []);
-    end
-end
-img_jsccd_iter_cartesian(isnan(img_jsccd_iter_cartesian)) = 0;
-
-img_jsccsd_iter_cartesian = zeros(pixel_num_x*pixel_num_x, pixel_num_cartesian_z, size(img_jsccsd_iter, 3));
-for iter_id = 1 : size(img_jsccsd_iter, 3)
-    img_tmp = img_jsccsd_iter(:, :, iter_id);
-    for id_z = 1 : pixel_num_cartesian_z
-        Img_Polar_tmp = img_tmp(:, id_z);
-        Img_cartesian_tmp = griddata(coor_polar(:, 1), coor_polar(:, 2), Img_Polar_tmp, coor_cartesian_x, coor_cartesian_y, "linear").';
-        img_jsccsd_iter_cartesian(:, id_z, iter_id) = reshape(Img_cartesian_tmp, 1, []);
-    end
-end
-img_jsccsd_iter_cartesian(isnan(img_jsccsd_iter_cartesian)) = 0;
-
-fid = fopen(sprintf("%sImage_SC_Iter_%d_%d", Path_Cartesian, iter_max, floor(iter_max/iter_interval)), "w");
-fwrite(fid, img_sc_iter_cartesian, "float32");
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_SCD_Iter_%d_%d", Path_Cartesian, round(iter_max/2), floor(iter_max/2/iter_interval)), "w");
-fwrite(fid, img_scd_iter_cartesian, "float32");
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_JSCCD_Iter_%d_%d", Path_Cartesian, round(iter_max/2), floor(iter_max/2/iter_interval)), "w");
-fwrite(fid, img_jsccd_iter_cartesian, "float32");
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_JSCCSD_Iter_%d_%d", Path_Cartesian, iter_max, floor(iter_max/iter_interval)), "w");
-fwrite(fid, img_jsccsd_iter_cartesian, "float32");
-fclose(fid);
-
-
-else
-%%
-fid = fopen(sprintf("%sImage_SC_Iter_%d_%d", Path_Cartesian, iter_max, floor(iter_max/iter_interval)), "r");
-img_sc_iter_cartesian = reshape(fread(fid, "float32"), pixel_num_x, pixel_num_y, pixel_num_cartesian_z, []);
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_SCD_Iter_%d_%d", Path_Cartesian, round(iter_max/2), floor(iter_max/2/iter_interval)), "r");
-img_scd_iter_cartesian = reshape(fread(fid, "float32"), pixel_num_x, pixel_num_y, pixel_num_cartesian_z, []);
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_JSCCD_Iter_%d_%d", Path_Cartesian, round(iter_max/2), floor(iter_max/2/iter_interval)), "r");
-img_jsccd_iter_cartesian = reshape(fread(fid, "float32"), pixel_num_x, pixel_num_y, pixel_num_cartesian_z, []);
-fclose(fid);
-
-fid = fopen(sprintf("%sImage_JSCCSD_Iter_%d_%d", Path_Cartesian, iter_max, floor(iter_max/iter_interval)), "r");
-img_jsccsd_iter_cartesian = reshape(fread(fid, "float32"), pixel_num_x, pixel_num_y, pixel_num_cartesian_z, []);
-fclose(fid);
 
 %%
+% showCenter = [30, 0, 0];
+showCenter = [0, 0, -13];
+% showCenter = [0, 0, 0];
+imgScIterCartesian = read_float32_tensor(cartesianFileSc, [pixelNumX, pixelNumY, pixelNumCartesianZ, saveCount]);
+imgJsccsdIterCartesian = read_float32_tensor(cartesianFileJsccsd, [pixelNumX, pixelNumY, pixelNumCartesianZ, saveCount]);
+
+showCenterPixel = round(showCenter ./ [pixelLX, pixelLY, pixelLZ] + [pixelNumX, pixelNumY, pixelNumCartesianZ] / 2);
+showCenterPixel = max(showCenterPixel, [1, 1, 1]);
+showCenterPixel = min(showCenterPixel, [pixelNumX, pixelNumY, pixelNumCartesianZ]);
+
+cutRange = 5;
+rangeU = (1 + cutRange) : (pixelNumX - cutRange);
+rangeV = (1 + cutRange) : (pixelNumY - cutRange);
+
+minX = -pixelNumX * pixelLX / 2;
+maxX = -minX;
+minY = minX;
+maxY = maxX;
+minZ = -pixelNumCartesianZ * pixelLZ / 2;
+maxZ = -minZ;
+
+colorMap = flipud(gray(1024));
+
 f = figure;
-f.Position = [100 100 1100 800/4*length(iter_show_tmp)];
+f.Position = [100, 100, 850, 250 * length(iterShow)];
+tOuter = tiledlayout(length(iterShow), 17);
+tOuter.TileSpacing = "none";
+tOuter.Padding = "compact";
 
-t_outer = tiledlayout(length(iter_show_tmp), 15);
-t_outer.TileSpacing = 'none';
-t_outer.Padding = "tight";
+for idx = 1 : length(iterShow)
+    iterValue = iterShow(idx);
+    iterId = round(iterValue / iterInterval);
+    iterId = max(1, min(saveCount, iterId));
 
-% t_inner_sc = cell(length(iter_show_tmp), 1);
-% t_inner_jsccsd = cell(length(iter_show_tmp), 1);
+    imgSc = imgScIterCartesian(:, :, :, iterId);
+    imgJsccsd = imgJsccsdIterCartesian(:, :, :, iterId);
 
-id_iter_show = 0;
-for iter_show = iter_show_tmp
-    id_iter_show = id_iter_show + 1;
+    rowDataSc = extract_views(imgSc, showCenterPixel, sigmaGauss);
+    rowDataJsccsd = extract_views(imgJsccsd, showCenterPixel, sigmaGauss);
 
-    img_sc = img_sc_iter_cartesian(:, :, :, round(iter_show/iter_interval));
-    img_jsccsd = img_jsccsd_iter_cartesian(:, :, :, round(iter_show/iter_interval));
+    rowMaxSc = get_display_max(rowDataSc.transverse, rowDataSc.coronal, rowDataSc.sagittal, rangeU, rangeV);
+    rowMaxJsccsd = get_display_max(rowDataJsccsd.transverse, rowDataJsccsd.coronal, rowDataJsccsd.sagittal, rangeU, rangeV);
 
-    % SC
-    % --------Transverse--------
-    nexttile(t_outer, [1, 3]);
-    img_tmp = img_sc(:, :, show_center_pixcel(3)).';
-    img_tmp = flip(imgaussfilt(img_tmp, Sigma_Gaussfit), 1);
-    max_colorbar = 1 * max(img_tmp(range_U,range_V), [], "all");
-    % imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
-    imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp);
-    cb = colorbar("westoutside");
-    cb.Label.String = sprintf("Iteration=%d", iter_show);
-    cb.Label.FontSize = 11;
-    axis equal                                                                                                                                             
-    colormap(color);
-    xlabel("x (mm)");
-    ylim([Min_X Max_X]);
-    xlim([Min_Y Max_Y]);
+    plot_orthogonal_row( ...
+        tOuter, rowDataSc, [minX, maxX], [minY, maxY], [minZ, maxZ], ...
+        rowMaxSc, showCenter, "SC", sprintf("Iter=%d", iterValue), colorMap, idx == 1);
 
-    hold on
-    line([show_center(1), show_center(1)], [Min_Y Max_Y]*3/4, 'Color','red','LineStyle','--', "LineWidth", 0.5);
-    line([Min_X Max_X]*3/4, [show_center(2), show_center(2)], 'Color','blue','LineStyle','--', "LineWidth", 0.5);
+    axSpacer = nexttile(tOuter, [1, 1]);
+    axSpacer.Visible = "off";
 
-    if id_iter_show == 1
-        title(sprintf("SC\nTransverse"), "FontSize", 11);
-    elseif id_iter_show == length(iter_show_tmp)
-        xlabel("y (mm)");
+    plot_orthogonal_row( ...
+        tOuter, rowDataJsccsd, [minX, maxX], [minY, maxY], [minZ, maxZ], ...
+        rowMaxJsccsd, showCenter, "JSCCSD", "", colorMap, idx == 1);
+end
+
+title(tOuter, sprintf("Data Name: %s", name), "Interpreter", "none");
+saveas(f, fullfile(folderPath, "show.png"));
+savefig(f, fullfile(folderPath, "show.fig"));
+
+fMip = figure;
+fMip.Position = [140, 80, 500, 260 * length(iterShow)];
+tMip = tiledlayout(length(iterShow), 2);
+tMip.TileSpacing = "none";
+tMip.Padding = "compact";
+
+for idx = 1 : length(iterShow)
+    iterValue = iterShow(idx);
+    iterId = round(iterValue / iterInterval);
+    iterId = max(1, min(saveCount, iterId));
+
+    imgScMip = get_transverse_mip(imgScIterCartesian(:, :, :, iterId), mipStartLayer, mipEndLayer);
+    imgJsccsdMip = get_transverse_mip(imgJsccsdIterCartesian(:, :, :, iterId), mipStartLayer, mipEndLayer);
+    rowMaxMip = max([imgScMip(:); imgJsccsdMip(:)]);
+    if rowMaxMip <= 0
+        rowMaxMip = 1;
     end
 
-    % --------Coronal--------
-    nexttile(t_outer, [1, 2]);
-    img_tmp = squeeze(img_sc(:, show_center_pixcel(2), :));
-    img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
-    % imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp, [0, max_colorbar]);
-    imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp);
-    axis equal                                                                                                                                             
-    colormap(color);
+    axScMip = nexttile(tMip);
+    imagesc([minY, maxY], [minX, maxX], imgScMip, [0, rowMaxMip]);
+    axis equal;
+    colormap(axScMip, colorMap);
+    xlabel("y (mm)");
     ylabel("x (mm)");
-    ylim([Min_X Max_X]);
-    xlim([Min_Z Max_Z]);
-
-    hold on
-    line([show_center(3), show_center(3)], [Min_X Max_X]*3/4, 'Color','black','LineStyle','--', "LineWidth", 0.5);
-
-    if id_iter_show == 1
-        title("Coronal", "FontSize", 11, "Color", "blue");
-    elseif id_iter_show == length(iter_show_tmp)
-        xlabel("z (mm)");
+    xlim([minY, maxY]);
+    ylim([minX, maxX]);
+    if idx == 1
+        title("SC Transverse MIP", "Interpreter", "none");
     end
 
-    % --------Sagittal--------
-    nexttile(t_outer, [1, 2]);
-    img_tmp = squeeze(img_sc(show_center_pixcel(1), :, :));
-    img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
-    % max_colorbar = 1 * max(img_tmp(range_V, :), [], "all");
-    % imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
-    imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp);
-    axis equal                                                                                                                                             
-    colormap(color);
-    ylabel("y (mm)");
-    ylim([Min_Y Max_Y]);
-    xlim([Min_Z Max_Z]);
-
-    if id_iter_show == 1
-        title("Sagittal", "FontSize", 11, "Color", "red");
-    elseif id_iter_show == length(iter_show_tmp)
-        xlabel("z (mm)");
-    end
-
-    ax = nexttile(t_outer);
-    % ylim(ax, [Min_X Max_X]);
-    % xlim(ax, [Min_Z Max_Z]);
-    % line([0, 0], [Min_X Max_X], 'Color','black', "LineWidth", 2);
-    ax.Visible = "off";
-
-    % JSCC
-    % --------Transverse--------
-    nexttile(t_outer, [1, 3]);
-    img_tmp = img_jsccsd(:, :, show_center_pixcel(3)).';
-    img_tmp = flip(imgaussfilt(img_tmp, Sigma_Gaussfit), 1);
-    max_colorbar = 1 * max(img_tmp(range_U,range_V), [], "all");
-    % imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
-    imagesc([Min_X Max_X], [Min_Y Max_Y], img_tmp);
-    cb = colorbar("westoutside");
-    % cb.Label.String = sprintf("Iteration=%d", iter_show);
-    axis equal                                                                                                                                             
-    colormap(color);
-    ylabel("x (mm)");  
-    ylim([Min_X Max_X]);
-    xlim([Min_Y Max_Y]);
-
-    hold on
-    line([show_center(1), show_center(1)], [Min_Y Max_Y]*3/4, 'Color','red','LineStyle','--', "LineWidth", 0.5);
-    line([Min_X Max_X]*3/4, [show_center(2), show_center(2)], 'Color','blue','LineStyle','--', "LineWidth", 0.5);
-
-    if id_iter_show == 1
-        title(sprintf("JSCC\nTransverse"), "FontSize", 11);
-    elseif id_iter_show == length(iter_show_tmp)
-        xlabel("y (mm)");
-    end
-
-    % --------Coronal--------
-    nexttile(t_outer, [1, 2]);
-    img_tmp = squeeze(img_jsccsd(:, show_center_pixcel(2), :));
-    img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
-    % max_colorbar = 1 * max(img_tmp(range_U, :), [], "all");
-    % imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp, [0, max_colorbar]);
-    imagesc([Min_Z Max_Z], [Min_X Max_X], img_tmp);
-    axis equal                                                                                                                                             
-    colormap(color);
+    axJsccsdMip = nexttile(tMip);
+    imagesc([minY, maxY], [minX, maxX], imgJsccsdMip, [0, rowMaxMip]);
+    axis equal;
+    colormap(axJsccsdMip, colorMap);
+    xlabel("y (mm)");
     ylabel("x (mm)");
-    ylim([Min_X Max_X]);
-    xlim([Min_Z Max_Z]);
-
-    hold on
-    line([show_center(3), show_center(3)], [Min_X Max_X]*3/4, 'Color','black','LineStyle','--', "LineWidth", 0.5);
-
-    if id_iter_show == 1
-        title("Coronal", "FontSize", 11, "Color", "blue");
-    elseif id_iter_show == length(iter_show_tmp)
-        xlabel("z (mm)");
+    xlim([minY, maxY]);
+    ylim([minX, maxX]);
+    if idx == 1
+        title("JSCCSD Transverse MIP", "Interpreter", "none");
     end
 
-    % --------Sagittal--------
-    nexttile(t_outer, [1, 2]);
-    img_tmp = squeeze(img_jsccsd(show_center_pixcel(1), :, :));
-    img_tmp = imgaussfilt(img_tmp, Sigma_Gaussfit);
-    % max_colorbar = 1 * max(img_tmp(range_V, :), [], "all");
-    % imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp, [0, max_colorbar]);
-    imagesc([Min_Z Max_Z], [Min_Y Max_Y], img_tmp);
-    axis equal                                                                                                                                             
-    colormap(color);
-    ylabel("y (mm)");
-    ylim([Min_Y Max_Y]);
-    xlim([Min_Z Max_Z]);
+    cbMip = colorbar(axJsccsdMip, "eastoutside");
+    cbMip.Label.String = sprintf("Iter=%d", iterValue);
+    cbMip.Label.Interpreter = "none";
+    clim(axScMip, [0, rowMaxMip]);
+    clim(axJsccsdMip, [0, rowMaxMip]);
+end
 
-    if id_iter_show == 1
-        title("Sagittal", "FontSize", 11, "Color", "red");
-    elseif id_iter_show == length(iter_show_tmp)
-        xlabel("z (mm)");
+title(tMip, sprintf("Transverse MIP z=%d:%d: %s", mipStartLayer, mipEndLayer, name), "Interpreter", "none");
+saveas(fMip, fullfile(folderPath, "mip.png"));
+savefig(fMip, fullfile(folderPath, "mip.fig"));
+
+
+function iterInfo = parse_iter_file(folderPath, pattern)
+matches = dir(fullfile(folderPath, pattern));
+if isempty(matches)
+    error("Cannot find %s under %s.", pattern, folderPath);
+end
+if numel(matches) > 1
+    warning("Found multiple files for %s. Using %s.", pattern, matches(1).name);
+end
+
+tokens = regexp(matches(1).name, ".*_Iter_(\d+)_(\d+)$", "tokens", "once");
+if isempty(tokens)
+    error("Failed to parse iteration info from %s.", matches(1).name);
+end
+
+iterInfo.fileName = matches(1).name;
+iterInfo.iterMax = str2double(tokens{1});
+iterInfo.saveCount = str2double(tokens{2});
+iterInfo.iterInterval = round(iterInfo.iterMax / iterInfo.saveCount);
+end
+
+
+function iterInfo = parse_iter_file_optional(folderPath, pattern)
+matches = dir(fullfile(folderPath, pattern));
+if isempty(matches)
+    iterInfo = [];
+    return;
+end
+iterInfo = parse_iter_file(folderPath, pattern);
+end
+
+
+function views = extract_views(imgVolume, showCenterPixel, sigmaGauss)
+views.transverse = flip(imgaussfilt(imgVolume(:, :, showCenterPixel(3)).', sigmaGauss), 1);
+views.coronal = imgaussfilt(squeeze(imgVolume(:, showCenterPixel(2), :)), sigmaGauss);
+views.sagittal = imgaussfilt(squeeze(imgVolume(showCenterPixel(1), :, :)), sigmaGauss);
+end
+
+
+function maxValue = get_display_max(imgTransverse, imgCoronal, imgSagittal, rangeU, rangeV)
+maxValue = max(imgTransverse(rangeU, rangeV), [], "all");
+maxValue = max([maxValue, max(imgCoronal, [], "all"), max(imgSagittal, [], "all")]);
+if maxValue <= 0
+    maxValue = 1;
+end
+end
+
+
+function plot_orthogonal_row(tOuter, rowData, xRange, yRange, zRange, maxColor, showCenter, labelPrefix, colorbarLabel, colorMap, showTitles)
+ax1 = nexttile(tOuter, [1, 4]);
+imagesc(yRange, xRange, rowData.transverse, [0, maxColor]);
+axis equal;
+colormap(colorMap);
+hold on;
+line([showCenter(1), showCenter(1)], yRange * 0.75, "Color", "red", "LineStyle", "--", "LineWidth", 0.5);
+line(xRange * 0.75, [showCenter(2), showCenter(2)], "Color", "blue", "LineStyle", "--", "LineWidth", 0.5);
+if showTitles
+    title(sprintf("%s Transverse", labelPrefix), "Interpreter", "none");
+end
+xlabel("y (mm)");
+ylabel("x (mm)");
+xlim(yRange);
+ylim(xRange);
+
+ax2 = nexttile(tOuter, [1, 2]);
+imagesc(zRange, xRange, rowData.coronal, [0, maxColor]);
+axis equal;
+colormap(colorMap);
+hold on;
+line([showCenter(3), showCenter(3)], xRange * 0.75, "Color", "black", "LineStyle", "--", "LineWidth", 0.5);
+if showTitles
+    title(sprintf("%s Coronal", labelPrefix), "Interpreter", "none");
+end
+xlabel("z (mm)");
+ylabel("x (mm)");
+xlim(zRange);
+ylim(xRange);
+
+ax3 = nexttile(tOuter, [1, 2]);
+imagesc(zRange, yRange, rowData.sagittal, [0, maxColor]);
+axis equal;
+colormap(colorMap);
+if showTitles
+    title(sprintf("%s Sagittal", labelPrefix), "Interpreter", "none");
+end
+xlabel("z (mm)");
+ylabel("y (mm)");
+xlim(zRange);
+ylim(yRange);
+
+cb = colorbar(ax1, "westoutside");
+if ~isempty(colorbarLabel)
+    cb.Label.String = colorbarLabel;
+    cb.Label.Interpreter = "none";
+end
+clim(ax1, [0, maxColor]);
+clim(ax2, [0, maxColor]);
+clim(ax3, [0, maxColor]);
+end
+
+
+function value = parse_single_token(textValue, expr, label)
+tokens = regexp(textValue, expr, "tokens", "once");
+if isempty(tokens)
+    error("Failed to parse %s from %s.", label, textValue);
+end
+value = str2double(tokens{1});
+end
+
+
+function iterShow = build_iter_show_list(iterMax, iterInterval)
+divisors = [100, 50, 20, 10, 2];
+iterShow = zeros(1, numel(divisors) + 1);
+for idx = 1 : numel(divisors)
+    iterValue = floor(iterMax / divisors(idx));
+    iterValue = max(iterInterval, floor(iterValue / iterInterval) * iterInterval);
+    iterShow(idx) = iterValue;
+end
+iterShow(end) = iterMax;
+iterShow = unique(iterShow(iterShow >= iterInterval & iterShow <= iterMax), "stable");
+end
+
+
+function data = load_named_array(matPath, csvPath, fieldName)
+if exist(matPath, "file")
+    loaded = load(matPath);
+    if isfield(loaded, fieldName)
+        data = loaded.(fieldName);
+        return;
+    end
+    names = fieldnames(loaded);
+    if isempty(names)
+        error("No variables found in %s.", matPath);
+    end
+    data = loaded.(names{1});
+    return;
+end
+
+if exist(csvPath, "file")
+    data = readmatrix(csvPath);
+    return;
+end
+
+error("Cannot find %s or %s.", matPath, csvPath);
+end
+
+
+function tensor = read_float32_tensor(filePath, tensorShape)
+fid = fopen(filePath, "r");
+if fid < 0
+    error("Failed to open %s.", filePath);
+end
+cleanupObj = onCleanup(@() fclose(fid));
+raw = fread(fid, "float32");
+expectedNumel = prod(tensorShape);
+if numel(raw) ~= expectedNumel
+    error("Unexpected element count in %s: expected %d, got %d.", filePath, expectedNumel, numel(raw));
+end
+tensor = reshape(raw, tensorShape);
+end
+
+
+function write_float32_tensor(filePath, tensor)
+fid = fopen(filePath, "w");
+if fid < 0
+    error("Failed to open %s for writing.", filePath);
+end
+cleanupObj = onCleanup(@() fclose(fid));
+fwrite(fid, tensor, "float32");
+end
+
+
+function imgCartesian = polar_to_cartesian_stack(imgPolar, coorPolar, coorCartesianX, coorCartesianY)
+polarSize = size(imgPolar);
+if numel(polarSize) == 2
+    polarSize(3) = 1;
+end
+
+pixelNumX = size(coorCartesianX, 1);
+pixelNumY = size(coorCartesianX, 2);
+imgCartesian = zeros(pixelNumX, pixelNumY, polarSize(2), polarSize(3), "single");
+
+for iterIdx = 1 : polarSize(3)
+    for zIdx = 1 : polarSize(2)
+        imgPolarTmp = imgPolar(:, zIdx, iterIdx);
+        imgCartesianTmp = griddata( ...
+            coorPolar(:, 1), ...
+            coorPolar(:, 2), ...
+            imgPolarTmp, ...
+            coorCartesianX, ...
+            coorCartesianY, ...
+            "linear").';
+        imgCartesian(:, :, zIdx, iterIdx) = single(imgCartesianTmp);
     end
 end
 
-title(t_outer, sprintf("Data Name: %s    OSEM Subset Number: %d", Name, Subset_Num), "Interpreter", "none");
-saveas(f, sprintf('%simg_show.png', Path));
-saveas(f, "img_show.png");
+imgCartesian(isnan(imgCartesian)) = 0;
+
+if polarSize(3) == 1
+    imgCartesian = squeeze(imgCartesian);
+end
 end
 
-%%
+
+function imgMip = get_transverse_mip(imgVolume, mipStartLayer, mipEndLayer)
+imgMip = squeeze(max(imgVolume(:, :, mipStartLayer:mipEndLayer), [], 3)).';
+imgMip = flip(imgMip, 1);
+end
 
 
+function [mipStartLayer, mipEndLayer] = normalize_mip_layer_range(mipStartLayer, mipEndLayer, pixelNumCartesianZ)
+if isempty(mipStartLayer)
+    mipStartLayer = 1;
+end
+if isempty(mipEndLayer)
+    mipEndLayer = pixelNumCartesianZ;
+end
 
-%%
-% f = figure;
-% f.Position = [100 100 1000 300];
-% 
-% t = tiledlayout(1, 3);
-% t.TileSpacing = 'tight';
-% t.Padding = "tight";
-% 
-% % for iter_show = iter_show_tmp
-% iter_sc = 400;
-% iter_jsccsd = 200;
-% 
-% img_sc = img_sc_iter(:, iter_sc/iter_interval);
-% img_jsccsd = img_jsccsd_iter(:, iter_jsccsd/iter_interval);
-% 
-% % x_tmp = -222.5 : 5 : 222.5;
-% % x_tmp = -267 : 6 : 267;
-% 
-% lineprofile_x = [-150, 150];
-% lineprofile_y = [0, 0];
-% 
-% nexttile;
-% a = reshape(img_sc, pixel_num_x, pixel_num_y);
-% a = imgaussfilt(a, Sigma_Gaussfit);
-% imagesc([Min_X Max_X], [Min_Y Max_Y], a(range_U,range_V), [0, 1 * max(a(range_U,range_V), [], "all")]);
-% colorbar
-% axis square
-% colormap(color);
-% 
-% hold on
-% line(lineprofile_y, lineprofile_x, 'Color','red','LineStyle','--', "LineWidth", 2);
-% 
-% title(sprintf("SC, Iter=%d", iter_sc));
-% 
-% nexttile;
-% a = reshape(img_jsccsd, pixel_num_x, pixel_num_y);
-% a = imgaussfilt(a, Sigma_Gaussfit);
-% imagesc([Min_X Max_X], [Min_Y Max_Y], a(range_U,range_V), [0, 1 * max(a(range_U,range_V), [], "all")]);
-% colorbar
-% axis square
-% % axis off
-% colormap(color);
-% 
-% hold on
-% line(lineprofile_y, lineprofile_x, 'Color','red','LineStyle','--', "LineWidth", 2);
-% 
-% title(sprintf("JSCC, Iter=%d", iter_jsccsd));
-% 
-% 
-% if lineprofile_x(1) ~= lineprofile_x(2)
-%     x_index_start = ceil(lineprofile_x(1) / pixel_l_x + pixel_num_x / 2);
-%     x_index_end = ceil(lineprofile_x(2) / pixel_l_x + pixel_num_x / 2);
-%     y_index = ceil(lineprofile_y(1) / pixel_l_x + pixel_num_y / 2);
-% 
-%     x_start = (x_index_start - pixel_num_x/2 - 1/2) * pixel_l_x;
-%     x_end = (x_index_end - pixel_num_x/2 - 1/2) * pixel_l_x;
-%     x_tmp = x_start : pixel_l_x : x_end;
-% 
-% 
-%     nexttile;
-%     hold on
-%     a = reshape(img_sc, pixel_num_x, pixel_num_y);
-%     a = imgaussfilt(a, Sigma_Gaussfit);
-%     plot(x_tmp, a(x_index_start:x_index_end, y_index), "LineWidth", 2);
-% 
-%     a = reshape(img_jsccsd, pixel_num_x, pixel_num_y);
-%     a = imgaussfilt(a, Sigma_Gaussfit);
-%     plot(x_tmp, a(x_index_start:x_index_end, y_index), "LineWidth", 2);
-%     title("Line Profile");
-%     legend("SC", "JSCC");
-%     xlabel("x(mm)");
-%     ylabel("Pixel Value");
-% 
-%     xlim([x_start, x_end]);
-% 
-% end
-% 
-% saveas(f, 'LineProfile.png');
-% 
+mipStartLayer = max(1, min(pixelNumCartesianZ, round(mipStartLayer)));
+mipEndLayer = max(1, min(pixelNumCartesianZ, round(mipEndLayer)));
+if mipStartLayer > mipEndLayer
+    error("Invalid MIP layer range: start=%d, end=%d.", mipStartLayer, mipEndLayer);
+end
+end

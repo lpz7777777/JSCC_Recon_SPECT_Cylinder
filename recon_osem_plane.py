@@ -4,6 +4,27 @@ import time
 import os
 import torch.multiprocessing as mp
 
+
+def split_tensor_even(tensor, parts, dim=0):
+    if parts <= 0:
+        raise ValueError("parts must be positive")
+
+    total = tensor.size(dim)
+    splits = []
+    for idx in range(parts):
+        start = total * idx // parts
+        end = total * (idx + 1) // parts
+        splits.append(tensor.narrow(dim, start, end - start))
+    return splits
+
+
+def get_t_budget_bytes_per_gpu(num_gpus, usage_ratio=0.8):
+    budgets = []
+    for gpu_id in range(num_gpus):
+        total_memory = torch.cuda.get_device_properties(gpu_id).total_memory
+        budgets.append(max(1, int(total_memory * usage_ratio)))
+    return budgets
+
 def get_weight_single(sysmat_list_tmp, proj_list_tmp, img_tmp):
     # get the weight of single events
     return torch.matmul(sysmat_list_tmp.transpose(0, 1), proj_list_tmp / torch.matmul(sysmat_list_tmp, img_tmp))
@@ -134,7 +155,7 @@ def get_gpu_memory_usage(num_gpus):
         reserved = torch.cuda.memory_reserved(i) / 1024**3
         print(f"cuda:{i}")
         print(f"allocated_GB:{round(allocated, 2)}")
-        print(f"allocated_GB:{round(allocated, 2)}")
+        print(f"reserved_GB:{round(reserved, 2)}")
 
 
 def run_recon_osem(sysmat_all, rotmat_all, rotmat_inv_all, proj_all, proj_d_all, t_all, iter_arg, s_map_arg, alpha, save_path, num_gpus, model_denoiser=None):
@@ -169,9 +190,9 @@ def run_recon_osem(sysmat_all, rotmat_all, rotmat_inv_all, proj_all, proj_d_all,
     cpnum_list = torch.arange(0, proj_all[0].size(dim=0))
     random_id = torch.randperm(proj_all[0].size(dim=0))
     cpnum_list = cpnum_list[random_id]
-    cpnum_list = list(torch.chunk(cpnum_list, iter_arg.osem_subset_num, dim=0))
+    cpnum_list = split_tensor_even(cpnum_list, iter_arg.osem_subset_num, dim=0)
 
-    GPU_T_BUDGET_BYTES = 40 * (1024 ** 3)
+    gpu_t_budget_bytes = get_t_budget_bytes_per_gpu(num_gpus)
 
     # 记录每个 GPU 当前已使用的 t 显存量
     gpu_vram_used = [0] * num_gpus
@@ -180,13 +201,13 @@ def run_recon_osem(sysmat_all, rotmat_all, rotmat_inv_all, proj_all, proj_d_all,
         if num_gpus == 1:
             # 单 GPU 逻辑
             for i in range(0, rotate_num):
-                t_chunks = list(torch.chunk(t[i], iter_arg.osem_subset_num, dim=0))
+                t_chunks = split_tensor_even(t[i], iter_arg.osem_subset_num, dim=0)
                 for j in range(0, iter_arg.osem_subset_num):
-                    t_sub_chunks = list(torch.chunk(t_chunks[j], iter_arg.t_divide_num, dim=0))
+                    t_sub_chunks = split_tensor_even(t_chunks[j], iter_arg.t_divide_num, dim=0)
                     for k in range(0, iter_arg.t_divide_num):
                         chunk = t_sub_chunks[k]
                         size_bytes = chunk.nelement() * chunk.element_size()
-                        if gpu_vram_used[0] + size_bytes < GPU_T_BUDGET_BYTES:
+                        if gpu_vram_used[0] + size_bytes < gpu_t_budget_bytes[0]:
                             # 预算内：直接存入 GPU
                             t_list_all[j][i][k][e] = chunk.to("cuda:0", non_blocking=True)
                             gpu_vram_used[0] += size_bytes
@@ -199,15 +220,15 @@ def run_recon_osem(sysmat_all, rotmat_all, rotmat_inv_all, proj_all, proj_d_all,
 
         else:
             for i in range(0, rotate_num):
-                t_chunks = list(torch.chunk(t[i], num_gpus, dim=0))
+                t_chunks = split_tensor_even(t[i], num_gpus, dim=0)
                 for gpu_id in range(0, num_gpus):
-                    t_gpu_chunks = list(torch.chunk(t_chunks[gpu_id], iter_arg.osem_subset_num, dim=0))
+                    t_gpu_chunks = split_tensor_even(t_chunks[gpu_id], iter_arg.osem_subset_num, dim=0)
                     for j in range(0, iter_arg.osem_subset_num):
-                        t_sub_chunks = list(torch.chunk(t_gpu_chunks[j], iter_arg.t_divide_num, dim=0))
+                        t_sub_chunks = split_tensor_even(t_gpu_chunks[j], iter_arg.t_divide_num, dim=0)
                         for k in range(0, iter_arg.t_divide_num):
                             chunk = t_sub_chunks[k]
                             size_bytes = chunk.nelement() * chunk.element_size()
-                            if gpu_vram_used[gpu_id] + size_bytes < GPU_T_BUDGET_BYTES:
+                            if gpu_vram_used[gpu_id] + size_bytes < gpu_t_budget_bytes[gpu_id]:
                                 t_list_all[gpu_id][j][i][k][e] = chunk.to(f"cuda:{gpu_id}", non_blocking=True)
                                 gpu_vram_used[gpu_id] += size_bytes
                             else:
@@ -216,7 +237,10 @@ def run_recon_osem(sysmat_all, rotmat_all, rotmat_inv_all, proj_all, proj_d_all,
             rotmat_all[e] = rotmat_all[e].to("cuda:0", non_blocking=True)
             rotmat_inv_all[e] = rotmat_inv_all[e].to("cuda:0", non_blocking=True)
 
-        print(f"显存加载完成。各 GPU 常驻显存百分比: {[round(u / GPU_T_BUDGET_BYTES * 100, 2) for u in gpu_vram_used]} %")
+        print(
+            "显存加载完成。各 GPU 在 t 预算内的使用百分比: "
+            f"{[round(100 * gpu_vram_used[gpu_id] / gpu_t_budget_bytes[gpu_id], 2) for gpu_id in range(num_gpus)]} %"
+        )
 
         # ===== proj =====
         for i in range(0, iter_arg.osem_subset_num):
