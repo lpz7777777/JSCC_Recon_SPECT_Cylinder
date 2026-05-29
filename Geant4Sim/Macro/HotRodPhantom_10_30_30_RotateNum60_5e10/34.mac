@@ -1,0 +1,403 @@
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -88.9565 -294.5785 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -74.0936 -281.1959 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -93.1147 -275.0155 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -59.2307 -267.8133 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -78.2518 -261.6329 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -97.2729 -255.4526 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -44.3678 -254.4307 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -63.3889 -248.2503 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -82.4100 -242.0700 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -101.4312 -235.8896 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.960000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -14.7303 -290.3353 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.960000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -8.9088 -317.7235 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.960000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -35.5384 -309.0710 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.960000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -3.0873 -345.1116 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.960000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -29.7169 -336.4591 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 1.960000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -56.3465 -327.8066 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 3.240000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 40.6849 -343.9863 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 3.240000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 67.4381 -319.8976 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 3.240000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 33.2000 -308.7729 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 3.240000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 94.1913 -295.8089 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 3.240000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 59.9532 -284.6842 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 3.240000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 25.7152 -273.5596 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 4.840000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 86.1019 -204.2070 0.0000 mm
+/gps/pos/radius 11.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 4.840000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 95.2500 -247.2455 0.0000 mm
+/gps/pos/radius 11.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 4.840000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 53.4035 -233.6487 0.0000 mm
+/gps/pos/radius 11.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 6.760000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 15.4440 -197.4683 0.0000 mm
+/gps/pos/radius 13.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 6.760000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 54.0875 -162.6735 0.0000 mm
+/gps/pos/radius 13.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 6.760000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 4.6326 -146.6046 0.0000 mm
+/gps/pos/radius 13.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 9.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -42.8258 -152.6028 0.0000 mm
+/gps/pos/radius 15.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 9.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -30.3511 -211.2917 0.0000 mm
+/gps/pos/radius 15.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/gps/source/add 9.000000
+/gps/particle gamma
+/gps/energy 511 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -87.4145 -192.7507 0.0000 mm
+/gps/pos/radius 15.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/run/beamOn 83333333

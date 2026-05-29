@@ -102,8 +102,8 @@ if needGenerateCartesian
 end
 
 %%
-% showCenter = [30, 0, 0];
-showCenter = [0, 0, -13];
+showCenter = [30, 0, 0];
+% showCenter = [0, 0, -13];
 % showCenter = [0, 0, 0];
 imgScIterCartesian = read_float32_tensor(cartesianFileSc, [pixelNumX, pixelNumY, pixelNumCartesianZ, saveCount]);
 imgJsccsdIterCartesian = read_float32_tensor(cartesianFileJsccsd, [pixelNumX, pixelNumY, pixelNumCartesianZ, saveCount]);

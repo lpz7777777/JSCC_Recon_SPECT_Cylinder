@@ -11,11 +11,27 @@ fov_l_x = pixel_num_x * pixel_l_x;
 fov_l_y = pixel_num_y * pixel_l_y;
 fov_l_z = pixel_num_z * pixel_l_z;
 
-total_count = 5e8; % Total simulated photons
+total_count = 1e9; % Total simulated photons
+% total_count = 1.3e12; % Total simulated photons
 
 %% load Mat
 % file_path = "./Factors/511keV_RotateNum20/";
-file_path = "./Factors/140keV_RotateNum20/";
+% file_path = "./Factors/140keV_RotateNum20/";
+
+% file_path = "./Factors/140keV_RotateNum60/";
+
+% file_path = "./Factors/511keV_RotateNum60/";
+% file_path = "./Factors/511keV_RotateNum60_SPECTEHENaILowerRes_GenProj_Pb_Ring60_120/";
+
+% file_path = "./Factors/511keV_RotateNum20_ConventionalSPECTEHE/";
+% file_path = "./Factors/140keV_RotateNum20_ConventionalSPECTEHE/";
+% file_path = "./Factors/511keV_RotateNum20_SPECTEHENaI/";
+% file_path = "./Factors/511keV_RotateNum20_SPECTEHENaILowerRes_GenProj/";
+% file_path = "./Factors/140keV_RotateNum20_SPECTEHENaI/";
+
+file_path = "./Factors/140keV_RotateNum60_SPECTEHENaILowerResPbRing60120/";
+
+% file_path = "./Factors/511keV_RotateNum60_SPECTEHENaILowerRes_GenProj/";
 load(sprintf("%sRotMat.mat", file_path));
 load(sprintf("%scoor_polar_full.mat", file_path));
 
@@ -42,6 +58,18 @@ coor_cartesian = reshape(coor_cartesian, [], 3);
 % img_cartesian = ContrastPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act);
 
 % back_rod_r = 120;
+% rod_r = 5 : 2 : 15;
+% rod_h = 30;
+% act = 6;
+% img_cartesian = ContrastPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act);
+
+back_rod_r = 120;
+rod_r = 4 : 1 : 9;
+rod_h = 30;
+act = 6;
+img_cartesian = ContrastPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act);
+
+% back_rod_r = 120;
 % rod_r = 5 : 1 : 10;
 % rod_h = 30;
 % act = 6;
@@ -50,15 +78,22 @@ coor_cartesian = reshape(coor_cartesian, [], 3);
 % rod_num = [10, 6, 6, 3, 3, 3];
 % rod_r = 5:2:15;
 % back_rod_r = 200;
-rod_num = [21, 15, 10, 10, 6, 6];
-back_rod_r = 175;
-height = 30;
-rod_r = 2.5:1:7.5;
-rod_h = 30;
-act = 1;
-center_factor = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
+% rod_num = [21, 15, 10, 10, 6, 6];
+% back_rod_r = 175;
+% rod_r = 2.5:1:7.5;
+% rod_h = 30;
+% act = 1;
+% center_factor = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
+% img_cartesian = HotRodPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act, rod_num, center_factor);
 
-img_cartesian = HotRodPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act, rod_num, center_factor);
+
+% rod_num = [21, 15, 10, 6, 6, 3];
+% rod_r = 3.5:1.5:11;
+% back_rod_r = 200;
+% rod_h = 30;
+% act = 1;
+% center_factor = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
+% img_cartesian = HotRodPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act, rod_num, center_factor);
 
 % X_value = -70 : 20 : 70;
 % Y_value = -70 : 20 : 70;
@@ -66,19 +101,6 @@ img_cartesian = HotRodPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act, rod
 % act = 1;
 % rod_r = 5;
 % img_cartesian = PointArrayPhantom(coor_cartesian, X_value, Y_value, Z_value, rod_r, act);
-
-% back_rod_r = 140;
-% rod_r = 15:3:30;
-% rod_h = 30;
-% act = 0;
-% img_cartesian = ContrastPhantom(coor_cartesian, back_rod_r, rod_r, rod_h, act);
-
-% back_rod_r = 150;
-% rod_r = 6:2:16;
-% rod_num = [6, 6, 6, 3, 3, 3];
-% center_factor = 0.6;
-% act = 8;
-% img_seg = HotRodPhantom(coor_seg, back_rod_r, rod_r, act, rod_num, center_factor);
 
 %% Interp
 img_cartesian = reshape(img_cartesian, pixel_num_x, pixel_num_y, pixel_num_z);

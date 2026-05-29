@@ -40,20 +40,30 @@ def setup_distributed():
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Distributed single-photon reconstruction using only CntStat data.")
-    parser.add_argument("--e0-list", type=float, nargs="+", default=[0.511], help="Energy list in MeV.")
+    parser.add_argument("--e0-list", type=float, nargs="+", default=[0.140], help="Energy list in MeV.")
     parser.add_argument("--intensity-list", type=float, nargs="+", default=[1.0], help="Intensity weight for each energy.")
-    parser.add_argument("--data-file-name", type=str, default="Hoffman_Big", help="Phantom or dataset name.")
-    parser.add_argument("--count-level", type=str, default="5e9", help="Count level suffix in CntStat filename.")
+    parser.add_argument("--data-file-name", type=str, default="HotRodPhantom_5_15_30", help="Phantom or dataset name.")
+    parser.add_argument("--count-level", type=str, default="1e9", help="Count level suffix in CntStat filename.")
     parser.add_argument("--ds", type=float, default=1.0, help="Projection downsampling ratio.")
-    parser.add_argument("--pixel-num-layer", type=int, default=1280, help="Number of polar pixels per slice.")
+    parser.add_argument("--pixel-num-layer", type=int, default=4500, help="Number of polar pixels per slice.")
     parser.add_argument("--pixel-num-z", type=int, default=20, help="Number of axial slices.")
-    parser.add_argument("--rotate-num", type=int, default=20, help="Number of rotations.")
+    parser.add_argument("--rotate-num", type=int, default=60, help="Number of rotations.")
     parser.add_argument("--ene-resolution-662keV", type=float, default=0.1, help="Kept for output naming compatibility.")
-    parser.add_argument("--sc-iter", type=int, default=10000, help="Number of SC OSEM iterations.")
-    parser.add_argument("--save-iter-step", type=int, default=100, help="Save interval.")
-    parser.add_argument("--osem-subset-num", type=int, default=4, help="Number of OSEM subsets.")
+    parser.add_argument("--sc-iter", type=int, default=400, help="Number of SC OSEM iterations.")
+    parser.add_argument("--save-iter-step", type=int, default=4, help="Save interval.")
+    parser.add_argument("--osem-subset-num", type=int, default=1, help="Number of OSEM subsets.")
     parser.add_argument("--seed", type=int, default=20260331, help="Random seed.")
     parser.add_argument("--factors-dir", type=str, default="./Factors", help="Root directory of system factors.")
+    parser.add_argument(
+        "--factor-dir-suffix",
+        type=str,
+        default="SPECTEHENaILowerResPbRing60120",
+        help=(
+            "Optional suffix appended to the factor directory name. "
+            "For example, 'SPECTEHENaILowerResPbRing60120' selects "
+            "'<factors-dir>/<energy>keV_RotateNum<rotate-num>_SPECTEHENaILowerResPbRing60120'."
+        ),
+    )
     parser.add_argument("--cntstat-dir", type=str, default="./CntStat", help="Root directory of CntStat data.")
     parser.add_argument("--output-root", type=str, default="./Figure_Dist_SC", help="Root directory of outputs.")
     return parser.parse_args()
@@ -144,10 +154,45 @@ def compute_global_sensitivity(sysmat_local, rotmat_inv, rotate_num, device):
 def build_save_path(args, single_event_count_total):
     name_prefix = build_output_name_prefix(args.e0_list, args.rotate_num, args.data_file_name)
     single_event_count_str = format_scientific_count(single_event_count_total)
+    factor_suffix_tag = format_factor_suffix_tag(args.factor_dir_suffix)
 
     return (
-        f"{args.output_root}/{name_prefix}_{args.count_level}_{args.ds}_"
+        f"{args.output_root}/{name_prefix}{factor_suffix_tag}_{args.count_level}_{args.ds}_"
         f"OSEM{args.osem_subset_num}_ITER{args.sc_iter}_SDU{single_event_count_str}/Polar/"
+    )
+
+
+def build_energy_subdir_name(e0, rotate_num, dir_suffix):
+    factor_dir_name = f"{round(1000 * e0)}keV_RotateNum{rotate_num}"
+    suffix = dir_suffix.strip()
+    if suffix:
+        suffix = suffix.lstrip("_")
+        factor_dir_name = f"{factor_dir_name}_{suffix}"
+    return factor_dir_name
+
+
+def format_factor_suffix_tag(dir_suffix):
+    suffix = dir_suffix.strip()
+    if not suffix:
+        return ""
+    return f"_FSfx{suffix.lstrip('_')}"
+
+
+def build_factor_path(factors_dir, e0, rotate_num, factor_dir_suffix):
+    factor_dir_name = build_energy_subdir_name(e0, rotate_num, factor_dir_suffix)
+    return os.path.join(factors_dir, factor_dir_name)
+
+
+def build_cntstat_energy_dir(cntstat_dir, e0, rotate_num, dir_suffix):
+    cntstat_dir_name = build_energy_subdir_name(e0, rotate_num, dir_suffix)
+    return os.path.join(cntstat_dir, cntstat_dir_name)
+
+
+def build_proj_file_path(cntstat_dir, data_file_name, count_level, e0, rotate_num, dir_suffix):
+    cntstat_energy_dir = build_cntstat_energy_dir(cntstat_dir, e0, rotate_num, dir_suffix)
+    return os.path.join(
+        cntstat_energy_dir,
+        f"CntStat_{data_file_name}_{count_level}.csv",
     )
 
 
@@ -186,14 +231,20 @@ def main():
         single_event_count_total = torch.zeros(1, dtype=torch.float64, device=device)
 
         for energy_idx, (e0, intensity) in enumerate(zip(args.e0_list, args.intensity_list)):
-            factor_path = os.path.join(args.factors_dir, f"{round(1000 * e0)}keV_RotateNum{args.rotate_num}")
+            factor_path = build_factor_path(args.factors_dir, e0, args.rotate_num, args.factor_dir_suffix)
             sysmat_file_path = os.path.join(factor_path, "SysMat_polar")
             rotmat_file_path = os.path.join(factor_path, "RotMat_full.csv")
             rotmat_inv_file_path = os.path.join(factor_path, "RotMatInv_full.csv")
-            proj_file_path = os.path.join(
+            cntstat_energy_dir = build_cntstat_energy_dir(
+                args.cntstat_dir, e0, args.rotate_num, args.factor_dir_suffix
+            )
+            proj_file_path = build_proj_file_path(
                 args.cntstat_dir,
-                f"{round(1000 * e0)}keV_RotateNum{args.rotate_num}",
-                f"CntStat_{args.data_file_name}_{args.count_level}.csv",
+                args.data_file_name,
+                args.count_level,
+                e0,
+                args.rotate_num,
+                args.factor_dir_suffix,
             )
 
             for required_path in (sysmat_file_path, rotmat_file_path, rotmat_inv_file_path, proj_file_path):
@@ -240,7 +291,8 @@ def main():
 
             if global_rank == 0:
                 print(
-                    f"Loaded energy {e0:.3f} MeV | total_bins={total_bins} | "
+                    f"Loaded energy {e0:.3f} MeV from {factor_path} "
+                    f"with CntStat dir {cntstat_energy_dir} | total_bins={total_bins} | "
                     f"local_bin_range=[{idx_start}, {idx_end})"
                 )
 

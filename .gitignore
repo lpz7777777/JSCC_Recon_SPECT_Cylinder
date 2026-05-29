@@ -1,6 +1,7 @@
 CntStat/
 List/
 Figure*/
+Factors/
 
 .idea/
 __pycache__/
@@ -8,8 +9,18 @@ __pycache__/
 *.pyo
 *.pyd
 *.DS_Store
+*.asv
 
-Factors/**/SysMat*
+img_cartesian
+
+Auxiliary_Studies/**/Result/
+Auxiliary_Studies/**/Work_SysMat/
+Auxiliary_Studies/**/simulation_output_test/
+Auxiliary_Studies/**/simulation_output_energy_weighted_test/
+
+FreePath/Work_SysMat/
+FreePath/simulation_output_test/
+FreePath/simulation_output_energy_weighted_test/
 
 Geant4Sim/Preview/
 Geant4Sim/3D_DRO_Hoffman_v6_20160331_DICOM/

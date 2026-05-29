@@ -60,7 +60,7 @@ def parse_args():
     parser.add_argument("--osem-subset-num", type=int, default=8, help="OSEM subset count.")
     parser.add_argument("--t-divide-num", type=int, default=1, help="Number of t sub-blocks per subset.")
     parser.add_argument("--num-workers", type=int, default=1, help="Sub-chunks per GPU during list processing.")
-    parser.add_argument("--compton-theta-stride", type=int, default=2, help="Angular stride used by sparse Compton grid.")
+    parser.add_argument("--compton-theta-stride", type=int, default=1, help="Angular stride used by sparse Compton grid.")
     parser.add_argument("--compton-z-stride", type=int, default=2, help="Axial stride used by sparse Compton grid.")
     parser.add_argument("--seed", type=int, default=20260331, help="Random seed.")
     parser.add_argument("--save-t", action="store_true", help="Keep helper save-t branch enabled.")

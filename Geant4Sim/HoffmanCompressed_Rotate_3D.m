@@ -14,8 +14,8 @@ cfg.activity_threshold = 1e-4;
 cfg.activity_power = 1.0;
 
 cfg.ene_keV = 511;
-cfg.rotate_num = 20;
-cfg.beam_on = 50000000;
+cfg.rotate_num = 60;
+cfg.beam_on = 83333333;
 
 cfg.x_center_mm = 0;
 cfg.y_center_mm = -245;

@@ -1,0 +1,14 @@
+Event Order Inference Visualization Report
+Generated at: 2026-04-19 15:00:12
+
+Method: center_contrast2e9 / center_geometry
+  event_count_mean          = 337207.200000
+  accuracy_mean             = 0.781061
+  balanced_accuracy_mean    = 0.772909
+  front_first_accuracy_mean = 0.810149
+  rear_first_accuracy_mean  = 0.735670
+  truth_front_count_mean    = 205509.400000
+  truth_rear_count_mean     = 131697.800000
+  correct_front_count_mean  = 166493.200000
+  correct_rear_count_mean   = 96886.200000
+

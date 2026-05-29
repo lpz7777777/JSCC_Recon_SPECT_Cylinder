@@ -1,22 +1,23 @@
+rod_num = [21, 15, 10, 6, 6, 3];
+rod_r = 3.5:1.5:11;
 back_rod_r = 200;
-rod_r = 5:2:15;
-rod_num = [10, 6, 6, 3, 3, 3];
 height = 30;
+act = 1;
+center_factor = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
 
-rotate_num = 20;
+rotate_num = 60;
 
 x_center = 0;
 y_center = -245;
 z = 0;
-act = 10;
 LengthUnit = "mm";
 Theta_Min = 0;
 Theta_Max = 180;
 AngleUnit = "deg";
-center_factor = 0.5 : (-0.01) : 0.45;
-center_factor = [0.5, 0.49, 0.48, 0.47, 0.46, 0.45];
-center_factor = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5];
-center_factor = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
+% center_factor = 0.5 : (-0.01) : 0.45;
+% center_factor = [0.5, 0.49, 0.48, 0.47, 0.46, 0.45];
+% center_factor = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5];
+% center_factor = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
 % center_factor = [0.35, 0.35, 0.35, 0.35, 0.35, 0.35];
 ene = 511; % keV
 
@@ -24,7 +25,7 @@ flag_back_rod = 0;
 
 phi_plot = linspace(0, 2*pi, 100);
 
-save_path = "./Macro/HotRodPhantom_10_30_30_511keV_5e10/";
+save_path = "./Macro/HotRodPhantom_7_22_30_RotateNum60_5e10/";
 mkdir(save_path);
 
 f = figure;
@@ -133,7 +134,7 @@ for id_rotate = 1 : rotate_num
         end
     end
 
-    fprintf(fid, "/run/beamOn 25000000\n");
+    fprintf(fid, "/run/beamOn 83333333\n");
     fclose(fid);
 end
 

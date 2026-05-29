@@ -12,7 +12,8 @@ end
 
 rotateNum = parse_single_token(name, "(?:RotNum|RotateNum)(\d+)", "rotate number");
 energyKeV = parse_single_token(name, "_(\d+)keV_", "energy");
-factorPath = fullfile(".", "Factors", sprintf("%dkeV_RotateNum%d", energyKeV, rotateNum));
+factorDirSuffix = parse_optional_factor_suffix(name);
+factorPath = resolve_factor_path(".", energyKeV, rotateNum, factorDirSuffix);
 
 rotMat = load_named_array(fullfile(factorPath, "RotMat_full.mat"), fullfile(factorPath, "RotMat_full.csv"), "RotMat");
 rotMatInv = load_named_array(fullfile(factorPath, "RotMatInv_full.mat"), fullfile(factorPath, "RotMatInv_full.csv"), "RotMatInv");
@@ -44,7 +45,7 @@ saveCount = str2double(tokens{2});
 iterInterval = round(iterMax / saveCount);
 
 %%
-sigmaGauss = 0.01;
+sigmaGauss = 0.5;
 pixelNumX = 100;
 pixelNumY = 100;
 pixelLX = 3;
@@ -86,6 +87,7 @@ imgScIterCartesian = read_float32_tensor(cartesianFile, [pixelNumX, pixelNumY, p
 %%
 showCenter = [0, 0, -13];
 % showCenter = [0, 0, 0];
+% showCenter = [30, 0, 0];
 showCenterPixel = round(showCenter ./ [pixelLX, pixelLY, pixelLZ] + [pixelNumX, pixelNumY, pixelNumCartesianZ] / 2);
 showCenterPixel = max(showCenterPixel, [1, 1, 1]);
 showCenterPixel = min(showCenterPixel, [pixelNumX, pixelNumY, pixelNumCartesianZ]);
@@ -106,7 +108,7 @@ maxZ = -minZ;
 colorMap = flipud(gray(1024));
 
 f = figure;
-f.Position = [100, 100, 700, 250 * length(iterShow)];
+f.Position = [100, 100, 600, 250 * length(iterShow)];
 t = tiledlayout(length(iterShow), 8);
 t.TileSpacing = "none";
 t.Padding = "compact";
@@ -128,13 +130,16 @@ for idx = 1 : length(iterShow)
         rowMaxColor = 1;
     end
 
+    rowMaxColor = rowMaxColor * 0.8;
+
     ax1 = nexttile(t, [1, 4]);
     imagesc([minX, maxX], [minY, maxY], imgTransverse, [0, rowMaxColor]);
     axis equal;
+    axis off
     colormap(colorMap);
     hold on;
-    line([showCenter(1), showCenter(1)], [minY, maxY] * 0.75, "Color", "red", "LineStyle", "--", "LineWidth", 0.5);
-    line([minX, maxX] * 0.75, [showCenter(2), showCenter(2)], "Color", "blue", "LineStyle", "--", "LineWidth", 0.5);
+    % line([showCenter(1), showCenter(1)], [minY, maxY] * 0.75, "Color", "red", "LineStyle", "--", "LineWidth", 0.5);
+    % line([minX, maxX] * 0.75, [showCenter(2), showCenter(2)], "Color", "blue", "LineStyle", "--", "LineWidth", 0.5);
     if idx == 1
         title("SC Transverse", "Interpreter", "none");
     end
@@ -146,9 +151,10 @@ for idx = 1 : length(iterShow)
     ax2 = nexttile(t, [1, 2]);
     imagesc([minZ, maxZ], [minX, maxX], imgCoronal, [0, rowMaxColor]);
     axis equal;
+    axis off
     colormap(colorMap);
     hold on;
-    line([showCenter(3), showCenter(3)], [minX, maxX] * 0.75, "Color", "black", "LineStyle", "--", "LineWidth", 0.5);
+    % line([showCenter(3), showCenter(3)], [minX, maxX] * 0.75, "Color", "black", "LineStyle", "--", "LineWidth", 0.5);
     if idx == 1
         title("SC Coronal", "Interpreter", "none");
     end
@@ -160,6 +166,7 @@ for idx = 1 : length(iterShow)
     ax3 = nexttile(t, [1, 2]);
     imagesc([minZ, maxZ], [minY, maxY], imgSagittal, [0, rowMaxColor]);
     axis equal;
+    axis off
     colormap(colorMap);
     if idx == 1
         title("SC Sagittal", "Interpreter", "none");
@@ -180,6 +187,18 @@ end
 title(t, sprintf("SC Reconstruction: %s", name), "Interpreter", "none");
 saveas(f, fullfile(folderPath, "img_show_sc.png"));
 saveas(f, fullfile(folderPath, "img_show_sc.fig"));
+
+%%
+f = figure;
+a = get_transverse_mip(imgScIterCartesian(:, :, :, 20), mipStartLayer, mipEndLayer);
+rowMaxColor = max(a, [], "all");
+% rowMaxColor = max([rowMaxColor, max(imgCoronal, [], "all"), max(imgSagittal, [], "all")]);
+imagesc(a, [0, 0.7 * rowMaxColor]);
+colormap(colorMap);
+axis equal;
+axis off
+
+%%
 
 fMip = figure;
 fMip.Position = [140, 80, 320, 260 * length(iterShow)];
@@ -230,6 +249,35 @@ value = str2double(tokens{1});
 end
 
 
+function suffix = parse_optional_factor_suffix(textValue)
+tokens = regexp(textValue, "(?:^|_)FSfx([^_]+)(?:_|$)", "tokens", "once");
+if isempty(tokens)
+    suffix = "";
+    return;
+end
+suffix = string(tokens{1});
+end
+
+
+function factorPath = resolve_factor_path(repoRoot, energyKeV, rotateNum, factorDirSuffix)
+baseDirName = sprintf("%dkeV_RotateNum%d", energyKeV, rotateNum);
+if strlength(factorDirSuffix) > 0
+    factorPath = fullfile(repoRoot, "Factors", sprintf("%s_%s", baseDirName, factorDirSuffix));
+    if exist(factorPath, "dir")
+        return;
+    end
+    error("Cannot find factor directory %s.", factorPath);
+end
+
+factorPath = fullfile(repoRoot, "Factors", baseDirName);
+if exist(factorPath, "dir")
+    return;
+end
+
+error("Cannot find factor directory %s.", factorPath);
+end
+
+
 function data = load_named_array(matPath, csvPath, fieldName)
 if exist(matPath, "file")
     loaded = load(matPath);
@@ -255,7 +303,7 @@ end
 
 
 function iterShow = build_iter_show_list(iterMax, iterInterval)
-divisors = [50, 20, 10, 2];
+divisors = [100, 50, 20, 10, 2];
 iterShow = zeros(1, numel(divisors) + 1);
 for idx = 1 : numel(divisors)
     iterValue = floor(iterMax / divisors(idx));

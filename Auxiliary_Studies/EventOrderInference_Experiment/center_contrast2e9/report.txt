@@ -1,0 +1,62 @@
+Center-geometry event order inference report
+list_dir: F:\lipeize\1_code\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\List\511keV_RotateNum20\List_ContrastPhantom_240_30_2e9
+detector_csv: F:\lipeize\1_code\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\Factors\511keV_RotateNum20\Detector.csv
+energy_mev: 0.511
+front_prior_ratio: 1.2
+geometry_sigma_deg: 20.0
+geometry_power: 1.0
+apply_energy_smear: True
+smear_repeats: 5
+base_seed: 20260418
+ene_resolution_662keV: 0.1
+ene_resolution: 0.11381999040267131
+ene_threshold_max: 0.3396666666666667
+ene_threshold_min: 0.05
+ene_threshold_sum: 0.46
+reject_frac_list: [0.0, 0.05, 0.1, 0.2, 0.3, 0.4]
+
+Aggregate over smearing repeats
+  repeat_count: 5
+  seed_list: [20260418, 20260419, 20260420, 20260421, 20260422]
+  filtered_cross_layer_event_count: mean=337207.200000, std=212.752814, min=336793.000000, max=337362.000000
+  truth_front_first_ratio: mean=0.609446, std=0.000234, min=0.609100, max=0.609784
+  pred_front_first_ratio: mean=0.596977, std=0.000625, min=0.595855, max=0.597714
+  accuracy: mean=0.781061, std=0.000459, min=0.780453, max=0.781665
+  rejection_sweep: [{'reject_fraction_target': 0.0, 'reject_fraction_actual': {'mean': 0.0, 'std': 0.0, 'min': 0.0, 'max': 0.0}, 'reject_count': {'mean': 0.0, 'std': 0.0, 'min': 0.0, 'max': 0.0}, 'retained_count': {'mean': 337207.2, 'std': 212.75281431746092, 'min': 336793.0, 'max': 337362.0}, 'retained_accuracy': {'mean': 0.7810608622821601, 'std': 0.00045862620419602354, 'min': 0.780452681617492, 'max': 0.7816648385853615}}, {'reject_fraction_target': 0.05, 'reject_fraction_actual': {'mean': 0.04999833911240899, 'std': 8.144863882378003e-07, 'min': 0.04999718283963834, 'max': 0.04999970358250188}, 'reject_count': {'mean': 16859.8, 'std': 10.740577265678043, 'min': 16839.0, 'max': 16868.0}, 'retained_count': {'mean': 320347.4, 'std': 202.0154449540926, 'min': 319954.0, 'max': 320494.0}, 'retained_accuracy': {'mean': 0.7953270650250229, 'std': 0.0004872610739137914, 'min': 0.7947582582863705, 'max': 0.7959133347276025}}, {'reject_fraction_target': 0.1, 'reject_fraction_actual': {'mean': 0.09999905092673315, 'std': 9.072684603918085e-07, 'min': 0.09999733111123632, 'max': 0.1}, 'reject_count': {'mean': 33720.4, 'std': 21.331666601557416, 'min': 33679.0, 'max': 33736.0}, 'retained_count': {'mean': 303486.8, 'std': 191.42350952795744, 'min': 303114.0, 'max': 303626.0}, 'retained_accuracy': {'mean': 0.8097371240279914, 'std': 0.000546442699569734, 'min': 0.8088969826533912, 'max': 0.8103242126898487}}, {'reject_fraction_target': 0.2, 'reject_fraction_actual': {'mean': 0.19999869493985825, 'std': 7.871171697040239e-07, 'min': 0.19999762765443227, 'max': 0.2}, 'reject_count': {'mean': 67441.0, 'std': 42.670833129902675, 'min': 67358.0, 'max': 67472.0}, 'retained_count': {'mean': 269766.2, 'std': 170.0828033635382, 'min': 269435.0, 'max': 269890.0}, 'retained_accuracy': {'mean': 0.8407619496720935, 'std': 0.0004354688240718555, 'min': 0.8401766659862304, 'max': 0.8413682447455014}}, {'reject_fraction_target': 0.3, 'reject_fraction_actual': {'mean': 0.29999833895298333, 'std': 8.923329042394919e-07, 'min': 0.2999973277354339, 'max': 0.3}, 'reject_count': {'mean': 101161.6, 'std': 64.01124901140425, 'min': 101037.0, 'max': 101208.0}, 'retained_count': {'mean': 236045.6, 'std': 148.74219307244329, 'min': 235756.0, 'max': 236154.0}, 'retained_accuracy': {'mean': 0.8783437908957372, 'std': 0.00036054130020661047, 'min': 0.8778103865194615, 'max': 0.878910435309214}}, {'reject_fraction_target': 0.4, 'reject_fraction_actual': {'mean': 0.39999857680267864, 'std': 9.63167575232472e-07, 'min': 0.3999976284491243, 'max': 0.4}, 'reject_count': {'mean': 134882.4, 'std': 84.96257999849111, 'min': 134717.0, 'max': 134944.0}, 'retained_count': {'mean': 202324.8, 'std': 127.7910795008791, 'min': 202076.0, 'max': 202418.0}, 'retained_accuracy': {'mean': 0.9192733047794297, 'std': 0.00027486353184667177, 'min': 0.9190513833992094, 'max': 0.9198015790669868}}]
+
+Per-seed results
+  seed=20260418, filtered_cross_layer_event_count=336793, accuracy=0.780453, truth_front_first_ratio=0.609784, pred_front_first_ratio=0.597177
+    reject_fraction_target=0.000, reject_fraction_actual=0.000000, retained_count=336793, retained_accuracy=0.780453
+    reject_fraction_target=0.050, reject_fraction_actual=0.049998, retained_count=319954, retained_accuracy=0.794789
+    reject_fraction_target=0.100, reject_fraction_actual=0.099999, retained_count=303114, retained_accuracy=0.808897
+    reject_fraction_target=0.200, reject_fraction_actual=0.199998, retained_count=269435, retained_accuracy=0.840177
+    reject_fraction_target=0.300, reject_fraction_actual=0.299997, retained_count=235756, retained_accuracy=0.878175
+    reject_fraction_target=0.400, reject_fraction_actual=0.399999, retained_count=202076, retained_accuracy=0.919110
+  seed=20260419, filtered_cross_layer_event_count=337362, accuracy=0.780844, truth_front_first_ratio=0.609544, pred_front_first_ratio=0.597714
+    reject_fraction_target=0.000, reject_fraction_actual=0.000000, retained_count=337362, retained_accuracy=0.780844
+    reject_fraction_target=0.050, reject_fraction_actual=0.050000, retained_count=320494, retained_accuracy=0.795369
+    reject_fraction_target=0.100, reject_fraction_actual=0.099999, retained_count=303626, retained_accuracy=0.809861
+    reject_fraction_target=0.200, reject_fraction_actual=0.199999, retained_count=269890, retained_accuracy=0.840728
+    reject_fraction_target=0.300, reject_fraction_actual=0.299998, retained_count=236154, retained_accuracy=0.878469
+    reject_fraction_target=0.400, reject_fraction_actual=0.399998, retained_count=202418, retained_accuracy=0.919281
+  seed=20260420, filtered_cross_layer_event_count=337330, accuracy=0.781665, truth_front_first_ratio=0.609285, pred_front_first_ratio=0.596855
+    reject_fraction_target=0.000, reject_fraction_actual=0.000000, retained_count=337330, retained_accuracy=0.781665
+    reject_fraction_target=0.050, reject_fraction_actual=0.049999, retained_count=320464, retained_accuracy=0.795805
+    reject_fraction_target=0.100, reject_fraction_actual=0.100000, retained_count=303597, retained_accuracy=0.810324
+    reject_fraction_target=0.200, reject_fraction_actual=0.200000, retained_count=269864, retained_accuracy=0.841368
+    reject_fraction_target=0.300, reject_fraction_actual=0.300000, retained_count=236131, retained_accuracy=0.878910
+    reject_fraction_target=0.400, reject_fraction_actual=0.400000, retained_count=202398, retained_accuracy=0.919802
+  seed=20260421, filtered_cross_layer_event_count=337332, accuracy=0.780821, truth_front_first_ratio=0.609100, pred_front_first_ratio=0.595855
+    reject_fraction_target=0.000, reject_fraction_actual=0.000000, retained_count=337332, retained_accuracy=0.780821
+    reject_fraction_target=0.050, reject_fraction_actual=0.049998, retained_count=320466, retained_accuracy=0.794758
+    reject_fraction_target=0.100, reject_fraction_actual=0.099999, retained_count=303599, retained_accuracy=0.809344
+    reject_fraction_target=0.200, reject_fraction_actual=0.199999, retained_count=269866, retained_accuracy=0.840425
+    reject_fraction_target=0.300, reject_fraction_actual=0.299998, retained_count=236133, retained_accuracy=0.877810
+    reject_fraction_target=0.400, reject_fraction_actual=0.399998, retained_count=202400, retained_accuracy=0.919051
+  seed=20260422, filtered_cross_layer_event_count=337219, accuracy=0.781522, truth_front_first_ratio=0.609515, pred_front_first_ratio=0.597282
+    reject_fraction_target=0.000, reject_fraction_actual=0.000000, retained_count=337219, retained_accuracy=0.781522
+    reject_fraction_target=0.050, reject_fraction_actual=0.049997, retained_count=320359, retained_accuracy=0.795913
+    reject_fraction_target=0.100, reject_fraction_actual=0.099997, retained_count=303498, retained_accuracy=0.810259
+    reject_fraction_target=0.200, reject_fraction_actual=0.199998, retained_count=269776, retained_accuracy=0.841113
+    reject_fraction_target=0.300, reject_fraction_actual=0.299998, retained_count=236054, retained_accuracy=0.878354
+    reject_fraction_target=0.400, reject_fraction_actual=0.399998, retained_count=202332, retained_accuracy=0.919123

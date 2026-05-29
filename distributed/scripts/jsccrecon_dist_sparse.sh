@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J JSCC_Sparse_LPZ
 #SBATCH -p gpu_5090
-#SBATCH -N 3
+#SBATCH -N 7
 #SBATCH --ntasks-per-node=1
-#SBATCH --gres=gpu:8
+#SBATCH --gres=gpu:5
 #SBATCH --qos=gpugpu
 #SBATCH --time=48:00:00
 #SBATCH --output=logs/%j.log
@@ -50,7 +50,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
 
 MASTER_NODE=$(scontrol show hostname "$SLURM_JOB_NODELIST" | head -n1)
 MASTER_PORT=$(shuf -i 50000-60000 -n 1)
-GPUS_PER_NODE=8
+GPUS_PER_NODE=5
 ENTRYPOINT="$REPO_ROOT/distributed/python/main_dist_sparse.py"
 
 if [[ ! -f "$ENTRYPOINT" ]]; then

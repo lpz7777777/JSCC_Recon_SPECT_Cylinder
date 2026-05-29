@@ -1,0 +1,60 @@
+{
+  "config": {
+    "incident_energy_mev": 0.511,
+    "thickness_mm": 10.0,
+    "thickness_cm": 1.0,
+    "num_photons": 10000000,
+    "chunk_size": 1000000,
+    "seed": 20260420,
+    "density_g_cm3": 3.67,
+    "data_path": "F:\\lipeize\\1_code\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\FreePath\\data.txt",
+    "assumptions": [
+      "Normal incidence on a laterally infinite NaI slab.",
+      "Only escape through the entrance surface or exit surface is considered.",
+      "Category 2 counts photons whose first interaction is Compton and whose scattered photon undergoes any next interaction inside the slab."
+    ]
+  },
+  "counts": {
+    "direct_photoelectric_absorption": 499131,
+    "compton_then_absorbed_inside": 996524,
+    "compton_then_escape_top": 256554,
+    "compton_then_escape_bottom": 1030258,
+    "compton_then_escape_any": 1286812,
+    "direct_transmission_without_interaction": 7217533,
+    "first_interaction_compton_total": 2283336,
+    "first_interaction_any_total": 2782467
+  },
+  "probabilities": {
+    "direct_photoelectric_absorption": 0.0499131,
+    "compton_then_absorbed_inside": 0.0996524,
+    "compton_then_escape_any": 0.1286812,
+    "compton_then_escape_top": 0.0256554,
+    "compton_then_escape_bottom": 0.1030258,
+    "direct_transmission_without_interaction": 0.7217533,
+    "first_interaction_any": 0.2782467,
+    "first_interaction_compton": 0.2283336
+  },
+  "energy_summaries": {
+    "compton_first_deposit_mev": {
+      "count": 2283336,
+      "mean": 0.17610062378822955,
+      "std": 0.10621356392354296,
+      "min": 2.642464769220254e-08,
+      "max": 0.3406666560004562
+    },
+    "compton_escape_scattered_energy_mev": {
+      "count": 1286812,
+      "mean": 0.3711644815258457,
+      "std": 0.10416576426891629,
+      "min": 0.17033334399954383,
+      "max": 0.5109999735753523
+    },
+    "compton_absorbed_scattered_energy_mev": {
+      "count": 996524,
+      "mean": 0.28807022538407756,
+      "std": 0.08914257676000285,
+      "min": 0.17033348924817263,
+      "max": 0.5109999161762598
+    }
+  }
+}

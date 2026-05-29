@@ -196,7 +196,9 @@ for i = 1 : num_rods
         "MarkerSize", 20, ...           % 設定標記形狀     
         "MarkerIndices", idx_markers);         % 設定僅在特定索引處顯示標記
 end
-legend(legend_labels, "FontSize", legend_font_size);
+lgd = legend(legend_labels, "FontSize", legend_font_size, "Location", "southeast");
+lgd.NumColumns = 2;
+lgd.Box = "off";
 % grid on
 % grid minor
 ylim([0 crc_ymax]);
@@ -225,7 +227,9 @@ for i = 1 : num_rods
         "MarkerSize", 20, ...           % 設定標記形狀     
         "MarkerIndices", idx_markers);
 end
-legend(legend_labels, "FontSize", legend_font_size);
+lgd = legend(legend_labels, "FontSize", legend_font_size, "Location", "southeast");
+lgd.NumColumns = 2;
+lgd.Box = "off";
 % grid on
 % grid minor
 ylim([0 crc_ymax]);

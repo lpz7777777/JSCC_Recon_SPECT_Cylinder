@@ -1,5 +1,10 @@
+% back_rod_d = 240;
+% rod_d = 16:4:36;
+% height = 30;
+
 back_rod_d = 240;
-rod_d = 16:4:36;
+% rod_d = 8:4:28;
+rod_d = 10:4:30;
 height = 30;
 
 x_center = 0;
@@ -11,8 +16,8 @@ Theta_Min = 0;
 Theta_Max = 180;
 AngleUnit = 'deg';
 ene = 511; % keV
-rotate_num = 20;
-save_path = "./Macro/ContrastPhantom_240_30_511keV_RotateNum20_Test/";
+rotate_num = 60;
+save_path = "./Macro/ContrastPhantom_10_30_240_30_1e10/";
 mkdir(save_path);
 
 for id_rotate = 1 : rotate_num
@@ -53,6 +58,6 @@ for id_rotate = 1 : rotate_num
         
     end
     
-    fprintf(fid,'/run/beamOn 500000\n');
+    fprintf(fid,'/run/beamOn 16666667\n');
     fclose(fid);
 end

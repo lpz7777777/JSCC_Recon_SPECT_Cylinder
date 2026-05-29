@@ -1,0 +1,31 @@
+Event Order Inference Visualization Report
+Generated at: 2026-04-19 15:07:55
+
+Method: supervised_hoffman_to_contrast2e9 / center_geometry
+  event_count_mean          = 337285.600000
+  accuracy_mean             = 0.780536
+  balanced_accuracy_mean    = 0.772367
+  front_first_accuracy_mean = 0.809698
+  rear_first_accuracy_mean  = 0.735036
+  truth_front_count_mean    = 205548.400000
+  truth_rear_count_mean     = 131737.200000
+  correct_front_count_mean  = 166432.200000
+  correct_rear_count_mean   = 96831.600000
+  brier_mean                = NaN
+  logloss_mean              = NaN
+  avg_true_prob_mean        = NaN
+
+Method: supervised_hoffman_to_contrast2e9 / classifier
+  event_count_mean          = 337285.600000
+  accuracy_mean             = 0.834427
+  balanced_accuracy_mean    = 0.838840
+  front_first_accuracy_mean = 0.818675
+  rear_first_accuracy_mean  = 0.859005
+  truth_front_count_mean    = 205548.400000
+  truth_rear_count_mean     = 131737.200000
+  correct_front_count_mean  = 168277.400000
+  correct_rear_count_mean   = 113162.800000
+  brier_mean                = 0.105727
+  logloss_mean              = 0.312660
+  avg_true_prob_mean        = 0.786701
+

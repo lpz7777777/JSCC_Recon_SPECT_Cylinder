@@ -9,20 +9,27 @@ rng(20260412);
 
 %% User config
 energy_keV = 511;
-rotate_num = 20;
-total_count = 5e10;
-count_level = "5e10";
+rotate_num = 60;
+total_count = 1e10;
+count_level = "1e10";
 data_file_name = "HoffmanCompressed";
 volume_type = "target"; % "target" or "native"
 transverse_scale = 1.4;
 
-cntstat_noise_mode = "gaussian"; % "gaussian" or "poisson" or "none"
+cntstat_noise_mode = "poisson"; % "gaussian" or "poisson" or "none"
 save_img_cartesian = true;
 save_img_polar = true;
 
 %% Factor paths
-factor_path = sprintf("./Factors/%dkeV_RotateNum%d/", energy_keV, rotate_num);
-cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d/", energy_keV, rotate_num);
+% factor_path = sprintf("./Factors/%dkeV_RotateNum%d/", energy_keV, rotate_num);
+% cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d/", energy_keV, rotate_num);
+% factor_path = sprintf("./Factors/%dkeV_RotateNum%d_SPECTEHENaILowerResPbRing60120/", energy_keV, rotate_num);
+factor_path = sprintf("./Factors/%dkeV_RotateNum%d_SPECTEHENaILowerRes_GenProj_Pb_Ring60_120/", energy_keV, rotate_num);
+cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d_SPECTEHENaILowerResPbRing60120/", energy_keV, rotate_num);
+% factor_path = sprintf("./Factors/%dkeV_RotateNum%d_SPECTEHENaI/", energy_keV, rotate_num);
+% cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d_SPECTEHENaI/", energy_keV, rotate_num);
+% factor_path = sprintf("./Factors/%dkeV_RotateNum%d_ConventionalSPECTEHE/", energy_keV, rotate_num);
+% cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d_ConventionalSPECTEHE/", energy_keV, rotate_num);
 if ~exist(cntstat_dir, "dir")
     mkdir(cntstat_dir);
 end
