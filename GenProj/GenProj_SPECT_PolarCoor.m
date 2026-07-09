@@ -1,4 +1,5 @@
 %% Factors
+%#ok<*DEFNU> % Local phantom helpers are selected by editing the config block.
 pixel_num_cartesian_z = 20;
 
 pixel_num_x = 800;
@@ -13,6 +14,12 @@ fov_l_z = pixel_num_z * pixel_l_z;
 
 total_count = 1e9; % Total simulated photons
 % total_count = 1.3e12; % Total simulated photons
+
+script_dir = fileparts(mfilename("fullpath"));
+repo_root = fileparts(script_dir);
+if strlength(string(repo_root)) == 0
+    repo_root = pwd;
+end
 
 %% load Mat
 % file_path = "./Factors/511keV_RotateNum20/";
@@ -29,13 +36,17 @@ total_count = 1e9; % Total simulated photons
 % file_path = "./Factors/511keV_RotateNum20_SPECTEHENaILowerRes_GenProj/";
 % file_path = "./Factors/140keV_RotateNum20_SPECTEHENaI/";
 
-file_path = "./Factors/140keV_RotateNum60_SPECTEHENaILowerResPbRing60120/";
+file_path = fullfile(repo_root, "Factors", "140keV_RotateNum60_SPECTEHENaILowerResPbRing60120");
 
 % file_path = "./Factors/511keV_RotateNum60_SPECTEHENaILowerRes_GenProj/";
-load(sprintf("%sRotMat.mat", file_path));
-load(sprintf("%scoor_polar_full.mat", file_path));
+load(fullfile(file_path, "RotMat.mat"));
+load(fullfile(file_path, "coor_polar_full.mat"));
 
-fid = fopen(sprintf("%sSysMat_polar", file_path), "r");
+sysmat_path = fullfile(file_path, "SysMat_polar");
+fid = fopen(sysmat_path, "r");
+if fid < 0
+    error("Failed to open %s", sysmat_path);
+end
 SysMat = fread(fid, "float32");
 fclose(fid);
 SysMat = reshape(SysMat, [], size(coor_polar_full, 1));
@@ -131,10 +142,18 @@ for id_rotate = 1 : rotate_num
     CntStat = cat(1, CntStat, CntStat_tmp);
 end
 
-writematrix(CntStat, "./CntStat/CntStat.csv");
+cntstat_out = fullfile(repo_root, "CntStat", "CntStat.csv");
+if ~exist(fileparts(cntstat_out), "dir")
+    mkdir(fileparts(cntstat_out));
+end
+writematrix(CntStat, cntstat_out);
 
 %% Plot
-fid = fopen("img_cartesian", "w");
+img_cartesian_out = fullfile(repo_root, "img_cartesian", "GenProj_SPECT_img_cartesian.raw");
+if ~exist(fileparts(img_cartesian_out), "dir")
+    mkdir(fileparts(img_cartesian_out));
+end
+fid = fopen(img_cartesian_out, "w");
 fwrite(fid, img_cartesian, "float32");
 fclose(fid);
 
@@ -209,8 +228,10 @@ function [x_rod, y_rod] = build_isosceles_triangle_rods(rod_num_tmp, d_tmp, flip
 
     row_num = round(row_num);
     vertical_step = sqrt(3) / 2 * d_tmp;
-    x_rod = [];
-    y_rod = [];
+    rod_total = row_num * (row_num + 1) / 2;
+    x_rod = zeros(1, rod_total);
+    y_rod = zeros(1, rod_total);
+    write_idx = 1;
 
     for row = 1 : row_num
         rod_count_in_row = row;
@@ -220,8 +241,10 @@ function [x_rod, y_rod] = build_isosceles_triangle_rods(rod_num_tmp, d_tmp, flip
         y_row = (2 * (row_num - 1) / 3 - (row - 1)) * vertical_step;
         x_positions = (-(rod_count_in_row - 1) / 2 : 1 : (rod_count_in_row - 1) / 2) * d_tmp;
 
-        x_rod = [x_rod, x_positions];
-        y_rod = [y_rod, y_row * ones(1, rod_count_in_row)];
+        idx = write_idx : write_idx + rod_count_in_row - 1;
+        x_rod(idx) = x_positions;
+        y_rod(idx) = y_row;
+        write_idx = write_idx + rod_count_in_row;
     end
 
     if flip_y

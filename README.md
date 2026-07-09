@@ -47,6 +47,7 @@ Compton variants.
 ├── Geant4Sim/                       # MATLAB scripts for Geant4 phantom generation
 ├── CntStat/                         # Generated projection data (per energy/phantom/count)
 ├── List/                            # Generated list-mode event data
+├── GenProj/                         # MATLAB system-matrix forward projection scripts
 ├── img_cartesian/                   # Cartesian-space reference images
 ├── Figure/                          # Local reconstruction output figures
 ├── Figure_Dist_JSCCSD/              # Distributed JSCCSD reconstruction output
@@ -81,8 +82,6 @@ Compton variants.
 ├── recon_osem_plane_sparse.py       # Local sparse OSEM implementation
 ├── recon_osem_local_cntstat.py      # Local SC-only OSEM implementation
 ├── recon_osem_local_sparse_jsccsd_only.py  # Local sparse JSCCSD-only OSEM
-├── GenProj_SPECT_PolarCoor.m        # MATLAB: generate projection data
-├── GenProj_Hoffman_SPECT_PolarCoor.m
 ├── get_img_SPECT_PolarCoor.m        # MATLAB: polar→Cartesian image conversion
 ├── get_img_SC_Dist_PolarCoor.m      # MATLAB: SC Dist image conversion
 ├── get_img_JSCCSD_Dist_PolarCoor.m  # MATLAB: JSCCSD Dist image conversion
@@ -183,9 +182,11 @@ These two files mirror the GPU versions but:
 
 | File | Purpose |
 | --- | --- |
-| `GenProj_SPECT_PolarCoor.m` | Generate projection data (CntStat) from system matrix |
-| `GenProj_Hoffman_SPECT_PolarCoor.m` | Generate Hoffman phantom projections |
+| `GenProj/GenProj_SPECT_PolarCoor.m` | Generate projection data (CntStat) from system matrix |
+| `GenProj/GenProj_Hoffman_SPECT_PolarCoor.m` | Generate Hoffman phantom projections |
+| `GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` | Generate 218/440 keV dual-energy contrast phantom CntStat from per-energy system matrices |
 | `Geant4Sim/ContrastPhantom_Rotate_3D.m` | Generate contrast phantom Geant4 input |
+| `Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m` | Generate 225Ac dual-energy contrast phantom Geant4 input and preview |
 | `Geant4Sim/GenPhan_HotRodPhantom_Rotate_3D.m` | Generate hot-rod phantom Geant4 input |
 | `Geant4Sim/BrainPhantom_HoffmanMontage_3D.m` | Generate Hoffman brain phantom |
 | `Geant4Sim/Cylinder_Phantom_Rotate_3D.m` | Generate cylinder phantom |
@@ -363,6 +364,7 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 ├── Geant4Sim/                  # MATLAB 脚本：生成 Geant4 体模输入
 ├── CntStat/                    # 生成的投影数据（按能量/体模/计数水平组织）
 ├── List/                       # 生成的 List 模式事件数据
+├── GenProj/                    # MATLAB 系统矩阵前投影脚本
 ├── img_cartesian/              # 笛卡尔坐标参考图像
 ├── Figure/                     # 本地重建输出
 ├── Figure_Dist_JSCCSD/         # 分布式 JSCCSD 重建输出
@@ -379,7 +381,7 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 ├── process_list_plane_*.py     # List 事件处理
 ├── main_*.py                   # 各模式的本地重建入口
 ├── recon_osem_*.py             # 各模式的 OSEM 重建核心
-├── *.m                         # MATLAB 数据生成/可视化/评价脚本
+├── *.m                         # MATLAB 可视化/评价脚本
 └── README.md
 ```
 
@@ -436,7 +438,10 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 
 | 文件 | 功能 |
 | --- | --- |
-| `GenProj_SPECT_PolarCoor.m` | 从系统矩阵生成投影数据 |
+| `GenProj/GenProj_SPECT_PolarCoor.m` | 从系统矩阵生成通用单光子投影数据 |
+| `GenProj/GenProj_Hoffman_SPECT_PolarCoor.m` | 从系统矩阵生成 Hoffman 脑模体投影数据 |
+| `GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` | 从 218/440 keV 系统矩阵生成 225Ac 双能量 Contrast Phantom 投影数据 |
+| `Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m` | 生成 225Ac 双能量 Contrast Phantom 的 Geant4 macro 与预览 |
 | `get_img_SPECT_PolarCoor.m` | 极坐标→笛卡尔图像转换 |
 | `CNRCRC_SPECT.m` | CRC/CNR 曲线计算 |
 | `PVR_HotRod_SC_Dist.m` | Hot-rod 峰谷比分析 |

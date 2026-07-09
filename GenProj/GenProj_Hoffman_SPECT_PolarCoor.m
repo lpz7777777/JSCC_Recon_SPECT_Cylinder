@@ -7,6 +7,12 @@ clear;
 clc;
 rng(20260412);
 
+script_dir = fileparts(mfilename("fullpath"));
+repo_root = fileparts(script_dir);
+if strlength(string(repo_root)) == 0
+    repo_root = pwd;
+end
+
 %% User config
 energy_keV = 511;
 rotate_num = 60;
@@ -24,8 +30,8 @@ save_img_polar = true;
 % factor_path = sprintf("./Factors/%dkeV_RotateNum%d/", energy_keV, rotate_num);
 % cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d/", energy_keV, rotate_num);
 % factor_path = sprintf("./Factors/%dkeV_RotateNum%d_SPECTEHENaILowerResPbRing60120/", energy_keV, rotate_num);
-factor_path = sprintf("./Factors/%dkeV_RotateNum%d_SPECTEHENaILowerRes_GenProj_Pb_Ring60_120/", energy_keV, rotate_num);
-cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d_SPECTEHENaILowerResPbRing60120/", energy_keV, rotate_num);
+factor_path = fullfile(repo_root, "Factors", sprintf("%dkeV_RotateNum%d_SPECTEHENaILowerRes_GenProj_Pb_Ring60_120", energy_keV, rotate_num));
+cntstat_dir = fullfile(repo_root, "CntStat", sprintf("%dkeV_RotateNum%d_SPECTEHENaILowerResPbRing60120", energy_keV, rotate_num));
 % factor_path = sprintf("./Factors/%dkeV_RotateNum%d_SPECTEHENaI/", energy_keV, rotate_num);
 % cntstat_dir = sprintf("./CntStat/%dkeV_RotateNum%d_SPECTEHENaI/", energy_keV, rotate_num);
 % factor_path = sprintf("./Factors/%dkeV_RotateNum%d_ConventionalSPECTEHE/", energy_keV, rotate_num);
@@ -34,12 +40,13 @@ if ~exist(cntstat_dir, "dir")
     mkdir(cntstat_dir);
 end
 
-load(sprintf("%sRotMat.mat", factor_path), "RotMat");
-load(sprintf("%scoor_polar_full.mat", factor_path), "coor_polar_full");
+load(fullfile(factor_path, "RotMat.mat"), "RotMat");
+load(fullfile(factor_path, "coor_polar_full.mat"), "coor_polar_full");
 
-fid = fopen(sprintf("%sSysMat_polar", factor_path), "r");
+sysmat_path = fullfile(factor_path, "SysMat_polar");
+fid = fopen(sysmat_path, "r");
 if fid < 0
-    error("Failed to open %sSysMat_polar", factor_path);
+    error("Failed to open %s", sysmat_path);
 end
 SysMat = fread(fid, "float32");
 fclose(fid);
@@ -47,7 +54,7 @@ SysMat = reshape(SysMat, [], size(coor_polar_full, 1));
 total_count_singleview = total_count / size(RotMat, 2);
 
 %% Load Hoffman phantom volume
-[img_cartesian, x_src_mm, y_src_mm, z_src_mm, volume_tag] = load_hoffman_volume(volume_type, transverse_scale);
+[img_cartesian, x_src_mm, y_src_mm, z_src_mm, volume_tag] = load_hoffman_volume(repo_root, volume_type, transverse_scale);
 pixel_num_cartesian_z = numel(z_src_mm);
 
 %% Interpolate from Cartesian Hoffman volume to polar coordinates
@@ -118,8 +125,8 @@ fprintf("Saved CntStat: %s\n", cntstat_csv_path);
 fprintf("Total counts written: %.0f\n", sum(CntStat, "all"));
 
 
-function [img_cartesian, x_mm, y_mm, z_mm, volume_tag] = load_hoffman_volume(volume_type, transverse_scale)
-base_dir = "./Geant4Sim/Preview/HoffmanRawCompressed_300x300x60_" + format_scale_tag(transverse_scale);
+function [img_cartesian, x_mm, y_mm, z_mm, volume_tag] = load_hoffman_volume(repo_root, volume_type, transverse_scale)
+base_dir = fullfile(repo_root, "Geant4Sim", "Preview", "HoffmanRawCompressed_300x300x60_" + format_scale_tag(transverse_scale));
 switch string(volume_type)
     case "target"
         raw_path = fullfile(base_dir, "hoffman_compressed_target_float32.raw");
