@@ -5,17 +5,15 @@
 % This script matches the source model in:
 %   Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m
 %
-% Outputs:
-%   CntStat/218keV_RotateNum20/CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e9.csv
-%   CntStat/440keV_RotateNum20/CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e9.csv
+% Outputs one CntStat/CntStatMean pair per configured energy and count level,
+% by default 218/440 keV at 1e9, 1e10, and 1e11 total source counts.
 %
 % Notes:
 %   - The Geant4 macro places the source at y = -245 mm in world coordinates.
 %     Here the phantom is built in the reconstruction FOV coordinate system,
 %     centered at (0, 0, 0), because coor_polar_full is defined around the FOV.
-%   - The default RotateNum is 20 because the currently generated 218/440
-%     Factors are RotateNum20. Change cfg.rotate_num to 60 once RotateNum60
-%     Factors are available.
+%   - Geant4 macro generation, GenProj, and the current 218/440 Factors all use
+%     RotateNum20.
 
 clear;
 clc;
@@ -28,8 +26,7 @@ if strlength(string(cfg.repo_root)) == 0
 end
 
 cfg.rotate_num = 20;
-cfg.total_count = 1e9;
-cfg.count_level = "1e9";
+cfg.total_count_list = [1e9, 1e10, 1e11];
 cfg.data_file_name = "ContrastPhantom_DualEnergy_10_30_240_30_225Ac";
 cfg.output_root = fullfile(cfg.repo_root, "CntStat");
 
@@ -59,16 +56,11 @@ cfg.energy_keV = [218, 440];
 cfg.yield = [0.114, 0.261];
 cfg.rod_energy_keV = [218, 440, 218, 440, 218, 440];
 
-% "macro" reproduces the exact GPS source weights in
-% ContrastPhantom_DualEnergy_Rotate_3D.m:
-%   background 218 weight = 1
-%   background 440 weight = yield_440 / yield_218
-%   rod additive weights = (act - 1) * rod_area / back_area
-% Multiplying all source weights by yield_218 gives the density model below.
-%
-% If you later want each energy's rods to be act-times hotter than that same
-% energy's own background, switch this to "per_energy_hot".
-cfg.weight_mode = "macro";
+% Match ContrastPhantom_DualEnergy_Rotate_3D.m: build different x_Fr/x_Bi
+% activity maps, normalize each map to unit spatial integral, and only then
+% multiply by Y218/Y440. This preserves the displaced daughter distributions
+% while enforcing the whole-run gamma yield ratio exactly in expectation.
+cfg.weight_mode = "global_yield_after_energy_normalization";
 
 rng(cfg.rng_seed);
 
@@ -86,35 +78,47 @@ coor_polar_full = load_named_array( ...
     "coor_polar_full");
 
 pixel_num = size(coor_polar_full, 1);
-img_raw_all = zeros(pixel_num, numel(cfg.energy_keV), "single");
+img_activity_raw_all = zeros(pixel_num, numel(cfg.energy_keV), "single");
 for id_energy = 1:numel(cfg.energy_keV)
-    img_raw_all(:, id_energy) = build_dual_energy_contrast_source( ...
+    img_activity_raw_all(:, id_energy) = build_dual_energy_contrast_source( ...
         coor_polar_full, cfg, cfg.energy_keV(id_energy));
 end
 
-raw_sum_all = sum(img_raw_all, "all");
-if raw_sum_all <= 0
-    error("The generated source image is empty. Check phantom geometry and coor_polar_full.");
+activity_sum = sum(double(img_activity_raw_all), 1);
+if any(activity_sum <= 0)
+    error("At least one daughter activity map is empty. Check phantom geometry.");
 end
 
-total_count_singleview = cfg.total_count / cfg.rotate_num;
-img_polar_all = img_raw_all * single(total_count_singleview / raw_sum_all);
+% Normalize in double precision so the strict whole-run yield check is not
+% dominated by float32 accumulation error over all polar voxels.
+img_activity_fraction_all = double(img_activity_raw_all) ./ activity_sum;
+img_raw_all = img_activity_fraction_all .* reshape(cfg.yield, 1, []);
+raw_sum_all = sum(img_raw_all, "all");
+img_fraction_all = single(img_raw_all / raw_sum_all);
+img_polar_all = img_fraction_all * single(cfg.total_count_list(1) / cfg.rotate_num);
+
+actual_energy_fraction = sum(double(img_fraction_all), 1);
+expected_energy_fraction = cfg.yield / sum(cfg.yield);
+if max(abs(actual_energy_fraction - expected_energy_fraction)) > 1e-6
+    error("Whole-run energy fractions do not match the configured gamma yields.");
+end
 
 fprintf("Dual-energy source model\n");
-fprintf("  total_count            = %.6g\n", cfg.total_count);
 fprintf("  rotate_num             = %d\n", cfg.rotate_num);
-fprintf("  total_count_singleview = %.6g\n", total_count_singleview);
+fprintf("  total_count_list        = %s\n", mat2str(cfg.total_count_list));
 for id_energy = 1:numel(cfg.energy_keV)
-    fprintf("  %d keV image sum/view   = %.6g (%.2f%%)\n", ...
+    fprintf("  %d keV source fraction  = %.6g (%.2f%%)\n", ...
         cfg.energy_keV(id_energy), ...
-        sum(img_polar_all(:, id_energy), "all"), ...
-        100 * sum(img_polar_all(:, id_energy), "all") / total_count_singleview);
+        sum(img_fraction_all(:, id_energy), "all"), ...
+        100 * sum(img_fraction_all(:, id_energy), "all"));
 end
 
 phantom_out_dir = fullfile(cfg.output_root, "PhantomPreview");
 ensure_dir(phantom_out_dir);
 save(fullfile(phantom_out_dir, "ContrastPhantom_DualEnergy_225Ac_source_polar.mat"), ...
-    "cfg", "coor_polar_full", "img_raw_all", "img_polar_all", "-v7.3");
+    "cfg", "coor_polar_full", "img_activity_raw_all", ...
+    "img_activity_fraction_all", "img_raw_all", "img_fraction_all", ...
+    "img_polar_all", "-v7.3");
 
 %% Forward project each energy independently and write CntStat files
 for id_energy = 1:numel(cfg.energy_keV)
@@ -142,33 +146,38 @@ for id_energy = 1:numel(cfg.energy_keV)
     fprintf("[%d keV] SysMat size = %d detectors x %d pixels\n", ...
         energy_keV, detector_num, size(sysmat, 2));
 
-    img_polar = img_polar_all(:, id_energy);
-    cntstat_mean = zeros(cfg.rotate_num, detector_num, "single");
+    img_fraction = img_fraction_all(:, id_energy);
+    cntstat_mean_per_source_count = zeros(cfg.rotate_num, detector_num, "single");
 
     for id_rotate = 1:cfg.rotate_num
         rot_idx = rot_mat_full(:, id_rotate);
-        img_rot = img_polar(rot_idx);
-        cntstat_mean(id_rotate, :) = (sysmat * img_rot).';
-        fprintf("[%d keV] Forward projection %d/%d done. mean sum = %.6g\n", ...
-            energy_keV, id_rotate, cfg.rotate_num, sum(cntstat_mean(id_rotate, :), "all"));
+        img_rot = img_fraction(rot_idx) / single(cfg.rotate_num);
+        cntstat_mean_per_source_count(id_rotate, :) = (sysmat * img_rot).';
+        fprintf("[%d keV] Unit-count forward projection %d/%d done. sum = %.6g\n", ...
+            energy_keV, id_rotate, cfg.rotate_num, ...
+            sum(cntstat_mean_per_source_count(id_rotate, :), "all"));
     end
-
-    cntstat_mean = max(cntstat_mean, 0);
-    cntstat = apply_count_noise(cntstat_mean, cfg.noise_model);
 
     out_dir = fullfile(cfg.output_root, sprintf("%dkeV_RotateNum%d", energy_keV, cfg.rotate_num));
     ensure_dir(out_dir);
 
-    out_file = fullfile(out_dir, sprintf("CntStat_%s_%s.csv", cfg.data_file_name, cfg.count_level));
-    mean_file = fullfile(out_dir, sprintf("CntStatMean_%s_%s.csv", cfg.data_file_name, cfg.count_level));
+    for id_count = 1:numel(cfg.total_count_list)
+        total_count = cfg.total_count_list(id_count);
+        count_level = format_count_level(total_count);
+        cntstat_mean = max(cntstat_mean_per_source_count * single(total_count), 0);
+        cntstat = apply_count_noise(cntstat_mean, cfg.noise_model);
 
-    writematrix(cntstat, out_file);
-    writematrix(cntstat_mean, mean_file);
+        out_file = fullfile(out_dir, sprintf("CntStat_%s_%s.csv", cfg.data_file_name, count_level));
+        mean_file = fullfile(out_dir, sprintf("CntStatMean_%s_%s.csv", cfg.data_file_name, count_level));
 
-    fprintf("[%d keV] Wrote noisy CntStat: %s\n", energy_keV, out_file);
-    fprintf("[%d keV] Wrote mean  CntStat: %s\n", energy_keV, mean_file);
-    fprintf("[%d keV] noisy total = %.6g, mean total = %.6g\n", ...
-        energy_keV, sum(cntstat, "all"), sum(cntstat_mean, "all"));
+        writematrix(cntstat, out_file);
+        writematrix(cntstat_mean, mean_file);
+
+        fprintf("[%d keV, %s] Wrote noisy CntStat: %s\n", energy_keV, count_level, out_file);
+        fprintf("[%d keV, %s] Wrote mean  CntStat: %s\n", energy_keV, count_level, mean_file);
+        fprintf("[%d keV, %s] noisy total = %.6g, mean total = %.6g\n", ...
+            energy_keV, count_level, sum(cntstat, "all"), sum(cntstat_mean, "all"));
+    end
 end
 
 fprintf("\nDone.\n");
@@ -254,17 +263,11 @@ function img = build_dual_energy_contrast_source(coor, cfg, energy_keV)
 
     img = zeros(size(coor, 1), 1, "single");
 
-    if cfg.weight_mode == "macro"
-        background_density = cfg.yield(energy_idx);
-        rod_add_density_base = cfg.yield(1) * (cfg.act - 1);
-    elseif cfg.weight_mode == "per_energy_hot"
-        background_density = cfg.yield(energy_idx);
-        rod_add_density_base = cfg.yield(energy_idx) * (cfg.act - 1);
-    else
+    if cfg.weight_mode ~= "global_yield_after_energy_normalization"
         error("Unknown cfg.weight_mode: %s", cfg.weight_mode);
     end
 
-    img(back_mask) = single(background_density);
+    img(back_mask) = 1;
 
     for i = 1:numel(cfg.rod_d)
         if cfg.rod_energy_keV(i) ~= energy_keV
@@ -278,7 +281,7 @@ function img = build_dual_energy_contrast_source(coor, cfg, energy_keV)
 
         rod_mask = ((coor(:, 1) - cx).^2 + (coor(:, 2) - cy).^2) <= rod_r^2 & ...
             abs(coor(:, 3)) <= cfg.height / 2;
-        img(rod_mask) = img(rod_mask) + single(rod_add_density_base);
+        img(rod_mask) = img(rod_mask) + single(cfg.act - 1);
     end
 end
 
@@ -306,4 +309,18 @@ function ensure_dir(path_value)
     if ~exist(path_value, "dir")
         mkdir(path_value);
     end
+end
+
+function label = format_count_level(value)
+    if ~isfinite(value) || value <= 0
+        error("Count levels must be finite positive values; got %.6g.", value);
+    end
+    exponent = floor(log10(value));
+    mantissa = value / 10^exponent;
+    if abs(mantissa - round(mantissa)) < 1e-12
+        mantissa_text = sprintf("%d", round(mantissa));
+    else
+        mantissa_text = sprintf("%.12g", mantissa);
+    end
+    label = sprintf("%se%d", mantissa_text, exponent);
 end

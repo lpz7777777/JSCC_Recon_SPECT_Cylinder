@@ -1,0 +1,85 @@
+//
+// ********************************************************************
+// * License and Disclaimer                                           *
+// *                                                                  *
+// * The  Geant4 software  is  copyright of the Copyright Holders  of *
+// * the Geant4 Collaboration.  It is provided  under  the terms  and *
+// * conditions of the Geant4 Software License,  included in the file *
+// * LICENSE and available at  http://cern.ch/geant4/license .  These *
+// * include a list of copyright holders.                             *
+// *                                                                  *
+// * Neither the authors of this software system, nor their employing *
+// * institutes,nor the agencies providing financial support for this *
+// * work  make  any representation or  warranty, express or implied, *
+// * regarding  this  software system or assume any liability for its *
+// * use.  Please see the license in the file  LICENSE  and URL above *
+// * for the full disclaimer and the limitation of liability.         *
+// *                                                                  *
+// * This  code  implementation is the result of  the  scientific and *
+// * technical work of the GEANT4 collaboration.                      *
+// * By using,  copying,  modifying or  distributing the software (or *
+// * any work based  on the software)  you  agree  to acknowledge its *
+// * use  in  resulting  scientific  publications,  and indicate your *
+// * acceptance of all terms of the Geant4 Software license.          *
+// ********************************************************************
+//
+/// \file electromagnetic/TestEm11/include/Run.hh
+/// \brief Definition of the Run class
+//
+// $Id: Run.hh 71375 2013-06-14 07:39:33Z maire $
+//
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#ifndef Run_h
+#define Run_h 1
+
+#include "G4Run.hh"
+#include "G4VProcess.hh"
+#include "globals.hh"
+#include <array>
+#include <map>
+#include <vector>
+
+class DetectorConstruction;
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+class Run : public G4Run
+{
+  public:
+    Run(DetectorConstruction*);
+    ~Run();
+
+  public:
+	  DetectorConstruction* getDetector(){return fDetector;};
+    void AddCnt218(int number){LocalCnt_218[number]+=1;};
+    void AddCnt440(int number){LocalCnt_440[number]+=1;};
+    void AddEnergySpectrum(G4double Energy);
+    void AddEventType(int Type){EventType[Type]++;};
+    void AddList(G4double Energy1, G4double Energy2, int Flag1, int Flag2, int Flag);
+
+    int GetCnt218(int number){return LocalCnt_218[number];};
+    int GetCnt440(int number){return LocalCnt_440[number];};
+    int GetnergySpectrum(int energy){return EnergySpectrum[energy];};
+    int GetEventType(int Type){return EventType[Type];};
+    int GetTotalCount() const {return static_cast<int>(List.size());};
+    G4double GetList(int i, int j) const {return List.at(i).at(j);};
+
+    virtual void Merge(const G4Run*);
+
+
+  private:
+    DetectorConstruction* fDetector;
+    int* LocalCnt_218;
+    int* LocalCnt_440;
+    int* EnergySpectrum;
+    int nx, ny, nlayer;
+    int nScinNum;
+    int* EventType;
+    std::vector<std::array<G4double, 5> > List;
+};
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#endif

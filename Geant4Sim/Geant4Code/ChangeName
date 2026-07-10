@@ -1,0 +1,15 @@
+#!/bin/sh
+
+chmod -R a+wrx *
+IdData=1
+DataNum=4
+Dirnmae=$(basename $(pwd))
+while(test $IdData -lt `expr $DataNum + 1`)
+do
+	mv ./"$IdData"/CntStat.csv ./"$IdData"/CntStat_"$Dirnmae"_"$IdData".csv
+	mv ./"$IdData"/List.csv ./"$IdData"/List_"$Dirnmae"_"$IdData".csv
+	cp ./"$IdData"/CntStat_"$Dirnmae"_"$IdData".csv ./
+	cp ./"$IdData"/List_"$Dirnmae"_"$IdData".csv ./
+	IdData=`expr $IdData + 1`
+done
+#ls --color=tty

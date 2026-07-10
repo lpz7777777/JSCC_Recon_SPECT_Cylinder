@@ -28,3 +28,26 @@ Geant4Sim/3D_DRO_Hoffman_v6_raw/*.yaff
 Geant4Sim/Macro/Hoffman_Target_*/
 
 distributed/scripts/logs/
+
+# Large/generated simulation artifacts
+*.sysmat
+SysMat*
+*.bin
+*.fig
+*.mat
+tmp/
+
+# Native build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+Geant4Sim/Geant4Code/out/
+Auxiliary_Studies/**/runs/
+Auxiliary_Studies/**/PEGen_CircularHole
+Auxiliary_Studies/**/ScatterGen_CircularHole
+Auxiliary_Studies/**/ScatterGen_Collimator
+Auxiliary_Studies/**/ScatterGen_Crystal

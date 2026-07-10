@@ -1,0 +1,117 @@
+# Contrast Phantom: 225Ac dual-energy (218+440 keV)
+# Rotate 14/20, phi=234.0 deg
+# Whole-run expected yield ratio: 218:440 = 0.114:0.261
+# Rods: alternating Fr-218 / Bi-440 to model daughter redistribution
+# Fr/Bi spatial maps are normalized separately before yield weighting
+# beamOn counts selected primary photons, not 225Ac decays
+
+/gps/particle gamma
+/gps/energy 218 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius 120.0000 mm
+/gps/pos/halfz 15.0000 mm
+/gps/pos/centre 0.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+
+#
+/gps/source/add 2.205584572117
+/gps/particle gamma
+/gps/energy 440 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius 120.0000 mm
+/gps/pos/halfz 15.0000 mm
+/gps/pos/centre 0.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+
+#
+# rod 1: Fr-218 at (-35.3, -196.5), d=10mm, relative weight=0.008680555556
+/gps/source/add 0.008680555556
+/gps/particle gamma
+/gps/energy 218 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -35.2671 -196.4590 0.0000 mm
+/gps/pos/radius 5.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+# rod 2: Bi-440 at (-59.7, -251.3), d=14mm, relative weight=0.037525570845
+/gps/source/add 0.037525570845
+/gps/particle gamma
+/gps/energy 440 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -59.6713 -251.2717 0.0000 mm
+/gps/pos/radius 7.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+# rod 3: Fr-218 at (-24.4, -299.8), d=18mm, relative weight=0.028125000000
+/gps/source/add 0.028125000000
+/gps/particle gamma
+/gps/energy 218 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre -24.4042 -299.8127 0.0000 mm
+/gps/pos/radius 9.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+# rod 4: Bi-440 at (35.3, -293.5), d=22mm, relative weight=0.092665185148
+/gps/source/add 0.092665185148
+/gps/particle gamma
+/gps/energy 440 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 35.2671 -293.5410 0.0000 mm
+/gps/pos/radius 11.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+# rod 5: Fr-218 at (59.7, -238.7), d=26mm, relative weight=0.058680555556
+/gps/source/add 0.058680555556
+/gps/particle gamma
+/gps/energy 218 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 59.6713 -238.7283 0.0000 mm
+/gps/pos/radius 13.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+# rod 6: Bi-440 at (24.4, -190.2), d=30mm, relative weight=0.172311294697
+/gps/source/add 0.172311294697
+/gps/particle gamma
+/gps/energy 440 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/ang/type iso
+/gps/ang/mintheta 0.0000 deg
+/gps/ang/maxtheta 180.0000 deg
+/gps/pos/centre 24.4042 -190.1873 0.0000 mm
+/gps/pos/radius 15.0000 mm
+/gps/pos/halfz 15.0000 mm
+
+#
+/run/beamOn 50000000
