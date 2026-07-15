@@ -142,34 +142,24 @@ void EventAction::EndOfEventAction(const G4Event* /*event*/)
   FirstScinCount = 0;
   Run* run = static_cast<Run*>(G4RunManager::GetRunManager()->GetNonConstCurrentRun());
 
-  // ====== 找能量最高的晶体 ======
-  int   maxIdx = -1;
-  G4double maxE  = 0;
+  // Count every crystal whose broadened deposited energy falls in a window.
+  // One event may increment multiple detector bins. This branch is independent
+  // of the Compton-list classification below.
   for(int i=0; i<nScinNum; i++)
   {
-    if(TempEnergy[i] > maxE)
+    const G4double energy = TempEnergy[i];
+    if(energy >= fWin440_lo && energy <= fWin440_hi)
     {
-      maxE = TempEnergy[i];
-      maxIdx = i;
+      run->AddCnt440(i);
+    }
+    if(energy >= fWin218_lo && energy <= fWin218_hi)
+    {
+      run->AddCnt218(i);
     }
   }
 
-  // ====== 单光子事件：最高能量落在能窗内 ======
-  if(maxIdx >= 0)
-  {
-    if(maxE >= fWin440_lo && maxE <= fWin440_hi)
-    {
-      run->AddCnt440(maxIdx);
-      return;  // 单光子事件，结束
-    }
-    if(maxE >= fWin218_lo && maxE <= fWin218_hi)
-    {
-      run->AddCnt218(maxIdx);
-      return;  // 单光子事件，结束
-    }
-  }
-
-  // ====== 康普顿事件：非单光子，检查 2 晶体 + 1 次散射 ======
+  // Independently classify accepted two-crystal Compton events. An event that
+  // contributed to either CntStat window may also contribute one List row.
   for(int i=0; i<nScinNum; i++)
   {
     if(TempEnergy[i] > Threshold)

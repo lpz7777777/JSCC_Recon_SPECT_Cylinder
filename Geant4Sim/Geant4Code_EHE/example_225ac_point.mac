@@ -1,0 +1,29 @@
+# Point-source example using the project-wide 225Ac proxy yields.
+# Relative GPS weights are Y218=0.114 and Y440=0.261.
+/control/verbose 1
+/run/verbose 1
+/tracking/verbose 0
+/gps/source/multiplevertex false
+
+# GPS default source: 218 keV, relative intensity 1.
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0 -245 0 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+# 440/218 relative intensity = 0.261/0.114.
+/gps/source/add 2.289473684211
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0 -245 0 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+/run/beamOn 1000000

@@ -73,7 +73,7 @@ class Run : public G4Run
     DetectorConstruction* fDetector;
     int* LocalCnt_218;
     int* LocalCnt_440;
-    int* EnergySpectrum;
+    int* EnergySpectrum; 
     int nx, ny, nlayer;
     int nScinNum;
     int* EventType;
@@ -83,3 +83,4 @@ class Run : public G4Run
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
+

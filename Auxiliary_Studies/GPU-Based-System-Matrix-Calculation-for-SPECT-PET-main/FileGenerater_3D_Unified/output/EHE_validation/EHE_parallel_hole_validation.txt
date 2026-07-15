@@ -1,0 +1,26 @@
+EHE parallel-hole Params validation
+status = PASS
+detector_count = 2312
+hole_count = 1250
+hole_diameter_mm = 2.5
+expected_center_pitch_mm = 5.9
+measured_nearest_pitch_min_median_max_mm = 5.8999939, 5.89999771, 5.90000153
+measured_minimum_septum_mm = 3.3999939
+collimator_size_x_y_z_mm = 330, 50.5, 165
+hole_center_x_range_mm = -145.966003, 146.084
+hole_center_z_range_mm = -61.3145981, 61.3145981
+detector_center_x_range_mm = -134, 134
+detector_center_z_range_mm = -66, 66
+detector_to_collimator_gap_mm = 0
+shared_jscc_detector_ehe_collimator_front_mm = 198.5
+fov_positive_boundary_mm = 153
+fov_to_collimator_clearance_mm = 45.5
+fov_to_collimator_reference_mm = 223.75
+fov_to_collimator_front_mm = 198.5
+fov_to_collimator_back_mm = 249
+Physics_218 = [1 1 1 1 0 0 0 218 1 1 1 1]
+Physics_440 = [1 1 1 1 0 0 0 440 1 1 1 1]
+Physics_440_to_218_window = [1 1 1 0 1 196.305374 239.694626 440 1 1 1 0]
+
+Interpretation: septal_thickness is the nearest edge-to-edge Pb thickness.
+Therefore center_pitch = hole_diameter + septal_thickness.

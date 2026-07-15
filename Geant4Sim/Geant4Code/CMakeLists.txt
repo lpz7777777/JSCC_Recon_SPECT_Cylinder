@@ -34,6 +34,25 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 add_executable(gamma01 gamma01.cc ${sources} ${headers})
 target_link_libraries(gamma01 ${Geant4_LIBRARIES} )
 
+# Keep the executable beside CrystalMatrix.txt and the visualisation macros.
+# This also makes a direct launch of build/gamma01.exe use the correct runtime
+# working directory with Visual Studio's multi-configuration generators.
+set_target_properties(gamma01 PROPERTIES
+  RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}"
+  RUNTIME_OUTPUT_DIRECTORY_DEBUG "${PROJECT_BINARY_DIR}"
+  RUNTIME_OUTPUT_DIRECTORY_RELEASE "${PROJECT_BINARY_DIR}"
+  RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO "${PROJECT_BINARY_DIR}"
+  RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL "${PROJECT_BINARY_DIR}"
+)
+
+# Geant4 11 on Windows exposes driver-specific definitions such as
+# G4UI_USE_WIN32 and G4VIS_USE_OPENGLWIN32, not the generic G4UI_USE /
+# G4VIS_USE macros used by older examples.  Define one project-level macro so
+# the entry point can reliably enable its interactive UI and visualisation.
+if(WITH_GEANT4_UIVIS)
+  target_compile_definitions(gamma01 PRIVATE GAMMA01_USE_UIVIS)
+endif()
+
 #----------------------------------------------------------------------------
 # Copy all scripts to the build directory, i.e. the directory in which we
 # build gamma01 This is so that we can run the executable directly because it
@@ -58,3 +77,4 @@ endforeach()
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
 install(TARGETS gamma01 DESTINATION bin)
+

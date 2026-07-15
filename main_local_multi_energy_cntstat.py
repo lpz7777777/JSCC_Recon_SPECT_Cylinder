@@ -1,9 +1,4 @@
-"""Local multi-energy, multi-output reconstruction using only CntStat data.
-
-The entry point loads every energy's factors once, reconstructs one image per
-energy, then forms the combined image by adding those independent images. It
-does not load Compton List data and does not model inter-window cross-talk.
-"""
+"""Local 218/440 CntStat reconstruction with explicit 440-to-218 cross-talk."""
 
 import argparse
 import hashlib
@@ -19,9 +14,7 @@ import numpy as np
 import torch
 
 from distributed.python.multi_energy_tasks import (
-    IterConfig,
     ReconTask,
-    build_tasks,
     format_task_table,
 )
 from main_local_cntstat import (
@@ -33,7 +26,10 @@ from main_local_cntstat import (
     resolve_device,
     resolve_pixel_num,
 )
-from recon_osem_local_cntstat import run_recon_osem_local_cntstat
+from recon_osem_local_cntstat import (
+    forward_project_local_cntstat,
+    run_recon_osem_local_cntstat,
+)
 from sparse_main_utils import format_scientific_count
 
 
@@ -43,8 +39,8 @@ DEFAULT_DATASET = "ContrastPhantom_DualEnergy_10_30_240_30_225Ac"
 def parse_args():
     parser = argparse.ArgumentParser(
         description=(
-            "Local CntStat-only multi-output reconstruction: one image per energy "
-            "plus their post-reconstruction pixel-wise sum."
+            "Local 218/440 CntStat reconstruction with an explicit fixed "
+            "440-to-218 additive-background correction."
         )
     )
     parser.add_argument("--e0-list", type=float, nargs="+", default=[0.218, 0.440],
@@ -68,7 +64,16 @@ def parse_args():
     parser.add_argument("--seed", type=int, default=20260710)
     parser.add_argument("--factors-dir", default="./Factors")
     parser.add_argument("--factor-dir-suffix", default="",
-                        help="Optional suffix on factor energy directories.")
+                         help="Optional suffix on factor energy directories.")
+    parser.add_argument(
+        "--cross-talk-scale",
+        type=float,
+        default=1.0,
+        help=(
+            "Calibration scale on C(218-window <- 440-source). Keep 1 when "
+            "CntStat contains absolute mixed-source counts from GenProj/Geant4."
+        ),
+    )
     parser.add_argument("--cntstat-dir", default="./CntStat")
     parser.add_argument("--cntstat-dir-suffix", default="",
                         help="Optional suffix on CntStat energy directories.")
@@ -91,6 +96,17 @@ def validate_args(args):
         raise ValueError("Every energy must be positive.")
     if any(weight <= 0 for weight in args.intensity_list):
         raise ValueError("Every intensity must be positive.")
+    expected_kev = {218, 440}
+    actual_kev = {round(e * 1000) for e in args.e0_list}
+    if actual_kev != expected_kev or len(args.e0_list) != 2:
+        raise ValueError("Cross-talk-aware mode requires exactly 0.218 and 0.440 MeV.")
+    if any(abs(weight - 1.0) > 1e-12 for weight in args.intensity_list):
+        raise ValueError(
+            "Cross-talk-aware absolute-count mode requires --intensity-list 1 1. "
+            "Gamma yields are already present in the observed CntStat amplitudes."
+        )
+    if not np.isfinite(args.cross_talk_scale) or args.cross_talk_scale <= 0:
+        raise ValueError("--cross-talk-scale must be finite and positive.")
     if not args.count_levels or any(not level.strip() for level in args.count_levels):
         raise ValueError("--count-levels must contain non-empty filename suffixes.")
     if len(set(args.count_levels)) != len(args.count_levels):
@@ -130,6 +146,8 @@ def load_factors(args, factors_root):
         factor_dir = build_energy_dir(
             factors_root, e0, args.rotate_num, args.factor_dir_suffix
         )
+        expected_response = "A218" if round(e0 * 1000) == 218 else "A440"
+        validate_factor_response(factor_dir, expected_response)
         sysmat_path = factor_dir / "SysMat_polar"
         rotmat_path = factor_dir / "RotMat_full.csv"
         rotmat_inv_path = factor_dir / "RotMatInv_full.csv"
@@ -201,6 +219,87 @@ def load_factors(args, factors_root):
     return loaded, pixel_num
 
 
+def validate_factor_response(factor_dir, expected_response):
+    manifest_path = factor_dir / "factor_manifest.json"
+    if not manifest_path.is_file():
+        print(
+            f"WARNING: {manifest_path} is missing; response semantics are checked "
+            "only by directory name and dimensions."
+        )
+        return None
+    with open(manifest_path, "r", encoding="utf-8") as handle:
+        manifest = json.load(handle)
+    actual = manifest.get("response")
+    if actual != expected_response:
+        raise ValueError(
+            f"Factor response mismatch in {manifest_path}: got {actual!r}, "
+            f"expected {expected_response!r}."
+        )
+    if manifest.get("includes_225Ac_gamma_yield") not in (False, None):
+        raise ValueError(
+            f"{manifest_path} already includes gamma yield; this would double-weight CntStat."
+        )
+    return manifest
+
+
+def build_cross_factor_dir(root, rotate_num, suffix):
+    suffix_text = suffix.strip()
+    if suffix_text and not suffix_text.startswith("_"):
+        suffix_text = "_" + suffix_text
+    return root / f"440keV_to218win_RotateNum{rotate_num}{suffix_text}"
+
+
+def load_cross_factor(args, factors_root, loaded_factors, pixel_num):
+    factor_dir = build_cross_factor_dir(
+        factors_root, args.rotate_num, args.factor_dir_suffix
+    )
+    validate_factor_response(factor_dir, "C440to218")
+    sysmat_path = factor_dir / "SysMat_polar"
+    rotmat_path = factor_dir / "RotMat_full.csv"
+    rotmat_inv_path = factor_dir / "RotMatInv_full.csv"
+    for required in (sysmat_path, rotmat_path, rotmat_inv_path):
+        if not required.is_file():
+            raise FileNotFoundError(required)
+
+    rotmat = torch.from_numpy(np.loadtxt(rotmat_path, delimiter=",", dtype=np.int64))
+    rotmat_inv = torch.from_numpy(
+        np.loadtxt(rotmat_inv_path, delimiter=",", dtype=np.int64)
+    )
+    sysmat, total_bins = load_full_sysmat(
+        str(sysmat_path), pixel_num, args.cross_talk_scale
+    )
+
+    reference = next(
+        factor for factor in loaded_factors if round(factor["e0"] * 1000) == 218
+    )
+    if total_bins != reference["total_bins"]:
+        raise ValueError(
+            f"C440to218 detector bins={total_bins}; A218 bins={reference['total_bins']}."
+        )
+    if not torch.equal(rotmat, reference["rotmat"]) or not torch.equal(
+        rotmat_inv, reference["rotmat_inv"]
+    ):
+        raise ValueError("C440to218 and direct responses use different rotation mappings.")
+
+    sensitivity = compute_sensitivity_local(sysmat, rotmat_inv, args.rotate_num)
+    if not torch.isfinite(sensitivity).all() or sensitivity.min().item() < 0:
+        raise ValueError("C440to218 sensitivity is negative or non-finite.")
+    result = {
+        "factor_dir": factor_dir,
+        "sysmat": sysmat,
+        "rotmat": rotmat,
+        "rotmat_inv": rotmat_inv,
+        "sensi": sensitivity,
+        "total_bins": total_bins,
+    }
+    print(
+        f"Loaded C440to218 factors: {factor_dir} | pixels={pixel_num}, "
+        f"detector_bins={total_bins}, scale={args.cross_talk_scale:.9g}, "
+        f"sensitivity=[{sensitivity.min().item():.6e}, {sensitivity.max().item():.6e}]"
+    )
+    return result
+
+
 def load_projections(args, cntstat_root, loaded_factors, count_level, count_idx):
     projections = []
     input_files = []
@@ -249,32 +348,80 @@ def build_save_path(args, output_root, count_level, total_count):
     folder = (
         f"{mode}_R{args.rotate_num}_E{energy_tag}_D{dataset_hash}_C{count_level}_"
         f"DS{args.ds}_O{args.osem_subset_num}_SI{args.single_sc_iter}_"
-        f"POSTSUM_N{format_scientific_count(total_count)}"
+        f"XTALK_BG{args.cross_talk_scale:g}_N{format_scientific_count(total_count)}"
     )
     return output_root / folder / "Polar"
 
 
-def build_post_sum_task(args):
-    energy_tag = "_".join(str(round(e * 1000)) for e in args.e0_list)
-    if len(args.e0_list) > 1:
-        energy_tag = f"({energy_tag})"
-    return ReconTask(
-        mode="SUM",
-        energy_indices=tuple(range(len(args.e0_list))),
-        compton_energy_indices=(),
-        iter_num=args.single_sc_iter,
-        save_iter_step=args.single_sc_save_step,
-        output_name=f"S_{energy_tag}keV",
-        type_tag="PostSum",
-    )
+def build_crosstalk_tasks(args):
+    idx_218 = next(i for i, energy in enumerate(args.e0_list) if round(energy * 1000) == 218)
+    idx_440 = next(i for i, energy in enumerate(args.e0_list) if round(energy * 1000) == 440)
+
+    def task(output_name, type_tag, energy_indices, mode="S"):
+        return ReconTask(
+            mode=mode,
+            energy_indices=tuple(energy_indices),
+            compton_energy_indices=(),
+            iter_num=args.single_sc_iter,
+            save_iter_step=args.single_sc_save_step,
+            output_name=output_name,
+            type_tag=type_tag,
+        )
+
+    return {
+        "direct_440": task("S_440keV", "Direct440", (idx_440,)),
+        "contaminated_218": task(
+            "S_218keV_Contaminated", "Observed218WithoutCorrection", (idx_218,)
+        ),
+        "corrected_218": task(
+            "S_218keV_CrossTalkCorrected", "CrossTalkCorrected218", (idx_218,)
+        ),
+        "corrected_sum": task(
+            "S_(440_218)keV_CrossTalkCorrected",
+            "CorrectedPostSum",
+            (idx_440, idx_218),
+            mode="SUM",
+        ),
+    }
 
 
-def write_manifest(save_path, args, tasks, input_files, pixel_num, total_count):
+def write_manifest(
+    save_path,
+    args,
+    tasks,
+    input_files,
+    pixel_num,
+    total_count,
+    cross_factor,
+    diagnostics,
+):
     manifest = {
-        "algorithm": "local multi-energy CntStat-only MLEM/OSEM with post-reconstruction sum",
-        "cross_talk_model": False,
+        "algorithm": (
+            "local 218/440 CntStat-only MLEM/OSEM with fixed 440-to-218 "
+            "additive-background correction"
+        ),
+        "cross_talk_model": True,
+        "cross_talk_correction": (
+            "x440 is reconstructed from y440 with A440; C440to218*x440 is then "
+            "converted to measured per-view CntStat scale and held fixed as additive "
+            "background in the 218-window Poisson denominator"
+        ),
+        "observation_model": {
+            "218_window": "y218 ~ Poisson(A218*x218 + C440to218*x440)",
+            "440_window": "y440 ~ Poisson(A440*x440)",
+        },
+        "cross_talk_scale": args.cross_talk_scale,
+        "cross_factor_dir": str(cross_factor["factor_dir"]),
+        "gamma_yield_handling": (
+            "observed CntStat amplitudes already contain source yields; matrices are "
+            "per emitted photon and no Y440/Y218 factor is applied in reconstruction"
+        ),
         "shared_image_assumption": False,
-        "combined_image_definition": "sum of independently reconstructed per-energy images",
+        "combined_image_definition": "Image_S_440keV + Image_S_218keV_CrossTalkCorrected",
+        "image_activity_convention": "total activity summed over all rotation views",
+        "projection_activity_convention": (
+            "measured per-view CntStat; forward projections include 1/rotate_num"
+        ),
         "subset_sensitivity": "exact per detector-bin subset",
         "energies_MeV": args.e0_list,
         "intensity_list": args.intensity_list,
@@ -283,15 +430,20 @@ def write_manifest(save_path, args, tasks, input_files, pixel_num, total_count):
         "pixel_num": pixel_num,
         "final_image_dtype": "float32",
         "final_image_shape": [pixel_num, 1],
+        "cross_talk_diagnostics": diagnostics,
         "tasks": [
             {
                 "type": task.type_tag,
                 "mode": task.mode,
                 "energy_indices": list(task.energy_indices),
                 "combination_method": (
-                    "post_reconstruction_pixelwise_sum"
+                    "corrected_post_reconstruction_pixelwise_sum"
                     if task.mode == "SUM"
-                    else "iterative_reconstruction"
+                    else (
+                        "fixed_additive_background_poisson_em"
+                        if task.type_tag == "CrossTalkCorrected218"
+                        else "iterative_reconstruction"
+                    )
                 ),
                 "iterations": task.iter_num,
                 "save_iter_step": task.save_iter_step,
@@ -413,64 +565,148 @@ def combine_independent_outputs(
     )
 
 
+def reconstruct_or_load(
+    args,
+    task,
+    factor,
+    projection,
+    save_path,
+    device,
+    pixel_num,
+    seed_offset,
+    additive_background=None,
+):
+    if not args.overwrite_existing:
+        is_valid, reason = validate_existing_task_output(save_path, task, pixel_num)
+        if is_valid:
+            print(f"\n[{task.type_tag}] Reusing Image_{task.output_name}: {reason}.")
+            final_path, _ = task_output_paths(save_path, task)
+            return torch.from_numpy(np.fromfile(final_path, dtype=np.float32).copy()).reshape(-1, 1)
+        print(f"\n[{task.type_tag}] Existing output is incomplete: {reason}.")
+
+    iter_arg = argparse.Namespace(
+        sc=task.iter_num,
+        save_iter_step=task.save_iter_step,
+        osem_subset_num=args.osem_subset_num,
+        ene_num=1,
+        seed=args.seed + seed_offset,
+    )
+    s_map_arg = argparse.Namespace(s=factor["sensi"])
+    return run_recon_osem_local_cntstat(
+        [factor["sysmat"]],
+        [factor["rotmat"]],
+        [factor["rotmat_inv"]],
+        [projection],
+        iter_arg,
+        s_map_arg,
+        str(save_path) + os.sep,
+        device,
+        output_name=task.output_name,
+        additive_background_all=[additive_background],
+    ).detach().cpu()
+
+
+def relative_l2(observed, predicted):
+    denominator = torch.linalg.vector_norm(observed.to(torch.float64)).clamp_min(1e-12)
+    numerator = torch.linalg.vector_norm(
+        observed.to(torch.float64) - predicted.to(torch.float64)
+    )
+    return (numerator / denominator).item()
+
+
 def run_count_level(
     args,
-    tasks,
+    task_map,
     loaded_factors,
+    cross_factor,
     projections,
     save_path,
     device,
     pixel_num,
 ):
     save_path.mkdir(parents=True, exist_ok=True)
-    save_path_str = str(save_path) + os.sep
+    idx_218 = next(i for i, factor in enumerate(loaded_factors) if round(factor["e0"] * 1000) == 218)
+    idx_440 = next(i for i, factor in enumerate(loaded_factors) if round(factor["e0"] * 1000) == 440)
+    factor_218 = loaded_factors[idx_218]
+    factor_440 = loaded_factors[idx_440]
+    projection_218 = projections[idx_218]
+    projection_440 = projections[idx_440]
 
-    for task_idx, task in enumerate(tasks):
-        if not args.overwrite_existing:
-            is_valid, reason = validate_existing_task_output(save_path, task, pixel_num)
-            if is_valid:
-                print(
-                    f"\n[Task {task_idx + 1}/{len(tasks)}] Reusing existing "
-                    f"Image_{task.output_name}: {reason}."
-                )
-                continue
-            print(
-                f"\n[Task {task_idx + 1}/{len(tasks)}] Existing "
-                f"Image_{task.output_name} is incomplete: {reason}. Running reconstruction."
-            )
+    image_440 = reconstruct_or_load(
+        args, task_map["direct_440"], factor_440, projection_440,
+        save_path, device, pixel_num, seed_offset=1,
+    )
+    image_218_contaminated = reconstruct_or_load(
+        args, task_map["contaminated_218"], factor_218, projection_218,
+        save_path, device, pixel_num, seed_offset=2,
+    )
+    del image_218_contaminated
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
 
-        energy_indices = list(task.energy_indices)
-        print("\n" + "=" * 70)
-        print(
-            f"[Task {task_idx + 1}/{len(tasks)}] {task.type_tag} -> "
-            f"Image_{task.output_name}"
-        )
-        print("=" * 70)
+    predicted_cross_cntstat = forward_project_local_cntstat(
+        cross_factor["sysmat"], cross_factor["rotmat"], image_440, device
+    )
+    predicted_cross_path = save_path / "PredictedCntStat_218_From440.float32"
+    write_float32_atomic(predicted_cross_path, predicted_cross_cntstat.numpy())
+    np.savetxt(
+        save_path / "PredictedCntStat_218_From440.csv",
+        predicted_cross_cntstat.numpy().T,
+        delimiter=",",
+        fmt="%.9g",
+    )
+    print(
+        f"\nPredicted fixed 440-to-218 background: events="
+        f"{predicted_cross_cntstat.sum(dtype=torch.float64).item():.6e}"
+    )
 
-        s_map_arg = argparse.Namespace(
-            s=sum(loaded_factors[idx]["sensi"] for idx in energy_indices)
-        )
-        iter_arg = argparse.Namespace(
-            sc=task.iter_num,
-            save_iter_step=task.save_iter_step,
-            osem_subset_num=args.osem_subset_num,
-            ene_num=len(energy_indices),
-            seed=args.seed + task_idx,
-        )
+    image_218_corrected = reconstruct_or_load(
+        args,
+        task_map["corrected_218"],
+        factor_218,
+        projection_218,
+        save_path,
+        device,
+        pixel_num,
+        seed_offset=3,
+        additive_background=predicted_cross_cntstat,
+    )
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
 
-        run_recon_osem_local_cntstat(
-            [loaded_factors[idx]["sysmat"] for idx in energy_indices],
-            [loaded_factors[idx]["rotmat"] for idx in energy_indices],
-            [loaded_factors[idx]["rotmat_inv"] for idx in energy_indices],
-            [projections[idx] for idx in energy_indices],
-            iter_arg,
-            s_map_arg,
-            save_path_str,
-            device,
-            output_name=task.output_name,
-        )
-        if device.type == "cuda":
-            torch.cuda.empty_cache()
+    predicted_218_direct = forward_project_local_cntstat(
+        factor_218["sysmat"], factor_218["rotmat"], image_218_corrected, device
+    )
+    predicted_440 = forward_project_local_cntstat(
+        factor_440["sysmat"], factor_440["rotmat"], image_440, device
+    )
+    predicted_218_total = predicted_218_direct + predicted_cross_cntstat
+    diagnostics = {
+        "observed_218_events": projection_218.sum(dtype=torch.float64).item(),
+        "observed_440_events": projection_440.sum(dtype=torch.float64).item(),
+        "predicted_cross_talk_events": predicted_cross_cntstat.sum(dtype=torch.float64).item(),
+        "predicted_cross_fraction_of_observed_218": (
+            predicted_cross_cntstat.sum(dtype=torch.float64).item()
+            / max(projection_218.sum(dtype=torch.float64).item(), 1.0)
+        ),
+        "fraction_of_218_bins_where_cross_prediction_exceeds_observation": (
+            torch.mean((predicted_cross_cntstat > projection_218).to(torch.float32)).item()
+        ),
+        "relative_l2_residual_218": relative_l2(projection_218, predicted_218_total),
+        "relative_l2_residual_440": relative_l2(projection_440, predicted_440),
+        "predicted_cross_file": predicted_cross_path.name,
+        "predicted_cross_shape": list(predicted_cross_cntstat.shape),
+    }
+    print(f"Cross-talk diagnostics: {json.dumps(diagnostics, indent=2)}")
+
+    combine_independent_outputs(
+        args,
+        save_path,
+        [task_map["direct_440"], task_map["corrected_218"]],
+        task_map["corrected_sum"],
+        pixel_num,
+    )
+    return diagnostics
 
 
 def main():
@@ -483,17 +719,13 @@ def main():
     output_root.mkdir(parents=True, exist_ok=True)
     device = resolve_device(args.device)
 
-    reconstruction_tasks = build_tasks(
-        args.e0_list,
-        [],
-        IterConfig(
-            type1_single_sc=(args.single_sc_iter, args.single_sc_save_step),
-        ),
-    )
-    if not reconstruction_tasks:
-        raise ValueError("No reconstruction tasks were generated.")
-    combined_task = build_post_sum_task(args)
-    output_tasks = reconstruction_tasks + [combined_task]
+    task_map = build_crosstalk_tasks(args)
+    reconstruction_tasks = [
+        task_map["direct_440"],
+        task_map["contaminated_218"],
+        task_map["corrected_218"],
+    ]
+    output_tasks = reconstruction_tasks + [task_map["corrected_sum"]]
 
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
@@ -513,15 +745,17 @@ def main():
         print(f"Args: {args}")
         print("\nReconstruction task plan")
         print(format_task_table(reconstruction_tasks, args.e0_list))
-        print("\nDerived output")
-        print(format_task_table([combined_task], args.e0_list))
+        print("\nDerived corrected output")
+        print(format_task_table([task_map["corrected_sum"]], args.e0_list))
         print(
-            "\nModel scope: CntStat-only; no Compton List input, no cross-talk response, "
-            "and no cross-talk correction. The combined image is the pixel-wise sum of "
-            "the independently reconstructed energy images."
+            "\nModel scope: CntStat-only with explicit C440to218. The 440 image is "
+            "estimated from y440/A440, its predicted 218-window contribution is held "
+            "fixed as an additive Poisson background, and the corrected sum is "
+            "x440 + x218_corrected."
         )
 
         loaded_factors, pixel_num = load_factors(args, factors_root)
+        cross_factor = load_cross_factor(args, factors_root, loaded_factors, pixel_num)
         for count_idx, count_level in enumerate(args.count_levels):
             print("\n" + "#" * 78)
             print(f"Count level {count_idx + 1}/{len(args.count_levels)}: {count_level}")
@@ -531,28 +765,29 @@ def main():
             )
             save_path = build_save_path(args, output_root, count_level, total_count)
             print(f"Save path: {save_path}")
-            run_count_level(
+            diagnostics = run_count_level(
                 args,
-                reconstruction_tasks,
+                task_map,
                 loaded_factors,
+                cross_factor,
                 projections,
                 save_path,
                 device,
                 pixel_num,
             )
-            combine_independent_outputs(
-                args,
-                save_path,
-                reconstruction_tasks,
-                combined_task,
-                pixel_num,
-            )
             write_manifest(
-                save_path, args, output_tasks, input_files, pixel_num, total_count
+                save_path,
+                args,
+                output_tasks,
+                input_files,
+                pixel_num,
+                total_count,
+                cross_factor,
+                diagnostics,
             )
             completed_paths.append(save_path)
             shutil.copy2(log_path, save_path / "print_log.txt")
-            del projections
+            del projections, diagnostics
 
         print(f"\nAll count levels finished in {time.time() - started:.2f}s")
     finally:

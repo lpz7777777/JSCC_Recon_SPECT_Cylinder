@@ -44,7 +44,7 @@ Compton variants.
 
 ```
 ├── Factors/                         # System matrices & geometry (per energy/rotation)
-├── Geant4Sim/                       # MATLAB scripts for Geant4 phantom generation
+├── Geant4Sim/                       # Geant4 source macros plus JSCC and EHE detector simulations
 ├── CntStat/                         # Generated projection data (per energy/phantom/count)
 ├── List/                            # Generated list-mode event data
 ├── GenProj/                         # MATLAB system-matrix forward projection scripts
@@ -57,6 +57,7 @@ Compton variants.
 │   ├── CRCVAR_SinglePhoton/
 │   ├── EventOrderInference_Experiment/
 │   ├── FreePath/
+│   ├── Sensitivity_SPECT_PolarCoor/
 │   └── Reference/
 ├── FreePath/                        # Free-path simulation (legacy location)
 ├── Reproduction/                    # Step-by-step reproduction guide
@@ -121,7 +122,7 @@ Compton variants.
 | `main_plane.py` | Local multi-mode reconstruction (SC + SCD + JSCCD + JSCCSD) |
 | `main_plane_sparse.py` | Local sparse reconstruction (all modes with sparse Compton) |
 | `main_local_cntstat.py` | Local SC-only from projection data |
-| `main_local_multi_energy_cntstat.py` | Local CntStat-only multi-output SC (per-energy reconstruction + pixel-wise post-sum) |
+| `main_local_multi_energy_cntstat.py` | Local 218/440 CntStat-only reconstruction with explicit 440-to-218 cross-talk correction |
 | `main_local_sparse_jsccsd_only.py` | Local sparse JSCCSD-only (no SC/JSCCD intermediate outputs) |
 
 #### Python — Distributed GPU (NCCL + CUDA)
@@ -188,6 +189,8 @@ These two files mirror the GPU versions but:
 | `GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` | Generate 218/440 keV dual-energy contrast phantom CntStat from per-energy system matrices |
 | `Geant4Sim/ContrastPhantom_Rotate_3D.m` | Generate contrast phantom Geant4 input |
 | `Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m` | Generate 225Ac dual-energy contrast phantom Geant4 input and preview |
+| `Geant4Sim/Geant4Code_EHE/` | EHE parallel-hole Pb/NaI CntStat-only Geant4 simulation; no Compton classification or List output |
+| `Geant4Sim/Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json` | Paths and validation statistics for installed Geant4 JSCC `1e9`/`1e10` data |
 | `Geant4Sim/GenPhan_HotRodPhantom_Rotate_3D.m` | Generate hot-rod phantom Geant4 input |
 | `Geant4Sim/BrainPhantom_HoffmanMontage_3D.m` | Generate Hoffman brain phantom |
 | `Geant4Sim/Cylinder_Phantom_Rotate_3D.m` | Generate cylinder phantom |
@@ -201,6 +204,7 @@ These two files mirror the GPU versions but:
 | `get_img_SPECT_PolarCoor.m` | Polar→Cartesian image conversion |
 | `get_img_SC_Dist_PolarCoor.m` | SC distributed result visualization |
 | `get_img_SC_MultiOutput_PolarCoor.m` | Manifest-driven comparison of local per-energy and joint SC results |
+| `compare_CNRCRC_JSCC_EHE_MultiOutput.m` | Compare JSCC/EHE corrected-218 and direct-440 CRC/CNR curves across count levels |
 | `get_img_JSCCSD_Dist_PolarCoor.m` | JSCCSD distributed result visualization |
 | `CNRCRC_SPECT.m` | CRC/CNR curve evaluation |
 | `CNRCRC_SC_Dist.m` | SC distributed CRC/CNR |
@@ -334,29 +338,50 @@ The output directory is automatically prefixed with `ME_` (Multi-Energy) and
 tagged with all energies, e.g.
 `ME_RotNum20_ContrastPhantom_240_30_(511_140)keV_...`.
 
-#### Local CntStat-only three-output pipeline
+#### Local CntStat-only cross-talk-aware pipeline
 
 `main_local_multi_energy_cntstat.py` is the local validation entry point for
-photopeak-only 218/440 keV data. It loads both energies' factors once and, for
-each requested count level, writes:
+218/440 keV data. It loads three independently normalized responses:
 
 ```text
-Image_S_218keV
+A218       = A(218-window <- 218-source)
+A440       = A(440-window <- 440-source)
+C440to218  = C(218-window <- 440-source)
+```
+
+For each requested count level it writes:
+
+```text
 Image_S_440keV
-Image_S_(218_440)keV
+Image_S_218keV_Contaminated
+Image_S_218keV_CrossTalkCorrected
+Image_S_(440_218)keV_CrossTalkCorrected
 ```
 
-The third output is the pixel-wise arithmetic sum of the independently
-reconstructed energy images:
+The observation model is:
 
 ```text
-x_combined = x218_recon + x440_recon
+y440 ~ Poisson(A440*x440)
+y218 ~ Poisson(A218*x218 + C440to218*x440)
 ```
 
-It does not run a third OSEM/MLEM reconstruction and does not assume that the
-218 and 440 keV activity distributions are identical. The final image and every
-saved iteration frame are summed consistently. This path does not read Compton
-`List` data and does not include a 440-to-218 cross-talk response or correction.
+The code first reconstructs `x440` from the clean 440 window. It then forward
+projects that image through `C440to218` and holds the resulting measured
+per-view CntStat fixed as an additive background while reconstructing `x218`.
+The background enters the Poisson denominator but not the A218 sensitivity.
+This avoids hard subtraction of noisy projections and keeps the correction in
+the reconstruction likelihood. `Image_S_218keV_Contaminated` is reconstructed
+with A218 alone to expose the uncorrected bias.
+
+The corrected combined result is a pixel-wise post-reconstruction sum:
+
+```text
+x_combined = x440_recon + x218_cross_talk_corrected
+```
+
+It does not run another OSEM/MLEM reconstruction and does not assume that the
+218 and 440 keV activity distributions are identical. This path does not read
+Compton `List` data.
 Keep `--intensity-list 1.0 1.0` when the input CntStat was generated by the
 dual-energy GenProj script, because that source model already includes the
 225Ac gamma yields. OSEM uses an exact sensitivity map for each detector-bin
@@ -375,9 +400,11 @@ python main_local_multi_energy_cntstat.py \
 ```
 
 `GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` generates all three
-default count levels (`1e9`, `1e10`, and `1e11`) in one run. Each reconstruction
-directory also contains `run_manifest.json`, which records the exact CntStat
-inputs, task definitions, raw binary image shapes, and model scope.
+default count levels (`1e9`, `1e10`, and `1e11`) in one run using
+`y218=A218*x218+C440to218*x440` and `y440=A440*x440`. Each reconstruction
+directory also contains `run_manifest.json`, the predicted 440-to-218 CntStat,
+residual diagnostics, task definitions, raw binary image shapes, and model
+scope.
 
 Runs are resumable by default. Before each task, the entry point validates the
 final float32 image and its iteration history (expected byte sizes, finite and
@@ -398,6 +425,43 @@ The reader uses `run_manifest.json` rather than parsing the directory name. It
 precomputes the polar-to-Cartesian interpolation plan and writes
 `Display/mip_comparison.{png,fig}` and
 `Display/final_orthogonal.{png,fig}`.
+
+The current dual-energy response inventory is complete for both detector
+systems: JSCC has `218keV_RotateNum20`, `440keV_RotateNum20`, and
+`440keV_to218win_RotateNum20`; EHE has the same three responses with the
+`_SPECTEHENaI` suffix. Direct and cross-window responses share their geometry
+within each detector system. JSCC uses 10496 detector bins and EHE uses 2312.
+
+Current contrast-phantom reconstruction campaigns use MLEM (`subset=1`). The
+retained/generated JSCC schedules are `1e9:5000`, `1e10:10000`, and
+`1e11:20000` iterations with a 50-iteration save interval. EHE uses 100
+iterations at all three count levels and now saves every iteration. The
+MATLAB entry point `compare_CNRCRC_JSCC_EHE_MultiOutput.m` reads those
+count-dependent runs and evaluates the energy-specific hot rods: 218 keV uses
+diameters 10/18/26 mm and 440 keV uses 14/22/30 mm. It writes common-scale
+CRC (`0..1`) and CNR (`0..15`) plots plus per-iteration CSV/MAT summaries under
+`Analysis_CNRCRC_JSCC_vs_EHE/`.
+
+Two Geant4 JSCC datasets (`1e9` and `1e10`) are installed separately from the
+GenProj data:
+
+```text
+CntStat/218keV_RotateNum20_Geant4JSCC/
+CntStat/440keV_RotateNum20_Geant4JSCC/
+List/218-440keV_RotateNum20_Geant4JSCC/
+```
+
+Use `--cntstat-dir-suffix _Geant4JSCC` with the local CntStat-only entry point.
+Do not set `--factor-dir-suffix`: these measurements still use the standard
+JSCC Factors. The List files contain mixed 218/440-source events and have no
+primary-energy column, so they must not be presented to a per-energy Compton
+pipeline as a pure 218 or pure 440 List. Full paths, counts, schema checks, and
+the current no-object-material limitation are recorded in
+`Geant4Sim/Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`.
+These installed files are marked as legacy diagnostic data because they were
+generated before `EventAction` scanned every crystal and classified CntStat
+and Compton List independently. Regenerate them with the corrected Geant4
+executable before quantitative use.
 
 #### Geant4 225Ac dual-gamma proxy
 
@@ -589,6 +653,7 @@ Factors/
 - `Auxiliary_Studies/EventOrderInference_Experiment`: Event order inference for Compton events
 - `Auxiliary_Studies/FreePath`: Free-path simulation studies
 - `Auxiliary_Studies/ComptonSystemMatrixPrototype`: Compton system matrix prototyping
+- `Auxiliary_Studies/Sensitivity_SPECT_PolarCoor`: computes normalized `Sensi_d` from streamed Compton List files and the current polar-coordinate Factors. It validates the 10496-detector geometry, supports CPU/CUDA execution and resumable checkpoints, and can explicitly install a validated result into a factor directory.
 - `Auxiliary_Studies/Reference`: Reference documents and figures
 
 ### 12. Reproduction
@@ -631,7 +696,7 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 
 ```
 ├── Factors/                    # 系统矩阵、几何文件（按能量/旋转数组织）
-├── Geant4Sim/                  # MATLAB 脚本：生成 Geant4 体模输入
+├── Geant4Sim/                  # Geant4 源 macro、JSCC 与 EHE 探测器蒙卡工程
 ├── CntStat/                    # 生成的投影数据（按能量/体模/计数水平组织）
 ├── List/                       # 生成的 List 模式事件数据
 ├── GenProj/                    # MATLAB 系统矩阵前投影脚本
@@ -712,7 +777,10 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 | `GenProj/GenProj_Hoffman_SPECT_PolarCoor.m` | 从系统矩阵生成 Hoffman 脑模体投影数据 |
 | `GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` | 从 218/440 keV 系统矩阵生成 225Ac 双能量 Contrast Phantom 投影数据 |
 | `Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m` | 生成 225Ac 双能量 Contrast Phantom 的 Geant4 macro 与预览 |
+| `Geant4Sim/Geant4Code_EHE/` | 与 ConventionalSPECT Params 一致的 EHE 平行孔 Pb/NaI 纯 CntStat Geant4 工程；不输出 List |
+| `Geant4Sim/Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json` | 已整理 Geant4 JSCC `1e9`/`1e10` 数据的路径与核验统计 |
 | `get_img_SC_MultiOutput_PolarCoor.m` | 按 manifest 读取并比较本地逐能量与联合 SC 结果 |
+| `compare_CNRCRC_JSCC_EHE_MultiOutput.m` | 比较 JSCC/EHE 在三种计数水平下校正 218 与直接 440 的 CRC/CNR 曲线 |
 | `get_img_SPECT_PolarCoor.m` | 极坐标→笛卡尔图像转换 |
 | `CNRCRC_SPECT.m` | CRC/CNR 曲线计算 |
 | `PVR_HotRod_SC_Dist.m` | Hot-rod 峰谷比分析 |
@@ -777,7 +845,7 @@ sysmat@img   process_list_plane
 | 模式 | 文件 | 多能量 | 说明 |
 | --- | --- | --- | --- |
 | 本地 SC-only | `main_local_cntstat.py` | ✅ 支持 | `--e0-list`；`sum(sensi_s_all)` |
-| 本地 CntStat-only 多输出 | `main_local_multi_energy_cntstat.py` | ✅ 支持 | 逐能量重建后逐像素相加；不读取 List，不建模串扰 |
+| 本地 CntStat-only 多输出 | `main_local_multi_energy_cntstat.py` | ✅ 支持 | 218/440 双图；显式建模 440→218 串扰并做固定背景 Poisson 校正；不读取 List |
 | 本地完整多模式（dense） | `main_plane.py` | ✅ 支持 | 能量 list 硬编码在 Python 中（无 argparse），但多能量管线完整，且有 `MultiEnergy_` 输出路径 |
 | 本地稀疏多模式 | `main_plane_sparse.py` | ✅ 支持 | `--e0-list` |
 | 本地稀疏 JSCCSD-only | `main_local_sparse_jsccsd_only.py` | ✅ 支持 | `--e0-list` |
@@ -812,27 +880,48 @@ python main_local_sparse_jsccsd_only.py \
 输出目录会自动加 `ME_`（Multi-Energy）前缀并标记全部能量，例如：
 `ME_RotNum20_ContrastPhantom_240_30_(511_140)keV_...`
 
-#### 本地 CntStat-only 三输出链路
+#### 本地 CntStat-only 显式串扰校正链路
 
-`main_local_multi_energy_cntstat.py` 用于 218/440 keV 光峰数据的本地快速验证。
-它只读取两个能量的 `CntStat`，Factors 只加载一次，并针对每个计数水平依次产出：
+`main_local_multi_energy_cntstat.py` 用于 218/440 keV 数据的本地验证。它一次加载
+三套按“每个发射光子”归一化的响应：
 
 ```text
-Image_S_218keV
+A218       = A(218能窗 <- 218源)
+A440       = A(440能窗 <- 440源)
+C440to218  = C(218能窗 <- 440源)
+```
+
+针对每个计数水平依次产出：
+
+```text
 Image_S_440keV
-Image_S_(218_440)keV
+Image_S_218keV_Contaminated
+Image_S_218keV_CrossTalkCorrected
+Image_S_(440_218)keV_CrossTalkCorrected
 ```
 
-第三个结果定义为两张独立重建图像的逐像素相加：
+观测模型为：
 
 ```text
-x_combined = x218_recon + x440_recon
+y440 ~ Poisson(A440*x440)
+y218 ~ Poisson(A218*x218 + C440to218*x440)
 ```
 
-程序不会为 combined 再运行第三次 OSEM/MLEM，也不再假设 218 与 440 keV 具有相同
-空间分布。最终图和每个保存迭代帧都会按相同方式求和。这条链路不读取康普顿
-`List`，不包含 440→218 串扰响应，也不做串扰校正。使用双能 GenProj 生成的数据时
-应保持 `--intensity-list 1.0 1.0`，因为源模型已经包含 225Ac 的 218/440 keV 伽马
+程序先用 `A440/y440` 重建 `x440`，再通过 `C440to218` 前投影得到 218 能窗中
+由 440 源造成的逐角度预测 CntStat。该预测在 218 重建时作为固定加性背景进入
+Poisson 分母，但不加入 `A218` 的 sensitivity。这样不需要对有噪声的投影做硬减法，
+串扰校正直接体现在似然模型中。`Image_S_218keV_Contaminated` 仍用 `A218` 单独
+重建同一份受污染数据，用于直观看到未校正偏差。
+
+校正后的合并图只做逐像素相加：
+
+```text
+x_combined = x440_recon + x218_cross_talk_corrected
+```
+
+程序不会为 combined 再运行 OSEM/MLEM，也不假设 218 与 440 keV 空间分布相同。
+这条链路不读取康普顿 `List`。使用双能 GenProj 生成的数据时应保持
+`--intensity-list 1.0 1.0`，因为观测 CntStat 已包含 225Ac 的 218/440 keV 伽马
 产额，重建端不应重复施加分支比。OSEM 的每个 detector-bin 子集使用自己的精确
 灵敏度图；`--osem-subset-num 1` 表示 MLEM，并直接复用完整灵敏度图。
 
@@ -848,9 +937,10 @@ python main_local_multi_energy_cntstat.py \
   --device cuda
 ```
 
-`GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` 默认一次生成 `1e9`、
-`1e10`、`1e11` 三个计数水平。每个重建目录中的 `run_manifest.json` 会记录输入
-CntStat、任务定义、二进制图像尺寸以及本次运行的模型范围。
+`GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` 默认按
+`y218=A218*x218+C440to218*x440`、`y440=A440*x440` 一次生成 `1e9`、`1e10`、
+`1e11` 三个计数水平。每个重建目录中的 `run_manifest.json` 会记录输入 CntStat、
+预测串扰 CntStat、残差诊断、任务定义、二进制图像尺寸以及本次运行的模型范围。
 
 程序默认支持断点续跑。每个任务开始前会验证最终 float32 图像和迭代历史的文件
 大小、有限性、非负性，并确认历史最后一帧与最终图逐元素一致；完整任务自动跳过，
@@ -863,6 +953,36 @@ MATLAB 展示入口可接收运行目录或其 `Polar` 子目录：
 get_img_SC_MultiOutput_PolarCoor()
 get_img_SC_MultiOutput_PolarCoor("Figure_Local_SC_MultiOutput/<run-folder>")
 ```
+
+当前 JSCC 和 EHE 的双能响应均已完整生成：每个系统都包含 218 直接响应、440
+直接响应和 `440keV_to218win` 交叉能窗响应；EHE 三套目录使用
+`_SPECTEHENaI` 后缀。同一系统内三套响应共享几何，JSCC 有 10496 个 detector
+bins，EHE 有 2312 个。
+
+当前 Contrast Phantom 对比采用 MLEM（`subset=1`）。JSCC 按计数水平分别使用
+`1e9:5000`、`1e10:10000`、`1e11:20000` 次迭代，每 50 次保存；EHE 三个计数
+水平都使用 100 次迭代，并改为每次迭代保存。`compare_CNRCRC_JSCC_EHE_MultiOutput.m`
+会自动读取这组配置，分别评价 218 keV 的 10/18/26 mm 热圆柱和 440 keV 的
+14/22/30 mm 热圆柱，在 `Analysis_CNRCRC_JSCC_vs_EHE/` 输出统一坐标范围的
+CRC（0 到 1）、CNR（0 到 15）曲线以及逐迭代 CSV/MAT 汇总。
+
+目前已有两组由 Geant4 JSCC 工程实际模拟的 `1e9`、`1e10` 数据，和 GenProj
+数据分开保存：
+
+```text
+CntStat/218keV_RotateNum20_Geant4JSCC/
+CntStat/440keV_RotateNum20_Geant4JSCC/
+List/218-440keV_RotateNum20_Geant4JSCC/
+```
+
+本地 CntStat-only 重建使用 `--cntstat-dir-suffix _Geant4JSCC`，但不要设置
+`--factor-dir-suffix`，因为它仍与标准 JSCC Factors 配套。这里的 List 混合了
+218/440 初级源事件，而且没有初级能量标签，不能伪装成纯 218 或纯 440 的单能
+List 输入。完整路径、计数统计、格式核验及当前未启用实体水/PMMA 体模的限制见
+`Geant4Sim/Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`。
+这两组已归档文件标记为 legacy 诊断数据：生成它们时 `EventAction` 仍只检查最高
+能量晶体，并把 CntStat 与 List 设为互斥。修复后的代码会遍历全部晶体，且
+CntStat 与 List 独立、可同时记录；正式定量使用前必须重新运行 Geant4。
 
 该函数读取 `run_manifest.json`，不解析长目录名；极坐标到笛卡尔坐标的三角剖分和
 插值权重只计算一次。结果写入 `Display/mip_comparison.{png,fig}` 与
@@ -1022,6 +1142,18 @@ SLURM 参数:
 | `Sensi_s` | 单光子灵敏度图 |
 | `Sensi_d` | 康普顿灵敏度图 |
 | `SysMat_tmp` | 系统矩阵变体（CRC-VAR 研究使用） |
+
+#### 计算 `Sensi_d`
+
+`Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/` 提供了与当前 Factors 目录直接兼容的
+`Sensi_d` 计算链路。它流式读取 Compton List，在计算设备上逐批归约事件反投影，
+按 `有效事件数 / 该能量实际发射光子数` 做绝对标定，再使用 `RotMat_full.csv` 做
+旋转平均。默认严格检查当前几何应包含 10496 个有效探测器。
+
+218 和 440 keV 应分别输入各自的 List 和发射光子数；混合源 List 不能直接作为
+单一能量计算。常用总能阈值分别为 0.18 MeV 和 0.40 MeV。完整命令、断点续算、
+结果验收和安装到 `Factors/<energy>keV_RotateNum20/Sensi_d` 的方法见
+`Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md`。
 
 ### 9. 典型工作流程
 

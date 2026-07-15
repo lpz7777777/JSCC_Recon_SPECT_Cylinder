@@ -42,9 +42,22 @@ yield_440 = 0.261;           % 440keV gamma 产额 (213Bi, 26.1%)
 yield_ratio_440_to_218 = yield_440 / yield_218;
 
 rotate_num = 20;
+parallel_num = 10;              % 每个视角拆分的并行重复任务数
 total_events = 1e9;          % 全部旋转视角合计的初级 218+440 光子数
 events_per_view = floor(total_events / rotate_num);
 event_remainder = mod(total_events, rotate_num);
+
+if ~isscalar(parallel_num) || parallel_num < 1 || parallel_num ~= floor(parallel_num)
+    error("parallel_num 必须是正整数。");
+end
+
+view_event_counts = events_per_view + double((1:rotate_num) <= event_remainder);
+bad_view = find(mod(view_event_counts, parallel_num) ~= 0, 1);
+if ~isempty(bad_view)
+    error(["视角 %d 的总 event 数 %d 不能被 parallel_num=%d 整除。" ...
+           "请修改 parallel_num，避免并行重复运行后改变总统计量。"], ...
+          bad_view, view_event_counts(bad_view), parallel_num);
+end
 
 % 6 个热圆柱的能量分配（交替 218/440）
 rod_ene = [ene_218, ene_440, ene_218, ene_440, ene_218, ene_440];
@@ -83,7 +96,8 @@ for id_rotate = 1 : rotate_num
     if fid < 0
         error("Cannot create Geant4 macro: %s", macro_path);
     end
-    events_this_view = events_per_view + double(id_rotate <= event_remainder);
+    events_this_view = view_event_counts(id_rotate);
+    events_per_job = events_this_view / parallel_num;
 
     fprintf(fid, '# Contrast Phantom: 225Ac dual-energy (218+440 keV)\n');
     fprintf(fid, '# Rotate %d/%d, phi=%.1f deg\n', id_rotate, rotate_num, phi*180/pi);
@@ -91,6 +105,9 @@ for id_rotate = 1 : rotate_num
     fprintf(fid, '# Rods: alternating Fr-218 / Bi-440 to model daughter redistribution\n');
     fprintf(fid, '# Fr/Bi spatial maps are normalized separately before yield weighting\n');
     fprintf(fid, '# beamOn counts selected primary photons, not 225Ac decays\n\n');
+    fprintf(fid, '# parallel_num=%d; run this macro once per independent worker\n', parallel_num);
+    fprintf(fid, '# beamOn per worker=%d; aggregate %d workers for this view\n\n', ...
+            events_per_job, parallel_num);
 
     % ===== 背景圆柱 source 0: 218 keV (Fr) =====
     % 权重 = yield_218（相对产额）
@@ -149,7 +166,7 @@ for id_rotate = 1 : rotate_num
         fprintf(fid, '\n#\n');
     end
 
-    fprintf(fid, '/run/beamOn %d\n', events_this_view);
+    fprintf(fid, '/run/beamOn %d\n', events_per_job);
     fclose(fid);
 end
 
@@ -162,6 +179,8 @@ end
 fprintf("已生成 %d 个 macro 文件到 %s\n", rotate_num, save_path);
 fprintf("总初级光子数: %.0f，每个视角: %d（余数分配到前 %d 个视角）\n", ...
     total_events, events_per_view, event_remainder);
+fprintf("parallel_num=%d；每个并行任务的视角 event 数: %d\n", ...
+    parallel_num, events_per_job);
 fprintf("全 run 期望比例: Y218=%.3f, Y440=%.3f, Y440/Y218=%.6f\n", ...
     yield_218, yield_440, yield_ratio_440_to_218);
 fprintf("热圆柱: rod1/3/5=218keV(Fr), rod2/4/6=440keV(Bi)，各自相对本能量背景为 %.1f 倍\n", act);

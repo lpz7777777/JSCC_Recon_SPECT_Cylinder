@@ -2,14 +2,16 @@
 
 本目录保存 Geant4 蒙卡模拟相关代码和输入生成脚本。它与 `GenProj/` 的职责不同：
 
-- `Geant4Sim/`：生成 Geant4 macro、体模源、预览文件，并通过 `Geant4Code/` 做蒙卡模拟，输出 `CntStat` 和 `List`。
+- `Geant4Sim/`：生成 Geant4 macro、体模源、预览文件，并通过对应探测器的 C++ 工程做蒙卡模拟，输出 `CntStat` 和 `List`。
 - `GenProj/`：不运行 Geant4，只用已有系统矩阵 `SysMat_polar` 做前投影，快速生成用于单光子验证的 `CntStat`。
 
 ## 目录结构
 
 | 路径 | 内容 |
 | --- | --- |
-| `Geant4Code/` | Geant4 C++ 工程，定义探测器、事件分类、运行输出等 |
+| `Geant4Code/` | JSCC/GAGG Geant4 工程，10496 detector bins，依赖 `CrystalMatrix.txt` |
+| `Geant4Code_CntStatResponseStudy/` | JSCC 临时响应诊断工程；在同一 218+440 run 中按 primary 能量拆分 218/440 CntStat，并统计实际 primary 数 |
+| `Geant4Code_EHE/` | EHE 平行孔 Pb/NaI 纯 CntStat Geant4 工程，1250 孔、2312 detector bins；不判定 Compton、不输出 List；附 Params 逐点核对工具 |
 | `Macro/` | MATLAB 脚本生成的 Geant4 macro，每个旋转角通常一个 `.mac` |
 | `Preview/` | MATLAB 生成的体模预览、体模 raw/mhd/mat 和 voxel list |
 | `3D_DRO_Hoffman_v6_20160331_DICOM/` | Hoffman 脑模体原始 DICOM 输入 |
@@ -24,12 +26,73 @@
 | `GenPhan_HotRodPhantom_Rotate_3D.m` | hot-rod phantom 旋转 macro |
 | `Cylinder_Phantom_Rotate_3D.m` | 圆柱 phantom macro |
 | `point_array_Rotate_3D.m` | 点源阵列 macro |
+| `GenerateSensitivityPointArrayMacro.m` | 从 `coor_polar_full.csv` 生成等权极坐标点阵 sensitivity macro；默认是 440 keV、25600 点、单个 `beamOn` |
 | `BrainPhantom_HoffmanMontage_3D.m` | Hoffman montage 脑模体生成 |
 | `BrainPhantom_HoffmanRawCompressed_3D.m` | Hoffman raw 压缩体模生成 |
 | `BrainPhantom_SliceStack_3D.m` | 基于切片堆栈的脑模体生成 |
 | `BrainPhantom_Truncated_3D.m` | 截断脑模体生成 |
 | `HoffmanCompressed_Rotate_3D.m` | Hoffman 压缩体模旋转 macro |
 | `visualize_phantom.py` | 从 macro 解析源几何并生成 HTML 预览 |
+
+### 440 keV `Sensi_d` 等权点阵 macro
+
+运行：
+
+```matlab
+cd Geant4Sim
+GenerateSensitivityPointArrayMacro
+```
+
+默认读取：
+
+```text
+../Factors/440keV_RotateNum20/coor_polar_full.csv
+```
+
+并生成：
+
+```text
+Macro/SensitivityPointArray_440keV_RotateNum20/
+├── SensitivityPointArray_440keV_RotateNum20_View01.mac
+└── generation_manifest.json
+```
+
+默认 macro 的定义为：
+
+- 读取全部 25600 个极坐标位置，不做体积/Jacobian 加权；
+- 所有 GPS source 的 intensity 都是 `1`；
+- 第一个点沿用 GPS 默认 source，其默认 intensity 是 `1`；
+- 第 2 至 25600 个点分别使用 `/gps/source/add 1`；
+- `/gps/source/multiplevertex false`，每个 event 只从一个位置发射一个 primary；
+- 每个 source 都显式设置 `/gps/number 1`，因此被选中时只发射一个 gamma；
+- 所有 primary 都是 440 keV gamma，方向为 4-pi 各向同性；
+- 每个局部坐标按现有约定平移到 Geant4 FOV 中心 `(0,-245,0) mm`；
+- 默认视角是 `RotationIndex=1`，即 `phi=0`；
+- 文件末尾只有一次 `/run/beamOn`；
+- 默认每点期望 20000 个 primary，因此总数为 `25600*20000=512000000`。
+
+GPS 的等权 source 选择保证每个点的**期望**发射数相同。单次有限统计运行中，每点
+实际被选次数服从多项分布，不会被强制成完全相同的整数。若必须让每点实际次数
+严格相同，需要修改 C++ primary generator 做循环/分层抽样，单靠一个 GPS mixture
+和一个 `beamOn` 无法保证。
+
+可在调用时调整每点期望光子数：
+
+```matlab
+GenerateSensitivityPointArrayMacro( ...
+    'PrimaryEventsPerPoint', 40000, ...
+    'OutputFileName', 'SensitivityPointArray_440keV_1p024e9.mac', ...
+    'Overwrite', true)
+```
+
+标准 Geant4 `/run/beamOn` 使用有符号 32 位整数；脚本会拒绝超过 `2147483647` 的
+总 event 数。25600 个点时，每点最多可设置 83886 个 event。更高统计量必须拆成
+多个独立 run，最后合并 List，并把所有 run 的 `beamOn` 之和作为 sensitivity
+程序的 `--source-photons`。
+
+这个 macro 只改变 GPS 的发射位置和能量，不创建水、PMMA 或其他实体圆柱，材料
+环境仍完全由 `Geant4Code/src/DetectorConstruction.cc` 决定。因此它保持了与当前
+无物体衰减 `SysMat_polar` 相同的世界/探测器环境。
 
 ## 当前双能量 225Ac contrast phantom
 
@@ -91,7 +154,7 @@ bin。文本矩阵的第 31 层不直接放置，而是由 C++ 中写死的 `128
 | `EventType.csv` | 诊断输出，当前 `RunAction.cc` 中已注释 |
 | `Detector.csv` | 几何诊断输出，当前 `OutputDet=0`，默认不写 |
 
-事件分类逻辑在 `Geant4Code/src/EventAction.cc` 中：优先判断单光子能窗，若事件最大晶体能量落入 440 keV 或 218 keV 能窗，则分别累计到 `CntStat_440` 或 `CntStat_218`；否则再进入康普顿事件判断。能量分辨率以 511 keV 处 13% 为参考，并按 `1/sqrt(E)` 标度到 218/440 keV。440 keV 光子散射后落入 218 能窗时会自然计入 `CntStat_218.csv`，可用于后续串扰研究。`List` 已改为按接收事件动态增长，不再预分配固定 1000 万行；输出固定为 5 列，不带尾随空列。
+事件分类逻辑在 `Geant4Code/src/EventAction.cc` 中：能量展宽后遍历全部晶体，任一晶体落入 440 keV 或 218 keV 能窗都会给对应 detector bin 加 1；同一 event 可以增加多个 CntStat bin。完成能窗遍历后再独立执行康普顿判定，因此同一 event 可以同时贡献 CntStat 和 List。能量分辨率以 511 keV 处 13% 为参考，并按 `1/sqrt(E)` 标度到 218/440 keV。440 keV 光子散射后落入 218 能窗时会自然计入 `CntStat_218.csv`。`List` 按接收事件动态增长，不再预分配固定 1000 万行；输出固定为 5 列，不带尾随空列。
 
 当前 GPS 圆柱只定义源位置，不会自动创建具有材料的实体模体。
 `DetectorConstruction.cc` 中的水/PMMA Contrast Phantom 尚未启用，世界材料近似
@@ -119,3 +182,56 @@ CntStat/440keV_RotateNum20/CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac
 ```
 
 若只是验证单光子重建链路，可先使用 `GenProj/GenProj_ContrastPhantom_DualEnergy_PolarCoor.m` 通过系统矩阵前投影生成 `RotateNum20` 的基础 `CntStat`，再决定是否运行完整 Geant4。
+
+### 已整理的 Geant4 双能 Contrast Phantom 数据
+
+2026-07-15 已将 `ContrastPhantom_DualEnergy_Rotate_3D.m` 生成 macro 后在
+`Geant4Code` 实际运行得到的 `1e9` 和 `1e10` 数据整理到独立命名空间，避免覆盖
+GenProj 生成的同名数据：
+
+```text
+CntStat/218keV_RotateNum20_Geant4JSCC/
+├── CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e9.csv
+└── CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e10.csv
+
+CntStat/440keV_RotateNum20_Geant4JSCC/
+├── CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e9.csv
+└── CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e10.csv
+
+List/218-440keV_RotateNum20_Geant4JSCC/
+├── List_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e9/1.csv ... 20.csv
+└── List_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_1e10/1.csv ... 20.csv
+```
+
+四个 CntStat 均已核验为 `20 x 10496` 非负整数矩阵。事件总数为：
+
+| 初级计数水平 | 218 能窗 CntStat | 440 能窗 CntStat | List 行数 |
+| ---: | ---: | ---: | ---: |
+| `1e9` | 4,325,051 | 1,963,834 | 1,556,772 |
+| `1e10` | 43,200,872 | 19,641,597 | 15,564,282 |
+
+**状态说明：这两组文件是 legacy 诊断数据，需要重新模拟。** 它们生成时
+`EventAction` 仍采用“只给最高能量晶体计数，命中 218/440 能窗后立即返回、不再
+判断 List”的旧逻辑。当前代码已改为遍历全部晶体，并让 CntStat 与 List 独立、可
+同时记录。因此上表数据可用于复现旧结果，但不能作为修复后的定量 Geant4 数据。
+
+每个 List 数据集有 20 个视角文件，固定 5 列，探测器编号范围为 `1..10496`，
+flag 均为 1。必须注意：macro 的每个 event 从混合 218/440 GPS 源中选取一个
+primary，但当前 List 不保存 primary energy。因此这些 List 只能标记为“双能混合
+List”，不能复制到 `List/218keV_*` 或 `List/440keV_*` 后当作纯单能数据使用。
+
+本地仅 CntStat 重建示例：
+
+```powershell
+C:\ProgramData\anaconda3\envs\pytorch\python.exe `
+  main_local_multi_energy_cntstat.py `
+  --count-levels 1e9 1e10 `
+  --cntstat-dir-suffix _Geant4JSCC `
+  --single-sc-iter 5000 --single-sc-save-step 50 `
+  --output-root ./Figure_Local_SC_MultiOutput_Geant4JSCC
+```
+
+不要同时设置 `--factor-dir-suffix _Geant4JSCC`；不存在这样的 Factors，这批数据
+与标准 `Factors/218keV_RotateNum20`、`Factors/440keV_RotateNum20` 和
+`Factors/440keV_to218win_RotateNum20` 配套。机器可读清单位于
+`Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`。

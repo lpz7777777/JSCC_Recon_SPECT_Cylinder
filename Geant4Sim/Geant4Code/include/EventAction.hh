@@ -24,7 +24,7 @@
 // ********************************************************************
 //
 // $Id: B4aEventAction.hh 75215 2013-10-29 16:07:06Z gcosmo $
-//
+// 
 /// \file B4aEventAction.hh
 /// \brief Definition of the B4aEventAction class
 
@@ -80,7 +80,7 @@ class EventAction : public G4UserEventAction
     int GetNumPhot(){return NumPhot;};
     int GetNumCompt(){return NumCompt;};
     G4double GetSingleScinEnergy(){return SingleScinEnergy;};
-
+    
   private:
     DetectorConstruction* fDetector;
     G4double* TempEnergy;
@@ -106,12 +106,12 @@ class EventAction : public G4UserEventAction
     G4double fWin440_lo, fWin440_hi;  // 440keV 能窗
     int Scin_CopyNum;   // First Scintillator
     int NumCompt;
-    int NumPhot;
+    int NumPhot;        
     int* OutCopyNum;
     int* NumScinEachCrystal;
 };
 
-
+                     
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif

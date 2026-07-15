@@ -1,0 +1,9 @@
+set -e
+
+export PATH="/usr/local/cuda/bin":$PATH
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64":$LD_LIBRARY_PATH
+export LIBRARY_PATH="/usr/local/cuda/lib64":$LIBRARY_PATH
+
+nvcc -c PESysMatGen.cu
+nvcc -c PEGen_CircularHole.cpp
+g++ -o PEGen_CircularHole PESysMatGen.o PEGen_CircularHole.o -lcudart -L/usr/local/cuda

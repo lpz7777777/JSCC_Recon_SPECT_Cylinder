@@ -1,0 +1,11 @@
+# Diagnostic 440 keV point source at the current JSCC FOV center.
+
+/gps/particle gamma
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0 -245 0 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+/run/beamOn 100000000

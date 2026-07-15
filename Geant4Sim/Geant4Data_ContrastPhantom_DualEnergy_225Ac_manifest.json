@@ -1,0 +1,53 @@
+{
+  "dataset": "ContrastPhantom_DualEnergy_10_30_240_30_225Ac",
+  "producer": "Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m + Geant4Sim/Geant4Code",
+  "classification_version": "legacy_exclusive_max_crystal_v1",
+  "regeneration_required": true,
+  "legacy_warning": "Generated before independent multi-crystal CntStat and Compton List classification. Retain only for diagnosis and regenerate before quantitative use.",
+  "detector": "JSCC GAGG",
+  "data_namespace_suffix": "_Geant4JSCC",
+  "rotate_num": 20,
+  "detector_bins": 10496,
+  "primary_source": {
+    "type": "mixed 218/440 keV gamma proxy for 225Ac",
+    "expected_fraction_218": 0.304,
+    "expected_fraction_440": 0.696,
+    "hot_rods_218_mm": [10, 18, 26],
+    "hot_rods_440_mm": [14, 22, 30],
+    "hot_to_background_ratio": 6
+  },
+  "count_levels": {
+    "1e9": {
+      "cntstat_218_events": 4325051,
+      "cntstat_440_events": 1963834,
+      "list_events": 1556772
+    },
+    "1e10": {
+      "cntstat_218_events": 43200872,
+      "cntstat_440_events": 19641597,
+      "list_events": 15564282
+    }
+  },
+  "cntstat": {
+    "shape": [20, 10496],
+    "218_directory": "CntStat/218keV_RotateNum20_Geant4JSCC",
+    "440_directory": "CntStat/440keV_RotateNum20_Geant4JSCC",
+    "file_pattern": "CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_<count>.csv"
+  },
+  "list": {
+    "directory": "List/218-440keV_RotateNum20_Geant4JSCC",
+    "dataset_pattern": "List_ContrastPhantom_DualEnergy_10_30_240_30_225Ac_<count>/<view>.csv",
+    "view_files": 20,
+    "columns": ["det1", "energy1_MeV", "det2", "energy2_MeV", "flag"],
+    "detector_indexing": "1-based",
+    "primary_energy_label_available": false,
+    "warning": "This is a mixed-source List. Do not install it as a per-energy 218 or 440 List."
+  },
+  "validation": {
+    "cntstat_nonnegative_integer": true,
+    "list_column_count": 5,
+    "list_detector_id_range": [1, 10496],
+    "list_flag_values": [1]
+  },
+  "geometry_limitation": "The current GPS cylinders define source sampling volumes, but the water/PMMA contrast-phantom material volume is disabled; object attenuation and object scatter are not included."
+}

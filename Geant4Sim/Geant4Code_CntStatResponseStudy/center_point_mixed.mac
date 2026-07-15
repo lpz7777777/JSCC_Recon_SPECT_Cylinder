@@ -1,0 +1,22 @@
+# Diagnostic mixed point source at the current JSCC FOV center.
+# The first GPS source has implicit intensity 1.0; the added source intensity
+# gives the whole-run expected primary ratio 218:440 = 0.114:0.261.
+
+/gps/particle gamma
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0 -245 0 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+/gps/source/add 2.289473684211
+/gps/particle gamma
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0 -245 0 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+/run/beamOn 1000000

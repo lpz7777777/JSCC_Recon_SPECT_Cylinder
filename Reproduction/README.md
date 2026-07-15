@@ -7,7 +7,7 @@
 ## 整体工作流程
 
 ```
-步骤1: 生成Factors文件 → 步骤2: 生成CntStat/List文件 → 步骤3: 图像重建 → 步骤4: 可视化与分析
+步骤1: 生成Factors文件 → 步骤1b: 由Compton List计算Sensi_d → 步骤2: 生成CntStat/List文件 → 步骤3: 图像重建 → 步骤4: 可视化与分析
 ```
 
 ### 步骤概览
@@ -15,6 +15,7 @@
 | 步骤 | 目录 | 语言 | 说明 |
 |------|------|------|------|
 | 步骤1 | `Step1_GenerateFactors/` | MATLAB | 从系统矩阵文件生成极坐标Factors |
+| 步骤1b | `../Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/` | Python | 从Monte Carlo Compton List计算并验证Sensi_d |
 | 步骤2 | `Step2_GenerateCntStat/` | MATLAB | 生成正弦图和康普顿事件列表 |
 | 步骤3 | `Step3_Reconstruction/` | Python | SC重建 或 JSCCSD重建 |
 | 步骤4 | `Step4_Visualization/` | MATLAB | 图像可视化、CRC/CNR计算 |
@@ -48,6 +49,7 @@ pip install torch numpy
 1. 将数据文件放入 `Data/` 目录
 2. 按顺序运行MATLAB脚本
 3. 生成的Factors文件需要复制到 `Step3_Reconstruction/Factors/` 目录
+4. 如需 JSCC/Compton 重建，按 `../Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md` 使用该能量的 Monte Carlo List 计算 `Sensi_d`
 
 ### 步骤2：生成CntStat文件
 

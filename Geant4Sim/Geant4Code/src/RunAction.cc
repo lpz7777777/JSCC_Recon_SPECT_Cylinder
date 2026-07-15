@@ -27,7 +27,7 @@
 /// \brief Implementation of the RunAction class
 //
 // $Id: RunAction.cc 70756 2013-06-05 12:20:06Z ihrivnac $
-//
+// 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -68,19 +68,19 @@ RunAction::~RunAction()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4Run* RunAction::GenerateRun()
-{
-  fRun = new Run(fDetector);
+{ 
+  fRun = new Run(fDetector); 
   return fRun;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void RunAction::BeginOfRunAction(const G4Run*)
-{
+{    
   // save Rndm status
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
   G4Random::showEngineStatus();
-
+       
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -89,8 +89,8 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
 {
   G4int nbOfEvents = aRun->GetNumberOfEvent();
 
-  if (fPrimary && nbOfEvents)
-  {
+  if (fPrimary && nbOfEvents) 
+  { 
     G4cout << "\n The run generated " << nbOfEvents
            << " primary events from the configured GPS source mixture."
            << G4endl;
@@ -211,7 +211,7 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
               csv << ",";
             }
           }
-
+          
           if(i<(fRun->GetTotalCount()-1))
           {
             csv << "\n";

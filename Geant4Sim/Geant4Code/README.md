@@ -202,7 +202,7 @@ QBBC
 
 ### 5.2 能量展宽
 
-`SteppingAction` 先按晶体累积真实沉积能量。每个 event 结束时，`EventAction` 对每个有沉积的晶体独立施加高斯展宽：
+`SteppingAction` 先按晶体累积真实沉积能量。`G4Step::GetTotalEnergyDeposit()` 表示该 step 内的局部总沉积能；沉积归属用 pre-step physical volume/copy number 判定，因为跨越几何边界时 post-step touchable 可能已经指向下一个体积。每个 event 结束时，`EventAction` 对每个有沉积的晶体独立施加高斯展宽：
 
 ```text
 R(E) = 0.13 * sqrt(511 keV / E)
@@ -214,7 +214,7 @@ Emeasured = Edeposit + Gaussian(0, sigma)
 
 ### 5.3 单光子 CntStat
 
-代码找出 event 中展宽后能量最高的晶体，只根据这个晶体的能量做单光子分类。能窗定义为：
+代码遍历 event 中全部晶体，并根据每个晶体各自的展宽后能量做 CntStat 分类。能窗定义为：
 
 ```text
 window(E0) = E0 * (1 +/- R(E0)/2)
@@ -227,19 +227,22 @@ window(E0) = E0 * (1 +/- R(E0)/2)
 | `CntStat_218.csv` | 196.305 至 239.695 keV |
 | `CntStat_440.csv` | 409.179 至 470.821 keV |
 
-分类顺序为：
+分类规则为：
 
-1. 最高晶体能量命中 440 keV 能窗，给该晶体的 440 CntStat 加 1，并结束 event；
-2. 否则若命中 218 keV 能窗，给该晶体的 218 CntStat 加 1，并结束 event；
-3. 两个能窗都未命中时，才继续判断是否写入 Compton List。
+1. 某个晶体命中 440 keV 能窗，给该晶体的 440 CntStat 加 1；
+2. 某个晶体命中 218 keV 能窗，给该晶体的 218 CntStat 加 1；
+3. 继续遍历其余晶体，不只取最高能量晶体，也不提前结束 event；
+4. CntStat 遍历结束后独立执行 Compton List 判定。
 
-分类不读取初级光子的能量标签。因此 440 keV 光子散射后若最高晶体的展宽能量落入 218 keV 能窗，会自然计入 `CntStat_218.csv`。这正是后续串扰研究需要区分的物理成分之一。
+因此一个 event 可以给多个晶体的 CntStat 增加计数，也可以在贡献 CntStat 的同时
+写入一行 List。分类不读取初级光子的能量标签；440 keV 光子散射后若任一晶体的
+展宽能量落入 218 keV 能窗，会自然计入 `CntStat_218.csv`。
 
 ### 5.4 Compton List
 
-当前 List 接受逻辑要求 event：
+当前 List 判定与 CntStat 判定互不排斥。即使 event 已有一个或多个晶体计入
+218/440 CntStat，只要同时满足以下条件仍会写入 List：
 
-- 未先被 218/440 单光子能窗接受；
 - 恰有两个晶体的展宽能量大于 1 keV；
 - 初级光子的第一次沉积晶体包含在这两个晶体中；
 - 初级光子记录到一次 `compt` 过程，并进入第二个晶体。
@@ -285,6 +288,14 @@ det1,energy1,det2,energy2,flag
 - `List.csv` 没有视角 ID，因此即使顺序运行，也不建议把多视角 List 混在一个文件中。
 
 生产运行推荐每个视角使用一个全新的独立工作目录。
+
+### 6.1 已归档旧数据的状态
+
+主工程中 `_Geant4JSCC` 命名空间下的 `1e9`、`1e10` Contrast Phantom 数据生成于
+本次分类修复之前。当时只检查最高能量晶体，而且命中能窗后不再判断 List。这两组
+数据仅保留用于问题复现和新旧逻辑对照，不能作为定量结果；部署当前代码后必须重新
+模拟。详细统计见上一级目录的
+`Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`。
 
 ## 7. 服务器环境要求
 
@@ -359,6 +370,21 @@ cmake --build build --config Release -j
 ```powershell
 cd build
 .\Release\gamma01.exe C:\absolute\path\to\1.mac
+```
+
+### Windows 交互式启动
+
+当构建时保持 `-DWITH_GEANT4_UIVIS=ON`，直接双击或运行 `build\gamma01.exe`
+会启动 Geant4 的 Win32 命令窗口，并自动执行 `vis.mac` 打开 OpenGL 几何视图。
+请使用 `build\gamma01.exe`，不要双击 `build\Release\gamma01.exe`；前者与
+`CrystalMatrix.txt`、`vis.mac` 位于同一目录。关闭 Win32 命令窗口或在其中执行
+`exit` 可结束交互会话。
+
+传入 `.mac` 参数时仍是 batch 模式，结果写入启动进程的当前工作目录：
+
+```powershell
+cd F:\path\to\Geant4Sim\Geant4Code\build
+.\gamma01.exe C:\absolute\path\to\1.mac
 ```
 
 ## 10. 单视角冒烟测试

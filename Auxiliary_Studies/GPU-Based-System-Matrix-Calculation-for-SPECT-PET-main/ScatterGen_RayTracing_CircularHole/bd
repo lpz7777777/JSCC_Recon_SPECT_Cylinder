@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CUDA_HOME="${CUDA_HOME:-/usr/local/cuda}"
+OUTPUT="${1:-ScatterGen_CircularHole_optimized}"
+BUILD_DIR="$(mktemp -d)"
+trap 'rm -rf "$BUILD_DIR"' EXIT
+
+CUDA_FLAGS=(
+    -std=c++17
+    -O3
+    -lineinfo
+    -gencode arch=compute_86,code=sm_86
+    -gencode arch=compute_89,code=sm_89
+)
+
+"$CUDA_HOME/bin/nvcc" "${CUDA_FLAGS[@]}" -c "$SCRIPT_DIR/scatter.cu" \
+    -o "$BUILD_DIR/scatter.o"
+g++ -std=c++17 -O3 -Wall -Wextra -I"$CUDA_HOME/include" -c \
+    "$SCRIPT_DIR/ScatterGen_CircularHole.cpp" \
+    -o "$BUILD_DIR/ScatterGen_CircularHole.o"
+g++ -O3 -o "$SCRIPT_DIR/$OUTPUT" \
+    "$BUILD_DIR/scatter.o" "$BUILD_DIR/ScatterGen_CircularHole.o" \
+    -lcudart -L"$CUDA_HOME/lib64"
+
+echo "Built $SCRIPT_DIR/$OUTPUT for sm_86 and sm_89 (precise math)."

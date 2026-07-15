@@ -1,0 +1,12 @@
+# Pencil-beam geometry smoke test through the near-central EHE hole.
+/control/verbose 1
+/run/verbose 1
+/tracking/verbose 0
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -1.416  -245 5.109549882 mm
+/gps/ang/type planar
+/gps/direction 0 1 0
+/run/beamOn 10000

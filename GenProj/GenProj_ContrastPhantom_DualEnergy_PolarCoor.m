@@ -29,6 +29,15 @@ cfg.rotate_num = 20;
 cfg.total_count_list = [1e9, 1e10, 1e11];
 cfg.data_file_name = "ContrastPhantom_DualEnergy_10_30_240_30_225Ac";
 cfg.output_root = fullfile(cfg.repo_root, "CntStat");
+% "" selects JSCC; use "_SPECTEHENaI" for the EHE Pb/NaI response set.
+% Batch jobs can override these without editing this file:
+%   JSCC_RECON_FACTOR_DIR_SUFFIX
+%   JSCC_RECON_CNTSTAT_DIR_SUFFIX
+cfg.factor_dir_suffix = string(getenv("JSCC_RECON_FACTOR_DIR_SUFFIX"));
+cfg.cntstat_dir_suffix = string(getenv("JSCC_RECON_CNTSTAT_DIR_SUFFIX"));
+if strlength(cfg.cntstat_dir_suffix) == 0
+    cfg.cntstat_dir_suffix = cfg.factor_dir_suffix;
+end
 
 % Prefer main-project Factors/. If the new 218/440 Factors have not been copied
 % there yet, fall back to the GPU system-matrix auxiliary workspace.
@@ -68,8 +77,11 @@ rng(cfg.rng_seed);
 factor_dirs = containers.Map("KeyType", "double", "ValueType", "char");
 for id_energy = 1:numel(cfg.energy_keV)
     energy_keV = cfg.energy_keV(id_energy);
-    factor_dirs(energy_keV) = resolve_factor_dir(cfg.factor_roots, energy_keV, cfg.rotate_num);
+    factor_dirs(energy_keV) = resolve_factor_dir( ...
+        cfg.factor_roots, energy_keV, cfg.rotate_num, cfg.factor_dir_suffix);
 end
+cross_factor_dir = resolve_cross_factor_dir( ...
+    cfg.factor_roots, 440, 218, cfg.rotate_num, cfg.factor_dir_suffix);
 
 ref_factor_dir = factor_dirs(cfg.energy_keV(1));
 coor_polar_full = load_named_array( ...
@@ -120,71 +132,85 @@ save(fullfile(phantom_out_dir, "ContrastPhantom_DualEnergy_225Ac_source_polar.ma
     "img_activity_fraction_all", "img_raw_all", "img_fraction_all", ...
     "img_polar_all", "-v7.3");
 
-%% Forward project each energy independently and write CntStat files
-for id_energy = 1:numel(cfg.energy_keV)
-    energy_keV = cfg.energy_keV(id_energy);
-    factor_dir = factor_dirs(energy_keV);
+%% Load A218, A440 and C440->218, then forward-project the two observed windows
+response_218 = load_response_factors(factor_dirs(218), pixel_num, cfg, "A218");
+response_440 = load_response_factors(factor_dirs(440), pixel_num, cfg, "A440");
+response_cross = load_response_factors(cross_factor_dir, pixel_num, cfg, "C440to218");
+validate_response_compatibility(response_218, response_440, response_cross);
 
-    fprintf("\n[%d keV] Loading factors from %s\n", energy_keV, factor_dir);
-    rot_mat_full = load_named_array( ...
-        fullfile(factor_dir, "RotMat_full.mat"), ...
-        fullfile(factor_dir, "RotMat_full.csv"), ...
-        "RotMat_full");
+idx_218 = find(cfg.energy_keV == 218, 1);
+idx_440 = find(cfg.energy_keV == 440, 1);
+mean_218_direct_unit = forward_project_response( ...
+    response_218, img_fraction_all(:, idx_218), cfg.rotate_num, "218 direct");
+mean_218_cross_unit = forward_project_response( ...
+    response_cross, img_fraction_all(:, idx_440), cfg.rotate_num, "440-to-218 cross-talk");
+mean_440_unit = forward_project_response( ...
+    response_440, img_fraction_all(:, idx_440), cfg.rotate_num, "440 direct");
 
-    if size(rot_mat_full, 1) ~= pixel_num
-        error("[%d keV] RotMat_full rows (%d) do not match coor_polar_full rows (%d).", ...
-            energy_keV, size(rot_mat_full, 1), pixel_num);
-    end
-    if size(rot_mat_full, 2) ~= cfg.rotate_num
-        error("[%d keV] RotMat_full has %d rotations, expected cfg.rotate_num=%d.", ...
-            energy_keV, size(rot_mat_full, 2), cfg.rotate_num);
-    end
+out_218 = fullfile(cfg.output_root, build_energy_dir_name( ...
+    218, cfg.rotate_num, cfg.cntstat_dir_suffix));
+out_440 = fullfile(cfg.output_root, build_energy_dir_name( ...
+    440, cfg.rotate_num, cfg.cntstat_dir_suffix));
+ensure_dir(out_218);
+ensure_dir(out_440);
 
-    sysmat_path = fullfile(factor_dir, "SysMat_polar");
-    sysmat = read_sysmat_polar(sysmat_path, pixel_num);
-    detector_num = size(sysmat, 1);
-    fprintf("[%d keV] SysMat size = %d detectors x %d pixels\n", ...
-        energy_keV, detector_num, size(sysmat, 2));
+projection_summary = repmat(struct(), numel(cfg.total_count_list), 1);
+for id_count = 1:numel(cfg.total_count_list)
+    total_count = cfg.total_count_list(id_count);
+    count_level = format_count_level(total_count);
 
-    img_fraction = img_fraction_all(:, id_energy);
-    cntstat_mean_per_source_count = zeros(cfg.rotate_num, detector_num, "single");
+    mean_218_direct = max(mean_218_direct_unit * single(total_count), 0);
+    mean_218_cross = max(mean_218_cross_unit * single(total_count), 0);
+    mean_218_total = mean_218_direct + mean_218_cross;
+    cnt_218_direct = apply_count_noise(mean_218_direct, cfg.noise_model);
+    cnt_218_cross = apply_count_noise(mean_218_cross, cfg.noise_model);
+    cnt_218_total = cnt_218_direct + cnt_218_cross;
 
-    for id_rotate = 1:cfg.rotate_num
-        rot_idx = rot_mat_full(:, id_rotate);
-        img_rot = img_fraction(rot_idx) / single(cfg.rotate_num);
-        cntstat_mean_per_source_count(id_rotate, :) = (sysmat * img_rot).';
-        fprintf("[%d keV] Unit-count forward projection %d/%d done. sum = %.6g\n", ...
-            energy_keV, id_rotate, cfg.rotate_num, ...
-            sum(cntstat_mean_per_source_count(id_rotate, :), "all"));
-    end
+    mean_440 = max(mean_440_unit * single(total_count), 0);
+    cnt_440 = apply_count_noise(mean_440, cfg.noise_model);
 
-    out_dir = fullfile(cfg.output_root, sprintf("%dkeV_RotateNum%d", energy_keV, cfg.rotate_num));
-    ensure_dir(out_dir);
+    write_projection_set(out_218, cfg.data_file_name, count_level, ...
+        cnt_218_total, mean_218_total, cnt_218_direct, mean_218_direct, ...
+        cnt_218_cross, mean_218_cross);
+    write_projection_set(out_440, cfg.data_file_name, count_level, ...
+        cnt_440, mean_440, cnt_440, mean_440, [], []);
 
-    for id_count = 1:numel(cfg.total_count_list)
-        total_count = cfg.total_count_list(id_count);
-        count_level = format_count_level(total_count);
-        cntstat_mean = max(cntstat_mean_per_source_count * single(total_count), 0);
-        cntstat = apply_count_noise(cntstat_mean, cfg.noise_model);
+    projection_summary(id_count).count_level = count_level;
+    projection_summary(id_count).total_source_photons = total_count;
+    projection_summary(id_count).cnt218_direct = sum(cnt_218_direct, "all");
+    projection_summary(id_count).cnt218_cross = sum(cnt_218_cross, "all");
+    projection_summary(id_count).cnt218_total = sum(cnt_218_total, "all");
+    projection_summary(id_count).cnt440 = sum(cnt_440, "all");
+    projection_summary(id_count).cross_fraction_in_218 = ...
+        projection_summary(id_count).cnt218_cross / max(projection_summary(id_count).cnt218_total, 1);
 
-        out_file = fullfile(out_dir, sprintf("CntStat_%s_%s.csv", cfg.data_file_name, count_level));
-        mean_file = fullfile(out_dir, sprintf("CntStatMean_%s_%s.csv", cfg.data_file_name, count_level));
-
-        writematrix(cntstat, out_file);
-        writematrix(cntstat_mean, mean_file);
-
-        fprintf("[%d keV, %s] Wrote noisy CntStat: %s\n", energy_keV, count_level, out_file);
-        fprintf("[%d keV, %s] Wrote mean  CntStat: %s\n", energy_keV, count_level, mean_file);
-        fprintf("[%d keV, %s] noisy total = %.6g, mean total = %.6g\n", ...
-            energy_keV, count_level, sum(cntstat, "all"), sum(cntstat_mean, "all"));
-    end
+    fprintf("[%s] 218 direct=%g, cross=%g (%.3f%%), total=%g; 440=%g\n", ...
+        count_level, projection_summary(id_count).cnt218_direct, ...
+        projection_summary(id_count).cnt218_cross, ...
+        100 * projection_summary(id_count).cross_fraction_in_218, ...
+        projection_summary(id_count).cnt218_total, projection_summary(id_count).cnt440);
 end
+
+projection_manifest = struct();
+projection_manifest.model = "y218=A218*x218+C440to218*x440; y440=A440*x440";
+projection_manifest.noise_superposition = ...
+    "218 direct and cross-talk are independently sampled, then added";
+projection_manifest.factor_dir_suffix = cfg.factor_dir_suffix;
+projection_manifest.gamma_yields = cfg.yield;
+projection_manifest.yield_application = ...
+    "applied once in emitted-photon source fractions; response matrices are per emitted photon";
+projection_manifest.factor_A218 = response_218.factor_dir;
+projection_manifest.factor_A440 = response_440.factor_dir;
+projection_manifest.factor_C440to218 = response_cross.factor_dir;
+projection_manifest.summary = projection_summary;
+write_json(fullfile(cfg.output_root, sprintf("ProjectionManifest_%s%s.json", ...
+    cfg.data_file_name, cfg.cntstat_dir_suffix)), projection_manifest);
 
 fprintf("\nDone.\n");
 
 %% Local functions
-function factor_dir = resolve_factor_dir(factor_roots, energy_keV, rotate_num)
-    rel = sprintf("%dkeV_RotateNum%d", energy_keV, rotate_num);
+function factor_dir = resolve_factor_dir(factor_roots, energy_keV, rotate_num, suffix)
+    rel = build_energy_dir_name(energy_keV, rotate_num, suffix);
     tried = strings(numel(factor_roots), 1);
     for i = 1:numel(factor_roots)
         candidate = fullfile(factor_roots(i), rel);
@@ -195,6 +221,110 @@ function factor_dir = resolve_factor_dir(factor_roots, energy_keV, rotate_num)
         end
     end
     error("Cannot find factor directory %s. Tried:\n%s", rel, strjoin(tried, newline));
+end
+
+function factor_dir = resolve_cross_factor_dir(factor_roots, source_keV, window_keV, rotate_num, suffix)
+    rel = sprintf("%dkeV_to%dwin_RotateNum%d%s", ...
+        source_keV, window_keV, rotate_num, string(suffix));
+    factor_dir = resolve_factor_rel(factor_roots, rel);
+end
+
+function factor_dir = resolve_factor_rel(factor_roots, rel)
+    tried = strings(numel(factor_roots), 1);
+    for i = 1:numel(factor_roots)
+        candidate = fullfile(factor_roots(i), rel);
+        tried(i) = string(candidate);
+        if exist(candidate, "dir")
+            factor_dir = char(candidate);
+            return;
+        end
+    end
+    error("Cannot find factor directory %s. Tried:\n%s", rel, strjoin(tried, newline));
+end
+
+function name = build_energy_dir_name(energy_keV, rotate_num, suffix)
+    name = sprintf("%dkeV_RotateNum%d%s", energy_keV, rotate_num, string(suffix));
+end
+
+function response = load_response_factors(factor_dir, pixel_num, cfg, expected_response)
+    fprintf("\n[%s] Loading factors from %s\n", expected_response, factor_dir);
+    validate_factor_manifest(factor_dir, expected_response);
+    response = struct();
+    response.name = expected_response;
+    response.factor_dir = factor_dir;
+    response.rotmat = load_named_array( ...
+        fullfile(factor_dir, "RotMat_full.mat"), ...
+        fullfile(factor_dir, "RotMat_full.csv"), "RotMat_full");
+    if ~isequal(size(response.rotmat), [pixel_num, cfg.rotate_num])
+        error("[%s] RotMat_full has shape %s; expected [%d %d].", ...
+            expected_response, mat2str(size(response.rotmat)), pixel_num, cfg.rotate_num);
+    end
+    response.sysmat = read_sysmat_polar(fullfile(factor_dir, "SysMat_polar"), pixel_num);
+    response.detector_num = size(response.sysmat, 1);
+    fprintf("[%s] SysMat size = %d detectors x %d pixels\n", ...
+        expected_response, size(response.sysmat, 1), size(response.sysmat, 2));
+end
+
+function validate_factor_manifest(factor_dir, expected_response)
+    path = fullfile(factor_dir, "factor_manifest.json");
+    if ~exist(path, "file")
+        warning("Factor manifest is missing; validating by directory and dimensions only: %s", factor_dir);
+        return;
+    end
+    manifest = jsondecode(fileread(path));
+    if ~strcmp(string(manifest.response), expected_response)
+        error("Factor response mismatch in %s: got %s, expected %s.", ...
+            path, string(manifest.response), expected_response);
+    end
+end
+
+function validate_response_compatibility(response_218, response_440, response_cross)
+    if response_218.detector_num ~= response_cross.detector_num
+        error("A218 and C440to218 detector counts differ: %d vs %d.", ...
+            response_218.detector_num, response_cross.detector_num);
+    end
+    if response_218.detector_num ~= response_440.detector_num
+        error("A218 and A440 detector counts differ: %d vs %d.", ...
+            response_218.detector_num, response_440.detector_num);
+    end
+    if ~isequal(response_218.rotmat, response_cross.rotmat) || ...
+            ~isequal(response_218.rotmat, response_440.rotmat)
+        error("A218, A440 and C440to218 must use identical rotation mappings.");
+    end
+end
+
+function mean_per_source = forward_project_response(response, image_fraction, rotate_num, label)
+    mean_per_source = zeros(rotate_num, response.detector_num, "single");
+    for id_rotate = 1:rotate_num
+        rot_idx = response.rotmat(:, id_rotate);
+        img_rot = image_fraction(rot_idx) / single(rotate_num);
+        mean_per_source(id_rotate, :) = (response.sysmat * img_rot).';
+        fprintf("[%s] projection %d/%d done; sum=%.6g\n", ...
+            label, id_rotate, rotate_num, sum(mean_per_source(id_rotate, :), "all"));
+    end
+end
+
+function write_projection_set(out_dir, dataset, count_level, cnt_total, mean_total, ...
+        cnt_direct, mean_direct, cnt_cross, mean_cross)
+    writematrix(cnt_total, fullfile(out_dir, sprintf("CntStat_%s_%s.csv", dataset, count_level)));
+    writematrix(mean_total, fullfile(out_dir, sprintf("CntStatMean_%s_%s.csv", dataset, count_level)));
+    writematrix(cnt_direct, fullfile(out_dir, sprintf("CntStatDirect_%s_%s.csv", dataset, count_level)));
+    writematrix(mean_direct, fullfile(out_dir, sprintf("CntStatMeanDirect_%s_%s.csv", dataset, count_level)));
+    if ~isempty(cnt_cross)
+        writematrix(cnt_cross, fullfile(out_dir, sprintf("CntStatCrossTalk_%s_%s.csv", dataset, count_level)));
+        writematrix(mean_cross, fullfile(out_dir, sprintf("CntStatMeanCrossTalk_%s_%s.csv", dataset, count_level)));
+    end
+end
+
+function write_json(path, value)
+    text = jsonencode(value, "PrettyPrint", true);
+    file_id = fopen(path, "w");
+    if file_id < 0
+        error("Cannot write JSON file: %s", path);
+    end
+    cleanup = onCleanup(@() fclose(file_id));
+    fwrite(file_id, text, "char");
+    fwrite(file_id, newline, "char");
 end
 
 function arr = load_named_array(mat_path, csv_path, preferred_name)

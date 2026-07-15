@@ -63,6 +63,32 @@ genSysMatPolar_3D
 | `RotMat_full.csv` | CSV | 全Z轴旋转映射矩阵 |
 | `RotMatInv_full.csv` | CSV | 全Z轴旋转逆映射矩阵 |
 
+## 补充步骤：计算 Compton `Sensi_d`
+
+`genSysMatPolar_3D.m` 负责极坐标系统矩阵和旋转映射；Compton List 对应的
+`Sensi_d` 需要在获得 Monte Carlo List 后单独计算。当前维护入口位于：
+
+```text
+../../Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/run_compton_sensitivity.py
+```
+
+该工具直接读取最终 Factors 目录中的：
+
+- `SysMat_polar`
+- `Detector.csv`
+- `coor_polar_full.csv`
+- `RotMat_full.csv`
+
+并流式处理 `[cpnum1,e1,cpnum2,e2,...]` Compton CSV。当前圆柱面几何必须有 10496
+个有效探测器。218 keV 与 440 keV 应分别计算，常用 `e1+e2` 下限为 0.18 MeV
+与 0.40 MeV；`--source-photons` 必须填写该能量 List 实际代表的发射光子数。
+
+完整命令、归一化定义、检查点恢复和结果安装方式见：
+
+```text
+../../Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md
+```
+
 ## 下一步
 
 将生成的以下文件复制到 `Step3_Reconstruction/Factors/<energy>keV_RotateNum<rotate_num>/` 目录：
@@ -70,5 +96,7 @@ genSysMatPolar_3D
 - `RotMat_full.csv`
 - `RotMatInv_full.csv`
 - `SysMat_polar`
+- `Detector.csv`
+- 需要 JSCC/Compton 重建时，还需经过验证的 `Sensi_d`
 
 然后继续步骤2。

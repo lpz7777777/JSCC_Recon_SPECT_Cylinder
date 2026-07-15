@@ -17,6 +17,10 @@ Auxiliary_Studies/**/Result/
 Auxiliary_Studies/**/Work_SysMat/
 Auxiliary_Studies/**/simulation_output_test/
 Auxiliary_Studies/**/simulation_output_energy_weighted_test/
+Auxiliary_Studies/**/FileGenerater_3D_Unified/output/**/*validation*.png
+Auxiliary_Studies/**/FileGenerater_3D_Unified/output/**/*validation*.pdf
+Auxiliary_Studies/**/FileGenerater_3D_Unified/output/**/geometry_3d_*.html
+Auxiliary_Studies/**/FileGenerater_3D_Unified/test_hole.png
 
 FreePath/Work_SysMat/
 FreePath/simulation_output_test/
@@ -26,8 +30,16 @@ Geant4Sim/Preview/
 Geant4Sim/3D_DRO_Hoffman_v6_20160331_DICOM/
 Geant4Sim/3D_DRO_Hoffman_v6_raw/*.yaff
 Geant4Sim/Macro/Hoffman_Target_*/
+Geant4Sim/Macro/SensitivityPointArray_*/
 
 distributed/scripts/logs/
+
+# Local job state and validation reports (regenerable)
+BackgroundJobs/
+run_logs/
+Analysis_CNRCRC_JSCC_vs_EHE/
+*.pid
+*.log
 
 # Large/generated simulation artifacts
 *.sysmat
@@ -46,6 +58,14 @@ tmp/
 *.dylib
 *.pdb
 Geant4Sim/Geant4Code/out/
+Geant4Sim/**/build/
+Geant4Sim/Geant4Code_EHE/build/
+Geant4Sim/Geant4Code_EHE/out/
+Geant4Sim/Geant4Code_EHE/CntStat_*.csv
+Geant4Sim/Geant4Code_EHE/List.csv
+Geant4Sim/Geant4Code_EHE/EHE_*.csv
+Geant4Sim/Geant4Code_EHE/EHE_*.txt
+Geant4Sim/Geant4Code_EHE/EHE_*.png
 Auxiliary_Studies/**/runs/
 Auxiliary_Studies/**/PEGen_CircularHole
 Auxiliary_Studies/**/ScatterGen_CircularHole
