@@ -49,6 +49,13 @@ class GaggIntrinsicSourceTests(unittest.TestCase):
             },
         )
 
+    def test_windows_multiconfig_runtime_is_beside_macros(self):
+        cmake = (PROJECT / "CMakeLists.txt").read_text(encoding="utf-8")
+        self.assertIn("RUNTIME_OUTPUT_DIRECTORY", cmake)
+        self.assertIn("RUNTIME_OUTPUT_DIRECTORY_${config}", cmake)
+        self.assertIn('"${CMAKE_CURRENT_SOURCE_DIR}/run_windows.ps1"', cmake)
+        self.assertTrue((PROJECT / "run_windows.ps1").is_file())
+
 
 class GaggLookupBuilderTests(unittest.TestCase):
     FIELDNAMES = [

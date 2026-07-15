@@ -80,6 +80,51 @@ The smoke run should create `smoke_GAGG_3x3x3_218keV.csv`. Check that:
 - every reported containment probability is between 0 and 1;
 - `first_compton_second_pe <= first_compton_eventual_pe <= first_compton`.
 
+### Windows and Visual Studio
+
+Visual Studio is a multi-configuration generator. In the original CMake
+layout it placed the executable in `build/Debug` or `build/Release`, while the
+macro files were copied to `build`. The current CMake configuration overrides
+all runtime output directories so a newly configured build places
+`gagg_intrinsic.exe` directly beside the macros in `build`.
+
+Reconfigure once after pulling this change, then build and run from PowerShell:
+
+```powershell
+cmake -S . -B build
+cmake --build build --config Release
+Set-ExecutionPolicy -Scope Process Bypass
+.\run_windows.ps1 -Configuration Release -Macro smoke.mac -Threads 2
+```
+
+The same script is copied into `build`, so this is also valid:
+
+```powershell
+cd build
+Set-ExecutionPolicy -Scope Process Bypass
+.\run_windows.ps1 -Configuration Release -Macro smoke.mac -Threads 2
+```
+
+The script reads `Geant4_DIR` from `CMakeCache.txt`. If the installation has a
+`bin/geant4.bat`, the script imports its DLL and physics-dataset environment;
+otherwise it adds the corresponding Geant4 `bin` directory to the
+process-local `PATH`. It then runs with `build` as the working directory and
+verifies that the smoke CSV was created. It does not modify the system-wide
+environment.
+
+For an existing build that has not been reconfigured, do not copy the EXE.
+Run it with an explicit macro argument from the build directory:
+
+```powershell
+cd build
+.\Debug\gagg_intrinsic.exe .\smoke.mac 2
+```
+
+The executable is a batch program, not a double-click application. Starting it
+without `macro.mac` intentionally prints its usage and exits. If Windows
+reports `0xC0000135`, a Geant4 DLL could not be found; use the script above or
+run from the Geant4 command prompt that was used to configure the project.
+
 ## Production runs
 
 The optional second executable argument is the worker-thread count for an MT
