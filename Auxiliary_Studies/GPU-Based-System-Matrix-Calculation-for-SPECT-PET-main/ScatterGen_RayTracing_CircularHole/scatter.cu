@@ -572,9 +572,11 @@ static void buildDetectorLocalScatterLookup(
 	}
 
 	const int cosine_samples = positiveEnvironmentInteger(
-		"DETECTOR_LOCAL_SCATTER_COSINE_SAMPLES", 96);
+		"DETECTOR_LOCAL_SCATTER_COSINE_SAMPLES", 64);
 	const int azimuth_samples = positiveEnvironmentInteger(
-		"DETECTOR_LOCAL_SCATTER_AZIMUTH_SAMPLES", 96);
+		"DETECTOR_LOCAL_SCATTER_AZIMUTH_SAMPLES", 64);
+	const int position_samples_per_axis = positiveEnvironmentInteger(
+		"DETECTOR_LOCAL_SCATTER_POSITION_SAMPLES_PER_AXIS", 4);
 	const int bins = *orientation_bins;
 	lookup->resize(types.size() * bins * bins);
 	const double half_pi = 1.57079632679489661923;
@@ -600,7 +602,8 @@ static void buildDetectorLocalScatterLookup(
 						type.width, type.thickness, type.height,
 						type.material_id, source_energy, type.relative_fwhm,
 						type.window_lower, type.window_upper,
-						cosine_samples, azimuth_samples);
+						cosine_samples, azimuth_samples,
+						position_samples_per_axis);
 				const double partition_sum = response.escape_probability
 					+ response.second_photoelectric_probability
 					+ response.second_compton_probability;
@@ -623,6 +626,7 @@ static void buildDetectorLocalScatterLookup(
 			<< type.height << " mm window=[" << type.window_lower << ","
 			<< type.window_upper << "] keV lookup=" << bins << "x" << bins
 			<< " angular_samples=" << cosine_samples << "x" << azimuth_samples
+			<< " position_samples=" << position_samples_per_axis << "^3"
 			<< " escape_range=[" << minimum_escape << "," << maximum_escape << "]"
 			<< " max_partition_error=" << maximum_partition_error << endl;
 		if (maximum_partition_error > 1e-8)

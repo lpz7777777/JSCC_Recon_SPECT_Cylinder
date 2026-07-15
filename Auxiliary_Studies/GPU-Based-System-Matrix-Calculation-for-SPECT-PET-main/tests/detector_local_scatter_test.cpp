@@ -62,6 +62,12 @@ int main()
         "box -Y exit distance");
     requireClose(detector_center_exit_distance(0, 0, 1, 4, 10, 6), 3.0, 1e-15,
         "box +Z exit distance");
+    requireClose(detector_box_exit_distance(
+        1, -4, 0, 0, 1, 0, 4, 10, 6), 9.0, 1e-15,
+        "off-center box forward exit distance");
+    requireClose(detector_box_exit_distance(
+        1, -4, 0, 0, -1, 0, 4, 10, 6), 1.0, 1e-15,
+        "off-center box entry depth");
 
     const double energy = 440.0;
     const double resolution = 0.13 * std::sqrt(511.0 / energy);
@@ -121,6 +127,23 @@ int main()
         fine.second_photoelectric_probability * full_energy_direct_acceptance,
         2e-12, "direct-window self Compton+PE probability");
 
+    const DetectorLocalScatterResponse position_medium
+        = integrate_detector_local_scatter_response(
+            0.12, 0.98, 0.15, 3.0, 3.0, 3.0, kMaterialGAGG,
+            energy, resolution, lower, upper, 64, 64, 4);
+    const DetectorLocalScatterResponse position_fine
+        = integrate_detector_local_scatter_response(
+            0.12, 0.98, 0.15, 3.0, 3.0, 3.0, kMaterialGAGG,
+            energy, resolution, lower, upper, 64, 64, 6);
+    validateResponse(position_medium);
+    validateResponse(position_fine);
+    requireClose(position_medium.self_photoelectric_windowed,
+        position_fine.self_photoelectric_windowed, 2e-3,
+        "first-interaction position convergence");
+    requireClose(position_medium.escape_probability,
+        position_fine.escape_probability, 2e-3,
+        "position-integrated escape convergence");
+
     const DetectorLocalScatterResponse thin
         = integrate_detector_local_scatter_response(
             0, 1, 0, 1e-6, 1e-6, 1e-6, kMaterialNaI,
@@ -136,8 +159,9 @@ int main()
             0, 1, 0, 1e6, 1e6, 1e6, kMaterialNaI,
             energy, resolution, 0.0, energy + 1.0, 96, 96);
     validateResponse(thick);
-    require(thick.escape_probability < 1e-12,
-        "infinite crystal must approach zero escape probability");
+    require(thick.second_photoelectric_probability
+        > thin.second_photoelectric_probability,
+        "thick crystal must absorb more scattered photons than a thin crystal");
 
     std::cout << "simple_exact escape=" << simple.escape
         << " second_pe=" << simple.photoelectric
@@ -154,6 +178,14 @@ int main()
             - fine.self_photoelectric_windowed)
         << " escape="
         << std::fabs(medium.escape_probability - fine.escape_probability)
+        << std::endl;
+    std::cout << "GAGG_3mm_position_convergence self_pe="
+        << std::fabs(position_medium.self_photoelectric_windowed
+            - position_fine.self_photoelectric_windowed)
+        << " escape="
+        << std::fabs(position_medium.escape_probability
+            - position_fine.escape_probability)
+        << " fine_second_pe=" << position_fine.second_photoelectric_probability
         << std::endl;
     std::cout << "NaI_440_to_218_window recoil_windowed="
         << cross_window.recoil_windowed

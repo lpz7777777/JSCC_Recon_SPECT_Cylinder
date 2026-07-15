@@ -1,5 +1,15 @@
 # Geant4Sim
 
+## GAGG intrinsic-response diagnostic
+
+`Geant4Code_GAGGIntrinsicResponse` is an isolated single-crystal project used
+to measure physical photopeak containment for the JSCC `3x3x3 mm` and
+`2x6x2 mm` GAGG crystals at 218 and 440 keV. It separates first-PE histories
+from first-Compton-then-PE histories and is intended to supply component-wise
+containment factors for PEGen and the detector-local scatter lookup. Build and
+run instructions are in
+`Geant4Code_GAGGIntrinsicResponse/README.md`.
+
 本目录保存 Geant4 蒙卡模拟相关代码和输入生成脚本。它与 `GenProj/` 的职责不同：
 
 - `Geant4Sim/`：生成 Geant4 macro、体模源、预览文件，并通过对应探测器的 C++ 工程做蒙卡模拟，输出 `CntStat` 和 `List`。

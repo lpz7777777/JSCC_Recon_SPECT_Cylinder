@@ -173,7 +173,8 @@ class EHEGeometryPlacementSourceTests(unittest.TestCase):
             REPO_ROOT
             / "Auxiliary_Studies"
             / "GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main"
-            / "runs"
+            / "FileGenerater_3D_Unified"
+            / "output"
             / "EHE_PbNaI_218keV"
             / "Params_README.txt"
         ).read_text(encoding="utf-8")

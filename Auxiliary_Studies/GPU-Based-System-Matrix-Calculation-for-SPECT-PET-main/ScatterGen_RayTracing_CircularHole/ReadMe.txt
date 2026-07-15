@@ -89,16 +89,20 @@ Both local switches are subordinate to Physics[0]; disabling global Compton
 suppresses both terms even if Physics[10:11] are one.
 
 The calculation stops after a second Compton interaction; that branch is
-included in the probability partition but is not transported. First-interaction
-position and A-exit length use the existing crystal-center approximation.
-Only detector flag=1 records produce local pulses. EHE bins are independent
+included in the probability partition but is not transported. The local
+lookup integrates projected entry-face coordinates, a conditional exponential
+first-interaction depth, and outgoing direction. Every outgoing escape length
+is an exact ray-box distance from the sampled first-interaction position. The
+separate inter-crystal A-to-B source attenuation retains its center-based
+approximation. Only detector flag=1 records produce local pulses. EHE bins are independent
 analytical channels; continuous-crystal Anger light sharing and centroiding
 are not modeled.
 
 Detector-local lookup convergence controls:
 DETECTOR_LOCAL_SCATTER_ORIENTATION_BINS (default 17)
-DETECTOR_LOCAL_SCATTER_COSINE_SAMPLES   (default 96)
-DETECTOR_LOCAL_SCATTER_AZIMUTH_SAMPLES  (default 96)
+DETECTOR_LOCAL_SCATTER_COSINE_SAMPLES   (default 64)
+DETECTOR_LOCAL_SCATTER_AZIMUTH_SAMPLES  (default 64)
+DETECTOR_LOCAL_SCATTER_POSITION_SAMPLES_PER_AXIS (default 4)
 
 ScatterGen remains backward-compatible with 10-float Params_Physics.dat files:
 the zero-initialized missing Physics[10:11] values disable both new terms.

@@ -1,0 +1,12 @@
+/control/verbose 1
+/run/verbose 1
+/random/setSeeds 2180303 3108218
+/study/crystalWidth 3 mm
+/study/crystalThickness 3 mm
+/study/crystalHeight 3 mm
+/study/energy 218 keV
+/study/fullEnergyTolerance 1 eV
+/study/faceMargin 1 um
+/study/output lookup_GAGG_3x3x3_218keV.csv
+/run/initialize
+/run/beamOn 10000000

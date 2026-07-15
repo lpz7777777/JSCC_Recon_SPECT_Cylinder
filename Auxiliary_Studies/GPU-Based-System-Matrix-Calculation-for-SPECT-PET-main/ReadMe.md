@@ -253,12 +253,15 @@ Both local switches are subordinate to the global `Physics[0]` Compton switch;
 when `Physics[0]=0`, neither local response is built or accumulated.
 
 The model follows at most one Compton interaction and then either escape or a
-photoelectric second interaction.  `P_second_C` is retained in the probability
-audit but is not transported further.  As in the existing inter-crystal
-kernel, the first interaction and outgoing path are represented at the crystal
-center; this is a finite-element center approximation, not depth-resolved
-Monte Carlo transport.  Only detector records with `flag=1` produce local
-pulses; Pb/W shielding records do not.
+photoelectric second interaction. `P_second_C` is retained in the probability
+audit but is not transported further. The detector-local lookup integrates
+all illuminated entry faces with projected-area weights. For each entry-face
+sample it computes the exact incoming ray-box chord, samples the conditional
+first-interaction depth from the truncated exponential distribution, then
+computes the exact ray-box escape distance from that position for every
+Klein-Nishina outgoing direction. The separate inter-crystal A-to-B source
+attenuation still uses its existing center approximation. Only detector
+records with `flag=1` produce local pulses; Pb/W shielding records do not.
 
 Detector channels are accumulated independently.  One physical A-to-B event
 can therefore contribute one expected pulse to A and another to B.  For EHE,
@@ -271,9 +274,15 @@ table.  Its convergence controls are:
 
 ```text
 DETECTOR_LOCAL_SCATTER_ORIENTATION_BINS   default 17
-DETECTOR_LOCAL_SCATTER_COSINE_SAMPLES    default 96
-DETECTOR_LOCAL_SCATTER_AZIMUTH_SAMPLES   default 96
+DETECTOR_LOCAL_SCATTER_COSINE_SAMPLES    default 64
+DETECTOR_LOCAL_SCATTER_AZIMUTH_SAMPLES   default 64
+DETECTOR_LOCAL_SCATTER_POSITION_SAMPLES_PER_AXIS  default 4
 ```
+
+The last value controls both the two coordinates on each entry face and the
+conditional depth quadrature, so each visible face contributes `N^3` physical
+first-interaction positions. This lookup is built on the CPU at ScatterGen
+startup; it does not enlarge the GPU lookup or the output matrix.
 
 The standard 218 and 440 photopeak cases enable both local responses.  The
 standard `440 -> 218 keV window` case enables recoil escape but disables the
@@ -743,15 +752,26 @@ of the photopeak window. Coherent/Rayleigh scattering, the small density and
 Ce-composition difference, and production cuts are additional smaller model
 differences; the material and gross geometry themselves match.
 
-The next direct-response algorithm test should therefore:
+The direct-response correction work is now split into these stages:
 
-1. Replace the center-only local lookup with an incoming-face, first-depth,
-   and outgoing-direction integral using exact ray-box exit distance from each
-   sampled first-interaction position.
-2. Add an energy-containment probability for photoelectric interactions in
+1. The center-only local lookup has been replaced with an incoming-face,
+   conditional first-depth, and outgoing-direction integral using exact
+   ray-box escape distance from every sampled first-interaction position.
+   Its focused C++ test checks arbitrary-position ray-box geometry, probability
+   conservation, and angular/position convergence. For a `3 x 3 x 3 mm` GAGG
+   crystal at 440 keV, changing position quadrature from `4^3` to `6^3` changes
+   local self-PE by `7.9e-5` and escape probability by `7.8e-4`.
+2. The standalone project
+   `Geant4Sim/Geant4Code_GAGGIntrinsicResponse` now measures the required
+   energy-containment probability for both JSCC GAGG crystal types. It reports
+   first-PE, first-Compton-then-second-PE, and first-Compton-then-eventual-PE
+   histories separately. Its four `1e7` production macros still need to be run
+   in a Geant4 environment before containment factors can be applied.
+3. Add the measured component-specific energy-containment probability for
+   photoelectric interactions in
    each GAGG crystal type, preferably from a small dedicated Geant4 intrinsic
    response simulation that separates first-PE and Compton-then-PE histories.
-3. Regenerate only center-column or `1 x 1 x 1` diagnostic responses with
+4. Regenerate only center-column or `1 x 1 x 1` diagnostic responses with
    component output before rerunning either 2.397 GB direct matrix.
 
 Missing second/third Compton histories cannot explain the present positive
