@@ -13,7 +13,7 @@ function outputPaths = get_img_SC_MultiOutput_PolarCoor(folderPath)
 % task, z layer, and iteration. This avoids repeated griddata triangulation.
 
 if nargin < 1 || strlength(string(folderPath)) == 0
-    folderPath = uigetdir("./Figure_Local_SC_MultiOutput", ...
+    folderPath = uigetdir("./Results/Reconstruction/Figure_Local_SC_MultiOutput", ...
         "Select a reconstruction run folder or its Polar folder");
     if isequal(folderPath, 0)
         outputPaths = struct();

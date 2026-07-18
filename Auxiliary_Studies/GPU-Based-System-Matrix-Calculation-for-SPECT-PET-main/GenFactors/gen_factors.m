@@ -1,4 +1,4 @@
-function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crystal_matrix_file)
+function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crystal_matrix_file, calibration, grid_options)
 % GEN_FACTORS 把 GPU 引擎生成的 .sysmat 转成重建用的 Factors/ 目录。
 %
 % 流程：
@@ -13,6 +13,20 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
 %   params_detector_file- Params_Detector.dat 路径（用于 flag 过滤 + Detector.csv）
 %   outdir              - 输出目录（如 Factors/218keV_RotateNum20/）
 %   crystal_matrix_file - CrystalMatrix_*.mat 路径（备用，当前用 Params_Detector 的 flag）
+%   calibration         - 可选的探测器层校准结构；默认不校准
+%   grid_options        - 可选的极坐标网格配置。include_center_point=true
+%                         时，每个 z 层在全部环形位置前加入唯一 (0,0) 点。
+
+    if nargin < 6 || isempty(calibration)
+        calibration = struct('enabled', false);
+    end
+    if nargin < 7 || isempty(grid_options)
+        grid_options = struct('include_center_point', false);
+    end
+    if ~isfield(grid_options, 'include_center_point')
+        grid_options.include_center_point = false;
+    end
+    include_center_point = logical(grid_options.include_center_point);
 
     fprintf('=====================================\n');
     fprintf('gen_factors: %d keV\n', energy_keV);
@@ -58,6 +72,50 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
     SysMat = SysMat(:, :, :, scin_mask);
     fprintf('  过滤后维度: [%d,%d,%d,%d]\n', size(SysMat));
 
+    %% ---- Optional detector-layer response calibration ----
+    if isfield(calibration, 'enabled') && calibration.enabled
+        det_scin = det(scin_mask, :);
+        layer_y = double(calibration.layer_y_mm(:).');
+        scales = single(calibration.layer_scale(:).');
+        expected_counts = double(calibration.expected_active_rows(:).');
+        if numel(layer_y) ~= numel(scales) || numel(layer_y) ~= numel(expected_counts)
+            error('gen_factors:BadCalibrationShape', ...
+                'Calibration layer positions, scales, and expected counts must have equal lengths.');
+        end
+
+        layer_scale = nan(n_scin, 1, 'single');
+        for idx = 1:numel(layer_y)
+            selected = abs(double(det_scin(:, 2)) - layer_y(idx)) < 1e-4;
+            actual_count = sum(selected);
+            if actual_count ~= expected_counts(idx)
+                error('gen_factors:CalibrationLayerCount', ...
+                    'Layer y=%g has %d active rows; expected %d.', ...
+                    layer_y(idx), actual_count, expected_counts(idx));
+            end
+            layer_scale(selected) = scales(idx);
+        end
+        if any(~isfinite(layer_scale))
+            error('gen_factors:UnclassifiedCalibrationRows', ...
+                'Detector-layer calibration did not classify every active row.');
+        end
+        if any(layer_scale <= 0)
+            error('gen_factors:NonpositiveCalibration', ...
+                'All detector-layer calibration factors must be positive.');
+        end
+
+        SysMat = SysMat .* reshape(layer_scale, 1, 1, 1, []);
+        fprintf('  Applied calibration: %s\n', calibration.name);
+        for idx = 1:numel(layer_y)
+            fprintf('    y=%g mm: rows=%d scale=%.7f\n', ...
+                layer_y(idx), expected_counts(idx), scales(idx));
+        end
+    end
+
+    if any(~isfinite(SysMat(:))) || any(SysMat(:) < 0)
+        error('gen_factors:InvalidCalibratedMatrix', ...
+            'Filtered/calibrated system matrix contains invalid or negative values.');
+    end
+
     % 存 SysMat_tmp（过滤后版本）
     tmp_file = fullfile(outdir, 'SysMat_tmp');
     fid = fopen(tmp_file, 'w');
@@ -67,7 +125,11 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
 
     %% ---- 极坐标网格（1280 点/层）----
     [coor_cartesian_x, coor_cartesian_y] = meshgrid(s_x_axis, s_y_axis);
-    coor_polar = [];
+    if include_center_point
+        coor_polar = [0, 0];
+    else
+        coor_polar = [];
+    end
     theta_per_r = zeros(1, length(r_value));
     for id_r = 1:length(r_value)
         r = r_value(id_r);
@@ -98,7 +160,12 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
     % 对每个半径，圆周移位间隔 = theta_num / rotate_num
     RotMat = [];
     for id_rotate = 1:rotate_num
-        RotMat_tmp = [];
+        if include_center_point
+            % The center is invariant under every in-plane rotation.
+            RotMat_tmp = 1;
+        else
+            RotMat_tmp = [];
+        end
         for id_r = 1:length(r_value)
             theta_num = theta_per_r(id_r);
             interval = theta_num / rotate_num;

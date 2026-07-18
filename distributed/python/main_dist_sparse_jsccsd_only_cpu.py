@@ -106,7 +106,7 @@ def parse_args():
     parser.add_argument("--factors-dir", type=str, default="./Factors", help="Factors root directory.")
     parser.add_argument("--cntstat-dir", type=str, default="./CntStat", help="CntStat root directory.")
     parser.add_argument("--list-dir", type=str, default="./List", help="List root directory.")
-    parser.add_argument("--output-root", type=str, default="./Figure_Dist_JSCCSD_CPU", help="Output root directory.")
+    parser.add_argument("--output-root", type=str, default="./Results/Reconstruction/Figure_Dist_JSCCSD_CPU", help="Output root directory.")
     # CPU 专用参数
     parser.add_argument("--num-threads", type=int, default=None, help="Number of OpenMP threads per rank. Default: auto (OMP_NUM_THREADS env or 4).")
     return parser.parse_args()

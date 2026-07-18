@@ -77,7 +77,10 @@ def parse_args():
     parser.add_argument("--cntstat-dir", default="./CntStat")
     parser.add_argument("--cntstat-dir-suffix", default="",
                         help="Optional suffix on CntStat energy directories.")
-    parser.add_argument("--output-root", default="./Figure_Local_SC_MultiOutput")
+    parser.add_argument(
+        "--output-root",
+        default="./Results/Reconstruction/Figure_Local_SC_MultiOutput",
+    )
     parser.add_argument("--device", default="auto",
                         help="Compute device: auto, cuda, cuda:0, or cpu.")
     parser.add_argument("--overwrite-existing", action="store_true",
@@ -507,7 +510,9 @@ def validate_existing_task_output(save_path, task, pixel_num):
 
 
 def write_float32_atomic(path, array):
-    temp_path = path.with_name(f"{path.name}.tmp.{os.getpid()}")
+    # Keep the temporary name short: deeply nested run folders plus the
+    # combined-output history name can otherwise exceed Windows MAX_PATH.
+    temp_path = path.with_name(f".tmp_{os.getpid()}")
     try:
         np.asarray(array, dtype=np.float32).tofile(temp_path)
         os.replace(temp_path, path)

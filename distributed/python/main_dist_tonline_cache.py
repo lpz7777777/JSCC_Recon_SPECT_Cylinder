@@ -85,7 +85,7 @@ def parse_args():
     parser.add_argument("--factors-dir", type=str, default="./Factors")
     parser.add_argument("--cntstat-dir", type=str, default="./CntStat")
     parser.add_argument("--list-dir", type=str, default="./List")
-    parser.add_argument("--output-root", type=str, default="./Figure_Dist_TOnlineCache")
+    parser.add_argument("--output-root", type=str, default="./Results/Reconstruction/Figure_Dist_TOnlineCache")
     return parser.parse_args()
 
 

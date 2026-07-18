@@ -35,7 +35,7 @@ legend_font_size = 18;
 
 C = 6;
 
-folderPath = uigetdir("./Figure_Dist_SC/");
+folderPath = uigetdir("./Results/Reconstruction/Figure_Dist_SC/");
 if isequal(folderPath, 0)
     return
 end

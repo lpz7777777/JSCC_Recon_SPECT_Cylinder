@@ -48,7 +48,7 @@ legend_font_size = 15;
 
 %% ==================== 选择数据目录 ====================
 % 弹出文件夹选择对话框，选择 Figure_Dist_JSCCSD 目录
-folderPath = uigetdir("./Figure_Dist_JSCCSD/");
+folderPath = uigetdir("./Results/Reconstruction/Figure_Dist_JSCCSD/");
 if isequal(folderPath, 0)
     return
 end

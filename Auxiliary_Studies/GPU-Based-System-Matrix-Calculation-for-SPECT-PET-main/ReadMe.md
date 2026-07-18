@@ -609,7 +609,146 @@ will still likely cost several to tens of times one first-order component,
 depending on neighbor count and energy/angular bins. It is a separate model
 development and validation task, not a small switch in the present kernel.
 
-### Recommended temporary JSCC correction
+### Current JSCC Matrix Status and Layer Calibration (2026-07-16)
+
+The three standard JSCC responses have now been regenerated after both major
+scatter-model corrections:
+
+1. Inter-crystal scatter integrates the visible surfaces of the real target
+   box. The enclosing-sphere azimuth estimate is no longer used by the
+   production kernel. Near targets use subdivided surface integration and
+   exact source/target ray-box path lengths.
+2. Detector-local scatter no longer starts every outgoing photon at the
+   crystal center. It integrates projected entrance faces, conditional
+   first-interaction depth, Klein-Nishina outgoing direction, and exact
+   ray-box escape distance from each sampled interaction position.
+
+The implementation also includes per-rotation PE-slice selection, independent
+recoil-escape and same-crystal Compton-to-PE switches, forced-window support,
+component closure diagnostics, structured material traversal, kinematic
+pruning, LUT validation, and chunked Combined output. Focused CPU/GPU tests
+cover probability conservation, arbitrary-position ray-box geometry,
+orientation/position convergence, component closure, rotation indexing, and
+nonnegative finite output.
+
+The current raw files remain per emitted source photon and are preserved in:
+
+```text
+runs/JSCC_218keV/
+runs/JSCC_440keV/
+runs/JSCC_440keV_to_218keVwin/
+```
+
+Their complete streamed scan is:
+
+```text
+response                  PE_Windowed        Scatter        Combined/Cross
+JSCC/A218                 1179.355342       112.995173       1292.350515
+JSCC/A440                  364.881094        42.048601        406.929695
+JSCC/C440to218                    n/a        98.930624         98.930624
+```
+
+Every file has shape `11520 x 52020`, contains no NaN/Inf or negative value,
+and both direct responses satisfy `Combined = PE_Windowed + Scatter` exactly
+in float32. The detector-local position model changes the raw Scatter totals
+by `-21.22%`, `-23.22%`, and `+5.19%` for A218, A440, and C440to218,
+respectively. These signs are physically consistent: distributed positions
+reduce same-crystal second-PE containment while increasing recoil escape.
+
+Comparison of the center-interpolated matrix columns with the current `1e9`
+Geant4 response study gives:
+
+```text
+response             Geant4 / primary       raw matrix       matrix / Geant4
+JSCC/A218              9.899278882e-3      1.134109603e-2          1.145649
+JSCC/A440              2.584940443e-3      2.956339967e-3          1.143678
+JSCC/C440to218         1.835676825e-3      1.506842172e-3          0.820865
+```
+
+The position-integrated direct ratios agree with the independent detector-box
+prediction to better than about `0.6%`, which validates the Detector-Local
+rewrite. The remaining direct excess and cross-window deficit are different
+physics effects and must not share one scale.
+
+#### Current Factors calibration
+
+Keep raw `.sysmat` files unchanged. Calibration is applied only while
+exporting active scintillator rows to project-root `Factors/`, before
+Cartesian-to-polar interpolation. Row scaling commutes with interpolation, so
+`SysMat_tmp` and `SysMat_polar` remain consistent. It does not include or alter
+the 225Ac branching ratio.
+
+```text
+detector y (mm)       active rows      D218       D440       D440to218
+30                            512    0.8740232  0.8720313    1.1411090
+60                            768    0.8793926  0.8912363    1.1636691
+90                           1024    0.8719679  0.8847924    1.2201934
+120                          8192    0.8708826  0.8691287    1.2372030
+total                       10496
+```
+
+`GenFactors/run_gen_response_factors.m` enables these vectors only for
+`JSCC/A218`, `JSCC/A440`, and `JSCC/C440to218`. It audits all four detector
+depths and active-row counts, aborts on unclassified rows, and records the
+calibration name, source, scope, layer positions, scales, and the absence of
+branching-ratio weighting in `factor_manifest.json`. EHE Factors do not use
+these JSCC-derived corrections.
+
+These are center-point empirical calibrations. They are suitable for the next
+reconstruction comparison, but they are not yet a final position-independent
+detector model.
+
+#### Priorities for further improvement
+
+##### Central-voxel reconstruction diagnostic sequence
+
+The current Geant4 CntStat reconstructions show an iteration-dependent central
+low-value region. The calibrated matrix sensitivity at `r=6,12,18,24 mm` is
+nearly flat, so a simple local sensitivity trough is insufficient to explain
+the effect. The following sequence separates polar-grid representation error,
+matrix closure error, and residual position-dependent detector mismatch:
+
+1. Export an experimental set of Factors with one unique `r=0` point per
+   axial layer, then repeat the same Geant4 reconstruction. These Factors use
+   suffix `CenterPoint`; standard Factors must remain unchanged.
+2. With the same center-point Factors, run a uniform-cylinder GenProj closure
+   test and reconstruct it using the identical forward matrix.
+3. Run pure-218 and pure-440 Geant4 uniform-cylinder tests, so direct matrix
+   mismatch can be separated from 440-to-218 cross-talk correction.
+4. Run a Geant4 radial point-source scan over `r=0:6:36 mm`, with controlled
+   axial locations, and compare measured detector/layer response to the matrix.
+5. Use the measured spatial trend to decide whether a regularized
+   `D_detector * A * D_voxel` correction is adequate or whether the detector
+   response needs an angle- or position-dependent representation.
+
+1. Measure finite-photopeak-window GAGG containment, not only exact `1 eV`
+   energy containment. The intrinsic study should retain deposited-energy or
+   escaped-energy spectra for first-PE and first-Compton-to-PE histories, then
+   convolve them with the same detector resolution and energy window used by
+   the matrix code. Directly multiplying by exact-containment probabilities
+   over-corrects the direct matrices.
+2. Add higher-order scatter for the 440-to-218 response. The remaining
+   approximately `18%` center deficit and its depth dependence are consistent
+   with multi-crystal/multiple-Compton histories absent from the first-order
+   model. Use a sparse near-neighbor transition model with discretized energy
+   and direction; do not materialize a detector triple.
+3. Validate the four row factors at off-center radial and axial source
+   positions. If they vary systematically, replace the center-only correction
+   with a regularized low-rank `D_detector * A * D_voxel` model or a small
+   interpolated layer/radius/axial table. Avoid noisy per-crystal scaling.
+4. Keep Geant4 and analytical definitions synchronized: crystal material and
+   density, energy broadening, active-channel mapping, source normalization,
+   object material, and event classification must match. Use topology counters
+   only after their process labels have been independently validated.
+5. Before another full 2.397 GB regeneration, test each new physical term on
+   one-voxel/center-column runs with component output and convergence scans.
+
+### Historical Pre-Position Calibration (Superseded)
+
+The following section documents the pre-Detector-Local-position diagnosis.
+Its matrix totals and calibration vectors are retained for provenance only.
+Do not apply them to the current matrices or Factors; use the current section
+above.
 
 The complete post-surface-kernel JSCC matrices generated on 2026-07-16 pass a
 full streamed validation. Every matrix has shape `11520 x 52020`, contains no

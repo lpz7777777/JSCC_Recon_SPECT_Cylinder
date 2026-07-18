@@ -1,0 +1,49 @@
+#!/bin/bash
+
+set -euo pipefail
+
+DataNum="${DATA_NUM:-100}"
+
+for required in gamma01 CrystalMatrix.txt uniform_fov_worker.mac \
+    uniform_fov_manifest.json runevent; do
+    if [ ! -f "./${required}" ]; then
+        echo "ERROR: missing ${required}" >&2
+        exit 2
+    fi
+done
+
+if [ ! -x ./gamma01 ]; then
+    echo "ERROR: ./gamma01 is not executable" >&2
+    exit 2
+fi
+
+if find . -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' \
+    | grep -q .; then
+    echo "ERROR: numeric worker directories already exist." >&2
+    echo "Use a clean energy run directory to avoid duplicate output." >&2
+    exit 3
+fi
+
+if [ -e submitted_jobs.tsv ]; then
+    echo "ERROR: submitted_jobs.tsv already exists." >&2
+    exit 3
+fi
+
+: > submitted_jobs.tsv
+
+for IdData in $(seq 1 "${DataNum}"); do
+    worker_dir="./${IdData}"
+    mkdir "${worker_dir}"
+    cp ./gamma01 ./CrystalMatrix.txt ./uniform_fov_worker.mac \
+       ./uniform_fov_manifest.json ./runevent "${worker_dir}/"
+    chmod u+x "${worker_dir}/gamma01" "${worker_dir}/runevent"
+
+    cd "${worker_dir}"
+    job_id=$(sbatch --parsable runevent)
+    printf "%d\t%s\n" "${IdData}" "${job_id}" >> ../submitted_jobs.tsv
+    echo "Submitted worker ${IdData}/${DataNum}: job ${job_id}"
+    cd ..
+done
+
+echo "All ${DataNum} workers submitted."
+echo "Job mapping: ${PWD}/submitted_jobs.tsv"

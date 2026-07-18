@@ -1,0 +1,48 @@
+#!/bin/bash
+#SBATCH -J JSCC_UFOV
+#SBATCH -p cnmix
+#SBATCH -N 1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --no-requeue
+#SBATCH -o slurm-%j.out
+#SBATCH -e slurm-%j.err
+
+set -euo pipefail
+
+module load compilers/gcc/v12.2.0
+export Geant4_11_1_path=/apps/soft/geant/geant4-v11.1.0
+export Geant4_DIR="${Geant4_11_1_path}/lib64/Geant4-11.1.0"
+source "${Geant4_11_1_path}/bin/geant4.sh"
+
+unset JSCC_RANDOM_SEED
+
+echo "Worker directory: $(pwd)"
+echo "Host: $(hostname)"
+echo "SLURM_JOB_ID=${SLURM_JOB_ID:-NA}"
+echo "Start: $(date '+%F %T')"
+
+./gamma01 uniform_fov_worker.mac \
+    > geant4.stdout.log \
+    2> geant4.stderr.log
+
+expected_primary=$(awk '/^\/run\/beamOn[[:space:]]+/ {sum += $2} END {print sum+0}' \
+    uniform_fov_worker.mac)
+
+for file in CntStat_218.csv CntStat_440.csv; do
+    rows=$(wc -l < "${file}")
+    columns=$(awk -F, 'NR == 1 {print NF; exit}' "${file}")
+    if [ "${rows}" -ne 1 ] || [ "${columns}" -ne 10496 ]; then
+        echo "ERROR: ${file} has ${rows} rows and ${columns} columns" >&2
+        exit 10
+    fi
+done
+
+primary=$(tr -d '[:space:]' < PrimaryCount.csv)
+if [ "${primary}" != "${expected_primary}" ]; then
+    echo "ERROR: PrimaryCount=${primary}, expected=${expected_primary}" >&2
+    exit 11
+fi
+
+echo "Completed primary events: ${primary}"
+echo "End: $(date '+%F %T')"

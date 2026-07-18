@@ -54,7 +54,7 @@ def parse_args():
         ),
     )
     parser.add_argument("--cntstat-dir", type=str, default="./CntStat", help="Root directory of CntStat data.")
-    parser.add_argument("--output-root", type=str, default="./Figure_Dist_SC", help="Root directory of outputs.")
+    parser.add_argument("--output-root", type=str, default="./Results/Reconstruction/Figure_Dist_SC", help="Root directory of outputs.")
     parser.add_argument(
         "--device",
         type=str,

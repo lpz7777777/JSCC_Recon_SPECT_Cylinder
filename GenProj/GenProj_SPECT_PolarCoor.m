@@ -149,7 +149,8 @@ end
 writematrix(CntStat, cntstat_out);
 
 %% Plot
-img_cartesian_out = fullfile(repo_root, "img_cartesian", "GenProj_SPECT_img_cartesian.raw");
+img_cartesian_out = fullfile(repo_root, "Results", "Analysis", ...
+    "ReferenceImages", "GenProj_SPECT_img_cartesian.raw");
 if ~exist(fileparts(img_cartesian_out), "dir")
     mkdir(fileparts(img_cartesian_out));
 end

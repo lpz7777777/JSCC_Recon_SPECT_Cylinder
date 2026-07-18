@@ -48,10 +48,11 @@ Compton variants.
 ├── CntStat/                         # Generated projection data (per energy/phantom/count)
 ├── List/                            # Generated list-mode event data
 ├── GenProj/                         # MATLAB system-matrix forward projection scripts
-├── img_cartesian/                   # Cartesian-space reference images
-├── Figure/                          # Local reconstruction output figures
-├── Figure_Dist_JSCCSD/              # Distributed JSCCSD reconstruction output
-├── Figure_Dist_SC/                  # Distributed SC reconstruction output
+├── Results/                         # Local generated results (ignored by Git)
+│   ├── Reconstruction/              # Current JSCC/EHE/Geant4 reconstructions
+│   ├── Analysis/                    # CNR/CRC and calibration comparisons
+│   ├── Logs/                        # Archived local run logs
+│   └── Legacy/                      # Historical Figure* outputs
 ├── Auxiliary_Studies/               # Independent research projects
 │   ├── ComptonSystemMatrixPrototype/
 │   ├── CRCVAR_SinglePhoton/
@@ -418,7 +419,7 @@ subdirectory:
 
 ```matlab
 get_img_SC_MultiOutput_PolarCoor()
-get_img_SC_MultiOutput_PolarCoor("Figure_Local_SC_MultiOutput/<run-folder>")
+get_img_SC_MultiOutput_PolarCoor("Results/Reconstruction/Figure_Local_SC_MultiOutput/<run-folder>")
 ```
 
 The reader uses `run_manifest.json` rather than parsing the directory name. It
@@ -440,7 +441,7 @@ MATLAB entry point `compare_CNRCRC_JSCC_EHE_MultiOutput.m` reads those
 count-dependent runs and evaluates the energy-specific hot rods: 218 keV uses
 diameters 10/18/26 mm and 440 keV uses 14/22/30 mm. It writes common-scale
 CRC (`0..1`) and CNR (`0..15`) plots plus per-iteration CSV/MAT summaries under
-`Analysis_CNRCRC_JSCC_vs_EHE/`.
+`Results/Analysis/CNRCRC_JSCC_vs_EHE/`.
 
 Two Geant4 JSCC datasets (`1e9` and `1e10`) are installed separately from the
 GenProj data:
@@ -458,10 +459,12 @@ primary-energy column, so they must not be presented to a per-energy Compton
 pipeline as a pure 218 or pure 440 List. Full paths, counts, schema checks, and
 the current no-object-material limitation are recorded in
 `Geant4Sim/Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`.
-These installed files are marked as legacy diagnostic data because they were
-generated before `EventAction` scanned every crystal and classified CntStat
-and Compton List independently. Regenerate them with the corrected Geant4
-executable before quantitative use.
+The installed `1e9` and `1e10` files were replaced on 2026-07-16 with output
+from the corrected `EventAction`: it scans every crystal for each energy
+window and classifies Compton List events independently, so one event may
+contribute multiple CntStat bins and may also be present in List. The four
+CntStat matrices and all 40 List view files passed the schema and detector-ID
+checks recorded in the manifest. They supersede the earlier legacy datasets.
 
 #### Geant4 225Ac dual-gamma proxy
 
@@ -700,12 +703,12 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 ├── CntStat/                    # 生成的投影数据（按能量/体模/计数水平组织）
 ├── List/                       # 生成的 List 模式事件数据
 ├── GenProj/                    # MATLAB 系统矩阵前投影脚本
-├── img_cartesian/              # 笛卡尔坐标参考图像
-├── Figure/                     # 本地重建输出
-├── Figure_Dist_JSCCSD/         # 分布式 JSCCSD 重建输出
-├── Figure_Dist_SC/             # 分布式 SC 重建输出
+├── Results/                    # 本地生成结果（Git 忽略）
+│   ├── Reconstruction/         # 当前重建结果
+│   ├── Analysis/               # 定量分析与校正对比
+│   ├── Logs/                   # 历史运行日志
+│   └── Legacy/                 # 旧 Figure* 结果归档
 ├── Auxiliary_Studies/          # 辅助研究（与主重建独立）
-├── FreePath/                   # 自由程模拟（历史位置）
 ├── Reproduction/               # 完整复现指南
 ├── distributed/                # 分布式重建
 │   ├── python/                 #   Python 入口与重建核心
@@ -951,7 +954,7 @@ MATLAB 展示入口可接收运行目录或其 `Polar` 子目录：
 
 ```matlab
 get_img_SC_MultiOutput_PolarCoor()
-get_img_SC_MultiOutput_PolarCoor("Figure_Local_SC_MultiOutput/<run-folder>")
+get_img_SC_MultiOutput_PolarCoor("Results/Reconstruction/Figure_Local_SC_MultiOutput/<run-folder>")
 ```
 
 当前 JSCC 和 EHE 的双能响应均已完整生成：每个系统都包含 218 直接响应、440
@@ -963,7 +966,7 @@ bins，EHE 有 2312 个。
 `1e9:5000`、`1e10:10000`、`1e11:20000` 次迭代，每 50 次保存；EHE 三个计数
 水平都使用 100 次迭代，并改为每次迭代保存。`compare_CNRCRC_JSCC_EHE_MultiOutput.m`
 会自动读取这组配置，分别评价 218 keV 的 10/18/26 mm 热圆柱和 440 keV 的
-14/22/30 mm 热圆柱，在 `Analysis_CNRCRC_JSCC_vs_EHE/` 输出统一坐标范围的
+14/22/30 mm 热圆柱，在 `Results/Analysis/CNRCRC_JSCC_vs_EHE/` 输出统一坐标范围的
 CRC（0 到 1）、CNR（0 到 15）曲线以及逐迭代 CSV/MAT 汇总。
 
 目前已有两组由 Geant4 JSCC 工程实际模拟的 `1e9`、`1e10` 数据，和 GenProj

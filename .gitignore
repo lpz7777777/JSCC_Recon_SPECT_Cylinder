@@ -41,6 +41,12 @@ Analysis_CNRCRC_JSCC_vs_EHE/
 *.pid
 *.log
 
+# Organized local results. Keep only the directory guide in Git.
+Results/**
+!Results/README.md
+FG4*/
+FactorCorrectionComparison*/
+
 # Large/generated simulation artifacts
 *.sysmat
 SysMat*
@@ -59,6 +65,10 @@ tmp/
 *.pdb
 Geant4Sim/Geant4Code/out/
 Geant4Sim/**/build/
+Geant4Sim/**/build*/
+Geant4Sim/run/
+Geant4Sim/Macro/UniformFovCntStat_CenterPoint/
+Geant4Sim/Macro/RadialPointResponse_JSCC/radial_r*.mac
 Geant4Sim/Geant4Code_EHE/build/
 Geant4Sim/Geant4Code_EHE/out/
 Geant4Sim/Geant4Code_EHE/CntStat_*.csv
@@ -72,3 +82,5 @@ Auxiliary_Studies/**/PEGen_CircularHole
 Auxiliary_Studies/**/ScatterGen_CircularHole
 Auxiliary_Studies/**/ScatterGen_Collimator
 Auxiliary_Studies/**/ScatterGen_Crystal
+*.lib
+*.exp

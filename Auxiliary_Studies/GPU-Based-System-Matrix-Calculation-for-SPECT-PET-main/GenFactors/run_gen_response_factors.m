@@ -1,4 +1,4 @@
-function results = run_gen_response_factors(case_selectors)
+function results = run_gen_response_factors(case_selectors, output_suffix, grid_options)
 %RUN_GEN_RESPONSE_FACTORS Generate the six JSCC/EHE dual-energy responses.
 %
 % Final responses:
@@ -10,10 +10,22 @@ function results = run_gen_response_factors(case_selectors)
 % corresponding project-root Factors directory is replaced.
 % Optional selectors use "<system>/<response>", for example:
 %   run_gen_response_factors("SPECTEHENaI/C440to218")
+%   run_gen_response_factors(["JSCC/A218", "JSCC/A440", "JSCC/C440to218"], ...
+%       "CenterPoint", struct('include_center_point', true))
 
     if nargin < 1
         case_selectors = strings(0, 1);
     end
+    if nargin < 2 || isempty(output_suffix)
+        output_suffix = "";
+    end
+    if nargin < 3 || isempty(grid_options)
+        grid_options = struct('include_center_point', false);
+    end
+    if ~isfield(grid_options, 'include_center_point')
+        grid_options.include_center_point = false;
+    end
+    grid_options.include_center_point = logical(grid_options.include_center_point);
 
     tool_dir = fileparts(mfilename('fullpath'));
     engine_root = fileparts(tool_dir);
@@ -22,7 +34,7 @@ function results = run_gen_response_factors(case_selectors)
     factors_root = fullfile(project_root, 'Factors');
     rotate_num = 20;
 
-    all_cases = build_cases(runs_root, factors_root, rotate_num);
+    all_cases = build_cases(runs_root, factors_root, rotate_num, output_suffix);
     cases = select_cases(all_cases, case_selectors);
     require_case_inputs(cases);
     results = repmat(empty_result_summary(), numel(cases), 1);
@@ -39,9 +51,9 @@ function results = run_gen_response_factors(case_selectors)
         cleanup_staging = onCleanup(@() remove_tree_if_exists(staging_dir));
 
         gen_factors(item.source_energy_keV, item.sysmat_file, ...
-            item.params_detector_file, staging_dir, '');
-        summary = validate_factor_dir(staging_dir, item, rotate_num);
-        write_factor_manifest(staging_dir, item, summary, rotate_num);
+            item.params_detector_file, staging_dir, '', item.calibration, grid_options);
+        summary = validate_factor_dir(staging_dir, item, rotate_num, grid_options);
+        write_factor_manifest(staging_dir, item, summary, rotate_num, grid_options, output_suffix);
         install_factor_dir(staging_dir, item.output_dir);
         clear cleanup_staging;
 
@@ -50,7 +62,7 @@ function results = run_gen_response_factors(case_selectors)
         fprintf('Installed validated Factors: %s\n', item.output_dir);
     end
 
-    available = all_cases(arrayfun(@(item) isfolder(item.output_dir), all_cases));
+    available = cases(arrayfun(@(item) isfolder(item.output_dir), cases));
     validate_response_geometry(available);
     fprintf('\nSelected response Factors generated and available cross-geometry checks passed.\n');
 end
@@ -112,6 +124,7 @@ function summary = empty_result_summary()
         'response', '', ...
         'detector_num', 0, ...
         'pixel_num', 0, ...
+        'points_per_layer', 0, ...
         'rotate_num', 0, ...
         'sysmat_polar_bytes', 0, ...
         'sysmat_tmp_bytes', 0, ...
@@ -119,7 +132,7 @@ function summary = empty_result_summary()
 end
 
 
-function cases = build_cases(runs_root, factors_root, rotate_num)
+function cases = build_cases(runs_root, factors_root, rotate_num, output_suffix)
     combined_name = 'SysMat_withScatter_shift_0.000000_0.000000_0.000000.sysmat';
     cross_name = 'Scatter_SysMat_shift_0.000000_0.000000_0.000000.sysmat';
 
@@ -155,13 +168,16 @@ function cases = build_cases(runs_root, factors_root, rotate_num)
             'scatter_only_cross_window', 'photopeak_plus_scatter');
         cases(idx).sysmat_file = fullfile(run_dir, specs{idx, 4});
         cases(idx).params_detector_file = fullfile(run_dir, 'Params_Detector.dat');
+        output_name = append_output_suffix(output_name, output_suffix);
         cases(idx).output_name = output_name;
         cases(idx).output_dir = fullfile(factors_root, output_name);
+        cases(idx).calibration = response_calibration( ...
+            cases(idx).system_tag, cases(idx).response);
     end
 end
 
 
-function summary = validate_factor_dir(factor_dir, item, rotate_num)
+function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_options)
     detector = readmatrix(fullfile(factor_dir, 'Detector.csv'));
     coor = readmatrix(fullfile(factor_dir, 'coor_polar_full.csv'));
     rotmat = readmatrix(fullfile(factor_dir, 'RotMat_full.csv'));
@@ -169,9 +185,11 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num)
     detector_num = size(detector, 1);
     pixel_num = size(coor, 1);
 
-    if pixel_num ~= 25600
+    expected_points_per_layer = 1280 + double(grid_options.include_center_point);
+    expected_pixel_num = expected_points_per_layer * 20;
+    if pixel_num ~= expected_pixel_num
         error('run_gen_response_factors:BadPixelCount', ...
-            '%s generated %d pixels; expected 25600.', factor_dir, pixel_num);
+            '%s generated %d pixels; expected %d.', factor_dir, pixel_num, expected_pixel_num);
     end
     if ~isequal(size(rotmat), [pixel_num, rotate_num]) || ...
             ~isequal(size(rotmat_inv), [pixel_num, rotate_num])
@@ -209,13 +227,14 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num)
     summary.response = item.response;
     summary.detector_num = detector_num;
     summary.pixel_num = pixel_num;
+    summary.points_per_layer = expected_points_per_layer;
     summary.rotate_num = rotate_num;
     summary.sysmat_polar_bytes = expected_polar_bytes;
     summary.sysmat_tmp_bytes = expected_cart_bytes;
 end
 
 
-function write_factor_manifest(factor_dir, item, summary, rotate_num)
+function write_factor_manifest(factor_dir, item, summary, rotate_num, grid_options, output_suffix)
     input_info = dir(item.sysmat_file);
     manifest = struct();
     manifest.format_version = 1;
@@ -230,10 +249,17 @@ function write_factor_manifest(factor_dir, item, summary, rotate_num)
     manifest.rotate_num = rotate_num;
     manifest.detector_num = summary.detector_num;
     manifest.pixel_num = summary.pixel_num;
+    manifest.grid = struct( ...
+        'include_center_point', logical(grid_options.include_center_point), ...
+        'points_per_layer', summary.points_per_layer, ...
+        'center_point_index', ternary(grid_options.include_center_point, 1, 0), ...
+        'output_suffix', char(string(output_suffix)));
     manifest.input_run = item.run_name;
     manifest.input_matrix = item.sysmat_file;
     manifest.input_matrix_bytes = double(input_info.bytes);
     manifest.cross_talk_usage = cross_talk_usage(item.response);
+    manifest.calibration = item.calibration;
+    manifest.branching_ratio_included = false;
     manifest.generated_at = char(datetime('now', 'Format', 'yyyy-MM-dd''T''HH:mm:ss'));
 
     text_value = jsonencode(manifest, 'PrettyPrint', true);
@@ -244,6 +270,16 @@ function write_factor_manifest(factor_dir, item, summary, rotate_num)
     cleanup = onCleanup(@() fclose(file_id));
     fwrite(file_id, text_value, 'char');
     fwrite(file_id, newline, 'char');
+end
+
+
+function output_name = append_output_suffix(output_name, output_suffix)
+    suffix = strip(string(output_suffix));
+    suffix = strip(suffix, 'left', '_');
+    if strlength(suffix) > 0
+        output_name = output_name + "_" + suffix;
+    end
+    output_name = char(output_name);
 end
 
 
@@ -314,6 +350,44 @@ function value = cross_talk_usage(response)
         value = 'Use only as the additive 440-source contribution in the 218-window forward model.';
     else
         value = 'Direct photopeak-window response.';
+    end
+end
+
+
+function calibration = response_calibration(system_tag, response)
+    calibration = struct();
+    calibration.enabled = false;
+    calibration.name = 'none';
+    calibration.scope = 'none';
+    calibration.source = '';
+    calibration.layer_y_mm = [];
+    calibration.layer_scale = [];
+    calibration.expected_active_rows = [];
+    calibration.center_point_only = false;
+
+    if ~strcmp(system_tag, 'JSCC')
+        return;
+    end
+
+    calibration.enabled = true;
+    calibration.name = ['JSCC_' response '_G4Center_LayerScale_20260716'];
+    calibration.scope = 'active_detector_rows';
+    calibration.source = [ ...
+        '1e9 Geant4 center-point response; detector-local position-integrated matrices'];
+    calibration.layer_y_mm = [30, 60, 90, 120];
+    calibration.expected_active_rows = [512, 768, 1024, 8192];
+    calibration.center_point_only = true;
+
+    switch response
+        case 'A218'
+            calibration.layer_scale = [0.8740232, 0.8793926, 0.8719679, 0.8708826];
+        case 'A440'
+            calibration.layer_scale = [0.8720313, 0.8912363, 0.8847924, 0.8691287];
+        case 'C440to218'
+            calibration.layer_scale = [1.1411090, 1.1636691, 1.2201934, 1.2372030];
+        otherwise
+            error('run_gen_response_factors:UnknownJSCCCalibration', ...
+                'No JSCC calibration is defined for response %s.', response);
     end
 end
 

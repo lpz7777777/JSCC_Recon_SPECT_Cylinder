@@ -1,9 +1,9 @@
 {
   "dataset": "ContrastPhantom_DualEnergy_10_30_240_30_225Ac",
   "producer": "Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m + Geant4Sim/Geant4Code",
-  "classification_version": "legacy_exclusive_max_crystal_v1",
-  "regeneration_required": true,
-  "legacy_warning": "Generated before independent multi-crystal CntStat and Compton List classification. Retain only for diagnosis and regenerate before quantitative use.",
+  "classification_version": "independent_multicrystal_cntstat_and_list_v2",
+  "installed_at": "2026-07-16",
+  "regeneration_required": false,
   "detector": "JSCC GAGG",
   "data_namespace_suffix": "_Geant4JSCC",
   "rotate_num": 20,
@@ -18,14 +18,14 @@
   },
   "count_levels": {
     "1e9": {
-      "cntstat_218_events": 4325051,
-      "cntstat_440_events": 1963834,
-      "list_events": 1556772
+      "cntstat_218_events": 4649413,
+      "cntstat_440_events": 1965176,
+      "list_events": 1984776
     },
     "1e10": {
-      "cntstat_218_events": 43200872,
-      "cntstat_440_events": 19641597,
-      "list_events": 15564282
+      "cntstat_218_events": 46478635,
+      "cntstat_440_events": 19641521,
+      "list_events": 19856413
     }
   },
   "cntstat": {
@@ -44,10 +44,16 @@
     "warning": "This is a mixed-source List. Do not install it as a per-energy 218 or 440 List."
   },
   "validation": {
+    "validated_at": "2026-07-16",
+    "cntstat_shape": [20, 10496],
     "cntstat_nonnegative_integer": true,
+    "cntstat_finite": true,
+    "list_view_files_per_count_level": 20,
     "list_column_count": 5,
+    "list_finite": true,
     "list_detector_id_range": [1, 10496],
-    "list_flag_values": [1]
+    "list_flag_values": [1],
+    "list_energy_range_MeV": [0.00100001, 0.551135]
   },
   "geometry_limitation": "The current GPS cylinders define source sampling volumes, but the water/PMMA contrast-phantom material volume is disabled; object attenuation and object scatter are not included."
 }

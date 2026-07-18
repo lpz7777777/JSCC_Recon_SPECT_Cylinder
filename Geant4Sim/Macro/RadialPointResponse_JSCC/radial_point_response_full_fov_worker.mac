@@ -1,0 +1,2226 @@
+# JSCC radial point-response study: all configurations
+# One /run/beamOn per block. CSV row order follows radial_point_manifest.csv.
+# Run this macro once in one clean directory; do not append a second run.
+# Exactly one GPS source is reused and overwritten for every block.
+
+# row 1: radial_r000_t000_E218 | factor=(0.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 2: radial_r000_t000_E440 | factor=(0.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 3: radial_r006_t000_E218 | factor=(6.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 6.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 4: radial_r006_t000_E440 | factor=(6.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 6.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 5: radial_r006_t090_E218 | factor=(0.0000, 6.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -239.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 6: radial_r006_t090_E440 | factor=(0.0000, 6.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -239.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 7: radial_r006_t180_E218 | factor=(-6.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -6.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 8: radial_r006_t180_E440 | factor=(-6.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -6.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 9: radial_r006_t270_E218 | factor=(0.0000, -6.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -251.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 10: radial_r006_t270_E440 | factor=(0.0000, -6.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -251.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 11: radial_r012_t000_E218 | factor=(12.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 12.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 12: radial_r012_t000_E440 | factor=(12.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 12.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 13: radial_r012_t090_E218 | factor=(0.0000, 12.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -233.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 14: radial_r012_t090_E440 | factor=(0.0000, 12.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -233.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 15: radial_r012_t180_E218 | factor=(-12.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -12.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 16: radial_r012_t180_E440 | factor=(-12.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -12.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 17: radial_r012_t270_E218 | factor=(0.0000, -12.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -257.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 18: radial_r012_t270_E440 | factor=(0.0000, -12.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -257.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 19: radial_r018_t000_E218 | factor=(18.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 18.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 20: radial_r018_t000_E440 | factor=(18.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 18.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 21: radial_r018_t090_E218 | factor=(0.0000, 18.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -227.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 22: radial_r018_t090_E440 | factor=(0.0000, 18.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -227.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 23: radial_r018_t180_E218 | factor=(-18.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -18.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 24: radial_r018_t180_E440 | factor=(-18.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -18.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 25: radial_r018_t270_E218 | factor=(0.0000, -18.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -263.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 26: radial_r018_t270_E440 | factor=(0.0000, -18.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -263.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 27: radial_r024_t000_E218 | factor=(24.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 24.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 28: radial_r024_t000_E440 | factor=(24.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 24.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 29: radial_r024_t090_E218 | factor=(0.0000, 24.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -221.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 30: radial_r024_t090_E440 | factor=(0.0000, 24.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -221.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 31: radial_r024_t180_E218 | factor=(-24.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -24.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 32: radial_r024_t180_E440 | factor=(-24.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -24.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 33: radial_r024_t270_E218 | factor=(0.0000, -24.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -269.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 34: radial_r024_t270_E440 | factor=(0.0000, -24.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -269.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 35: radial_r030_t000_E218 | factor=(30.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 30.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 36: radial_r030_t000_E440 | factor=(30.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 30.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 37: radial_r030_t090_E218 | factor=(0.0000, 30.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -215.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 38: radial_r030_t090_E440 | factor=(0.0000, 30.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -215.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 39: radial_r030_t180_E218 | factor=(-30.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -30.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 40: radial_r030_t180_E440 | factor=(-30.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -30.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 41: radial_r030_t270_E218 | factor=(0.0000, -30.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -275.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 42: radial_r030_t270_E440 | factor=(0.0000, -30.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -275.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 43: radial_r036_t000_E218 | factor=(36.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 36.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 44: radial_r036_t000_E440 | factor=(36.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 36.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 45: radial_r036_t090_E218 | factor=(0.0000, 36.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -209.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 46: radial_r036_t090_E440 | factor=(0.0000, 36.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -209.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 47: radial_r036_t180_E218 | factor=(-36.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -36.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 48: radial_r036_t180_E440 | factor=(-36.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -36.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 49: radial_r036_t270_E218 | factor=(0.0000, -36.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -281.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 50: radial_r036_t270_E440 | factor=(0.0000, -36.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -281.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 51: radial_r042_t000_E218 | factor=(42.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 42.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 52: radial_r042_t000_E440 | factor=(42.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 42.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 53: radial_r042_t090_E218 | factor=(0.0000, 42.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -203.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 54: radial_r042_t090_E440 | factor=(0.0000, 42.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -203.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 55: radial_r042_t180_E218 | factor=(-42.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -42.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 56: radial_r042_t180_E440 | factor=(-42.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -42.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 57: radial_r042_t270_E218 | factor=(0.0000, -42.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -287.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 58: radial_r042_t270_E440 | factor=(0.0000, -42.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -287.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 59: radial_r048_t000_E218 | factor=(48.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 48.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 60: radial_r048_t000_E440 | factor=(48.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 48.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 61: radial_r048_t090_E218 | factor=(0.0000, 48.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -197.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 62: radial_r048_t090_E440 | factor=(0.0000, 48.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -197.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 63: radial_r048_t180_E218 | factor=(-48.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -48.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 64: radial_r048_t180_E440 | factor=(-48.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -48.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 65: radial_r048_t270_E218 | factor=(0.0000, -48.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -293.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 66: radial_r048_t270_E440 | factor=(0.0000, -48.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -293.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 67: radial_r054_t000_E218 | factor=(54.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 54.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 68: radial_r054_t000_E440 | factor=(54.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 54.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 69: radial_r054_t090_E218 | factor=(0.0000, 54.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -191.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 70: radial_r054_t090_E440 | factor=(0.0000, 54.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -191.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 71: radial_r054_t180_E218 | factor=(-54.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -54.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 72: radial_r054_t180_E440 | factor=(-54.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -54.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 73: radial_r054_t270_E218 | factor=(0.0000, -54.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -299.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 74: radial_r054_t270_E440 | factor=(0.0000, -54.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -299.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 75: radial_r060_t000_E218 | factor=(60.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 60.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 76: radial_r060_t000_E440 | factor=(60.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 60.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 77: radial_r060_t090_E218 | factor=(0.0000, 60.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -185.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 78: radial_r060_t090_E440 | factor=(0.0000, 60.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -185.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 79: radial_r060_t180_E218 | factor=(-60.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -60.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 80: radial_r060_t180_E440 | factor=(-60.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -60.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 81: radial_r060_t270_E218 | factor=(0.0000, -60.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -305.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 82: radial_r060_t270_E440 | factor=(0.0000, -60.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -305.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 83: radial_r066_t000_E218 | factor=(66.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 66.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 84: radial_r066_t000_E440 | factor=(66.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 66.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 85: radial_r066_t090_E218 | factor=(0.0000, 66.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -179.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 86: radial_r066_t090_E440 | factor=(0.0000, 66.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -179.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 87: radial_r066_t180_E218 | factor=(-66.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -66.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 88: radial_r066_t180_E440 | factor=(-66.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -66.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 89: radial_r066_t270_E218 | factor=(0.0000, -66.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -311.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 90: radial_r066_t270_E440 | factor=(0.0000, -66.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -311.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 91: radial_r072_t000_E218 | factor=(72.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 72.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 92: radial_r072_t000_E440 | factor=(72.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 72.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 93: radial_r072_t090_E218 | factor=(0.0000, 72.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -173.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 94: radial_r072_t090_E440 | factor=(0.0000, 72.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -173.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 95: radial_r072_t180_E218 | factor=(-72.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -72.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 96: radial_r072_t180_E440 | factor=(-72.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -72.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 97: radial_r072_t270_E218 | factor=(0.0000, -72.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -317.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 98: radial_r072_t270_E440 | factor=(0.0000, -72.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -317.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 99: radial_r078_t000_E218 | factor=(78.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 78.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 100: radial_r078_t000_E440 | factor=(78.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 78.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 101: radial_r078_t090_E218 | factor=(0.0000, 78.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -167.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 102: radial_r078_t090_E440 | factor=(0.0000, 78.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -167.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 103: radial_r078_t180_E218 | factor=(-78.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -78.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 104: radial_r078_t180_E440 | factor=(-78.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -78.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 105: radial_r078_t270_E218 | factor=(0.0000, -78.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -323.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 106: radial_r078_t270_E440 | factor=(0.0000, -78.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -323.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 107: radial_r084_t000_E218 | factor=(84.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 84.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 108: radial_r084_t000_E440 | factor=(84.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 84.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 109: radial_r084_t090_E218 | factor=(0.0000, 84.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -161.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 110: radial_r084_t090_E440 | factor=(0.0000, 84.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -161.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 111: radial_r084_t180_E218 | factor=(-84.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -84.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 112: radial_r084_t180_E440 | factor=(-84.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -84.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 113: radial_r084_t270_E218 | factor=(0.0000, -84.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -329.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 114: radial_r084_t270_E440 | factor=(0.0000, -84.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -329.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 115: radial_r090_t000_E218 | factor=(90.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 90.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 116: radial_r090_t000_E440 | factor=(90.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 90.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 117: radial_r090_t090_E218 | factor=(0.0000, 90.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -155.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 118: radial_r090_t090_E440 | factor=(0.0000, 90.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -155.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 119: radial_r090_t180_E218 | factor=(-90.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -90.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 120: radial_r090_t180_E440 | factor=(-90.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -90.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 121: radial_r090_t270_E218 | factor=(0.0000, -90.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -335.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 122: radial_r090_t270_E440 | factor=(0.0000, -90.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -335.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 123: radial_r096_t000_E218 | factor=(96.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 96.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 124: radial_r096_t000_E440 | factor=(96.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 96.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 125: radial_r096_t090_E218 | factor=(0.0000, 96.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -149.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 126: radial_r096_t090_E440 | factor=(0.0000, 96.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -149.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 127: radial_r096_t180_E218 | factor=(-96.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -96.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 128: radial_r096_t180_E440 | factor=(-96.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -96.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 129: radial_r096_t270_E218 | factor=(0.0000, -96.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -341.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 130: radial_r096_t270_E440 | factor=(0.0000, -96.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -341.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 131: radial_r102_t000_E218 | factor=(102.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 102.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 132: radial_r102_t000_E440 | factor=(102.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 102.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 133: radial_r102_t090_E218 | factor=(0.0000, 102.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -143.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 134: radial_r102_t090_E440 | factor=(0.0000, 102.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -143.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 135: radial_r102_t180_E218 | factor=(-102.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -102.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 136: radial_r102_t180_E440 | factor=(-102.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -102.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 137: radial_r102_t270_E218 | factor=(0.0000, -102.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -347.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 138: radial_r102_t270_E440 | factor=(0.0000, -102.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -347.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 139: radial_r108_t000_E218 | factor=(108.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 108.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 140: radial_r108_t000_E440 | factor=(108.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 108.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 141: radial_r108_t090_E218 | factor=(0.0000, 108.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -137.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 142: radial_r108_t090_E440 | factor=(0.0000, 108.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -137.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 143: radial_r108_t180_E218 | factor=(-108.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -108.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 144: radial_r108_t180_E440 | factor=(-108.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -108.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 145: radial_r108_t270_E218 | factor=(0.0000, -108.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -353.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 146: radial_r108_t270_E440 | factor=(0.0000, -108.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -353.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 147: radial_r114_t000_E218 | factor=(114.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 114.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 148: radial_r114_t000_E440 | factor=(114.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 114.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 149: radial_r114_t090_E218 | factor=(0.0000, 114.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -131.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 150: radial_r114_t090_E440 | factor=(0.0000, 114.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -131.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 151: radial_r114_t180_E218 | factor=(-114.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -114.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 152: radial_r114_t180_E440 | factor=(-114.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -114.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 153: radial_r114_t270_E218 | factor=(0.0000, -114.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -359.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 154: radial_r114_t270_E440 | factor=(0.0000, -114.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -359.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 155: radial_r120_t000_E218 | factor=(120.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 120.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 156: radial_r120_t000_E440 | factor=(120.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 120.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 157: radial_r120_t090_E218 | factor=(0.0000, 120.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -125.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 158: radial_r120_t090_E440 | factor=(0.0000, 120.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -125.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 159: radial_r120_t180_E218 | factor=(-120.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -120.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 160: radial_r120_t180_E440 | factor=(-120.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -120.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 161: radial_r120_t270_E218 | factor=(0.0000, -120.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -365.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 162: radial_r120_t270_E440 | factor=(0.0000, -120.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -365.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 163: radial_r126_t000_E218 | factor=(126.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 126.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 164: radial_r126_t000_E440 | factor=(126.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 126.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 165: radial_r126_t090_E218 | factor=(0.0000, 126.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -119.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 166: radial_r126_t090_E440 | factor=(0.0000, 126.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -119.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 167: radial_r126_t180_E218 | factor=(-126.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -126.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 168: radial_r126_t180_E440 | factor=(-126.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -126.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 169: radial_r126_t270_E218 | factor=(0.0000, -126.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -371.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 170: radial_r126_t270_E440 | factor=(0.0000, -126.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -371.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 171: radial_r132_t000_E218 | factor=(132.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 132.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 172: radial_r132_t000_E440 | factor=(132.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 132.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 173: radial_r132_t090_E218 | factor=(0.0000, 132.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -113.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 174: radial_r132_t090_E440 | factor=(0.0000, 132.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -113.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 175: radial_r132_t180_E218 | factor=(-132.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -132.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 176: radial_r132_t180_E440 | factor=(-132.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -132.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 177: radial_r132_t270_E218 | factor=(0.0000, -132.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -377.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 178: radial_r132_t270_E440 | factor=(0.0000, -132.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -377.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 179: radial_r138_t000_E218 | factor=(138.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 138.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 180: radial_r138_t000_E440 | factor=(138.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 138.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 181: radial_r138_t090_E218 | factor=(0.0000, 138.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -107.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 182: radial_r138_t090_E440 | factor=(0.0000, 138.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -107.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 183: radial_r138_t180_E218 | factor=(-138.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -138.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 184: radial_r138_t180_E440 | factor=(-138.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -138.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 185: radial_r138_t270_E218 | factor=(0.0000, -138.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -383.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 186: radial_r138_t270_E440 | factor=(0.0000, -138.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -383.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 187: radial_r144_t000_E218 | factor=(144.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 144.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 188: radial_r144_t000_E440 | factor=(144.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 144.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 189: radial_r144_t090_E218 | factor=(0.0000, 144.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -101.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 190: radial_r144_t090_E440 | factor=(0.0000, 144.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -101.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 191: radial_r144_t180_E218 | factor=(-144.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -144.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 192: radial_r144_t180_E440 | factor=(-144.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -144.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 193: radial_r144_t270_E218 | factor=(0.0000, -144.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -389.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 194: radial_r144_t270_E440 | factor=(0.0000, -144.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -389.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 195: radial_r150_t000_E218 | factor=(150.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 150.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 196: radial_r150_t000_E440 | factor=(150.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 150.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 197: radial_r150_t090_E218 | factor=(0.0000, 150.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -95.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 198: radial_r150_t090_E440 | factor=(0.0000, 150.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -95.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 199: radial_r150_t180_E218 | factor=(-150.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre -150.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 200: radial_r150_t180_E440 | factor=(-150.0000, 0.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre -150.0000 -245.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 201: radial_r150_t270_E218 | factor=(0.0000, -150.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 218 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -395.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000
+
+# row 202: radial_r150_t270_E440 | factor=(0.0000, -150.0000, 0.0000) mm
+/gps/particle gamma
+/gps/number 1
+/gps/energy 440 keV
+/gps/pos/type Point
+/gps/pos/centre 0.0000 -395.0000 0.0000 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+/run/beamOn 1000000

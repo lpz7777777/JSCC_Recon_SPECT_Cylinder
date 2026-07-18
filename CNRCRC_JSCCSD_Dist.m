@@ -29,7 +29,7 @@ legend_font_size = 18;
 
 C = 6;
 
-folderPath = uigetdir("./Figure_Dist_JSCCSD/");
+folderPath = uigetdir("./Results/Reconstruction/Figure_Dist_JSCCSD/");
 if isequal(folderPath, 0)
     return
 end

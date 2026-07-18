@@ -21,9 +21,9 @@ C = 6;
 folderList = {};
 while true
     if isempty(folderList)
-        folderPath = uigetdir("./Figure_Dist_SC/", "Select run folder (Cancel to finish)");
+        folderPath = uigetdir("./Results/Reconstruction/Figure_Dist_SC/", "Select run folder (Cancel to finish)");
     else
-        folderPath = uigetdir("./Figure_Dist_SC/", ...
+        folderPath = uigetdir("./Results/Reconstruction/Figure_Dist_SC/", ...
             sprintf("Select run folder #%d (Cancel to finish)", numel(folderList) + 1));
     end
     if isequal(folderPath, 0)

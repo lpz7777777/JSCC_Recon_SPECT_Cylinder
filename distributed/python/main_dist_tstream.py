@@ -76,7 +76,7 @@ def parse_args():
     parser.add_argument("--cntstat-dir", type=str, default="./CntStat")
     parser.add_argument("--list-dir", type=str, default="./List")
     parser.add_argument("--t-shard-root", type=str, default="./TShards_Dist")
-    parser.add_argument("--output-root", type=str, default="./Figure_Dist_TStream")
+    parser.add_argument("--output-root", type=str, default="./Results/Reconstruction/Figure_Dist_TStream")
     parser.add_argument("--prepare-t-only", action="store_true")
     parser.add_argument("--skip-t-prepare", action="store_true")
     parser.add_argument("--force-rebuild-t", action="store_true")

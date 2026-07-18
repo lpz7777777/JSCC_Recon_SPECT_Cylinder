@@ -195,7 +195,7 @@ CntStat/440keV_RotateNum20/CntStat_ContrastPhantom_DualEnergy_10_30_240_30_225Ac
 
 ### 已整理的 Geant4 双能 Contrast Phantom 数据
 
-2026-07-15 已将 `ContrastPhantom_DualEnergy_Rotate_3D.m` 生成 macro 后在
+2026-07-16 已将 `ContrastPhantom_DualEnergy_Rotate_3D.m` 生成 macro 后在
 `Geant4Code` 实际运行得到的 `1e9` 和 `1e10` 数据整理到独立命名空间，避免覆盖
 GenProj 生成的同名数据：
 
@@ -217,13 +217,15 @@ List/218-440keV_RotateNum20_Geant4JSCC/
 
 | 初级计数水平 | 218 能窗 CntStat | 440 能窗 CntStat | List 行数 |
 | ---: | ---: | ---: | ---: |
-| `1e9` | 4,325,051 | 1,963,834 | 1,556,772 |
-| `1e10` | 43,200,872 | 19,641,597 | 15,564,282 |
+| `1e9` | 4,649,413 | 1,965,176 | 1,984,776 |
+| `1e10` | 46,478,635 | 19,641,521 | 19,856,413 |
 
-**状态说明：这两组文件是 legacy 诊断数据，需要重新模拟。** 它们生成时
-`EventAction` 仍采用“只给最高能量晶体计数，命中 218/440 能窗后立即返回、不再
-判断 List”的旧逻辑。当前代码已改为遍历全部晶体，并让 CntStat 与 List 独立、可
-同时记录。因此上表数据可用于复现旧结果，但不能作为修复后的定量 Geant4 数据。
+**状态说明：这两组文件已由修正后的 Geant4 结果替换。** 当前 `EventAction`
+遍历全部晶体，并让 CntStat 能窗判断与 Compton List 分类彼此独立；同一个 event
+可以给多个 CntStat bin 计数，也可以同时写入 List。四个 CntStat 和 40 个 List
+视角文件已通过尺寸、有限性、非负性、五列 schema、晶体编号和 flag 检查。它们
+取代了此前的 legacy 数据；详细计数见
+`Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`。
 
 每个 List 数据集有 20 个视角文件，固定 5 列，探测器编号范围为 `1..10496`，
 flag 均为 1。必须注意：macro 的每个 event 从混合 218/440 GPS 源中选取一个
@@ -238,7 +240,7 @@ C:\ProgramData\anaconda3\envs\pytorch\python.exe `
   --count-levels 1e9 1e10 `
   --cntstat-dir-suffix _Geant4JSCC `
   --single-sc-iter 5000 --single-sc-save-step 50 `
-  --output-root ./Figure_Local_SC_MultiOutput_Geant4JSCC
+  --output-root ./Results/Reconstruction/Figure_Local_SC_MultiOutput_Geant4JSCC
 ```
 
 不要同时设置 `--factor-dir-suffix _Geant4JSCC`；不存在这样的 Factors，这批数据
