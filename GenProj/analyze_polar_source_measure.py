@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Audit the measure represented by the nonuniform polar source grid.
 
-The system-matrix columns are point-source responses. Consequently, the
-forward-model unknown is integrated activity per polar cell, not activity
-density. A physically uniform source therefore has x_j proportional to the
-physical volume represented by sample j.
+Raw point-response matrices map integrated activity per polar cell, so a
+physically uniform source has x_j proportional to the represented cell volume.
+Production density-basis Factors already include that volume in each matrix
+column and instead map a uniform activity-density vector. This audit detects
+the basis from ``factor_manifest.json`` and avoids applying the volume twice.
 
 This script is intentionally analysis-only. It does not modify Factors,
 CntStat, or reconstruction outputs.
@@ -24,7 +25,7 @@ import numpy as np
 
 DEFAULT_FACTOR_DIR_NAME = "218keV_RotateNum20"
 DEFAULT_RECON_RELATIVE = Path(
-    "Results/R/V4L/"
+    "Results/R/V4PV/"
     "ME_R20_E218-440_Ddd7b568a_C1e10_DS1.0_O1_SI2000_XTALK_BG1_N6.61e7"
 )
 
@@ -652,6 +653,10 @@ def main() -> None:
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    with (factor_dir / "factor_manifest.json").open("r", encoding="utf-8") as handle:
+        factor_manifest = json.load(handle)
+    maps_activity_density = bool(factor_manifest.get("maps_activity_density", False))
+
     coordinates = load_coordinates(factor_dir)
     geometry = build_cell_geometry(coordinates)
     overlap = centered_cylinder_overlap(
@@ -700,6 +705,22 @@ def main() -> None:
         geometry["z_upper"][0] - geometry["z_lower"][0]
     )
     interior = radii <= args.profile_max_radius_mm
+    if maps_activity_density:
+        interpretation = {
+            "matrix_column": "point-response column multiplied by represented polar-cell volume in mm3",
+            "reconstruction_unknown": "emitted activity density per mm3",
+            "uniform_physical_density": "rho_j is constant inside a uniform source",
+            "density_display": "display reconstructed rho_j directly; do not divide by cell volume",
+            "uniform_fov_geant4_study": "physical uniform volume cylinder with matched support and materials",
+        }
+    else:
+        interpretation = {
+            "matrix_column": "detection probability per emitted photon at one polar sample",
+            "reconstruction_unknown": "integrated emitted activity per polar cell",
+            "uniform_physical_density": "x_j proportional to polar-cell overlap volume",
+            "density_display": "divide reconstructed x_j by full polar-cell volume before interpolation",
+            "uniform_fov_geant4_study": "weight polar samples by represented volume to model a uniform cylinder",
+        }
     summary = {
         "factor_dir": str(factor_dir),
         "reconstruction_dir": str(reconstruction_dir),
@@ -726,13 +747,8 @@ def main() -> None:
             "r42_mm3": float(volume_ring[np.where(radii == 42.0)[0][0]]),
             "r108_mm3": float(volume_ring[np.where(radii == 108.0)[0][0]]),
         },
-        "interpretation": {
-            "matrix_column": "detection probability per emitted photon at one polar sample",
-            "reconstruction_unknown": "integrated emitted activity per polar cell",
-            "uniform_physical_density": "x_j proportional to polar-cell overlap volume",
-            "density_display": "divide reconstructed x_j by full polar-cell volume before interpolation",
-            "uniform_fov_geant4_study": "equal-weight polar point array, not a uniform volume cylinder",
-        },
+        "maps_activity_density": maps_activity_density,
+        "interpretation": interpretation,
         "source_model_diagnostics": source_model_diagnostics,
         "existing_reconstruction_metrics": reconstruction_metrics,
         "projection_comparison": projection_comparison,
