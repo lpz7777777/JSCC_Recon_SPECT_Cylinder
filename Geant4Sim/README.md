@@ -1,5 +1,64 @@
 # Geant4Sim
 
+## Polar-grid source measure
+
+`GenerateUniformFovCntStatMacros.m` emits equal numbers of photons from every
+polar sample. It is an equal-weight point-array detector-response experiment,
+not a physically uniform cylinder. In contrast,
+`ContrastPhantom_DualEnergy_Rotate_3D.m` uses Geant4 GPS volume cylinders and
+is uniform per physical volume. Comparisons against the latter require polar
+cell-volume/overlap weighting in GenProj and density-aware reconstruction
+display. See `../GenProj/POLAR_SOURCE_MEASURE.md`.
+
+## Recommended detector-efficiency calibration
+
+After the polar-volume correction, a physical uniform cylinder is appropriate
+for detector-efficiency calibration. Keep this calibration separate from the
+source-basis transform: `DeltaV` belongs to every Factor, while Geant4/matrix
+efficiency ratios are empirical response corrections.
+
+Use three independently normalized monoenergetic responses:
+
+```text
+A218:       218-keV source -> 218-keV window CntStat
+A440:       440-keV source -> 440-keV window CntStat
+C440to218:  440-keV source -> 218-keV window CntStat
+```
+
+Record `PrimaryCount218/440` explicitly. Use the same detector geometry,
+materials, energy resolution, windows, and active 10496-crystal ordering as
+production. A rotationally symmetric cylinder does not require 20 distinct
+source orientations; independent workers can split one invariant source run.
+
+The matrix source must describe the identical physical cylinder as density
+`rho`. For a cylinder crossing the outer polar cells, use actual cell/cylinder
+overlap volumes; do not classify boundary cells only by their center. A clean
+full-support test can instead fill the polar support through its cell bounds
+(`r=153 mm`, `z=-30..30 mm` for the current center grid), provided that this
+source remains inside the intended physical material environment. If the
+physical FOV is defined as `r<=150 mm`, use that radius and compute partial
+overlap for the `r=150 mm` ring.
+
+For response `q` and detector layer `L`, fit the absolute layer factor as:
+
+```text
+k(q,L) = [sum_{d in L} G4_q(d) / Nprimary_q]
+         / [sum_{d in L} Matrix_q(d) / Nprimary_model]
+```
+
+Multiply every matrix detector row in that layer by `k(q,L)`. Do not preserve
+the old matrix total when the purpose is absolute efficiency calibration; the
+corrected total should match Geant4. Fit A218, A440, and C440to218 separately.
+Start with four layer factors rather than 10496 independent row factors:
+per-detector fitting has much higher variance and can absorb source-position
+model errors.
+
+The uniform cylinder is calibration data, not final validation. Validate the
+fitted factors on the existing contrast phantom and radial point-source scan.
+If those independent tests retain the 440 center overshoot or outer-FOV trend,
+the remaining error is position dependent and cannot be fixed by another
+detector-layer scalar.
+
 ## GAGG intrinsic-response diagnostic
 
 `Geant4Code_GAGGIntrinsicResponse` is an isolated single-crystal project used
@@ -247,3 +306,52 @@ C:\ProgramData\anaconda3\envs\pytorch\python.exe `
 与标准 `Factors/218keV_RotateNum20`、`Factors/440keV_RotateNum20` 和
 `Factors/440keV_to218win_RotateNum20` 配套。机器可读清单位于
 `Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json`。
+
+## PE v4 Uniform-FOV absolute layer correction (2026-07-18)
+
+`apply_uniform_fov_layer_correction.py` reads the symmetric-PE-v4 candidate
+rows from `Results/Analysis/UniformFov_PEv3_vs_PEv4_SymmetricHalton/layer_metrics.csv`.
+For each response it multiplies every detector row by the corresponding raw
+`Geant4/Matrix` layer ratio. This is an absolute efficiency correction and is
+different from the older total-preserving `FOVLayerTP` study.
+
+```powershell
+python Geant4Sim/apply_uniform_fov_layer_correction.py
+```
+
+Outputs:
+
+```text
+Factors/218keV_RotateNum20_CenterPoint_PEv4_UniformFOVLayer
+Factors/440keV_RotateNum20_CenterPoint_PEv4_UniformFOVLayer
+Factors/440keV_to218win_RotateNum20_CenterPoint_PEv4_UniformFOVLayer
+```
+
+Incremental factors for detector layers `y=30/60/90/120 mm` are:
+
+```text
+A218       1.00220202  0.99626878  1.00292342  0.98916952
+A440       1.01738520  0.99598598  1.00218162  1.00005552
+C440to218  1.00559017  1.01892260  1.00594209  1.01165147
+```
+
+Uniform-FOV replay gives zero layer and total efficiency error by construction;
+shape L2 becomes `0.003482`, `0.005622`, and `0.010619`, respectively.
+
+The Geant4 1e10, 2000-iteration MLEM validation command is:
+
+```powershell
+C:\ProgramData\anaconda3\envs\pytorch\python.exe `
+  main_local_multi_energy_cntstat.py `
+  --count-levels 1e10 `
+  --factor-dir-suffix CenterPoint_PEv4_UniformFOVLayer `
+  --cntstat-dir-suffix _Geant4JSCC `
+  --osem-subset-num 1 `
+  --single-sc-iter 2000 --single-sc-save-step 20 `
+  --output-root Results/R/V4L `
+  --device cuda
+```
+
+Keep the output root short on Windows. Long task-history filenames can exceed
+the legacy `MAX_PATH` limit when combined with the generated run-folder name.
+The validated result and visualizations are under `Results/R/V4L/`.

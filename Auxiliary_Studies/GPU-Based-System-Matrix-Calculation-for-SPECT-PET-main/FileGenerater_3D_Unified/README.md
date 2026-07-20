@@ -125,9 +125,9 @@ pip install plotly scipy numpy
 | 材料 | 密度 | 可用能量 |
 |---|---|---|
 | NaI | 3.67 g/cm³ | 1–1000 keV |
-| GAGG | 6.63 g/cm³ | 1–1000 keV |
+| GAGG | 6.60 g/cm³ | 1–1000 keV |
 | Pb | 11.35 g/cm³ | 1–1000 keV |
-| W | 19.30 g/cm³ | 1–1000 keV |
+| W | 19.35 g/cm³ | 1–1000 keV |
 | Vacuum | — | 任意（μ=0，等效无准直器） |
 
 约定：`μ_total（不含瑞利/相干散射）= μ_PE + μ_Compton`

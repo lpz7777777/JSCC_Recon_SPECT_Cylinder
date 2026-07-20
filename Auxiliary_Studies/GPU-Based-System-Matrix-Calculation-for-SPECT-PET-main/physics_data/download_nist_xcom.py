@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import html.parser
 import math
@@ -23,9 +24,9 @@ CHUNK_SIZE = 50
 
 MATERIALS = (
     {"name": "NaI", "formula": "NaI", "density": 3.67, "endpoint": "xcom3_2"},
-    {"name": "GAGG", "formula": "Gd3Al2Ga3O12", "density": 6.63, "endpoint": "xcom3_2"},
+    {"name": "GAGG", "formula": "Gd3Al2Ga3O12", "density": 6.60, "endpoint": "xcom3_2"},
     {"name": "Pb", "symbol": "Pb", "density": 11.35, "endpoint": "xcom3_1"},
-    {"name": "W", "symbol": "W", "density": 19.30, "endpoint": "xcom3_1"},
+    {"name": "W", "symbol": "W", "density": 19.35, "endpoint": "xcom3_1"},
 )
 
 
@@ -128,6 +129,31 @@ def download() -> dict[str, dict[int, tuple[float, float]]]:
     return all_data
 
 
+def read_existing_mass_coefficients() -> dict[str, dict[int, tuple[float, float]]]:
+    """Reuse downloaded mass coefficients while rebuilding density-scaled columns."""
+    if not CSV_PATH.is_file():
+        raise FileNotFoundError(CSV_PATH)
+    with CSV_PATH.open(newline="", encoding="ascii") as stream:
+        reader = csv.DictReader(line for line in stream if not line.startswith("#"))
+        rows = list(reader)
+    if len(rows) != len(ENERGIES_KEV):
+        raise ValueError(f"Expected {len(ENERGIES_KEV)} XCOM rows; found {len(rows)}")
+    data: dict[str, dict[int, tuple[float, float]]] = {
+        str(material["name"]): {} for material in MATERIALS
+    }
+    for row in rows:
+        energy = int(row["energy_keV"])
+        if energy not in ENERGIES_KEV:
+            raise ValueError(f"Unexpected energy in existing XCOM CSV: {energy}")
+        for material in MATERIALS:
+            name = str(material["name"])
+            data[name][energy] = (
+                float(row[f"{name}_photoelectric_cm2_g"]),
+                float(row[f"{name}_incoherent_cm2_g"]),
+            )
+    return data
+
+
 def write_csv(data: dict[str, dict[int, tuple[float, float]]]) -> None:
     fields = ["energy_keV"]
     for material in MATERIALS:
@@ -213,8 +239,23 @@ static const float kXcomMuCompton[kXcomMaterialCount * kXcomEnergyCount] = {{
     HEADER_PATH.write_text(text, encoding="ascii")
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--rebuild-linear-from-existing",
+        action="store_true",
+        help="Reuse existing mass coefficients and only apply current densities.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
-    data = download()
+    args = parse_args()
+    data = (
+        read_existing_mass_coefficients()
+        if args.rebuild_linear_from_existing
+        else download()
+    )
     write_csv(data)
     write_header(data)
     print(f"Wrote {CSV_PATH}")

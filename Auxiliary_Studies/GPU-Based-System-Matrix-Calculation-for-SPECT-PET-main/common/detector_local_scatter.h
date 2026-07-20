@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "energy_window.h"
+#include "first_interaction.h"
 #include "../physics_data/nist_xcom_materials_1_1000keV.h"
 
 struct LocalSecondInteractionPartition
@@ -55,54 +56,6 @@ inline LocalSecondInteractionPartition local_second_interaction_partition(
     result.photoelectric = interaction * mu_photoelectric / mu_total;
     result.compton = interaction * mu_compton / mu_total;
     return result;
-}
-
-inline double detector_box_exit_distance(
-    double position_x,
-    double position_y,
-    double position_z,
-    double direction_x,
-    double direction_y,
-    double direction_z,
-    double width_mm,
-    double thickness_mm,
-    double height_mm)
-{
-    const double half_extent[3] = {
-        0.5 * width_mm,
-        0.5 * thickness_mm,
-        0.5 * height_mm
-    };
-    const double position[3] = {position_x, position_y, position_z};
-    const double direction[3] = {direction_x, direction_y, direction_z};
-    double distance = INFINITY;
-    const double epsilon = 1e-14;
-    for (int axis = 0; axis < 3; ++axis)
-    {
-        if (std::fabs(position[axis]) > half_extent[axis] + epsilon)
-            return 0.0;
-        if (direction[axis] > epsilon)
-            distance = std::fmin(distance,
-                (half_extent[axis] - position[axis]) / direction[axis]);
-        else if (direction[axis] < -epsilon)
-            distance = std::fmin(distance,
-                (-half_extent[axis] - position[axis]) / direction[axis]);
-    }
-    return std::isfinite(distance) ? distance : 0.0;
-}
-
-inline double detector_center_exit_distance(
-    double direction_x,
-    double direction_y,
-    double direction_z,
-    double width_mm,
-    double thickness_mm,
-    double height_mm)
-{
-    return detector_box_exit_distance(
-        0.0, 0.0, 0.0,
-        direction_x, direction_y, direction_z,
-        width_mm, thickness_mm, height_mm);
 }
 
 inline double local_scatter_klein_nishina_weight(double cosine_theta, double energy_keV)
@@ -250,87 +203,38 @@ inline DetectorLocalScatterResponse integrate_detector_local_scatter_response(
     }
 
     double weight_sum = 0.0;
-    const int position_bins = position_samples_per_axis;
-    const double half_extent[3] = {
-        0.5 * width_mm,
-        0.5 * thickness_mm,
-        0.5 * height_mm
-    };
-    const double incoming[3] = {incoming_x, incoming_y, incoming_z};
-    const double axis_length[3] = {width_mm, thickness_mm, height_mm};
-    const double direction_epsilon = 1e-14;
-
-    // The first-interaction density can be integrated as projected entry-face
-    // area times a truncated exponential along each ray. This samples real
-    // entry positions and remains stable when a crystal is many mean free paths thick.
-    for (int normal_axis = 0; normal_axis < 3; ++normal_axis)
-    {
-        if (std::fabs(incoming[normal_axis]) <= direction_epsilon) continue;
-        const int first_axis = (normal_axis + 1) % 3;
-        const int second_axis = (normal_axis + 2) % 3;
-        const double entry_sign = incoming[normal_axis] > 0.0 ? -1.0 : 1.0;
-        const double projected_cell_area = std::fabs(incoming[normal_axis])
-            * axis_length[first_axis] * axis_length[second_axis]
-            / (position_bins * position_bins);
-
-        for (int first_index = 0; first_index < position_bins; ++first_index)
+    for_each_parallel_box_first_interaction_state(
+        incoming_x, incoming_y, incoming_z,
+        width_mm, thickness_mm, height_mm,
+        source_mu_photoelectric, source_mu_compton,
+        position_samples_per_axis, position_samples_per_axis,
+        [&](const FirstInteractionState& state)
         {
-            for (int second_index = 0; second_index < position_bins; ++second_index)
+            for (std::vector<OutgoingSample>::const_iterator sample
+                = outgoing_samples.begin(); sample != outgoing_samples.end(); ++sample)
             {
-                double entry[3] = {0.0, 0.0, 0.0};
-                entry[normal_axis] = entry_sign * half_extent[normal_axis];
-                entry[first_axis] = axis_length[first_axis]
-                    * ((first_index + 0.5) / position_bins - 0.5);
-                entry[second_axis] = axis_length[second_axis]
-                    * ((second_index + 0.5) / position_bins - 0.5);
-                const double chord = detector_box_exit_distance(
-                    entry[0], entry[1], entry[2],
-                    incoming_x, incoming_y, incoming_z,
+                const double path = detector_box_exit_distance(
+                    state.position_x, state.position_y, state.position_z,
+                    sample->direction_x, sample->direction_y,
+                    sample->direction_z,
                     width_mm, thickness_mm, height_mm);
-                if (!(chord > 0.0)) continue;
-                const double first_interaction_probability = 1.0
-                    - std::exp(-source_mu_total * chord);
-                if (!(first_interaction_probability > 0.0)) continue;
+                const LocalSecondInteractionPartition partition
+                    = local_second_interaction_partition(
+                        sample->mu_photoelectric, sample->mu_compton, path);
+                const double weight = state.interaction_weight
+                    * sample->angular_weight;
 
-                for (int depth_index = 0; depth_index < position_bins; ++depth_index)
-                {
-                    const double quantile = (depth_index + 0.5) / position_bins;
-                    const double depth = -std::log(1.0
-                        - quantile * first_interaction_probability) / source_mu_total;
-                    const double position_x = entry[0] + incoming_x * depth;
-                    const double position_y = entry[1] + incoming_y * depth;
-                    const double position_z = entry[2] + incoming_z * depth;
-                    const double position_weight = projected_cell_area
-                        * first_interaction_probability / position_bins;
-
-                    for (std::vector<OutgoingSample>::const_iterator sample
-                        = outgoing_samples.begin(); sample != outgoing_samples.end(); ++sample)
-                    {
-                        const double path = detector_box_exit_distance(
-                            position_x, position_y, position_z,
-                            sample->direction_x, sample->direction_y,
-                            sample->direction_z,
-                            width_mm, thickness_mm, height_mm);
-                        const LocalSecondInteractionPartition partition
-                            = local_second_interaction_partition(
-                                sample->mu_photoelectric, sample->mu_compton, path);
-                        const double weight = position_weight * sample->angular_weight;
-
-                        result.recoil_windowed += weight
-                            * partition.escape * sample->recoil_acceptance;
-                        result.self_photoelectric_windowed += weight
-                            * partition.photoelectric * full_energy_acceptance;
-                        result.escape_probability += weight * partition.escape;
-                        result.second_photoelectric_probability += weight
-                            * partition.photoelectric;
-                        result.second_compton_probability += weight
-                            * partition.compton;
-                        weight_sum += weight;
-                    }
-                }
+                result.recoil_windowed += weight
+                    * partition.escape * sample->recoil_acceptance;
+                result.self_photoelectric_windowed += weight
+                    * partition.photoelectric * full_energy_acceptance;
+                result.escape_probability += weight * partition.escape;
+                result.second_photoelectric_probability += weight
+                    * partition.photoelectric;
+                result.second_compton_probability += weight * partition.compton;
+                weight_sum += weight;
             }
-        }
-    }
+        });
 
     if (weight_sum > 0.0)
     {
@@ -339,6 +243,18 @@ inline DetectorLocalScatterResponse integrate_detector_local_scatter_response(
         result.escape_probability /= weight_sum;
         result.second_photoelectric_probability /= weight_sum;
         result.second_compton_probability /= weight_sum;
+        const double closure = result.escape_probability
+            + result.second_photoelectric_probability
+            + result.second_compton_probability;
+        if (closure > 0.0)
+        {
+            const double inverse_closure = 1.0 / closure;
+            result.recoil_windowed *= inverse_closure;
+            result.self_photoelectric_windowed *= inverse_closure;
+            result.escape_probability *= inverse_closure;
+            result.second_photoelectric_probability *= inverse_closure;
+            result.second_compton_probability *= inverse_closure;
+        }
     }
     return result;
 }

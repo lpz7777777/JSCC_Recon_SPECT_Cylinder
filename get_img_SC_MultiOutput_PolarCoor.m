@@ -201,7 +201,15 @@ if strlength(suffix) > 0
 end
 factorPath = fullfile(factorRoot, dirName);
 if ~exist(factorPath, "dir")
-    error("Cannot find reference factor directory: %s", factorPath);
+    canonicalName = sprintf("%dkeV_RotateNum%d", energyKeV, rotateNum);
+    canonicalPath = fullfile(factorRoot, canonicalName);
+    if strlength(suffix) > 0 && exist(canonicalPath, "dir")
+        warning(["Historical Factors suffix '%s' is unavailable; using " ...
+            "canonical geometry from %s."], suffix, canonicalPath);
+        factorPath = canonicalPath;
+    else
+        error("Cannot find reference factor directory: %s", factorPath);
+    end
 end
 end
 
@@ -271,7 +279,22 @@ end
 
 
 function label = format_task_label(outputFile)
-label = erase(string(outputFile), "Image_");
+outputName = erase(string(outputFile), "Image_");
+switch outputName
+    case "S_440keV"
+        label = "440 keV";
+        return;
+    case "S_218keV_Contaminated"
+        label = "218 keV + contamination";
+        return;
+    case "S_218keV_CrossTalkCorrected"
+        label = "218 keV corrected";
+        return;
+    case "S_(440_218)keV_CrossTalkCorrected"
+        label = "440 + 218 corrected";
+        return;
+end
+label = outputName;
 label = replace(label, "S_(", "S: ");
 label = replace(label, ")keV", " keV");
 label = replace(label, "S_", "S: ");
@@ -332,9 +355,12 @@ for taskIdx = 1:taskNum
     imagesc(axisTransverse, cfg.yCenters, cfg.xCenters, transverse, [0, displayMax]);
     axis(axisTransverse, "image");
     colormap(axisTransverse, cfg.colorMap);
-    ylabel(axisTransverse, taskLabels(taskIdx), "Interpreter", "none");
     if taskIdx == 1
-        title(axisTransverse, "Transverse MIP");
+        title(axisTransverse, "Transverse MIP" + newline + taskLabels(taskIdx), ...
+            "Interpreter", "none", "FontSize", 10);
+    else
+        title(axisTransverse, taskLabels(taskIdx), ...
+            "Interpreter", "none", "FontSize", 10);
     end
 
     zCenters = centered_axis(size(volume, 3), cfg.pixelLZ);

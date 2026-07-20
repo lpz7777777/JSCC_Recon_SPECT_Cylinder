@@ -1,0 +1,16 @@
+version,response,comparison_scope,calibration_profile,geant4_over_matrix_total,absolute_total_relative_error,shape_l2,total_variation,status
+V3-DL,A218,uniform_fov,center_point_20260716,0.9989839119,0.0010160881,0.0071495929,0.0031894673,baseline
+V3-DL,A440,uniform_fov,center_point_20260716,1.0020015865,0.0020015865,0.0104956351,0.0035198833,baseline
+V3-DL,C440to218,uniform_fov,center_point_20260716,1.0122127006,0.0122127006,0.0116931310,0.0042763244,baseline
+V4-A,A218,uniform_fov,center_point_20260716,0.9954085573,0.0045914427,0.0082141728,0.0035678497,obsolete_asymmetric
+V4-A,A440,uniform_fov,center_point_20260716,1.0023566202,0.0023566202,0.0110777252,0.0037519834,obsolete_asymmetric
+V4-A,C440to218,uniform_fov,center_point_20260716,1.0111538132,0.0111538132,0.0120018371,0.0044124757,obsolete_asymmetric
+V4-S,A218,uniform_fov,center_point_20260716,0.9946457468,0.0053542532,0.0072759056,0.0031707879,current_pe_v4
+V4-S,A440,uniform_fov,center_point_20260716,1.0021769472,0.0021769472,0.0105932885,0.0035700169,current_pe_v4
+V4-S,C440to218,uniform_fov,center_point_20260716,1.0111722863,0.0111722863,0.0114041599,0.0041494153,current_pe_v4
+V4-S-L,A218,uniform_fov_fit,center_point_plus_uniform_layer_fit,0.9999999909,0.0000000091,0.0034823933,0.0017073156,fitted_same_data
+V4-S-L,A440,uniform_fov_fit,center_point_plus_uniform_layer_fit,0.9999999718,0.0000000282,0.0056219533,0.0024741256,fitted_same_data
+V4-S-L,C440to218,uniform_fov_fit,center_point_plus_uniform_layer_fit,0.9999999675,0.0000000325,0.0106190937,0.0039560215,fitted_same_data
+V4-S,A218,uniform_fov_raw,none,0.8683212557,0.1316787443,0.0091463364,0.0041717019,raw_v4s_reference
+V4-S,A440,uniform_fov_raw,none,0.8764595492,0.1235404508,0.0123715259,0.0052158917,raw_v4s_reference
+V4-S,C440to218,uniform_fov_raw,none,1.2300387973,0.2300387973,0.0381815689,0.0121477478,raw_v4s_reference

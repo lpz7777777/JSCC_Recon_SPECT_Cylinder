@@ -1,5 +1,6 @@
 #include <cmath>
 #include <cstdlib>
+#include <iomanip>
 #include <iostream>
 #include <stdexcept>
 
@@ -14,13 +15,15 @@ static void requireClose(double actual, double expected, double tolerance, const
 {
     if (std::fabs(actual - expected) > tolerance)
     {
-        std::cerr << message << ": actual=" << actual
+        std::cerr << std::setprecision(17) << message << ": actual=" << actual
             << " expected=" << expected << " tolerance=" << tolerance << std::endl;
         throw std::runtime_error(message);
     }
 }
 
-static void validateResponse(const DetectorLocalScatterResponse& response)
+static void validateResponse(
+    const DetectorLocalScatterResponse& response,
+    const char* label)
 {
     require(response.recoil_windowed >= 0.0, "negative recoil response");
     require(response.self_photoelectric_windowed >= 0.0,
@@ -35,10 +38,16 @@ static void validateResponse(const DetectorLocalScatterResponse& response)
     require(response.self_photoelectric_windowed
         <= response.second_photoelectric_probability + 1e-12,
         "windowed self-photoelectric exceeds physical probability");
-    requireClose(response.escape_probability
+    const double closure = response.escape_probability
         + response.second_photoelectric_probability
-        + response.second_compton_probability, 1.0, 2e-12,
-        "local probability partition does not sum to one");
+        + response.second_compton_probability;
+    if (std::fabs(closure - 1.0) > 2e-12)
+    {
+        std::cerr << std::setprecision(17) << label
+            << " probability closure=" << closure
+            << " error=" << closure - 1.0 << std::endl;
+        throw std::runtime_error("local probability partition does not sum to one");
+    }
 }
 
 int main()
@@ -85,9 +94,9 @@ int main()
         = integrate_detector_local_scatter_response(
             0.15, 0.98, 0.12, 4.0, 10.0, 4.0, kMaterialNaI,
             energy, resolution, lower, upper, 192, 192);
-    validateResponse(coarse);
-    validateResponse(medium);
-    validateResponse(fine);
+    validateResponse(coarse, "NaI coarse");
+    validateResponse(medium, "NaI medium");
+    validateResponse(fine, "NaI fine");
 
     requireClose(medium.recoil_windowed, fine.recoil_windowed, 2e-4,
         "recoil angular convergence");
@@ -105,7 +114,7 @@ int main()
         = integrate_detector_local_scatter_response(
             0.15, 0.98, 0.12, 4.0, 10.0, 4.0, kMaterialNaI,
             energy, resolution, cross_lower, cross_upper, 192, 192);
-    validateResponse(cross_window);
+    validateResponse(cross_window, "NaI cross window");
     require(cross_window.recoil_windowed > 1e-4,
         "440 keV recoil continuum must overlap the 218 keV window");
     require(cross_window.self_photoelectric_windowed < 1e-12,
@@ -135,8 +144,8 @@ int main()
         = integrate_detector_local_scatter_response(
             0.12, 0.98, 0.15, 3.0, 3.0, 3.0, kMaterialGAGG,
             energy, resolution, lower, upper, 64, 64, 6);
-    validateResponse(position_medium);
-    validateResponse(position_fine);
+    validateResponse(position_medium, "GAGG position medium");
+    validateResponse(position_fine, "GAGG position fine");
     requireClose(position_medium.self_photoelectric_windowed,
         position_fine.self_photoelectric_windowed, 2e-3,
         "first-interaction position convergence");
@@ -148,7 +157,7 @@ int main()
         = integrate_detector_local_scatter_response(
             0, 1, 0, 1e-6, 1e-6, 1e-6, kMaterialNaI,
             energy, resolution, 0.0, energy + 1.0, 96, 96);
-    validateResponse(thin);
+    validateResponse(thin, "NaI thin");
     require(thin.escape_probability > 0.999999,
         "vanishing crystal must approach unit escape probability");
     require(thin.second_photoelectric_probability < 1e-6,
@@ -158,7 +167,7 @@ int main()
         = integrate_detector_local_scatter_response(
             0, 1, 0, 1e6, 1e6, 1e6, kMaterialNaI,
             energy, resolution, 0.0, energy + 1.0, 96, 96);
-    validateResponse(thick);
+    validateResponse(thick, "NaI thick");
     require(thick.second_photoelectric_probability
         > thin.second_photoelectric_probability,
         "thick crystal must absorb more scattered photons than a thin crystal");

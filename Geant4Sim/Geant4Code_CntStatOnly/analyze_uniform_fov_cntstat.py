@@ -17,9 +17,9 @@ POINT_COUNT = 25620
 DETECTOR_COUNT = 10496
 LAYERS_MM = (30, 60, 90, 120)
 RESPONSES = (
-    ("A218", 218, "CntStat_218.csv", "218keV_RotateNum20_CenterPoint"),
-    ("A440", 440, "CntStat_440.csv", "440keV_RotateNum20_CenterPoint"),
-    ("C440to218", 440, "CntStat_218.csv", "440keV_to218win_RotateNum20_CenterPoint"),
+    ("A218", 218, "CntStat_218.csv", "218keV_RotateNum20"),
+    ("A440", 440, "CntStat_440.csv", "440keV_RotateNum20"),
+    ("C440to218", 440, "CntStat_218.csv", "440keV_to218win_RotateNum20"),
 )
 
 
@@ -34,6 +34,7 @@ def parse_args() -> argparse.Namespace:
         help="Directory containing 218keV and 440keV merged subdirectories.",
     )
     parser.add_argument("--factors-dir", type=Path, default=repo / "Factors")
+    parser.add_argument("--factor-suffix", default="CenterPoint")
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument(
         "--minimum-expected-count",
@@ -42,6 +43,11 @@ def parse_args() -> argparse.Namespace:
         help="Minimum matrix-predicted count for a reported row factor.",
     )
     return parser.parse_args()
+
+
+def factor_directory_name(prefix: str, suffix: str) -> str:
+    suffix = suffix.strip("_")
+    return f"{prefix}_{suffix}" if suffix else prefix
 
 
 def read_count_row(path: Path) -> np.ndarray:
@@ -130,14 +136,19 @@ def main() -> None:
     output_dir = (args.output_dir or merged_root / "uniform_fov_analysis").resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    detector_path = args.factors_dir / RESPONSES[0][3] / "Detector.csv"
+    detector_path = (
+        args.factors_dir
+        / factor_directory_name(RESPONSES[0][3], args.factor_suffix)
+        / "Detector.csv"
+    )
     detectors = pd.read_csv(detector_path)
     if len(detectors) != DETECTOR_COUNT:
         raise ValueError(f"Unexpected detector count in {detector_path}")
 
     summary: dict[str, dict] = {"responses": {}}
     all_tables: list[pd.DataFrame] = []
-    for response, source_energy, count_name, factor_name in RESPONSES:
+    for response, source_energy, count_name, factor_prefix in RESPONSES:
+        factor_name = factor_directory_name(factor_prefix, args.factor_suffix)
         energy_dir = merged_root / f"{source_energy}keV"
         observed = read_count_row(energy_dir / count_name)
         primary = read_primary(energy_dir / "PrimaryCount.csv")

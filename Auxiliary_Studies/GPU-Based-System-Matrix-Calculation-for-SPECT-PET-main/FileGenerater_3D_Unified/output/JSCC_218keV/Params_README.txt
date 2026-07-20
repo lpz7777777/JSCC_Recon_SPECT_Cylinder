@@ -2,6 +2,10 @@ JSCC_218keV
 218 keV source, automatic 218 photopeak window
 
 source_energy_keV = 218
+detector_material = GAGG
+detector_density_g_cm3 = 6.6
+shield_material = W
+shield_density_g_cm3 = 19.35
 relative_FWHM_at_source_energy = 0.199033214
 use_forced_energy_window = 0
 energy_window_lower_keV = 0

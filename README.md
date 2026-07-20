@@ -8,6 +8,14 @@
 
 ## English
 
+> **Polar source measure (2026-07-20):** `SysMat_polar` columns are
+> point-source responses and do not include polar-cell volumes. A physically
+> uniform Geant4 cylinder must be discretized with cell-overlap volume
+> weights; equal values at all polar samples define a different source. See
+> `GenProj/POLAR_SOURCE_MEASURE.md` for the quantitative audit and conventions.
+> The no-suffix JSCC Factors directories are now the canonical V4-S-L
+> density-basis matrices `B=A*diag(DeltaV_mm3)`.
+
 ### 1. Overview
 
 This repository implements a SPECT reconstruction framework for cylindrical

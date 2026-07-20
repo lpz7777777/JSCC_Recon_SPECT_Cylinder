@@ -1,4 +1,4 @@
-function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crystal_matrix_file, calibration, grid_options)
+function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, ~, calibration, grid_options)
 % GEN_FACTORS 把 GPU 引擎生成的 .sysmat 转成重建用的 Factors/ 目录。
 %
 % 流程：
@@ -16,17 +16,28 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
 %   calibration         - 可选的探测器层校准结构；默认不校准
 %   grid_options        - 可选的极坐标网格配置。include_center_point=true
 %                         时，每个 z 层在全部环形位置前加入唯一 (0,0) 点。
+%                         apply_polar_volume_weighting=true writes the
+%                         density-basis matrix A*diag(DeltaV_mm3).
+%                         write_cartesian_tmp controls the large intermediate.
 
     if nargin < 6 || isempty(calibration)
         calibration = struct('enabled', false);
     end
     if nargin < 7 || isempty(grid_options)
-        grid_options = struct('include_center_point', false);
+        grid_options = struct('include_center_point', true);
     end
     if ~isfield(grid_options, 'include_center_point')
-        grid_options.include_center_point = false;
+        grid_options.include_center_point = true;
     end
     include_center_point = logical(grid_options.include_center_point);
+    if ~isfield(grid_options, 'apply_polar_volume_weighting')
+        grid_options.apply_polar_volume_weighting = true;
+    end
+    apply_polar_volume_weighting = logical(grid_options.apply_polar_volume_weighting);
+    if ~isfield(grid_options, 'write_cartesian_tmp')
+        grid_options.write_cartesian_tmp = true;
+    end
+    write_cartesian_tmp = logical(grid_options.write_cartesian_tmp);
 
     fprintf('=====================================\n');
     fprintf('gen_factors: %d keV\n', energy_keV);
@@ -117,11 +128,13 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
     end
 
     % 存 SysMat_tmp（过滤后版本）
-    tmp_file = fullfile(outdir, 'SysMat_tmp');
-    fid = fopen(tmp_file, 'w');
-    fwrite(fid, SysMat, 'float32');
-    fclose(fid);
-    fprintf('  SysMat_tmp 已写入\n');
+    if write_cartesian_tmp
+        tmp_file = fullfile(outdir, 'SysMat_tmp');
+        fid = fopen(tmp_file, 'w');
+        fwrite(fid, SysMat, 'float32');
+        fclose(fid);
+        fprintf('  SysMat_tmp 已写入\n');
+    end
 
     %% ---- 极坐标网格（1280 点/层）----
     [coor_cartesian_x, coor_cartesian_y] = meshgrid(s_x_axis, s_y_axis);
@@ -155,6 +168,27 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
     end
     save(fullfile(outdir, 'coor_polar_full.mat'), 'coor_polar_full');
     writematrix(coor_polar_full, fullfile(outdir, 'coor_polar_full.csv'));
+
+    %% ---- Polar-cell physical volume ----
+    [polar_cell_volume_mm3, polar_volume_metadata] = ...
+        calculate_polar_cell_volumes(coor_polar, s_z_axis(:));
+    writematrix(polar_cell_volume_mm3, ...
+        fullfile(outdir, 'polar_cell_volume_mm3.csv'));
+    fid = fopen(fullfile(outdir, 'polar_cell_volume_mm3.float64'), 'w');
+    if fid < 0
+        error('gen_factors:CannotWriteVolume', ...
+            'Cannot write polar-cell volume vector in %s.', outdir);
+    end
+    fwrite(fid, polar_cell_volume_mm3, 'double');
+    fclose(fid);
+    fid = fopen(fullfile(outdir, 'polar_cell_volume_manifest.json'), 'w');
+    if fid < 0
+        error('gen_factors:CannotWriteVolumeManifest', ...
+            'Cannot write polar-cell volume manifest in %s.', outdir);
+    end
+    fwrite(fid, jsonencode(polar_volume_metadata, 'PrettyPrint', true), 'char');
+    fwrite(fid, newline, 'char');
+    fclose(fid);
 
     %% ---- 旋转矩阵 RotMat / RotMatInv ----
     % 对每个半径，圆周移位间隔 = theta_num / rotate_num
@@ -215,6 +249,15 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, crys
     end
     % 排列成 [crystal, polar, z]
     SysMat_polar = permute(SysMat_polar, [3, 1, 2]);
+    if apply_polar_volume_weighting
+        volume_grid = reshape(single(polar_cell_volume_mm3), ...
+            n_polar_per_layer, n_z);
+        SysMat_polar = SysMat_polar .* reshape(volume_grid, 1, ...
+            n_polar_per_layer, n_z);
+        fprintf(['  Applied polar-cell volumes: y = A*diag(DeltaV_mm3)*rho, ' ...
+            'DeltaV=[%.6g, %.6g] mm3.\n'], ...
+            min(polar_cell_volume_mm3), max(polar_cell_volume_mm3));
+    end
     fid = fopen(fullfile(outdir, 'SysMat_polar'), 'w');
     fwrite(fid, SysMat_polar, 'float32');
     fclose(fid);

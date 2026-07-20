@@ -1,4 +1,4 @@
-function generate_jscc_218_440_response_params()
+function generate_jscc_218_440_response_params(run_name_suffix)
 % GENERATE_JSCC_218_440_RESPONSE_PARAMS
 % Generate the JSCC parameter sets needed for simultaneous 218/440 keV tests:
 %   1) JSCC_218keV              : 218 keV source, automatic 218 photopeak window
@@ -7,6 +7,11 @@ function generate_jscc_218_440_response_params()
 %
 % The third case is the cross-talk response A(218-window <- 440-source).
 % Use its Scatter_SysMat output as the 440-to-218-window contribution.
+
+    if nargin < 1
+        run_name_suffix = '';
+    end
+    run_name_suffix = char(string(run_name_suffix));
 
     this_dir = fileparts(mfilename('fullpath'));
     old_dir = pwd;
@@ -65,6 +70,10 @@ function generate_jscc_218_440_response_params()
     cases(3).enable_self_scatter_photopeak = false;
     cases(3).description = '440 keV source, forced 218 keV window; use Scatter_SysMat as cross-talk';
 
+    for idx = 1:numel(cases)
+        cases(idx).output_name = [cases(idx).output_name run_name_suffix];
+    end
+
     fprintf('=====================================\n');
     fprintf('JSCC 218/440 response parameter generation\n');
     fprintf('Output root: %s\n', output_root);
@@ -93,11 +102,14 @@ function write_case(base_cfg, case_cfg, output_root, runs_root)
     cfg.enable_self_scatter_photopeak = case_cfg.enable_self_scatter_photopeak;
 
     energy_res = calc_energy_resolution(cfg, source_energy_keV);
-    det_coeff = material_db(cfg.detector_material, source_energy_keV);
+    [det_coeff, detector_density] = material_db( ...
+        cfg.detector_material, source_energy_keV);
     if isfield(cfg, 'shield_material')
-        highz_coeff = material_db(cfg.shield_material, source_energy_keV);
+        [highz_coeff, highz_density] = material_db( ...
+            cfg.shield_material, source_energy_keV);
     else
-        highz_coeff = material_db(cfg.collimator_material, source_energy_keV);
+        [highz_coeff, highz_density] = material_db( ...
+            cfg.collimator_material, source_energy_keV);
     end
     col_coeff = material_db(cfg.collimator_material, source_energy_keV);
     coeffs = struct('scintillator', det_coeff, 'highz', highz_coeff);
@@ -107,7 +119,8 @@ function write_case(base_cfg, case_cfg, output_root, runs_root)
 
     outdir = fullfile(output_root, case_cfg.output_name);
     write_dat_files(outdir, cfg, source_energy_keV, det_params, col_params);
-    write_case_note(outdir, case_cfg, energy_res);
+    write_case_note(outdir, case_cfg, energy_res, cfg, ...
+        detector_density, highz_density);
 
     rundir = fullfile(runs_root, case_cfg.output_name);
     if ~exist(rundir, 'dir')
@@ -136,7 +149,8 @@ function energy_res = calc_energy_resolution(cfg, energy_keV)
 end
 
 
-function write_case_note(outdir, case_cfg, energy_res)
+function write_case_note(outdir, case_cfg, energy_res, cfg, ...
+        detector_density, highz_density)
     note_path = fullfile(outdir, 'Params_README.txt');
     fid = fopen(note_path, 'w');
     if fid < 0
@@ -147,6 +161,10 @@ function write_case_note(outdir, case_cfg, energy_res)
     fprintf(fid, '%s\n', case_cfg.output_name);
     fprintf(fid, '%s\n\n', case_cfg.description);
     fprintf(fid, 'source_energy_keV = %.9g\n', case_cfg.source_energy_keV);
+    fprintf(fid, 'detector_material = %s\n', cfg.detector_material);
+    fprintf(fid, 'detector_density_g_cm3 = %.9g\n', detector_density);
+    fprintf(fid, 'shield_material = %s\n', cfg.shield_material);
+    fprintf(fid, 'shield_density_g_cm3 = %.9g\n', highz_density);
     fprintf(fid, 'relative_FWHM_at_source_energy = %.9g\n', energy_res);
     fprintf(fid, 'use_forced_energy_window = %d\n', case_cfg.force_window);
     fprintf(fid, 'energy_window_lower_keV = %.9g\n', case_cfg.window_lower_keV);

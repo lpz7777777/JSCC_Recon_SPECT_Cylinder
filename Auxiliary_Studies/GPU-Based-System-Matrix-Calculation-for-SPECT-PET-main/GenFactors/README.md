@@ -1,5 +1,43 @@
 # GenFactors
 
+## Current production convention
+
+All newly generated polar Factors use an activity-density basis by default:
+
+```text
+B = A * diag(DeltaV_mm3)
+y = B * rho
+rho unit = emitted photons / mm3
+```
+
+`gen_factors.m` computes radial/axial midpoint cell boundaries and equal
+angular sectors per ring, writes `polar_cell_volume_mm3.csv/.float64`, and
+multiplies every polar matrix column by its full cell volume before writing
+`SysMat_polar`. Center-inclusive sampling is the default. Set
+`apply_polar_volume_weighting=false` only for an explicit legacy study.
+
+The long-term JSCC production entry point is:
+
+```matlab
+addpath("Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/GenFactors")
+results = run_gen_jscc_production_factors;
+```
+
+It reads the three `_pe_v4` V4-S runs, includes the center sample, applies the
+validated combined center/Uniform-FOV layer calibration, omits the disposable
+Cartesian `SysMat_tmp`, and atomically installs the no-suffix standard Factors:
+
+```text
+Factors/218keV_RotateNum20
+Factors/440keV_RotateNum20
+Factors/440keV_to218win_RotateNum20
+```
+
+The generic `run_gen_response_factors` also defaults to volume weighting and a
+center point, but defaults to `calibration_profile='none'`. Calibration must be
+selected explicitly so a historical profile cannot silently contaminate a new
+transport-model comparison.
+
 把 GPU 引擎生成的 `.sysmat`（笛卡尔系统矩阵）转换成重建代码使用的 `Factors/` 目录格式（极坐标系统矩阵 + 旋转矩阵 + 坐标表 + 探测器表）。
 
 ## 文件清单
@@ -44,6 +82,22 @@ Factors/<E>keV_RotateNum20/
 addpath("Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/GenFactors")
 results = run_gen_response_factors;
 ```
+
+To export side-by-side PE v4 runs without replacing the standard run inputs:
+
+```matlab
+grid = struct( ...
+    'include_center_point', true, ...
+    'run_name_suffix', '_pe_v4', ...
+    'calibration_profile', 'center_point_20260716');
+results = run_gen_response_factors( ...
+    ["JSCC/A218", "JSCC/A440", "JSCC/C440to218"], ...
+    "CenterPoint_PEv4", grid);
+```
+
+If a selected run contains `PE_v4_manifest.json`, its model and quadrature
+metadata are embedded in the generated `factor_manifest.json`. Use
+`calibration_profile='none'` only for an explicitly uncalibrated study.
 
 批处理在修改任何 Factors 前会预检所有输入 `.sysmat` 和
 `Params_Detector.dat`。每套响应先写入 `.build_*` 临时目录，维度、字节数、

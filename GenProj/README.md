@@ -1,5 +1,21 @@
 # GenProj
 
+> Polar-grid source convention: see `POLAR_SOURCE_MEASURE.md`. A constant
+> value at every polar sample is not a uniform physical activity density.
+
+Density-basis tools:
+
+- `build_polar_volume_weighted_factors.py` creates `A*diag(DeltaV_mm3)`
+  Factors while retaining the source Factors.
+- `analyze_polar_source_measure.py` audits grid volumes and projection closure.
+- `compare_polar_volume_reconstruction.py` compares old integrated-cell and
+  new density-basis Geant4 reconstructions with common background scaling.
+
+Routine Factors generation now belongs to the matrix project's MATLAB entry
+`GenFactors/run_gen_jscc_production_factors.m`. The Python volume builder is
+retained only to reproduce/audit the one-time migration from the old
+integrated-cell Factors.
+
 本目录保存基于系统矩阵的 MATLAB 前投影脚本，用于从已生成的 `Factors/` 生成单光子投影数据 `CntStat/`。这些脚本不运行 Geant4，也不生成康普顿 `List/`；它们适合做系统矩阵、旋转矩阵、噪声模型和单光子重建链路的快速验证。
 
 ## 脚本

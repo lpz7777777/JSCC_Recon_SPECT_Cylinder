@@ -8,6 +8,9 @@ function results = run_gen_response_factors(case_selectors, output_suffix, grid_
 %
 % Each response is generated in a staging directory and validated before the
 % corresponding project-root Factors directory is replaced.
+% Polar-volume weighting and center-inclusive sampling default to true.
+% Empirical calibration defaults to none; production callers must select a
+% named profile explicitly.
 % Optional selectors use "<system>/<response>", for example:
 %   run_gen_response_factors("SPECTEHENaI/C440to218")
 %   run_gen_response_factors(["JSCC/A218", "JSCC/A440", "JSCC/C440to218"], ...
@@ -20,12 +23,29 @@ function results = run_gen_response_factors(case_selectors, output_suffix, grid_
         output_suffix = "";
     end
     if nargin < 3 || isempty(grid_options)
-        grid_options = struct('include_center_point', false);
+        grid_options = struct('include_center_point', true);
     end
     if ~isfield(grid_options, 'include_center_point')
-        grid_options.include_center_point = false;
+        grid_options.include_center_point = true;
     end
     grid_options.include_center_point = logical(grid_options.include_center_point);
+    if ~isfield(grid_options, 'apply_polar_volume_weighting')
+        grid_options.apply_polar_volume_weighting = true;
+    end
+    grid_options.apply_polar_volume_weighting = ...
+        logical(grid_options.apply_polar_volume_weighting);
+    if ~isfield(grid_options, 'write_cartesian_tmp')
+        grid_options.write_cartesian_tmp = false;
+    end
+    grid_options.write_cartesian_tmp = logical(grid_options.write_cartesian_tmp);
+    if ~isfield(grid_options, 'run_name_suffix')
+        grid_options.run_name_suffix = "";
+    end
+    grid_options.run_name_suffix = char(string(grid_options.run_name_suffix));
+    if ~isfield(grid_options, 'calibration_profile')
+        grid_options.calibration_profile = "none";
+    end
+    grid_options.calibration_profile = char(string(grid_options.calibration_profile));
 
     tool_dir = fileparts(mfilename('fullpath'));
     engine_root = fileparts(tool_dir);
@@ -34,7 +54,8 @@ function results = run_gen_response_factors(case_selectors, output_suffix, grid_
     factors_root = fullfile(project_root, 'Factors');
     rotate_num = 20;
 
-    all_cases = build_cases(runs_root, factors_root, rotate_num, output_suffix);
+    all_cases = build_cases(runs_root, factors_root, rotate_num, output_suffix, ...
+        grid_options.run_name_suffix, grid_options.calibration_profile);
     cases = select_cases(all_cases, case_selectors);
     require_case_inputs(cases);
     results = repmat(empty_result_summary(), numel(cases), 1);
@@ -128,11 +149,15 @@ function summary = empty_result_summary()
         'rotate_num', 0, ...
         'sysmat_polar_bytes', 0, ...
         'sysmat_tmp_bytes', 0, ...
+        'polar_volume_min_mm3', 0, ...
+        'polar_volume_max_mm3', 0, ...
+        'polar_volume_rotation_error_mm3', 0, ...
         'output_dir', '');
 end
 
 
-function cases = build_cases(runs_root, factors_root, rotate_num, output_suffix)
+function cases = build_cases(runs_root, factors_root, rotate_num, output_suffix, ...
+        run_name_suffix, calibration_profile)
     combined_name = 'SysMat_withScatter_shift_0.000000_0.000000_0.000000.sysmat';
     cross_name = 'Scatter_SysMat_shift_0.000000_0.000000_0.000000.sysmat';
 
@@ -158,10 +183,12 @@ function cases = build_cases(runs_root, factors_root, rotate_num, output_suffix)
                 source_energy, rotate_num, suffix);
         end
 
-        run_dir = fullfile(runs_root, specs{idx, 3});
+        run_name = [specs{idx, 3} run_name_suffix];
+        run_dir = fullfile(runs_root, run_name);
         cases(idx).system_tag = specs{idx, 1};
         cases(idx).response = specs{idx, 2};
-        cases(idx).run_name = specs{idx, 3};
+        cases(idx).run_name = run_name;
+        cases(idx).run_dir = run_dir;
         cases(idx).source_energy_keV = source_energy;
         cases(idx).window_energy_keV = window_energy;
         cases(idx).matrix_kind = ternary(strcmp(specs{idx, 2}, 'C440to218'), ...
@@ -172,7 +199,7 @@ function cases = build_cases(runs_root, factors_root, rotate_num, output_suffix)
         cases(idx).output_name = output_name;
         cases(idx).output_dir = fullfile(factors_root, output_name);
         cases(idx).calibration = response_calibration( ...
-            cases(idx).system_tag, cases(idx).response);
+            cases(idx).system_tag, cases(idx).response, calibration_profile);
     end
 end
 
@@ -203,16 +230,42 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_option
     end
 
     polar_info = dir(fullfile(factor_dir, 'SysMat_polar'));
-    cart_info = dir(fullfile(factor_dir, 'SysMat_tmp'));
     expected_polar_bytes = double(detector_num) * double(pixel_num) * 4;
     expected_cart_bytes = double(detector_num) * 51 * 51 * 20 * 4;
     if isempty(polar_info) || double(polar_info.bytes) ~= expected_polar_bytes
         error('run_gen_response_factors:BadPolarSize', ...
             '%s SysMat_polar has the wrong byte count.', factor_dir);
     end
-    if isempty(cart_info) || double(cart_info.bytes) ~= expected_cart_bytes
-        error('run_gen_response_factors:BadCartesianSize', ...
-            '%s SysMat_tmp has the wrong byte count.', factor_dir);
+    cart_info = dir(fullfile(factor_dir, 'SysMat_tmp'));
+    if grid_options.write_cartesian_tmp
+        if isempty(cart_info) || double(cart_info.bytes) ~= expected_cart_bytes
+            error('run_gen_response_factors:BadCartesianSize', ...
+                '%s SysMat_tmp has the wrong byte count.', factor_dir);
+        end
+    elseif ~isempty(cart_info)
+        error('run_gen_response_factors:UnexpectedCartesianMatrix', ...
+            '%s contains SysMat_tmp although write_cartesian_tmp=false.', factor_dir);
+    end
+
+    volume_csv = fullfile(factor_dir, 'polar_cell_volume_mm3.csv');
+    volume_binary = fullfile(factor_dir, 'polar_cell_volume_mm3.float64');
+    volume_manifest = fullfile(factor_dir, 'polar_cell_volume_manifest.json');
+    if ~isfile(volume_csv) || ~isfile(volume_binary) || ~isfile(volume_manifest)
+        error('run_gen_response_factors:MissingPolarVolume', ...
+            '%s is missing polar-cell volume metadata.', factor_dir);
+    end
+    volume = readmatrix(volume_csv);
+    volume_info = dir(volume_binary);
+    if numel(volume) ~= pixel_num || double(volume_info.bytes) ~= pixel_num * 8 || ...
+            any(~isfinite(volume)) || any(volume <= 0)
+        error('run_gen_response_factors:InvalidPolarVolume', ...
+            '%s has an invalid polar-cell volume vector.', factor_dir);
+    end
+    rotation_volume_error = max(abs(volume(rotmat) - volume), [], 'all');
+    if rotation_volume_error > 1e-10
+        error('run_gen_response_factors:VolumeRotationMismatch', ...
+            '%s volume vector is not rotation invariant (max %.6g mm3).', ...
+            factor_dir, rotation_volume_error);
     end
 
     expected_detector_num = ternary(strcmp(item.system_tag, 'JSCC'), 10496, 2312);
@@ -230,7 +283,11 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_option
     summary.points_per_layer = expected_points_per_layer;
     summary.rotate_num = rotate_num;
     summary.sysmat_polar_bytes = expected_polar_bytes;
-    summary.sysmat_tmp_bytes = expected_cart_bytes;
+    summary.sysmat_tmp_bytes = ternary(grid_options.write_cartesian_tmp, ...
+        expected_cart_bytes, 0);
+    summary.polar_volume_min_mm3 = min(volume);
+    summary.polar_volume_max_mm3 = max(volume);
+    summary.polar_volume_rotation_error_mm3 = rotation_volume_error;
 end
 
 
@@ -243,8 +300,27 @@ function write_factor_manifest(factor_dir, item, summary, rotate_num, grid_optio
     manifest.response_notation = response_notation(item.response);
     manifest.source_energy_keV = item.source_energy_keV;
     manifest.window_energy_keV = item.window_energy_keV;
-    manifest.matrix_kind = item.matrix_kind;
-    manifest.per_emitted_source_photon = true;
+    manifest.matrix_kind = ternary(grid_options.apply_polar_volume_weighting, ...
+        [item.matrix_kind '_density_basis'], item.matrix_kind);
+    manifest.per_emitted_source_photon = ...
+        ~grid_options.apply_polar_volume_weighting;
+    manifest.maps_activity_density = ...
+        logical(grid_options.apply_polar_volume_weighting);
+    if grid_options.apply_polar_volume_weighting
+        manifest.activity_density_units = 'emitted photons per mm3';
+        volume_metadata = jsondecode(fileread(fullfile( ...
+            factor_dir, 'polar_cell_volume_manifest.json')));
+        manifest.polar_volume_weighting = struct( ...
+            'enabled', true, ...
+            'forward_model', 'y = A * diag(DeltaV_mm3) * rho', ...
+            'transform', ['each polar pixel column is multiplied by its ' ...
+                'full physical cell volume'], ...
+            'volume_file', 'polar_cell_volume_mm3.float64', ...
+            'volume_csv', 'polar_cell_volume_mm3.csv', ...
+            'volume_metadata', volume_metadata, ...
+            'rotation_invariance_max_abs_error_mm3', ...
+                summary.polar_volume_rotation_error_mm3);
+    end
     manifest.includes_225Ac_gamma_yield = false;
     manifest.rotate_num = rotate_num;
     manifest.detector_num = summary.detector_num;
@@ -253,10 +329,17 @@ function write_factor_manifest(factor_dir, item, summary, rotate_num, grid_optio
         'include_center_point', logical(grid_options.include_center_point), ...
         'points_per_layer', summary.points_per_layer, ...
         'center_point_index', ternary(grid_options.include_center_point, 1, 0), ...
-        'output_suffix', char(string(output_suffix)));
+        'output_suffix', char(string(output_suffix)), ...
+        'apply_polar_volume_weighting', ...
+            logical(grid_options.apply_polar_volume_weighting), ...
+        'write_cartesian_tmp', logical(grid_options.write_cartesian_tmp));
     manifest.input_run = item.run_name;
     manifest.input_matrix = item.sysmat_file;
     manifest.input_matrix_bytes = double(input_info.bytes);
+    pe_manifest_path = fullfile(item.run_dir, 'PE_v4_manifest.json');
+    if isfile(pe_manifest_path)
+        manifest.pe_model = jsondecode(fileread(pe_manifest_path));
+    end
     manifest.cross_talk_usage = cross_talk_usage(item.response);
     manifest.calibration = item.calibration;
     manifest.branching_ratio_included = false;
@@ -354,7 +437,7 @@ function value = cross_talk_usage(response)
 end
 
 
-function calibration = response_calibration(system_tag, response)
+function calibration = response_calibration(system_tag, response, calibration_profile)
     calibration = struct();
     calibration.enabled = false;
     calibration.name = 'none';
@@ -365,15 +448,49 @@ function calibration = response_calibration(system_tag, response)
     calibration.expected_active_rows = [];
     calibration.center_point_only = false;
 
-    if ~strcmp(system_tag, 'JSCC')
+    if ~strcmp(system_tag, 'JSCC') || strcmpi(calibration_profile, 'none')
         return;
+    end
+    if strcmpi(calibration_profile, 'pe_v4_uniform_fov_layer_20260718')
+        calibration.enabled = true;
+        calibration.name = ['JSCC_' response ...
+            '_PEv4_UniformFOVAbsoluteLayer_20260718'];
+        calibration.scope = 'active_detector_rows';
+        calibration.source = [ ...
+            'combined center-point and Uniform-FOV layer calibration; ' ...
+            'validated with V4-S density-basis reconstruction'];
+        calibration.layer_y_mm = [30, 60, 90, 120];
+        calibration.expected_active_rows = [512, 768, 1024, 8192];
+        calibration.center_point_only = false;
+        switch response
+            case 'A218'
+                calibration.layer_scale = [ ...
+                    0.8759478126281166, 0.8761113936032243, ...
+                    0.8745170241224166, 0.8614505269292214];
+            case 'A440'
+                calibration.layer_scale = [ ...
+                    0.8871917408136555, 0.8876588557613494, ...
+                    0.8867226811388944, 0.8691769558661383];
+            case 'C440to218'
+                calibration.layer_scale = [ ...
+                    1.1474879898953259, 1.1856887445106128, ...
+                    1.2274438946432550, 1.2516182343537243];
+            otherwise
+                error('run_gen_response_factors:UnknownJSCCCalibration', ...
+                    'No JSCC calibration is defined for response %s.', response);
+        end
+        return;
+    end
+    if ~strcmpi(calibration_profile, 'center_point_20260716')
+        error('run_gen_response_factors:UnknownCalibrationProfile', ...
+            'Unknown calibration profile: %s', calibration_profile);
     end
 
     calibration.enabled = true;
     calibration.name = ['JSCC_' response '_G4Center_LayerScale_20260716'];
     calibration.scope = 'active_detector_rows';
-    calibration.source = [ ...
-        '1e9 Geant4 center-point response; detector-local position-integrated matrices'];
+    calibration.source = ...
+        '1e9 Geant4 center-point response; detector-local position-integrated matrices';
     calibration.layer_y_mm = [30, 60, 90, 120];
     calibration.expected_active_rows = [512, 768, 1024, 8192];
     calibration.center_point_only = true;

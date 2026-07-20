@@ -212,9 +212,11 @@ This means lower-energy scattered photons have worse relative energy resolution.
 
 PEGen writes two matrices with distinct roles:
 
-- `PE_SysMat_*_v3.sysmat` is the unwindowed transport matrix. ScatterGen must
-  receive this file because it converts PE first-interaction probabilities to
-  Compton first-interaction probabilities.
+- `PE_SysMat_*_v3.sysmat` or `PE_SysMat_*_v4.sysmat` is the unwindowed direct
+  PE transport matrix. The active V4 ScatterGen receives this matrix and
+  converts each PE first-interaction probability to a Compton first-interaction
+  probability with `mu_compton/mu_photoelectric` before applying the
+  detector-local response lookup.
 - `PE_Windowed_SysMat_*_v3.sysmat` multiplies every detector row by the Gaussian
   photopeak acceptance of the configured energy window. `SysMat_withScatter_*`
   is formed from this windowed PE response plus the scatter response.
@@ -394,15 +396,14 @@ C_total.sysmat
 
 `C_intercrystal` uses active scintillator first-interaction records (`flag=1`),
 while `C_highZ_to_crystal` uses detector shielding records (`flag>1`). For a
-complete run, the elementwise sum of all five physical component matrices
-equals `C_total` up to floating-point rounding. Component output needs one
-additional full matrix on the GPU and one additional pinned host matrix, and
-it runs the inexpensive detector-local kernel twice more. Leave it disabled
-for routine production.
+complete V4 run, the elementwise sum of all five physical component matrices
+equals `C_total` up to floating-point rounding. Component files must come from
+the same executable, parameters, and run as `C_total.sysmat`; never mix
+component matrices from different model versions.
 
 All `Scatter_SysMat` and combined matrices generated before this target-surface
-change are obsolete, especially `JSCC_440keV_to_218keVwin`. PE matrices and
-the center-ray pair-material cache may be reused.
+change are obsolete, especially `JSCC_440keV_to_218keVwin`. PE matrices may be
+reused. The center-ray pair-material cache is obsolete and is ignored.
 
 ### Full JSCC Surface Validation (2026-07-15)
 
@@ -698,28 +699,323 @@ These are center-point empirical calibrations. They are suitable for the next
 reconstruction comparison, but they are not yet a final position-independent
 detector model.
 
+### PE v4 Reference and Production Kernel (2026-07-18)
+
+The first PE v4 development stage is implemented without changing or
+overwriting the production v3 matrices. The new common state is defined in
+`common/first_interaction.h`:
+
+```text
+FirstInteractionState
+  entry face axis/sign and local entry position
+  local first-interaction position
+  normalized incoming direction
+  target chord and sampled conditional depth
+  surface, interaction, PE, and Compton weights
+```
+
+Both `common/pe_v4_reference.h` and the production detector-local lookup in
+`common/detector_local_scatter.h` now use this state generator. Entry-face
+selection, exact ray-box exit distance, first-interaction probability, and
+truncated-exponential depth sampling therefore have one implementation. The
+detector-local regression test retains its previous values and probability
+partition after the refactor.
+
+`PEGen_RayTracing_CircularHole/PEGen_V4_Reference.cpp` computes one selected
+detector/voxel pair. For every visible target face it evaluates exact
+`dOmega/(4*pi)`, target chord, PE/Compton branching, and attenuation through
+every other real detector box. This deliberately costs `O(N_detector)` per
+surface sample and is a reference, not the full GPU production implementation.
+It supports the current zero-hole/vacuum JSCC collimator and aborts when a
+physical collimator hole is present.
+
+Two surface rules are retained:
+
+1. Composite two-point Gauss-Legendre per face cell for smooth analytic tests.
+2. Center-symmetric Halton low-discrepancy points for the default JSCC
+   reference. Every base point is reflected across both face axes, with a
+   center point for odd sample counts. This retains irregular low-discrepancy
+   coverage while making the finite-sample surface centroid exactly centered.
+   Upstream crystal shadows are discontinuous, so regular midpoint/Gauss grids
+   can phase-lock to the 4.2 mm detector lattice.
+
+Focused analytic validation passes:
+
+```text
+opaque rectangular solid-angle relative error    4.57e-14
+PE + Compton first-interaction closure            1.98e-18
+truncated-exponential mean-depth error             1.82e-7 mm
+smooth finite-attenuation 64-to-128 change         0.0018%
+detector-local probability partition               exact within 2e-12
+scatter.cu CUDA 12.8 compile after refactor         pass
+```
+
+The retained local multi-pair report is under
+`Results/Analysis/PEV4ReferenceValidation_20260718_JSCC218_Halton/`. It selects
+the central active row of each detector layer and source voxels near `y=0` and
+`y=150 mm`. Halton 32/64 passes the 2% convergence gate for all eight pairs:
+
+```text
+layer y (mm)   source y (mm)   fine convergence   v4 / v3
+30                  0              0.041%          1.0001
+30                150              0.080%          1.0008
+60                  0              0.115%          1.9128
+60                150              0.564%          0.9420
+90                  0              0.228%          1.0413
+90                150              0.108%          0.9930
+120                 0              0.213%          1.0103
+120               150              0.128%          1.0013
+```
+
+The approximately `1.91` ratio is a low-probability, strongly shadowed second-
+layer element (`PE_v4 ~= 2.2e-7`), not a full-layer normalization. It proves
+that v3 can have large source-position-dependent local errors even when total
+efficiency is calibrated. At the same detector row and `y=150 mm`, v3 is about
+6% high. A detector-row scale cannot correct both conditions.
+
+`PEGen_RayTracing_CircularHole/PEGen_V4_Production.cu` is the production GPU
+implementation for complete JSCC matrices. It preserves the reference-model
+equations while replacing the reference `O(N_detector)` attenuation scan with
+a four-layer, center-indexed `x-z` grid. For every Halton target-face sample it
+queries only cells swept by the source-to-entry segment, then evaluates exact
+ray-box chords for all candidate GAGG and tungsten records. The grid has no
+fixed candidate-array limit and therefore cannot silently truncate a crowded
+or grazing path.
+
+Direct PE does not require explicit first-depth quadrature. For each incident
+ray the target contribution is evaluated analytically as
+
+```text
+dOmega/(4*pi) * upstream_survival
+  * mu_PE/mu_total * (1 - exp(-mu_total * target_chord))
+```
+
+The production defaults are symmetric Halton `16 x 16` per visible face, four
+detector rows per checkpoint, and 32 surface samples per short CUDA launch.
+Short launches avoid Windows WDDM timeouts. Detector-row chunks are written to
+`.partial` files, checkpointed in atomic JSON plus append-only TSV, and can be
+resumed only on a complete row boundary. Both active detector rows and the 1024
+tungsten rows are generated: tungsten rows are excluded from Factors but are
+required as first-interaction source terms by ScatterGen.
+
+On the local RTX 6000 Ada, a pre-density-alignment benchmark of the complete
+`11520 x 52020` matrices took 103 s at 218 keV and 109 s at 440 keV. Those
+outputs are retained only under
+`runs/Archive_DensityMismatch_6p63_19p30_20260718` and must not be used for
+physics comparisons. The timing remains a useful estimate. The retained
+eight-pair GPU gate reports:
+
+```text
+maximum GPU vs CPU error at identical Halton-16 samples     1.76e-6
+maximum production Halton-16 vs CPU Halton-32 difference    1.265%
+resume output vs uninterrupted output SHA-256               identical
+```
+
+Build and run the complete local JSCC chain with:
+
+```powershell
+cd Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main
+./PEGen_RayTracing_CircularHole/build_pe_v4_production.ps1
+./run_pe_v4_jscc_pipeline.ps1 -CudaId 0 -FaceSubdivisions 16
+./monitor_pe_v4_pipeline.ps1
+```
+
+The pipeline retains the standard runs and writes `JSCC_218keV_pe_v4`,
+`JSCC_440keV_pe_v4`, and `JSCC_440keV_to_218keVwin_pe_v4`. It generates the
+two PE matrices first and then runs the existing detector-local ScatterGen for
+the three response windows. `GenFactors/run_gen_response_factors.m` accepts
+`grid_options.run_name_suffix="_pe_v4"`, so these runs can be exported without
+replacing v3 inputs.
+
+#### First full-matrix Uniform-FOV result and quadrature correction
+
+The first density-aligned full matrices generated on 2026-07-18 used the
+legacy, unreflected first 256 Halton points. Against the same merged Geant4
+Uniform-FOV data, the exported `CenterPoint_PEv4` Factors did not improve the
+v3 baseline:
+
+```text
+response     v3 total error   legacy-v4 total error   v3 shape L2   legacy-v4 shape L2
+A218              0.102%             0.459%              0.007150          0.008214
+A440              0.200%             0.236%              0.010496          0.011078
+C440to218          1.221%             1.115%              0.011693          0.012002
+```
+
+The old 256-point sample centroid was `(u,v)=(0.49805,0.49516)`. Across the
+three responses, 85.5%, 91.4%, and 93.1% of the per-detector v4-v3 change was
+explained by a linear detector `x-z` plane. Its direction matched the sample
+centroid offset. This is a deterministic quadrature artifact, not evidence
+against visible-face/ray-box integration. Production and CPU reference sampling
+now use four-way reflected Halton groups; regression tests require exact x and
+z reflection agreement at the production `16 x 16` level. The legacy matrices
+and `CenterPoint_PEv4` Factors must not be promoted as final production data.
+Comparison tables and maps are retained under
+`Results/Analysis/UniformFov_PEv3_vs_PEv4/`.
+
+After the correction, the CUDA production executable rebuild passed and a
+representative 218-keV detector/voxel smoke test gave:
+
+```text
+detector row 505, voxel 24709, Halton 16 x 16
+GPU PE probability       4.8530046115e-6
+CPU PE probability       4.8530046423e-6
+relative error           6.34e-9
+```
+
+The result is retained under
+`Results/Analysis/PEV4SymmetricHaltonSmoke_20260718/`. The pipeline now rejects
+completed outputs whose manifest model is not
+`PE_v4_visible_surface_symmetric_halton_layer_grid`, and rejects Scatter output
+older than its PE input. This prevents a source rebuild from silently mixing
+legacy PE and current Scatter matrices.
+
+The same pipeline now regenerates all three JSCC `Params_*.dat` sets with
+`FileGenerater_3D_Unified/generate_jscc_218_440_response_params.m` before it
+prepares run directories. Params are always recopied with replacement before
+the material-density gate. This fixes a failure mode in which newly created
+`_pe_v4` runs inherited old `GAGG=6.63/W=19.30` coefficients from a standard
+run even though the current material database specifies `6.60/19.35`.
+
+#### Symmetric-Halton full production result
+
+The complete corrected production run finished on 2026-07-18. Matrix scans
+confirmed the symmetric model manifest, exact byte counts, finite nonnegative
+elements, and exact float32 closure of both combined matrices. Local timings on
+the RTX 6000 Ada were:
+
+```text
+218 PE                 105.17 s
+440 PE                 106.48 s
+218 Scatter             19.42 min
+440 Scatter             10.32 min
+440-to-218 Scatter      20.31 min
+```
+
+The standard `CenterPoint_PEv4` Factors now refer to these corrected matrices;
+the first matrices and Factors were renamed with
+`legacy_asymmetric_halton_20260718` / `LegacyAsymmetricHalton` suffixes.
+Against the same Uniform-FOV Geant4 data:
+
+```text
+response     v3 total error   symmetric-v4 total error   v3 shape L2   symmetric-v4 shape L2
+A218              0.102%                0.535%               0.007150          0.007276
+A440              0.200%                0.218%               0.010496          0.010593
+C440to218          1.221%                1.117%               0.011693          0.011404
+```
+
+Relative to legacy asymmetric PE v4, symmetric sampling reduces shape L2 by
+11.4% for A218, 4.4% for A440, and 5.0% for C440to218. The detector `x-z`
+linear-gradient explanation drops from 85--93% for legacy-v4-minus-v3 to less
+than 0.002% for symmetric-v4-minus-v3. The remaining v4-v3 change is symmetric
+and predominantly quadratic/edge-related, while only 2--6% of the actual
+Geant4-to-v4 residual is explained by a simple quadratic detector-position
+model. The quadrature artifact is therefore fixed. PE v4 gives a modest real
+improvement for the cross-window response, but the direct A218/A440 responses
+remain statistically close to, and not better than, the calibrated v3 baseline.
+Reports and detector maps are under
+`Results/Analysis/UniformFov_PEv3_vs_PEv4_SymmetricHalton/` and
+`Results/Analysis/UniformFov_PEv4_Legacy_vs_Symmetric/`.
+
+### Development focus after PE v4 Uniform-FOV validation
+
+The absolute Uniform-FOV layer correction applied to symmetric PE v4 gives
+zero layer-total error by construction and reduces detector-shape L2 to
+`0.003482`, `0.005622`, and `0.010619` for A218, A440, and C440to218. The first
+Geant4 1e10 reconstruction displayed a central depression because it treated
+integrated activity per nonuniform polar cell as activity density.
+
+The retained V4-S model uses the symmetric PE-v4 response together with the
+detector-local, center-path ScatterGen implementation. Before changing
+transport again, uniform-background comparisons must use a source vector whose
+weights represent physical voxel volume rather than one equal value per polar
+sample.
+
+This source-measure issue is now resolved in production. `gen_factors.m`
+writes the density-basis matrix `B=A*diag(DeltaV_mm3)`, and
+`run_gen_jscc_production_factors.m` installs center-inclusive, calibrated V4-S
+matrices into the standard no-suffix Factors directories. In the 2000-iteration
+Geant4 1e10 test, the center-to-middle background ratio changed from
+`0.699 -> 1.157` for 440, `0.419 -> 0.890` for corrected 218, and
+`0.607 -> 1.010` for the corrected sum. The source measure explains the former
+central depression; the remaining 440 center overshoot and outer-FOV decline
+remain position-dependent response-model questions.
+
+The current JSCC material densities are deliberately aligned with Geant4:
+`GAGG=6.60 g/cm^3` and `W=19.35 g/cm^3`. Both
+`physics_data/nist_xcom_materials_1_1000keV.csv` and its generated CUDA header
+use these values. Before matrix generation, the pipeline runs
+`tests/validate_jscc_material_density_alignment.py`, which cross-checks the
+three Geant4 material definitions, mass-to-linear XCOM conversion, embedded
+CUDA arrays, direct/cross-run `Params_Detector.dat`, and the 440 cross-run
+identity.
+
+The production run was stopped when the old `6.63/19.30` density pair was
+found. The three `_pe_v4` run directories now contain regenerated symmetric PE
+v4/ScatterGen inputs with `6.60/19.35`; legacy asymmetric PE results are kept
+in dated archive directories. A current-density second-layer smoke test passes
+with GPU/CPU relative errors of `1.88e-6` and `6.18e-7` for source voxels near
+`y=0` and `y=150 mm`.
+
+Reproduce the CPU checks on Windows with:
+
+```powershell
+./tests/run_pe_v4_reference_test.ps1
+```
+
+On Linux, build the reference executable and run the representative JSCC set:
+
+```bash
+cd PEGen_RayTracing_CircularHole
+g++ -std=c++17 -O3 -I.. -o PEGen_V4_Reference PEGen_V4_Reference.cpp
+cd ..
+python tests/validate_pe_v4_jscc_reference.py runs/JSCC_218keV \
+  --binary PEGen_RayTracing_CircularHole/PEGen_V4_Reference \
+  --surface-rule halton --face-levels 32 64 --depth-subdiv 8
+```
+
+#### Remaining development directions
+
+The following order is retained for future development. Intrinsic-response
+correction is explicitly deferred and is not part of the current v4 work.
+
+1. Retain the validated polar-volume density basis in every production Factor.
+2. Revalidate detector/layer efficiency with an independent physical uniform
+   cylinder and reserve the contrast phantom for post-calibration validation.
+3. Add coherent/Rayleigh coefficients and an unchanged-energy directional
+   transition after PE v4 geometry is stable. Current XCOM transport omits this
+   branch, which can alter detector-bin shape without a large total-efficiency
+   change.
+4. Add higher-order 440-to-218 Compton transport as sparse neighbor/energy/
+   direction transitions. Never enumerate or materialize detector triples.
+5. Add physical-hole attenuation to both v4 paths before using them for EHE.
+   The current reference intentionally aborts for nonzero hole counts.
+6. Revisit finite-window intrinsic containment only after the geometry and
+   V4-S production path pass radial Geant4 validation. Exact 1 eV
+   containment factors remain a lower-bound diagnostic and must not be applied.
+
+The center/edge audit finds voxel-sensitivity mirror p95 residuals of
+`0.751%/0.885%` (x/z) at 218 keV and `0.410%/0.435%` at 440 keV. Individual
+detector mirror-pair row sums are less symmetric because the real geometry is
+not mirror-closed: x reflection has 1556 missing positions and 752 GAGG/W
+material mismatches; z reflection has 1488 and 668. Center PE sensitivity is
+`1.148` (218) and `1.129` (440) times the FOV mean. The former center
+depression was a polar-measure display error, not a low PE-v4 center
+sensitivity or directional Halton artifact.
+
 #### Priorities for further improvement
 
-##### Central-voxel reconstruction diagnostic sequence
+##### Post-volume-basis response diagnostic sequence
 
-The current Geant4 CntStat reconstructions show an iteration-dependent central
-low-value region. The calibrated matrix sensitivity at `r=6,12,18,24 mm` is
-nearly flat, so a simple local sensitivity trough is insufficient to explain
-the effect. The following sequence separates polar-grid representation error,
-matrix closure error, and residual position-dependent detector mismatch:
-
-1. Export an experimental set of Factors with one unique `r=0` point per
-   axial layer, then repeat the same Geant4 reconstruction. These Factors use
-   suffix `CenterPoint`; standard Factors must remain unchanged.
-2. With the same center-point Factors, run a uniform-cylinder GenProj closure
-   test and reconstruct it using the identical forward matrix.
-3. Run pure-218 and pure-440 Geant4 uniform-cylinder tests, so direct matrix
-   mismatch can be separated from 440-to-218 cross-talk correction.
-4. Run a Geant4 radial point-source scan over `r=0:6:36 mm`, with controlled
-   axial locations, and compare measured detector/layer response to the matrix.
-5. Use the measured spatial trend to decide whether a regularized
-   `D_detector * A * D_voxel` correction is adequate or whether the detector
-   response needs an angle- or position-dependent representation.
+1. Simulate independent monoenergetic uniform cylinders for A218, A440, and
+   C440to218 with known primary counts and the production energy windows.
+2. Forward-project the identical physical source with density-basis Factors,
+   including partial-cell overlap at the cylinder boundary.
+3. Fit only low-dimensional detector-layer factors on that calibration data.
+4. Validate on the existing contrast phantom and radial point-source scan; do
+   not report the fitted uniform cylinder as independent validation.
+5. If the 440 center overshoot or outer decline remains, diagnose a smooth
+   source-position term separately from detector-row efficiency before
+   changing transport physics.
 
 1. Measure finite-photopeak-window GAGG containment, not only exact `1 eV`
    energy containment. The intrinsic study should retain deposited-energy or
@@ -1183,17 +1479,15 @@ To calculate one run with several GPUs:
 
 ```bash
 ./run_scatter_multi_gpu.sh \
-  runs/JSCC_218keV \
-  PE_SysMat_shift_0.000000_0.000000_0.000000_v3.sysmat \
+  runs/JSCC_218keV_pe_v4 \
+  PE_SysMat_shift_0.000000_0.000000_0.000000_v4.sysmat \
   0,1,2,3
 ```
 
 Each process receives a disjoint scatter-crystal A range. Only the first process
 adds the detector-local and collimator terms, so those components are not
 double-counted. Partial `float32` matrices are merged in GPU-list order. The
-launcher also shares a geometry/material cache at
-`Geometry_CrystalPairMaterialLengths_v1.cache`; the same cache can be reused by
-the 218, 440, and 440-to-218 runs when their detector geometry is identical.
+launcher shares `Geometry_CrystalPairMaterialLengths_v1.cache` between workers.
 
 Reference fallbacks are available for numerical comparisons:
 

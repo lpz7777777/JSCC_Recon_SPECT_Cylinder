@@ -1,4 +1,4 @@
-function coeff = material_db(material, energy_keV)
+function [coeff, density_g_cm3] = material_db(material, energy_keV)
 % MATERIAL_DB 衰减系数查表 [mu_total, mu_PE, mu_Compton]，单位 1/mm（线性衰减系数）。
 %
 % 约定（与现有 CUDA 引擎一致）：
@@ -16,11 +16,12 @@ function coeff = material_db(material, energy_keV)
 %   密度转换为 1/mm。本函数对非整数能量做线性插值。
 %
 % 密度：
-%   NaI  3.67 g/cm^3   GAGG 6.63 g/cm^3   Pb  11.35 g/cm^3   W  19.30 g/cm^3
+%   NaI  3.67 g/cm^3   GAGG 6.60 g/cm^3   Pb  11.35 g/cm^3   W  19.35 g/cm^3
 %   Vacuum: 无衰减（准直器选 Vacuum 等效于无准直器，光子自由穿过）
 
 	if strcmp(material, 'Vacuum')
 		coeff = [0.0, 0.0, 0.0];
+		density_g_cm3 = 0.0;
 		return;
 	end
 	if ~isscalar(energy_keV) || ~isfinite(energy_keV) || energy_keV < 1 || energy_keV > 1000
@@ -31,12 +32,16 @@ function coeff = material_db(material, energy_keV)
 	switch material
 		case 'NaI'
 			columns = [1, 2];
+			density_g_cm3 = 3.67;
 		case 'GAGG'
 			columns = [3, 4];
+			density_g_cm3 = 6.60;
 		case 'Pb'
 			columns = [5, 6];
+			density_g_cm3 = 11.35;
 		case 'W'
 			columns = [7, 8];
+			density_g_cm3 = 19.35;
 		otherwise
 			error('material_db: unknown material "%s". Supported: NaI, GAGG, Pb, W, Vacuum.', material);
 	end

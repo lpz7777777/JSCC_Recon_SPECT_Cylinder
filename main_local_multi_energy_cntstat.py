@@ -150,7 +150,10 @@ def load_factors(args, factors_root):
             factors_root, e0, args.rotate_num, args.factor_dir_suffix
         )
         expected_response = "A218" if round(e0 * 1000) == 218 else "A440"
-        validate_factor_response(factor_dir, expected_response)
+        factor_manifest = validate_factor_response(factor_dir, expected_response)
+        maps_activity_density = bool(
+            factor_manifest and factor_manifest.get("maps_activity_density", False)
+        )
         sysmat_path = factor_dir / "SysMat_polar"
         rotmat_path = factor_dir / "RotMat_full.csv"
         rotmat_inv_path = factor_dir / "RotMatInv_full.csv"
@@ -211,6 +214,8 @@ def load_factors(args, factors_root):
                 "rotmat_inv": rotmat_inv,
                 "sensi": sensi,
                 "total_bins": total_bins,
+                "factor_manifest": factor_manifest,
+                "maps_activity_density": maps_activity_density,
             }
         )
         print(
@@ -219,6 +224,9 @@ def load_factors(args, factors_root):
             f"sensitivity=[{sensi.min().item():.6e}, {sensi.max().item():.6e}]"
         )
 
+    density_basis_values = {factor["maps_activity_density"] for factor in loaded}
+    if len(density_basis_values) != 1:
+        raise ValueError("All direct-energy Factors must use the same activity basis.")
     return loaded, pixel_num
 
 
@@ -256,7 +264,10 @@ def load_cross_factor(args, factors_root, loaded_factors, pixel_num):
     factor_dir = build_cross_factor_dir(
         factors_root, args.rotate_num, args.factor_dir_suffix
     )
-    validate_factor_response(factor_dir, "C440to218")
+    factor_manifest = validate_factor_response(factor_dir, "C440to218")
+    maps_activity_density = bool(
+        factor_manifest and factor_manifest.get("maps_activity_density", False)
+    )
     sysmat_path = factor_dir / "SysMat_polar"
     rotmat_path = factor_dir / "RotMat_full.csv"
     rotmat_inv_path = factor_dir / "RotMatInv_full.csv"
@@ -275,6 +286,10 @@ def load_cross_factor(args, factors_root, loaded_factors, pixel_num):
     reference = next(
         factor for factor in loaded_factors if round(factor["e0"] * 1000) == 218
     )
+    if maps_activity_density != reference["maps_activity_density"]:
+        raise ValueError(
+            "C440to218 and direct Factors use different integrated-activity/density bases."
+        )
     if total_bins != reference["total_bins"]:
         raise ValueError(
             f"C440to218 detector bins={total_bins}; A218 bins={reference['total_bins']}."
@@ -294,6 +309,8 @@ def load_cross_factor(args, factors_root, loaded_factors, pixel_num):
         "rotmat_inv": rotmat_inv,
         "sensi": sensitivity,
         "total_bins": total_bins,
+        "factor_manifest": factor_manifest,
+        "maps_activity_density": maps_activity_density,
     }
     print(
         f"Loaded C440to218 factors: {factor_dir} | pixels={pixel_num}, "
@@ -398,6 +415,32 @@ def write_manifest(
     cross_factor,
     diagnostics,
 ):
+    density_basis = bool(cross_factor.get("maps_activity_density", False))
+    image_symbol = "rho" if density_basis else "x"
+    if density_basis:
+        observation_model = {
+            "218_window": "y218 ~ Poisson(B218*rho218 + BC440to218*rho440)",
+            "440_window": "y440 ~ Poisson(B440*rho440)",
+        }
+        image_activity_convention = (
+            "activity density in emitted photons per mm3, integrated over all rotation views"
+        )
+        matrix_basis = "B = A * diag(full polar-cell volume in mm3)"
+        gamma_yield_handling = (
+            "observed CntStat amplitudes already contain source yields; density-basis "
+            "response matrices contain no gamma yield and no Y440/Y218 factor is applied"
+        )
+    else:
+        observation_model = {
+            "218_window": "y218 ~ Poisson(A218*x218 + C440to218*x440)",
+            "440_window": "y440 ~ Poisson(A440*x440)",
+        }
+        image_activity_convention = "total activity summed over all rotation views"
+        matrix_basis = "A maps integrated activity per polar cell"
+        gamma_yield_handling = (
+            "observed CntStat amplitudes already contain source yields; matrices are "
+            "per emitted photon and no Y440/Y218 factor is applied in reconstruction"
+        )
     manifest = {
         "algorithm": (
             "local 218/440 CntStat-only MLEM/OSEM with fixed 440-to-218 "
@@ -405,23 +448,22 @@ def write_manifest(
         ),
         "cross_talk_model": True,
         "cross_talk_correction": (
-            "x440 is reconstructed from y440 with A440; C440to218*x440 is then "
+            f"{image_symbol}440 is reconstructed from y440; its predicted 218-window "
+            "contribution is then "
             "converted to measured per-view CntStat scale and held fixed as additive "
             "background in the 218-window Poisson denominator"
         ),
-        "observation_model": {
-            "218_window": "y218 ~ Poisson(A218*x218 + C440to218*x440)",
-            "440_window": "y440 ~ Poisson(A440*x440)",
-        },
+        "observation_model": observation_model,
         "cross_talk_scale": args.cross_talk_scale,
         "cross_factor_dir": str(cross_factor["factor_dir"]),
-        "gamma_yield_handling": (
-            "observed CntStat amplitudes already contain source yields; matrices are "
-            "per emitted photon and no Y440/Y218 factor is applied in reconstruction"
-        ),
+        "gamma_yield_handling": gamma_yield_handling,
         "shared_image_assumption": False,
-        "combined_image_definition": "Image_S_440keV + Image_S_218keV_CrossTalkCorrected",
-        "image_activity_convention": "total activity summed over all rotation views",
+        "combined_image_definition": (
+            f"{image_symbol}440 + {image_symbol}218_corrected, pixelwise in a shared basis"
+        ),
+        "image_activity_convention": image_activity_convention,
+        "matrix_activity_basis": matrix_basis,
+        "maps_activity_density": density_basis,
         "projection_activity_convention": (
             "measured per-view CntStat; forward projections include 1/rotate_num"
         ),
@@ -754,9 +796,10 @@ def main():
         print(format_task_table([task_map["corrected_sum"]], args.e0_list))
         print(
             "\nModel scope: CntStat-only with explicit C440to218. The 440 image is "
-            "estimated from y440/A440, its predicted 218-window contribution is held "
-            "fixed as an additive Poisson background, and the corrected sum is "
-            "x440 + x218_corrected."
+            "estimated from the 440-window response, its predicted 218-window "
+            "contribution is held fixed as an additive Poisson background, and the "
+            "corrected output is the pixelwise sum of the 440 and corrected-218 "
+            "images in their shared Factors basis."
         )
 
         loaded_factors, pixel_num = load_factors(args, factors_root)

@@ -7,3 +7,8 @@ export LIBRARY_PATH="/usr/local/cuda/lib64":$LIBRARY_PATH
 nvcc -c PESysMatGen.cu
 nvcc -c PEGen_CircularHole.cpp
 g++ -o PEGen_CircularHole PESysMatGen.o PEGen_CircularHole.o -lcudart -L/usr/local/cuda
+g++ -std=c++17 -O3 -I.. -o PEGen_V4_Reference PEGen_V4_Reference.cpp
+nvcc -std=c++17 -O3 -lineinfo \
+  -gencode arch=compute_86,code=sm_86 \
+  -gencode arch=compute_89,code=sm_89 \
+  -o PEGen_V4_Production PEGen_V4_Production.cu

@@ -14,8 +14,21 @@ Results/
 |       |-- FOVLayerTP/
 |       |-- FOVDetectorTP/
 |       `-- Comparison/
+|-- R/
+|   |-- V4L/                                  # PE v4 absolute Uniform-FOV layer reconstruction
+|   `-- V4PV/                                 # V4L with A*diag(polar-cell volume), density image
 |-- Analysis/
 |   |-- CNRCRC_JSCC_vs_EHE/
+|   |-- PEV4ReferenceValidation_*/              # Selected-pair PE v4 convergence
+|   |-- PEV4GPUValidation_*/                    # GPU/CPU production checks
+|   |-- PEV4FullMatrixDirectComparison_*/       # Full raw PE v4/v3 totals
+|   |-- UniformFov_PEv3_vs_PEv4/                # Legacy asymmetric-v4 comparison
+|   |-- UniformFov_PEv3_vs_PEv4_SymmetricHalton/
+|   |-- UniformFov_PEv4_LayerCorrectionValidation/
+|   |-- SM_Physics_v4_20260718/                 # Retained V4 symmetry and W/GAGG path audits
+|   |-- PolarSourceMeasure_20260720/             # Grid/source-measure and CntStat comparison
+|   |-- PolarSourceMeasure_20260720_RawV4S/      # Same comparison with uncalibrated V4-S
+|   |-- PolarVolumeRecon_20260720/               # 1e10 old-vs-density reconstruction analysis
 |   `-- ReferenceImages/                      # Generated Cartesian references
 |-- Logs/
 `-- Legacy/

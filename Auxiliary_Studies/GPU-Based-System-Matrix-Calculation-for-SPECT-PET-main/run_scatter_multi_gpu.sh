@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ $# -lt 3 || $# -gt 4 ]]; then
     echo "Usage: $0 RUN_DIR PE_MATRIX GPU_LIST [SCATTER_BINARY]" >&2
-    echo "Example: $0 runs/JSCC_218keV PE_SysMat_shift_0.000000_0.000000_0.000000_v3.sysmat 0,1" >&2
+    echo "Example: $0 runs/JSCC_218keV_pe_v4 PE_SysMat_shift_0.000000_0.000000_0.000000_v4.sysmat 0,1" >&2
     exit 2
 fi
 
@@ -29,7 +29,6 @@ done
 DETECTOR_COUNT="$(od -An -tf4 -N4 "$RUN_DIR/Params_Detector.dat" | awk '{printf "%.0f", $1}')"
 COMBINED_FLAG="$(od -An -tf4 -j12 -N4 "$RUN_DIR/Params_Physics.dat" | awk '{printf "%.0f", $1}')"
 PARTIAL_ROOT="$(mktemp -d "$RUN_DIR/.scatter_partials.XXXXXX")"
-CACHE_FILE="$RUN_DIR/Geometry_CrystalPairMaterialLengths_v1.cache"
 CHUNK_SIZE="${SCATTER_CRYSTAL_CHUNK:-64}"
 declare -a PIDS=()
 declare -a PARTIAL_DIRS=()
@@ -53,12 +52,11 @@ for index in "${!GPUS[@]}"; do
         SCATTER_CRYSTAL_START="$start" \
         SCATTER_CRYSTAL_END="$end" \
         SCATTER_INCLUDE_GLOBAL_COMPONENTS="$include_global" \
-        SCATTER_PAIR_LENGTH_CACHE="$CACHE_FILE" \
         "$BINARY" -PE PE_input.sysmat -cuda 0 > ScatterGen.log 2>&1
     ) &
     PIDS+=("$!")
     PARTIAL_DIRS+=("$directory")
-    echo "  GPU ${GPUS[$index]}: A=[$start,$end) PID=${PIDS[$index]} global_components=$include_global"
+    echo "  GPU ${GPUS[$index]}: A=[$start,$end) PID=${PIDS[$index]} local=A-range collimator=$include_global"
 done
 
 failed=0
