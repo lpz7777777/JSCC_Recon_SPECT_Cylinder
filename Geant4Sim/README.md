@@ -1,5 +1,9 @@
 # Geant4Sim
 
+Read `../docs/DEVELOPMENT_HANDOFF.md` before generating new production data.
+It identifies the canonical density-basis Factors, required Geant4 semantics,
+and the active Compton-sensitivity task.
+
 ## Polar-grid source measure
 
 `GenerateUniformFovCntStatMacros.m` emits equal numbers of photons from every
@@ -95,7 +99,7 @@ run instructions are in
 | `GenPhan_HotRodPhantom_Rotate_3D.m` | hot-rod phantom 旋转 macro |
 | `Cylinder_Phantom_Rotate_3D.m` | 圆柱 phantom macro |
 | `point_array_Rotate_3D.m` | 点源阵列 macro |
-| `GenerateSensitivityPointArrayMacro.m` | 从 `coor_polar_full.csv` 生成等权极坐标点阵 sensitivity macro；默认是 440 keV、25600 点、单个 `beamOn` |
+| `GenerateSensitivityPointArrayMacro.m` | 从 `coor_polar_full.csv` 生成等权极坐标点阵 historical sensitivity macro；默认是 440 keV、25620 点、单个 `beamOn` |
 | `BrainPhantom_HoffmanMontage_3D.m` | Hoffman montage 脑模体生成 |
 | `BrainPhantom_HoffmanRawCompressed_3D.m` | Hoffman raw 压缩体模生成 |
 | `BrainPhantom_SliceStack_3D.m` | 基于切片堆栈的脑模体生成 |
@@ -103,7 +107,22 @@ run instructions are in
 | `HoffmanCompressed_Rotate_3D.m` | Hoffman 压缩体模旋转 macro |
 | `visualize_phantom.py` | 从 macro 解析源几何并生成 HTML 预览 |
 
-### 440 keV `Sensi_d` 等权点阵 macro
+### 当前 `Sensi_d` 全 FOV 均匀体积源
+
+极坐标 Factors 已改为活度浓度基底后，正式 `Sensi_d` 不再使用等权极坐标点阵。
+使用以下两个独立单能 macro：
+
+```text
+Macro/SensiD_UniformFullFOV/UniformFullFOV_218keV.mac
+Macro/SensiD_UniformFullFOV/UniformFullFOV_440keV.mac
+```
+
+源中心为 `(0,-245,0) mm`，半径为 `153 mm`，高度为 `60 mm`，完整覆盖
+`25620` 个极坐标单元的中点边界。两种能量必须分开运行，因为 `List.csv` 不保存
+可用于可靠拆分的 primary energy。`SensitivityPointArray` 仅保留为旧积分活度基底
+的历史诊断工具，不得用于当前正式密度基 `Sensi_d`。
+
+### 历史方案：440 keV `Sensi_d` 等权点阵 macro
 
 运行：
 
@@ -128,17 +147,17 @@ Macro/SensitivityPointArray_440keV_RotateNum20/
 
 默认 macro 的定义为：
 
-- 读取全部 25600 个极坐标位置，不做体积/Jacobian 加权；
+- 读取全部 25620 个极坐标位置，不做体积/Jacobian 加权；
 - 所有 GPS source 的 intensity 都是 `1`；
 - 第一个点沿用 GPS 默认 source，其默认 intensity 是 `1`；
-- 第 2 至 25600 个点分别使用 `/gps/source/add 1`；
+- 第 2 至 25620 个点分别使用 `/gps/source/add 1`；
 - `/gps/source/multiplevertex false`，每个 event 只从一个位置发射一个 primary；
 - 每个 source 都显式设置 `/gps/number 1`，因此被选中时只发射一个 gamma；
 - 所有 primary 都是 440 keV gamma，方向为 4-pi 各向同性；
 - 每个局部坐标按现有约定平移到 Geant4 FOV 中心 `(0,-245,0) mm`；
 - 默认视角是 `RotationIndex=1`，即 `phi=0`；
 - 文件末尾只有一次 `/run/beamOn`；
-- 默认每点期望 20000 个 primary，因此总数为 `25600*20000=512000000`。
+- 默认每点期望 20000 个 primary，因此总数为 `25620*20000=512400000`。
 
 GPS 的等权 source 选择保证每个点的**期望**发射数相同。单次有限统计运行中，每点
 实际被选次数服从多项分布，不会被强制成完全相同的整数。若必须让每点实际次数
@@ -155,7 +174,7 @@ GenerateSensitivityPointArrayMacro( ...
 ```
 
 标准 Geant4 `/run/beamOn` 使用有符号 32 位整数；脚本会拒绝超过 `2147483647` 的
-总 event 数。25600 个点时，每点最多可设置 83886 个 event。更高统计量必须拆成
+总 event 数。25620 个点时，每点最多可设置 83820 个 event。更高统计量必须拆成
 多个独立 run，最后合并 List，并把所有 run 的 `beamOn` 之和作为 sensitivity
 程序的 `--source-photons`。
 

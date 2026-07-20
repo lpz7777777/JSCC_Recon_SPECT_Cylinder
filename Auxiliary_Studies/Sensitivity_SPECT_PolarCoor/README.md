@@ -1,5 +1,20 @@
 # Sensi_d 计算工具
 
+项目当前状态、当前需要生成的单能全 FOV List 数据和后续 Compton 重建顺序见
+`../../docs/DEVELOPMENT_HANDOFF.md`。
+
+> 当前正式 Factors 使用活度浓度基底 `B=A*diag(DeltaV_mm3)`。因此正式
+> `Sensi_d` 必须来自覆盖完整极坐标单元边界的连续均匀体积源，并使用
+> `Sensi_d = accumulator * Vsource / Nprimary` 归一化。当前网格对应
+> `R=153 mm`、`z=-30..30 mm`、`V=4412492.545673008 mm3`。配套 Geant4
+> macro 位于 `Geant4Sim/Macro/SensiD_UniformFullFOV/`。
+
+底层点响应 `A_E(d,j)` 表示在位置 `j` 发射一个指定能量的光子后，在响应通道
+`d` 被接受的概率/期望计数；它不包含 225Ac gamma 产额。正式矩阵
+`B_E=A_E*diag(DeltaV)` 的列已经乘以 `mm3`，所以它不再是单个点光子的无量纲
+概率矩阵，而是把“该能量的发射光子浓度”映射到期望数据。`Sensi_d` 必须使用
+同一密度基底。
+
 本目录用于从 Monte Carlo 生成的两次作用 Compton List 计算极坐标重建所需的
 `Sensi_d`。它由原独立工程
 `F:\lipeize\1_code\0_repository\Sensitivity_SPECT_PolarCoor` 整理而来，已经改成
@@ -28,7 +43,8 @@ t_i_normalized(x) = t_i(x) / sum_x t_i(x)
 
 ```text
 S_raw(x) = sum_i t_i_normalized(x)
-mean_x(S_raw_scaled) = kept_event_count / represented_source_photons
+sum_x(S_raw_scaled) / source_volume_mm3 =
+    kept_event_count / represented_source_photons
 ```
 
 最后使用 `RotMat_full.csv` 对 `S_raw_scaled` 做 `rotate_num` 个角度的平均，得到重建
@@ -83,10 +99,10 @@ conda run --no-capture-output -n pytorch python -u `
 | Compton List CSV | 至少前四列为 `[cpnum1, e1, cpnum2, e2]`，第五列会忽略 |
 
 程序根据坐标行数和探测器行数严格核对 `SysMat_polar` 文件大小。当前
-`10496 x 25600` 因子应为：
+`10496 x 25620` 因子应为：
 
 ```text
-10496 * 25600 * 4 = 1,074,790,400 bytes
+10496 * 25620 * 4 = 1,075,630,080 bytes
 ```
 
 ### `--source-photons` 的含义
@@ -162,7 +178,10 @@ conda run --no-capture-output -n pytorch python -u `
 
 - 输出长度等于 `pixel_count`；
 - 所有值有限且非负；
-- 最终均值与 `kept_events / represented_source_photons` 的相对误差不超过
+- 密度基 Factors 满足
+  `sum(Sensi_d)/source_volume_mm3 = kept_events/represented_source_photons`，
+  旧积分活度基 Factors 才使用
+  `mean(Sensi_d) = kept_events/represented_source_photons`；归一化相对误差不超过
   `5e-5`；
 - 每个旋转矩阵列都是完整的一对一排列，因此旋转平均不会改变总灵敏度。
 
@@ -219,7 +238,7 @@ conda run --no-capture-output -n pytorch python -u `
 
 ## 11. 性能和显存
 
-- `SysMat_polar` 会常驻所选设备；当前 10496x25600 float32 矩阵约占 1.00 GiB。
+- `SysMat_polar` 会常驻所选设备；当前 10496x25620 float32 矩阵约占 1.00 GiB。
 - 批次计算还会生成多个 `batch_size x pixel_count` 临时张量。
 - 48 GB GPU 可从 `--batch-size 256` 开始；显存较小时依次尝试 128、64、32。
 - CPU 模式可用于格式验证，但全量 List 通常很慢。

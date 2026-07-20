@@ -1,0 +1,17 @@
+# Full-support uniform source for density-basis Compton Sensi_d at 218 keV.
+# The local polar FOV is centered at Geant4 position (0, -245, 0) mm.
+# Polar cell bounds are r=[0,153] mm and z=[-30,30] mm.
+# beamOn is the emitted 218-keV primary-photon count, not 225Ac decays.
+
+/gps/particle gamma
+/gps/energy 218 keV
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/centre 0 -245 0 mm
+/gps/pos/radius 153 mm
+/gps/pos/halfz 30 mm
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+/run/beamOn 1000000000

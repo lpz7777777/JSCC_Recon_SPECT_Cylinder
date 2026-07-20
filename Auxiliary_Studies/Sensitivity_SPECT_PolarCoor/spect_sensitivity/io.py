@@ -47,8 +47,28 @@ def expand_compton_paths(paths: tuple[Path, ...]) -> tuple[Path, ...]:
 
 
 def _load_csv(path: Path, dtype: np.dtype, usecols: tuple[int, ...] | None = None) -> np.ndarray:
+    with path.open("r", encoding="utf-8-sig") as handle:
+        first_fields = handle.readline().strip().split(",")
+    selected_fields = (
+        first_fields
+        if usecols is None
+        else [first_fields[index] for index in usecols if index < len(first_fields)]
+    )
     try:
-        values = np.loadtxt(path, delimiter=",", dtype=dtype, usecols=usecols, ndmin=2)
+        for field in selected_fields:
+            float(field)
+        skiprows = 0
+    except ValueError:
+        skiprows = 1
+    try:
+        values = np.loadtxt(
+            path,
+            delimiter=",",
+            dtype=dtype,
+            usecols=usecols,
+            ndmin=2,
+            skiprows=skiprows,
+        )
     except ValueError as exc:
         raise ValueError(f"Failed to parse CSV file {path}: {exc}") from exc
     if values.size == 0:

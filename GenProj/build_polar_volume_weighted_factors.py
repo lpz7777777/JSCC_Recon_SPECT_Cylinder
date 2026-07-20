@@ -256,6 +256,9 @@ def build_one(
     manifest["matrix_kind_before_density_basis"] = manifest.get("matrix_kind")
     manifest["matrix_kind"] = str(manifest.get("matrix_kind", "response")) + "_density_basis"
     manifest["per_emitted_source_photon"] = False
+    manifest["underlying_point_response_normalization"] = (
+        "per emitted monoenergetic source photon"
+    )
     manifest["maps_activity_density"] = True
     manifest["activity_density_units"] = "emitted photons per mm3"
     manifest["parent_factor_dir_before_density_basis"] = str(source_dir.resolve())

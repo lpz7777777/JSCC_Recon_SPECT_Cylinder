@@ -8,13 +8,13 @@
 
 ## English
 
-> **Polar source measure (2026-07-20):** `SysMat_polar` columns are
-> point-source responses and do not include polar-cell volumes. A physically
-> uniform Geant4 cylinder must be discretized with cell-overlap volume
-> weights; equal values at all polar samples define a different source. See
-> `GenProj/POLAR_SOURCE_MEASURE.md` for the quantitative audit and conventions.
-> The no-suffix JSCC Factors directories are now the canonical V4-S-L
-> density-basis matrices `B=A*diag(DeltaV_mm3)`.
+> **Current production state (2026-07-20):** the underlying matrix `A` has
+> point-source columns per emitted monoenergetic photon. The canonical no-suffix
+> JSCC Factors store the density-basis matrix `B=A*diag(DeltaV_mm3)`, so they
+> map gamma-photon activity density rather than equal per-sample source weight.
+> A physical uniform Geant4 source must therefore be a volume-uniform cylinder,
+> not an equal-weight polar point array. Start with `docs/DEVELOPMENT_HANDOFF.md`
+> for current Factors, Geant4 semantics, verified findings, and next tasks.
 
 ### 1. Overview
 
@@ -1158,13 +1158,20 @@ SLURM 参数:
 
 `Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/` 提供了与当前 Factors 目录直接兼容的
 `Sensi_d` 计算链路。它流式读取 Compton List，在计算设备上逐批归约事件反投影，
-按 `有效事件数 / 该能量实际发射光子数` 做绝对标定，再使用 `RotMat_full.csv` 做
-旋转平均。默认严格检查当前几何应包含 10496 个有效探测器。
+再使用 `RotMat_full.csv` 做旋转平均。当前生产 Factors 为
+`B=A*diag(DeltaV_mm3)` 活度浓度基底，其绝对标定满足
+`sum(Sensi_d)/Vsource = 有效事件数/该能量实际发射光子数`。默认严格检查当前
+几何应包含 10496 个有效探测器。
 
 218 和 440 keV 应分别输入各自的 List 和发射光子数；混合源 List 不能直接作为
 单一能量计算。常用总能阈值分别为 0.18 MeV 和 0.40 MeV。完整命令、断点续算、
 结果验收和安装到 `Factors/<energy>keV_RotateNum20/Sensi_d` 的方法见
 `Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md`。
+
+218/440 两个独立单能均匀源 macro 位于
+`Geant4Sim/Macro/SensiD_UniformFullFOV/`；源为 `R=153 mm`、高 `60 mm`、中心
+`(0,-245,0) mm`，完整覆盖 25620 个极坐标单元边界。旧的等权极坐标点阵不能
+用于当前密度基灵敏度标定。
 
 ### 9. 典型工作流程
 

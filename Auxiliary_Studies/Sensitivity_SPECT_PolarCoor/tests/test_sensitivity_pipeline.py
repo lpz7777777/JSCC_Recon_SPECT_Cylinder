@@ -21,7 +21,7 @@ import spect_sensitivity.pipeline as sensitivity_pipeline
 
 
 class SensitivityPipelineTest(unittest.TestCase):
-    def _create_fixture(self, root: Path) -> tuple[Path, Path]:
+    def _create_fixture(self, root: Path, density_basis: bool = True) -> tuple[Path, Path]:
         factor_dir = root / "511keV_RotateNum2"
         factor_dir.mkdir()
         detector = np.asarray(
@@ -33,7 +33,13 @@ class SensitivityPipelineTest(unittest.TestCase):
             ],
             dtype=np.float32,
         )
-        np.savetxt(factor_dir / "Detector.csv", detector, delimiter=",")
+        np.savetxt(
+            factor_dir / "Detector.csv",
+            detector,
+            delimiter=",",
+            header="index,x,y,z",
+            comments="",
+        )
 
         axis = np.linspace(-8.0, 8.0, 8, dtype=np.float32)
         coordinates = np.asarray(
@@ -45,6 +51,12 @@ class SensitivityPipelineTest(unittest.TestCase):
         system_matrix = np.ones((4, pixel_count), dtype=np.float32)
         system_matrix[0] += np.linspace(0.0, 0.5, pixel_count, dtype=np.float32)
         system_matrix.T.tofile(factor_dir / "SysMat_polar")
+        if density_basis:
+            volumes = np.full(pixel_count, 2.5, dtype=np.float64)
+            volumes.tofile(factor_dir / "polar_cell_volume_mm3.float64")
+            (factor_dir / "factor_manifest.json").write_text(
+                json.dumps({"maps_activity_density": True}), encoding="utf-8"
+            )
 
         rotation = np.column_stack(
             [
@@ -99,12 +111,80 @@ class SensitivityPipelineTest(unittest.TestCase):
             self.assertGreater(metadata["events"]["kept_events"], 0)
             self.assertAlmostEqual(
                 float(np.mean(sensitivity, dtype=np.float64)),
-                metadata["normalization"]["target_average_kept_events_per_photon"],
+                metadata["normalization"]["target_average_sensitivity"],
+                places=7,
+            )
+            self.assertEqual(
+                metadata["normalization"]["mode"],
+                "uniform_full_support_activity_density",
+            )
+            self.assertAlmostEqual(
+                metadata["normalization"]["source_volume_mm3"], 160.0
+            )
+            self.assertAlmostEqual(
+                metadata["normalization"]["final_integral_over_source_volume"],
+                metadata["normalization"]["accepted_events_per_photon"],
                 places=7,
             )
             self.assertFalse((output_dir / "checkpoint.npz").exists())
             parsed_metadata = json.loads((output_dir / "run_metadata.json").read_text("utf-8"))
             self.assertEqual(parsed_metadata["dimensions"]["detector_count"], 4)
+
+    def test_legacy_integrated_activity_normalization_is_retained(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            factor_dir, list_path = self._create_fixture(root, density_basis=False)
+            config = SensitivityRunConfig(
+                factor_dir=factor_dir,
+                compton_paths=(list_path,),
+                output_dir=root / "legacy",
+                source_photons=1000.0,
+                physics=ComptonPhysicsConfig(
+                    energy_mev=0.511,
+                    energy_threshold_sum_mev=0.46,
+                    min_event_effective_support=1.0,
+                ),
+                system_matrix_path=factor_dir / "SysMat_polar",
+                detector_path=factor_dir / "Detector.csv",
+                coordinate_path=factor_dir / "coor_polar_full.csv",
+                rotation_path=factor_dir / "RotMat_full.csv",
+                rotate_num=2,
+                batch_size=4,
+                device="cpu",
+                expected_detector_count=4,
+            )
+            metadata = run_sensitivity_calculation(config)
+            self.assertEqual(
+                metadata["normalization"]["mode"],
+                "legacy_integrated_activity_per_polar_cell",
+            )
+            self.assertAlmostEqual(
+                metadata["normalization"]["final_average"],
+                metadata["normalization"]["accepted_events_per_photon"],
+                places=7,
+            )
+
+    def test_density_source_volume_mismatch_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            factor_dir, list_path = self._create_fixture(root)
+            config = SensitivityRunConfig(
+                factor_dir=factor_dir,
+                compton_paths=(list_path,),
+                output_dir=root / "bad-volume",
+                source_photons=1000.0,
+                source_volume_mm3=159.0,
+                physics=ComptonPhysicsConfig(energy_mev=0.511),
+                system_matrix_path=factor_dir / "SysMat_polar",
+                detector_path=factor_dir / "Detector.csv",
+                coordinate_path=factor_dir / "coor_polar_full.csv",
+                rotation_path=factor_dir / "RotMat_full.csv",
+                rotate_num=2,
+                device="cpu",
+                expected_detector_count=4,
+            )
+            with self.assertRaisesRegex(ValueError, "covering every polar cell"):
+                run_sensitivity_calculation(config)
 
     def test_detector_count_mismatch_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:

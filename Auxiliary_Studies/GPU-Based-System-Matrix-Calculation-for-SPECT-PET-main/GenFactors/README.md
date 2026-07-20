@@ -1,5 +1,8 @@
 # GenFactors
 
+For the cross-project production state, validation boundaries, and next work,
+read `../../../docs/DEVELOPMENT_HANDOFF.md` first.
+
 ## Current production convention
 
 All newly generated polar Factors use an activity-density basis by default:
@@ -70,7 +73,7 @@ Factors/<E>keV_RotateNum20/
 与现有 `511keV_RotateNum20` Factors 完全一致：
 - 半径 `r = 6:6:150`（25 个）
 - 角度数随半径分段：r∈[6,30]→20，[42,72]→40，[78,108]→60，[114,150]→80
-- 每层 1280 个极坐标点，20 个 z 层 → **25600 个极坐标体素**
+- 每层 1281 个极坐标点（含中心点），20 个 z 层 → **25620 个极坐标体素**
 - 旋转数 20
 
 ## 用法
@@ -163,11 +166,11 @@ run_gen_response_factors("SPECTEHENaI/C440to218")
 | `SysMat_polar` | 极坐标系统矩阵 [10496, 1280, 20] |
 | `Detector.csv` | 闪烁体探测器表（index, x, y, z），10496 行 |
 | `coor_polar.csv` / `.mat` | 单层极坐标采样点（1280×2） |
-| `coor_polar_full.csv` / `.mat` | 全部极坐标采样点（25600×3，含 z） |
+| `coor_polar_full.csv` / `.mat` | 全部极坐标采样点（25620×3，含 z） |
 | `RotMat.csv` / `.mat` | 旋转映射（1280×20） |
 | `RotMatInv.csv` / `.mat` | 逆旋转映射（1280×20） |
-| `RotMat_full.csv` / `.mat` | 全层旋转映射（25600×20） |
-| `RotMatInv_full.csv` / `.mat` | 全层逆旋转映射（25600×20） |
+| `RotMat_full.csv` / `.mat` | 全层旋转映射（25620×20） |
+| `RotMatInv_full.csv` / `.mat` | 全层逆旋转映射（25620×20） |
 
 ## 闪烁体过滤
 

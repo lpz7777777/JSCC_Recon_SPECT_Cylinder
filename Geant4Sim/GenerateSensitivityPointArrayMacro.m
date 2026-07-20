@@ -4,7 +4,8 @@ function manifest = GenerateSensitivityPointArrayMacro(varargin)
 % With no arguments, this function reads:
 %   Factors/440keV_RotateNum20/coor_polar_full.csv
 %
-% and writes one 440 keV macro containing all 25600 polar-grid positions:
+% and writes one 440 keV macro containing all 25620 center-inclusive
+% polar-grid positions:
 %   Geant4Sim/Macro/SensitivityPointArray_440keV_RotateNum20/
 %       SensitivityPointArray_440keV_RotateNum20_View01.mac
 %
@@ -39,7 +40,7 @@ addParameter(parser, 'RotateNum', 20, @isPositiveIntegerScalar);
 addParameter(parser, 'RotationIndex', 1, @isPositiveIntegerScalar);
 addParameter(parser, 'FovCenterMm', [0, -245, 0], @isThreeElementFiniteVector);
 addParameter(parser, 'PrimaryEventsPerPoint', 20000, @isPositiveIntegerScalar);
-addParameter(parser, 'ExpectedPointCount', 25600, @isNonnegativeIntegerScalar);
+addParameter(parser, 'ExpectedPointCount', 25620, @isNonnegativeIntegerScalar);
 addParameter(parser, 'Overwrite', false, @isLogicalScalar);
 parse(parser, varargin{:});
 cfg = parser.Results;

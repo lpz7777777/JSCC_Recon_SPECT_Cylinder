@@ -496,8 +496,7 @@ for i in $(seq 1 20); do
   run_view "$i" &
   running=$((running + 1))
 
-  # 当前代码用秒级 time(NULL) 设随机种子；错开启动只能降低同 seed 风险。
-  sleep 2
+  # gamma01 已混合高分辨率时间、PID 和 Slurm task ID；不需要错开启动。
 
   if (( running >= MAX_JOBS )); then
     wait -n || status=1
@@ -515,16 +514,21 @@ exit "$status"
 
 不要让 20 个进程共享同一工作目录。若使用 Slurm/PBS，仍应让每个 array task 进入自己的 `view_XX` 目录后再执行同一个 `gamma01`。
 
-### 11.3 随机种子限制
+### 11.3 随机种子
 
-当前 `gamma01.cc` 使用：
+当前 `gamma01.cc` 默认把高分辨率时间、进程 ID、`SLURM_JOB_ID`、
+`SLURM_ARRAY_JOB_ID` 和 `SLURM_ARRAY_TASK_ID` 混合成 Ranecu 合法种子，并在日志
+打印完整初始化信息。并行 worker 可以同时启动，不再依赖 `sleep` 避免秒级重复。
 
-```cpp
-G4long seed = time(NULL);
-CLHEP::HepRandom::setTheSeed(seed);
+需要严格复现时，可在每个任务中显式设置：
+
+```bash
+export JSCC_RANDOM_SEED=1234567
+./gamma01 run.mac
 ```
 
-种子只有秒级分辨率。多个进程同一秒启动时可能得到相同 seed，产生相关随机序列。上例的 `sleep 2` 只是临时规避，不提供严格可复现性。正式大规模生产前，建议把入口程序改为从命令行或环境变量读取显式 seed，并为每个视角记录 seed；修改后重新编译。
+显式值必须位于 `[1,2147483562]`。每个并行任务必须使用不同值，并保存日志中的
+seed；设置非法值时程序会直接报错退出。
 
 ## 12. 结果检查与聚合
 
@@ -666,7 +670,7 @@ cmake -S . -B build -DWITH_GEANT4_UIVIS=OFF ...
 | 能量分辨率、能窗和事件分类 | `src/EventAction.cc` | 当前能窗在构造函数中计算，修改后需重新编译 |
 | step 级能量累积和过程判定 | `src/SteppingAction.cc` | copy number 到 CntStat 列的映射不能随意改变 |
 | CSV 格式和文件名 | `src/RunAction.cc`、`src/Run.cc` | 下游脚本依赖 10496 列和 List 的 5 列格式 |
-| 随机种子和 batch 参数 | `gamma01.cc` | 正式并行运行建议增加显式 seed 参数 |
+| 随机种子和 batch 参数 | `gamma01.cc` | 默认生成进程唯一 seed；可用 `JSCC_RANDOM_SEED` 显式复现 |
 
 直接手工修改 20 个 `.mac` 容易破坏全 run 分支比。源模型改动应优先回到 MATLAB 生成脚本，重新计算权重并批量生成 macro。
 
@@ -678,7 +682,7 @@ cmake -S . -B build -DWITH_GEANT4_UIVIS=OFF ...
 2. 明确各子体的化学结合、迁移距离和时间分布模型；
 3. 创建实际水/PMMA/组织材料模体，使源分布位于有材料的实体中；
 4. 验证 218/440 keV gamma 产额、核数据版本和模拟统计定义；
-5. 增加显式、可复现、每任务唯一的随机 seed；
+5. 在批处理 manifest 中保存程序打印的每任务唯一随机 seed；
 6. 设计 chunk 级 checkpoint 和集群任务合并；
 7. 根据实验系统补充能量标定、死时间、电子学阈值以及必要的串扰模型；
 8. 用点源、均匀源和已知几何逐级验证探测效率、能谱、空间编号和系统矩阵一致性。

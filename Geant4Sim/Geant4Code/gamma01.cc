@@ -39,6 +39,7 @@
 #include "G4RunManager.hh"
 #include "G4UImanager.hh"
 #include "G4VModularPhysicsList.hh"
+#include "G4Exception.hh"
 
 #ifdef GAMMA01_USE_UIVIS
 #include "G4UIExecutive.hh"
@@ -54,11 +55,16 @@
 #include "FTFP_BERT.hh"
 #include "QGSP_BIC_HP.hh"
 #include "Randomize.hh"
-#include "time.h"
+#include <cerrno>
+#include <chrono>
+#include <cstdint>
+#include <cstdlib>
 
 #ifdef _WIN32
 #include <windows.h>
 #include <filesystem>
+#else
+#include <unistd.h>
 #endif
 
 
@@ -66,6 +72,71 @@
 
 namespace
 {
+  constexpr std::uint64_t kMaximumRanecuSeed = 2147483562ULL;
+
+  std::uint64_t Mix64(std::uint64_t value)
+  {
+    value += 0x9e3779b97f4a7c15ULL;
+    value = (value ^ (value >> 30)) * 0xbf58476d1ce4e5b9ULL;
+    value = (value ^ (value >> 27)) * 0x94d049bb133111ebULL;
+    return value ^ (value >> 31);
+  }
+
+  std::uint64_t HashText(const char* text)
+  {
+    std::uint64_t hash = 1469598103934665603ULL;
+    if (!text) return hash;
+    while (*text)
+    {
+      hash ^= static_cast<unsigned char>(*text++);
+      hash *= 1099511628211ULL;
+    }
+    return hash;
+  }
+
+  std::uint64_t ProcessId()
+  {
+#ifdef _WIN32
+    return static_cast<std::uint64_t>(GetCurrentProcessId());
+#else
+    return static_cast<std::uint64_t>(getpid());
+#endif
+  }
+
+  G4long BuildRandomSeed()
+  {
+    const char* configured = std::getenv("JSCC_RANDOM_SEED");
+    if (configured && configured[0] != '\0')
+    {
+      errno = 0;
+      char* end = nullptr;
+      const unsigned long long parsed = std::strtoull(configured, &end, 10);
+      if (errno != 0 || end == configured || *end != '\0' ||
+          parsed == 0 || parsed > kMaximumRanecuSeed)
+      {
+        G4Exception("BuildRandomSeed", "InvalidSeed", FatalException,
+                    "JSCC_RANDOM_SEED must be an integer in [1, 2147483562].");
+        return 1;
+      }
+      return static_cast<G4long>(parsed);
+    }
+
+    const auto now = std::chrono::high_resolution_clock::now()
+                         .time_since_epoch().count();
+    std::uint64_t material = static_cast<std::uint64_t>(now);
+    material ^= Mix64(ProcessId());
+    material ^= Mix64(HashText(std::getenv("SLURM_JOB_ID")));
+    material ^= Mix64(HashText(std::getenv("SLURM_ARRAY_JOB_ID")));
+    material ^= Mix64(HashText(std::getenv("SLURM_ARRAY_TASK_ID")));
+    return static_cast<G4long>(1ULL + Mix64(material) % kMaximumRanecuSeed);
+  }
+
+  const char* EnvironmentOrDash(const char* name)
+  {
+    const char* value = std::getenv(name);
+    return value && value[0] != '\0' ? value : "-";
+  }
+
   // Explorer does not guarantee that a double-clicked console application
   // starts with its executable directory as the current working directory.
   // The interactive mode needs CrystalMatrix.txt and vis.mac beside gamma01.
@@ -94,8 +165,14 @@ int main(int argc,char** argv)
 
   // Choose the Random engine
   G4Random::setTheEngine(new CLHEP::RanecuEngine);
-  G4long seed = time(NULL);
+  const G4long seed = BuildRandomSeed();
   CLHEP::HepRandom::setTheSeed(seed);
+  G4cout << "Random seed initialization: seed=" << seed
+         << ", pid=" << ProcessId()
+         << ", SLURM_JOB_ID=" << EnvironmentOrDash("SLURM_JOB_ID")
+         << ", SLURM_ARRAY_JOB_ID=" << EnvironmentOrDash("SLURM_ARRAY_JOB_ID")
+         << ", SLURM_ARRAY_TASK_ID=" << EnvironmentOrDash("SLURM_ARRAY_TASK_ID")
+         << G4endl;
  
 
   // Construct the default run manager

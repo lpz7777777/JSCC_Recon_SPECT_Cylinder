@@ -5,6 +5,7 @@ import json
 import os
 import shutil
 import time
+import gc
 from pathlib import Path
 from typing import Any
 
@@ -26,7 +27,71 @@ from .kernel import (
 )
 
 
-CHECKPOINT_VERSION = 1
+CHECKPOINT_VERSION = 2
+
+
+def _resolve_normalization(
+    config: SensitivityRunConfig,
+    dataset: ResolvedDataset,
+) -> dict[str, Any]:
+    manifest_path = dataset.factor_dir / "factor_manifest.json"
+    manifest: dict[str, Any] = {}
+    if manifest_path.is_file():
+        with manifest_path.open("r", encoding="utf-8") as handle:
+            manifest = json.load(handle)
+
+    maps_activity_density = bool(manifest.get("maps_activity_density", False))
+    if not maps_activity_density:
+        if config.source_volume_mm3 is not None:
+            raise ValueError(
+                "--source-volume-mm3 is only valid for density-basis Factors."
+            )
+        return {
+            "mode": "legacy_integrated_activity_per_polar_cell",
+            "maps_activity_density": False,
+            "source_volume_mm3": None,
+            "factor_support_volume_mm3": None,
+            "volume_file": None,
+            "equation": "Sensi_d = accumulator * pixel_count / represented_source_photons",
+        }
+
+    volume_path = dataset.factor_dir / "polar_cell_volume_mm3.float64"
+    if not volume_path.is_file():
+        raise FileNotFoundError(
+            f"Density-basis Factors require a polar-cell volume file: {volume_path}"
+        )
+    volumes = np.fromfile(volume_path, dtype="<f8")
+    if volumes.size != dataset.pixel_count:
+        raise ValueError(
+            f"Polar-cell volume count is {volumes.size}, expected {dataset.pixel_count}."
+        )
+    if not np.isfinite(volumes).all() or np.any(volumes <= 0.0):
+        raise ValueError("Polar-cell volumes must all be finite and positive.")
+
+    support_volume_mm3 = float(np.sum(volumes, dtype=np.float64))
+    source_volume_mm3 = (
+        support_volume_mm3
+        if config.source_volume_mm3 is None
+        else float(config.source_volume_mm3)
+    )
+    relative_volume_error = abs(source_volume_mm3 / support_volume_mm3 - 1.0)
+    if relative_volume_error > 1e-6:
+        raise ValueError(
+            "The current density-basis estimator requires a uniform source covering every "
+            "polar cell completely. source_volume_mm3 must equal the Factors support volume: "
+            f"source={source_volume_mm3:.12g}, support={support_volume_mm3:.12g}, "
+            f"relative error={relative_volume_error:.3e}."
+        )
+
+    return {
+        "mode": "uniform_full_support_activity_density",
+        "maps_activity_density": True,
+        "source_volume_mm3": source_volume_mm3,
+        "factor_support_volume_mm3": support_volume_mm3,
+        "volume_file": str(volume_path),
+        "volume_file_signature": _path_signature(volume_path),
+        "equation": "Sensi_d = accumulator * source_volume_mm3 / represented_source_photons",
+    }
 
 
 def _select_device(device_name: str) -> torch.device:
@@ -53,6 +118,7 @@ def _configuration_fingerprint(
     dataset: ResolvedDataset,
     selected_event_count: int,
     resolved_device: torch.device,
+    normalization: dict[str, Any],
 ) -> str:
     payload = {
         "factor_dir": str(dataset.factor_dir),
@@ -62,6 +128,7 @@ def _configuration_fingerprint(
         "coordinates": _path_signature(dataset.coordinate_path),
         "rotation": _path_signature(dataset.rotation_path) if dataset.rotation_path else None,
         "source_photons": config.source_photons,
+        "normalization": normalization,
         "event_fraction": config.event_fraction,
         "selected_event_count": selected_event_count,
         "batch_size": config.batch_size,
@@ -196,6 +263,7 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
         expected_detector_count=config.expected_detector_count,
         apply_rotation_average=config.apply_rotation_average,
     )
+    normalization = _resolve_normalization(config, dataset)
 
     output_dir = config.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -232,7 +300,7 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     represented_fraction = selected_event_count / total_event_rows
     represented_source_photons = config.source_photons * represented_fraction
     fingerprint = _configuration_fingerprint(
-        config, dataset, selected_event_count, device
+        config, dataset, selected_event_count, device, normalization
     )
 
     print(
@@ -346,10 +414,22 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
 
     accumulator_cpu = accumulator.detach().cpu().numpy().astype(np.float64)
     average_before_scaling = float(np.mean(accumulator_cpu))
-    target_average = diagnostics.kept_events / represented_source_photons
     if not np.isfinite(average_before_scaling) or average_before_scaling <= 0:
         raise RuntimeError("Accumulated sensitivity is non-finite or non-positive.")
-    raw_sensitivity = (accumulator_cpu * (target_average / average_before_scaling)).astype(np.float32)
+    accepted_events_per_photon = diagnostics.kept_events / represented_source_photons
+    if normalization["maps_activity_density"]:
+        source_volume_mm3 = float(normalization["source_volume_mm3"])
+        raw_sensitivity = (
+            accumulator_cpu * source_volume_mm3 / represented_source_photons
+        ).astype(np.float32)
+        target_average = (
+            accepted_events_per_photon * source_volume_mm3 / dataset.pixel_count
+        )
+    else:
+        raw_sensitivity = (
+            accumulator_cpu * dataset.pixel_count / represented_source_photons
+        ).astype(np.float32)
+        target_average = accepted_events_per_photon
     sensitivity = raw_sensitivity
     if config.apply_rotation_average:
         if dataset.rotation_matrix is None:
@@ -361,7 +441,8 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     for name, values in (("Sensi_d_raw", raw_sensitivity), ("Sensi_d", sensitivity)):
         if not np.isfinite(values).all() or np.any(values < 0):
             raise RuntimeError(f"{name} contains non-finite or negative values.")
-    relative_mean_error = abs(float(np.mean(sensitivity, dtype=np.float64)) - target_average) / target_average
+    final_average = float(np.mean(sensitivity, dtype=np.float64))
+    relative_mean_error = abs(final_average - target_average) / target_average
     if relative_mean_error > 5e-5:
         raise RuntimeError(
             f"Final sensitivity mean failed normalization validation: relative error {relative_mean_error:.3e}."
@@ -402,11 +483,19 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             **diagnostics.to_dict(),
         },
         "normalization": {
+            **normalization,
             "full_input_source_photons": config.source_photons,
             "represented_source_photons": represented_source_photons,
             "average_before_scaling": average_before_scaling,
-            "target_average_kept_events_per_photon": target_average,
-            "final_average": float(np.mean(sensitivity, dtype=np.float64)),
+            "accepted_events_per_photon": accepted_events_per_photon,
+            "target_average_sensitivity": target_average,
+            "final_average": final_average,
+            "final_integral_over_source_volume": (
+                float(np.sum(sensitivity, dtype=np.float64))
+                / float(normalization["source_volume_mm3"])
+                if normalization["maps_activity_density"]
+                else None
+            ),
             "relative_mean_error": relative_mean_error,
         },
         "physics": config.physics.to_dict(),
@@ -432,4 +521,8 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     print(f"Sensi_d saved to: {output_path}")
     if installed_path is not None:
         print(f"Installed to factor directory: {installed_path}")
+    # Release the NumPy-backed matrix tensor before callers delete a temporary
+    # Factor directory on Windows.
+    del system_matrix, detector_coordinates, voxel_coordinates, accumulator
+    gc.collect()
     return metadata

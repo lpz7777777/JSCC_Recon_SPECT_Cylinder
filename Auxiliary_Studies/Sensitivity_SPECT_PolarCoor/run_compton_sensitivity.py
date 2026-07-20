@@ -55,6 +55,15 @@ def build_parser() -> argparse.ArgumentParser:
         required=True,
         help="Number of emitted photons represented by all supplied Compton list files.",
     )
+    parser.add_argument(
+        "--source-volume-mm3",
+        type=float,
+        default=None,
+        help=(
+            "Physical volume of the full-support uniform source. Density-basis Factors "
+            "default to the sum of polar_cell_volume_mm3.float64 and reject a mismatched override."
+        ),
+    )
     parser.add_argument("--energy-mev", type=float, default=None)
     parser.add_argument("--rotate-num", type=int, default=None)
     parser.add_argument("--event-fraction", type=float, default=1.0)
@@ -134,6 +143,7 @@ def main() -> None:
         coordinate_path=(args.coordinate_csv or factor_dir / "coor_polar_full.csv").resolve(),
         rotation_path=(args.rotation_csv or factor_dir / "RotMat_full.csv").resolve(),
         rotate_num=rotate_num,
+        source_volume_mm3=args.source_volume_mm3,
         event_fraction=args.event_fraction,
         batch_size=args.batch_size,
         device=args.device,

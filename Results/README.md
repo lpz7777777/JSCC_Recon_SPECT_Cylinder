@@ -1,5 +1,8 @@
 # Local Results Layout
 
+For the interpretation of V4L/V4PV and the current validation status, see
+`../docs/DEVELOPMENT_HANDOFF.md`.
+
 `Results/` contains generated reconstruction, analysis, and historical output.
 The contents are intentionally ignored by Git; only this guide is tracked.
 

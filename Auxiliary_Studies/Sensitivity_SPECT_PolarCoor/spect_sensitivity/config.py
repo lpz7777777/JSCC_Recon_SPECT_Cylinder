@@ -81,6 +81,7 @@ class SensitivityRunConfig:
     coordinate_path: Path
     rotation_path: Path | None
     rotate_num: int
+    source_volume_mm3: float | None = None
     event_fraction: float = 1.0
     batch_size: int = 256
     device: str = "auto"
@@ -99,6 +100,8 @@ class SensitivityRunConfig:
         self.physics.validate()
         if self.source_photons <= 0:
             raise ValueError("source_photons must be positive.")
+        if self.source_volume_mm3 is not None and self.source_volume_mm3 <= 0:
+            raise ValueError("source_volume_mm3 must be positive when provided.")
         if not 0 < self.event_fraction <= 1:
             raise ValueError("event_fraction must be in (0, 1].")
         if self.batch_size <= 0:

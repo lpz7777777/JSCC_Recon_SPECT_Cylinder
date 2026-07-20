@@ -16,9 +16,12 @@ There are two distinct questions and they must not be mixed:
    apply a new correction from data independent of the final validation set.
    Report this as a separate calibrated result.
 
-`GenFactors/run_gen_response_factors.m` currently defaults to the historical
-`center_point_20260716` profile. Its four layer factors were fitted to the
-pre-PE-v4 detector-local matrix:
+The generic `GenFactors/run_gen_response_factors.m` now defaults to
+`calibration_profile='none'`, so a matrix-physics comparison is not silently
+contaminated by empirical correction. The production convenience entry point
+`run_gen_jscc_production_factors.m` explicitly selects
+`pe_v4_uniform_fov_layer_20260718`. Historical `center_point_20260716` factors
+below are retained only as provenance for the pre-PE-v4 detector-local matrix:
 
 ```text
 response     y=30       y=60       y=90       y=120 mm

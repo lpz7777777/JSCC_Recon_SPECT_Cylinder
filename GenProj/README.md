@@ -1,5 +1,8 @@
 # GenProj
 
+Project handoff and the current production/validation boundary:
+`../docs/DEVELOPMENT_HANDOFF.md`.
+
 > Polar-grid source convention: see `POLAR_SOURCE_MEASURE.md`. A constant
 > value at every polar sample is not a uniform physical activity density.
 
