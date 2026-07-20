@@ -367,10 +367,11 @@ C:\ProgramData\anaconda3\envs\pytorch\python.exe `
   --cntstat-dir-suffix _Geant4JSCC `
   --osem-subset-num 1 `
   --single-sc-iter 2000 --single-sc-save-step 20 `
-  --output-root Results/R/V4L `
+  --output-root Results/LocalReconstructionRuns/PEv4_UniformFOVLayer_Calibrated `
   --device cuda
 ```
 
 Keep the output root short on Windows. Long task-history filenames can exceed
 the legacy `MAX_PATH` limit when combined with the generated run-folder name.
-The validated result and visualizations are under `Results/R/V4L/`.
+The validated result and visualizations are under
+`Results/LocalReconstructionRuns/PEv4_UniformFOVLayer_Calibrated/`.

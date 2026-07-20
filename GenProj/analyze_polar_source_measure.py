@@ -25,8 +25,9 @@ import numpy as np
 
 DEFAULT_FACTOR_DIR_NAME = "218keV_RotateNum20"
 DEFAULT_RECON_RELATIVE = Path(
-    "Results/R/V4PV/"
-    "ME_R20_E218-440_Ddd7b568a_C1e10_DS1.0_O1_SI2000_XTALK_BG1_N6.61e7"
+    "Results/LocalReconstructionRuns/"
+    "PEv4_UniformFOVLayer_PolarVolumeDensity_Calibrated/"
+    "JSCC_Rotate20_E218_440_Count1e10_MLEM2000_OSEM1_CrossTalkCorrected"
 )
 
 

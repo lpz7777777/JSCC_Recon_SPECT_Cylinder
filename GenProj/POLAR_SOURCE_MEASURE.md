@@ -161,7 +161,9 @@ matrix byte count and pass rotation-invariance and float32 sum checks. Their
 relative transformed-sum errors are `2.24e-9`, `2.32e-9`, and `2.19e-9`.
 
 The Geant4 1e10 CntStat was reconstructed for 2000 MLEM iterations with these
-Factors. The output is under `Results/R/V4PV/`. The old and new images were
+Factors. The output is under
+`Results/LocalReconstructionRuns/PEv4_UniformFOVLayer_PolarVolumeDensity_Calibrated/`.
+The old and new images were
 normalized by their own rod-excluded `r=30..108 mm` background median. Center
 ratio means the median background radial profile over `r=0,6,12,18 mm` divided
 by that middle-background median:

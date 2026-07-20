@@ -14,7 +14,7 @@ import numpy as np
 from scipy.spatial import Delaunay
 
 
-RUN_NAME = "ME_R20_E218-440_Ddd7b568a_C1e10_DS1.0_O1_SI2000_XTALK_BG1_N6.61e7"
+RUN_NAME = "JSCC_Rotate20_E218_440_Count1e10_MLEM2000_OSEM1_CrossTalkCorrected"
 TASKS = (
     ("440 keV", "Image_S_440keV"),
     ("218 keV corrected", "Image_S_218keV_CrossTalkCorrected"),
@@ -26,8 +26,16 @@ def parse_args() -> argparse.Namespace:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo-root", type=Path, default=root)
-    parser.add_argument("--old-run", type=Path, default=root / "Results/R/V4L" / RUN_NAME)
-    parser.add_argument("--new-run", type=Path, default=root / "Results/R/V4PV" / RUN_NAME)
+    parser.add_argument(
+        "--old-run",
+        type=Path,
+        default=root / "Results/LocalReconstructionRuns/PEv4_UniformFOVLayer_Calibrated" / RUN_NAME,
+    )
+    parser.add_argument(
+        "--new-run",
+        type=Path,
+        default=root / "Results/LocalReconstructionRuns/PEv4_UniformFOVLayer_PolarVolumeDensity_Calibrated" / RUN_NAME,
+    )
     parser.add_argument(
         "--factor-dir",
         type=Path,

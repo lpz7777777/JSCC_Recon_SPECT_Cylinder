@@ -181,4 +181,4 @@ GenProj is the matrix-closed-loop test, while Geant4 is the transport test.
 | Factor generation | `Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/GenFactors/README.md` |
 | Geant4 conventions | `Geant4Sim/README.md`, `Geant4Sim/Geant4Code/README.md` |
 | Compton sensitivity | `Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md` |
-| Result layout | `Results/README.md` |
+| Result layout | `Results/README.md`; current runs are under `Results/LocalReconstructionRuns/` |

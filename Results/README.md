@@ -1,6 +1,7 @@
 # Local Results Layout
 
-For the interpretation of V4L/V4PV and the current validation status, see
+For the interpretation of the calibrated PE-v4 and PolarVolume-density runs and
+the current validation status, see
 `../docs/DEVELOPMENT_HANDOFF.md`.
 
 `Results/` contains generated reconstruction, analysis, and historical output.
@@ -18,8 +19,10 @@ Results/
 |       |-- FOVDetectorTP/
 |       `-- Comparison/
 |-- R/
-|   |-- V4L/                                  # PE v4 absolute Uniform-FOV layer reconstruction
-|   `-- V4PV/                                 # V4L with A*diag(polar-cell volume), density image
+|-- LocalReconstructionRuns/
+|   |-- PEv4_UniformFOVLayer_Calibrated/     # calibrated PE-v4 integrated-cell result
+|   `-- PEv4_UniformFOVLayer_PolarVolumeDensity_Calibrated/ # canonical density result
+|       `-- JSCC_Rotate20_E218_440_Count1e10_MLEM2000_OSEM1_CrossTalkCorrected/
 |-- Analysis/
 |   |-- CNRCRC_JSCC_vs_EHE/
 |   |-- PEV4ReferenceValidation_*/              # Selected-pair PE v4 convergence
