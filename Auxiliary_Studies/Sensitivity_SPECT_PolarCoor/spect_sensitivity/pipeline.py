@@ -136,6 +136,7 @@ def _configuration_fingerprint(
         "seed": config.seed,
         "rotate_num": config.rotate_num,
         "apply_rotation_average": config.apply_rotation_average,
+        "input_energies_already_smeared": config.input_energies_already_smeared,
         "physics": config.physics.to_dict(),
     }
     encoded = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
@@ -371,6 +372,7 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             voxel_coordinates=voxel_coordinates,
             system_matrix=system_matrix,
             generator=generator,
+            input_energies_already_smeared=config.input_energies_already_smeared,
         )
         accumulator += batch_sum
         diagnostics.add_(batch_diagnostics)
@@ -499,6 +501,7 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             "relative_mean_error": relative_mean_error,
         },
         "physics": config.physics.to_dict(),
+        "input_energies_already_smeared": config.input_energies_already_smeared,
         "execution": {
             "batch_size": config.batch_size,
             "completed_batches": completed_batches,

@@ -36,16 +36,18 @@ def get_compton_backproj_list_single_sparse(
     ene_threshold_sum,
     device,
     model_compton_generator=None,
+    input_energies_already_smeared=False,
 ):
     cpnum1 = list_origin[:, 0].int()
     cpnum2 = list_origin[:, 2].int()
     e1 = list_origin[:, 1]
     e2 = list_origin[:, 3]
 
-    sigma_1 = e1 * ene_resolution / 2.355 * (e0 / e1) ** 0.5
-    sigma_2 = e2 * ene_resolution / 2.355 * (e0 / e2) ** 0.5
-    e1 = e1 + sigma_1 * torch.randn(e1.shape[0], device=device)
-    e2 = e2 + sigma_2 * torch.randn(e2.shape[0], device=device)
+    if not input_energies_already_smeared:
+        sigma_1 = e1 * ene_resolution / 2.355 * (e0 / e1) ** 0.5
+        sigma_2 = e2 * ene_resolution / 2.355 * (e0 / e2) ** 0.5
+        e1 = e1 + sigma_1 * torch.randn(e1.shape[0], device=device)
+        e2 = e2 + sigma_2 * torch.randn(e2.shape[0], device=device)
 
     flag = (e1 < ene_threshold_max) & (e1 > ene_threshold_min) & (e2 > ene_threshold_min) & ((e1 + e2) > ene_threshold_sum)
     cpnum1 = cpnum1[flag]

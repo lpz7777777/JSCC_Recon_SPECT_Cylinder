@@ -73,6 +73,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--expected-detector-count", type=int, default=10496)
 
     parser.add_argument("--energy-resolution-662kev", type=float, default=0.1)
+    parser.add_argument(
+        "--input-energies-already-smeared",
+        action="store_true",
+        help=(
+            "Do not add detector-resolution noise again. Use this for List files "
+            "written by the current Geant4 EventAction, which already stores smeared energies."
+        ),
+    )
     parser.add_argument("--energy-threshold-min-mev", type=float, default=0.050)
     parser.add_argument(
         "--energy-threshold-sum-mev",
@@ -157,6 +165,7 @@ def main() -> None:
         overwrite=args.overwrite,
         keep_checkpoint=args.keep_checkpoint,
         install_to_factor_dir=args.install_to_factor_dir,
+        input_energies_already_smeared=args.input_energies_already_smeared,
     )
     run_sensitivity_calculation(config)
 

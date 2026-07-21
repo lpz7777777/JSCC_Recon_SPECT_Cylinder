@@ -95,6 +95,7 @@ class SensitivityRunConfig:
     overwrite: bool = False
     keep_checkpoint: bool = False
     install_to_factor_dir: bool = False
+    input_energies_already_smeared: bool = False
 
     def validate(self) -> None:
         self.physics.validate()

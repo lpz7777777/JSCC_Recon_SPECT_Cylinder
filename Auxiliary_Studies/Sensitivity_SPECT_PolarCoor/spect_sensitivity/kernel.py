@@ -157,6 +157,7 @@ def accumulate_event_batch(
     voxel_coordinates: torch.Tensor,
     system_matrix: torch.Tensor,
     generator: torch.Generator,
+    input_energies_already_smeared: bool = False,
 ) -> tuple[torch.Tensor, BatchDiagnostics]:
     diagnostics = BatchDiagnostics(input_events=int(events.shape[0]))
     pixel_count = int(voxel_coordinates.shape[0])
@@ -178,10 +179,11 @@ def accumulate_event_batch(
     if e1.numel() == 0:
         return empty_sum, diagnostics
 
-    sigma_1 = e1 * physics.energy_resolution / 2.355 * (physics.energy_mev / e1) ** 0.5
-    sigma_2 = e2 * physics.energy_resolution / 2.355 * (physics.energy_mev / e2) ** 0.5
-    e1 = e1 + sigma_1 * torch.randn(e1.shape, device=e1.device, generator=generator)
-    e2 = e2 + sigma_2 * torch.randn(e2.shape, device=e2.device, generator=generator)
+    if not input_energies_already_smeared:
+        sigma_1 = e1 * physics.energy_resolution / 2.355 * (physics.energy_mev / e1) ** 0.5
+        sigma_2 = e2 * physics.energy_resolution / 2.355 * (physics.energy_mev / e2) ** 0.5
+        e1 = e1 + sigma_1 * torch.randn(e1.shape, device=e1.device, generator=generator)
+        e2 = e2 + sigma_2 * torch.randn(e2.shape, device=e2.device, generator=generator)
 
     valid_energy = (
         (e1 < physics.energy_threshold_max_mev)

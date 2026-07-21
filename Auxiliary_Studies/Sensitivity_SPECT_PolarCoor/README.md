@@ -1,5 +1,59 @@
 # Sensi_d 计算工具
 
+## 标准可视化输出
+
+每次完成 `Sensi_d` 计算后，应使用以下命令生成标准对照图：
+
+```powershell
+python Auxiliary_Studies\Sensitivity_SPECT_PolarCoor\visualize_sensi_d_vs_single_photon.py
+```
+
+脚本会读取当前 Factors 中的 `SysMat_polar`、`RotMatInv_full.csv` 和计算出的
+`Sensi_d`，并输出到本次 `Result` 目录。图中的空间图已经转换为连续的平面直角
+坐标 `(x, y)`，不是极坐标采样点散点图：20 个 z 层先在相同 `(x,y)` 位置平均，
+再插值到规则 Cartesian 网格。由于当前 Factors 是 `A * DeltaV` 的密度基准，
+直角坐标显示会自动除以 `polar_cell_volume_mm3`，恢复单位发射光子的点响应，
+避免不同极坐标环的单元体积造成一圈一圈的显示伪影。该除法仅用于显示，不修改
+磁盘上的 `Sensi_d`、`Sensi_s` 或 Factors。
+
+- `Sensi_d_vs_single_photon_cartesian_xy.png`：直角坐标平面图；
+- `Sensi_d_vs_single_photon.png`：同一标准图文件名，内容也为直角坐标平面图；
+- `Sensi_d_vs_single_photon_radial.csv`：径向中位数和平均值；
+- `Sensi_d_vs_single_photon_summary.json`：范围、变异系数和归一化相关性。
+
+标准图固定为从左到右四栏：`Sensi_s / DeltaV`、`Sensi_d / DeltaV`、未做中位数
+归一化的 `Sensi_s / Sensi_d`，以及前两者未做中位数归一化的径向曲线。这里
+`Sensi_s` 必须按 MATLAB 列主序读取 `SysMat_polar`，与本地重建代码相同；否则会
+错误打乱 detector/pixel 维度并产生伪影。`Sensi_d` 与 `Sensi_s` 代表不同事件链路，
+两者的比值用于比较两种探测效率，不应解释成已经标定好的重建修正因子。
+
+## Cartesian 点响应实验链路
+
+正式的密度基准矩阵满足 `B=A*diag(DeltaV)`。为了避免在事件核中混入柱坐标
+单元体积，Compton 灵敏度的推荐计算顺序是：
+
+```text
+Cartesian SysMat_tmp point response
+  -> accumulate normalized event kernels on equal-spacing Cartesian samples
+  -> normalize to kept_events / emitted_photons
+  -> interpolate point efficiency to the polar grid
+  -> rotation average and absolute-efficiency closure
+  -> Sensi_d[j] = epsilon_d[j] * DeltaV[j]
+```
+
+`prepare_cartesian_sensitivity_input.py` 从带 `SysMat_tmp` 的临时 Factors 中提取
+`r<=153 mm` 的圆柱支持域，并转换成 Python 重建代码使用的磁盘布局。
+`convert_cartesian_sensitivity_to_polar.py` 完成插值、旋转平均、整体效率闭合和最终
+密度基准转换。当前 Geant4 `EventAction` 写入 List 前已经对能量进行展宽，因此运行
+计算时必须添加 `--input-energies-already-smeared`，禁止 Python 再次展宽。
+
+2026-07-21 的 0.2% List 验证表明：Cartesian A440 的读取和插值与正式 polar
+Factors 的单光子点效率相关系数为 `0.999999876`，中位绝对相对误差为 `1.1e-5`；
+转换后的全局 Compton 效率闭合误差为 `4.4e-16`。但 Compton 点效率仍随半径下降，
+说明体积基准不是该趋势的根因。当前事件核仍以 A440 光电峰响应近似首次 Compton
+作用似然，并将每个有限-FOV锥面归一化，因此不能保证恢复真实的逐位置 Compton
+探测效率。正式使用前仍应通过记录每个有效 List 事件的真实 primary 发射位置来验证。
+
 项目当前状态、当前需要生成的单能全 FOV List 数据和后续 Compton 重建顺序见
 `../../docs/DEVELOPMENT_HANDOFF.md`。
 

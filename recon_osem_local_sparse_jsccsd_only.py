@@ -1,3 +1,4 @@
+import os
 import time
 
 import torch
@@ -200,3 +201,119 @@ def run_recon_osem_local_sparse_jsccsd_only(
 
     print(f"Local sparse JSCCSD-only reconstruction time: {time.time() - time_start:.2f}s")
     save_img_local_sparse_jsccsd_only(img_jsccsd, img_jsccsd_iter, iter_arg, save_path)
+
+
+def run_recon_compton_and_joint_local_sparse(
+    sysmat,
+    rotmat,
+    rotmat_inv,
+    projection,
+    t_rotate_all,
+    sparse_projector,
+    sensitivity_single,
+    sensitivity_compton,
+    iterations,
+    save_step,
+    t_divide_num,
+    output_dir,
+    device,
+):
+    """Reconstruct 440 Compton-only and single+Compton images together.
+
+    Each materialized Compton event block is reused for both images. With MLEM
+    (one subset), the joint response and sensitivity are exact sums of the
+    single-photon and Compton terms.
+    """
+    output_dir = str(output_dir)
+    os.makedirs(output_dir, exist_ok=True)
+    pixel_num = sysmat.size(1)
+    rotate_num = rotmat.size(1)
+    if iterations <= 0 or save_step <= 0 or iterations % save_step != 0:
+        raise ValueError("iterations must be positive and divisible by save_step")
+
+    sysmat = sysmat.to(device, non_blocking=(device.type == "cuda"))
+    rotmat = rotmat.to(device, non_blocking=(device.type == "cuda"))
+    rotmat_inv = rotmat_inv.to(device, non_blocking=(device.type == "cuda"))
+    projection = projection.to(device, non_blocking=(device.type == "cuda"))
+    projector = sparse_projector.to(device)
+    sensi_d = sensitivity_compton.to(device).reshape(-1, 1)
+    sensi_j = sensitivity_single.to(device).reshape(-1, 1) + sensi_d
+    if torch.any(sensi_d <= 0) or torch.any(sensi_j <= 0):
+        raise ValueError("Compton and joint sensitivities must be positive")
+
+    event_chunks = []
+    for rotate_events in t_rotate_all:
+        event_chunks.append([
+            chunk.to(device, non_blocking=(device.type == "cuda"))
+            for chunk in torch.chunk(rotate_events, t_divide_num, dim=0)
+            if chunk.numel() > 0
+        ])
+
+    print("Materializing reusable fine Compton response blocks...")
+    fine_event_chunks = []
+    for rotate_index, rotate_chunks in enumerate(event_chunks):
+        fine_rotate_chunks = []
+        for event_block in rotate_chunks:
+            t_fine, _ = materialize_sparse_event_rows_to_fine(
+                event_block, sysmat, projector
+            )
+            if t_fine.numel() > 0:
+                fine_rotate_chunks.append(t_fine)
+        fine_event_chunks.append(fine_rotate_chunks)
+        print(
+            f"Fine Compton view {rotate_index + 1}/{rotate_num}: "
+            f"events={sum(block.size(0) for block in fine_rotate_chunks)}"
+        )
+    del event_chunks
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
+
+    img_d = torch.ones((pixel_num, 1), dtype=torch.float32, device=device)
+    img_j = torch.ones((pixel_num, 1), dtype=torch.float32, device=device)
+    snapshots = iterations // save_step
+    history_d = torch.empty((snapshots, pixel_num), dtype=torch.float32)
+    history_j = torch.empty((snapshots, pixel_num), dtype=torch.float32)
+    started = time.time()
+    save_index = 0
+
+    for iteration in range(iterations):
+        weight_d = torch.zeros_like(img_d)
+        weight_j = torch.zeros_like(img_j)
+        for rotate_index in range(rotate_num):
+            ids = rotmat[:, rotate_index] - 1
+            inv_ids = rotmat_inv[:, rotate_index] - 1
+            image_j_rotated = torch.index_select(img_j, 0, ids)
+            single_weight = get_weight_single(
+                sysmat, projection[:, rotate_index].unsqueeze(1), image_j_rotated
+            )
+            weight_j += torch.index_select(single_weight, 0, inv_ids)
+
+            image_d_rotated = torch.index_select(img_d, 0, ids)
+            for t_fine in fine_event_chunks[rotate_index]:
+                denominator_d = torch.matmul(t_fine, image_d_rotated).clamp_min(1e-12)
+                denominator_j = torch.matmul(t_fine, image_j_rotated).clamp_min(1e-12)
+                compton_weight_d = torch.matmul(t_fine.transpose(0, 1), 1.0 / denominator_d)
+                compton_weight_j = torch.matmul(t_fine.transpose(0, 1), 1.0 / denominator_j)
+                weight_d += torch.index_select(compton_weight_d, 0, inv_ids)
+                weight_j += torch.index_select(compton_weight_j, 0, inv_ids)
+
+        img_d = safe_em_update(img_d, weight_d, sensi_d)
+        img_j = safe_em_update(img_j, weight_j, sensi_j)
+        if (iteration + 1) % save_step == 0:
+            history_d[save_index] = img_d.squeeze().detach().cpu()
+            history_j[save_index] = img_j.squeeze().detach().cpu()
+            save_index += 1
+            print(
+                f"[D+J] Iter {iteration + 1}/{iterations} time={time.time()-started:.1f}s | "
+                f"D {summarize_image_tensor(img_d)} | J {summarize_image_tensor(img_j)}"
+            )
+
+    img_d.detach().cpu().numpy().astype("float32").tofile(os.path.join(output_dir, "Image_440_ComptonOnly"))
+    img_j.detach().cpu().numpy().astype("float32").tofile(os.path.join(output_dir, "Image_440_SinglePlusCompton"))
+    history_d.numpy().astype("float32").tofile(
+        os.path.join(output_dir, f"Image_440_ComptonOnly_Iter_{iterations}_{snapshots}")
+    )
+    history_j.numpy().astype("float32").tofile(
+        os.path.join(output_dir, f"Image_440_SinglePlusCompton_Iter_{iterations}_{snapshots}")
+    )
+    return img_d.detach().cpu(), img_j.detach().cpu()
