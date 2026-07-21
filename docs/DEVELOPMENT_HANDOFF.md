@@ -6,6 +6,45 @@ This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are
 ignored by Git, so the required semantics and evidence are recorded here.
 
+## Directory map
+
+```text
+repository root
+|-- Factors/                         canonical/historical matrix packages (ignored)
+|-- CntStat/                         projection data (ignored)
+|-- List/                            Compton event data (ignored)
+|-- GenProj/                         MATLAB forward projection and source measure
+|-- Geant4Sim/                       Monte Carlo macros, C++ codes, run collection
+|   |-- Geant4Code/                  JSCC CntStat + List production simulation
+|   |-- Geant4Code_EHE/              EHE CntStat-only simulation
+|   |-- Geant4Code_CntStatOnly/      CntStat-only diagnostics
+|   |-- Geant4Code_CntStatResponseStudy/ independent response diagnostics
+|   |-- Geant4Code_GAGGIntrinsicResponse/ single-crystal containment study
+|   |-- Macro/                       generated source macros, including SensiD sources
+|   `-- run/                         collected Geant4 worker output (ignored)
+|-- Auxiliary_Studies/               independent research projects
+|   |-- GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/
+|   |                                   PE/Compton CUDA matrix generation and Factors
+|   |-- Sensitivity_SPECT_PolarCoor/  Compton Sensi_d calculation
+|   |-- ComptonSystemMatrixPrototype/ Compton prototype work
+|   |-- EventOrderInference_Experiment/ interaction-order experiments
+|   |-- CRCVAR_SinglePhoton/          CRC variance studies
+|   |-- FreePath/                     free-path studies
+|   `-- Reference/                    reference material and figures
+|-- distributed/                      distributed reconstruction
+|-- Reconstruction/                   reproduction-oriented reconstruction docs/code
+|-- Reproduction/                     compact end-to-end instructions
+|-- Results/                          local outputs (ignored)
+|   `-- LocalReconstructionRuns/      named PE-v4 local reconstruction runs
+|-- docs/                             durable cross-project documentation
+`-- tests/                            repository-level tests
+```
+
+For any directory not listed as a production entry point, inspect its local
+README before using it. Directories such as `tmp/`, `Geant4Sim/run/`,
+`Factors/`, `CntStat/`, `List/`, and `Results/` are generated-data locations,
+not source-code starting points.
+
 ## Production baseline
 
 The active JSCC Factors are exactly the three no-suffix directories:

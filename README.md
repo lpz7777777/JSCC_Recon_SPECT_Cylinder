@@ -36,6 +36,47 @@ The repository currently contains:
 - several independent auxiliary studies, grouped under `Auxiliary_Studies/`
 - a complete reproduction guide under `Reproduction/`
 
+### Repository Index (start here)
+
+| Area | Entry point | Scope |
+| --- | --- | --- |
+| Project handoff | [`docs/DEVELOPMENT_HANDOFF.md`](docs/DEVELOPMENT_HANDOFF.md) | Current production state, validated findings, data semantics, and next tasks |
+| Main reconstruction | [`main_local_multi_energy_cntstat.py`](main_local_multi_energy_cntstat.py) | Local 218/440 CntStat MLEM, explicit 440-to-218 correction, density-basis Factors |
+| Reproduction | [`Reproduction/README.md`](Reproduction/README.md) | Step-by-step Factors, CntStat, reconstruction, and visualization workflow |
+| System-matrix generation | [`Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ReadMe.md`](Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ReadMe.md) | CUDA PE/Compton matrix engine and parameter generation |
+| Factor conversion | [`GenFactors/README.md`](Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/GenFactors/README.md) | V4 Factors, `A*diag(DeltaV)`, calibration profiles, canonical no-suffix Factors |
+| Matrix history | [`SystemMatrix_Development_History/README.md`](Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/docs/SystemMatrix_Development_History/README.md) | V3/V4/V5 investigations, evidence, and calibration separation |
+| Matrix source measure | [`GenProj/POLAR_SOURCE_MEASURE.md`](GenProj/POLAR_SOURCE_MEASURE.md) | Polar-cell volumes, uniform-source interpretation, and reconstruction evidence |
+| GenProj | [`GenProj/README.md`](GenProj/README.md) | MATLAB forward projection and closed-loop CntStat generation |
+| Geant4 simulations | [`Geant4Sim/README.md`](Geant4Sim/README.md) | Macro generation, JSCC/EHE simulations, event semantics, and data collection |
+| JSCC Geant4 code | [`Geant4Sim/Geant4Code/README.md`](Geant4Sim/Geant4Code/README.md) | CntStat + Compton List detector simulation |
+| EHE Geant4 code | [`Geant4Sim/Geant4Code_EHE/README.md`](Geant4Sim/Geant4Code_EHE/README.md) | Parallel-hole Pb/NaI CntStat-only simulation |
+| CntStat-only code | [`Geant4Sim/Geant4Code_CntStatOnly/README.md`](Geant4Sim/Geant4Code_CntStatOnly/README.md) | Uniform-FOV and response diagnostics without List output |
+| Response study | [`Geant4Sim/Geant4Code_CntStatResponseStudy/README.md`](Geant4Sim/Geant4Code_CntStatResponseStudy/README.md) | Independent detector-response and radial-point diagnostics |
+| Intrinsic GAGG study | [`Geant4Sim/Geant4Code_GAGGIntrinsicResponse/README.md`](Geant4Sim/Geant4Code_GAGGIntrinsicResponse/README.md) | Single-crystal PE/Compton containment experiment; not yet in production PE v4 |
+| Compton sensitivity | [`Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md`](Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md) | Density-basis `Sensi_d` from monoenergetic Compton Lists |
+| Other Compton studies | [`Auxiliary_Studies/ComptonSystemMatrixPrototype/README.md`](Auxiliary_Studies/ComptonSystemMatrixPrototype/README.md) | Compton system-matrix prototypes |
+| Event-order study | [`Auxiliary_Studies/EventOrderInference_Experiment/README.md`](Auxiliary_Studies/EventOrderInference_Experiment/README.md) | First/second interaction order experiments |
+| CRC variance | [`Auxiliary_Studies/CRCVAR_SinglePhoton/README.md`](Auxiliary_Studies/CRCVAR_SinglePhoton/README.md) | Single-photon CRC variance analysis |
+| Results | [`Results/README.md`](Results/README.md) | Generated result layout and interpretation; data are Git-ignored |
+
+The repository-level tree is intentionally organized by responsibility:
+
+```text
+Factors/                  canonical and historical system Factors (large, ignored)
+CntStat/                  projection data (large, ignored)
+List/                     Compton List data (large, ignored)
+GenProj/                  analytical forward projection and source-measure audits
+Geant4Sim/                Monte Carlo macros, detector codes, and run collection
+Auxiliary_Studies/        independent matrix, Compton, sensitivity, and diagnostic projects
+Reconstruction/           reproduction-oriented reconstruction documentation
+distributed/              distributed GPU/CPU reconstruction entry points
+Results/                  local reconstruction/analysis outputs (large, ignored)
+Reproduction/              compact end-to-end instructions
+docs/                     cross-project handoff and durable development notes
+tests/                    repository-level tests
+```
+
 ### 2. Reconstruction Modes
 
 | Mode | Meaning | Main Data Source | Description |
@@ -57,7 +98,8 @@ Compton variants.
 ├── List/                            # Generated list-mode event data
 ├── GenProj/                         # MATLAB system-matrix forward projection scripts
 ├── Results/                         # Local generated results (ignored by Git)
-│   ├── Reconstruction/              # Current JSCC/EHE/Geant4 reconstructions
+│   ├── LocalReconstructionRuns/      # Named PE-v4/density-basis local runs
+│   ├── Reconstruction/              # Other JSCC/EHE/Geant4 reconstructions
 │   ├── Analysis/                    # CNR/CRC and calibration comparisons
 │   ├── Logs/                        # Archived local run logs
 │   └── Legacy/                      # Historical Figure* outputs
@@ -69,6 +111,7 @@ Compton variants.
 │   ├── Sensitivity_SPECT_PolarCoor/
 │   └── Reference/
 ├── FreePath/                        # Free-path simulation (legacy location)
+├── docs/                            # Cross-project handoff and durable notes
 ├── Reproduction/                    # Step-by-step reproduction guide
 │   ├── Step1_GenerateFactors/
 │   ├── Step2_GenerateCntStat/
