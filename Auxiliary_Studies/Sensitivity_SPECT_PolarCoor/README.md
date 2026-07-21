@@ -54,6 +54,27 @@ Sensi_d[j] = epsilon_d[j] * DeltaV[j]
 系数为 `0.999905`。因此第一段位置展宽、最小有效支撑和 density-basis 读写均不是
 径向趋势反向的主因；后续应优先检查 List 的事件空间分布与当前近似 Compton 似然。
 
+随后确认上述反向趋势的根因是 Factors 中的 `Detector.csv` 距离错误。旧的 218、440
+和 440-to-218 文件使用 `abs(y)=30/60/90/120 mm`，把探测器错误地放进 FOV 附近；
+与 Geant4 和原 511 keV Factors 一致的正确位置是：
+
+```text
+abs(y) = 200, 230, 260, 290 mm
+```
+
+当前以下正式目录的 `Detector.csv` 均已替换为
+`Factors/511keV_RotateNum20/Detector.csv` 的逐字节副本：
+
+- `Factors/218keV_RotateNum20`
+- `Factors/440keV_RotateNum20`
+- `Factors/440keV_to218win_RotateNum20`
+
+旧文件保留为 `Detector_WrongDistance_y30_60_90_120_20260722.csv`。修正坐标后，同一
+0.2% uniform 440 List 验证中，旋转平均的点效率相关系数从 `-0.9399` 改善为
+`+0.9869`，单角度相关系数从 `-0.4783` 改善为 `+0.9922`；`Sensi_d/DeltaV` 与
+`Sensi_s/DeltaV` 现在均随半径增大。所有 Sensi_d 计算在启动时都应检查 Detector
+四层位置，不能只检查探测器行数和编号。
+
 ## Cartesian 点响应实验链路
 
 正式的密度基准矩阵满足 `B=A*diag(DeltaV)`。为了避免在事件核中混入柱坐标
