@@ -94,7 +94,7 @@ def get_compton_backproj_list_single_sparse(
         beta,
         sigma_pos1_sq,
         sigma_pos2_sq,
-        include_pos1_source_leg_sigma=False,
+        include_pos1_source_leg_sigma=True,
     )
     angle_sigma = torch.sqrt(torch.clamp(angle_sigma_pos ** 2 + angle_sigma_ene ** 2, min=1e-12))
 

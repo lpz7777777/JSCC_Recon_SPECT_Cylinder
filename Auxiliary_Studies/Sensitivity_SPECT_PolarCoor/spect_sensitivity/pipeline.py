@@ -90,7 +90,9 @@ def _resolve_normalization(
         "factor_support_volume_mm3": support_volume_mm3,
         "volume_file": str(volume_path),
         "volume_file_signature": _path_signature(volume_path),
-        "equation": "Sensi_d = accumulator * source_volume_mm3 / represented_source_photons",
+            "point_response_equation": "A_polar = SysMat_polar / DeltaV_mm3",
+            "point_efficiency_equation": "epsilon_d = accumulator * pixel_count / represented_source_photons",
+            "equation": "Sensi_d = epsilon_d * DeltaV_mm3",
     }
 
 
@@ -316,6 +318,13 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
 
     load_start = time.perf_counter()
     system_matrix = load_system_matrix(dataset, device)
+    system_matrix_column_scale = None
+    polar_cell_volumes = None
+    if normalization["maps_activity_density"]:
+        polar_cell_volumes = np.fromfile(normalization["volume_file"], dtype="<f8")
+        system_matrix_column_scale = torch.from_numpy(
+            np.ascontiguousarray(1.0 / polar_cell_volumes, dtype=np.float32)
+        ).to(device)
     detector_coordinates = torch.from_numpy(dataset.detector_coordinates).to(device)
     voxel_coordinates = torch.from_numpy(dataset.voxel_coordinates).to(device)
     detector_sigma_r1_sq = build_detector_position_variance(
@@ -371,6 +380,7 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             detector_sigma_r2_sq=detector_sigma_r2_sq,
             voxel_coordinates=voxel_coordinates,
             system_matrix=system_matrix,
+            system_matrix_column_scale=system_matrix_column_scale,
             generator=generator,
             input_energies_already_smeared=config.input_energies_already_smeared,
         )
@@ -419,19 +429,14 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     if not np.isfinite(average_before_scaling) or average_before_scaling <= 0:
         raise RuntimeError("Accumulated sensitivity is non-finite or non-positive.")
     accepted_events_per_photon = diagnostics.kept_events / represented_source_photons
+    point_efficiency_raw = accumulator_cpu * dataset.pixel_count / represented_source_photons
+    target_average = accepted_events_per_photon
     if normalization["maps_activity_density"]:
-        source_volume_mm3 = float(normalization["source_volume_mm3"])
-        raw_sensitivity = (
-            accumulator_cpu * source_volume_mm3 / represented_source_photons
-        ).astype(np.float32)
-        target_average = (
-            accepted_events_per_photon * source_volume_mm3 / dataset.pixel_count
-        )
+        if polar_cell_volumes is None:
+            raise RuntimeError("Density-basis normalization did not load polar-cell volumes.")
+        raw_sensitivity = (point_efficiency_raw * polar_cell_volumes).astype(np.float32)
     else:
-        raw_sensitivity = (
-            accumulator_cpu * dataset.pixel_count / represented_source_photons
-        ).astype(np.float32)
-        target_average = accepted_events_per_photon
+        raw_sensitivity = point_efficiency_raw.astype(np.float32)
     sensitivity = raw_sensitivity
     if config.apply_rotation_average:
         if dataset.rotation_matrix is None:
@@ -443,7 +448,12 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     for name, values in (("Sensi_d_raw", raw_sensitivity), ("Sensi_d", sensitivity)):
         if not np.isfinite(values).all() or np.any(values < 0):
             raise RuntimeError(f"{name} contains non-finite or negative values.")
-    final_average = float(np.mean(sensitivity, dtype=np.float64))
+    stored_sensitivity_mean = float(np.mean(sensitivity, dtype=np.float64))
+    if normalization["maps_activity_density"]:
+        final_point_efficiency = sensitivity.astype(np.float64) / polar_cell_volumes
+    else:
+        final_point_efficiency = sensitivity.astype(np.float64)
+    final_average = float(np.mean(final_point_efficiency, dtype=np.float64))
     relative_mean_error = abs(final_average - target_average) / target_average
     if relative_mean_error > 5e-5:
         raise RuntimeError(
@@ -492,6 +502,9 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             "accepted_events_per_photon": accepted_events_per_photon,
             "target_average_sensitivity": target_average,
             "final_average": final_average,
+            "target_point_efficiency_mean": target_average,
+            "final_point_efficiency_mean": final_average,
+            "stored_sensitivity_mean": stored_sensitivity_mean,
             "final_integral_over_source_volume": (
                 float(np.sum(sensitivity, dtype=np.float64))
                 / float(normalization["source_volume_mm3"])
@@ -526,6 +539,6 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
         print(f"Installed to factor directory: {installed_path}")
     # Release the NumPy-backed matrix tensor before callers delete a temporary
     # Factor directory on Windows.
-    del system_matrix, detector_coordinates, voxel_coordinates, accumulator
+    del system_matrix, system_matrix_column_scale, detector_coordinates, voxel_coordinates, accumulator
     gc.collect()
     return metadata

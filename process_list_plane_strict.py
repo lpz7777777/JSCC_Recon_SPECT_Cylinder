@@ -5,7 +5,7 @@ import time
 FRONT_LAYER_CRYSTAL_MM = (3.0, 3.0, 3.0)
 REAR_LAYER_CRYSTAL_MM = (2.0, 6.0, 2.0)
 ELECTRON_REST_MEV = 0.511
-MIN_EVENT_EFFECTIVE_SUPPORT = 50.0
+MIN_EVENT_EFFECTIVE_SUPPORT = 1.0
 
 
 def get_coor_plane(pixel_num_x, pixel_num_y, pixel_l_x, pixel_l_y, fov_z):
@@ -102,7 +102,7 @@ def _compute_angle_sigma_pos_strict(
     beta,
     sigma_pos1_sq,
     sigma_pos2_sq,
-    include_pos1_source_leg_sigma=False,
+    include_pos1_source_leg_sigma=True,
 ):
     distance01 = torch.norm(vector01, dim=2, keepdim=True)
     distance12 = torch.norm(vector12, dim=2, keepdim=True)
@@ -220,7 +220,7 @@ def get_compton_backproj_list_single(sysmat, detector, coor, list_origin, delta_
         beta,
         sigma_pos1_sq,
         sigma_pos2_sq,
-        include_pos1_source_leg_sigma=False,
+        include_pos1_source_leg_sigma=True,
     )
     angle_sigma = torch.sqrt(torch.clamp(angle_sigma_pos ** 2 + angle_sigma_ene ** 2, min=1e-12))
 

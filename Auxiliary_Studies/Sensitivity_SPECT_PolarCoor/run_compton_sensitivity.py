@@ -93,12 +93,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--delta-r1-mm", type=float, default=0.0)
     parser.add_argument("--delta-r2-mm", type=float, default=0.0)
-    parser.add_argument("--min-event-effective-support", type=float, default=50.0)
-    parser.add_argument(
+    parser.add_argument("--min-event-effective-support", type=float, default=1.0)
+    source_leg_group = parser.add_mutually_exclusive_group()
+    source_leg_group.add_argument(
         "--include-first-hit-source-leg-uncertainty",
+        dest="include_first_hit_source_leg_uncertainty",
         action="store_true",
-        help="Legacy option. Normally disabled because SysMat_polar already models this extent.",
+        help="Include the first-crystal position uncertainty on both source-to-d1 and d1-to-d2 legs (default).",
     )
+    source_leg_group.add_argument(
+        "--exclude-first-hit-source-leg-uncertainty",
+        dest="include_first_hit_source_leg_uncertainty",
+        action="store_false",
+        help="Exclude the source-to-d1 contribution for a controlled comparison.",
+    )
+    parser.set_defaults(include_first_hit_source_leg_uncertainty=True)
 
     parser.add_argument("--system-matrix", type=Path, default=None)
     parser.add_argument("--detector-csv", type=Path, default=None)

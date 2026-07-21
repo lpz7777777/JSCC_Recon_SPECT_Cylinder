@@ -156,6 +156,7 @@ def accumulate_event_batch(
     detector_sigma_r2_sq: torch.Tensor,
     voxel_coordinates: torch.Tensor,
     system_matrix: torch.Tensor,
+    system_matrix_column_scale: torch.Tensor | None,
     generator: torch.Generator,
     input_energies_already_smeared: bool = False,
 ) -> tuple[torch.Tensor, BatchDiagnostics]:
@@ -250,7 +251,10 @@ def accumulate_event_batch(
     sigma_angle = torch.sqrt(torch.clamp(sigma_energy**2 + sigma_position**2, min=1e-12))
     weights = torch.exp(-((beta - theta.unsqueeze(1)) ** 2) / (2.0 * sigma_angle**2))
     weights *= klein_nishina.unsqueeze(1) - torch.sin(beta) ** 2
-    weights *= torch.index_select(system_matrix, 0, cpnum1 - 1)
+    point_response = torch.index_select(system_matrix, 0, cpnum1 - 1)
+    if system_matrix_column_scale is not None:
+        point_response = point_response * system_matrix_column_scale.unsqueeze(0)
+    weights *= point_response
 
     row_sums = torch.sum(weights, dim=1)
     valid_kernel = torch.isfinite(weights).all(dim=1) & torch.isfinite(row_sums) & (row_sums > 0)

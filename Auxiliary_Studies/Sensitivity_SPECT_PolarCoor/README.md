@@ -27,6 +27,33 @@ python Auxiliary_Studies\Sensitivity_SPECT_PolarCoor\visualize_sensi_d_vs_single
 错误打乱 detector/pixel 维度并产生伪影。`Sensi_d` 与 `Sensi_s` 代表不同事件链路，
 两者的比值用于比较两种探测效率，不应解释成已经标定好的重建修正因子。
 
+## 正式 polar 点响应链路
+
+当前正式 Factors 保存密度基底矩阵 `B=A*diag(DeltaV)`。Compton 事件核必须先按列
+除以 `polar_cell_volume_mm3.float64`，恢复旧工程使用的无量纲点响应 `A`。随后完全按
+旧工程的点灵敏度约定计算，最后只乘一次逐像素体积：
+
+```text
+A_polar[:,j] = SysMat_polar[:,j] / DeltaV[j]
+t_i[j] = ComptonCone_i[j] * A_polar[first_detector_i,j]
+t_i = t_i / sum_j(t_i)
+epsilon_d[j] = sum_i(t_i[j]) * Npixel / Nprimary
+Sensi_d[j] = epsilon_d[j] * DeltaV[j]
+```
+
+默认包含第一次作用晶体在 source-to-d1 和 d1-to-d2 两段传播中的位置不确定度，与
+旧 `main_crc_var.py -> crlb.py -> process_list.py` 链路一致。默认
+`min_event_effective_support=1`，即只拒绝无效或零和事件核，不按有效支撑大小筛选。
+`--exclude-first-hit-source-leg-uncertainty` 和更高的
+`--min-event-effective-support` 仅用于受控对照实验。
+
+2026-07-22 使用 uniform 440 List 的 0.2% 样本完成了该回归验证。正式设置保留
+25761/207443 个输入事件，`epsilon_d=Sensi_d/DeltaV` 的算术平均严格闭合到
+`2.5761015e-4`。但点效率的外圈/中心中位数比仍为 `0.7545`，与单光子点效率的相关
+系数为 `-0.9399`。仅关闭 source-to-d1 项时，外圈/中心比为 `0.7595`，两张图相关
+系数为 `0.999905`。因此第一段位置展宽、最小有效支撑和 density-basis 读写均不是
+径向趋势反向的主因；后续应优先检查 List 的事件空间分布与当前近似 Compton 似然。
+
 ## Cartesian 点响应实验链路
 
 正式的密度基准矩阵满足 `B=A*diag(DeltaV)`。为了避免在事件核中混入柱坐标
@@ -58,8 +85,9 @@ Factors 的单光子点效率相关系数为 `0.999999876`，中位绝对相对�
 `../../docs/DEVELOPMENT_HANDOFF.md`。
 
 > 当前正式 Factors 使用活度浓度基底 `B=A*diag(DeltaV_mm3)`。因此正式
-> `Sensi_d` 必须来自覆盖完整极坐标单元边界的连续均匀体积源，并使用
-> `Sensi_d = accumulator * Vsource / Nprimary` 归一化。当前网格对应
+> `Sensi_d` 必须来自覆盖完整极坐标单元边界的连续均匀体积源。先计算
+> `epsilon_d = accumulator * Npixel / Nprimary`，再逐点使用
+> `Sensi_d = epsilon_d * DeltaV` 转换到密度基底。当前网格对应
 > `R=153 mm`、`z=-30..30 mm`、`V=4412492.545673008 mm3`。配套 Geant4
 > macro 位于 `Geant4Sim/Macro/SensiD_UniformFullFOV/`。
 
@@ -119,10 +147,9 @@ sum_x(S_raw_scaled) / source_volume_mm3 =
 - 支持定期检查点和 `--resume` 续算。
 - 保存完整 `run_metadata.json`，包括输入文件、筛选计数、物理参数、归一化误差和
   输出路径。
-- 默认使用当前 `process_list_plane_strict.py` 的位置不确定度约定：第一次作用晶体
-  在“源点到第一次作用点”一段的尺寸展宽不重复计入，因为 `SysMat_polar` 已经包含
-  该空间响应。仅在复现旧结果时才使用
-  `--include-first-hit-source-leg-uncertainty`。
+- 默认使用旧金标准的位置不确定度约定：第一次作用晶体尺寸同时传播到
+  source-to-d1 和 d1-to-d2 两段。`--exclude-first-hit-source-leg-uncertainty` 仅用于
+  复现此前排除第一段的对照结果。
 
 ## 3. 环境
 

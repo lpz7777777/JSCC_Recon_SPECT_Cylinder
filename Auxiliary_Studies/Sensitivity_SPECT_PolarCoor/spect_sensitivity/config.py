@@ -13,8 +13,8 @@ class ComptonPhysicsConfig:
     energy_threshold_sum_mev: float | None = None
     delta_r1_mm: float = 0.0
     delta_r2_mm: float = 0.0
-    min_event_effective_support: float = 50.0
-    include_first_hit_source_leg_uncertainty: bool = False
+    min_event_effective_support: float = 1.0
+    include_first_hit_source_leg_uncertainty: bool = True
 
     @property
     def energy_resolution(self) -> float:

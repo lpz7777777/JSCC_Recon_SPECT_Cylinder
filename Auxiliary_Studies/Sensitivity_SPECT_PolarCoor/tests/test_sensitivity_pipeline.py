@@ -103,6 +103,9 @@ class SensitivityPipelineTest(unittest.TestCase):
 
             sensitivity = np.fromfile(output_dir / "Sensi_d", dtype=np.float32)
             raw_sensitivity = np.fromfile(output_dir / "Sensi_d_raw", dtype=np.float32)
+            volumes = np.fromfile(
+                factor_dir / "polar_cell_volume_mm3.float64", dtype=np.float64
+            )
             self.assertEqual(sensitivity.size, 64)
             self.assertEqual(raw_sensitivity.size, 64)
             self.assertTrue(np.isfinite(sensitivity).all())
@@ -110,7 +113,7 @@ class SensitivityPipelineTest(unittest.TestCase):
             self.assertEqual(metadata["events"]["selected_rows"], 6)
             self.assertGreater(metadata["events"]["kept_events"], 0)
             self.assertAlmostEqual(
-                float(np.mean(sensitivity, dtype=np.float64)),
+                float(np.mean(sensitivity / volumes, dtype=np.float64)),
                 metadata["normalization"]["target_average_sensitivity"],
                 places=7,
             )
@@ -129,6 +132,66 @@ class SensitivityPipelineTest(unittest.TestCase):
             self.assertFalse((output_dir / "checkpoint.npz").exists())
             parsed_metadata = json.loads((output_dir / "run_metadata.json").read_text("utf-8"))
             self.assertEqual(parsed_metadata["dimensions"]["detector_count"], 4)
+
+    def test_density_matrix_is_deweighted_before_event_kernel(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            density_root = root / "density"
+            legacy_root = root / "legacy"
+            density_root.mkdir()
+            legacy_root.mkdir()
+            density_factor, list_path = self._create_fixture(density_root)
+            legacy_factor, _ = self._create_fixture(legacy_root, density_basis=False)
+
+            pixel_count = 64
+            volumes = np.linspace(1.0, 4.0, pixel_count, dtype=np.float64)
+            volumes.tofile(density_factor / "polar_cell_volume_mm3.float64")
+            point_matrix = np.fromfile(
+                legacy_factor / "SysMat_polar", dtype=np.float32
+            ).reshape(pixel_count, 4)
+            (point_matrix * volumes[:, None]).astype(np.float32).tofile(
+                density_factor / "SysMat_polar"
+            )
+
+            common = dict(
+                compton_paths=(list_path,),
+                source_photons=1000.0,
+                physics=ComptonPhysicsConfig(
+                    energy_mev=0.511,
+                    energy_threshold_sum_mev=0.46,
+                    min_event_effective_support=1.0,
+                ),
+                rotate_num=2,
+                batch_size=4,
+                device="cpu",
+                seed=17,
+                expected_detector_count=4,
+                apply_rotation_average=False,
+            )
+            density_config = SensitivityRunConfig(
+                factor_dir=density_factor,
+                output_dir=root / "density-result",
+                system_matrix_path=density_factor / "SysMat_polar",
+                detector_path=density_factor / "Detector.csv",
+                coordinate_path=density_factor / "coor_polar_full.csv",
+                rotation_path=density_factor / "RotMat_full.csv",
+                **common,
+            )
+            legacy_config = SensitivityRunConfig(
+                factor_dir=legacy_factor,
+                output_dir=root / "legacy-result",
+                system_matrix_path=legacy_factor / "SysMat_polar",
+                detector_path=legacy_factor / "Detector.csv",
+                coordinate_path=legacy_factor / "coor_polar_full.csv",
+                rotation_path=legacy_factor / "RotMat_full.csv",
+                **common,
+            )
+            run_sensitivity_calculation(density_config)
+            run_sensitivity_calculation(legacy_config)
+
+            density = np.fromfile(root / "density-result" / "Sensi_d", dtype=np.float32)
+            legacy = np.fromfile(root / "legacy-result" / "Sensi_d", dtype=np.float32)
+            np.testing.assert_allclose(density / volumes, legacy, rtol=2e-6, atol=1e-9)
 
     def test_legacy_integrated_activity_normalization_is_retained(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
