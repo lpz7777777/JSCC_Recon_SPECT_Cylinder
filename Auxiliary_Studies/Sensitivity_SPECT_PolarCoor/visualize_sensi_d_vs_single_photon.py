@@ -15,7 +15,14 @@ import numpy as np
 from scipy.interpolate import griddata
 
 
-def load_single_photon(sysmat_path, rotmat_inv_path, pixel_count, detector_count, rotate_num):
+def load_single_photon(
+    sysmat_path,
+    rotmat_inv_path,
+    pixel_count,
+    detector_count,
+    rotate_num,
+    apply_rotation_average=True,
+):
     # MATLAB writes [detector, pixel] arrays in column-major order. The local
     # reconstruction therefore maps the file as [pixel, detector] and
     # transposes it; use the same convention here.
@@ -26,6 +33,8 @@ def load_single_photon(sysmat_path, rotmat_inv_path, pixel_count, detector_count
     if inverse.shape != (pixel_count, rotate_num):
         raise ValueError(f"Unexpected RotMatInv shape: {inverse.shape}")
     base_sensitivity = matrix_on_disk.sum(axis=1, dtype=np.float64)
+    if not apply_rotation_average:
+        return base_sensitivity
     sensitivity = np.zeros(pixel_count, dtype=np.float64)
     for rotation in range(rotate_num):
         sensitivity += base_sensitivity[inverse[:, rotation] - 1]
@@ -86,6 +95,11 @@ def main():
         type=Path,
         default=Path("Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/Result/440keV_RotateNum20_UniformFullFOV_5e10"),
     )
+    parser.add_argument(
+        "--single-angle",
+        action="store_true",
+        help="Display unrotated Sensi_d against the unrotated base single-photon sensitivity.",
+    )
     args = parser.parse_args()
     factor = args.factor_dir.resolve()
     result = args.result_dir.resolve()
@@ -103,6 +117,7 @@ def main():
     sensi_s = load_single_photon(
         factor / "SysMat_polar", factor / "RotMatInv_full.csv",
         pixel_count, detector_count, rotate_num,
+        apply_rotation_average=not args.single_angle,
     )
 
     coords_xy = coords[:, :2]
@@ -133,6 +148,7 @@ def main():
     summary = {
         "factor_dir": str(factor), "result_dir": str(result),
         "pixel_count": pixel_count, "detector_count": detector_count, "rotate_num": rotate_num,
+        "spatial_mode": "single_angle" if args.single_angle else "rotation_average",
         "comparison_note": "Sensi_d is accepted Compton-list sensitivity; Sensi_s is direct 440-window single-photon sensitivity. Absolute ratio is not a pure detector efficiency ratio.",
         "correlation_point_efficiency_maps": correlation,
         "ratio_s_over_d_display": stats("Sensi_s / Sensi_d after DeltaV removal", ratio_s_over_d),
@@ -154,9 +170,25 @@ def main():
     ax.plot(radial["Sensi_d_display"][0], radial["Sensi_d_display"][1], label="Sensi_d / DeltaV", linewidth=2)
     ax.set_xlabel("radius (mm)"); ax.set_ylabel("sensitivity (no median normalization)")
     ax.set_title(f"Radial median (corr={correlation:.4f})"); ax.grid(alpha=0.25); ax.legend(loc="best")
-    fig.suptitle("440 keV JSCC sensitivity: Compton list vs single-photon response")
+    mode_title = "single angle (no rotation average)" if args.single_angle else "rotation average"
+    fig.suptitle(f"440 keV JSCC sensitivity: Compton list vs single-photon response, {mode_title}")
     fig.savefig(result / "Sensi_d_vs_single_photon.png", dpi=180)
     fig.savefig(result / "Sensi_d_vs_single_photon_cartesian_xy.png", dpi=180)
+    sensi_d_figure, sensi_d_axis = plt.subplots(figsize=(7.4, 6.3), constrained_layout=True)
+    sensi_d_image = sensi_d_axis.pcolormesh(
+        cartesian[1][0], cartesian[1][1], cartesian[1][2],
+        shading="auto", cmap="viridis",
+    )
+    sensi_d_axis.set_aspect("equal")
+    sensi_d_axis.set_xlabel("x (mm)")
+    sensi_d_axis.set_ylabel("y (mm)")
+    sensi_d_axis.set_title(f"440 keV Sensi_d / DeltaV, {mode_title}")
+    sensi_d_colorbar = sensi_d_figure.colorbar(
+        sensi_d_image, ax=sensi_d_axis, fraction=0.046, pad=0.04
+    )
+    sensi_d_colorbar.set_label("Compton point sensitivity")
+    sensi_d_figure.savefig(result / "Sensi_d_point_efficiency_cartesian_xy.png", dpi=200)
+    plt.close(sensi_d_figure)
     print(json.dumps(summary, indent=2))
     print(f"Figure: {result / 'Sensi_d_vs_single_photon.png'}")
 
