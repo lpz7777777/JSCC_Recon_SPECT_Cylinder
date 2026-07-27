@@ -4,7 +4,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
-    $RepositoryRoot = $PSScriptRoot
+    $RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..")).Path
 }
 $sensitivityRun = Join-Path $RepositoryRoot "Auxiliary_Studies\Sensitivity_SPECT_PolarCoor\Result\440keV_Cartesian_UniformFullFOV_5e10"
 $finalizeStatus = Join-Path $sensitivityRun "finalize_status.txt"
@@ -38,7 +38,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Reconstruction failed: $LASTEXITCODE" }
 
     Set-Content -LiteralPath $statusPath -Value "generating visualization"
-    & python "visualize_jscc_compton_validation.py" --result-dir $outputDir
+    & python "tools\visualization\compton\visualize_jscc_compton_validation.py" --result-dir $outputDir
     if ($LASTEXITCODE -ne 0) { throw "Visualization failed: $LASTEXITCODE" }
     Set-Content -LiteralPath $statusPath -Value "complete"
 }

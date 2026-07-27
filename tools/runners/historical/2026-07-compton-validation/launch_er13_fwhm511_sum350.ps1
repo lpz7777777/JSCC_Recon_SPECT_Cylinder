@@ -1,12 +1,12 @@
 $ErrorActionPreference = "Stop"
-$repo = $PSScriptRoot
+$repo = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..")).Path
 $tag = "ER13_FWHM511_Sum350"
 $pipeline = Join-Path $repo "Results\Pipelines\FullSensiD_Then_ComptonValidation_20260722_$tag"
 New-Item -ItemType Directory -Force -Path $pipeline | Out-Null
 $stdout = Join-Path $pipeline "pipeline_stdout.log"
 $stderr = Join-Path $pipeline "pipeline_stderr.log"
 Remove-Item -LiteralPath $stdout, $stderr -Force -ErrorAction SilentlyContinue
-$script = Join-Path $repo "run_full_sensid_and_compton_validation.ps1"
+$script = Join-Path $repo "tools\runners\historical\2026-07-compton-validation\run_full_sensid_and_compton_validation.ps1"
 $argumentList = @(
     "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", $script,
     "-RepositoryRoot", $repo, "-ExperimentTag", $tag

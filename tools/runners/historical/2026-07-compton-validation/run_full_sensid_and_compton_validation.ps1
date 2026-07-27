@@ -1,10 +1,13 @@
 param(
-    [string]$RepositoryRoot = $PSScriptRoot,
+    [string]$RepositoryRoot = "",
     [string]$Python = "C:\ProgramData\anaconda3\envs\pytorch\python.exe",
     [string]$ExperimentTag = "Baseline_ER10_Sum400"
 )
 
 $ErrorActionPreference = "Stop"
+if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
+    $RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..")).Path
+}
 $RepositoryRoot = (Resolve-Path -LiteralPath $RepositoryRoot).Path
 $resultRoot = Join-Path $RepositoryRoot "Auxiliary_Studies\Sensitivity_SPECT_PolarCoor\Result"
 $sensitivityDir = Join-Path $resultRoot "440keV_RotateNum20_UniformFullFOV_5e10_CorrectDetector_Full_$ExperimentTag"
@@ -76,7 +79,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Reconstruction failed with exit code $LASTEXITCODE" }
 
     Set-Stage "reconstruction_visualization" "generating six-output reconstruction figure"
-    & $Python -u "visualize_jscc_compton_validation.py" `
+    & $Python -u "tools\visualization\compton\visualize_jscc_compton_validation.py" `
         --result-dir $reconstructionDir `
         --factor-dir "Factors\440keV_RotateNum20"
     if ($LASTEXITCODE -ne 0) { throw "Reconstruction visualization failed with exit code $LASTEXITCODE" }
