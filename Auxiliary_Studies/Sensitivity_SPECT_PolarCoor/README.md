@@ -29,16 +29,38 @@ python Auxiliary_Studies\Sensitivity_SPECT_PolarCoor\visualize_sensi_d_vs_single
 
 ## 正式 polar 点响应链路
 
-当前正式 Factors 保存密度基底矩阵 `B=A*diag(DeltaV)`。Compton 事件核必须先按列
-除以 `polar_cell_volume_mm3.float64`，恢复旧工程使用的无量纲点响应 `A`。随后完全按
-旧工程的点灵敏度约定计算，最后只乘一次逐像素体积：
+探测器 CSV 读取不得硬编码 `skiprows=1`。当前正式 `Detector.csv` 没有表头；所有新入口必须自动识别表头，校验探测器 ID 连续为 `1..10496`，并确认四层 `abs(y)` 为 `200/230/260/290 mm`。本地 218/440 对比度体模验证可用 `run_local_jscc_compton_validation.py --full-compton-grid` 强制 `theta_stride=z_stride=1`，完全关闭 Compton 网格的 coarse sampling；正式算子一致性验证使用该设置。
+
+### 2026-07-23 参数实验
+
+新增实验 `ER13_FWHM511_Sum350` 使用统一的 Compton 参数：
 
 ```text
-A_polar[:,j] = SysMat_polar[:,j] / DeltaV[j]
-t_i[j] = ComptonCone_i[j] * A_polar[first_detector_i,j]
-t_i = t_i / sum_j(t_i)
-epsilon_d[j] = sum_i(t_i[j]) * Npixel / Nprimary
-Sensi_d[j] = epsilon_d[j] * DeltaV[j]
+能量分辨率：13% FWHM @ 511 keV
+440 keV 等效分辨率：14.0097% FWHM
+有效事件能量和下限：E1 + E2 > 350 keV
+```
+
+由于当前 Geant4 List 已经写入展宽后的能量，运行时必须继续使用
+`--input-energies-already-smeared`，不能再次对原始 `E1/E2` 加随机展宽；上面的分辨率用于能量不确定度传播和 Compton 角核。Sensi_d 与重建必须使用相同的参考能量、FWHM 和能量和下限。
+
+当前正式 Factors 保存密度基底矩阵 `B=A*diag(DeltaV)`。从 2026-07-27 起，
+Compton `Sensi_d` 与重建必须直接使用同一密度基底事件响应，不能先除以、再乘回
+`DeltaV`。极坐标环的体积并不相同，旧的 `K*A -> normalize -> *DeltaV` 写法与
+实际 MLEM 使用的 `K*B` 不等价。
+
+```text
+B[:,j] = SysMat_polar[:,j] = A[:,j] * DeltaV[j]
+q_i[j] = ComptonCone_i[j] * B[first_detector_i,j]
+p_i[j] = q_i[j] / sum_k(q_i[k])
+Sensi_d[j] = V_FOV / Nprimary * sum_i(p_i[j])
+```
+
+这里 `Sensi_d` 已经是密度基底灵敏度；无量纲点效率仅用于显示，定义为
+`Sensi_d / DeltaV`。绝对闭合条件也必须使用体积平均：
+
+```text
+sum_j(Sensi_d[j]) / V_FOV = kept_events / Nprimary
 ```
 
 默认包含第一次作用晶体在 source-to-d1 和 d1-to-d2 两段传播中的位置不确定度，与
@@ -77,8 +99,8 @@ abs(y) = 200, 230, 260, 290 mm
 
 ## Cartesian 点响应实验链路
 
-正式的密度基准矩阵满足 `B=A*diag(DeltaV)`。为了避免在事件核中混入柱坐标
-单元体积，Compton 灵敏度的推荐计算顺序是：
+正式的密度基准矩阵满足 `B=A*diag(DeltaV)`。下列 Cartesian 链路是历史点响应
+实验的记录；它不能替代当前正式的 shared `K*B` polar 算子：
 
 ```text
 Cartesian SysMat_tmp point response
@@ -86,7 +108,7 @@ Cartesian SysMat_tmp point response
   -> normalize to kept_events / emitted_photons
   -> interpolate point efficiency to the polar grid
   -> rotation average and absolute-efficiency closure
-  -> Sensi_d[j] = epsilon_d[j] * DeltaV[j]
+  -> historical point-efficiency comparison only
 ```
 
 `prepare_cartesian_sensitivity_input.py` 从带 `SysMat_tmp` 的临时 Factors 中提取
@@ -105,10 +127,9 @@ Factors 的单光子点效率相关系数为 `0.999999876`，中位绝对相对�
 项目当前状态、当前需要生成的单能全 FOV List 数据和后续 Compton 重建顺序见
 `../../docs/DEVELOPMENT_HANDOFF.md`。
 
-> 当前正式 Factors 使用活度浓度基底 `B=A*diag(DeltaV_mm3)`。因此正式
-> `Sensi_d` 必须来自覆盖完整极坐标单元边界的连续均匀体积源。先计算
-> `epsilon_d = accumulator * Npixel / Nprimary`，再逐点使用
-> `Sensi_d = epsilon_d * DeltaV` 转换到密度基底。当前网格对应
+> 当前正式 Factors 使用活度浓度基底 `B=A*diag(DeltaV_mm3)`。正式
+> `Sensi_d` 必须来自覆盖完整极坐标单元边界的连续均匀体积源，并以共享
+> `K*B` 算子直接计算 `Sensi_d = V_FOV/Nprimary * sum_i(p_i)`。当前网格对应
 > `R=153 mm`、`z=-30..30 mm`、`V=4412492.545673008 mm3`。配套 Geant4
 > macro 位于 `Geant4Sim/Macro/SensiD_UniformFullFOV/`。
 
@@ -374,5 +395,69 @@ conda run --no-capture-output -n pytorch python `
   作用。
 - 四层晶体尺寸模型固定为前三层 `3x3x3 mm`、最后一层 `2x6x2 mm`，并要求
   `Detector.csv` 中能识别出四个绝对 y 层。
-- 若改变探测器结构、晶体尺寸或 List 筛选逻辑，必须同步修改本工具和
-  `process_list_plane_strict.py`，不能只修改其中一处。
+- 若改变探测器结构、晶体尺寸或 List 筛选逻辑，必须修改共享的
+  `compton_event_response.py`；`process_list_plane_sparse.py` 与本工具会自动
+  使用该实现。`process_list_plane_strict.py` 仅保留为旧复现链路，若仍需运行
+  该旧链路，应另行同步并明确标注其不是正式算子。
+
+## 14. 2026-07-27 shared K*B operator and independent closure
+
+The active implementation is shared by local reconstruction and Sensi_d:
+
+- `compton_event_response.py` at repository root owns event validation, energy
+  filtering, Compton-angle uncertainty, cone weights, and density-basis row
+  normalization.
+- `process_list_plane_sparse.py` only stores the cone on a coarse grid. During
+  MLEM, `compton_sparse_ops.py` multiplies the cone by the same on-disk
+  density-basis `SysMat_polar` row and normalizes it.
+- `spect_sensitivity/kernel.py` is now an adapter over that same shared module;
+  it accumulates the full-grid normalized `K*B` rows used to calculate
+  `Sensi_d`.
+
+Do not restore the legacy `K*A` calculation for density-basis Factors. A
+historical sparse-operator diagnostic found a 2.46 percent global difference
+and a 0.944--1.022 pointwise ratio range between that legacy Sensi_d and the
+actual `K*B` sparse operator on a uniform-list sample.
+
+### Independent half-list closure protocol
+
+The calibration and validation samples must be disjoint. Use the first half of
+the 5e10 uniform 440-keV List to calculate a candidate Sensi_d, then use the
+second half to make one streamed MLEM update from a uniform density image. The
+expected result is a ratio map near one; this is a direct test that a uniform
+source is a fixed point of the implemented reconstruction operator.
+
+`validate_uniform_compton_closure.py` writes:
+
+- `Sensi_d_independent_half` -- sensitivity estimated from the held-out half;
+- `UniformOneStepMLEM_Ratio` -- updated uniform density divided by its input;
+- `UniformOneStepMLEM_Closure.png` -- transverse, x-z, and radial ratio views;
+- `summary.json` -- all event filtering and closure statistics.
+
+The wrapper `run_uniform_kb_half_split_closure.ps1` runs both stages without
+overwriting the installed `Factors/.../Sensi_d`.
+
+### Deferred physical-response development
+
+The present shared operator deliberately preserves the existing geometric
+approximation. It is a numerical-consistency milestone, not a complete
+two-crystal Compton system matrix. The next physical upgrades, in order, are:
+
+1. Replace the first-detector 440-keV photopeak row with a first-Compton
+   interaction response, including entrance position and interaction depth.
+2. Include the second-detector acceptance: first-crystal escape, inter-crystal
+   GAGG/W attenuation, second-crystal solid angle, interaction probability,
+   and measured-E2 acceptance.
+3. Replace the propagated angle Gaussian with an energy-domain likelihood
+   based on predicted E1(beta), normalized resolution, and full
+   Klein-Nishina probability.
+4. Integrate finite first/second interaction positions with detector-local
+   subcells; then admit same-layer events and use a two-order likelihood when
+   experimental event ordering is unavailable.
+5. Add held-out likelihood/CNR/CRC stopping rules and MAP regularization. At
+   1e9, 185042 accepted Compton events over 25620 image pixels cannot support
+   an unregularized 1000-iteration Compton-only MLEM image.
+
+`Auxiliary_Studies/ComptonSystemMatrixPrototype` is the intended physical
+reference for items 1--4. Before using it quantitatively, replace its NaI
+attenuation assumptions with the Geant4 GAGG and W material properties.

@@ -9,6 +9,7 @@ from typing import Any
 class ComptonPhysicsConfig:
     energy_mev: float
     energy_resolution_662kev: float = 0.1
+    energy_resolution_reference_kev: float | None = None
     energy_threshold_min_mev: float = 0.050
     energy_threshold_sum_mev: float | None = None
     delta_r1_mm: float = 0.0
@@ -18,7 +19,12 @@ class ComptonPhysicsConfig:
 
     @property
     def energy_resolution(self) -> float:
-        return self.energy_resolution_662kev * (0.662 / self.energy_mev) ** 0.5
+        reference_mev = (
+            0.662
+            if self.energy_resolution_reference_kev is None
+            else self.energy_resolution_reference_kev / 1000.0
+        )
+        return self.energy_resolution_662kev * (reference_mev / self.energy_mev) ** 0.5
 
     @property
     def energy_threshold_max_mev(self) -> float:
@@ -49,6 +55,8 @@ class ComptonPhysicsConfig:
             raise ValueError("energy_mev must be positive.")
         if self.energy_resolution_662kev < 0:
             raise ValueError("energy_resolution_662kev cannot be negative.")
+        if self.energy_resolution_reference_kev is not None and self.energy_resolution_reference_kev <= 0:
+            raise ValueError("energy_resolution_reference_kev must be positive when provided.")
         if self.energy_threshold_min_mev < 0:
             raise ValueError("energy_threshold_min_mev cannot be negative.")
         if not 0 < self.resolved_energy_threshold_sum_mev <= self.energy_mev * 1.25:
@@ -82,6 +90,7 @@ class SensitivityRunConfig:
     rotation_path: Path | None
     rotate_num: int
     source_volume_mm3: float | None = None
+    event_start_fraction: float = 0.0
     event_fraction: float = 1.0
     batch_size: int = 256
     device: str = "auto"
@@ -105,6 +114,10 @@ class SensitivityRunConfig:
             raise ValueError("source_volume_mm3 must be positive when provided.")
         if not 0 < self.event_fraction <= 1:
             raise ValueError("event_fraction must be in (0, 1].")
+        if not 0 <= self.event_start_fraction < 1:
+            raise ValueError("event_start_fraction must be in [0, 1).")
+        if self.event_start_fraction + self.event_fraction > 1.0 + 1e-12:
+            raise ValueError("event_start_fraction + event_fraction cannot exceed 1.")
         if self.batch_size <= 0:
             raise ValueError("batch_size must be positive.")
         if self.rotate_num <= 0:

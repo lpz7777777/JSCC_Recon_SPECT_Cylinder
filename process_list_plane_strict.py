@@ -148,17 +148,33 @@ def _filter_unstable_event_kernels(t, t_compton, t_single):
     return t_norm[stable], t_compton_norm[stable], t_single_norm[stable]
 
 
-def get_compton_backproj_list_single(sysmat, detector, coor, list_origin, delta_r1, delta_r2, e0, ene_resolution, ene_threshold_max, ene_threshold_min, ene_threshold_sum, device, model_compton_generator=None):
+def get_compton_backproj_list_single(
+    sysmat,
+    detector,
+    coor,
+    list_origin,
+    delta_r1,
+    delta_r2,
+    e0,
+    ene_resolution,
+    ene_threshold_max,
+    ene_threshold_min,
+    ene_threshold_sum,
+    device,
+    model_compton_generator=None,
+    input_energies_already_smeared=False,
+):
     cpnum1 = list_origin[:, 0].int()
     cpnum2 = list_origin[:, 2].int()
-    e1 = list_origin[:, 1]
-    e2 = list_origin[:, 3]
+    e1 = list_origin[:, 1].clone()
+    e2 = list_origin[:, 3].clone()
 
     # set_energy_resolution
-    sigma_1 = e1 * ene_resolution / 2.355 * (e0 / e1) ** 0.5
-    sigma_2 = e2 * ene_resolution / 2.355 * (e0 / e2) ** 0.5
-    e1 += sigma_1 * torch.randn(e1.shape[0]).to(device)
-    e2 += sigma_2 * torch.randn(e2.shape[0]).to(device)
+    if not input_energies_already_smeared:
+        sigma_1 = e1 * ene_resolution / 2.355 * (e0 / e1) ** 0.5
+        sigma_2 = e2 * ene_resolution / 2.355 * (e0 / e2) ** 0.5
+        e1 = e1 + sigma_1 * torch.randn(e1.shape[0], device=device)
+        e2 = e2 + sigma_2 * torch.randn(e2.shape[0], device=device)
 
     # set_energy_threshold
     flag_max_1 = e1 < ene_threshold_max

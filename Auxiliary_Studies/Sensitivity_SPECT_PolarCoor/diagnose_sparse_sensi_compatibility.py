@@ -13,6 +13,7 @@ if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
 from compton_sparse_ops import build_compton_sparse_projector, materialize_sparse_event_rows_to_fine
+from detector_csv import load_detector_coordinates
 from process_list_plane_sparse import get_compton_backproj_list_single_sparse
 from spect_sensitivity.io import count_event_rows, iter_event_batches
 
@@ -36,7 +37,9 @@ def main():
     coordinates = np.loadtxt(factor / "coor_polar_full.csv", delimiter=",", dtype=np.float32)
     rotation = np.loadtxt(factor / "RotMat_full.csv", delimiter=",", dtype=np.int64)
     volumes = np.fromfile(factor / "polar_cell_volume_mm3.float64", dtype=np.float64)
-    detector = torch.from_numpy(np.loadtxt(factor / "Detector.csv", delimiter=",", skiprows=1, dtype=np.float32)[:, 1:4]).to(device)
+    detector = torch.from_numpy(
+        load_detector_coordinates(factor / "Detector.csv", expected_count=10496)
+    ).to(device)
     pixels = coordinates.shape[0]
     sysmat = torch.from_numpy(np.fromfile(factor / "SysMat_polar", dtype=np.float32).reshape(pixels, -1).T.copy()).to(device)
     projector = build_compton_sparse_projector(torch.from_numpy(coordinates), args.theta_stride, args.z_stride, 20).to(device)

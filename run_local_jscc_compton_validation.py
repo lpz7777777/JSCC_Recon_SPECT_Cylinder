@@ -10,6 +10,7 @@ import numpy as np
 import torch
 
 from compton_sparse_ops import build_compton_sparse_projector
+from detector_csv import load_detector_coordinates
 from distributed.python.multi_energy_tasks import ReconTask
 from main_local_multi_energy_cntstat import (
     forward_project_local_cntstat,
@@ -32,10 +33,18 @@ def parse_args():
     parser.add_argument("--save-step", type=int, default=50)
     parser.add_argument("--theta-stride", type=int, default=1)
     parser.add_argument("--z-stride", type=int, default=2)
+    parser.add_argument(
+        "--full-compton-grid",
+        action="store_true",
+        help="Disable Compton coarse-grid sampling by forcing theta-stride=z-stride=1.",
+    )
     parser.add_argument("--list-workers", type=int, default=20)
     parser.add_argument("--t-divide-num", type=int, default=20)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--sensi-d-path", type=Path, default=None)
+    parser.add_argument("--energy-resolution-fwhm", type=float, default=0.1)
+    parser.add_argument("--energy-resolution-reference-kev", type=float, default=662.0)
+    parser.add_argument("--energy-threshold-sum-mev", type=float, default=0.40)
     parser.add_argument(
         "--max-events-per-view", type=int, default=0,
         help="Diagnostic limit; zero processes every List event.",
@@ -61,6 +70,9 @@ def save_sum(output_dir, name, *images):
 
 def main():
     cli = parse_args()
+    if cli.full_compton_grid:
+        cli.theta_stride = 1
+        cli.z_stride = 1
     if cli.iterations <= 0 or cli.save_step <= 0 or cli.iterations % cli.save_step:
         raise ValueError("iterations must be positive and divisible by save-step")
     repo = Path(__file__).resolve().parent
@@ -117,7 +129,9 @@ def main():
         raise ValueError("Installed Sensi_d has invalid dimensions or values")
 
     detector = torch.from_numpy(
-        np.loadtxt(factor440["factor_dir"] / "Detector.csv", delimiter=",", skiprows=1, dtype=np.float32)[:, 1:4]
+        load_detector_coordinates(
+            factor440["factor_dir"] / "Detector.csv", expected_count=10496
+        )
     ).to(device)
     coordinates = torch.from_numpy(
         np.loadtxt(factor440["factor_dir"] / "coor_polar_full.csv", delimiter=",", dtype=np.float32)
@@ -130,7 +144,7 @@ def main():
     sysmat_device = factor440["sysmat"].to(device)
     list_dir = repo / "List" / "218-440keV_RotateNum20_Geant4JSCC" / f"List_{DATASET}_1e9"
     energy = 0.440
-    resolution = 0.1 * (0.662 / energy) ** 0.5
+    resolution = cli.energy_resolution_fwhm * (cli.energy_resolution_reference_kev / 1000.0 / energy) ** 0.5
     threshold_max = 2 * energy**2 / (0.511 + 2 * energy) - 0.001
     t_rotate_all = []
     accepted_compton = 0
@@ -144,7 +158,7 @@ def main():
         for chunk in torch.chunk(events, cli.list_workers, dim=0):
             rows, _, _ = get_compton_backproj_list_single_sparse(
                 sysmat_device, detector, projector_device, chunk.to(device),
-                0.0, 0.0, energy, resolution, threshold_max, 0.05, 0.40,
+                0.0, 0.0, energy, resolution, threshold_max, 0.05, cli.energy_threshold_sum_mev,
                 device, input_energies_already_smeared=True,
             )
             if rows.numel():
@@ -168,6 +182,11 @@ def main():
         "dataset": DATASET, "count_level": "1e9", "iterations": cli.iterations,
         "save_step": cli.save_step, "osem_subsets": 1,
         "input_energies_already_smeared": True,
+        "energy_resolution_fwhm_at_reference": cli.energy_resolution_fwhm,
+        "energy_resolution_reference_kev": cli.energy_resolution_reference_kev,
+        "energy_resolution_at_440kev": resolution,
+        "energy_threshold_sum_mev": cli.energy_threshold_sum_mev,
+        "full_compton_grid": cli.full_compton_grid,
         "compton_theta_stride": cli.theta_stride, "compton_z_stride": cli.z_stride,
         "max_events_per_view": cli.max_events_per_view,
         "accepted_compton_events": accepted_compton,

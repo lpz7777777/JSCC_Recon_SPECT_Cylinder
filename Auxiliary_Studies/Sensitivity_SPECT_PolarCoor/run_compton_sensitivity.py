@@ -67,12 +67,20 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--energy-mev", type=float, default=None)
     parser.add_argument("--rotate-num", type=int, default=None)
     parser.add_argument("--event-fraction", type=float, default=1.0)
+    parser.add_argument(
+        "--event-start-fraction", type=float, default=0.0,
+        help="Fraction of concatenated List rows to skip before selecting --event-fraction rows.",
+    )
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     parser.add_argument("--seed", type=int, default=20260710)
     parser.add_argument("--expected-detector-count", type=int, default=10496)
 
     parser.add_argument("--energy-resolution-662kev", type=float, default=0.1)
+    parser.add_argument(
+        "--energy-resolution-reference-kev", type=float, default=None,
+        help="Reference energy for --energy-resolution-662kev; use 511 with 0.13 for 13%% FWHM @511 keV.",
+    )
     parser.add_argument(
         "--input-energies-already-smeared",
         action="store_true",
@@ -142,6 +150,7 @@ def main() -> None:
     physics = ComptonPhysicsConfig(
         energy_mev=energy_mev,
         energy_resolution_662kev=args.energy_resolution_662kev,
+        energy_resolution_reference_kev=args.energy_resolution_reference_kev,
         energy_threshold_min_mev=args.energy_threshold_min_mev,
         energy_threshold_sum_mev=args.energy_threshold_sum_mev,
         delta_r1_mm=args.delta_r1_mm,
@@ -161,6 +170,7 @@ def main() -> None:
         rotation_path=(args.rotation_csv or factor_dir / "RotMat_full.csv").resolve(),
         rotate_num=rotate_num,
         source_volume_mm3=args.source_volume_mm3,
+        event_start_fraction=args.event_start_fraction,
         event_fraction=args.event_fraction,
         batch_size=args.batch_size,
         device=args.device,

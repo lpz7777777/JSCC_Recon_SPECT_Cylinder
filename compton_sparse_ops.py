@@ -268,6 +268,11 @@ def build_compton_sparse_projector(coor_full, theta_stride=2, z_stride=2, rotate
             )
         )
     coor_coarse = torch.cat(coarse_planes, dim=0)
+    if z_stride == 1 and all(stride == 1 for stride in ring_strides):
+        # Full-grid mode must use the exact input coordinates. Reconstructing
+        # x/y with sin/cos introduces small float32 differences from the CSV and
+        # prevents strict equivalence with the dense Compton operator.
+        coor_coarse = coor_full.to(dtype=dtype).clone()
 
     coarse_layer_num = coarse_layer.size(0)
     coarse_z_num = coarse_z_values.numel()

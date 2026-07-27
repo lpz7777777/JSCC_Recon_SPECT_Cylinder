@@ -187,17 +187,30 @@ GenProj is the matrix-closed-loop test, while Geant4 is the transport test.
 
 ## Next tasks
 
-1. Compile the updated Geant4Code and generate separate 218 and 440 full-FOV
-   List data with the supplied macros.
-2. Calculate, inspect, and only then install each density-basis `Sensi_d`.
-   It must satisfy:
-   `sum(Sensi_d)/Vsource = kept_events/Nprimary`.
-3. Run Compton-only reconstruction before enabling weighted joint SC+Compton
+1. Complete the 440-keV independent uniform-list closure currently launched by
+   `run_uniform_kb_half_split_closure.ps1`. Half A creates a candidate Sensi_d;
+   the disjoint Half B must keep a uniform density approximately fixed after
+   one streamed MLEM update. Do not install it to Factors before reviewing the
+   ratio map and JSON summary.
+2. Use the shared `compton_event_response.py` operator for every future local
+   reconstruction and Sensi_d run. Density-basis Factors use
+   `q_i[j]=K_i[j]*B[first_i,j]`, never the historical `K_i*A` then re-volume
+   weighting route.
+3. Before more reconstruction tuning, improve physical event response in this
+   order: first-Compton interaction/depth in detector 1; detector-2 solid
+   angle, escape and GAGG/W attenuation; energy-domain likelihood with full
+   Klein-Nishina; finite interaction subcells; same-layer and two-order events.
+   The small `ComptonSystemMatrixPrototype` is the reference implementation,
+   but its NaI assumptions must be replaced by Geant4 GAGG/W properties.
+4. Run Compton-only reconstruction before enabling weighted joint SC+Compton
    reconstruction. Keep List thresholds, detector IDs, first-hit convention,
    energy resolution, and event ordering identical between sensitivity and
-   reconstruction.
-4. Validate remaining 440 spatial mismatch on independent contrast and radial
-   point-source data. Keep raw physics comparisons separate from calibrations.
+   reconstruction. Use held-out likelihood/CNR/CRC or MAP regularization;
+   1000 unregularized Compton-only MLEM iterations are noise-dominated at the
+   current event count.
+5. Verify that CntStat and List channels are disjoint, or model their overlap,
+   before interpreting their direct Poisson-likelihood sum as an independent
+   joint reconstruction.
 
 ## Do-not-mix table
 

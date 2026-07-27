@@ -9,17 +9,34 @@ import numpy as np
 from scipy.interpolate import griddata
 
 
-def mip(coordinates, values, axis):
+def cartesian_stack(coordinates, values, axis):
     xx, yy = np.meshgrid(axis, axis)
     planes = []
     for z in np.unique(coordinates[:, 2]):
         selected = np.isclose(coordinates[:, 2], z)
         planes.append(griddata(coordinates[selected, :2], values[selected], (xx, yy), method="linear"))
-    stack = np.stack(planes)
+    return np.stack(planes)
+
+
+def project(coordinates, values, axis, mode):
+    stack = cartesian_stack(coordinates, values, axis)
     valid = np.isfinite(stack)
-    result = np.max(np.where(valid, stack, -np.inf), axis=0)
+    if mode == "mip":
+        result = np.max(np.where(valid, stack, -np.inf), axis=0)
+    elif mode == "z_mean":
+        result = np.nanmean(stack, axis=0)
+    elif mode == "center_mean":
+        z_values = np.unique(coordinates[:, 2])
+        center_ids = np.argsort(np.abs(z_values))[:2]
+        result = np.nanmean(stack[center_ids], axis=0)
+    else:
+        raise ValueError(f"Unknown projection mode: {mode}")
     result[~np.any(valid, axis=0)] = np.nan
     return result
+
+
+def mip(coordinates, values, axis):
+    return project(coordinates, values, axis, "mip")
 
 
 def main():
@@ -67,7 +84,93 @@ def main():
     output = result / "Compton_iteration_evolution_50_to_1000.png"
     figure.savefig(output, dpi=180)
     plt.close(figure)
-    summary = {"selected_iterations": selected_iterations.tolist(), "metrics": metrics, "figure": str(output)}
+
+    diagnostic_rows = [
+        ("440_ComptonOnly", "mip", "Compton-only MIP"),
+        ("440_ComptonOnly", "z_mean", "Compton-only z mean"),
+        ("440_ComptonOnly", "center_mean", "Compton-only center two slices"),
+        ("440_SinglePlusCompton", "z_mean", "Single + Compton z mean"),
+    ]
+    diagnostic, diagnostic_axes = plt.subplots(
+        len(diagnostic_rows), len(selected_ids),
+        figsize=(3.0 * len(selected_ids), 3.0 * len(diagnostic_rows)),
+        constrained_layout=True,
+    )
+    history_cache = {
+        name: np.fromfile(
+            result / f"Image_{name}_Iter_1000_{history_count}", dtype=np.float32
+        ).reshape(history_count, pixel_count)
+        for name, _ in modes
+    }
+    for row, (name, projection_mode, label) in enumerate(diagnostic_rows):
+        projected = [
+            project(coordinates, history_cache[name][history_id], axis, projection_mode)
+            for history_id in selected_ids
+        ]
+        scale_values = np.concatenate([item[np.isfinite(item)] for item in projected])
+        vmax = float(np.quantile(scale_values, 0.99))
+        for column, (history_id, image) in enumerate(zip(selected_ids, projected)):
+            ax = diagnostic_axes[row, column]
+            shown = ax.imshow(
+                image, origin="lower", extent=(-150, 150, -150, 150),
+                cmap="gray", vmin=0, vmax=max(vmax, 1e-12),
+            )
+            ax.set_aspect("equal"); ax.set_xticks([]); ax.set_yticks([])
+            ax.set_title(str(selected_iterations[column]), fontsize=9)
+            if column == 0:
+                ax.set_ylabel(label, fontsize=10)
+        diagnostic.colorbar(
+            shown, ax=diagnostic_axes[row, :], fraction=0.017, pad=0.01,
+            label="activity density",
+        )
+    diagnostic.suptitle("1e9 Geant4: projection-dependent Compton evolution")
+    diagnostic_output = result / "Compton_iteration_evolution_MIP_zmean_center.png"
+    diagnostic.savefig(diagnostic_output, dpi=180)
+    plt.close(diagnostic)
+
+    all_ids = list(range(history_count))
+    full_rows = [
+        ("440_ComptonOnly", "mip", "Compton-only MIP"),
+        ("440_ComptonOnly", "center_mean", "Compton-only center two slices"),
+        ("440_SinglePlusCompton", "center_mean", "Single + Compton center two slices"),
+    ]
+    full_figure, full_axes = plt.subplots(
+        len(full_rows), history_count,
+        figsize=(2.15 * history_count, 6.0), constrained_layout=True,
+    )
+    for row, (name, projection_mode, label) in enumerate(full_rows):
+        projected = [
+            project(coordinates, history_cache[name][history_id], axis, projection_mode)
+            for history_id in all_ids
+        ]
+        scale_values = np.concatenate([item[np.isfinite(item)] for item in projected])
+        vmax = float(np.quantile(scale_values, 0.99))
+        for column, (history_id, image) in enumerate(zip(all_ids, projected)):
+            ax = full_axes[row, column]
+            shown = ax.imshow(
+                image, origin="lower", extent=(-150, 150, -150, 150),
+                cmap="gray", vmin=0, vmax=max(vmax, 1e-12),
+            )
+            ax.set_aspect("equal"); ax.set_xticks([]); ax.set_yticks([])
+            ax.set_title(str(int(iterations[history_id])), fontsize=8)
+            if column == 0:
+                ax.set_ylabel(label, fontsize=9)
+        full_figure.colorbar(
+            shown, ax=full_axes[row, :], fraction=0.008, pad=0.01,
+            label="activity density",
+        )
+    full_figure.suptitle("1e9 Geant4: every saved Compton iteration")
+    full_output = result / "Compton_iteration_evolution_all_saved_frames.png"
+    full_figure.savefig(full_output, dpi=180)
+    plt.close(full_figure)
+
+    summary = {
+        "selected_iterations": selected_iterations.tolist(),
+        "metrics": metrics,
+        "figure": str(output),
+        "projection_diagnostic_figure": str(diagnostic_output),
+        "all_saved_frames_figure": str(full_output),
+    }
     (result / "compton_iteration_metrics.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
 

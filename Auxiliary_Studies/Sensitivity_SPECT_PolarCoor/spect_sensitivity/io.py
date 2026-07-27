@@ -229,16 +229,38 @@ def iter_event_batches(
     start_file_index: int = 0,
     start_file_offset: int = 0,
     already_processed: int = 0,
+    initial_skip_rows: int = 0,
 ) -> Iterator[EventBatch]:
     remaining = selected_event_count - already_processed
     if remaining <= 0:
         return
 
+    skip_rows = initial_skip_rows if (start_file_index == 0 and start_file_offset == 0 and already_processed == 0) else 0
     for file_index in range(start_file_index, len(paths)):
         path = paths[file_index]
         with path.open("rb") as file:
             if file_index == start_file_index and start_file_offset:
                 file.seek(start_file_offset)
+            while skip_rows > 0:
+                # Interval validation commonly starts at the second half of a
+                # 100M-row List.  Skipping it with reconstruction-sized 256-row
+                # batches would issue hundreds of thousands of CSV reads.
+                rows_to_skip = min(1_000_000, skip_rows)
+                skipped = np.loadtxt(
+                    file,
+                    delimiter=",",
+                    dtype=np.float32,
+                    usecols=(0,),
+                    max_rows=rows_to_skip,
+                    ndmin=1,
+                )
+                if skipped.size == 0:
+                    break
+                skip_rows -= int(skipped.size)
+                if skipped.size < rows_to_skip:
+                    break
+            if skip_rows > 0:
+                continue
             while remaining > 0:
                 rows_to_read = min(batch_size, remaining)
                 try:

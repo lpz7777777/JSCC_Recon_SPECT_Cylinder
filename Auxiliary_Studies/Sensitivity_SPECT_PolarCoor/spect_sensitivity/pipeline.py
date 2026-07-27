@@ -27,7 +27,7 @@ from .kernel import (
 )
 
 
-CHECKPOINT_VERSION = 2
+CHECKPOINT_VERSION = 3
 
 
 def _resolve_normalization(
@@ -90,9 +90,9 @@ def _resolve_normalization(
         "factor_support_volume_mm3": support_volume_mm3,
         "volume_file": str(volume_path),
         "volume_file_signature": _path_signature(volume_path),
-            "point_response_equation": "A_polar = SysMat_polar / DeltaV_mm3",
-            "point_efficiency_equation": "epsilon_d = accumulator * pixel_count / represented_source_photons",
-            "equation": "Sensi_d = epsilon_d * DeltaV_mm3",
+        "event_response_equation": "q_i[j] = ComptonCone_i[j] * SysMat_polar[first_detector_i, j]",
+        "posterior_equation": "p_i[j] = q_i[j] / sum_k(q_i[k])",
+        "equation": "Sensi_d[j] = source_volume_mm3 / represented_source_photons * sum_i(p_i[j])",
     }
 
 
@@ -131,6 +131,7 @@ def _configuration_fingerprint(
         "rotation": _path_signature(dataset.rotation_path) if dataset.rotation_path else None,
         "source_photons": config.source_photons,
         "normalization": normalization,
+        "event_start_fraction": config.event_start_fraction,
         "event_fraction": config.event_fraction,
         "selected_event_count": selected_event_count,
         "batch_size": config.batch_size,
@@ -295,11 +296,14 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     total_event_rows = int(sum(event_rows_per_file))
     if total_event_rows <= 0:
         raise ValueError("All supplied Compton list files are empty.")
+    selection_start_row = int(total_event_rows * config.event_start_fraction)
     selected_event_count = int(total_event_rows * config.event_fraction)
     if selected_event_count <= 0:
         raise ValueError(
             f"event_fraction={config.event_fraction} selects zero rows from {total_event_rows} events."
         )
+    if selection_start_row + selected_event_count > total_event_rows:
+        raise ValueError("The selected List interval exceeds the available input rows.")
     represented_fraction = selected_event_count / total_event_rows
     represented_source_photons = config.source_photons * represented_fraction
     fingerprint = _configuration_fingerprint(
@@ -311,20 +315,16 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
         f"rotations={dataset.rotate_num}"
     )
     print(
-        f"Events: total={total_event_rows}, selected={selected_event_count} "
+        f"Events: total={total_event_rows}, start={selection_start_row}, selected={selected_event_count} "
         f"({represented_fraction:.8f}), represented photons={represented_source_photons:.6e}"
     )
     print(f"Device: {device}; batch size: {config.batch_size}")
 
     load_start = time.perf_counter()
     system_matrix = load_system_matrix(dataset, device)
-    system_matrix_column_scale = None
     polar_cell_volumes = None
     if normalization["maps_activity_density"]:
         polar_cell_volumes = np.fromfile(normalization["volume_file"], dtype="<f8")
-        system_matrix_column_scale = torch.from_numpy(
-            np.ascontiguousarray(1.0 / polar_cell_volumes, dtype=np.float32)
-        ).to(device)
     detector_coordinates = torch.from_numpy(dataset.detector_coordinates).to(device)
     voxel_coordinates = torch.from_numpy(dataset.voxel_coordinates).to(device)
     detector_sigma_r1_sq = build_detector_position_variance(
@@ -368,8 +368,9 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
         config.batch_size,
         selected_event_count,
         start_file_index=start_file_index,
-        start_file_offset=start_file_offset,
-        already_processed=processed_events,
+            start_file_offset=start_file_offset,
+            already_processed=processed_events,
+            initial_skip_rows=selection_start_row,
     ):
         events = event_batch.values.to(device, non_blocking=True)
         batch_sum, batch_diagnostics = accumulate_event_batch(
@@ -380,7 +381,6 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             detector_sigma_r2_sq=detector_sigma_r2_sq,
             voxel_coordinates=voxel_coordinates,
             system_matrix=system_matrix,
-            system_matrix_column_scale=system_matrix_column_scale,
             generator=generator,
             input_energies_already_smeared=config.input_energies_already_smeared,
         )
@@ -429,14 +429,19 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     if not np.isfinite(average_before_scaling) or average_before_scaling <= 0:
         raise RuntimeError("Accumulated sensitivity is non-finite or non-positive.")
     accepted_events_per_photon = diagnostics.kept_events / represented_source_photons
-    point_efficiency_raw = accumulator_cpu * dataset.pixel_count / represented_source_photons
     target_average = accepted_events_per_photon
     if normalization["maps_activity_density"]:
         if polar_cell_volumes is None:
             raise RuntimeError("Density-basis normalization did not load polar-cell volumes.")
-        raw_sensitivity = (point_efficiency_raw * polar_cell_volumes).astype(np.float32)
+        # The on-disk matrix is B=A*diag(DeltaV).  The same K*B event response
+        # is used in MLEM and here; a uniform volume source has density
+        # Nprimary/V, hence V/Nprimary converts accumulated posteriors to B's
+        # density-basis sensitivity directly.
+        raw_sensitivity = (
+            accumulator_cpu * normalization["source_volume_mm3"] / represented_source_photons
+        ).astype(np.float32)
     else:
-        raw_sensitivity = point_efficiency_raw.astype(np.float32)
+        raw_sensitivity = (accumulator_cpu * dataset.pixel_count / represented_source_photons).astype(np.float32)
     sensitivity = raw_sensitivity
     if config.apply_rotation_average:
         if dataset.rotation_matrix is None:
@@ -451,9 +456,12 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
     stored_sensitivity_mean = float(np.mean(sensitivity, dtype=np.float64))
     if normalization["maps_activity_density"]:
         final_point_efficiency = sensitivity.astype(np.float64) / polar_cell_volumes
+        final_average = float(
+            np.sum(sensitivity, dtype=np.float64) / normalization["source_volume_mm3"]
+        )
     else:
         final_point_efficiency = sensitivity.astype(np.float64)
-    final_average = float(np.mean(final_point_efficiency, dtype=np.float64))
+        final_average = float(np.mean(final_point_efficiency, dtype=np.float64))
     relative_mean_error = abs(final_average - target_average) / target_average
     if relative_mean_error > 5e-5:
         raise RuntimeError(
@@ -491,6 +499,7 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             "rows_per_file": list(event_rows_per_file),
             "total_rows": total_event_rows,
             "selected_rows": selected_event_count,
+            "selection_start_row": selection_start_row,
             "represented_fraction": represented_fraction,
             **diagnostics.to_dict(),
         },
@@ -501,9 +510,9 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
             "average_before_scaling": average_before_scaling,
             "accepted_events_per_photon": accepted_events_per_photon,
             "target_average_sensitivity": target_average,
-            "final_average": final_average,
-            "target_point_efficiency_mean": target_average,
-            "final_point_efficiency_mean": final_average,
+            "final_volume_average": final_average,
+            "target_volume_average_sensitivity": target_average,
+            "final_point_efficiency_arithmetic_mean": float(np.mean(final_point_efficiency, dtype=np.float64)),
             "stored_sensitivity_mean": stored_sensitivity_mean,
             "final_integral_over_source_volume": (
                 float(np.sum(sensitivity, dtype=np.float64))
@@ -533,12 +542,12 @@ def run_sensitivity_calculation(config: SensitivityRunConfig) -> dict[str, Any]:
         checkpoint_path.unlink()
 
     print(f"Kept events: {diagnostics.kept_events}/{selected_event_count}")
-    print(f"Target/final mean: {target_average:.6e} / {metadata['normalization']['final_average']:.6e}")
+    print(f"Target/final volume average: {target_average:.6e} / {metadata['normalization']['final_volume_average']:.6e}")
     print(f"Sensi_d saved to: {output_path}")
     if installed_path is not None:
         print(f"Installed to factor directory: {installed_path}")
     # Release the NumPy-backed matrix tensor before callers delete a temporary
     # Factor directory on Windows.
-    del system_matrix, system_matrix_column_scale, detector_coordinates, voxel_coordinates, accumulator
+    del system_matrix, detector_coordinates, voxel_coordinates, accumulator
     gc.collect()
     return metadata
