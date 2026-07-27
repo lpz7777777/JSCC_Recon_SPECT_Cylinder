@@ -135,15 +135,11 @@ Compton variants.
 ├── recon_osem_plane_sparse.py       # Local sparse OSEM implementation
 ├── recon_osem_local_cntstat.py      # Local SC-only OSEM implementation
 ├── recon_osem_local_sparse_jsccsd_only.py  # Local sparse JSCCSD-only OSEM
-├── get_img_SPECT_PolarCoor.m        # MATLAB: polar→Cartesian image conversion
-├── get_img_SC_Dist_PolarCoor.m      # MATLAB: SC Dist image conversion
-├── get_img_JSCCSD_Dist_PolarCoor.m  # MATLAB: JSCCSD Dist image conversion
-├── CNRCRC_SPECT.m                   # MATLAB: CRC/CNR evaluation
-├── CNRCRC_SC_Dist.m                 # MATLAB: SC Dist CRC/CNR
-├── CNRCRC_JSCCSD_Dist.m             # MATLAB: JSCCSD Dist CRC/CNR
-├── PVR_HotRod_SC_Dist.m             # MATLAB: hot-rod peak-valley ratio
-├── downsample_list.m                # MATLAB: list data downsampling
-├── Analyze_List_ComptonScatterStats.m  # MATLAB: Compton scatter statistics
+├── tools/                            # Diagnostics, visualization, evaluation, runners, legacy copies
+│   ├── diagnostics/list/
+│   ├── evaluation/{cnr_crc,image_display,pvr,ssim}/
+│   ├── visualization/{compton,sensitivity}/
+│   └── runners/{active,historical}/
 └── README.md
 ```
 
@@ -253,18 +249,19 @@ These two files mirror the GPU versions but:
 
 | File | Purpose |
 | --- | --- |
-| `get_img_SPECT_PolarCoor.m` | Polar→Cartesian image conversion |
-| `get_img_SC_Dist_PolarCoor.m` | SC distributed result visualization |
-| `get_img_SC_MultiOutput_PolarCoor.m` | Manifest-driven comparison of local per-energy and joint SC results |
+| `tools/evaluation/image_display/get_img_SPECT_PolarCoor.m` | Polar→Cartesian image conversion |
+| `tools/evaluation/image_display/get_img_SC_Dist_PolarCoor.m` | SC distributed result visualization |
+| `tools/evaluation/image_display/get_img_SC_MultiOutput_PolarCoor.m` | Manifest-driven comparison of local per-energy and joint SC results |
 | `compare_CNRCRC_JSCC_EHE_MultiOutput.m` | Compare JSCC/EHE corrected-218 and direct-440 CRC/CNR curves across count levels |
-| `get_img_JSCCSD_Dist_PolarCoor.m` | JSCCSD distributed result visualization |
-| `CNRCRC_SPECT.m` | CRC/CNR curve evaluation |
-| `CNRCRC_SC_Dist.m` | SC distributed CRC/CNR |
-| `CNRCRC_JSCCSD_Dist.m` | JSCCSD distributed CRC/CNR |
-| `PVR_HotRod_SC_Dist.m` | SC hot-rod peak-valley ratio analysis |
-| `PVR_HotRod_JSCCSD_Dist.m` | JSCCSD hot-rod peak-valley ratio analysis |
-| `Analyze_List_ComptonScatterStats.m` | Compton scatter event statistics |
-| `downsample_list.m` | Downsample list-mode data |
+| `tools/evaluation/image_display/get_img_JSCCSD_Dist_PolarCoor.m` | JSCCSD distributed result visualization |
+| `tools/evaluation/cnr_crc/CNRCRC_SPECT.m` | CRC/CNR curve evaluation |
+| `tools/evaluation/cnr_crc/CNRCRC_SC_Dist.m` | SC distributed CRC/CNR |
+| `tools/evaluation/cnr_crc/CNRCRC_JSCCSD_Dist.m` | JSCCSD distributed CRC/CNR |
+| `tools/evaluation/pvr/PVR_HotRod_SC_Dist.m` | SC hot-rod peak-valley ratio analysis |
+| `tools/evaluation/pvr/PVR_HotRod_JSCCSD_Dist.m` | JSCCSD hot-rod peak-valley ratio analysis |
+| `tools/diagnostics/list/Analyze_List_ComptonScatterStats.m` | Compton scatter event statistics |
+| `tools/diagnostics/list/downsample_list.m` | Downsample list-mode data |
+| `tools/README.md` | Tool directory structure and relocation policy |
 
 ### 5. Reconstruction Pipeline Architecture
 
@@ -469,8 +466,8 @@ Display one run from MATLAB with either the run directory or its `Polar`
 subdirectory:
 
 ```matlab
-get_img_SC_MultiOutput_PolarCoor()
-get_img_SC_MultiOutput_PolarCoor("Results/Reconstruction/Figure_Local_SC_MultiOutput/<run-folder>")
+tools/evaluation/image_display/get_img_SC_MultiOutput_PolarCoor()
+tools/evaluation/image_display/get_img_SC_MultiOutput_PolarCoor("Results/Reconstruction/Figure_Local_SC_MultiOutput/<run-folder>")
 ```
 
 The reader uses `run_manifest.json` rather than parsing the directory name. It
@@ -833,13 +830,13 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 | `Geant4Sim/ContrastPhantom_DualEnergy_Rotate_3D.m` | 生成 225Ac 双能量 Contrast Phantom 的 Geant4 macro 与预览 |
 | `Geant4Sim/Geant4Code_EHE/` | 与 ConventionalSPECT Params 一致的 EHE 平行孔 Pb/NaI 纯 CntStat Geant4 工程；不输出 List |
 | `Geant4Sim/Geant4Data_ContrastPhantom_DualEnergy_225Ac_manifest.json` | 已整理 Geant4 JSCC `1e9`/`1e10` 数据的路径与核验统计 |
-| `get_img_SC_MultiOutput_PolarCoor.m` | 按 manifest 读取并比较本地逐能量与联合 SC 结果 |
+| `tools/evaluation/image_display/get_img_SC_MultiOutput_PolarCoor.m` | 按 manifest 读取并比较本地逐能量与联合 SC 结果 |
 | `compare_CNRCRC_JSCC_EHE_MultiOutput.m` | 比较 JSCC/EHE 在三种计数水平下校正 218 与直接 440 的 CRC/CNR 曲线 |
-| `get_img_SPECT_PolarCoor.m` | 极坐标→笛卡尔图像转换 |
-| `CNRCRC_SPECT.m` | CRC/CNR 曲线计算 |
-| `PVR_HotRod_SC_Dist.m` | Hot-rod 峰谷比分析 |
-| `downsample_list.m` | List 数据降采样 |
-| `Analyze_List_ComptonScatterStats.m` | Compton 散射统计 |
+| `tools/evaluation/image_display/get_img_SPECT_PolarCoor.m` | 极坐标→笛卡尔图像转换 |
+| `tools/evaluation/cnr_crc/CNRCRC_SPECT.m` | CRC/CNR 曲线计算 |
+| `tools/evaluation/pvr/PVR_HotRod_SC_Dist.m` | Hot-rod 峰谷比分析 |
+| `tools/diagnostics/list/downsample_list.m` | List 数据降采样 |
+| `tools/diagnostics/list/Analyze_List_ComptonScatterStats.m` | Compton 散射统计 |
 
 ### 4. 重建流水线架构
 
@@ -1004,8 +1001,8 @@ python main_local_multi_energy_cntstat.py \
 MATLAB 展示入口可接收运行目录或其 `Polar` 子目录：
 
 ```matlab
-get_img_SC_MultiOutput_PolarCoor()
-get_img_SC_MultiOutput_PolarCoor("Results/Reconstruction/Figure_Local_SC_MultiOutput/<run-folder>")
+tools/evaluation/image_display/get_img_SC_MultiOutput_PolarCoor()
+tools/evaluation/image_display/get_img_SC_MultiOutput_PolarCoor("Results/Reconstruction/Figure_Local_SC_MultiOutput/<run-folder>")
 ```
 
 当前 JSCC 和 EHE 的双能响应均已完整生成：每个系统都包含 218 直接响应、440
