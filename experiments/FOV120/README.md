@@ -93,7 +93,7 @@ resubmit completed worker indices: their output directories are immutable.
 
 Password authentication has been verified for `scxi717@BSCC-N56R5` through
 `ssh.cn-zhongwei-1.paracloud.com:22`, reaching `scxi717@ln01`. The isolated
-deployment is `/data/run01/scxi717/lpz/FOV120_20260924`. Existing projects and
+deployment is `/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/FOV120_20260924`. Existing projects and
 the running `JSCC-PoissonAB` job were not changed. Source transfer used SFTP;
 credentials stay on the Windows host and are not included in deployment bundles.
 
@@ -103,8 +103,10 @@ this account. The 5090 partition configuration has eight GPUs per node. The
 planned four-node/eight-GPU-per-node allocation is within those reported limits,
 but depends on availability and the remaining scheduler constraints.
 
-Two-GPU NCCL numerical smoke job **1623854** was submitted to `gpu_5090` with
-a ten-minute limit. This checks single-photon, Compton and joint MLEM against
+Original smoke job **1623854** failed at startup (`module: command not found`,
+exit 127:0); no numerical check ran. Scripts now source `/etc/profile.d/modules.sh`
+explicitly before loading modules. Replacement two-GPU NCCL numerical smoke job
+**1624002** was submitted from the relocated workspace with a ten-minute limit. This checks single-photon, Compton and joint MLEM against
 serial reference calculations; it does not replace full FOV120 data validation
 or cross-node communication tests. CPU/GLOO equivalence was rerun and passed
 after adding the optional CUDA/NCCL backend.

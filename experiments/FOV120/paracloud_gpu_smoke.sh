@@ -9,12 +9,14 @@
 #SBATCH --time=00:10:00
 #SBATCH --output=experiments/FOV120/generated/nccl_smoke.%j.out
 #SBATCH --error=experiments/FOV120/generated/nccl_smoke.%j.err
-set -euo pipefail
+set -eo pipefail
+source /etc/profile.d/modules.sh
 module load cuda/12.9
 module load miniforge3/25.11.0-1
 CONDA_BASE=$(conda info --base)
 source "$CONDA_BASE/etc/profile.d/conda.sh"
 conda activate torch
+set -u
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=2
 export JSCC_TEST_BACKEND=nccl

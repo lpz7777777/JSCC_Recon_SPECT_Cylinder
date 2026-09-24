@@ -4,6 +4,15 @@
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
+## 最新接续修正（2026-09-24）
+
+- Geant4 试验 15377351 的 40 个 worker 已全部成功，四组各 1e8、合计 4e8 初级光子；尚待收集和统计评估。
+- NCCL 作业 1623854 实际 FAILED，退出 127:0：`module: command not found`，未执行任何数值测试，不能记为验证通过。
+- 已在启动脚本显式初始化 `/etc/profile.d/modules.sh`，shell 语法与模块加载已验证。
+- 按用户指定，将旧独立重建部署整体迁入主工程的 `experiments/FOV120_20260924/`，包括失败日志；旧同级目录不再作为工作目录。
+- 新双 GPU 测试作业 **1624002** 已在该目录提交。下面的 17:03 状态为历史快照，以此修正和实时日志为准。
+- 该子目录是独立代码根目录，内部仍有 `experiments/FOV120/`；运行时 `JSCC_REPO_ROOT` 应指向独立代码根，不能误指向它内部的配置目录。
+
 ## 1. 已冻结的研究定义
 
 - 硬件不变：四层、10496 有效晶体，面向 FOV 约 270×135 mm；法向位置 200/230/260/290 mm。
@@ -99,7 +108,7 @@ r=90–108 mm、选取 |z中心|≤13.5 mm），不是全 FOV 均匀源验收。
 |---|---|---|
 | 65114 | `/home/lipeize/JSCC_FOV120_20260924` | GPU 0 矩阵生产 PID 2800483；转换依赖 PID 2802514 |
 | maty | `/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/FOV120_20260924` | 编译/六次 smoke 作业 15376312 已完成；试验数组 15377351 运行 |
-| scxi717 | `/data/run01/scxi717/lpz/FOV120_20260924` | 双 GPU NCCL 测试 1623854 因 Priority 排队 |
+| scxi717 | `/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/FOV120_20260924` | 双 GPU NCCL 测试 1623854 因 Priority 排队 |
 
 矩阵：218/440 PE 分别用时 367.94/371.96 秒；218 散射最近日志进入
 `scatterStart=5728` 分块，此值不是整个矩阵流程的完成百分比。440 散射、

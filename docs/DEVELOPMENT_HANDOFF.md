@@ -16,8 +16,12 @@ completed reconstruction is not quantitative acceptance. The FOV120 pipeline
 has parameters, source truth/macros and local/cluster smoke evidence, but no
 production reconstructed images yet. Both PE matrices are complete; scatter,
 Factors, independent calibration and Sensi_d remain in progress/pending.
-Geant4 pilot array 15377351 is running; NCCL smoke 1623854 is queued at the
-2026-09-24 17:03 CST snapshot. Refresh status before resubmitting any task.
+Geant4 pilot array 15377351 completed all 40 workers (4e8 primaries). NCCL smoke
+1623854 failed before numerical execution because module initialization was
+missing; the corrected replacement is 1624002, queued at the latest check.
+Reconstruction work now belongs inside the user-specified main project, under
+its `experiments/FOV120_20260924/` workspace. See the status document for full
+paths and historical snapshots; refresh status before resubmitting any task.
 
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are

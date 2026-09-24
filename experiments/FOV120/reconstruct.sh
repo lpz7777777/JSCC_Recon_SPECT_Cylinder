@@ -6,17 +6,19 @@
 #SBATCH --gres=gpu:8
 #SBATCH --qos=gpugpu
 #SBATCH --time=48:00:00
-set -euo pipefail
+set -eo pipefail
 : "${JSCC_REPO_ROOT:?Set repository root}"
 : "${FOV120_ACCEPTED_EVENTS:?Set event estimate from pilot acceptance rate}"
 : "${FOV120_GPU_GIB:?Set actual per-GPU memory GiB}"
 cd "$JSCC_REPO_ROOT"
 # Use the same installed environment as the existing distributed launchers.
+source /etc/profile.d/modules.sh
 module load cuda/12.9
 module load miniforge3/25.11.0-1
 CONDA_BASE=$(conda info --base)
 source "$CONDA_BASE/etc/profile.d/conda.sh"
 conda activate torch
+set -u
 base=experiments/FOV120/generated
 dataset=${FOV120_DATASET:-XCAT}
 count=${FOV120_COUNT_LEVEL:-1e10}

@@ -60,12 +60,12 @@ Python 工程可用 `importlib.util.spec_from_file_location` 按上述绝对路�
 
 ### 调度与空间
 
-- 工作空间 `/data/run01/scxi717/lpz/`；FOV120 独立目录为其下 `FOV120_20260924/`。
+- 本工程的所有重建任务必须位于 `/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/` 或其子目录。FOV120 使用该工程的 `experiments/FOV120_20260924/` 独立工作区。
 - `gpugpu` 已查得单作业最多 8 节点；账号关联 `GrpTRES=gres/gpu=100`，5090 每节点 8 卡。
   这是配置快照，提交前复核 QOS、当前资源和队列，不把登录横幅的通用额度当作实际账号限制。
 - GPU 作业用 sbatch，登录节点用于编辑/编译/传输；不要在登录节点跑重建。
 - 已有 torch 环境的作业使用 `module load cuda/12.9`、`module load miniforge3/25.11.0-1`，
-  再 source conda.sh、`conda activate torch`。非登录 SSH shell 中 `module` 可能尚未初始化；
+  再 source conda.sh、`conda activate torch`。批处理和非登录 SSH shell 应先 `source /etc/profile.d/modules.sh` 再加载模块；
   已有 sbatch 环境可用，不能把交互 shell 的 PATH 直接当作计算节点环境。
 - `squeue -u scxi717`、`scontrol show job JOBID` 用于只读检查。不要取消或覆盖其他工程的作业。
 - 计算节点不能联网；依赖在登录节点预备。提交前核实空间和配额，`/ssd/scxi717` 本次访问被拒绝，不用于部署。
