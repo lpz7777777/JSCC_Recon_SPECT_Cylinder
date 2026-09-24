@@ -52,6 +52,10 @@ function results = run_gen_response_factors(case_selectors, output_suffix, grid_
     project_root = fileparts(fileparts(engine_root));
     runs_root = fullfile(engine_root, 'runs');
     factors_root = fullfile(project_root, 'Factors');
+    if isfield(grid_options, 'factors_root')
+        factors_root = char(grid_options.factors_root);
+    end
+    if ~isfolder(factors_root); mkdir(factors_root); end
     rotate_num = 20;
 
     all_cases = build_cases(runs_root, factors_root, rotate_num, output_suffix, ...
@@ -213,7 +217,9 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_option
     pixel_num = size(coor, 1);
 
     expected_points_per_layer = 1280 + double(grid_options.include_center_point);
-    expected_pixel_num = expected_points_per_layer * 20;
+    z_axis = -28.5:3:28.5;
+    if isfield(grid_options, 'z_axis'); z_axis = grid_options.z_axis; end
+    expected_pixel_num = expected_points_per_layer * numel(z_axis);
     if pixel_num ~= expected_pixel_num
         error('run_gen_response_factors:BadPixelCount', ...
             '%s generated %d pixels; expected %d.', factor_dir, pixel_num, expected_pixel_num);
@@ -231,7 +237,7 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_option
 
     polar_info = dir(fullfile(factor_dir, 'SysMat_polar'));
     expected_polar_bytes = double(detector_num) * double(pixel_num) * 4;
-    expected_cart_bytes = double(detector_num) * 51 * 51 * 20 * 4;
+    expected_cart_bytes = double(detector_num) * 51 * 51 * numel(z_axis) * 4;
     if isempty(polar_info) || double(polar_info.bytes) ~= expected_polar_bytes
         error('run_gen_response_factors:BadPolarSize', ...
             '%s SysMat_polar has the wrong byte count.', factor_dir);
@@ -336,6 +342,10 @@ function write_factor_manifest(factor_dir, item, summary, rotate_num, grid_optio
             logical(grid_options.apply_polar_volume_weighting), ...
         'write_cartesian_tmp', logical(grid_options.write_cartesian_tmp));
     manifest.input_run = item.run_name;
+    if isfield(grid_options, 'z_axis')
+        manifest.grid.z_axis_mm = grid_options.z_axis;
+        manifest.grid.z_layers = numel(grid_options.z_axis);
+    end
     manifest.input_matrix = item.sysmat_file;
     manifest.input_matrix_bytes = double(input_info.bytes);
     pe_manifest_path = fullfile(item.run_dir, 'PE_v4_manifest.json');

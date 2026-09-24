@@ -41,8 +41,10 @@
 #include "G4GeneralParticleSource.hh"
 #include "G4ParticleGun.hh"
 #include "globals.hh"
+#include <vector>
 
 class G4Event;
+class G4UImessenger;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -55,14 +57,36 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   public:
     virtual void GeneratePrimaries(G4Event* anEvent);
     G4GeneralParticleSource* GetParticleGun() {return fParticleGun;};
+    void ResetPrimaryCounts() { fPrimary218 = 0; fPrimary440 = 0; fPrimaryOther = 0; }
+    G4long GetPrimary218() const { return fPrimary218; }
+    G4long GetPrimary440() const { return fPrimary440; }
+    G4long GetPrimaryOther() const { return fPrimaryOther; }
+    void ClearXcatSources();
+    void AddXcatSource(const G4String& specification);
+    void SetXcatAngle(G4double angleDegrees);
 
   private:
     G4GeneralParticleSource* fParticleGun;          // pointer a to G4 service class
+    G4ParticleGun* fXcatGun = nullptr;
+    G4UImessenger* fXcatMessenger = nullptr;
+    struct XcatBox {
+      G4int energyKeV;
+      G4double x, y, z, hx, hy, hz, intensity;
+    };
+    std::vector<XcatBox> fXcatBoxes;
+    std::vector<G4double> fXcatCumulative;
+    G4double fXcatTotal = 0;
+    G4double fXcatCos = 1;
+    G4double fXcatSin = 0;
+    G4bool fUseXcat = false;
     G4String particleName;                          // Name of Particle
     G4double energy;                                // Energy of Particle
     G4double radiu;                                 // Radiu of the circle source
     G4ThreeVector position;                         // Position of Source
     G4ThreeVector angle;                            // Angle
+    G4long fPrimary218 = 0;
+    G4long fPrimary440 = 0;
+    G4long fPrimaryOther = 0;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

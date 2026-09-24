@@ -48,9 +48,26 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, ~, c
     if ~exist(outdir, 'dir'); mkdir(outdir); end
 
     %% ---- 几何参数（与现有 511keV Factors 一致）----
-    s_x_axis = -150:6:150;          % 51
-    s_y_axis = -150:6:150;          % 51
-    s_z_axis = -28.5:3:28.5;        % 20
+    image_params_file = fullfile(fileparts(params_detector_file), 'Params_Image.dat');
+    fid = fopen(image_params_file, 'rb');
+    assert(fid >= 0, 'Missing Params_Image.dat: %s', image_params_file);
+    image_params = fread(fid, inf, 'float32=>double');
+    fclose(fid);
+    assert(numel(image_params) >= 12 && image_params(7) == 1, ...
+        'Factors require a complete single-view Params_Image.dat');
+    axes_mm = cell(1, 3);
+    for axis_id = 1:3
+        n = image_params(axis_id);
+        spacing = image_params(axis_id + 3);
+        assert(n >= 2 && n == fix(n) && spacing > 0, 'Invalid image grid');
+        axes_mm{axis_id} = ((0:n-1) - (n-1)/2) * spacing + image_params(axis_id + 8);
+    end
+    s_x_axis = axes_mm{1};
+    s_y_axis = axes_mm{2};
+    s_z_axis = axes_mm{3};
+    if isfield(grid_options, 'z_axis')
+        assert(isequal(s_z_axis, grid_options.z_axis), 'Experiment and matrix z grids differ');
+    end
     r_value = 6:6:150;              % 25 个半径
     theta_num_value = 20:20:80;     % 半径依赖的角度数（分 4 段，每段 6 半径）
     rotate_num = 20;                % 旋转数
@@ -69,15 +86,15 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, ~, c
     % .sysmat 布局：[numProjection × numImagebin × numRotation] = [11520 × 52020 × 1]
     % reshape 成 [numImagebinX, numImagebinY, numImagebinZ, numProjection]
     fid = fopen(sysmat_file, 'r');
-    SysMat = fread(fid, 'float32');
+    SysMat = fread(fid, inf, 'float32=>single');
     fclose(fid);
     fprintf('  原始矩阵元素数=%d\n', numel(SysMat));
-    SysMat = reshape(SysMat, length(s_x_axis), length(s_y_axis), length(s_z_axis), []);
+    assert(numel(SysMat) == prod(image_params(1:3)) * n_det, 'Matrix byte count does not match Params');
+    SysMat = reshape(SysMat, length(s_x_axis), length(s_y_axis), length(s_z_axis), n_det);
     % 清洗残余 NaN/Inf（保险：新版引擎已修复，但旧矩阵或边界情况可能残留）
     n_bad = sum(~isfinite(SysMat(:)));
     if n_bad > 0
-        fprintf('  清洗 %d 个 NaN/Inf (%.2f%%) -> 0\n', n_bad, 100*n_bad/numel(SysMat));
-        SysMat(~isfinite(SysMat)) = 0;
+        error('gen_factors:InvalidInput', 'Matrix contains %d NaN/Inf values; regenerate it.', n_bad);
     end
     % 过滤：只保留闪烁晶体（第4维）
     SysMat = SysMat(:, :, :, scin_mask);
@@ -265,6 +282,7 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, ~, c
 
     %% ---- Detector.csv（仅 index, x, y, z）----
     det_scin = det(scin_mask, :);
+    det_scin(:, 2) = det_scin(:, 2) + image_params(12);
     Detector = [(1:n_scin)', det_scin(:, 1:3)];
     % 补列名行
     header = 'index,x,y,z';

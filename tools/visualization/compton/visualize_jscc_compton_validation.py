@@ -30,7 +30,11 @@ def polar_to_cartesian_mip(coordinates, values, axis):
         planes.append(plane)
     stack = np.stack(planes)
     valid = np.isfinite(stack)
-    mip = np.max(np.where(valid, stack, -np.inf), axis=0)
+    # Exclude the outer two z layers from MIP; they can contain isolated
+    # boundary outliers that should not set the projection scale.
+    mip_stack = stack[2:-2]
+    mip_valid = np.isfinite(mip_stack)
+    mip = np.max(np.where(mip_valid, mip_stack, -np.inf), axis=0)
     mip[~np.any(valid, axis=0)] = np.nan
     return xx, yy, mip
 
@@ -42,9 +46,21 @@ def main():
         default=Path("Results/Reconstruction/JSCC_ComptonValidation_Geant4_1e9_Iter1000"),
     )
     parser.add_argument("--factor-dir", type=Path, default=Path("Factors/440keV_RotateNum20"))
+    parser.add_argument(
+        "--cmap", choices=("gray", "gray_r"), default="gray",
+        help="Matplotlib grayscale colormap; gray_r maps high values to black.",
+    )
+    parser.add_argument(
+        "--output", type=Path,
+        help="Optional PNG output path. Defaults to the historical result filename.",
+    )
     args = parser.parse_args()
     result = args.result_dir.resolve()
     factor = args.factor_dir.resolve()
+    manifest_path = result / "run_manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else {}
+    count_level = str(manifest.get("count_level", "unknown"))
+    iterations = int(manifest.get("iterations", 1000))
     coordinates = np.loadtxt(factor / "coor_polar_full.csv", delimiter=",")
     pixel_count = coordinates.shape[0]
     axis = np.arange(-150.0, 150.01, 3.0)
@@ -64,12 +80,17 @@ def main():
         vmax = float(np.nanquantile(values, 0.995))
         plotted = ax.imshow(
             values, origin="lower", extent=(-150, 150, -150, 150),
-            cmap="gray", vmin=0, vmax=max(vmax, 1e-12),
+            cmap=args.cmap, vmin=0, vmax=max(vmax, 1e-12),
         )
         ax.set_title(title); ax.set_xlabel("x (mm)"); ax.set_ylabel("y (mm)")
         ax.set_aspect("equal"); fig.colorbar(plotted, ax=ax, fraction=0.046, pad=0.04)
-    fig.suptitle("JSCC Geant4 contrast phantom, 1e9, 1000 MLEM iterations")
-    figure_path = result / "JSCC_ComptonValidation_1e9_Iter1000.png"
+    fig.suptitle(f"JSCC Geant4 contrast phantom, {count_level}, {iterations} MLEM iterations")
+    figure_path = (
+        args.output.resolve()
+        if args.output is not None
+        else result / f"JSCC_ComptonValidation_{count_level}_Iter{iterations}.png"
+    )
+    figure_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(figure_path, dpi=180)
     plt.close(fig)
 
@@ -77,6 +98,9 @@ def main():
     sum2 = images["440_SinglePlusCompton"] + images["218_SinglePhoton_CrossTalkCorrected"]
     summary = {
         "pixel_count": pixel_count,
+        "count_level": count_level,
+        "iterations": iterations,
+        "colormap": args.cmap,
         "images": {
             key: {
                 "min": float(value.min()), "max": float(value.max()),

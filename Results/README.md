@@ -46,3 +46,17 @@ Results/
 Large source data remain under `CntStat/`, `List/`, `Factors/`, and
 `Geant4Sim/run/`. System-matrix calculation output remains under the matrix
 project's `runs/` directory.
+
+## 2026-09-24: dual-energy 60-mm baseline and FOV120
+
+`Reconstruction/Distributed_JSCC_ComptonValidation_Geant4_1e10_Iter1000_1node8gpu/`
+contains the completed six-output 60-mm experiment, its manifest, predicted
+440-to-218 counts, saved iterations and radial-bias diagnostics. It is not a
+FOV120 result. See [the current inventory](../docs/FOV120_EXPERIMENT_STATUS.md)
+for measured background ratios and interpretation limits.
+
+FOV120 source truth, macro validation and smoke outputs are under
+`../experiments/FOV120/generated/`; remote workers are cataloged in that
+experiment's status documents. No production FOV120 reconstructed images have
+been verified. Keep the legacy central-39-mm pictures separate from full-height
+120-mm evaluation. Neither large arrays nor generated images are committed.

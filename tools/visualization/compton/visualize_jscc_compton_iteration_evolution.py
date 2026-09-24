@@ -22,7 +22,12 @@ def project(coordinates, values, axis, mode):
     stack = cartesian_stack(coordinates, values, axis)
     valid = np.isfinite(stack)
     if mode == "mip":
-        result = np.max(np.where(valid, stack, -np.inf), axis=0)
+        # Boundary detector layers can contain isolated numerical/physical
+        # outliers. Keep them in z-mean views, but exclude the outer two
+        # layers at each end from every MIP.
+        mip_stack = stack[2:-2]
+        mip_valid = np.isfinite(mip_stack)
+        result = np.max(np.where(mip_valid, mip_stack, -np.inf), axis=0)
     elif mode == "z_mean":
         result = np.nanmean(stack, axis=0)
     elif mode == "center_mean":
@@ -46,10 +51,15 @@ def main():
     args = parser.parse_args()
     result = args.result_dir.resolve()
     factor = args.factor_dir.resolve()
+    manifest_path = result / "run_manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else {}
+    count_level = str(manifest.get("count_level", "unknown"))
+    iterations_count = int(manifest.get("iterations", 1000))
+    save_step = int(manifest.get("save_step", 50))
     coordinates = np.loadtxt(factor / "coor_polar_full.csv", delimiter=",")
     pixel_count = coordinates.shape[0]
-    history_count = 20
-    iterations = np.arange(50, 1001, 50)
+    history_count = iterations_count // save_step
+    iterations = np.arange(save_step, iterations_count + 1, save_step)
     selected_ids = [0, 1, 3, 7, 11, 15, 19]
     selected_iterations = iterations[selected_ids]
     axis = np.arange(-150.0, 150.01, 3.0)
@@ -57,7 +67,7 @@ def main():
     metrics = {}
     figure, axes = plt.subplots(2, len(selected_ids), figsize=(3.0 * len(selected_ids), 6), constrained_layout=True)
     for row, (name, label) in enumerate(modes):
-        path = result / f"Image_{name}_Iter_1000_{history_count}"
+        path = result / f"Image_{name}_Iter_{iterations_count}_{history_count}"
         history = np.fromfile(path, dtype=np.float32).reshape(history_count, pixel_count)
         metrics[name] = []
         for index, iteration in enumerate(iterations):
@@ -80,7 +90,7 @@ def main():
             if column == 0:
                 ax.set_ylabel(label, fontsize=10)
         figure.colorbar(shown, ax=axes[row, :], fraction=0.017, pad=0.01, label="activity density")
-    figure.suptitle("1e9 Geant4: Compton reconstruction evolution (shared p99 scale per row)")
+    figure.suptitle(f"{count_level} Geant4: Compton reconstruction evolution (shared p99 scale per row)")
     output = result / "Compton_iteration_evolution_50_to_1000.png"
     figure.savefig(output, dpi=180)
     plt.close(figure)
@@ -98,9 +108,9 @@ def main():
     )
     history_cache = {
         name: np.fromfile(
-            result / f"Image_{name}_Iter_1000_{history_count}", dtype=np.float32
+            result / f"Image_{name}_Iter_{iterations_count}_{history_count}", dtype=np.float32
         ).reshape(history_count, pixel_count)
-        for name, _ in modes
+        for name in ("440_SinglePhoton", "440_ComptonOnly", "440_SinglePlusCompton")
     }
     for row, (name, projection_mode, label) in enumerate(diagnostic_rows):
         projected = [
@@ -123,20 +133,21 @@ def main():
             shown, ax=diagnostic_axes[row, :], fraction=0.017, pad=0.01,
             label="activity density",
         )
-    diagnostic.suptitle("1e9 Geant4: projection-dependent Compton evolution")
+    diagnostic.suptitle(f"{count_level} Geant4: projection-dependent Compton evolution")
     diagnostic_output = result / "Compton_iteration_evolution_MIP_zmean_center.png"
     diagnostic.savefig(diagnostic_output, dpi=180)
     plt.close(diagnostic)
 
     all_ids = list(range(history_count))
     full_rows = [
+        ("440_SinglePhoton", "center_mean", "440 single-photon center two slices"),
         ("440_ComptonOnly", "mip", "Compton-only MIP"),
         ("440_ComptonOnly", "center_mean", "Compton-only center two slices"),
         ("440_SinglePlusCompton", "center_mean", "Single + Compton center two slices"),
     ]
     full_figure, full_axes = plt.subplots(
         len(full_rows), history_count,
-        figsize=(2.15 * history_count, 6.0), constrained_layout=True,
+        figsize=(2.15 * history_count, 8.0), constrained_layout=True,
     )
     for row, (name, projection_mode, label) in enumerate(full_rows):
         projected = [
@@ -159,12 +170,15 @@ def main():
             shown, ax=full_axes[row, :], fraction=0.008, pad=0.01,
             label="activity density",
         )
-    full_figure.suptitle("1e9 Geant4: every saved Compton iteration")
+    full_figure.suptitle(f"{count_level} Geant4: every saved Compton iteration")
     full_output = result / "Compton_iteration_evolution_all_saved_frames.png"
     full_figure.savefig(full_output, dpi=180)
     plt.close(full_figure)
 
     summary = {
+        "count_level": count_level,
+        "iterations": iterations_count,
+        "save_step": save_step,
         "selected_iterations": selected_iterations.tolist(),
         "metrics": metrics,
         "figure": str(output),

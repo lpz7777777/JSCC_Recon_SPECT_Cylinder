@@ -1,4 +1,4 @@
-function generate_jscc_218_440_response_params(run_name_suffix)
+function generate_jscc_218_440_response_params(run_name_suffix, experiment_config)
 % GENERATE_JSCC_218_440_RESPONSE_PARAMS
 % Generate the JSCC parameter sets needed for simultaneous 218/440 keV tests:
 %   1) JSCC_218keV              : 218 keV source, automatic 218 photopeak window
@@ -19,6 +19,22 @@ function generate_jscc_218_440_response_params(run_name_suffix)
     cd(this_dir);
 
     cfg = config_geometry();
+    if nargin >= 2 && ~isempty(experiment_config)
+        experiment = jsondecode(fileread(experiment_config));
+        if isempty(run_name_suffix)
+            error('An experiment requires a nonempty run suffix to preserve baseline parameters.');
+        end
+        h = experiment.height_mm;
+        dz = experiment.z_spacing_mm;
+        assert(mod(h, dz) == 0 && h > 0, 'Invalid axial grid');
+        cfg.fov.z_axis = (-h/2 + dz/2):dz:(h/2 - dz/2);
+        xy = experiment.xy_axis_mm;
+        cfg.fov.x_axis = xy(1):xy(2):xy(3);
+        cfg.fov.y_axis = cfg.fov.x_axis;
+        cfg.fov.fov2collimator0 = experiment.fov2collimator0_mm;
+        cfg.energy_resolution_ref = experiment.energy_resolution_fwhm;
+        cfg.energy_resolution_ref_keV = experiment.energy_resolution_reference_keV;
+    end
     cfg.geometry_type = 'JSCC';
     cfg.energy_list_keV = [218, 440];
     cfg.enable_compton = true;

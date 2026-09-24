@@ -77,6 +77,7 @@ G4Run* RunAction::GenerateRun()
 
 void RunAction::BeginOfRunAction(const G4Run*)
 {    
+  if (fPrimary) fPrimary->ResetPrimaryCounts();
   // save Rndm status
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
   G4Random::showEngineStatus();
@@ -92,8 +93,19 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
   if (fPrimary && nbOfEvents) 
   { 
     G4cout << "\n The run generated " << nbOfEvents
-           << " primary events from the configured GPS source mixture."
+           << " primary events from the configured source."
            << G4endl;
+
+    const auto primary218 = fPrimary->GetPrimary218();
+    const auto primary440 = fPrimary->GetPrimary440();
+    const auto primaryOther = fPrimary->GetPrimaryOther();
+    if (primary218 + primary440 + primaryOther != nbOfEvents)
+      G4cout << "WARNING: primary-particle count differs from event count." << G4endl;
+    G4cout << "Primary energy counts: 218=" << primary218
+           << ", 440=" << primary440 << ", other=" << primaryOther << G4endl;
+    ofstream primaryCsv("PrimaryCount.csv", ios::app | ios::out);
+    if (primaryCsv.is_open()) primaryCsv << primary218 << "," << primary440
+                                        << "," << primaryOther << endl;
 
     //Write CntStat_218 into a csv file
     ofstream csv;

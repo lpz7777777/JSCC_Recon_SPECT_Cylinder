@@ -1,7 +1,7 @@
-CntStat/
-List/
-Figure*/
-Factors/
+/CntStat/
+/List/
+/Figure*/
+/Factors/
 
 .idea/
 __pycache__/
@@ -34,6 +34,8 @@ Geant4Sim/Macro/Hoffman_Target_*/
 Geant4Sim/Macro/SensitivityPointArray_*/
 
 distributed/scripts/logs/
+distributed/dual_energy_compton_slurm/logs/*
+!distributed/dual_energy_compton_slurm/logs/.gitkeep
 
 # Local job state and validation reports (regenerable)
 BackgroundJobs/
@@ -85,3 +87,33 @@ Auxiliary_Studies/**/ScatterGen_Collimator
 Auxiliary_Studies/**/ScatterGen_Crystal
 *.lib
 *.exp
+experiments/*/generated/
+Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/FileGenerater_3D_Unified/output/*_FOV120/
+
+# Generated anatomical macros and source volumes: retain generators, not outputs.
+/Geant4Sim/Macro/XCAT_Ac225_PSMA_Abdomen_*/
+*.npz
+*.npy
+*.raw
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.tar.gz
+*.zip
+.pytest_cache/
+
+# Credentials remain outside the repository, including encrypted credentials.
+.ssh/
+.env
+.env.*
+!.env.example
+*.credential.xml
+*.credentials.json
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+known_hosts*

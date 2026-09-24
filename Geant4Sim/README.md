@@ -375,3 +375,17 @@ Keep the output root short on Windows. Long task-history filenames can exceed
 the legacy `MAX_PATH` limit when combined with the generated run-folder name.
 The validated result and visualizations are under
 `Results/LocalReconstructionRuns/PEv4_UniformFOVLayer_Calibrated/`.
+
+## FOV120 extension (2026-09-24)
+
+The configured 120-mm workflow is in `../experiments/FOV120/`. Source generation,
+PrimaryCount closure, unique-worker manifests and pilot submission are described
+in [its runbook](../experiments/FOV120/README.md). XCAT generation/validation now
+supports the 80-slice native / 40-slice coarse crop while retaining 60-mm defaults.
+Generated XCAT macros and truth volumes remain local and are ignored by Git.
+
+The maty deployment uses Geant4 11.1.0, explicitly selected GCC 12.2/CMake 3.25.2,
+and isolated FOV120 directories; six cluster smoke cases passed. Source volumes
+remain vacuum proxies and the calibration/support radius 153 mm differs from
+physical phantom radius 150 mm. See [current status](../docs/FOV120_EXPERIMENT_STATUS.md)
+and [safe cluster access](../docs/REMOTE_COMPUTE_ACCESS.md) before running jobs.

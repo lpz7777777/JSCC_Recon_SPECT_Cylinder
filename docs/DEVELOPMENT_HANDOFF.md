@@ -1,6 +1,23 @@
 # JSCC Reconstruction Development Handoff
 
-Last consolidated: 2026-07-20.
+Last consolidated: 2026-09-24.
+
+## Current handoff: FOV120 and the completed 60-mm baseline
+
+Read [FOV120 experiment status](FOV120_EXPERIMENT_STATUS.md) for the detailed
+code/data inventory, verified results, remote job IDs and remaining acceptance
+steps. [Remote compute access](REMOTE_COMPUTE_ACCESS.md) is the reusable safe
+connection guide for scxi717, maty and 65114; it contains no credentials.
+[Experiment commands](../experiments/FOV120/README.md) cover reproducible runs.
+
+The original 60-mm 1e10/8-GPU/1000-iteration reconstruction is complete, with
+1,852,124 accepted Compton events and six final outputs. Radial bias remains;
+completed reconstruction is not quantitative acceptance. The FOV120 pipeline
+has parameters, source truth/macros and local/cluster smoke evidence, but no
+production reconstructed images yet. Both PE matrices are complete; scatter,
+Factors, independent calibration and Sensi_d remain in progress/pending.
+Geant4 pilot array 15377351 is running; NCCL smoke 1623854 is queued at the
+2026-09-24 17:03 CST snapshot. Refresh status before resubmitting any task.
 
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are
@@ -32,6 +49,8 @@ repository root
 |   |-- FreePath/                     free-path studies
 |   `-- Reference/                    reference material and figures
 |-- distributed/                      distributed reconstruction
+|   |-- dual_energy_compton_python/   current six-output distributed Python
+|   `-- dual_energy_compton_slurm/    current smoke/production/monitor scripts
 |-- Reconstruction/                   reproduction-oriented reconstruction docs/code
 |-- Reproduction/                     compact end-to-end instructions
 |-- Results/                          local outputs (ignored)
@@ -185,32 +204,36 @@ For Geant4 CntStat, use `--cntstat-dir-suffix _Geant4JSCC` with the canonical
 no-suffix Factors. Do not substitute GenProj CntStat for Geant4 validation;
 GenProj is the matrix-closed-loop test, while Geant4 is the transport test.
 
+The current Compton validation response is intentionally frozen at:
+
+```text
+shared K*B density-basis event response
+13% FWHM at 511 keV
+E1 + E2 >= 350 keV
+input List energies already broadened by Geant4
+theta_stride = 1, z_stride = 1
+Factors/440keV_RotateNum20/Sensi_d
+```
+
+For higher count levels, use the isolated multi-node/multi-GPU implementation
+in `distributed/dual_energy_compton_python/` and the launchers in
+`distributed/dual_energy_compton_slurm/`. The distributed implementation keeps
+the local six-output mathematics unchanged: detector bins and List lines are
+partitioned, rank-local backprojections are combined with NCCL `all_reduce`,
+and only rank 0 writes the final images and histories. The supplied production
+template is 4 nodes x 8 GPUs for the installed Geant4 1e10 data. Always run
+`preflight.py`, then the 1-node x 2-GPU smoke job, before the production job.
+
 ## Next tasks
 
-1. Complete the 440-keV independent uniform-list closure currently launched by
-   `run_uniform_kb_half_split_closure.ps1`. Half A creates a candidate Sensi_d;
-   the disjoint Half B must keep a uniform density approximately fixed after
-   one streamed MLEM update. Do not install it to Factors before reviewing the
-   ratio map and JSON summary.
-2. Use the shared `compton_event_response.py` operator for every future local
-   reconstruction and Sensi_d run. Density-basis Factors use
-   `q_i[j]=K_i[j]*B[first_i,j]`, never the historical `K_i*A` then re-volume
-   weighting route.
-3. Before more reconstruction tuning, improve physical event response in this
-   order: first-Compton interaction/depth in detector 1; detector-2 solid
-   angle, escape and GAGG/W attenuation; energy-domain likelihood with full
-   Klein-Nishina; finite interaction subcells; same-layer and two-order events.
-   The small `ComptonSystemMatrixPrototype` is the reference implementation,
-   but its NaI assumptions must be replaced by Geant4 GAGG/W properties.
-4. Run Compton-only reconstruction before enabling weighted joint SC+Compton
-   reconstruction. Keep List thresholds, detector IDs, first-hit convention,
-   energy resolution, and event ordering identical between sensitivity and
-   reconstruction. Use held-out likelihood/CNR/CRC or MAP regularization;
-   1000 unregularized Compton-only MLEM iterations are noise-dominated at the
-   current event count.
-5. Verify that CntStat and List channels are disjoint, or model their overlap,
-   before interpreting their direct Poisson-likelihood sum as an independent
-   joint reconstruction.
+The old request to run the 60-mm high-count case is fulfilled. For the active
+120-mm extension follow the ordered gates in
+[FOV120 experiment status, section 6](FOV120_EXPERIMENT_STATUS.md#6-接续顺序与验收门槛):
+finish raw matrices, collect/extend independent calibration and sensitivity,
+validate GenProj and Geant4 spatial response, then run 1e9/1e10 six-output
+reconstruction with full-height evaluation. Preserve the shared K*B physics
+and original source/volume conventions. Investigate existing radial bias and
+CntStat/List overlap before interpreting combined gamma images quantitatively.
 
 ## Do-not-mix table
 

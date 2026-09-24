@@ -2,13 +2,19 @@
 
 [English](#english) | [中文](#中文)
 
+> **2026-09-24 实验交接：** 60 mm 高计数六路重建已完成，FOV120 正在矩阵/校准试验阶段，尚无正式成像结果。
+> 详细目录、代码、结果与作业状态见 [FOV120 实验进度](docs/FOV120_EXPERIMENT_STATUS.md)；
+> 可复现命令见 [实验手册](experiments/FOV120/README.md)；跨工程连接三处资源见
+> [安全连接说明](docs/REMOTE_COMPUTE_ACCESS.md)。密码、私钥、加密凭据与大数据均不入 Git。
+
+
 ---
 
 <a id="english"></a>
 
 ## English
 
-> **Current production state (2026-07-20):** the underlying matrix `A` has
+> **Baseline response convention (2026-07-20):** the underlying matrix `A` has
 > point-source columns per emitted monoenergetic photon. The canonical no-suffix
 > JSCC Factors store the density-basis matrix `B=A*diag(DeltaV_mm3)`, so they
 > map gamma-photon activity density rather than equal per-sample source weight.
@@ -192,6 +198,7 @@ Compton variants.
 | `distributed/python/recon_osem_dist_tonline_cache.py` | Distributed online-cache OSEM core |
 | `distributed/python/t_shard_dist.py` | T-matrix shard management |
 | `distributed/python/t_online_cache_dist.py` | T-matrix online cache management |
+| `distributed/dual_energy_compton_python/` | Frozen-response, six-output 218/440 distributed reconstruction; see its `README.md` |
 
 #### Python — Distributed CPU (GLOO, no GPU required) ★ NEW
 
@@ -227,6 +234,7 @@ These two files mirror the GPU versions but:
 | `distributed/scripts/jsccrecon_dist_tstream.sh` | GPU distributed T-streaming |
 | `distributed/scripts/jsccrecon_dist_tonline_cache.sh` | GPU distributed online-cache |
 | `distributed/scripts/jsccrecon_dist_{count}.sh` | Pre-configured GPU scripts for specific count levels (2e9, 5e9, 1e10, 2e10, 5e10, 1e11, 1e100) |
+| `distributed/dual_energy_compton_slurm/` | 4-node x 8-GPU production, 2-GPU smoke, and monitoring scripts for the six-output chain |
 
 #### MATLAB — Data Generation
 
@@ -627,6 +635,23 @@ Image_J_S(440_218)keV_D440keV                           # Type 5
 
 ### 8. Distributed Execution Paths
 
+#### Current 218/440 six-output high-count path
+
+The production high-count path is isolated from the historical distributed
+code in two directories:
+
+| Directory | Role |
+| --- | --- |
+| `distributed/dual_energy_compton_python/` | Detector/List sharding, distributed MLEM, preflight, and a two-rank synthetic validation |
+| `distributed/dual_energy_compton_slurm/` | 1-node x 2-GPU smoke test, 4-node x 8-GPU 1e10 job, and monitor script |
+
+This path freezes the current shared `K*B` Compton response, installed
+`Sensi_d`, 13% FWHM at 511 keV, `E1+E2 >= 350 keV`, and full polar Compton
+grid. It changes only data placement and collective reduction. It reconstructs
+440 single, 440 Compton, 440 joint, and cross-talk-corrected 218 images, then
+writes the two requested post-reconstruction sums. Run its `preflight.py` and
+two-GPU smoke job before the 32-GPU production submission.
+
 #### GPU Distributed (existing)
 
 ```
@@ -796,6 +821,7 @@ See `Reproduction/README.md` for a step-by-step guide to reproduce the results.
 | --- | --- |
 | `distributed/python/main_dist_sparse_jsccsd_only.py` | GPU 分布式稀疏 JSCCSD-only 入口 |
 | `distributed/python/recon_osem_dist_sparse_jsccsd_only.py` | GPU 分布式稀疏 JSCCSD-only OSEM 核心 |
+| `distributed/dual_energy_compton_python/` | 当前 218/440 六输出、多机多卡高计数重建与验证；物理响应保持不变 |
 
 #### 分布式 CPU（GLOO，无需 GPU）★ 新增
 
@@ -1134,6 +1160,22 @@ Image_J_S(440_218)keV_D440keV                           # 类型 5
 | `--joint-iter` / `--joint-save-step` | 类型 5（全能量联合） |
 
 ### 7. 分布式执行路径
+
+#### 当前 218/440 六输出高计数链路
+
+当前生产链路与历史分布式代码隔离在两个目录中：
+
+| 目录 | 用途 |
+| --- | --- |
+| `distributed/dual_energy_compton_python/` | detector/List 分片、分布式 MLEM、输入预检和双 rank 合成数值验证 |
+| `distributed/dual_energy_compton_slurm/` | 单节点双 GPU 冒烟测试、4 节点 x 8 GPU 的 1e10 正式任务和监测脚本 |
+
+这条链路固定使用当前共享 `K*B` 康普顿响应、正式 `Sensi_d`、511 keV
+处 13% FWHM、`E1+E2 >= 350 keV` 和完整极坐标康普顿网格，只改变数据
+分片与集合通信，不改变物理模型或六个输出的含义。先运行 `preflight.py`
+和双 GPU 冒烟任务，再提交 32 GPU 正式任务。按现有事件接受率估计，1e10
+适合该资源布局；1e11 在同样 32 张 5090 上仅事件响应就约需 59 GiB/卡，
+不能只修改计数参数后直接提交。
 
 #### GPU 分布式（已有）
 
