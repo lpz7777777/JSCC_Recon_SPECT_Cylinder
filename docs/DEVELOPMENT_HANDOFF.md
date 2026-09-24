@@ -12,16 +12,19 @@ connection guide for scxi717, maty and 65114; it contains no credentials.
 
 The original 60-mm 1e10/8-GPU/1000-iteration reconstruction is complete, with
 1,852,124 accepted Compton events and six final outputs. Radial bias remains;
-completed reconstruction is not quantitative acceptance. The FOV120 pipeline
-has parameters, source truth/macros and local/cluster smoke evidence, but no
-production reconstructed images yet. Both PE matrices are complete; scatter,
-Factors, independent calibration and Sensi_d remain in progress/pending.
-Geant4 pilot array 15377351 completed all 40 workers (4e8 primaries). NCCL smoke
-1623854 failed before numerical execution because module initialization was
-missing; the corrected replacement is 1624002, queued at the latest check.
-Reconstruction work now belongs inside the user-specified main project, under
-its `experiments/FOV120_20260924/` workspace. See the status document for full
-paths and historical snapshots; refresh status before resubmitting any task.
+completed reconstruction is not quantitative acceptance. All FOV120 raw response
+matrices and raw polar Factors are now complete and validated. The four 1e8
+pilot groups were collected with hash/count checks; layer statistical errors
+are below 0.7%. Array 15384175 is adding 9e8 per group (360 workers, 40 concurrent),
+and afterok job 15384216 will collect the four full 1e9 datasets. Production
+calibration and Sensi_d still require those full collections.
+
+NCCL smoke 1624002 passed on two RTX5090 GPUs, including serial-reference
+single/Compton/joint MLEM equivalence. Original job 1623854 failed before
+numerical execution and was superseded. Multi-node/full-grid memory tests and
+actual FOV120 images remain pending. Reconstruction work belongs inside the
+user-specified main project, under its `experiments/FOV120_20260924/` workspace.
+See the status document for full paths and refresh before resubmitting tasks.
 
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are

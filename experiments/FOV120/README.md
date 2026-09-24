@@ -3,6 +3,39 @@
 Detailed Chinese inventory and progress: [experiment status](../../docs/FOV120_EXPERIMENT_STATUS.md).
 Cross-project authentication and resource usage: [safe access](../../docs/REMOTE_COMPUTE_ACCESS.md).
 
+## Latest: calibration extension (2026-09-24 evening)
+
+All three raw matrices and raw polar Factors are complete and validated.
+The four pilot groups have been collected with worker/output hash checks,
+actual primary-count closure (4e8 total) and 40 globally distinct seeds.
+Pilot files are locally in `generated/PilotData/`; a copy on 65114 is used for
+model-response assessment. No pilot-calibrated Factors have been installed.
+
+`assess_pilot.py --raw-root <FactorsRaw> --data-root <PilotData> --output <new.json>`
+reproduces layer statistics and candidate scale factors. At 1e8 photons, the
+largest per-layer Poisson relative SE is 0.6847%. Candidate layer scales are
+0.8603–0.8784 (218), 0.8684–0.8905 (440), and 1.1487–1.2519 (440→218).
+These are calibration fit estimates, not independent spatial validation.
+
+Extension array **15384175** runs 360 independent workers, 1e7 photons each,
+with at most 40 concurrent. Indices are `10-99,110-199,210-299,310-399` from the
+original immutable task manifest. Each of the four groups reaches 1e9 photons
+when its pilot and extension are combined. Dependent collection job **15384216**
+runs `maty_collect.sh` only after the whole extension array succeeds; it verifies
+all 400 workers and creates four `_all` collections. If dependency failure occurs,
+inspect worker records before retrying; never resubmit successful indices.
+
+The measured pilot worker durations were about 17.5–19 minutes per 1e7 photons.
+Nine waves at 40-way concurrency suggest about three hours excluding queueing
+and changed node performance. The full-data calibration and Sensi_d are still
+pending those collections.
+
+Full central-20-layer regression passed for all three raw responses: the two
+direct-channel combined matrices match byte-for-byte; the cross-window scatter
+matrix has relative L2 error 3.4740e-8 and max absolute error 9.0949e-13,
+below the 1e-5 gate. Cross-window hashes differ, so retain the numerical report
+instead of claiming exact identity for all three responses.
+
 This experiment keeps the four-layer detector, PE-v4 response, 20 views and
 3-mm axial sampling. It uses 40 axial layers / 51240 polar cells. Physical
 sources occupy R<=150 mm; full computational support and Sensi_d calibration
