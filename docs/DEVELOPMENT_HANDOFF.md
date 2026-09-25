@@ -27,8 +27,12 @@ See the status page for coefficients, archive hash and artifact locations.
 
 NCCL smoke 1624002 passed on two RTX5090 GPUs, including serial-reference
 single/Compton/joint MLEM equivalence. Original job 1623854 failed before
-numerical execution and was superseded. Multi-node/full-grid memory tests and
-actual FOV120 images remain pending. Reconstruction work belongs inside the
+numerical execution and was superseded. Two-node NCCL test 1625684 also passed (36 seconds, one GPU on each of
+two distinct nodes); full-grid memory tests and actual FOV120 images remain pending.
+Noiseless/Poisson closed loops were launched on 65114 GPUs 0/1 (PIDs
+3282393/3282396), but subsequent SSH instability prevents confirming progress.
+Factors_production.tar download is incomplete until its documented SHA256 passes;
+check existing processes/logs before any retry. Reconstruction work belongs inside the
 user-specified main project, under its `experiments/FOV120_20260924/` workspace.
 See the status document for full paths and refresh before resubmitting tasks.
 

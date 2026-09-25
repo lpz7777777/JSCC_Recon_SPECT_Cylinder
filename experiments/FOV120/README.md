@@ -11,7 +11,10 @@ Full data and calibration report are locally in `generated/FullData/`.
 Contrast 1e9 truth and noiseless/Poisson projections have been generated on 65114;
 new Sensi_d and independent closure also completed (ratio 1.002033, CV 0.148924%).
 Sensi_d plus provenance are installed in production Factors. Closed-loop reconstruction,
-scxi717 deployment, full-event/multi-node checks and phantom imaging remain pending.
+scxi717 deployment, full-event checks and phantom imaging remain pending.
+Two-node NCCL smoke 1625684 passed; `paracloud_multinode_smoke.sh` reproduces it
+with `JSCC_REPO_ROOT` set to the isolated remote code root. Closed loops were
+launched on 65114 GPUs 0/1; check the status page for connection/transfer status.
 See the linked status page for verified hashes, coefficients and subsequent updates.
 
 ## Historical: calibration extension (2026-09-24 evening)

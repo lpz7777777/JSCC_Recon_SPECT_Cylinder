@@ -4,6 +4,17 @@
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
+## 接续更新：闭环启动、跨节点测试通过（2026-09-25）
+
+- 已补齐 65114 缺失的 `distributed` 源码依赖，入口 `--help` 导入检查通过。初次启动在导入阶段失败，无重建结果；日志保留为 `closedloop_*.initial_missing_module.log`。
+- Contrast 1e9 的 Noiseless/Poisson 闭环分别在 GPU 0/1 启动，PID 3282393/3282396；均为完整 51240 点、20 视角、1000 次 MLEM、每 50 次保存。调用 `main_local_multi_energy_cntstat.py`，先重建 440，固定串窗预测后校正 218；本步仅单光子闭环，不是六路 Geant4 成像。
+- 启动记录位于 65114 的 `generated/closedloop_launch.json`，输出 `generated/ClosedLoop/{Noiseless,Poisson}`，日志 `generated/closedloop_{Noiseless,Poisson}.log`。
+- 启动后 65114 SSH 多次超时；下载仍间歇增长，因此不能据此判定服务器关机或任务失败。**闭环状态为已启动、完成情况待核查**。重连后先读日志和进程，禁止盲目重提。
+- 正式 Factors 已打包为 `generated/Factors_production.tar`，远端 SHA256 为 `b7da8211a7af3c4421f72d9fc2400faaf7de2ecb86521397451f941b1804df2a`。本地同名文件正在下载，未经完整哈希验证不得使用；尚未部署到 scxi717。
+- scxi717 指定工程所在存储可用约 346 GB。新增 `paracloud_multinode_smoke.sh` 已通过 `bash -n` 并运行作业 **1625684**：**COMPLETED / 0:0 / 36 秒**，节点 `wqd10nah09g3` 与 `wqd10nah09g4`，每节点 1 GPU；单光子、Compton、联合 MLEM 与串行参考全部一致。
+- 跨节点进程退出阶段 stderr 有 TCPStore / RendezvousConnectionError 警告（连接被关闭）；数值断言已通过，Slurm 各步骤均 0:0。保留警告，后续长作业需继续检查通信稳定性。
+- 跨节点日志已下载为 `generated/nccl_2node.1625684.out/.err`。这是小问题跨节点验证，仍不能代替完整矩阵/实际事件的峰值显存与六路测试。
+
 ## 当前阶段：正式校准与新 Sensi_d 完成（2026-09-25）
 
 三套原始响应和未校准极坐标 Factors 全部完成，每套 2,151,260,160 bytes，
