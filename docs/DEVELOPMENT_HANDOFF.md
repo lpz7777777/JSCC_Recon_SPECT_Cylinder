@@ -2,6 +2,11 @@
 
 Last consolidated: 2026-09-25.
 
+Latest verified progress: short job 1626513 completed successfully in 4m25s;
+194835 accepted events, six finite nonnegative final images, peak reserved 9.97 GiB.
+Contrast 1e9 full six-output 10000-iteration job **1626525** submitted (4 nodes × 2 GPUs).
+See the status document for latest progress; the following deployment notes are historical.
+
 Latest execution update: actual Geant4 Uniform/Contrast 1e9 inputs are installed
 under the user-designated scxi717 project, with all 46 transferred files hash-verified.
 Both full-grid preflights passed (8 GPUs, conservative estimate 15.106 GiB/GPU).

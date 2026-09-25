@@ -339,6 +339,11 @@ def main():
     if rank == 0:
         sum_single = save_sum(output_dir, "440SinglePlus218Single", result440.image, result218.image)
         sum_joint = save_sum(output_dir, "440SingleComptonPlus218Single", result_j.image, result218.image)
+        history_suffix = f"_Iter_{args.iterations}_{args.iterations // args.save_step}"
+        save_sum(output_dir, "440SinglePlus218Single" + history_suffix,
+                 result440.history, result218.history)
+        save_sum(output_dir, "440SingleComptonPlus218Single" + history_suffix,
+                 result_j.history, result218.history)
         predicted_cross_full = torch.cat(
             [
                 part[:detector_bin_bounds(total_bins, part_rank, world_size)[1]
