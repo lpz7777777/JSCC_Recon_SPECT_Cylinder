@@ -3,7 +3,18 @@
 Detailed Chinese inventory and progress: [experiment status](../../docs/FOV120_EXPERIMENT_STATUS.md).
 Cross-project authentication and resource usage: [safe access](../../docs/REMOTE_COMPUTE_ACCESS.md).
 
-## Latest: calibration extension (2026-09-24 evening)
+## Latest (2026-09-25)
+
+All matrices and full four 1e9 calibration/sensitivity collections are complete.
+Production calibrated Factors are installed on 65114 with raw responses retained.
+Full data and calibration report are locally in `generated/FullData/`.
+Contrast 1e9 truth and noiseless/Poisson projections have been generated on 65114;
+new Sensi_d and independent closure also completed (ratio 1.002033, CV 0.148924%).
+Sensi_d plus provenance are installed in production Factors. Closed-loop reconstruction,
+scxi717 deployment, full-event/multi-node checks and phantom imaging remain pending.
+See the linked status page for verified hashes, coefficients and subsequent updates.
+
+## Historical: calibration extension (2026-09-24 evening)
 
 All three raw matrices and raw polar Factors are complete and validated.
 The four pilot groups have been collected with worker/output hash checks,

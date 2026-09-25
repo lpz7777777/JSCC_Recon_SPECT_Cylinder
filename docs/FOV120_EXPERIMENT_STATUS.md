@@ -1,30 +1,56 @@
 # ²²⁵Ac 218+440 keV：FOV120 实验目录与进度交接
 
-核查日期：2026-09-24（北京时间约 17:03）。本页是已核查快照，作业状态会变化。
+核查日期：2026-09-25。本页是已核查快照，作业状态会变化。
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
-## 当前阶段：校准与灵敏度扩充（2026-09-24 晚）
+## 当前阶段：正式校准与新 Sensi_d 完成（2026-09-25）
 
-三套原始响应与未校准极坐标 Factors 均已完成；每套 51240 点、40 层、10496 晶体，几何及有限非负检查通过。
-四组 pilot 已合并并验证哈希/发射数，40 个随机种子互不重复，合计 4e8 光子。
-分层 Poisson 相对标准误差范围为 0.13%–0.68%；初步系数仅记录在报告中，未安装成生产校准。
+三套原始响应和未校准极坐标 Factors 全部完成，每套 2,151,260,160 bytes，
+51240 点、40 层、10496 晶体，三路几何、有限非负检查通过。矩阵已无剩余生产任务。
+完整中心 20 层回归：218/440 直接响应逐字节一致；440→218 相对 L2 差异
+3.4740176163e−8、最大绝对差异 9.0949470177e−13，通过 1e−5 门槛。
+证据保存在 generated 的 center_*fingerprints.json 和 cross_center_regression.json。
 
-三路未校准响应的完整中心 20 层回归已通过：218/440 直接响应逐字节一致；
-440→218 的相对 L2 差异 3.4740e−8、最大绝对差异 9.0949e−13，低于 1e−5 门槛，
-与单精度舍入量级一致。证据为 `center_baseline_fingerprints.json`、
-`center_FOV120_fingerprints.json` 和 `cross_center_regression.json`。
+Geant4 扩充数组 **15384175** 和收集作业 **15384216** 均完成（0:0）。
+四组分别为 calibration_218、calibration_440、sensitivity_440、sensitivity_validation_440；
+每组 100 worker、实际 1e9 光子，合计 400 worker / 400 个不同种子 / 4e9 光子。
+收集标记为 FOV120_ALL_FOUR_GROUPS_COLLECTED，全部输入输出及 PrimaryCount 检查通过。
+完整归档 full_collected.tar.gz 的 SHA256：
+`893dc589ce42c1e0aa9277e4050c73ee17798f1fc04b06e93bd1b5e2daf126bb`。
+本地保存在 `experiments/FOV120/generated/FullData/`，并已校验后传入 65114 的 generated。
 
-追加数组 **15384175** 共 360 个 worker、最多 40 并发、各 1e7 光子，使四组分别累计到 1e9。
-依赖收集作业 **15384216** 仅在整个追加数组成功后合并全部数据。
-按 pilot 每 worker 17.5–19 分钟估计，九批约三小时，不含额外排队或节点速度差异。
-本地收集数据与评估位于 `experiments/FOV120/generated/PilotData/`；来源凭证和作业计划在
-`generated/calibration_extension_status.json`。模型评估工具为 `assess_pilot.py`。
+65114 已生成正式 `generated/Factors`，保留 `FactorsRaw`。四层系数依次对应
+200 / 230 / 260 / 290 mm；校准计数相对标准误差范围为 0.0420%–0.21694%。
 
-NCCL 测试 **1624002 已通过**：COMPLETED/0:0、1分57秒、两张 RTX5090，单光子/Compton/联合 MLEM
-与串行参考一致。这不替代跨节点或完整 FOV120 显存验证。
+| 通道 | 四层校准系数 |
+|---|---|
+| 218→218 | 0.87701797, 0.87713908, 0.87478797, 0.86182702 |
+| 440→440 | 0.88979251, 0.88854249, 0.88748235, 0.86980905 |
+| 440→218 | 1.14430131, 1.18520845, 1.22655555, 1.25391590 |
 
-以下保留先前阶段快照，当前接续以本节及实时作业记录为准。
+报告已下载到 `generated/FullData/calibration_report.json`。这些是拟合系数，不能代替独立空间验证。
+Contrast 的 1e9 光子极坐标真值和无噪声/Poisson 投影已在 65114 生成：
+`generated/Truth_Contrast_1e9.npz`、`generated/GenProj_Contrast_1e9/`；尚未完成闭环重建。
+投影按 20 视角分配总发射密度，Poisson 种子为 260924。q=8 真值体积积分相对解析值的误差为
+218: −0.0173805%，440: −0.0191067%，报告为 `generated/FullData/Truth_Contrast_1e9.json`。
+
+NCCL 测试 **1624002 已通过**：COMPLETED/0:0、1分57秒、两张 RTX5090；
+单光子/Compton/联合 MLEM 与串行参考一致。跨节点及完整事件显存测试仍待完成。
+新 Sensi_d 已在 65114 GPU 0（RTX A6000）完成并安装进正式 Factors，整体退出码为 0。
+独立环境为 PyTorch 2.8.0+cu128，SciPy 1.18.1、Matplotlib 3.11.2；计算期间观测显存约 3.6 GiB。
+计算组输入 2,041,975 行，接受 281,816 个事件；绝对归一化为 2.818160e−4，与有效事件数/1e9 一致。
+独立组输入 2,039,981 行，接受 282,395 个事件；闭合比体积加权均值 **1.00203298**，
+CV **0.148924%**，最小/中位/最大 **0.985523 / 1.002128 / 1.010986**。
+Sensi_d 为 51240 个正有限 float32、204960 bytes；Sensi_d_provenance.json 绑定网格、矩阵和物理参数哈希。
+本地证据位于 `generated/FullData/sensitivity_run_metadata.json`、
+`sensitivity_independent_closure.json`、`Sensi_d_provenance.json`。
+这只验证均匀源灵敏度闭合，不代表所有空间分布的重建无偏。
+
+下一步：完成无噪声/Poisson 闭环，将完整 Factors 包部署到 scxi717 指定工程子目录；
+随后完整事件预检、跨节点测试、轴向质控和真实体模成像。正式体模 1e9/1e10 六路重建尚未完成。
+
+以下为历史阶段记录；若与本节冲突，以本节和最新远端证据为准。
 
 ## 最新接续修正（2026-09-24）
 
@@ -124,7 +150,7 @@ r=90–108 mm、选取 |z中心|≤13.5 mm），不是全 FOV 均匀源验收。
 
 **尚无真实 FOV120 六路重建图像或有效 FOV 达标结论。**
 
-## 5. 远端目录、作业与状态快照
+## 5. 历史远端状态快照（2026-09-24 17:03，已被上方进度替代）
 
 | 资源 | 实验根目录 | 本次状态 |
 |---|---|---|

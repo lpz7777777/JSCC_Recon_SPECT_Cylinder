@@ -1,6 +1,6 @@
 # JSCC Reconstruction Development Handoff
 
-Last consolidated: 2026-09-24.
+Last consolidated: 2026-09-25.
 
 ## Current handoff: FOV120 and the completed 60-mm baseline
 
@@ -14,10 +14,16 @@ The original 60-mm 1e10/8-GPU/1000-iteration reconstruction is complete, with
 1,852,124 accepted Compton events and six final outputs. Radial bias remains;
 completed reconstruction is not quantitative acceptance. All FOV120 raw response
 matrices and raw polar Factors are now complete and validated. The four 1e8
-pilot groups were collected with hash/count checks; layer statistical errors
-are below 0.7%. Array 15384175 is adding 9e8 per group (360 workers, 40 concurrent),
-and afterok job 15384216 will collect the four full 1e9 datasets. Production
-calibration and Sensi_d still require those full collections.
+pilot groups and extension array 15384175 are complete. Collection job 15384216
+passed: four full 1e9 datasets, 400 workers and 400 distinct seeds. The archive
+was hash-verified locally and on 65114. Production calibrated Factors are now
+installed on 65114, raw Factors preserved; layer relative SE is 0.0420–0.21694%.
+The new Sensi_d and independent closure completed on 65114 GPU 0 (exit 0):
+281816 accepted calibration events, absolute mean 2.818160e-4; independent
+closure volume-weighted ratio 1.002033 and CV 0.148924%. Sensi_d and hashed
+provenance are installed in production Factors. Contrast 1e9
+truth and noiseless/Poisson projections exist; reconstruction is still pending.
+See the status page for coefficients, archive hash and artifact locations.
 
 NCCL smoke 1624002 passed on two RTX5090 GPUs, including serial-reference
 single/Compton/joint MLEM equivalence. Original job 1623854 failed before
