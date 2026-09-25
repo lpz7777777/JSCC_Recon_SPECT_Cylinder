@@ -1,5 +1,6 @@
 """Render unfiltered full-FOV Geant4 results against explicit polar truth."""
 import json,csv,hashlib,shutil
+import argparse
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -7,10 +8,14 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy.spatial import Delaunay
 from scipy.interpolate import LinearNDInterpolator
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--result',type=Path,required=True)
+parser.add_argument('--truth',type=Path,required=True)
+args=parser.parse_args()
 base=Path(__file__).resolve().parent/'generated'
-r=base/'Results/Contrast_1e9_1626525';out=r/'VisualReport';out.mkdir(exist_ok=True)
+r=args.result;out=r/'VisualReport';out.mkdir(exist_ok=True)
 v=base/'VisualizationInputs';fp=v/'Factors/440keV_RotateNum20'
-c=np.loadtxt(fp/'coor_polar_full.csv',delimiter=',');w=np.fromfile(fp/'polar_cell_volume_mm3.float64',dtype='<f8');t=np.load(v/'Truth_Contrast_1e9.npz')
+c=np.loadtxt(fp/'coor_polar_full.csv',delimiter=',');w=np.fromfile(fp/'polar_cell_volume_mm3.float64',dtype='<f8');t=np.load(args.truth)
 m=json.loads((r/'run_manifest.json').read_text());assert m['iterations']==10000 and m['pixel_count']==len(c)==51240
 z=np.unique(c[:,2]);tri=Delaunay(c[:1281,:2]);a=np.arange(-148.5,150,3);xx,yy=np.meshgrid(a,a)
 def cart(x):return np.stack([LinearNDInterpolator(tri,p,fill_value=0)(xx,yy) for p in x.reshape(40,1281)])
@@ -43,8 +48,8 @@ for group,keys in [('440_iterations',names[:3]),('218_iterations',[names[3]])]:
 with (out/'metrics.csv').open('w',newline='') as f:
  wr=csv.DictWriter(f,fieldnames=list(metrics[0]));wr.writeheader();wr.writerows(metrics)
 (out/'metrics.json').write_text(json.dumps(metrics,indent=2))
-files=[r/'run_manifest.json',v/'Truth_Contrast_1e9.npz',fp/'coor_polar_full.csv',fp/'polar_cell_volume_mm3.float64']+list(r.glob('*.selected'))
+files=[r/'run_manifest.json',args.truth,fp/'coor_polar_full.csv',fp/'polar_cell_volume_mm3.float64']+list(r.glob('*.selected'))
 (out/'provenance.json').write_text(json.dumps({'selected_iterations':its,'display':'In-plane linear interpolation only; no z interpolation, smoothing, cropping, fitted intensity scaling; gray_r; values above truth maximum saturate','hashes':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}},indent=2))
 shutil.copy2(__file__,out/Path(__file__).name)
-(out/'index.html').write_text('<meta charset="utf-8"><h1>Geant4 Contrast 1e9 / 10000 iterations</h1><p>全视野，无平滑、裁剪或强度拟合；灰度上限为对应真值最大值，超出部分饱和。组合图是 γ 通道和。</p>'+''.join('<h2>'+p.stem+'</h2><img style="width:100%" src="'+p.name+'">' for p in out.glob('*.png')),encoding='utf-8')
+(out/'index.html').write_text('<meta charset="utf-8"><h1>Geant4 '+m['dataset']+' '+m['count_level']+' / '+str(m['iterations'])+' iterations</h1><p>全视野，无平滑、裁剪或强度拟合；灰度上限为对应真值最大值，超出部分饱和。组合图是 γ 通道和。</p>'+''.join('<h2>'+p.stem+'</h2><img style="width:100%" src="'+p.name+'">' for p in out.glob('*.png')),encoding='utf-8')
 print(json.dumps([x for x in metrics if x['iteration'] in [1000,10000]],indent=2))
