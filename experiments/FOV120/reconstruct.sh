@@ -20,6 +20,8 @@ CONDA_BASE=$(conda info --base)
 source "$CONDA_BASE/etc/profile.d/conda.sh"
 conda activate torch
 set -u
+# Check the complete reconstruction import chain, not only the data preflight.
+python distributed/dual_energy_compton_python/main_dist_dual_energy_compton.py --help >/dev/null
 base=experiments/FOV120/generated
 dataset=${FOV120_DATASET:-XCAT}
 count=${FOV120_COUNT_LEVEL:-1e10}

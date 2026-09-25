@@ -4,6 +4,17 @@
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
+## 短程启动失败修复（2026-09-25）
+
+1626482 最终 FAILED/1:0，运行 2 分 21 秒；尚未进入 MLEM。
+首个错误为 `ModuleNotFoundError: No module named distributed.python`：
+远端部署缺少 main_local_multi_energy_cntstat 所导入的 multi_energy_tasks.py。
+已补齐 distributed/python Python 源码，并在远端实际 torch 环境运行六路入口 --help，
+完整导入链通过。启动脚本新增相同导入检查，数据预检不能替代代码依赖核验。
+已重新提交 **1626513**（4 节点 × 2 GPU，Contrast 1e9，全网格、全事件、10 次 / 每 5 次保存）。
+日志 generated/logs/qc_short_1626513.log；正式 10000 次仍待短程通过。
+原错误日志已保留，本地 generated/qc_short_1626482.log。
+
 ## 碎片 GPU 调度调整（2026-09-25）
 
 按用户提供的实时资源情况，取消仍为 PENDING 的单节点八卡作业 1626402，
