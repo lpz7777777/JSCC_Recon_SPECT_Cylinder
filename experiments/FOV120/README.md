@@ -364,3 +364,25 @@ volume-weighted image error without smoothing or fitted intensity scales.
 The full-grid fixed-point check passed at about 1e-6 maximum relative change;
 1000-iteration noiseless rod CRC remains only 1.6–7.4%. Numerical consistency
 is therefore separate from spatial recovery. See the status page for evidence.
+
+## Detailed closed-loop figures and independent point responses
+
+`visualize_closedloop.py --inputs <extracted visualization inputs> --rods <Contrast_truth.json>
+--output <new report directory>` creates a full-height HTML/PNG report with source
+hashes and raw CSV metrics. No smoothing, cropping, or fitted intensity scaling.
+`collect_point_responses.py --output <new.npz>` verifies complete point workers;
+`--allow-partial` explicitly permits a marked snapshot with missing indices.
+`compare_point_responses.py --points <npz> --factors <Factors> --output <new.json>`
+compares calibrated B/volume with monoenergetic MC. `plot_point_responses.py`
+adds three response plots to an existing report. See the status page for the
+complete 162-point comparison and 1e9 Uniform/Contrast jobs.
+
+For maty tasks with indices above 1000, submit a zero-based Slurm array and set
+`FOV120_JOB_INDEX_OFFSET` to the immutable manifest's first index. For example,
+Contrast 1e9 uses `--array=0-199%20 --export=ALL,FOV120_JOB_INDEX_OFFSET=962`.
+Never regenerate manifests or seeds merely to fit the scheduler index limit.
+
+The complete 14-figure report is `generated/ClosedLoop_VisualReport/index.html`;
+`generated/FOV120_VisualReport.zip` is portable. Point data are complete in
+`generated/FullData/point_responses_all.*`. Collector 15386284 runs
+`maty_collect_qc.sh` after both phantom arrays succeed.

@@ -27,6 +27,10 @@ for index in (0,100,562,962,1362,1462):
         or record['executable_sha256']!=executable or record['crystal_sha256']!=crystal):
         raise RuntimeError(f'Cluster smoke failed or binary changed: {index}')
 PY
-python3 experiments/FOV120/workflow.py run --index "${SLURM_ARRAY_TASK_ID:?}" \
+# Slurm MaxArraySize=1001 on maty; preserve immutable manifest indices via offset.
+offset=${FOV120_JOB_INDEX_OFFSET:-0}
+[[ "$offset" =~ ^[0-9]+$ ]] || { echo "Invalid FOV120_JOB_INDEX_OFFSET" >&2; exit 2; }
+index=$((SLURM_ARRAY_TASK_ID + offset))
+python3 experiments/FOV120/workflow.py run --index "$index" \
     --executable experiments/FOV120/generated/Geant4Build/gamma01 \
     --crystal Geant4Sim/Geant4Code/CrystalMatrix.txt

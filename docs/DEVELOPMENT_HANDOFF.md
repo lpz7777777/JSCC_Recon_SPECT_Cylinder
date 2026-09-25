@@ -45,6 +45,15 @@ using `experiments/FOV120/diagnose_closedloop.py`. Fractional-volume rod CRC at
 15385867 precedes dependent single-view point-response array 15385868 (162
 workers x 1e7, 40 concurrent). Do not confuse it with 20-view PointImaging.
 
+Latest: point scan 15385868 is fully complete, 162 workers / 162 unique seeds /
+1.62e9 photons. Verified full counts and MC/model comparisons are local in
+`generated/FullData/point_*all*`; snapshot1 remains historical. A 14-figure full-height HTML report is
+`generated/ClosedLoop_VisualReport/index.html`, with CSV metrics and source hashes.
+Uniform/Contrast 1e9 jobs 15386226/15386227 are running, 20 workers concurrent
+each. Afterok collector 15386284 waits for both arrays to complete successfully.
+The maty launcher now maps zero-based array indices via a validated offset
+to work around MaxArraySize=1001; physical tasks/seeds were not regenerated.
+
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are
 ignored by Git, so the required semantics and evidence are recorded here.
