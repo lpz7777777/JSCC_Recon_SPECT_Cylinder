@@ -410,3 +410,10 @@ so comparison to the old run changes both background estimate and iteration coun
 改变拓扑时同步设置 `sbatch -N <nodes> --gres=gpu:<gpus>` 和
 `FOV120_GPUS_PER_NODE=<gpus>`。实际短程替代作业 1626482 已启动；原 1626402 已取消。
 正式 1e10 的 GPU 数仍按实测事件数和显存预检决定，不能直接沿用 1e9 的八卡预算。
+
+### 联合通道与边缘诊断
+
+`Image_440_SinglePlusCompton` 是单光子和 Compton 共同参与的 440 keV JSCC MLEM；
+`Image_440SingleComptonPlus218Single` 是最终 440 联合图与 218 校正图的逐体素和。
+轴向诊断脚本 `evaluate_axial_uniform.py` 使用独立均匀源真值、r≤135 mm、原始体积权重，
+输出 40 层恢复率、CV、相对 L2 和图。结果见状态文档。
