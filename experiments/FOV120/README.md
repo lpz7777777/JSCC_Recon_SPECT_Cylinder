@@ -13,8 +13,9 @@ new Sensi_d and independent closure also completed (ratio 1.002033, CV 0.148924%
 Sensi_d plus provenance are installed in production Factors. Closed-loop reconstruction,
 scxi717 deployment, full-event checks and phantom imaging remain pending.
 Two-node NCCL smoke 1625684 passed; `paracloud_multinode_smoke.sh` reproduces it
-with `JSCC_REPO_ROOT` set to the isolated remote code root. Closed loops were
-launched on 65114 GPUs 0/1; check the status page for connection/transfer status.
+with `JSCC_REPO_ROOT` set to the isolated remote code root. Closed loops completed
+1000 iterations each; count closure is good but spatial truth errors remain
+substantial. Check the status page for metrics and the ongoing Factors upload.
 See the linked status page for verified hashes, coefficients and subsequent updates.
 
 ## Historical: calibration extension (2026-09-24 evening)

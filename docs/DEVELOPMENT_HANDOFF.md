@@ -29,10 +29,12 @@ NCCL smoke 1624002 passed on two RTX5090 GPUs, including serial-reference
 single/Compton/joint MLEM equivalence. Original job 1623854 failed before
 numerical execution and was superseded. Two-node NCCL test 1625684 also passed (36 seconds, one GPU on each of
 two distinct nodes); full-grid memory tests and actual FOV120 images remain pending.
-Noiseless/Poisson closed loops were launched on 65114 GPUs 0/1 (PIDs
-3282393/3282396), but subsequent SSH instability prevents confirming progress.
-Factors_production.tar download is incomplete until its documented SHA256 passes;
-check existing processes/logs before any retry. Reconstruction work belongs inside the
+Noiseless/Poisson closed loops completed 1000 iterations each (~469 seconds).
+Noiseless projection residuals are 0.207%/0.236% (218/440), but volume-weighted
+image errors remain 36.6%/42.0%; spatial quality is not accepted. All histories
+are verified. The local production Factors archive passed SHA256; upload to
+scxi717 is running and requires remote hash/extraction confirmation. The earlier
+65114 SSH failures resolved after download; do not relaunch completed loops. Reconstruction work belongs inside the
 user-specified main project, under its `experiments/FOV120_20260924/` workspace.
 See the status document for full paths and refresh before resubmitting tasks.
 
