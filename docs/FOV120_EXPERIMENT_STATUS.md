@@ -4,6 +4,23 @@
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
+## 实际 Geant4 数据部署与六路短程验证（2026-09-25 更新）
+
+Uniform/Contrast 两组 1e9 数据已部署到 scxi717 的本工程 FOV120_20260924 隔离目录。
+传输包 51,716,678 bytes，SHA256 为
+`983bfcb4d182a3cfd3a21a548b40eb4a9b5966071286b0a0608ffd7147482dec`。
+远端逐文件核验通过：46 个文件（两份 collection、四份 CntStat、40 份 List）；
+两组共 400 个随机种子无重复。清单保存在 generated/qc_1e9_files.json。
+
+已提交实际 Contrast 全事件、完整 51240 点网格六路短程作业 **1626402**：
+单节点 8 GPU、10 次迭代、每 5 次保存，日志 generated/logs/qc_short_1626402.log。
+提交后首次查询为 PENDING/Priority；这不是正式 10000 次结果。
+Uniform/Contrast 远端预检均通过，报告已下载至 generated/FullData/preflight_{Uniform,Contrast}_1e9_8gpu.json。
+资源预检用保守估计 350000 接受事件和每卡 32 GiB，估计峰值 15.106 GiB/卡；实际接受数及峰值以完成 manifest 为准。
+入口新增逐 rank 峰值 allocated/reserved 和显卡容量记录。
+reconstruct.sh 默认迭代改为 10000，允许 FOV120_ITERATIONS/FOV120_SAVE_STEP 覆盖；
+冻结 config.json 和源任务哈希保持原样。短程结果、显存余量核验通过后才启动正式长迭代。
+
 ## 10000 次结果及 Geant4 验证完成（2026-09-25 晚）
 
 两组 10000 次闭环和自动后处理全部完成：Noiseless 3753.55 秒、Poisson 3756.89 秒。

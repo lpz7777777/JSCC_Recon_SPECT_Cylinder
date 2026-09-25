@@ -2,6 +2,14 @@
 
 Last consolidated: 2026-09-25.
 
+Latest execution update: actual Geant4 Uniform/Contrast 1e9 inputs are installed
+under the user-designated scxi717 project, with all 46 transferred files hash-verified.
+Both full-grid preflights passed (8 GPUs, conservative estimate 15.106 GiB/GPU).
+Full-event six-output Contrast short job **1626402** is queued (Priority at last check).
+It runs 10 iterations and saves every 5; this is not the 10000-iteration production run.
+The launcher now defaults to 10000 iterations and records per-rank GPU memory peaks.
+Validate the short run and memory headroom before submitting long Geant4 reconstructions.
+
 ## Current handoff: FOV120 and the completed 60-mm baseline
 
 Read [FOV120 experiment status](FOV120_EXPERIMENT_STATUS.md) for the detailed

@@ -23,6 +23,8 @@ base=experiments/FOV120/generated
 dataset=${FOV120_DATASET:-XCAT}
 count=${FOV120_COUNT_LEVEL:-1e10}
 gpus=${FOV120_GPUS_PER_NODE:-8}
+iterations=${FOV120_ITERATIONS:-10000}
+save_step=${FOV120_SAVE_STEP:-50}
 common=(--experiment-config experiments/FOV120/config.json --factors-dir "$base/Factors"
         --cntstat-dir "$base/CntStat" --list-dir "$base/List"
         --data-file-name "$dataset" --count-level "$count")
@@ -36,7 +38,7 @@ export PYTHONUNBUFFERED=1
 srun --kill-on-bad-exit=1 torchrun --nnodes="$SLURM_NNODES" --nproc_per_node="$gpus" \
   --rdzv_id="$SLURM_JOB_ID" --rdzv_backend=c10d --rdzv_endpoint="$master:$port" \
   distributed/dual_energy_compton_python/main_dist_dual_energy_compton.py "${common[@]}" \
-  --iterations 1000 --save-step 50 --theta-stride 1 --z-stride 1 \
+  --iterations "$iterations" --save-step "$save_step" --theta-stride 1 --z-stride 1 \
   --energy-resolution-fwhm .13 --energy-resolution-reference-kev 511 \
   --energy-threshold-sum-mev .350 --materialize-device cuda \
   --output-dir "$base/Results/${dataset}_${count}_${SLURM_JOB_ID}" "$@"

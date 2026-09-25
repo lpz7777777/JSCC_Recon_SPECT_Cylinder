@@ -326,6 +326,16 @@ def main():
     save_result(output_dir, "440_ComptonOnly", result_d, args.iterations, args.save_step, rank)
     save_result(output_dir, "440_SinglePlusCompton", result_j, args.iterations, args.save_step, rank)
 
+    resource = {"rank": rank, "device": str(device)}
+    if device.type == "cuda":
+        resource.update(
+            peak_allocated_bytes=torch.cuda.max_memory_allocated(device),
+            peak_reserved_bytes=torch.cuda.max_memory_reserved(device),
+            device_total_bytes=torch.cuda.get_device_properties(device).total_memory,
+        )
+    resources = [None] * world_size
+    dist.all_gather_object(resources, resource)
+
     if rank == 0:
         sum_single = save_sum(output_dir, "440SinglePlus218Single", result440.image, result218.image)
         sum_joint = save_sum(output_dir, "440SingleComptonPlus218Single", result_j.image, result218.image)
@@ -370,6 +380,7 @@ def main():
             "z_stride": args.z_stride,
             "input_energies_already_smeared": True,
             "accepted_compton_events": global_accepted,
+            "resources_by_rank": resources,
             "outputs": [
                 "Image_440_SinglePhoton",
                 "Image_440_ComptonOnly",

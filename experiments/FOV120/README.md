@@ -397,3 +397,11 @@ closedloop10000_diagnostics.json`; the visualization tool also accepts
 Do not overwrite the 1000-step results or label their CRC as the final spatial
 capability. Corrected 218 at 10000 iterations uses the new final 440 prediction,
 so comparison to the old run changes both background estimate and iteration count.
+
+### Geant4 全事件短程与长迭代参数（2026-09-25）
+
+`reconstruct.sh` 默认 `FOV120_ITERATIONS=10000`、`FOV120_SAVE_STEP=50`。
+短程可设为 10 / 5，禁止通过修改冻结 config.json 来覆盖运行次数。
+`run_manifest.json` 新增 `resources_by_rank`，记录各 GPU 峰值 allocated/reserved bytes
+及设备容量；正式运行前核验至少 20% 显存余量。短程作业 1626402 使用完整网格与全事件，
+不是降低采样率的替代成像。进度及输入清单见实验状态文档。
