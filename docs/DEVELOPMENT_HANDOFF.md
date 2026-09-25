@@ -62,6 +62,12 @@ and ClosedLoop10000_VisualReport.tar.gz. Read the status page for logs/markers.
 1000-step low CRC is an early-iteration observation, not a final capability limit.
 The new corrected 218 channel uses the new 10000-step 440 cross-talk estimate.
 
+Latest evening check: both 10000-iteration reconstructions and reports finished
+(~62.6 min each). Report downloaded to generated/ClosedLoop10000_VisualReport.
+Noiseless CRC improves to 11.1–50.3% (218), 8.1–26.6% (440), but Poisson image
+errors rise to 210%/188%. Uniform/Contrast 1e9 arrays and collector 15386284 also
+completed; both 20-view collections are ready on maty for scxi717 deployment.
+
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are
 ignored by Git, so the required semantics and evidence are recorded here.
