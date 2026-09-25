@@ -3,7 +3,8 @@
 #SBATCH -p gpu_5090
 #SBATCH -N 4
 #SBATCH --ntasks-per-node=1
-#SBATCH --gres=gpu:8
+#SBATCH --gres=gpu:2
+#SBATCH --cpus-per-task=4
 #SBATCH --qos=gpugpu
 #SBATCH --time=48:00:00
 set -eo pipefail
@@ -22,7 +23,11 @@ set -u
 base=experiments/FOV120/generated
 dataset=${FOV120_DATASET:-XCAT}
 count=${FOV120_COUNT_LEVEL:-1e10}
-gpus=${FOV120_GPUS_PER_NODE:-8}
+gpus=${FOV120_GPUS_PER_NODE:-2}
+if [[ -n ${SLURM_GPUS_ON_NODE:-} && "$SLURM_GPUS_ON_NODE" != "$gpus" ]]; then
+  echo "GPU allocation mismatch: SLURM_GPUS_ON_NODE=$SLURM_GPUS_ON_NODE, requested workers=$gpus" >&2
+  exit 1
+fi
 iterations=${FOV120_ITERATIONS:-10000}
 save_step=${FOV120_SAVE_STEP:-50}
 common=(--experiment-config experiments/FOV120/config.json --factors-dir "$base/Factors"

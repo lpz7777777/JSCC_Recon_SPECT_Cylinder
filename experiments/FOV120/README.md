@@ -405,3 +405,8 @@ so comparison to the old run changes both background estimate and iteration coun
 `run_manifest.json` 新增 `resources_by_rank`，记录各 GPU 峰值 allocated/reserved bytes
 及设备容量；正式运行前核验至少 20% 显存余量。短程作业 1626402 使用完整网格与全事件，
 不是降低采样率的替代成像。进度及输入清单见实验状态文档。
+
+碎片资源调度：启动脚本默认 4 节点 × 2 GPU，共 8 GPU，每节点 4 CPU。
+改变拓扑时同步设置 `sbatch -N <nodes> --gres=gpu:<gpus>` 和
+`FOV120_GPUS_PER_NODE=<gpus>`。实际短程替代作业 1626482 已启动；原 1626402 已取消。
+正式 1e10 的 GPU 数仍按实测事件数和显存预检决定，不能直接沿用 1e9 的八卡预算。

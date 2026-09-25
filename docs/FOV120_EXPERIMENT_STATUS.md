@@ -4,6 +4,18 @@
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
+## 碎片 GPU 调度调整（2026-09-25）
+
+按用户提供的实时资源情况，取消仍为 PENDING 的单节点八卡作业 1626402，
+替换为 **1626482：4 节点 × 2 GPU，共 8 GPU**，已确认 RUNNING。
+节点为 wqd10nah10g1、wqd10nbj04g3–5；分配 CPU 16、内存 252000M。
+完整网格、全事件、Contrast 1e9、10 次短程 / 每 5 次保存均保持不变。
+日志为 generated/logs/qc_short_1626482.log。
+reconstruct.sh 默认每节点 GPU 数同步改为 2，增加分配数和 worker 数一致性检查，
+并为每节点 torchrun 分配 4 CPU。正式长迭代仍需短程验收。
+如后续改变每节点卡数，必须同时修改 sbatch --gres 和 FOV120_GPUS_PER_NODE；
+总 GPU 数由节点数乘每节点卡数计算，不要求等待整节点八卡空闲。
+
 ## 实际 Geant4 数据部署与六路短程验证（2026-09-25 更新）
 
 Uniform/Contrast 两组 1e9 数据已部署到 scxi717 的本工程 FOV120_20260924 隔离目录。
