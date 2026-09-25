@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Submit only with afterok dependencies on BOTH 1e9 phantom arrays.
+# Submit only with afterok dependencies on BOTH matching phantom arrays.
 #SBATCH --job-name=FOV120_QC_collect
 #SBATCH --partition=cnmix
 #SBATCH --nodes=1
@@ -9,7 +9,9 @@
 #SBATCH --output=experiments/FOV120/generated/qc_collect.%j.out
 #SBATCH --error=experiments/FOV120/generated/qc_collect.%j.err
 set -euo pipefail
+level=${FOV120_COUNT_LEVEL:-1e9}
+[[ "$level" == 1e9 || "$level" == 1e10 ]] || exit 2
 for dataset in Uniform Contrast; do
-  python3 experiments/FOV120/workflow.py collect --dataset "$dataset" --level 1e9
+  python3 experiments/FOV120/workflow.py collect --dataset "$dataset" --level "$level"
 done
-echo FOV120_UNIFORM_CONTRAST_1E9_COLLECTED
+echo "FOV120_UNIFORM_CONTRAST_${level}_COLLECTED"

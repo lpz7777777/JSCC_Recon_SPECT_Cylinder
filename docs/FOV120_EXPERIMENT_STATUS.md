@@ -4,6 +4,19 @@
 命令详见 [实验操作手册](../experiments/FOV120/README.md)，远程访问详见
 [安全连接说明](REMOTE_COMPUTE_ACCESS.md)。原有 60 mm 数据不移动、不覆盖。
 
+## 高计数对照与均匀源重建启动（2026-09-25）
+
+核验冻结 jobs.json 后确认目标 worker 目录不存在，避免重复运行。
+maty 新提交 Uniform 1e10 **15388423**（offset 762）、Contrast 1e10 **15388444**（offset 1162）：
+各 200 worker × 5e7 光子，共各 1e10，20 视角；每组并发 20，均已有 20 worker RUNNING。
+成功依赖收集作业 **15388466**，afterok 两组数组，当前等待依赖。
+maty_collect_qc.sh 新增 FOV120_COUNT_LEVEL=1e9/1e10 参数，默认仍 1e9。
+
+scxi717 独立 Uniform 1e9 六路 10000 次重建 **1626560** 已 RUNNING，4 节点 × 2 GPU，
+每 50 次保存，日志 generated/logs/recon_1626560.log。
+用于检验独立均匀源的背景结构；高计数 Contrast 用于区分长迭代统计噪声与可能的模型偏差。
+1e10 模拟尚未完成，正式高计数重建未提交；需先发射数闭合、传输核验及实际事件资源预检。
+
 ## 真实 Geant4 10000 次结果完成（2026-09-25）
 
 1626525 COMPLETED/0:0，耗时 10 分钟。六路最终图与选取的 100/500/1000/2000/5000/10000
