@@ -386,3 +386,14 @@ The complete 14-figure report is `generated/ClosedLoop_VisualReport/index.html`;
 `generated/FOV120_VisualReport.zip` is portable. Point data are complete in
 `generated/FullData/point_responses_all.*`. Collector 15386284 runs
 `maty_collect_qc.sh` after both phantom arrays succeed.
+
+## 10000-iteration follow-up
+
+At the user's request, repeat both closed loops with `--single-sc-iter 10000`,
+`--single-sc-save-step 50`, and fresh roots under `generated/ClosedLoop10000`.
+The diagnostic tool accepts `--results-subdir ClosedLoop10000 --output-name
+closedloop10000_diagnostics.json`; the visualization tool also accepts
+`--results-subdir ClosedLoop10000` and derives frame counts from manifests.
+Do not overwrite the 1000-step results or label their CRC as the final spatial
+capability. Corrected 218 at 10000 iterations uses the new final 440 prediction,
+so comparison to the old run changes both background estimate and iteration count.

@@ -54,6 +54,14 @@ each. Afterok collector 15386284 waits for both arrays to complete successfully.
 The maty launcher now maps zero-based array indices via a validated offset
 to work around MaxArraySize=1001; physical tasks/seeds were not regenerated.
 
+User requested at least 10000 iterations before judging hot-rod recovery.
+Both full closed loops are now running on 65114 GPUs 0/1, driver PIDs
+3324077/3324078, under generated/ClosedLoop10000 (old 1000-step runs retained).
+Postprocessor 3324594 checks exit records then produces full-height diagnostics
+and ClosedLoop10000_VisualReport.tar.gz. Read the status page for logs/markers.
+1000-step low CRC is an early-iteration observation, not a final capability limit.
+The new corrected 218 channel uses the new 10000-step 440 cross-talk estimate.
+
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are
 ignored by Git, so the required semantics and evidence are recorded here.

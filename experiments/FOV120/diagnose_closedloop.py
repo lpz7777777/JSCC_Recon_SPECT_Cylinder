@@ -25,6 +25,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).parent / 'generated')
     parser.add_argument('--device', default='cuda')
+    parser.add_argument('--results-subdir', default='ClosedLoop')
+    parser.add_argument('--output-name', default='closedloop_diagnostics.json')
     args = parser.parse_args()
     root = args.root.resolve()
     factors = root / 'Factors'
@@ -61,7 +63,7 @@ def main():
             del matrix, image, updated, y, bg, sensitivity
     all_rods = np.maximum.reduce([truth[f'mask_rod_{i+1}'] for i in range(len(rods))])
     for kind in ('Noiseless', 'Poisson'):
-        paths = list((root / 'ClosedLoop' / kind).rglob('run_manifest.json'))
+        paths = list((root / args.results_subdir / kind).rglob('run_manifest.json'))
         if len(paths) != 1:
             raise ValueError(f'Expected one {kind} manifest, found {len(paths)}')
         manifest = json.loads(paths[0].read_text())
@@ -92,7 +94,7 @@ def main():
                                         'z_mm': rod['center_mm'][2], 'crc': (hot/back-1)/true_contrast})
                 metrics.append(row)
             report['histories'][kind][str(energy)] = metrics
-    out = root / 'closedloop_diagnostics.json'
+    out = root / args.output_name
     out.write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps(report['fixed_points'], indent=2))
     print(out)
