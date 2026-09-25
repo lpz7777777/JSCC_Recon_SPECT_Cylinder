@@ -32,11 +32,18 @@ two distinct nodes); full-grid memory tests and actual FOV120 images remain pend
 Noiseless/Poisson closed loops completed 1000 iterations each (~469 seconds).
 Noiseless projection residuals are 0.207%/0.236% (218/440), but volume-weighted
 image errors remain 36.6%/42.0%; spatial quality is not accepted. All histories
-are verified. The local production Factors archive passed SHA256; upload to
-scxi717 is running and requires remote hash/extraction confirmation. The earlier
+are verified. The production Factors archive is deployed to scxi717; remote SHA256, full
+geometry/matrix scan and Sensi_d provenance verification all passed. A Python
+3.9 file_digest incompatibility was fixed with streaming SHA256 and a tamper test. The earlier
 65114 SSH failures resolved after download; do not relaunch completed loops. Reconstruction work belongs inside the
 user-specified main project, under its `experiments/FOV120_20260924/` workspace.
 See the status document for full paths and refresh before resubmitting tasks.
+
+Full-grid noiseless truth fixed-point checks now pass (~1e-6 maximum voxel change)
+using `experiments/FOV120/diagnose_closedloop.py`. Fractional-volume rod CRC at
+1000 iterations is only 1.6–7.4%; spatial quality remains unresolved. Maty smoke
+15385867 precedes dependent single-view point-response array 15385868 (162
+workers x 1e7, 40 concurrent). Do not confuse it with 20-view PointImaging.
 
 This is the primary starting document for a new developer or a new
 conversation. Large Factors, Geant4 output, List, CntStat, and Results are

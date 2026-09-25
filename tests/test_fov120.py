@@ -12,6 +12,28 @@ sys.path.insert(0,str(ROOT))
 from fov_config import load_config, factor_geometry, validate_factor_geometry
 
 
+def test_sensitivity_provenance_python39_and_tamper(tmp_path, monkeypatch):
+    import hashlib
+    from fov_config import validate_sensitivity_provenance
+    monkeypatch.delattr(hashlib, 'file_digest', raising=False)
+    names = ('Sensi_d', 'factor_manifest.json', 'coor_polar_full.csv',
+             'Detector.csv', 'polar_cell_volume_mm3.float64', 'SysMat_polar')
+    hashes = {}
+    for name in names:
+        data = b'x' * (8 * 1024 * 1024 + 3) if name == 'SysMat_polar' else name.encode()
+        (tmp_path / name).write_bytes(data)
+        hashes[name] = hashlib.sha256(data).hexdigest()
+    record = dict(operator='K*B', resolution_fwhm=.13, reference_keV=511,
+                  sum_threshold_MeV=.350, input_already_smeared=True, hashes=hashes)
+    (tmp_path / 'Sensi_d_provenance.json').write_text(json.dumps(record))
+    validate_sensitivity_provenance(tmp_path, verify_matrix=True)
+    with (tmp_path / 'SysMat_polar').open('r+b') as stream:
+        stream.seek(-1, 2)
+        stream.write(b'y')
+    with pytest.raises(ValueError, match='Stale Sensi_d provenance: SysMat_polar'):
+        validate_sensitivity_provenance(tmp_path, verify_matrix=True)
+
+
 def module(name,path):
     spec=importlib.util.spec_from_file_location(name,ROOT/path)
     mod=importlib.util.module_from_spec(spec)

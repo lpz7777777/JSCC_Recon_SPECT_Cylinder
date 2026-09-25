@@ -24,7 +24,11 @@ def validate_sensitivity_provenance(directory, verify_matrix=False):
         if name == "SysMat_polar" and not verify_matrix:
             continue  # preflight hashes it once, rather than once per GPU rank
         with (directory / name).open("rb") as stream:
-            if hashlib.file_digest(stream, "sha256").hexdigest() != checksum:
+            # Reconstruction cluster uses Python 3.9; file_digest requires 3.11.
+            digest = hashlib.sha256()
+            for block in iter(lambda: stream.read(8 * 1024 * 1024), b""):
+                digest.update(block)
+            if digest.hexdigest() != checksum:
                 raise ValueError(f"Stale Sensi_d provenance: {name}")
 
 

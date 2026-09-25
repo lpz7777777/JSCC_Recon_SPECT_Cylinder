@@ -11,11 +11,12 @@ Full data and calibration report are locally in `generated/FullData/`.
 Contrast 1e9 truth and noiseless/Poisson projections have been generated on 65114;
 new Sensi_d and independent closure also completed (ratio 1.002033, CV 0.148924%).
 Sensi_d plus provenance are installed in production Factors. Closed-loop reconstruction,
-scxi717 deployment, full-event checks and phantom imaging remain pending.
+scxi717 deployment has passed full hash/geometry checks; full-event checks and
+phantom imaging remain pending.
 Two-node NCCL smoke 1625684 passed; `paracloud_multinode_smoke.sh` reproduces it
 with `JSCC_REPO_ROOT` set to the isolated remote code root. Closed loops completed
 1000 iterations each; count closure is good but spatial truth errors remain
-substantial. Check the status page for metrics and the ongoing Factors upload.
+substantial. Check the status page for metrics and point-response jobs 15385867/15385868.
 See the linked status page for verified hashes, coefficients and subsequent updates.
 
 ## Historical: calibration extension (2026-09-24 evening)
@@ -353,3 +354,13 @@ python experiments/FOV120/validate_cpu_collectives.py
 ```
 
 MATLAB: `addpath('experiments/FOV120'); test_factor_grid;`.
+
+## Closed-loop numerical and contrast diagnostics
+
+Run `python experiments/FOV120/diagnose_closedloop.py --device cuda` after both
+Contrast closed loops finish. It checks a production MLEM update from known
+truth with exact cross-talk, and reports per-frame fractional-ROI CRC and
+volume-weighted image error without smoothing or fitted intensity scales.
+The full-grid fixed-point check passed at about 1e-6 maximum relative change;
+1000-iteration noiseless rod CRC remains only 1.6–7.4%. Numerical consistency
+is therefore separate from spatial recovery. See the status page for evidence.
