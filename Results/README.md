@@ -57,6 +57,12 @@ for measured background ratios and interpretation limits.
 
 FOV120 source truth, macro validation and smoke outputs are under
 `../experiments/FOV120/generated/`; remote workers are cataloged in that
-experiment's status documents. No production FOV120 reconstructed images have
-been verified. Keep the legacy central-39-mm pictures separate from full-height
-120-mm evaluation. Neither large arrays nor generated images are committed.
+experiment's status documents. Real FOV120 Geant4 Contrast and Uniform 1e9 six-output 10000-iteration
+reconstructions have now completed (jobs 1626525 and 1626560). Their local
+final arrays, selected-frame figures and axial metrics live under
+`../experiments/FOV120/generated/Results/`, not this legacy `Results/` root.
+The reports are full-height, unfiltered and uncropped; complete 200-frame
+histories remain on scxi717. Both images have severe long-iteration spatial
+noise, so completion does not establish useful 120-mm FOV. Keep the old
+central-39-mm pictures separate from these full-height comparisons. Large
+arrays and generated images are not committed.

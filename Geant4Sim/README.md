@@ -4,6 +4,23 @@ Read `../docs/DEVELOPMENT_HANDOFF.md` before generating new production data.
 It identifies the canonical density-basis Factors, required Geant4 semantics,
 and the active Compton-sensitivity task.
 
+## FOV120 双能模拟现状（2026-09-25 22:45 快照）
+
+实际 maty 二进制编译自 `Geant4Code/`。Uniform/Contrast 1e9 各 200 个独立 worker、
+20 视角、1e9 实际初级光子已收集并核验种子/PrimaryCount/哈希，
+List/CntStat 已部署到 scxi717 并完成六路 10000 次重建。
+Uniform/Contrast 1e10 各 200 worker × 5e7 初级光子的数组作业
+15388423/15388444 正在运行，依赖收集 15388466 待完成。
+120 mm XCAT 宏/真值和短程模拟已验证，正式生产成像未完成。
+详见 [FOV120 实验状态](../docs/FOV120_EXPERIMENT_STATUS.md)。
+
+本项目在晶体累计能量上每晶体加一次 Gaussian 能量展宽：
+相对 FWHM `0.13 sqrt(511 keV/E)`，218/440 keV 为 19.903%/14.010%。
+展宽后的能量同时决定 CntStat 窗口和两晶体 List 列；重建读取 List 时
+显式声明已展宽，不再二次随机化。能窗为 218: 196.305–239.695 keV、
+440: 409.179–470.821 keV。更具体的 EventAction 实现见
+[Geant4Code README](Geant4Code/README.md)。
+
 ## Polar-grid source measure
 
 `GenerateUniformFovCntStatMacros.m` emits equal numbers of photons from every

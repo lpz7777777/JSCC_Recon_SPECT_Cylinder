@@ -63,6 +63,11 @@ Python 工程可用 `importlib.util.spec_from_file_location` 按上述绝对路�
 - 本工程的所有重建任务必须位于 `/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/` 或其子目录。FOV120 使用该工程的 `experiments/FOV120_20260924/` 独立工作区。
 - `gpugpu` 已查得单作业最多 8 节点；账号关联 `GrpTRES=gres/gpu=100`，5090 每节点 8 卡。
   这是配置快照，提交前复核 QOS、当前资源和队列，不把登录横幅的通用额度当作实际账号限制。
+- FOV120 的 1e9 全网格六路实测采用 4 节点 × 每节点 2 张 5090（8 卡总数）：
+  单节点整 8 卡等待时间长时，可申请多个各有 2 张空卡的节点。
+  `sbatch -N 4 --gres=gpu:2` 必须与 `FOV120_GPUS_PER_NODE=2` 一致，
+  `reconstruct.sh` 会检查分配卡数；1e10 根据实际接受事件和显存重新决定卡数。
+  1e9 Contrast 短程峰值 reserved 约 9.97 GiB/卡，不能直接外推为 1e10 显存需求。
 - GPU 作业用 sbatch，登录节点用于编辑/编译/传输；不要在登录节点跑重建。
 - 已有 torch 环境的作业使用 `module load cuda/12.9`、`module load miniforge3/25.11.0-1`，
   再 source conda.sh、`conda activate torch`。批处理和非登录 SSH shell 应先 `source /etc/profile.d/modules.sh` 再加载模块；

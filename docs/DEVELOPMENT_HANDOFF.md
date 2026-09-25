@@ -1,93 +1,113 @@
 # JSCC Reconstruction Development Handoff
 
-Last consolidated: 2026-09-25.
+Current consolidated snapshot: 2026-09-25 22:45 China time. For the latest
+measured job state, check Slurm; this is a dated handoff, not a live dashboard.
+The detailed evidence and per-job history live in
+[FOV120 experiment status](FOV120_EXPERIMENT_STATUS.md). Reproducible commands are in
+[the experiment README](../experiments/FOV120/README.md), and safe connections
+are documented in [remote compute access](REMOTE_COMPUTE_ACCESS.md).
 
-Latest verified progress: short job 1626513 completed successfully in 4m25s;
-194835 accepted events, six finite nonnegative final images, peak reserved 9.97 GiB.
-Contrast 1e9 full six-output 10000-iteration job **1626525** submitted (4 nodes × 2 GPUs).
-See the status document for latest progress; the following deployment notes are historical.
+## What has actually been completed
 
-Latest execution update: actual Geant4 Uniform/Contrast 1e9 inputs are installed
-under the user-designated scxi717 project, with all 46 transferred files hash-verified.
-Both full-grid preflights passed (8 GPUs, conservative estimate 15.106 GiB/GPU).
-Full-event six-output Contrast short job **1626513** replaces failed job 1626482
-on 4 nodes × 2 GPUs. Job 1626482 failed before MLEM because distributed/python
-was missing from deployment; sources are now installed and the remote full entry
-import check passes.
-It replaces cancelled pending single-node job 1626402 to use fragmented free GPUs.
-It runs 10 iterations and saves every 5; this is not the 10000-iteration production run.
-The launcher now defaults to 10000 iterations and records per-rank GPU memory peaks.
-Validate the short run and memory headroom before submitting long Geant4 reconstructions.
+The 60-mm 1e10 baseline is complete (8 GPUs, 1000 iterations, 1,852,124
+accepted Compton events); its radial background bias remains unresolved.
+For FOV120, the detector remains four layers/10496 active crystals at y=
+200/230/260/290 mm. The physical source cylinder is radius 150 mm, height
+120 mm; the computational polar support extends to radius 153 mm. There are
+40 z layers (-58.5:3:58.5 mm), 1281 polar points per layer (51240 total),
+and 20 rotations. Three 218/440/440-to-218 calibrated density-basis Factors
+are complete; raw Factors are preserved. Their shared coordinate/rotation/
+volume geometry passed validation. The direct 218 and 440 matrices reproduce
+the old central 20 layers byte for byte; the cross response differs only at
+about 3.5e-8 relative L2. The four calibration groups each accumulated 1e9
+primaries. The new 440 `Sensi_d` has independent absolute closure ratio
+1.002033 and spatial CV 0.148924; this is not an all-region acceptance result.
 
-## Current handoff: FOV120 and the completed 60-mm baseline
+Noiseless and Poisson Contrast GenProj closed loops were carried to 10000
+iterations. Noiseless rod recovery improves beyond 1000 steps, showing the
+former iteration count was insufficient to judge resolution. The Poisson
+10000-step images amplify spatial noise sharply (weighted image errors about
+188% for 440 and 210% for corrected 218), even though total density integrals
+stay near unity. The full-grid truth fixed-point check reaches ~1e-6 maximum
+relative update and therefore establishes numerical consistency, not stability
+under noise. The 162-position single-view Geant4 point scan and model comparison
+are complete; a 20-view point-imaging/FWHM study is not.
 
-Read [FOV120 experiment status](FOV120_EXPERIMENT_STATUS.md) for the detailed
-code/data inventory, verified results, remote job IDs and remaining acceptance
-steps. [Remote compute access](REMOTE_COMPUTE_ACCESS.md) is the reusable safe
-connection guide for scxi717, maty and 65114; it contains no credentials.
-[Experiment commands](../experiments/FOV120/README.md) cover reproducible runs.
+Geant4 Uniform and Contrast 1e9 simulations were collected with 20 views,
+200 unique workers/seeds and 1e9 actual primaries per dataset. All 46 deployed
+files passed size/SHA checks on the scxi717 project. The full-grid, full-event
+4-node x 2-GPU six-output 10-step Contrast job 1626513 passed, with 194835
+accepted Compton events and peak reserved memory ~9.97 GiB/GPU. It superseded
+pending 1626402 and failed 1626482; the latter revealed a missing remote
+`distributed/python` dependency, since fixed and checked at startup.
+The 10000-step Contrast job 1626525 (10 minutes) and Uniform job 1626560
+(13m26s) both completed with exit 0, 200 saved frames per six-output channel.
+Local final images, six selected frames and reports are under
+`experiments/FOV120/generated/Results/{Contrast_1e9_1626525,Uniform_1e9_1626560}/`;
+complete histories remain on scxi717. Generated files are intentionally
+Git-ignored. No smoothing, cropping or truth-fit scaling was used in reports.
 
-The original 60-mm 1e10/8-GPU/1000-iteration reconstruction is complete, with
-1,852,124 accepted Compton events and six final outputs. Radial bias remains;
-completed reconstruction is not quantitative acceptance. All FOV120 raw response
-matrices and raw polar Factors are now complete and validated. The four 1e8
-pilot groups and extension array 15384175 are complete. Collection job 15384216
-passed: four full 1e9 datasets, 400 workers and 400 distinct seeds. The archive
-was hash-verified locally and on 65114. Production calibrated Factors are now
-installed on 65114, raw Factors preserved; layer relative SE is 0.0420–0.21694%.
-The new Sensi_d and independent closure completed on 65114 GPU 0 (exit 0):
-281816 accepted calibration events, absolute mean 2.818160e-4; independent
-closure volume-weighted ratio 1.002033 and CV 0.148924%. Sensi_d and hashed
-provenance are installed in production Factors. Contrast 1e9
-truth and noiseless/Poisson projections exist; reconstruction is still pending.
-See the status page for coefficients, archive hash and artifact locations.
+For Contrast, weighted relative L2 at 1000→10000 iterations is
+0.450→1.884 (440 single), 1.983→7.965 (440 Compton), 0.481→2.145
+(440 JSCC), and 0.406→2.136 (218 corrected). For Uniform, the corresponding
+figures are 0.198→2.119, 3.177→9.284, 0.411→2.634, and 0.234→2.276.
+The 1e9 long-iteration images are spatially blotchy despite near-unit integrated
+counts. This does not isolate Poisson noise from response mismatch; high-count
+comparison is needed. The nominal 120-mm grid is not yet an accepted useful FOV.
 
-NCCL smoke 1624002 passed on two RTX5090 GPUs, including serial-reference
-single/Compton/joint MLEM equivalence. Original job 1623854 failed before
-numerical execution and was superseded. Two-node NCCL test 1625684 also passed (36 seconds, one GPU on each of
-two distinct nodes); full-grid memory tests and actual FOV120 images remain pending.
-Noiseless/Poisson closed loops completed 1000 iterations each (~469 seconds).
-Noiseless projection residuals are 0.207%/0.236% (218/440), but volume-weighted
-image errors remain 36.6%/42.0%; spatial quality is not accepted. All histories
-are verified. The production Factors archive is deployed to scxi717; remote SHA256, full
-geometry/matrix scan and Sensi_d provenance verification all passed. A Python
-3.9 file_digest incompatibility was fixed with streaming SHA256 and a tamper test. The earlier
-65114 SSH failures resolved after download; do not relaunch completed loops. Reconstruction work belongs inside the
-user-specified main project, under its `experiments/FOV120_20260924/` workspace.
-See the status document for full paths and refresh before resubmitting tasks.
+Uniform 1e9 axial analysis uses raw polar density, cell-volume weighting and
+r<=135 mm. Direct 440 sensitivity in the bottom/top z layer is ~93.5% of the
+central value; Compton sensitivity ~96.8%/~96.4%. At 1000 steps the 440
+single-photon center/edge CV is 0.163/0.165, at 10000 it is 2.109/2.104.
+The top z=58.5-mm layer has 1.42 mean recovery and 3.42 relative L2 at 10000,
+but interior layers also spike. Edge loss exists; it is not the only driver.
+See `AxialEdgeReport/` for every layer, region metrics, and the figure.
 
-Full-grid noiseless truth fixed-point checks now pass (~1e-6 maximum voxel change)
-using `experiments/FOV120/diagnose_closedloop.py`. Fractional-volume rod CRC at
-1000 iterations is only 1.6–7.4%; spatial quality remains unresolved. Maty smoke
-15385867 precedes dependent single-view point-response array 15385868 (162
-workers x 1e7, 40 concurrent). Do not confuse it with 20-view PointImaging.
+## Physics and channel semantics that must remain consistent
 
-Latest: point scan 15385868 is fully complete, 162 workers / 162 unique seeds /
-1.62e9 photons. Verified full counts and MC/model comparisons are local in
-`generated/FullData/point_*all*`; snapshot1 remains historical. A 14-figure full-height HTML report is
-`generated/ClosedLoop_VisualReport/index.html`, with CSV metrics and source hashes.
-Uniform/Contrast 1e9 jobs 15386226/15386227 are running, 20 workers concurrent
-each. Afterok collector 15386284 waits for both arrays to complete successfully.
-The maty launcher now maps zero-based array indices via a validated offset
-to work around MaxArraySize=1001; physical tasks/seeds were not regenerated.
+The actual maty `Geant4Sim/Geant4Code` applies a single Gaussian energy draw
+per crystal with deposited energy at event end: 13% relative FWHM at 511 keV,
+scaled as 1/sqrt(E). This gives 19.903% at 218 keV and 14.010% at 440 keV;
+their +/-half-FWHM windows are 196.305–239.695 and 409.179–470.821 keV.
+The broadened values determine CntStat and are written to List. Reconstruction
+sets `input_energies_already_smeared=True`, so it does not draw a second noise
+sample; the same resolution still sets the Compton cone-angle uncertainty.
+Single-photon Factors integrate Gaussian energy-window acceptance analytically;
+440-to-218 uses the 440-source forced-218-window Scatter matrix.
 
-User requested at least 10000 iterations before judging hot-rod recovery.
-Both full closed loops are now running on 65114 GPUs 0/1, driver PIDs
-3324077/3324078, under generated/ClosedLoop10000 (old 1000-step runs retained).
-Postprocessor 3324594 checks exit records then produces full-height diagnostics
-and ClosedLoop10000_VisualReport.tar.gz. Read the status page for logs/markers.
-1000-step low CRC is an early-iteration observation, not a final capability limit.
-The new corrected 218 channel uses the new 10000-step 440 cross-talk estimate.
+`Image_440_SinglePlusCompton` is a true JSCC MLEM update of one 440 image:
+backprojections from single and Compton data are combined inside each iteration
+and divided by `Sensi_s + Sensi_d`. It is not a sum of separately reconstructed
+440 images. Only `Image_440SinglePlus218Single` and
+`Image_440SingleComptonPlus218Single` are post-reconstruction sums with the
+218 cross-talk-corrected image, and they are gamma-channel composites, not
+parent-225Ac activity maps. The 218 update uses a fixed predicted 440-to-218
+additive Poisson background. In the two 1e9 reconstructions, accepted Compton
+counts are 194835/194261 versus 440 single-photon counts 2040723/2041123:
+Compton is ~9.5% of the 440 singles, ~8.7% of those two observation counts
+combined. Count fraction is not a JSCC information weight. CntStat and List
+may include correlated observations from the same primary.
 
-Latest evening check: both 10000-iteration reconstructions and reports finished
-(~62.6 min each). Report downloaded to generated/ClosedLoop10000_VisualReport.
-Noiseless CRC improves to 11.1–50.3% (218), 8.1–26.6% (440), but Poisson image
-errors rise to 210%/188%. Uniform/Contrast 1e9 arrays and collector 15386284 also
-completed; both 20-view collections are ready on maty for scxi717 deployment.
+## Current jobs and remaining acceptance work
 
-This is the primary starting document for a new developer or a new
-conversation. Large Factors, Geant4 output, List, CntStat, and Results are
-ignored by Git, so the required semantics and evidence are recorded here.
+On maty, Uniform 1e10 array 15388423 (indices 762–961) and Contrast 1e10
+array 15388444 (1162–1361) each comprise 200 workers x 5e7 primaries over
+20 views. At the 22:45 snapshot each had 20 running workers; afterok collector
+15388466 was pending. Do not treat submission as complete simulation. Once
+both collections pass PrimaryCount, seeds, hashes and view coverage, transfer
+them to the scxi717 project, measure accepted event count, and preflight GPU
+memory before 10000-step six-output high-count reconstruction. This comparison
+is needed to distinguish finite-count noise from model discrepancy. Full XCAT
+production imaging and old 60-mm data reconstructed on both support grids are
+still pending. XCAT's 120-mm crop retains ~81.91% of the full kidney label;
+both axial crop boundaries touch kidneys, while the lesion ROI remains inside.
+The scientific acceptance must report center/middle/edge metrics, point-source
+localization and resolution, background uniformity and lesion/organ recovery.
+
+The rest of this document retains earlier design decisions, commands and
+snapshot history. Any older statement that a now-completed job is running or
+that no FOV120 image exists is a historical statement; use this section and
+Slurm completion records for present status.
 
 ## Directory map
 
@@ -286,20 +306,20 @@ in `distributed/dual_energy_compton_python/` and the launchers in
 `distributed/dual_energy_compton_slurm/`. The distributed implementation keeps
 the local six-output mathematics unchanged: detector bins and List lines are
 partitioned, rank-local backprojections are combined with NCCL `all_reduce`,
-and only rank 0 writes the final images and histories. The supplied production
-template is 4 nodes x 8 GPUs for the installed Geant4 1e10 data. Always run
-`preflight.py`, then the 1-node x 2-GPU smoke job, before the production job.
+and only rank 0 writes the final images and histories. The older supplied
+4-node x 8-GPU template belongs to the earlier high-count configuration.
+FOV120 1e9 actually ran on 4 nodes x 2 GPUs. Recheck the available topology,
+accepted events and measured GPU memory before choosing FOV120 1e10 ranks.
 
 ## Next tasks
 
-The old request to run the 60-mm high-count case is fulfilled. For the active
-120-mm extension follow the ordered gates in
-[FOV120 experiment status, section 6](FOV120_EXPERIMENT_STATUS.md#6-接续顺序与验收门槛):
-finish raw matrices, collect/extend independent calibration and sensitivity,
-validate GenProj and Geant4 spatial response, then run 1e9/1e10 six-output
-reconstruction with full-height evaluation. Preserve the shared K*B physics
-and original source/volume conventions. Investigate existing radial bias and
-CntStat/List overlap before interpreting combined gamma images quantitatively.
+The old 60-mm high-count case and FOV120 1e9 Uniform/Contrast six-output cases
+are fulfilled. The active gate is completion and verified collection of the two
+FOV120 1e10 Geant4 arrays, followed by high-count reconstruction and full-height
+metrics. The independent 20-view point-imaging study, original-data support-grid
+regression and XCAT production imaging remain. Preserve the frozen K*B response
+and source/volume conventions; quantify edge performance and CntStat/List
+correlation before interpreting images as quantitative activity.
 
 ## Do-not-mix table
 

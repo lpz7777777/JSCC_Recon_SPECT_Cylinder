@@ -2,7 +2,10 @@
 
 [English](#english) | [中文](#中文)
 
-> **2026-09-24 实验交接：** 60 mm 高计数六路重建已完成，FOV120 正在矩阵/校准试验阶段，尚无正式成像结果。
+> **2026-09-25 22:45 实验交接：** 60 mm 基线已完成；FOV120 的三套矩阵、
+> 独立校准/灵敏度、1e9 Uniform/Contrast Geant4 模拟和两套 10000 次六路重建均已完成。
+> 1e10 Uniform/Contrast 模拟在 maty 运行，收集与高计数重建尚待完成。
+> 当前 1e9 长迭代出现显著空间噪声，120 mm 有效 FOV 尚未通过科学验收。
 > 详细目录、代码、结果与作业状态见 [FOV120 实验进度](docs/FOV120_EXPERIMENT_STATUS.md)；
 > 可复现命令见 [实验手册](experiments/FOV120/README.md)；跨工程连接三处资源见
 > [安全连接说明](docs/REMOTE_COMPUTE_ACCESS.md)。密码、私钥、加密凭据与大数据均不入 Git。

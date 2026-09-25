@@ -3,23 +3,44 @@
 Detailed Chinese inventory and progress: [experiment status](../../docs/FOV120_EXPERIMENT_STATUS.md).
 Cross-project authentication and resource usage: [safe access](../../docs/REMOTE_COMPUTE_ACCESS.md).
 
-## Latest (2026-09-25)
+## Current execution snapshot (2026-09-25 22:45 China time)
 
-All matrices and full four 1e9 calibration/sensitivity collections are complete.
-Production calibrated Factors are installed on 65114 with raw responses retained.
-Full data and calibration report are locally in `generated/FullData/`.
-Contrast 1e9 truth and noiseless/Poisson projections have been generated on 65114;
-new Sensi_d and independent closure also completed (ratio 1.002033, CV 0.148924%).
-Sensi_d plus provenance are installed in production Factors. Closed-loop reconstruction,
-scxi717 deployment has passed full hash/geometry checks; full-event checks and
-phantom imaging remain pending.
-Two-node NCCL smoke 1625684 passed; `paracloud_multinode_smoke.sh` reproduces it
-with `JSCC_REPO_ROOT` set to the isolated remote code root. Closed loops completed
-1000 iterations each; count closure is good but spatial truth errors remain
-substantial. Check the status page for metrics and point-response jobs 15385867/15385868.
-See the linked status page for verified hashes, coefficients and subsequent updates.
+The three calibrated 40-layer Factors, raw response copies, four 1e9
+calibration/sensitivity collections, independent `Sensi_d` closure, noiseless
+and Poisson 10000-step closed loops, and 162 single-view point responses are
+complete. Independent Uniform and Contrast Geant4 1e9 data (each 200 workers,
+20 views, 1e9 primaries) were hash-verified and deployed to scxi717.
+
+Two real-data full-grid six-output 10000-iteration jobs are complete:
+Contrast **1626525** and Uniform **1626560**, each 4 nodes x 2 GPUs,
+200 snapshots/channel at step 50. Results under
+`generated/Results/Contrast_1e9_1626525/` and
+`generated/Results/Uniform_1e9_1626560/` have local selected-frame visual
+reports. Complete 200-frame arrays remain on scxi717. Contrast/Uniform
+accepted 194835/194261 Compton events; 440 CntStat recorded
+2040723/2041123 single-photon counts. The true 440 `SinglePlusCompton` output
+uses joint JSCC MLEM; the two `Plus218Single` outputs are image sums.
+
+At 1e9, 10000 iterations amplify background noise strongly. For independent
+Uniform data the 440 single-photon weighted relative image error is 0.198 at
+1000 steps and 2.119 at 10000. `evaluate_axial_uniform.py` records the layer
+profile: outermost direct sensitivity is ~93.5% of center, but long-iteration
+spikes also occur in interior layers. Effective FOV has not passed scientific
+acceptance. Reports are unfiltered, uncropped and unscaled to truth.
+
+On maty, Uniform/Contrast 1e10 arrays **15388423/15388444** each have 200
+workers x 5e7 primaries; at this snapshot 20 workers in each were RUNNING.
+Collector **15388466** has `afterok` dependencies on both arrays. Their
+collections and high-count images are not yet complete. Next: verify source
+counts, seeds and hashes; transfer data; preflight actual accepted events and
+GPU memory; then run high-count six-output reconstruction. XCAT production and
+old-60-mm-on-both-grids regression remain pending. Source facts and job history:
+[experiment status](../../docs/FOV120_EXPERIMENT_STATUS.md).
 
 ## Historical: calibration extension (2026-09-24 evening)
+
+The running/pending wording in this section records the state at that time;
+the current execution snapshot above supersedes it.
 
 All three raw matrices and raw polar Factors are complete and validated.
 The four pilot groups have been collected with worker/output hash checks,
@@ -64,7 +85,7 @@ original convention.
 under `generated/` (ignored by Git). Original Factors and 60-mm data are not
 replaced. Existing XCAT or task manifests cannot be overwritten by these tools.
 
-## Verified locally, 2026-09-24
+## Historical verification snapshot, 2026-09-24 (superseded above)
 
 - Three 51x51x40 matrix parameter sets generated successfully with MATLAB R2022b.
 - Analytic 20/40-layer Factors conversion passed: interpolation, exact cell
@@ -305,8 +326,10 @@ FileStore helper avoids the Windows torchrun/libuv launcher limitation.
 
 For full production use `reconstruct.sh`: set `FOV120_DATASET`,
 `FOV120_COUNT_LEVEL`, `FOV120_ACCEPTED_EVENTS` (estimated from the new pilot),
-and `FOV120_GPU_GIB` (actual GPU capacity). The default is 4x8 GPUs, 1000 MLEM,
-save every 50 iterations. Preflight reserves 20% device memory plus a 4-GiB
+and `FOV120_GPU_GIB` (actual GPU capacity). The current launcher defaults to 4 nodes x 2 GPUs, 10000 MLEM iterations and
+saves every 50. The `#SBATCH` GPU request and `FOV120_GPUS_PER_NODE` must agree.
+These are 1e9-tested scheduling settings; choose 1e10 ranks from measured
+event count and per-rank peak memory. Preflight reserves 20% device memory plus a 4-GiB
 workspace allowance; verify actual peaks in the smoke job. Each rank also
 loads about 6 GiB of matrix host storage before copies/framework overhead.
 The script inherits the existing cluster's module/partition defaults; adapt
@@ -403,12 +426,13 @@ so comparison to the old run changes both background estimate and iteration coun
 `reconstruct.sh` 默认 `FOV120_ITERATIONS=10000`、`FOV120_SAVE_STEP=50`。
 短程可设为 10 / 5，禁止通过修改冻结 config.json 来覆盖运行次数。
 `run_manifest.json` 新增 `resources_by_rank`，记录各 GPU 峰值 allocated/reserved bytes
-及设备容量；正式运行前核验至少 20% 显存余量。短程作业 1626402 使用完整网格与全事件，
+及设备容量；正式运行前核验至少 20% 显存余量。实际通过的短程作业 1626513 使用完整网格与全事件，
 不是降低采样率的替代成像。进度及输入清单见实验状态文档。
 
 碎片资源调度：启动脚本默认 4 节点 × 2 GPU，共 8 GPU，每节点 4 CPU。
 改变拓扑时同步设置 `sbatch -N <nodes> --gres=gpu:<gpus>` 和
-`FOV120_GPUS_PER_NODE=<gpus>`。实际短程替代作业 1626482 已启动；原 1626402 已取消。
+`FOV120_GPUS_PER_NODE=<gpus>`。原 1626402 已取消，1626482 因远端缺失 `distributed/python` 而失败；
+依赖补齐后 1626513 短程通过，正式 1626525/1626560 均完成。
 正式 1e10 的 GPU 数仍按实测事件数和显存预检决定，不能直接沿用 1e9 的八卡预算。
 
 ### 联合通道与边缘诊断
@@ -417,3 +441,18 @@ so comparison to the old run changes both background estimate and iteration coun
 `Image_440SingleComptonPlus218Single` 是最终 440 联合图与 218 校正图的逐体素和。
 轴向诊断脚本 `evaluate_axial_uniform.py` 使用独立均匀源真值、r≤135 mm、原始体积权重，
 输出 40 层恢复率、CV、相对 L2 和图。结果见状态文档。
+
+### 本次实际 Geant4 结果与能量模型复核
+
+`visualize_geant4_result.py` 用明确的 `--result` 与 `--truth` 生成六路全高对照；
+`evaluate_axial_uniform.py` 用 `r≤135 mm`、40 层原始极坐标密度及体积权重绘制恢复率、
+CV、相对 L2。完整每 50 次历史在 scxi717，本地 `.selected` 仅按顺序保存
+100/500/1000/2000/5000/10000 六帧，不可当作连续 200 帧读取。
+
+Geant4 `EventAction.cc` 在每个事件结束时为各晶体沉积能量加一次高斯噪声，
+基准 511 keV 时相对 FWHM 13%，按 `0.13 sqrt(511/E_keV)` 外推。
+218/440 分别为 19.903%/14.010%，能窗 196.305–239.695 / 409.179–470.821 keV。
+CntStat 和 List 已使用展宽后的能量。重建设置 `input_energies_already_smeared=True`；
+仍用同一分辨率计算 Compton 圆锥角不确定度，但不再对 List 随机展宽。
+单光子矩阵解析积分 Gaussian 能窗概率，440→218 为强制 218 能窗散射矩阵。
+`E1+E2>350 keV` 是重建 Compton 筛选条件。
