@@ -26,12 +26,17 @@ run **1627958**. The Uniform pilot depends on the Contrast pilot; each formal
 run requires its own pilot's successful exit and six finite images with GPU
 peak <=80%. At this snapshot the first pilot is PENDING/Priority, so no 1e10
 reconstruction image exists yet. `validate_recon_pilot.py` implements the gate.
+`squeue --start` estimated the first pilot's start as 2026-09-27 08:50 China
+time; this is a scheduler estimate, not a guaranteed completion time.
 
 On maty, XCAT 1e9 array **15405235** (200 workers, offset 1362, max 20
 concurrent) has started; dependent collector **15405256** will verify all
 workers before making CntStat/List files. XCAT 1e10 is still awaiting the 1e9
 validation. Scientific FOV acceptance requires completed images and regional
 quantitative evaluation.
+The local `generated/Truth_XCAT_1e10.npz` is the existing q16 hybrid-source
+1e9 truth scaled exactly by 10 in both photon-density channels, with unchanged
+organ masks. Its JSON sidecar records the source file SHA256 and scale factor.
 
 ### Previous snapshot (2026-09-25 22:45 China time)
 
