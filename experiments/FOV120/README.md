@@ -3,7 +3,37 @@
 Detailed Chinese inventory and progress: [experiment status](../../docs/FOV120_EXPERIMENT_STATUS.md).
 Cross-project authentication and resource usage: [safe access](../../docs/REMOTE_COMPUTE_ACCESS.md).
 
-## Current execution snapshot (2026-09-25 22:45 China time)
+## Current execution snapshot (2026-09-26 China time)
+
+Both independent 1e10 Geant4 arrays and their dependent collector are complete:
+Uniform **15388423**, Contrast **15388444**, collector **15388466**, all with
+successful exit status. Each dataset has 1e10 actual primary photons, 200
+workers, and 20 views; all 400 worker seeds across the two datasets are
+distinct. Uniform and Contrast emitted respectively 3,056,286,066 /
+6,943,713,934 and 3,016,203,789 / 6,983,796,211 primary photons in the
+218/440 channels. The List CSV totals are 621,187,316 and 618,282,860 bytes.
+`package_collected_qc.py` produced a 583,102,144-byte archive with a SHA256
+manifest for all 46 CntStat/List/collection files; the local archive hash
+matches the maty archive hash. `deploy_collected_qc.py --level 1e10` transferred
+it to scxi717 and verified all 46 extracted files (1,242,512,937 bytes). Both
+24-rank preflights passed with 2.2 million estimated accepted Compton events:
+23.75 GiB/GPU estimated peak, below the 80% limit of the 31.35-GiB RTX 5090.
+Contrast 218/440 CntStat sums are 47,561,392/20,411,888; Uniform sums are
+48,131,568/20,419,116. 8 nodes x 3 GPUs were selected from measured resource
+availability. Slurm job chain: Contrast 10-step pilot **1627950**, gated
+10000-step run **1627955**; Uniform 10-step pilot **1627956**, gated 10000-step
+run **1627958**. The Uniform pilot depends on the Contrast pilot; each formal
+run requires its own pilot's successful exit and six finite images with GPU
+peak <=80%. At this snapshot the first pilot is PENDING/Priority, so no 1e10
+reconstruction image exists yet. `validate_recon_pilot.py` implements the gate.
+
+On maty, XCAT 1e9 array **15405235** (200 workers, offset 1362, max 20
+concurrent) has started; dependent collector **15405256** will verify all
+workers before making CntStat/List files. XCAT 1e10 is still awaiting the 1e9
+validation. Scientific FOV acceptance requires completed images and regional
+quantitative evaluation.
+
+### Previous snapshot (2026-09-25 22:45 China time)
 
 The three calibrated 40-layer Factors, raw response copies, four 1e9
 calibration/sensitivity collections, independent `Sensi_d` closure, noiseless
@@ -28,7 +58,7 @@ profile: outermost direct sensitivity is ~93.5% of center, but long-iteration
 spikes also occur in interior layers. Effective FOV has not passed scientific
 acceptance. Reports are unfiltered, uncropped and unscaled to truth.
 
-On maty, Uniform/Contrast 1e10 arrays **15388423/15388444** each have 200
+At that time, on maty, Uniform/Contrast 1e10 arrays **15388423/15388444** each had 200
 workers x 5e7 primaries; at this snapshot 20 workers in each were RUNNING.
 Collector **15388466** has `afterok` dependencies on both arrays. Their
 collections and high-count images are not yet complete. Next: verify source

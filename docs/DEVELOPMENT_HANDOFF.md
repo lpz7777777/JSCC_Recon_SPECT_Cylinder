@@ -1,11 +1,35 @@
 # JSCC Reconstruction Development Handoff
 
-Current consolidated snapshot: 2026-09-25 22:45 China time. For the latest
+Current consolidated snapshot: 2026-09-26 China time. For the latest
 measured job state, check Slurm; this is a dated handoff, not a live dashboard.
 The detailed evidence and per-job history live in
 [FOV120 experiment status](FOV120_EXPERIMENT_STATUS.md). Reproducible commands are in
 [the experiment README](../experiments/FOV120/README.md), and safe connections
 are documented in [remote compute access](REMOTE_COMPUTE_ACCESS.md).
+
+## FOV120 high-count Geant4 update, 2026-09-26
+
+The Uniform/Contrast 1e10 Geant4 arrays 15388423/15388444 and dependent
+collector 15388466 completed successfully on maty. Each independent phantom
+has 1e10 actual primaries, 200 workers, and all 20 views; the two sets have
+400 distinct worker seeds. The verified local transfer archive contains 46
+CntStat/List/collection files and is 583,102,144 bytes, SHA256
+`616102933bcdc74afaa7cfe5e5c90c9c844568c3bcc789dde1bf7709474871eb`.
+`experiments/FOV120/package_collected_qc.py` creates the file-hash manifest
+on maty; `deploy_collected_qc.py` transferred it with the DPAPI credential,
+checked the remote archive hash, and verified all 46 extracted files
+(1,242,512,937 bytes). Reconstruction
+on scxi717 must use the nested isolated root
+`/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/FOV120_20260924`.
+Both 24-GPU preflights passed with a conservative 2.2-million-event estimate,
+23.75 GiB/GPU. The 8-node x 3-GPU queue chain is Contrast pilot 1627950,
+formal 10000 steps 1627955; Uniform pilot 1627956, formal 1627958. Formal jobs
+depend on successful short jobs and `validate_recon_pilot.py` checks their six
+images and <=80% GPU memory before reconstruction. At this update the first
+pilot is queued, so no 1e10 image is claimed. On maty, XCAT 1e9 array 15405235
+(200 workers, max 20 concurrent) has started, with dependent collector 15405256;
+XCAT 1e10 awaits 1e9 validation. Earlier pending-array statements below are
+historical snapshots.
 
 ## What has actually been completed
 

@@ -35,6 +35,11 @@ save_step=${FOV120_SAVE_STEP:-50}
 common=(--experiment-config experiments/FOV120/config.json --factors-dir "$base/Factors"
         --cntstat-dir "$base/CntStat" --list-dir "$base/List"
         --data-file-name "$dataset" --count-level "$count")
+if [[ -n ${FOV120_REQUIRE_PILOT_JOB:-} ]]; then
+  python experiments/FOV120/validate_recon_pilot.py \
+    --result "$base/Results/${dataset}_${count}_${FOV120_REQUIRE_PILOT_JOB}" \
+    --dataset "$dataset" --level "$count" --world-size "$((SLURM_NNODES*gpus))"
+fi
 python distributed/dual_energy_compton_python/preflight.py "${common[@]}" \
   --world-size "$((SLURM_NNODES*gpus))" --estimated-accepted-events "$FOV120_ACCEPTED_EVENTS" \
   --gpu-memory-gib "$FOV120_GPU_GIB"
