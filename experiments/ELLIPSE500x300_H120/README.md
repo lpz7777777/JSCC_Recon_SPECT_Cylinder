@@ -33,8 +33,11 @@
   报 `std::bad_array_new_length`；原进程 124203 已失败，自动转换也因散射输出缺失
   停止。现使用 `run_scatter_slabs.py` 的四个 10 层切片，逐片保持真实 z 坐标，
   再按晶体顺序拼接完整响应。首片 A218/slab00 在 GPU0 运行；
-  剩余 11 片均已准备，`run_remaining_scatter_slabs.sh` 已在 65114 后台等待首片
-  成功后顺序执行；全部切片完成后才转换并扫描三路 Factors。
+  剩余 11 片均已准备。65114 的 GPU1 空闲后，已把
+  `run_remaining_scatter_slabs.sh` 调整为两条互不重叠的队列：GPU0 在首片之后
+  顺序计算其余 A218/A440 分片，GPU1 同时计算四片 C440to218。新控制器
+  `run_parallel_scatter_slabs.sh` 正在后台执行，日志为 `scatter_parallel_pipeline.log`
+  和 `scatter_cross_lane.log`；全部切片成功后才拼接、转换并扫描三路 Factors。
   三套物理参数的直接/串窗标志也已核对：218、440 直接通道启用合并矩阵，
   440→218 禁用直接峰，仅写散射矩阵，低能窗约 196.31–239.69 keV。
 - maty 上的独立 Geant4 编译完成。椭圆均匀源、圆柱距离对照及热柱混合源的
