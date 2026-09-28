@@ -70,6 +70,18 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, ~, c
     end
     r_value = 6:6:150;              % 25 个半径
     theta_num_value = 20:20:80;     % 半径依赖的角度数（分 4 段，每段 6 半径）
+    if isfield(grid_options, 'radial_centers_mm')
+        r_value = double(grid_options.radial_centers_mm(:).');
+    end
+    if isfield(grid_options, 'theta_per_ring')
+        theta_per_ring = double(grid_options.theta_per_ring(:).');
+        assert(numel(theta_per_ring) == numel(r_value) && ...
+            all(mod(theta_per_ring, 20) == 0), 'Invalid angular ring counts');
+    else
+        theta_per_ring = arrayfun(@(i) ...
+            theta_num_value(ceil(i / (length(r_value)/length(theta_num_value)))), ...
+            1:numel(r_value));
+    end
     rotate_num = 20;                % 旋转数
 
     %% ---- 读 Params_Detector，确定闪烁晶体过滤掩码 ----
@@ -163,7 +175,7 @@ function gen_factors(energy_keV, sysmat_file, params_detector_file, outdir, ~, c
     theta_per_r = zeros(1, length(r_value));
     for id_r = 1:length(r_value)
         r = r_value(id_r);
-        theta_num = theta_num_value(ceil(id_r / (length(r_value)/length(theta_num_value))));
+        theta_num = theta_per_ring(id_r);
         theta_per_r(id_r) = theta_num;
         for id_theta = 1:theta_num
             theta = (id_theta - 1) * 360 / theta_num;

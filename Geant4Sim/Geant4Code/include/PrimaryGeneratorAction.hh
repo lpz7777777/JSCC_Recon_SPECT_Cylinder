@@ -64,6 +64,10 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     void ClearXcatSources();
     void AddXcatSource(const G4String& specification);
     void SetXcatAngle(G4double angleDegrees);
+    void SetSourceCenterY(G4double centerYmm);
+    void ClearEllipseSources();
+    void AddEllipseSource(const G4String& specification);
+    void AddEllipseRod(const G4String& specification);
 
   private:
     G4GeneralParticleSource* fParticleGun;          // pointer a to G4 service class
@@ -79,6 +83,17 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4double fXcatCos = 1;
     G4double fXcatSin = 0;
     G4bool fUseXcat = false;
+    struct EllipseSource {
+      G4int energyKeV;
+      G4double semiX, semiY, halfZ, intensity;
+      G4double x, y, z;
+      G4bool isRod;
+    };
+    std::vector<EllipseSource> fEllipseSources;
+    std::vector<G4double> fEllipseCumulative;
+    G4double fEllipseTotal = 0;
+    G4bool fUseEllipse = false;
+    G4double fSourceCenterY = -245;
     G4String particleName;                          // Name of Particle
     G4double energy;                                // Energy of Particle
     G4double radiu;                                 // Radiu of the circle source

@@ -217,6 +217,10 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_option
     pixel_num = size(coor, 1);
 
     expected_points_per_layer = 1280 + double(grid_options.include_center_point);
+    if isfield(grid_options, 'theta_per_ring')
+        expected_points_per_layer = sum(grid_options.theta_per_ring) + ...
+            double(grid_options.include_center_point);
+    end
     z_axis = -28.5:3:28.5;
     if isfield(grid_options, 'z_axis'); z_axis = grid_options.z_axis; end
     expected_pixel_num = expected_points_per_layer * numel(z_axis);
@@ -237,7 +241,11 @@ function summary = validate_factor_dir(factor_dir, item, rotate_num, grid_option
 
     polar_info = dir(fullfile(factor_dir, 'SysMat_polar'));
     expected_polar_bytes = double(detector_num) * double(pixel_num) * 4;
-    expected_cart_bytes = double(detector_num) * 51 * 51 * numel(z_axis) * 4;
+    cartesian_xy_count = 51;
+    if isfield(grid_options, 'xy_axis')
+        cartesian_xy_count = numel(grid_options.xy_axis);
+    end
+    expected_cart_bytes = double(detector_num) * cartesian_xy_count^2 * numel(z_axis) * 4;
     if isempty(polar_info) || double(polar_info.bytes) ~= expected_polar_bytes
         error('run_gen_response_factors:BadPolarSize', ...
             '%s SysMat_polar has the wrong byte count.', factor_dir);
