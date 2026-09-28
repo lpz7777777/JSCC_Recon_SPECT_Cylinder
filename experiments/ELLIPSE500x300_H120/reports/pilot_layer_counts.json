@@ -1,0 +1,119 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "calibration_installed": false,
+  "responses": {
+    "A218": {
+      "energy_keV": 218,
+      "primary_counts": [
+        100000000,
+        0,
+        0
+      ],
+      "layers": [
+        {
+          "normal_distance_mm": 300,
+          "counts": 120751,
+          "measured_efficiency": 0.00120751,
+          "poisson_relative_se": 0.0028777603991773128
+        },
+        {
+          "normal_distance_mm": 330,
+          "counts": 107762,
+          "measured_efficiency": 0.00107762,
+          "poisson_relative_se": 0.0030462614773400735
+        },
+        {
+          "normal_distance_mm": 360,
+          "counts": 93797,
+          "measured_efficiency": 0.00093797,
+          "poisson_relative_se": 0.0032651679574986045
+        },
+        {
+          "normal_distance_mm": 390,
+          "counts": 360433,
+          "measured_efficiency": 0.00360433,
+          "poisson_relative_se": 0.0016656652551180293
+        }
+      ],
+      "meets_1_percent_statistical_gate": true
+    },
+    "A440": {
+      "energy_keV": 440,
+      "primary_counts": [
+        0,
+        100000000,
+        0
+      ],
+      "layers": [
+        {
+          "normal_distance_mm": 300,
+          "counts": 23959,
+          "measured_efficiency": 0.00023959,
+          "poisson_relative_se": 0.006460492940204097
+        },
+        {
+          "normal_distance_mm": 330,
+          "counts": 24518,
+          "measured_efficiency": 0.00024518,
+          "poisson_relative_se": 0.006386420048890297
+        },
+        {
+          "normal_distance_mm": 360,
+          "counts": 23700,
+          "measured_efficiency": 0.000237,
+          "poisson_relative_se": 0.006495698024616309
+        },
+        {
+          "normal_distance_mm": 390,
+          "counts": 112000,
+          "measured_efficiency": 0.00112,
+          "poisson_relative_se": 0.002988071523335984
+        }
+      ],
+      "meets_1_percent_statistical_gate": true
+    },
+    "C440to218": {
+      "energy_keV": 440,
+      "primary_counts": [
+        0,
+        100000000,
+        0
+      ],
+      "layers": [
+        {
+          "normal_distance_mm": 300,
+          "counts": 12254,
+          "measured_efficiency": 0.00012254,
+          "poisson_relative_se": 0.009033604275263361
+        },
+        {
+          "normal_distance_mm": 330,
+          "counts": 13581,
+          "measured_efficiency": 0.00013581,
+          "poisson_relative_se": 0.008580925380850467
+        },
+        {
+          "normal_distance_mm": 360,
+          "counts": 14363,
+          "measured_efficiency": 0.00014363,
+          "poisson_relative_se": 0.008344060027517263
+        },
+        {
+          "normal_distance_mm": 390,
+          "counts": 89547,
+          "measured_efficiency": 0.00089547,
+          "poisson_relative_se": 0.003341754023695345
+        }
+      ],
+      "meets_1_percent_statistical_gate": true
+    }
+  },
+  "input_sha256": {
+    "calibration_218_pilot.json": "2ccd35067ada8aa56d6f61c0f2256774f482cb74fb9a8b15830f38678163b312",
+    "calibration_440_pilot.json": "aef758dad004092a40aca5fd9d3f63148dca26241564c4e06633bb1f0e9373c7",
+    "CntStat_218_direct.csv": "a5da93b44c392d2fe31291360024034a44a0c712cb278819b779c6c3a52492e1",
+    "CntStat_440_cross.csv": "bef3c04e8b081bf6c6fddc52429e1aec080c15cb39eef8c02855a7665bb16fd5",
+    "CntStat_440_direct.csv": "2fee91a8d961583d4b3425d7ba551cd46456f90782b37836ed490d5d0dc8a109",
+    "Params_Detector.dat": "b3ab14e8764326e3ddf6abde5bb0c97e93dbcb0770234e528228251bae60cfaf"
+  }
+}

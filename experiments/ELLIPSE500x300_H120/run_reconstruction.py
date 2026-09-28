@@ -93,7 +93,7 @@ def load_matrix(root,name,pixels,detectors):
         raise ValueError(f"Uncalibrated factor: {folder}")
     if (folder/"SysMat_polar").stat().st_size!=pixels*detectors*4:
         raise ValueError(f"Factor size mismatch: {folder}")
-    return np.memmap(folder/"SysMat_polar",mode="r",dtype="<f4",
+    return np.memmap(folder/"SysMat_polar",mode="c",dtype="<f4",
                      shape=(pixels,detectors))
 
 
@@ -268,6 +268,8 @@ def main():
     torch.cuda.empty_cache() if device.type=="cuda" else None
     accepted_tensor=torch.tensor([accepted],dtype=torch.int64,device=device)
     dist.all_reduce(accepted_tensor,op=dist.ReduceOp.SUM)
+    if int(accepted_tensor.item())<=0:
+        raise ValueError("No accepted 440-keV Compton events")
     full_sensi=np.fromfile(sensi_path,dtype="<f4")
     if len(full_sensi)!=geometry.full_count or not np.isfinite(full_sensi).all():
         raise ValueError("Invalid full Compton sensitivity")
