@@ -1,0 +1,104 @@
+{
+  "A218": [
+    {
+      "layer_mm": 300.0,
+      "counts": 1208809,
+      "model_efficiency": 0.0013808301194918773,
+      "observed_efficiency": 0.001208809,
+      "scale": 0.8754219530240416,
+      "poisson_relative_se": 0.0009095386476129089
+    },
+    {
+      "layer_mm": 330.0,
+      "counts": 1077629,
+      "model_efficiency": 0.0012307075629933023,
+      "observed_efficiency": 0.001077629,
+      "scale": 0.8756174353710904,
+      "poisson_relative_se": 0.0009633084390409117
+    },
+    {
+      "layer_mm": 360.0,
+      "counts": 941689,
+      "model_efficiency": 0.0010765928023490374,
+      "observed_efficiency": 0.000941689,
+      "scale": 0.8746937541708543,
+      "poisson_relative_se": 0.0010304958598921431
+    },
+    {
+      "layer_mm": 390.0,
+      "counts": 3614763,
+      "model_efficiency": 0.004194605126124667,
+      "observed_efficiency": 0.003614763,
+      "scale": 0.8617647886535689,
+      "poisson_relative_se": 0.0005259689246258101
+    }
+  ],
+  "A440": [
+    {
+      "layer_mm": 300.0,
+      "counts": 238704,
+      "model_efficiency": 0.0002695720788157128,
+      "observed_efficiency": 0.000238704,
+      "scale": 0.8854922996798378,
+      "poisson_relative_se": 0.002046775226137165
+    },
+    {
+      "layer_mm": 330.0,
+      "counts": 244345,
+      "model_efficiency": 0.0002746187049703061,
+      "observed_efficiency": 0.000244345,
+      "scale": 0.8897609506476277,
+      "poisson_relative_se": 0.002023011128104012
+    },
+    {
+      "layer_mm": 360.0,
+      "counts": 237434,
+      "model_efficiency": 0.00026692797737947946,
+      "observed_efficiency": 0.000237434,
+      "scale": 0.8895058597115535,
+      "poisson_relative_se": 0.002052241877591988
+    },
+    {
+      "layer_mm": 390.0,
+      "counts": 1116451,
+      "model_efficiency": 0.0012834121863873986,
+      "observed_efficiency": 0.001116451,
+      "scale": 0.8699083675858122,
+      "poisson_relative_se": 0.0009464118435358176
+    }
+  ],
+  "C440to218": [
+    {
+      "layer_mm": 300.0,
+      "counts": 121840,
+      "model_efficiency": 0.0001067354678761266,
+      "observed_efficiency": 0.00012184,
+      "scale": 1.1415137107133233,
+      "poisson_relative_se": 0.002864870891772715
+    },
+    {
+      "layer_mm": 330.0,
+      "counts": 135716,
+      "model_efficiency": 0.00011449123075933456,
+      "observed_efficiency": 0.000135716,
+      "scale": 1.1853833616766756,
+      "poisson_relative_se": 0.0027144664262088417
+    },
+    {
+      "layer_mm": 360.0,
+      "counts": 143516,
+      "model_efficiency": 0.0001179220695113736,
+      "observed_efficiency": 0.000143516,
+      "scale": 1.217041055967542,
+      "poisson_relative_se": 0.0026396712314722586
+    },
+    {
+      "layer_mm": 390.0,
+      "counts": 894254,
+      "model_efficiency": 0.0007154503439342959,
+      "observed_efficiency": 0.000894254,
+      "scale": 1.2499176324138084,
+      "poisson_relative_se": 0.0010574736495191576
+    }
+  ]
+}

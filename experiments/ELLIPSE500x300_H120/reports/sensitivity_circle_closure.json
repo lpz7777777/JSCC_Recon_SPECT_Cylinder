@@ -1,0 +1,53 @@
+{
+  "factor_dir": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/FactorsCalibrated/440keV_RotateNum20",
+  "sensi_d": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/Sensitivity/Sensi_d",
+  "list_files": [
+    "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/List/218-440keV_RotateNum20_Geant4JSCC/List_sensitivity_validation_440_all/1.csv"
+  ],
+  "event_interval": {
+    "start_row": 0,
+    "selected_rows": 1281294,
+    "total_rows": 1281294,
+    "represented_photons": 1000000000.0
+  },
+  "physics": {
+    "energy_mev": 0.44,
+    "energy_resolution_662kev": 0.13,
+    "energy_resolution_reference_kev": 511.0,
+    "energy_threshold_min_mev": 0.05,
+    "energy_threshold_sum_mev": 0.35,
+    "delta_r1_mm": 0.0,
+    "delta_r2_mm": 0.0,
+    "min_event_effective_support": 1.0,
+    "include_first_hit_source_leg_uncertainty": true,
+    "energy_resolution": 0.1400965576113327,
+    "energy_threshold_max_mev": 0.2773608914450036,
+    "resolved_energy_threshold_sum_mev": 0.35,
+    "resolved_energy_at_440_mev": 0.1400965576113327
+  },
+  "diagnostics": {
+    "input_events": 1281294,
+    "invalid_raw_energy_events": 0,
+    "energy_rejected_events": 469731,
+    "kinematic_rejected_events": 0,
+    "same_layer_rejected_events": 640845,
+    "invalid_kernel_events": 13,
+    "low_support_rejected_events": 0,
+    "kept_events": 170705
+  },
+  "closure_ratio": {
+    "volume_weighted_mean": 1.0008694727055125,
+    "arithmetic_mean": 1.0008089306700159,
+    "std": 0.003027330454049055,
+    "cv": 0.0030248835329859964,
+    "min": 0.9446341032964444,
+    "median": 1.0008765526128436,
+    "max": 1.0597264655044472
+  },
+  "uniform_input_density_photons_per_mm3": 40.793270047903434,
+  "updated_density_photons_per_mm3": {
+    "min": 38.53471407223096,
+    "mean": 40.826268975175424,
+    "max": 43.229707884233136
+  }
+}

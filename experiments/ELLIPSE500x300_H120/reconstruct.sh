@@ -55,7 +55,7 @@ export PYTHONUNBUFFERED=1
 srun --kill-on-bad-exit=1 torchrun --nnodes="$SLURM_NNODES" --nproc_per_node="$gpus" \
   --rdzv_id="$SLURM_JOB_ID" --rdzv_backend=c10d --rdzv_endpoint="$master:$port" \
   "$base/run_reconstruction.py" \
-  --factors "$base/generated/Factors" --geometry "$base/generated/Geometry/geometry.npz" \
+  --factors "$base/generated/FactorsCalibrated" --geometry "$base/generated/Geometry/geometry.npz" \
   --data-root "$base/generated" --dataset "$dataset" --level "$level" \
   --iterations "$iterations" --save-step "$save_step" \
   --output "$base/generated/Results/${dataset}_${level}_${SLURM_JOB_ID}" \

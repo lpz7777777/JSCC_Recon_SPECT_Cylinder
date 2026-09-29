@@ -1,0 +1,87 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "dataset": "CircleNewDist_1e9",
+  "independent_of_calibration_source": true,
+  "source_volume_mm3": 8482300.164692454,
+  "source_volume_relative_error": 1.3322676295501878e-15,
+  "primary_counts": [
+    305610492,
+    694389508,
+    0
+  ],
+  "windows": {
+    "218": [
+      {
+        "layer_mm": 300.0,
+        "observed": 334033,
+        "predicted": 333931.1305305322,
+        "predicted_over_observed": 0.9996950317200163,
+        "relative_difference": -0.00030496827998371945,
+        "observed_poisson_relative_se": 0.0017302358769016963
+      },
+      {
+        "layer_mm": 330.0,
+        "observed": 340475,
+        "predicted": 340918.94448965637,
+        "predicted_over_observed": 1.001303897465765,
+        "relative_difference": 0.0013038974657650915,
+        "observed_poisson_relative_se": 0.0017137891371314248
+      },
+      {
+        "layer_mm": 360.0,
+        "observed": 327784,
+        "predicted": 327774.2147128406,
+        "predicted_over_observed": 0.9999701471482458,
+        "relative_difference": -2.9852851754164078e-05,
+        "observed_poisson_relative_se": 0.0017466509509155151
+      },
+      {
+        "layer_mm": 390.0,
+        "observed": 1525065,
+        "predicted": 1532371.1571307594,
+        "predicted_over_observed": 1.0047907185141352,
+        "relative_difference": 0.0047907185141351505,
+        "observed_poisson_relative_se": 0.0008097590732022234
+      }
+    ],
+    "440": [
+      {
+        "layer_mm": 300.0,
+        "observed": 122139,
+        "predicted": 121184.598493153,
+        "predicted_over_observed": 0.9921859397338524,
+        "relative_difference": -0.007814060266147616,
+        "observed_poisson_relative_se": 0.0028613620973547294
+      },
+      {
+        "layer_mm": 330.0,
+        "observed": 133589,
+        "predicted": 134503.4879239847,
+        "predicted_over_observed": 1.0068455331201274,
+        "relative_difference": 0.006845533120127367,
+        "observed_poisson_relative_se": 0.002735990912497884
+      },
+      {
+        "layer_mm": 360.0,
+        "observed": 137235,
+        "predicted": 137320.97918373154,
+        "predicted_over_observed": 1.0006265106112255,
+        "relative_difference": 0.0006265106112255392,
+        "observed_poisson_relative_se": 0.002699401946263296
+      },
+      {
+        "layer_mm": 390.0,
+        "observed": 671798,
+        "predicted": 672261.200822439,
+        "predicted_over_observed": 1.0006894941968256,
+        "relative_difference": 0.0006894941968256241,
+        "observed_poisson_relative_se": 0.0012200584768520865
+      }
+    ]
+  },
+  "input_sha256": {
+    "collection": "0fc708c2892f3fba0229e7525394cb323651b19367bfb56628aa96504e9bcf22",
+    "CntStat_218": "91625938ff84e263378ad58f0a7868c921b2e66305b0aca8be9ef2e5c42132a7",
+    "CntStat_440": "f58f9e14411d45dac7dc30f305351c458938684d88eb1134cab5e259a71ec939"
+  }
+}
