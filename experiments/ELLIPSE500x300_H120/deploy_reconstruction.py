@@ -19,7 +19,8 @@ from reconstruction_ssh import connect
 REMOTE_ROOT="/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor"
 FILES=("config.json","geometry.py","torch_active_operator.py",
        "validate_factors.py","run_reconstruction.py","run_sensitivity.py",
-       "resource_budget.py","reconstruct.sh","test_active_dist.py","README.md")
+       "resource_budget.py","reconstruct.sh","test_active_dist.py",
+       "diagnose_geometry_payload.py","README.md")
 
 
 def digest(path):

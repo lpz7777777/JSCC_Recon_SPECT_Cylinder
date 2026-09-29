@@ -42,9 +42,11 @@ $credential=Import-Clixml -LiteralPath (Join-Path $env:USERPROFILE '.ssh/fov120_
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--command',required=True)
+    parser.add_argument('--timeout',type=int,default=60,
+                        help='Remote read timeout in seconds (default: 60)')
     args=parser.parse_args()
     with connect() as client:
-        _,stdout,stderr=client.exec_command(args.command,timeout=60)
+        _,stdout,stderr=client.exec_command(args.command,timeout=args.timeout)
         print(stdout.read().decode(errors='replace'),end='')
         import sys
         print(stderr.read().decode(errors='replace'),end='',file=sys.stderr)

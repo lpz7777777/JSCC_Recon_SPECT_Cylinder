@@ -40,7 +40,15 @@ def validate(root: Path, full_scan=False):
                                           ("ellipse_fraction.float64", fractions, "<f8"),
                                           ("ellipse_active_indices.int32", active, "<i4")):
             got = np.fromfile(folder / filename, dtype=dtype)
-            if not np.array_equal(got, expected):
+            if filename == "ellipse_fraction.float64":
+                # BLAS/NumPy builds differ by a few ulps in boundary quadrature.
+                # The active support must still be bitwise identical.
+                matches = (got.shape == expected.shape and
+                           np.array_equal(got > 0, expected > 0) and
+                           np.allclose(got, expected, rtol=0, atol=1e-14))
+            else:
+                matches = np.array_equal(got, expected)
+            if not matches:
                 raise ValueError(f"Geometry payload mismatch: {response}/{filename}")
         detector = np.loadtxt(folder / "Detector.csv", delimiter=",", skiprows=1)
         if detector.shape != (cfg["detector_count"], 4):
