@@ -39,6 +39,12 @@ if __name__=="__main__":
     p.add_argument("--accepted-events",type=int,required=True)
     p.add_argument("--gpu-gib",type=float,required=True)
     p.add_argument("--host-gib",type=float,required=True)
+    p.add_argument("--nodes",type=int)
+    p.add_argument("--gpus-per-node",type=int)
     a=p.parse_args()
-    print(json.dumps([estimate(a.accepted_events,8*g,g,a.gpu_gib,a.host_gib)
-                      for g in (3,4,6,8)],indent=2))
+    if (a.nodes is None) != (a.gpus_per_node is None):
+        p.error("--nodes and --gpus-per-node must be supplied together")
+    topologies = ([(a.nodes,a.gpus_per_node)] if a.nodes is not None
+                  else [(8,g) for g in (3,4,6,8)])
+    print(json.dumps([estimate(a.accepted_events,n*g,g,a.gpu_gib,a.host_gib)
+                      for n,g in topologies],indent=2))

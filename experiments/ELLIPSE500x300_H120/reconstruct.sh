@@ -29,7 +29,8 @@ if [[ -n ${SLURM_GPUS_ON_NODE:-} && "$SLURM_GPUS_ON_NODE" != "$gpus" ]]; then
 fi
 world=$((SLURM_NNODES*gpus))
 python "$base/resource_budget.py" --accepted-events "$ELLIPSE_ACCEPTED_EVENTS" \
-  --gpu-gib "$ELLIPSE_GPU_GIB" --host-gib "$ELLIPSE_HOST_GIB" > "$base/logs/budget.${SLURM_JOB_ID}.json"
+  --gpu-gib "$ELLIPSE_GPU_GIB" --host-gib "$ELLIPSE_HOST_GIB" \
+  --nodes "$SLURM_NNODES" --gpus-per-node "$gpus" > "$base/logs/budget.${SLURM_JOB_ID}.json"
 python - "$base/logs/budget.${SLURM_JOB_ID}.json" "$world" <<'PY'
 import json,sys
 rows=json.load(open(sys.argv[1]))
