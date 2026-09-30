@@ -1,0 +1,120 @@
+{
+  "result": "XCAT_1e9_1641014",
+  "truth_sha256": "b907a42a251e22ad5c4c28386414618b1487bb9ff8425aafe98d744651b115e8",
+  "method": "Linear XY interpolation per 3-mm z slice; global integral normalization within physical ellipse; no smoothing",
+  "kidney_truth_retained_fraction": 0.8191108946709337,
+  "channels": {
+    "440_SinglePhoton": {
+      "truth_channel": "bi",
+      "global_scale": 0.005950448196223893,
+      "body_mean_normalized_rmse": 2.0027806236205166,
+      "body_pearson": 0.32838478978211705,
+      "organs": {
+        "body": {
+          "truth_integral": 4077196.9111983133,
+          "recon_integral": 3628708.2906793044,
+          "relative_recovery": 0.8900007455398579
+        },
+        "kidney": {
+          "truth_integral": 1279473.756279923,
+          "recon_integral": 764035.6008341535,
+          "relative_recovery": 0.5971483174892084
+        },
+        "liver": {
+          "truth_integral": 761845.7108582407,
+          "recon_integral": 570978.9762380577,
+          "relative_recovery": 0.7494679934534694
+        },
+        "lesion": {
+          "truth_integral": 25931.76523381099,
+          "recon_integral": 2317.1658880691666,
+          "relative_recovery": 0.08935627278654916
+        }
+      }
+    },
+    "440_ComptonOnly": {
+      "truth_channel": "bi",
+      "global_scale": 0.004520706483956058,
+      "body_mean_normalized_rmse": 6.079770216880744,
+      "body_pearson": 0.09835630773049278,
+      "organs": {
+        "body": {
+          "truth_integral": 4077196.9111983133,
+          "recon_integral": 2749355.036743038,
+          "relative_recovery": 0.6743248110464661
+        },
+        "kidney": {
+          "truth_integral": 1279473.756279923,
+          "recon_integral": 664297.8732922625,
+          "relative_recovery": 0.5191961695437288
+        },
+        "liver": {
+          "truth_integral": 761845.7108582407,
+          "recon_integral": 393503.5737375148,
+          "relative_recovery": 0.5165134726481847
+        },
+        "lesion": {
+          "truth_integral": 25931.76523381099,
+          "recon_integral": 18843.07441249702,
+          "relative_recovery": 0.7266406371722268
+        }
+      }
+    },
+    "440_SinglePlusCompton": {
+      "truth_channel": "bi",
+      "global_scale": 0.005029357479037982,
+      "body_mean_normalized_rmse": 1.7450037450380316,
+      "body_pearson": 0.35833494830712925,
+      "organs": {
+        "body": {
+          "truth_integral": 4077196.9111983133,
+          "recon_integral": 2958484.9428367936,
+          "relative_recovery": 0.725617380585937
+        },
+        "kidney": {
+          "truth_integral": 1279473.756279923,
+          "recon_integral": 690567.7027357119,
+          "relative_recovery": 0.5397279149699337
+        },
+        "liver": {
+          "truth_integral": 761845.7108582407,
+          "recon_integral": 451852.6155958622,
+          "relative_recovery": 0.5931025260834474
+        },
+        "lesion": {
+          "truth_integral": 25931.76523381099,
+          "recon_integral": 4410.1085912933795,
+          "relative_recovery": 0.17006588450613008
+        }
+      }
+    },
+    "218_SinglePhoton_CrossTalkCorrected": {
+      "truth_channel": "fr",
+      "global_scale": 0.01346703199062095,
+      "body_mean_normalized_rmse": 2.1000783522242106,
+      "body_pearson": 0.3672553825544088,
+      "organs": {
+        "body": {
+          "truth_integral": 3997723.061995025,
+          "recon_integral": 3635731.250516985,
+          "relative_recovery": 0.9094505032328599
+        },
+        "kidney": {
+          "truth_integral": 1204660.025785625,
+          "recon_integral": 854573.6608750069,
+          "relative_recovery": 0.7093899046892441
+        },
+        "liver": {
+          "truth_integral": 761666.1607623249,
+          "recon_integral": 664585.1571723773,
+          "relative_recovery": 0.8725412673016973
+        },
+        "lesion": {
+          "truth_integral": 25931.76523381099,
+          "recon_integral": 23007.51549687538,
+          "relative_recovery": 0.8872329087291426
+        }
+      }
+    }
+  }
+}

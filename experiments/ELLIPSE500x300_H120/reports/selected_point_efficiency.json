@@ -1,0 +1,200 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "point_datasets": 10,
+  "views_per_dataset": 20,
+  "workers": 200,
+  "total_primary_photons": 100000000,
+  "reference": "same-energy center at z=0",
+  "rows": [
+    {
+      "dataset": "Point_center_z+00_218keV",
+      "source_energy_keV": 218,
+      "object_mm": [
+        0.0,
+        0.0,
+        0
+      ],
+      "normalized_ellipse_radius": 0.0,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 54690,
+        "440": 0
+      },
+      "direct_counts": 54690,
+      "direct_detection_efficiency": 0.005469,
+      "cross_window_counts": 0,
+      "direct_efficiency_over_center": 1.0
+    },
+    {
+      "dataset": "Point_center_z+00_440keV",
+      "source_energy_keV": 440,
+      "object_mm": [
+        0.0,
+        0.0,
+        0
+      ],
+      "normalized_ellipse_radius": 0.0,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 10214,
+        "440": 14337
+      },
+      "direct_counts": 14337,
+      "direct_detection_efficiency": 0.0014337,
+      "cross_window_counts": 10214,
+      "direct_efficiency_over_center": 1.0
+    },
+    {
+      "dataset": "Point_rho98_a00_z-57_218keV",
+      "source_energy_keV": 218,
+      "object_mm": [
+        245.0,
+        0.0,
+        -57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 79245,
+        "440": 0
+      },
+      "direct_counts": 79245,
+      "direct_detection_efficiency": 0.0079245,
+      "cross_window_counts": 0,
+      "direct_efficiency_over_center": 1.4489851892484913
+    },
+    {
+      "dataset": "Point_rho98_a00_z-57_440keV",
+      "source_energy_keV": 440,
+      "object_mm": [
+        245.0,
+        0.0,
+        -57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 15208,
+        "440": 21699
+      },
+      "direct_counts": 21699,
+      "direct_detection_efficiency": 0.0021699,
+      "cross_window_counts": 15208,
+      "direct_efficiency_over_center": 1.5134965473948527
+    },
+    {
+      "dataset": "Point_rho98_a00_z+57_218keV",
+      "source_energy_keV": 218,
+      "object_mm": [
+        245.0,
+        0.0,
+        57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 79176,
+        "440": 0
+      },
+      "direct_counts": 79176,
+      "direct_detection_efficiency": 0.0079176,
+      "cross_window_counts": 0,
+      "direct_efficiency_over_center": 1.447723532638508
+    },
+    {
+      "dataset": "Point_rho98_a00_z+57_440keV",
+      "source_energy_keV": 440,
+      "object_mm": [
+        245.0,
+        0.0,
+        57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 15031,
+        "440": 21831
+      },
+      "direct_counts": 21831,
+      "direct_detection_efficiency": 0.0021831,
+      "cross_window_counts": 15031,
+      "direct_efficiency_over_center": 1.5227034944549067
+    },
+    {
+      "dataset": "Point_rho98_a02_z-57_218keV",
+      "source_energy_keV": 218,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        -57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 59888,
+        "440": 0
+      },
+      "direct_counts": 59888,
+      "direct_detection_efficiency": 0.0059888,
+      "cross_window_counts": 0,
+      "direct_efficiency_over_center": 1.0950447979520936
+    },
+    {
+      "dataset": "Point_rho98_a02_z-57_440keV",
+      "source_energy_keV": 440,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        -57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 11203,
+        "440": 16201
+      },
+      "direct_counts": 16201,
+      "direct_detection_efficiency": 0.0016201,
+      "cross_window_counts": 11203,
+      "direct_efficiency_over_center": 1.1300132524237985
+    },
+    {
+      "dataset": "Point_rho98_a02_z+57_218keV",
+      "source_energy_keV": 218,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 59651,
+        "440": 0
+      },
+      "direct_counts": 59651,
+      "direct_detection_efficiency": 0.0059651,
+      "cross_window_counts": 0,
+      "direct_efficiency_over_center": 1.0907112817699762
+    },
+    {
+      "dataset": "Point_rho98_a02_z+57_440keV",
+      "source_energy_keV": 440,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        57
+      ],
+      "normalized_ellipse_radius": 0.98,
+      "primary_photons": 10000000,
+      "detected_counts": {
+        "218": 11275,
+        "440": 16059
+      },
+      "direct_counts": 16059,
+      "direct_detection_efficiency": 0.0016059,
+      "cross_window_counts": 11275,
+      "direct_efficiency_over_center": 1.120108809374346
+    }
+  ]
+}
