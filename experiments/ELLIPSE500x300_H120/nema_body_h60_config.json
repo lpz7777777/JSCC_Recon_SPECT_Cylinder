@@ -1,0 +1,26 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "name": "NEMA_Body_H60",
+  "kind": "shortened_NEMA_IEC_body_phantom_research_geometry",
+  "center_object_mm": [0.0, 0.0, 0.0],
+  "body_width_mm": 290.0,
+  "body_ap_mm": 220.0,
+  "body_height_mm": 60.0,
+  "body_lower_contour_knots_mm": [[0.0, -110.0], [50.0, -110.0], [80.0, -106.0], [112.0, -82.0], [135.0, -45.0], [145.0, 0.0]],
+  "lung_outer_diameter_mm": 51.0,
+  "sphere_center_ring_radius_mm": 57.0,
+  "sphere_equator_z_mm": 0.0,
+  "spheres": [
+    {"diameter_mm": 10.0, "angle_deg": 0.0, "fill": "hot"},
+    {"diameter_mm": 13.0, "angle_deg": 60.0, "fill": "hot"},
+    {"diameter_mm": 17.0, "angle_deg": 120.0, "fill": "hot"},
+    {"diameter_mm": 22.0, "angle_deg": 180.0, "fill": "hot"},
+    {"diameter_mm": 28.0, "angle_deg": 240.0, "fill": "cold"},
+    {"diameter_mm": 37.0, "angle_deg": 300.0, "fill": "cold"}
+  ],
+  "preview_relative_activity": {"background": 1.0, "hot_spheres": 4.0, "cold_spheres": 0.0, "lung_insert": 0.0},
+  "truth_spacing_mm": 3.0,
+  "subvoxel_samples_per_axis": 8,
+  "attenuation_material_model": "none",
+  "source_geometry_note": "Cross-section and sphere order follow the user-supplied sketch; body lower contour is a documented approximation, not a manufacturer CAD file."
+}

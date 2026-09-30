@@ -6,6 +6,11 @@
 270 mm、四层晶体中心距源中心 300/330/360/390 mm。采用 20 个固定半径视角，
 没有人体材料衰减。该目标范围不代表已验收的有效成像范围。
 
+新增中心放置的 60 mm 高 NEMA-like Body Phantom 几何与真值预览，见
+[`reports/NEMA_Body_H60/README.md`](reports/NEMA_Body_H60/README.md)。当前只完成
+体模生成和可视化，尚未运行 Geant4 或重建。该体模后续所有成像均固定在上述
+椭圆柱物理 FOV 和对应的椭圆活动体素约束内。
+
 ## 已验证的准备
 
 - `config.json` 是本实验的参数源。`geometry.py` 生成半径 255 mm 的完整

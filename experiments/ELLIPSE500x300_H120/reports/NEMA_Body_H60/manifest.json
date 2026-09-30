@@ -1,0 +1,118 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "phantom": "NEMA_Body_H60",
+  "status": "geometry_and_truth_preview_only_no_transport_no_reconstruction",
+  "shape_zyx": [
+    40,
+    100,
+    168
+  ],
+  "spacing_mm": 3.0,
+  "body_dimensions_mm": [
+    290.0,
+    220.0,
+    60.0
+  ],
+  "physical_fov_mm": [
+    500,
+    300,
+    120
+  ],
+  "fov_center_margin_mm": [
+    105,
+    40,
+    30
+  ],
+  "body_volume_mm3": 3135594.375,
+  "lung_outer_volume_mm3": 122647.5,
+  "spheres": [
+    {
+      "diameter_mm": 10.0,
+      "angle_deg": 0.0,
+      "fill": "hot",
+      "center_mm": [
+        57.0,
+        0.0,
+        0.0
+      ],
+      "sampled_volume_mm3": 524.8125,
+      "analytic_volume_mm3": 523.5987755982989,
+      "relative_volume_error": 0.002318042856983782
+    },
+    {
+      "diameter_mm": 13.0,
+      "angle_deg": 60.0,
+      "fill": "hot",
+      "center_mm": [
+        28.500000000000007,
+        49.363448015713,
+        0.0
+      ],
+      "sampled_volume_mm3": 1147.7109375,
+      "analytic_volume_mm3": 1150.3465099894624,
+      "relative_volume_error": -0.0022911118228946536
+    },
+    {
+      "diameter_mm": 17.0,
+      "angle_deg": 120.0,
+      "fill": "hot",
+      "center_mm": [
+        -28.499999999999986,
+        49.363448015713004,
+        0.0
+      ],
+      "sampled_volume_mm3": 2571.1171875,
+      "analytic_volume_mm3": 2572.440784514442,
+      "relative_volume_error": -0.0005145296336497296
+    },
+    {
+      "diameter_mm": 22.0,
+      "angle_deg": 180.0,
+      "fill": "hot",
+      "center_mm": [
+        -57.0,
+        6.980486755139913e-15,
+        0.0
+      ],
+      "sampled_volume_mm3": 5569.59375,
+      "analytic_volume_mm3": 5575.279762570686,
+      "relative_volume_error": -0.0010198613904290887
+    },
+    {
+      "diameter_mm": 28.0,
+      "angle_deg": 240.0,
+      "fill": "cold",
+      "center_mm": [
+        -28.500000000000025,
+        -49.363448015713,
+        0.0
+      ],
+      "sampled_volume_mm3": 11489.765625,
+      "analytic_volume_mm3": 11494.040321933855,
+      "relative_volume_error": -0.00037190551051902165
+    },
+    {
+      "diameter_mm": 37.0,
+      "angle_deg": 300.0,
+      "fill": "cold",
+      "center_mm": [
+        28.500000000000007,
+        -49.363448015713,
+        0.0
+      ],
+      "sampled_volume_mm3": 26520.75,
+      "analytic_volume_mm3": 26521.84878038063,
+      "relative_volume_error": -4.142925290506749e-05
+    }
+  ],
+  "relative_activity_integral_mm3": 3004376.0625,
+  "truth_sha256": "1b2ca8fa9972ca7947fb6523d182798bcd5d9a301e4c4efb754ef4eb6d5a9b91",
+  "configuration_sha256": "0def93164871435398c4ca147353bf420a493329b6c84e7a47cd76c26aeb02ed",
+  "preview_sha256": {
+    "layout_in_ellipse.png": "288b05ea297f6c6420f17f58b7573e7c7bca850d3c5cf1988ef53caad5fbceb9",
+    "activity_slices.png": "c74dc0be66ec92bdb943fd2450b377c70e3d4858550e388e95c5f771936886f1",
+    "geometry_3d.png": "f5789a2406c3511bbdd3d11c8e9036e9ea9a865a89d536a0ab5c52b8f7eef76d"
+  },
+  "material_attenuation": false,
+  "standard_compliance": "adapted research phantom: 60-mm length differs from NEMA NU 2 body minimum 180 mm"
+}
