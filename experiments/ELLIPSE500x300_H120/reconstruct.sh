@@ -49,10 +49,15 @@ if [[ ${ELLIPSE_PILOT:-0} == 1 ]]; then
   save_step=10
   mode=(--pilot-only)
 fi
+if [[ ${ELLIPSE_DRY_RUN:-0} == 1 ]]; then
+  mode+=(--dry-run)
+fi
 master=$(scontrol show hostname "$SLURM_JOB_NODELIST" | head -n1)
 port=$((50000+SLURM_JOB_ID%10000))
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
 export PYTHONUNBUFFERED=1
+# Some 4090 nodes otherwise select an unreachable 169.254/16 interface.
+export NCCL_SOCKET_IFNAME=${NCCL_SOCKET_IFNAME:-bond0}
 srun --kill-on-bad-exit=1 torchrun --nnodes="$SLURM_NNODES" --nproc_per_node="$gpus" \
   --rdzv_id="$SLURM_JOB_ID" --rdzv_backend=c10d --rdzv_endpoint="$master:$port" \
   "$base/run_reconstruction.py" \

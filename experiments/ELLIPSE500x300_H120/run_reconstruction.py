@@ -8,6 +8,7 @@ are compacted to active object columns immediately after materialization.
 from __future__ import annotations
 
 import argparse
+from datetime import timedelta
 import hashlib
 import io
 import json
@@ -50,7 +51,10 @@ def setup(backend):
         device=torch.device(f"cuda:{local}")
     else:
         device=torch.device("cpu")
-    dist.init_process_group(backend=backend,init_method="env://")
+    print(f"[rank {rank}] initializing {backend} process group",flush=True)
+    dist.init_process_group(backend=backend,init_method="env://",
+                            timeout=timedelta(minutes=5))
+    print(f"[rank {rank}] process group ready",flush=True)
     return rank,world,device
 
 
@@ -145,16 +149,20 @@ def main():
     if args.event_chunks<=0 or args.event_block<=0:
         raise ValueError("Invalid event chunk sizes")
     rank,world,device=setup(args.backend)
+    if rank==0: print("ELLIPSE_STAGE validate_factors",flush=True)
     validation_error=None
     if rank==0:
         try:
             validate(args.factors)
         except Exception as error:
             validation_error=f"{type(error).__name__}: {error}"
+        print("ELLIPSE_STAGE factors_validated",flush=True)
     shared_error=[validation_error]
+    if rank==0: print("ELLIPSE_STAGE broadcast_validation",flush=True)
     dist.broadcast_object_list(shared_error,src=0)
     if shared_error[0]:
         raise ValueError(f"Factors validation failed: {shared_error[0]}")
+    if rank==0: print("ELLIPSE_STAGE geometry",flush=True)
     geometry=ActiveGeometry.from_npz(args.geometry,device)
     if geometry.full_count!=132040 or geometry.active_count!=82040 or geometry.views!=20:
         raise ValueError("Ellipse geometry mismatch")
