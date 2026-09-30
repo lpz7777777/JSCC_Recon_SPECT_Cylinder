@@ -1,0 +1,1201 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "method": "8 nearest 3D polar centers, inverse squared-distance weighted factor rows",
+  "bundle_sha256": "9599918c1e68371cbcb942e87d1636a2ca1d4a1cb27fef08fb07b07133a3f99a",
+  "factor_manifest_sha256": {
+    "218": "b8ba0829d9fc99aa52a9f35d4f1edc1168287c06a7c41d77039875a941c30f8d",
+    "440": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc"
+  },
+  "rows": [
+    {
+      "dataset": "Point_center_z+00_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "neighbors_mm": [
+        [
+          0.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          0.0,
+          -4.5
+        ],
+        [
+          1.8541019662496847,
+          5.706339097770921,
+          -1.5
+        ],
+        [
+          5.706339097770921,
+          1.8541019662496843,
+          -1.5
+        ],
+        [
+          -4.854101966249684,
+          3.5267115137548393,
+          1.5
+        ],
+        [
+          1.8541019662496847,
+          5.706339097770921,
+          1.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.40691489361702127,
+        0.40691489361702127,
+        0.045212765957446804,
+        0.045212765957446804,
+        0.02393617021276596,
+        0.02393617021276596,
+        0.02393617021276596,
+        0.02393617021276596
+      ],
+      "cntstat_sha256": "3932e06ee92aee294d579f42c09e7b5094b9d91af6ff6fcd3f80082ac37b5b1a",
+      "observed_counts": 54690,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.5283202039527637,
+            "pearson": 0.33452686962358164
+          },
+          "weighted8": {
+            "cosine": 0.5291199071954387,
+            "pearson": 0.33609669166204503
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.5283202039527637,
+            "pearson": 0.33452686962358164
+          },
+          "weighted8": {
+            "cosine": 0.529123599455827,
+            "pearson": 0.336103911972297
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 7969.0,
+          "modeled_sum": 1.2732065969664694,
+          "within_layer_cosine": 0.6623908164884169,
+          "observed_fraction": 0.1457121960138965,
+          "modeled_fraction": 0.14486830778181115
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 8014.0,
+          "modeled_sum": 1.290765260631721,
+          "within_layer_cosine": 0.6009100054223825,
+          "observed_fraction": 0.14653501554214665,
+          "modeled_fraction": 0.14686617199187382
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 7371.0,
+          "modeled_sum": 1.198359692297034,
+          "within_layer_cosine": 0.5413200722358898,
+          "observed_fraction": 0.13477783872737245,
+          "modeled_fraction": 0.13635205877084786
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 31336.0,
+          "modeled_sum": 5.026385709673165,
+          "within_layer_cosine": 0.43804539887960436,
+          "observed_fraction": 0.5729749497165844,
+          "modeled_fraction": 0.5719134614554671
+        }
+      ]
+    },
+    {
+      "dataset": "Point_center_z+00_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "neighbors_mm": [
+        [
+          0.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          0.0,
+          -4.5
+        ],
+        [
+          1.8541019662496847,
+          5.706339097770921,
+          -1.5
+        ],
+        [
+          5.706339097770921,
+          1.8541019662496843,
+          -1.5
+        ],
+        [
+          -4.854101966249684,
+          3.5267115137548393,
+          1.5
+        ],
+        [
+          1.8541019662496847,
+          5.706339097770921,
+          1.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.40691489361702127,
+        0.40691489361702127,
+        0.045212765957446804,
+        0.045212765957446804,
+        0.02393617021276596,
+        0.02393617021276596,
+        0.02393617021276596,
+        0.02393617021276596
+      ],
+      "cntstat_sha256": "de470344838c8d1b35fa3a390542229637917530958499f3ba39fbf9774bce28",
+      "observed_counts": 14337,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.2734225925704179,
+            "pearson": 0.11028125425647482
+          },
+          "weighted8": {
+            "cosine": 0.27365826723460884,
+            "pearson": 0.11088508936824233
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.2734225925704179,
+            "pearson": 0.11028125425647482
+          },
+          "weighted8": {
+            "cosine": 0.27364017323911066,
+            "pearson": 0.11083775818155217
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 1556.0,
+          "modeled_sum": 0.2503947822176929,
+          "within_layer_cosine": 0.36397657230449937,
+          "observed_fraction": 0.10853037595033828,
+          "modeled_fraction": 0.10883389857389864
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 1736.0,
+          "modeled_sum": 0.28464926314760264,
+          "within_layer_cosine": 0.32368353555680107,
+          "observed_fraction": 0.12108530375950338,
+          "modeled_fraction": 0.12372258223658847
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 1844.0,
+          "modeled_sum": 0.2938220176537049,
+          "within_layer_cosine": 0.2925254378509295,
+          "observed_fraction": 0.12861826044500244,
+          "modeled_fraction": 0.12770951289352395
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 9201.0,
+          "modeled_sum": 1.4718397418702165,
+          "within_layer_cosine": 0.23699954102756232,
+          "observed_fraction": 0.6417660598451559,
+          "modeled_fraction": 0.6397340062959888
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a00_z-57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        245.0,
+        0.0,
+        -57.0
+      ],
+      "neighbors_mm": [
+        [
+          246.0,
+          0.0,
+          -55.5
+        ],
+        [
+          246.0,
+          0.0,
+          -58.5
+        ],
+        [
+          246.0,
+          0.0,
+          -52.5
+        ],
+        [
+          240.0,
+          0.0,
+          -55.5
+        ],
+        [
+          240.0,
+          0.0,
+          -58.5
+        ],
+        [
+          240.0,
+          0.0,
+          -52.5
+        ],
+        [
+          252.0,
+          0.0,
+          -58.5
+        ],
+        [
+          252.0,
+          0.0,
+          -55.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.38608163963434206,
+        0.38608163963434206,
+        0.05904778017936996,
+        0.04604643408482978,
+        0.04604643408482978,
+        0.027729620526223457,
+        0.024483225928031444,
+        0.024483225928031444
+      ],
+      "cntstat_sha256": "4e05b7ff2e8425c2fcc0135712b04ae67701171e4f174596ee9d8bc8e98e944c",
+      "observed_counts": 79245,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.8343074529418402,
+            "pearson": 0.8114196432824773
+          },
+          "weighted8": {
+            "cosine": 0.8363775873959677,
+            "pearson": 0.8138106038560823
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.09256847551799209,
+            "pearson": -0.044519485861835316
+          },
+          "weighted8": {
+            "cosine": 0.09396326153622798,
+            "pearson": -0.04495348119632213
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 15945.0,
+          "modeled_sum": 6.341577573063227,
+          "within_layer_cosine": 0.9342568312623973,
+          "observed_fraction": 0.20121143289797463,
+          "modeled_fraction": 0.20122506085695605
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 12877.0,
+          "modeled_sum": 5.151944714709828,
+          "within_layer_cosine": 0.8683032732109321,
+          "observed_fraction": 0.16249605653353524,
+          "modeled_fraction": 0.16347673379455196
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 10949.0,
+          "modeled_sum": 4.313377920878379,
+          "within_layer_cosine": 0.7790806406421313,
+          "observed_fraction": 0.13816644583254464,
+          "modeled_fraction": 0.13686810965059978
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 39474.0,
+          "modeled_sum": 15.707949612023915,
+          "within_layer_cosine": 0.6235253204883006,
+          "observed_fraction": 0.4981260647359455,
+          "modeled_fraction": 0.4984300956978922
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a00_z-57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        245.0,
+        0.0,
+        -57.0
+      ],
+      "neighbors_mm": [
+        [
+          246.0,
+          0.0,
+          -55.5
+        ],
+        [
+          246.0,
+          0.0,
+          -58.5
+        ],
+        [
+          246.0,
+          0.0,
+          -52.5
+        ],
+        [
+          240.0,
+          0.0,
+          -55.5
+        ],
+        [
+          240.0,
+          0.0,
+          -58.5
+        ],
+        [
+          240.0,
+          0.0,
+          -52.5
+        ],
+        [
+          252.0,
+          0.0,
+          -58.5
+        ],
+        [
+          252.0,
+          0.0,
+          -55.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.38608163963434206,
+        0.38608163963434206,
+        0.05904778017936996,
+        0.04604643408482978,
+        0.04604643408482978,
+        0.027729620526223457,
+        0.024483225928031444,
+        0.024483225928031444
+      ],
+      "cntstat_sha256": "d2eb1035901f8776e1f13984b99a0acdfcee79d3e724adcc6d1d13139683213c",
+      "observed_counts": 21699,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.5462669029202785,
+            "pearson": 0.49407474449603406
+          },
+          "weighted8": {
+            "cosine": 0.5467287955477976,
+            "pearson": 0.4946311514085828
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.0716404423012651,
+            "pearson": -0.07114042346571076
+          },
+          "weighted8": {
+            "cosine": 0.07235735508745031,
+            "pearson": -0.07170198717799516
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 3056.0,
+          "modeled_sum": 1.2654939174150355,
+          "within_layer_cosine": 0.7603819751105015,
+          "observed_fraction": 0.1408359832250334,
+          "modeled_fraction": 0.14560444905348946
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 2971.0,
+          "modeled_sum": 1.2056649534378852,
+          "within_layer_cosine": 0.608736016493858,
+          "observed_fraction": 0.13691875201622195,
+          "modeled_fraction": 0.13872068357863968
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 2882.0,
+          "modeled_sum": 1.127193809712699,
+          "within_layer_cosine": 0.5194338735664881,
+          "observed_fraction": 0.13281718051523111,
+          "modeled_fraction": 0.1296919972361231
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 12790.0,
+          "modeled_sum": 5.092960844820832,
+          "within_layer_cosine": 0.3887219119348597,
+          "observed_fraction": 0.5894280842435136,
+          "modeled_fraction": 0.5859828701317478
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a00_z+57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        245.0,
+        0.0,
+        57.0
+      ],
+      "neighbors_mm": [
+        [
+          246.0,
+          0.0,
+          58.5
+        ],
+        [
+          246.0,
+          0.0,
+          55.5
+        ],
+        [
+          246.0,
+          0.0,
+          52.5
+        ],
+        [
+          240.0,
+          0.0,
+          55.5
+        ],
+        [
+          240.0,
+          0.0,
+          58.5
+        ],
+        [
+          240.0,
+          0.0,
+          52.5
+        ],
+        [
+          252.0,
+          0.0,
+          58.5
+        ],
+        [
+          252.0,
+          0.0,
+          55.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.38608163963434206,
+        0.38608163963434206,
+        0.05904778017936996,
+        0.04604643408482978,
+        0.04604643408482978,
+        0.027729620526223457,
+        0.024483225928031444,
+        0.024483225928031444
+      ],
+      "cntstat_sha256": "f26716091f69014374974a93d210881c7a0d288164f0c53b72dce4dd82c6ddb2",
+      "observed_counts": 79176,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.8300112250765832,
+            "pearson": 0.8060368220900681
+          },
+          "weighted8": {
+            "cosine": 0.8336162094348725,
+            "pearson": 0.8102043535166301
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.09421970601629343,
+            "pearson": -0.0454221589771084
+          },
+          "weighted8": {
+            "cosine": 0.09454787698353324,
+            "pearson": -0.046131033624025916
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 15650.0,
+          "modeled_sum": 6.2922069113604495,
+          "within_layer_cosine": 0.9330411114996832,
+          "observed_fraction": 0.1976609073456603,
+          "modeled_fraction": 0.19953226956354753
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 13005.0,
+          "modeled_sum": 5.154652812856824,
+          "within_layer_cosine": 0.8616383976934984,
+          "observed_fraction": 0.16425431949075478,
+          "modeled_fraction": 0.16345927415458564
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 10936.0,
+          "modeled_sum": 4.318173471113176,
+          "within_layer_cosine": 0.7782081072562143,
+          "observed_fraction": 0.13812266343336366,
+          "modeled_fraction": 0.13693366496017254
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 39585.0,
+          "modeled_sum": 15.769750251597127,
+          "within_layer_cosine": 0.6242342576236741,
+          "observed_fraction": 0.49996210973022126,
+          "modeled_fraction": 0.5000747913216943
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a00_z+57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        245.0,
+        0.0,
+        57.0
+      ],
+      "neighbors_mm": [
+        [
+          246.0,
+          0.0,
+          58.5
+        ],
+        [
+          246.0,
+          0.0,
+          55.5
+        ],
+        [
+          246.0,
+          0.0,
+          52.5
+        ],
+        [
+          240.0,
+          0.0,
+          55.5
+        ],
+        [
+          240.0,
+          0.0,
+          58.5
+        ],
+        [
+          240.0,
+          0.0,
+          52.5
+        ],
+        [
+          252.0,
+          0.0,
+          58.5
+        ],
+        [
+          252.0,
+          0.0,
+          55.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.38608163963434206,
+        0.38608163963434206,
+        0.05904778017936996,
+        0.04604643408482978,
+        0.04604643408482978,
+        0.027729620526223457,
+        0.024483225928031444,
+        0.024483225928031444
+      ],
+      "cntstat_sha256": "272d66e7c8f1ec3c254c2e7ea5698dffbfd0867d042b3c93e2018c13863b0100",
+      "observed_counts": 21831,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.5443107056556041,
+            "pearson": 0.49129944399795367
+          },
+          "weighted8": {
+            "cosine": 0.5455818991314654,
+            "pearson": 0.49281907883167925
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.07454634587367408,
+            "pearson": -0.06978470498538589
+          },
+          "weighted8": {
+            "cosine": 0.07456539123802915,
+            "pearson": -0.07009616073056214
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 3155.0,
+          "modeled_sum": 1.2569893495383735,
+          "within_layer_cosine": 0.7565370332265567,
+          "observed_fraction": 0.14451926160047637,
+          "modeled_fraction": 0.14467112968970886
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 3002.0,
+          "modeled_sum": 1.2059785694324914,
+          "within_layer_cosine": 0.607431254183813,
+          "observed_fraction": 0.13751087902523934,
+          "modeled_fraction": 0.1388001275312725
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 2850.0,
+          "modeled_sum": 1.1246489140607927,
+          "within_layer_cosine": 0.5198424454813028,
+          "observed_fraction": 0.13054830287206268,
+          "modeled_fraction": 0.12943962409962495
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 12824.0,
+          "modeled_sum": 5.100981591784467,
+          "within_layer_cosine": 0.38813317722066737,
+          "observed_fraction": 0.5874215565022216,
+          "modeled_fraction": 0.5870891186793937
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a02_z-57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        -57.0
+      ],
+      "neighbors_mm": [
+        [
+          9.184850993605149e-15,
+          150.0,
+          -55.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          -58.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -58.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -55.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          -52.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -52.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -49.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          -49.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.07520746887966805,
+        0.07520746887966805,
+        0.033713692946058096,
+        0.033713692946058096
+      ],
+      "cntstat_sha256": "163dd37189f86abf42b8f4fb2fbf88bea287584c1de41bed0971ec0484830f44",
+      "observed_counts": 59888,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.6254091991319246,
+            "pearson": 0.5145793963689103
+          },
+          "weighted8": {
+            "cosine": 0.6263273256473697,
+            "pearson": 0.5159714673539099
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.5485121190370251,
+            "pearson": 0.4022033830026056
+          },
+          "weighted8": {
+            "cosine": 0.5517803694372263,
+            "pearson": 0.4056105514963904
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 9599.0,
+          "modeled_sum": 4.005998869522728,
+          "within_layer_cosine": 0.7675466446082451,
+          "observed_fraction": 0.16028252738445098,
+          "modeled_fraction": 0.16114968554982695
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 9281.0,
+          "modeled_sum": 3.8434097800991376,
+          "within_layer_cosine": 0.7027368399409539,
+          "observed_fraction": 0.15497261554902483,
+          "modeled_fraction": 0.1546091992721646
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 8391.0,
+          "modeled_sum": 3.4450792761228533,
+          "within_layer_cosine": 0.6312266684772954,
+          "observed_fraction": 0.14011154154421587,
+          "modeled_fraction": 0.13858552139520852
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 32617.0,
+          "modeled_sum": 13.56438074566877,
+          "within_layer_cosine": 0.4913190018233114,
+          "observed_fraction": 0.5446333155223083,
+          "modeled_fraction": 0.5456555937827999
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a02_z-57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        -57.0
+      ],
+      "neighbors_mm": [
+        [
+          9.184850993605149e-15,
+          150.0,
+          -55.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          -58.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -58.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -55.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          -52.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -52.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          -49.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          -49.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.07520746887966805,
+        0.07520746887966805,
+        0.033713692946058096,
+        0.033713692946058096
+      ],
+      "cntstat_sha256": "c92d45efa4dff4ddeb662a817dd66fb0f1eba606fe53ff7c061d86e2bfd5ae55",
+      "observed_counts": 16201,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.3369545982509674,
+            "pearson": 0.22084131360838763
+          },
+          "weighted8": {
+            "cosine": 0.3371302481775019,
+            "pearson": 0.22102242868050873
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.31329083590008366,
+            "pearson": 0.18306325905380735
+          },
+          "weighted8": {
+            "cosine": 0.3143370413553171,
+            "pearson": 0.18408237913584916
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 1911.0,
+          "modeled_sum": 0.7863367698671473,
+          "within_layer_cosine": 0.4701991889690483,
+          "observed_fraction": 0.11795568174804025,
+          "modeled_fraction": 0.11775258006965038
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 2017.0,
+          "modeled_sum": 0.8598370346845707,
+          "within_layer_cosine": 0.3903115751564801,
+          "observed_fraction": 0.1244984877476699,
+          "modeled_fraction": 0.12875911842536839
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 2138.0,
+          "modeled_sum": 0.8636266126540644,
+          "within_layer_cosine": 0.36054179760647564,
+          "observed_fraction": 0.13196716252083204,
+          "modeled_fraction": 0.12932660121440084
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 10135.0,
+          "modeled_sum": 4.168072538121659,
+          "within_layer_cosine": 0.2788301873645406,
+          "observed_fraction": 0.6255786679834578,
+          "modeled_fraction": 0.6241617002905804
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a02_z+57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        57.0
+      ],
+      "neighbors_mm": [
+        [
+          8.817456953860943e-15,
+          144.0,
+          55.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          58.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          58.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          55.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          52.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          52.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          49.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          49.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.07520746887966805,
+        0.07520746887966805,
+        0.033713692946058096,
+        0.033713692946058096
+      ],
+      "cntstat_sha256": "ff35c9494ebfa293dc1f11282315623118444d0ddc7433b7e526fb390e326074",
+      "observed_counts": 59651,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.6214828772236708,
+            "pearson": 0.5079564956476726
+          },
+          "weighted8": {
+            "cosine": 0.6238582233879674,
+            "pearson": 0.511473870205183
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.5494423677209079,
+            "pearson": 0.4009414656203282
+          },
+          "weighted8": {
+            "cosine": 0.5517612587548268,
+            "pearson": 0.40453413742050137
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 9640.0,
+          "modeled_sum": 3.997365257067412,
+          "within_layer_cosine": 0.7691755561301638,
+          "observed_fraction": 0.16160667884863622,
+          "modeled_fraction": 0.16050828452649948
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 9098.0,
+          "modeled_sum": 3.818851275643884,
+          "within_layer_cosine": 0.6961407188693784,
+          "observed_fraction": 0.1525204942079764,
+          "modeled_fraction": 0.1533403198598664
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 8256.0,
+          "modeled_sum": 3.455261168196798,
+          "within_layer_cosine": 0.62209265077857,
+          "observed_fraction": 0.13840505607617642,
+          "modeled_fraction": 0.13874089732424566
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 32657.0,
+          "modeled_sum": 13.632939344353252,
+          "within_layer_cosine": 0.49151214179048974,
+          "observed_fraction": 0.547467770867211,
+          "modeled_fraction": 0.5474104982893884
+        }
+      ]
+    },
+    {
+      "dataset": "Point_rho98_a02_z+57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        57.0
+      ],
+      "neighbors_mm": [
+        [
+          8.817456953860943e-15,
+          144.0,
+          55.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          58.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          58.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          55.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          52.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          52.5
+        ],
+        [
+          9.184850993605149e-15,
+          150.0,
+          49.5
+        ],
+        [
+          8.817456953860943e-15,
+          144.0,
+          49.5
+        ]
+      ],
+      "neighbor_weights": [
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.19553941908713693,
+        0.07520746887966805,
+        0.07520746887966805,
+        0.033713692946058096,
+        0.033713692946058096
+      ],
+      "cntstat_sha256": "dec903e44db6e6a6d9bbde25a79e8c707df861fe64bc884b7ac59e7e25e3d55f",
+      "observed_counts": 16059,
+      "orientation": {
+        "negative_angle": {
+          "nearest": {
+            "cosine": 0.33817164263081273,
+            "pearson": 0.22282938349827247
+          },
+          "weighted8": {
+            "cosine": 0.3386061972145381,
+            "pearson": 0.22353576782151488
+          }
+        },
+        "positive_angle": {
+          "nearest": {
+            "cosine": 0.31773135454457707,
+            "pearson": 0.18944329997882017
+          },
+          "weighted8": {
+            "cosine": 0.3183853068382279,
+            "pearson": 0.19074342565602148
+          }
+        }
+      },
+      "layers": [
+        {
+          "detector_distance_mm": 300.0,
+          "observed_counts": 1841.0,
+          "modeled_sum": 0.7846932142220233,
+          "within_layer_cosine": 0.46614276743670946,
+          "observed_fraction": 0.11463976586337879,
+          "modeled_fraction": 0.1174389821037495
+        },
+        {
+          "detector_distance_mm": 330.0,
+          "observed_counts": 2032.0,
+          "modeled_sum": 0.857254055771782,
+          "within_layer_cosine": 0.40675582176640773,
+          "observed_fraction": 0.1265334080577869,
+          "modeled_fraction": 0.1282986036956651
+        },
+        {
+          "detector_distance_mm": 360.0,
+          "observed_counts": 2095.0,
+          "modeled_sum": 0.8639588270338457,
+          "within_layer_cosine": 0.3600035709994685,
+          "observed_fraction": 0.13045644187060215,
+          "modeled_fraction": 0.12930205510569912
+        },
+        {
+          "detector_distance_mm": 390.0,
+          "observed_counts": 10091.0,
+          "modeled_sum": 4.175803844300001,
+          "within_layer_cosine": 0.2799888611494449,
+          "observed_fraction": 0.6283703842082321,
+          "modeled_fraction": 0.6249603590948862
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-# Ellipse 500 x 300 x 120 mm, two energy source smoke.
-/ellipse/clear
-/ellipse/centerY -345
-/ellipse/angle 0
-/ellipse/add 218 250 150 60 0.114
-/ellipse/add 440 250 150 60 0.259
-/run/beamOn 10000

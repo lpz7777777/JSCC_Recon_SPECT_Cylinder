@@ -39,7 +39,7 @@ if not entry or not entry['gpu_20_percent_margin_pass'] or not entry['host_20_pe
     raise SystemExit('Resource estimate fails the 20% margin; choose a larger allocation')
 print(entry)
 PY
-dataset=${ELLIPSE_DATASET:?Set CircleNewDist, EllipseUniform, EllipseContrast or XCAT}
+dataset=${ELLIPSE_DATASET:?Set CircleNewDist, EllipseUniform, EllipseContrast, XCAT or NEMA_Body_H60}
 level=${ELLIPSE_LEVEL:?Set 1e9 or 1e10}
 mode=()
 iterations=10000
@@ -58,11 +58,14 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
 export PYTHONUNBUFFERED=1
 # Some 4090 nodes otherwise select an unreachable 169.254/16 interface.
 export NCCL_SOCKET_IFNAME=${NCCL_SOCKET_IFNAME:-bond0}
-srun --kill-on-bad-exit=1 torchrun --nnodes="$SLURM_NNODES" --nproc_per_node="$gpus" \
+command=(srun --kill-on-bad-exit=1 torchrun --nnodes="$SLURM_NNODES" --nproc_per_node="$gpus" \
   --rdzv_id="$SLURM_JOB_ID" --rdzv_backend=c10d --rdzv_endpoint="$master:$port" \
   "$base/run_reconstruction.py" \
   --factors "$base/generated/FactorsCalibrated" --geometry "$base/generated/Geometry/geometry.npz" \
   --data-root "$base/generated" --dataset "$dataset" --level "$level" \
   --iterations "$iterations" --save-step "$save_step" \
-  --output "$base/generated/Results/${dataset}_${level}_${SLURM_JOB_ID}" \
-  "${mode[@]}"
+  --output "$base/generated/Results/${dataset}_${level}_${SLURM_JOB_ID}")
+if [[ ${#mode[@]} -gt 0 ]]; then
+  command+=("${mode[@]}")
+fi
+"${command[@]}"

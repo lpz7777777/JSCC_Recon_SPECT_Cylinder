@@ -40,7 +40,7 @@ def main():
     if (run["experiment"]!="ELLIPSE500x300_H120" or
         run["iterations"]!=10000 or run["save_step"]!=50 or
         run["pilot_only"] or run["pixels_full"]!=132040 or
-        run["pixels_active"]!=82040 or run["world_size"]!=8):
+        run["pixels_active"]!=82040 or run["world_size"]<1):
         raise ValueError("Formal run metadata mismatch")
     collection_path=ROOT/"collections"/f'{run["dataset"]}_{run["count_level"]}.json'
     collection=json.loads(collection_path.read_text())
@@ -60,7 +60,7 @@ def main():
         raise ValueError("Geometry or Compton sensitivity hash mismatch")
     if sum(x["accepted_events"] for x in run["resources"])!=run["accepted_compton_events"]:
         raise ValueError("Accepted event total mismatch")
-    if len(run["resources"])!=8 or run["accepted_compton_events"]<=0:
+    if len(run["resources"])!=run["world_size"] or run["accepted_compton_events"]<=0:
         raise ValueError("Incomplete distributed resources")
     gpu_fraction=max(x["peak_reserved_bytes"]/x["total_device_bytes"]
                      for x in run["resources"])

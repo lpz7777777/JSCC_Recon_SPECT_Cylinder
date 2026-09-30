@@ -1,9 +1,11 @@
-"""Deploy the hash-verified ellipse 1e9 projection package to scxi717."""
+"""Deploy a hash-verified ellipse 1e9 projection package to scxi717."""
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
+import re
 import shlex
 import sys
 import tarfile
@@ -37,12 +39,17 @@ def run(client, command: str) -> str:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--archive-stem", default="imaging_1e9")
+    args = parser.parse_args()
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", args.archive_stem):
+        raise ValueError("Unsafe archive stem")
     base = HERE / "generated"
-    archive = base / "imaging_1e9.tar.gz"
-    expected = (base / "imaging_1e9.tar.gz.sha256").read_text().strip()
+    archive = base / f"{args.archive_stem}.tar.gz"
+    expected = (base / f"{args.archive_stem}.tar.gz.sha256").read_text().strip()
     if digest(archive) != expected:
         raise ValueError("Local imaging archive SHA-256 mismatch")
-    manifest_name = "imaging_1e9_files.json"
+    manifest_name = f"{args.archive_stem}_files.json"
     with tarfile.open(archive, "r:gz") as package:
         members = package.getmembers()
         names = [m.name for m in members]

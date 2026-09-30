@@ -1,4 +1,4 @@
-"""Package four collected 1e9 imaging datasets with per-file SHA-256."""
+"""Package selected collected 1e9 imaging datasets with per-file SHA-256."""
 from __future__ import annotations
 
 import argparse
@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import tarfile
 
 DATASETS = ("CircleNewDist", "EllipseUniform", "EllipseContrast", "XCAT")
@@ -22,16 +23,22 @@ def digest(path: Path) -> str:
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--generated", type=Path, required=True)
+    p.add_argument("--datasets", nargs="+", default=list(DATASETS))
+    p.add_argument("--archive-stem", default="imaging_1e9")
     a = p.parse_args()
+    if (not re.fullmatch(r"[A-Za-z0-9_-]+", a.archive_stem) or
+            len(a.datasets) != len(set(a.datasets)) or
+            not all(re.fullmatch(r"[A-Za-z0-9_-]+", value) for value in a.datasets)):
+        raise ValueError("Unsafe or repeated dataset/archive names")
     root = a.generated.resolve()
-    archive = root / "imaging_1e9.tar.gz"
-    manifest = root / "imaging_1e9_files.json"
-    sha_file = root / "imaging_1e9.tar.gz.sha256"
+    archive = root / f"{a.archive_stem}.tar.gz"
+    manifest = root / f"{a.archive_stem}_files.json"
+    sha_file = root / f"{a.archive_stem}.tar.gz.sha256"
     if any(path.exists() for path in (archive, manifest, sha_file)):
         raise FileExistsError("Imaging transfer package already exists")
     files = []
     all_seeds = set()
-    for dataset in DATASETS:
+    for dataset in a.datasets:
         collection = root / "collections" / f"{dataset}_1e9.json"
         record = json.loads(collection.read_text())
         if (record["dataset"] != dataset or record["level"] != "1e9" or
