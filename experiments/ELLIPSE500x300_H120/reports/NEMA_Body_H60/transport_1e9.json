@@ -29,5 +29,9 @@
   "pilot_validation": "check_remote_pilot.py passed for six channels and predicted crosstalk",
   "pilot_peak_gpu_reserved_gib": 11.734375,
   "formal_reconstruction_job": 1643142,
-  "formal_reconstruction": "running_unverified"
+  "formal_reconstruction": "completed_integrity_verified_scientific_quality_limited",
+  "formal_elapsed": "05:41:33",
+  "formal_completion_beijing": "2026-10-01 04:37:25",
+  "formal_integrity_report": "../NEMA_Body_H60_1e9_1643142_integrity.json",
+  "visualizations_and_metrics": "NEMA_Body_H60_1e9_1643142/README.md"
 }

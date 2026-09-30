@@ -1,0 +1,78 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "dataset": "NEMA_Body_H60",
+  "job_result": "NEMA_Body_H60_1e9_1643142",
+  "primaries": 1000000000,
+  "views": 20,
+  "worker_count": 200,
+  "accepted_compton_events": 97299,
+  "history_frames_per_channel": 200,
+  "gpu_peak_reserved_fraction": 0.5102406717193411,
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "sensi_d_sha256": "60a05c2cbc60d0d847fe5cda15b529221774fc4f561d66c121c378753f5d6e2a",
+  "collection_sha256": "3a1aac57da8bc80e5323c8ccc6623942a3beeaf401bee878ce6c60f1e8659b62",
+  "outputs": [
+    {
+      "channel": "440_SinglePhoton",
+      "density_sum": 4193897.9930700115,
+      "nonzero_voxels": 82040,
+      "sha256": {
+        "active": "5a09cd6b10ace6cc377d1636fff7a750c779970b5af93ca24510243a83e06389",
+        "full": "b47fb82ce8c9fc70e3cf457451058fd70f43b99e4276a7b185c4c5130b9044e7",
+        "history": "e6450ead87646f04860236bc4830614bddf778f6543f2e52e479ce2dec14fd37"
+      }
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "density_sum": 16272133.923417998,
+      "nonzero_voxels": 82040,
+      "sha256": {
+        "active": "b39a156bd81e3e9225bcc22af6a185ec03d359298bdff8777be471b30c9f4cda",
+        "full": "daff525c6926887adb89651011f8acc6e3d975b20a2507667caa5b017ca9cfca",
+        "history": "5d037ed2da5aa730e2d7aabb818be7578a3b19016de6e4e894ff2f615a5d0ee1"
+      }
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "density_sum": 12920991.834441822,
+      "nonzero_voxels": 82040,
+      "sha256": {
+        "active": "9477aad83973f6232f06ad9374ed67569868320f659fdd7ce9abf35d53e41ce2",
+        "full": "5e780519967fd75d8c4ee041e3e26fd7fe859642266c3326508274183e8f2535",
+        "history": "fcc050ec3c3a070b020731c9336aa97d5c593d34d2a4da12dbf74991122b8ffa"
+      }
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "density_sum": 1714014.4809042297,
+      "nonzero_voxels": 82040,
+      "sha256": {
+        "active": "8ede15eda3e05426667f3d32f2d558fb3c36475d100b09e9c6ca84007b92f070",
+        "full": "a2984ec0969a3569a7a2eea0a6ab49f0c857870751aa5e7816f731bd9e29dd2f",
+        "history": "0167c7a81cfe59d4b381265cca418facfa3696445e206a22304ea905d6fdd913"
+      }
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "density_sum": 5907912.472766472,
+      "nonzero_voxels": 82040,
+      "sha256": {
+        "active": "0d8bb84cd8e7813c7477807b8da6dea0e1520ab3cde6977e028b08425153eeeb",
+        "full": "325c818e4b09c60a06e8c42a5b6f0d9f5e435172f5f315658c7abecb25a4c456",
+        "history": "7812c54cee6b196a7f547b2b27a154b6b6b7318ff22f58c1a7b185b0c9787a23"
+      }
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "density_sum": 14635006.372890485,
+      "nonzero_voxels": 82040,
+      "sha256": {
+        "active": "3c339072958c6dd67e804a9bb22454220edbeb89bc31b0f1ab1f7103e615066e",
+        "full": "b485eeb49dfe2af206c10c0aa2342afc729d34b2ebf3b3b9c0669a787f6c396c",
+        "history": "270bc104b72ff641ff7cff1ca43dd62289dda2a0ac1b6e5a094fe7e2169e8dd3"
+      }
+    }
+  ],
+  "predicted_sha256": "e8481e7604ea41fdc9134dab5da5a227787f6d58fead2d39778d3adc0331091b",
+  "predicted_sum": 772454.77368927
+}

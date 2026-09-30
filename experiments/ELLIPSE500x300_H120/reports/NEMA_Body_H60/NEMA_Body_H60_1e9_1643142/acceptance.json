@@ -1,0 +1,43 @@
+{
+  "date_beijing": "2026-10-01",
+  "job": 1643142,
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "start_beijing": "2026-09-30 22:55:52",
+  "end_beijing": "2026-10-01 04:37:25",
+  "elapsed": "05:41:33",
+  "integrity_pass": true,
+  "scientific_quality": "limited; small spheres unresolved, high background noise and source-free axial leakage",
+  "gpu_peak_reserved_fraction": 0.5102406717193411,
+  "max_task_rss_kib": 26668416,
+  "conservative_host_budget_gib": 55,
+  "host_budget_fraction": 0.4624178799715909,
+  "twenty_percent_margin_pass": true,
+  "primary_counts_218_440": [
+    293821153,
+    706178847
+  ],
+  "accepted_compton_events": 97299,
+  "history_frames_per_channel": 200,
+  "metrics_rows": 4800,
+  "all_six_final_and_history_sha256_verified": true,
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "run_manifest_sha256": "6159a1a372ca2accdc52a22c858644fb2a911088acf9c6519266e09767c1e819",
+  "outputs_sha256": {
+    "analysis.json": "1b4665279bdd691edefc4359f8744319f1c08927bfe39e60a156b17384756a43",
+    "central_detail.png": "ca179cd51c2dbab7d11eb5e114ae60ecc8bbed8b141f7204c6137d964d0256a5",
+    "crc_cnr_cv_iterations.png": "26a90eaa24dc8f9c450eab42e99b55ede2eb458c2ea0fe54fdaf0f09b022f428",
+    "final_multiplanar.png": "f929c66c30cfa70f9845b191febfb41eabf6408f1e93d987a32df192341e0140",
+    "iteration_metrics.csv": "1325e28446d96415f4cc6b3db854a7b85ba020d5c57478795a90c986c14dbb15",
+    "iterations_z00.png": "9dda216f0ec1f3819200d55e32c56147ce7103e561b9aa87aefc1368083ffd7d",
+    "iterations_z10.png": "ac53a0a69d612cd1a6e14dd20126023a0fd70229973021310eb4b7fcfccec71f",
+    "iterations_z20.png": "618e56d1d130ef1b2c32c181ecfdf1c496297de3f2a386453335362497d935b0",
+    "iterations_z29.png": "c1be3faaba513d515bf282f71a5d5ffa49732db7e58ce2821e17edfc632f8f9b",
+    "iterations_z39.png": "22e3d77268c98bd69589d210fcd142f7ababf85c784633ec4a5474be34c1562e",
+    "README.md": "fcf9d50d3742b7617a82c8f9ed7db3356cc4f333629c45e0c5fcba641f5081d5",
+    "scripts\\analyze_nema_result.py": "2da2b5b85ca04247bef1801890f597af5dc219a3b8af0e1e7b8803e82fa5759c",
+    "scripts\\fetch_nema_results.py": "5129ed3511078881cbefe2ab50ed5964350c01efc7119a56c799ffc0825c000f",
+    "scripts\\plot_nema_iterations.py": "acd9ce1cc7843bd56d214ec8294e122e7522f872890190a4a13972812989f5da"
+  },
+  "automation_scope": "1e9 acceptance completed; no 1e10 submitted"
+}
