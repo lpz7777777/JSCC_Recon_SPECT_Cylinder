@@ -1,0 +1,77 @@
+{
+  "result": "EllipseContrast_1e9_1641013",
+  "method": "Local background CRC; selected verified source-history frames; no smoothing",
+  "rows": [
+    {
+      "iteration": 50,
+      "group_median_crc": {
+        "center": -0.0009651281784783029,
+        "long_plus": -0.00043216397800445173,
+        "long_minus": 0.00039530895644728225,
+        "short_plus": -0.00190670938474532,
+        "short_minus": -0.0011407323847238305
+      },
+      "positive_rods": 13
+    },
+    {
+      "iteration": 500,
+      "group_median_crc": {
+        "center": -0.008854887958115398,
+        "long_plus": 0.0115385154976531,
+        "long_minus": 0.01767088778469235,
+        "short_plus": -0.012713522940611044,
+        "short_minus": -0.0017755103135319254
+      },
+      "positive_rods": 14
+    },
+    {
+      "iteration": 1000,
+      "group_median_crc": {
+        "center": -0.011940178176754346,
+        "long_plus": 0.024273623880241325,
+        "long_minus": 0.030711000244315348,
+        "short_plus": -0.023537998256645997,
+        "short_minus": -0.00848569535584882
+      },
+      "positive_rods": 15
+    },
+    {
+      "iteration": 3000,
+      "group_median_crc": {
+        "center": -0.015766430464695634,
+        "long_plus": 0.0827034840290704,
+        "long_minus": 0.06360624845915355,
+        "short_plus": -0.04555459267787987,
+        "short_minus": -0.06594129731965775
+      },
+      "positive_rods": 14
+    },
+    {
+      "iteration": 10000,
+      "group_median_crc": {
+        "center": 0.019937130011293373,
+        "long_plus": 0.10507163833698796,
+        "long_minus": 0.09149364851035903,
+        "short_plus": -0.05291286195702288,
+        "short_minus": -0.12500853676505777
+      },
+      "positive_rods": 14
+    }
+  ],
+  "full_image_sums": {
+    "218_SinglePhoton_CrossTalkCorrected": [
+      1743841.9525928497,
+      1743316.8131799698,
+      1742156.1623888016,
+      1739999.3964704871,
+      1790151.4326048351
+    ],
+    "440_SinglePlusCompton": [
+      4068442.9668922424,
+      4915180.13546133,
+      6004336.756735504,
+      9039185.040454837,
+      12701942.741161073
+    ]
+  }
+}

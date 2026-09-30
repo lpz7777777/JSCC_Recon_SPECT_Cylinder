@@ -1,5 +1,6 @@
 {
   "result": "EllipseContrast_1e9_1641013",
+  "iteration": 10000,
   "truth_sha256": "3e0c514729d70783627f30710554a630e7ee7a1c039cf14d12c836d63ce736b6",
   "method": "3-mm XY linear interpolation; local background within 55 mm of each group center; no smoothing; CRC=(rod/background-1)/5",
   "rows": [

@@ -28,10 +28,13 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("result_name")
+    parser.add_argument("--iteration", type=int, default=10000)
     args = parser.parse_args()
     integrity = json.loads((HERE / "reports" / f"{args.result_name}_integrity.json").read_text())
     if integrity["dataset"] != "EllipseContrast" or integrity["job_result"] != args.result_name:
         raise ValueError("A verified EllipseContrast formal result is required")
+    if args.iteration not in (50, 500, 1000, 3000, 10000):
+        raise ValueError("Selected history frame not available")
     truth_path = ROOT / "Simulation/Contrast_truth.json"
     truth = json.loads(truth_path.read_text())
     rods = truth["rods"]
@@ -47,15 +50,24 @@ def main():
     query = np.column_stack((xx.ravel(), yy.ravel()))
     ellipse = (xx / 250.) ** 2 + (yy / 150.) ** 2 <= 1
     tri = Delaunay(xy)
-    report = {"result": args.result_name, "truth_sha256": digest(truth_path),
+    report = {"result": args.result_name, "iteration": args.iteration,
+              "truth_sha256": digest(truth_path),
               "method": "3-mm XY linear interpolation; local background within 55 mm of each group center; no smoothing; CRC=(rod/background-1)/5",
               "rows": []}
     for energy, channel in CHANNELS.items():
-        image_path = ROOT / "RemoteResults" / args.result_name / f"Image_{channel}_full.float32"
-        expected = next(item["sha256"]["full"] for item in integrity["outputs"]
-                        if item["channel"] == channel)
-        if digest(image_path) != expected:
-            raise ValueError(f"Image checksum mismatch: {channel}")
+        if args.iteration == 10000:
+            image_path = ROOT / "RemoteResults" / args.result_name / f"Image_{channel}_full.float32"
+            expected = next(item["sha256"]["full"] for item in integrity["outputs"]
+                            if item["channel"] == channel)
+            if digest(image_path) != expected:
+                raise ValueError(f"Image checksum mismatch: {channel}")
+        else:
+            image_path = ROOT / "HistorySelected" / args.result_name / f"Image_{channel}_iter{args.iteration:05d}_full.float32"
+            source = json.loads((image_path.parent / "source_manifest.json").read_text())
+            expected = next(item["sha256"]["history"] for item in integrity["outputs"]
+                            if item["channel"] == channel)
+            if source["source_history_sha256"][channel] != expected:
+                raise ValueError(f"History source mismatch: {channel}")
         polar = np.memmap(image_path, dtype="<f4", mode="r", shape=(40, 3301))
         for group in GROUPS:
             same_group = [rod for rod in rods if rod["group"] == group]
@@ -91,7 +103,8 @@ def main():
                     "background_cv": bg_std / bg_mean,
                     "crc": (rod_mean / bg_mean - 1) / rod["excess_activity"],
                     "cnr": (rod_mean - bg_mean) / bg_std if bg_std > 0 else None})
-    out = HERE / "reports" / f"{args.result_name}_contrast_metrics.json"
+    suffix = "contrast_metrics" if args.iteration == 10000 else f"contrast_iter{args.iteration:05d}"
+    out = HERE / "reports" / f"{args.result_name}_{suffix}.json"
     out.write_text(json.dumps(report, indent=2) + "\n")
     fig, axes = plt.subplots(1, 2, figsize=(11, 4), layout="constrained")
     for ax, energy in zip(axes, CHANNELS):
@@ -102,7 +115,7 @@ def main():
         ax.axhline(1, color="black", linestyle="--", linewidth=.8)
         ax.set(title=f"{energy} keV hot rods", xlabel="diameter (mm)", ylabel="CRC")
         ax.legend(fontsize=7)
-    fig.suptitle("EllipseContrast 10⁹ primaries, 10000 iterations; raw local contrast")
+    fig.suptitle(f"EllipseContrast 10⁹ primaries, {args.iteration} iterations; raw local contrast")
     figure = out.with_suffix(".png")
     fig.savefig(figure, dpi=170)
     print(out)
