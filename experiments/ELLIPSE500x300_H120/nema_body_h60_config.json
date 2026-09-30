@@ -3,24 +3,37 @@
   "name": "NEMA_Body_H60",
   "kind": "shortened_NEMA_IEC_body_phantom_research_geometry",
   "center_object_mm": [0.0, 0.0, 0.0],
-  "body_width_mm": 290.0,
-  "body_ap_mm": 220.0,
+  "body_outer_width_mm": 300.0,
+  "body_outer_ap_mm": 230.0,
   "body_height_mm": 60.0,
-  "body_lower_contour_knots_mm": [[0.0, -110.0], [50.0, -110.0], [80.0, -106.0], [112.0, -82.0], [135.0, -45.0], [145.0, 0.0]],
+  "body_arc_geometry_mm": {
+    "top_inner_radius": 147.0,
+    "bottom_inner_radius": 77.0,
+    "bottom_arc_center_offset_x": 70.0,
+    "circle_center_y": -35.0,
+    "wall_thickness": 3.0
+  },
   "lung_outer_diameter_mm": 51.0,
   "sphere_center_ring_radius_mm": 57.0,
   "sphere_equator_z_mm": 0.0,
   "spheres": [
-    {"diameter_mm": 10.0, "angle_deg": 0.0, "fill": "hot"},
-    {"diameter_mm": 13.0, "angle_deg": 60.0, "fill": "hot"},
-    {"diameter_mm": 17.0, "angle_deg": 120.0, "fill": "hot"},
-    {"diameter_mm": 22.0, "angle_deg": 180.0, "fill": "hot"},
-    {"diameter_mm": 28.0, "angle_deg": 240.0, "fill": "cold"},
-    {"diameter_mm": 37.0, "angle_deg": 300.0, "fill": "cold"}
+    {"diameter_mm": 10.0, "angle_deg": 0.0, "hot_energy_keV": 218},
+    {"diameter_mm": 13.0, "angle_deg": 60.0, "hot_energy_keV": 440},
+    {"diameter_mm": 17.0, "angle_deg": 120.0, "hot_energy_keV": 218},
+    {"diameter_mm": 22.0, "angle_deg": 180.0, "hot_energy_keV": 440},
+    {"diameter_mm": 28.0, "angle_deg": 240.0, "hot_energy_keV": 218},
+    {"diameter_mm": 37.0, "angle_deg": 300.0, "hot_energy_keV": 440}
   ],
-  "preview_relative_activity": {"background": 1.0, "hot_spheres": 4.0, "cold_spheres": 0.0, "lung_insert": 0.0},
+  "relative_activity_concentration": {
+    "background_218": 1.0,
+    "background_440": 1.0,
+    "hot_sphere_to_own_background_ratio": 10.0,
+    "opposite_energy_in_sphere": 0.0,
+    "lung_insert_218": 0.0,
+    "lung_insert_440": 0.0
+  },
   "truth_spacing_mm": 3.0,
   "subvoxel_samples_per_axis": 8,
   "attenuation_material_model": "none",
-  "source_geometry_note": "Cross-section and sphere order follow the user-supplied sketch; body lower contour is a documented approximation, not a manufacturer CAD file."
+  "source_geometry_note": "Cross-section uses analytic circular arcs from NEMA NU 2-2007 Figure 7-1: inner upper R147, lower corner R77 at x=+/-70, straight inner base; wall 3 mm. Shift y by -35 mm to center the 300x230-mm outer extent at the ellipse FOV origin. Sphere order and ring radius follow the user-supplied sketch. Shortened axial extent and activity pattern are research adaptations."
 }

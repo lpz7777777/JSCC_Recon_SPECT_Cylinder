@@ -8,28 +8,40 @@
     168
   ],
   "spacing_mm": 3.0,
-  "body_dimensions_mm": [
-    290.0,
-    220.0,
+  "body_outer_dimensions_mm": [
+    300.0,
+    230.0,
     60.0
   ],
+  "body_arc_geometry_mm": {
+    "top_inner_radius": 147.0,
+    "bottom_inner_radius": 77.0,
+    "bottom_arc_center_offset_x": 70.0,
+    "circle_center_y": -35.0,
+    "wall_thickness": 3.0
+  },
   "physical_fov_mm": [
     500,
     300,
     120
   ],
-  "fov_center_margin_mm": [
-    105,
-    40,
+  "fov_outer_extent_margin_mm": [
+    100,
+    35,
     30
   ],
-  "body_volume_mm3": 3135594.375,
+  "body_volume_mm3": 3243375.0,
+  "body_analytic_volume_mm3": 3242195.3548366716,
+  "body_relative_volume_error": 0.00036384148215140577,
+  "wall_volume_mm3": 153630.0,
+  "wall_analytic_volume_mm3": 153565.47582567902,
+  "wall_relative_volume_error": 0.00042017370098346163,
   "lung_outer_volume_mm3": 122647.5,
   "spheres": [
     {
       "diameter_mm": 10.0,
       "angle_deg": 0.0,
-      "fill": "hot",
+      "hot_energy_keV": 218,
       "center_mm": [
         57.0,
         0.0,
@@ -42,7 +54,7 @@
     {
       "diameter_mm": 13.0,
       "angle_deg": 60.0,
-      "fill": "hot",
+      "hot_energy_keV": 440,
       "center_mm": [
         28.500000000000007,
         49.363448015713,
@@ -55,7 +67,7 @@
     {
       "diameter_mm": 17.0,
       "angle_deg": 120.0,
-      "fill": "hot",
+      "hot_energy_keV": 218,
       "center_mm": [
         -28.499999999999986,
         49.363448015713004,
@@ -68,7 +80,7 @@
     {
       "diameter_mm": 22.0,
       "angle_deg": 180.0,
-      "fill": "hot",
+      "hot_energy_keV": 440,
       "center_mm": [
         -57.0,
         6.980486755139913e-15,
@@ -81,7 +93,7 @@
     {
       "diameter_mm": 28.0,
       "angle_deg": 240.0,
-      "fill": "cold",
+      "hot_energy_keV": 218,
       "center_mm": [
         -28.500000000000025,
         -49.363448015713,
@@ -94,7 +106,7 @@
     {
       "diameter_mm": 37.0,
       "angle_deg": 300.0,
-      "fill": "cold",
+      "hot_energy_keV": 440,
       "center_mm": [
         28.500000000000007,
         -49.363448015713,
@@ -105,14 +117,38 @@
       "relative_volume_error": -4.142925290506749e-05
     }
   ],
-  "relative_activity_integral_mm3": 3004376.0625,
-  "truth_sha256": "1b2ca8fa9972ca7947fb6523d182798bcd5d9a301e4c4efb754ef4eb6d5a9b91",
-  "configuration_sha256": "0def93164871435398c4ca147353bf420a493329b6c84e7a47cd76c26aeb02ed",
+  "relative_activity_concentration": {
+    "background_218": 1.0,
+    "background_440": 1.0,
+    "hot_sphere_to_own_background_ratio": 10.0,
+    "opposite_energy_in_sphere": 0.0,
+    "lung_insert_218": 0.0,
+    "lung_insert_440": 0.0
+  },
+  "hot_sphere_diameters_by_energy_keV": {
+    "218": [
+      10,
+      17,
+      28
+    ],
+    "440": [
+      13,
+      22,
+      37
+    ]
+  },
+  "relative_activity_integral_mm3": {
+    "218": 3218760.703125,
+    "440": 3405284.296875
+  },
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "configuration_sha256": "883bdca4cc006c7841d9e8818b015b5d4ddf7e42b1c79a39467d9d7bafd84216",
   "preview_sha256": {
-    "layout_in_ellipse.png": "288b05ea297f6c6420f17f58b7573e7c7bca850d3c5cf1988ef53caad5fbceb9",
-    "activity_slices.png": "c74dc0be66ec92bdb943fd2450b377c70e3d4858550e388e95c5f771936886f1",
-    "geometry_3d.png": "f5789a2406c3511bbdd3d11c8e9036e9ea9a865a89d536a0ab5c52b8f7eef76d"
+    "layout_in_ellipse.png": "944892d9b76f1a20c44973f811a66eea7a3c1f0e747752c6acb03022615a2933",
+    "activity_slices.png": "d769fed720f72391a30ec3a1f39d5f7610707887b898873cdfeb8b9b4d67b7bc",
+    "energy_axial_comparison.png": "74473d6e372af27ffdf36a473c2c0b9074efccf7ab2208a24c459c6182fdbc6a",
+    "geometry_3d.png": "6d2401af3b6874321ced038d7b4d2a856f88f97eb9d9c3c03dd80548a9b88cb9"
   },
   "material_attenuation": false,
-  "standard_compliance": "adapted research phantom: 60-mm length differs from NEMA NU 2 body minimum 180 mm"
+  "standard_compliance": "cross-section from NEMA NU 2-2007 Fig 7-1; axial length and dual-energy filling are research adaptations"
 }
