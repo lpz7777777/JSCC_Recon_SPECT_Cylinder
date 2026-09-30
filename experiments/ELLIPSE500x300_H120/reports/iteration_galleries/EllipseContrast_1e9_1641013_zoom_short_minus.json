@@ -1,0 +1,80 @@
+{
+  "group": "short_minus",
+  "z_mm": -46.5,
+  "truth_sha256": "3e0c514729d70783627f30710554a630e7ee7a1c039cf14d12c836d63ce736b6",
+  "iterations": [
+    50,
+    500,
+    1000,
+    3000,
+    5000,
+    10000
+  ],
+  "display": "gray_r; no smoothing; per-panel p99.5; red true rod outlines",
+  "channels": {
+    "218_SinglePhoton_CrossTalkCorrected": [
+      {
+        "iteration": 50,
+        "frame_sha256": "bce8084c87f6cd00e60189f4fe99195bdc67d97dc7a8ca4c37d12a4117075e44",
+        "slice_sum": 280126.92527304194
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "6623beb8157ea33a000cd256a1dd9bfed6f7df748d6e446ee1a7f340e421c3eb",
+        "slice_sum": 294347.619747102
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "0521be827b7730e9732070e76806d8c1ed6e57591372c0ee5bd807924ce81d62",
+        "slice_sum": 305514.0290987772
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "1455dfcf84d93c71c96754b1d38131fe1facdc4fc186537013a315f175a6d16f",
+        "slice_sum": 333504.678424172
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "37adb79d888f0b0eb875e0054dfd741dc283a14b59871e5a5fe4d8d557900d63",
+        "slice_sum": 344901.8612701937
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "26c0b3cea31d055cdf16a0c80d1690e0cf0d1e3c0b42a5919eb4e6bfc6b06da8",
+        "slice_sum": 346371.6382418457
+      }
+    ],
+    "440_SinglePlusCompton": [
+      {
+        "iteration": 50,
+        "frame_sha256": "af9de097d1008647bca166d179efc83dd970c069d81f172981104a79c8ee2729",
+        "slice_sum": 648261.8784029223
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "b5ac8018793ae46e0d097068f3a5035fdeb6365c2513cfa197a9c802dce7591c",
+        "slice_sum": 638957.5811476322
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "392badb6f70154d1a327f2dd12ef18a48cf3f670e9a6ee90faef30e062e23a2e",
+        "slice_sum": 603756.246118855
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "abc2dbc5fe11142cbe1b0bcde05808bf78930a72a21acc854e5aa1b19f018569",
+        "slice_sum": 547683.8608200572
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "2a9d1610ab25b24a4444a218992b4e2c2f1f442a3f5f267f6ae945c0ac57cafd",
+        "slice_sum": 554114.431302103
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "dc8b2e77be7283eb5e3dfc05c243f55859e1945ef17278cf21e5be506fd54494",
+        "slice_sum": 591032.1548636984
+      }
+    ]
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "result": "EllipseUniform_1e9_1640929",
+  "dataset": "EllipseUniform",
+  "z_mm": -58.5,
+  "slice_label": "lower_edge",
+  "iterations": [
+    50,
+    500,
+    1000,
+    3000,
+    5000,
+    10000
+  ],
+  "display": "gray_r; full FOV; no smoothing; independent panel p99.5 scaling",
+  "truth_source": "Geant4 analytic source geometry",
+  "channels": {
+    "440_SinglePhoton": [
+      {
+        "iteration": 50,
+        "frame_sha256": "703910d88ef60c322d7c791955c4e8feb96bc180d79bc01791e160465c11bae0",
+        "panel_p99_5": 50.7598952077636,
+        "slice_sum": 641282.53875094,
+        "slice_max": 51.18727682738431
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "3370e63a31275a800a92392a11d8f95ab6abc5ce012a984b5668078594a08987",
+        "panel_p99_5": 64.59934680678066,
+        "slice_sum": 642519.2160447156,
+        "slice_max": 72.84126458772278
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "234887750c88aeb9ae43848ca5bb5610729e0db8076fcaed3f774950e4b74a50",
+        "panel_p99_5": 80.93746704745155,
+        "slice_sum": 641680.8673444622,
+        "slice_max": 106.63972470967653
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "c2db3f9a98b965b0ffb997d9e1f138a574e5cc804282e982f36a9b9c15a3e361",
+        "panel_p99_5": 187.6423756570314,
+        "slice_sum": 628546.7994649229,
+        "slice_max": 406.0555496476609
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "c436ad722835a21f833cafbed6130a00ee7cbed723c3f6ee10ab1ab81d98cdc2",
+        "panel_p99_5": 354.4410807871805,
+        "slice_sum": 615619.0849023273,
+        "slice_max": 1178.1300311487403
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "fdc610985d701233edbfe5c9b4b80baeaf565f562a8633bce2251a4c69381fb8",
+        "panel_p99_5": 1118.22020008672,
+        "slice_sum": 647607.4290593723,
+        "slice_max": 6474.829722417153
+      }
+    ],
+    "440_ComptonOnly": [
+      {
+        "iteration": 50,
+        "frame_sha256": "cb6f44e5f7e33eb8605fa6034822732d0140402e936498c4b2b8d31657f8e3f9",
+        "panel_p99_5": 1318.2239913835192,
+        "slice_sum": 1206811.8810698001,
+        "slice_max": 35465.30526083993
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "b4f2890770d6fbf162f4d8ec7d5326e5d733e9c8c8785f0f31dcaece80819030",
+        "panel_p99_5": 7393.2045962095945,
+        "slice_sum": 3759185.6996991,
+        "slice_max": 399648.322686532
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "d0f73714f2a1a24ca11134ccdd134f3b4b56e8e549598866c8a7047031c63e3b",
+        "panel_p99_5": 8982.629203481263,
+        "slice_sum": 4532375.611313663,
+        "slice_max": 504297.6714254123
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "7531c75bae273a2acb521d25d86115f9988be4c9f01b9e47393d8c59010f930d",
+        "panel_p99_5": 9291.037025161642,
+        "slice_sum": 5013957.154815286,
+        "slice_max": 553936.1247398804
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "8119466c222a878fb6e0d0869aab6bb9826309dce3075eeb8da5853ade188848",
+        "panel_p99_5": 9192.537172793931,
+        "slice_sum": 4943910.277169243,
+        "slice_max": 553742.0755707239
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "d9be7e5dd358c6c948291e535bb88cca5d1db37d0a3ac5b9ef71482fd88fa6aa",
+        "panel_p99_5": 9236.005972890032,
+        "slice_sum": 4794938.146988488,
+        "slice_max": 548903.6493229882
+      }
+    ],
+    "440_SinglePlusCompton": [
+      {
+        "iteration": 50,
+        "frame_sha256": "70aaf9fb8327d43cc1152266cae11081f7deef2c7d61f56232be5cfdf027c730",
+        "panel_p99_5": 127.4760870681513,
+        "slice_sum": 691994.2019319258,
+        "slice_max": 634.0420437653723
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "0eb3743cb203da7725b71cf31fa325d153b81195ef4b177b6d817f62eb357638",
+        "panel_p99_5": 1156.705242921692,
+        "slice_sum": 1184757.2720150133,
+        "slice_max": 47116.31025609803
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "cd57c598563ca9ad1f80fd362d394552c1448807bcd87caf080a3df8b64446b8",
+        "panel_p99_5": 2109.944092761765,
+        "slice_sum": 1637842.5095331902,
+        "slice_max": 111807.91397356147
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "aeae044da4819dbe0d39a6c55debbd2133aa30e3e73600deeff5e9859edca384",
+        "panel_p99_5": 4732.973432653821,
+        "slice_sum": 2687600.2822526083,
+        "slice_max": 191681.19106940922
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "f42084f8dc70985603ad1927543a26467432ea3b44cd31a60e6ca13115cdfaa8",
+        "panel_p99_5": 6456.569277586746,
+        "slice_sum": 3117378.4607137684,
+        "slice_max": 304113.99499900476
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "b714f0ae10f4a9ffbc56ef0c128a64f175a8289f3dfb14d765e94b088572f609",
+        "panel_p99_5": 8528.44155033062,
+        "slice_sum": 3380413.7738344795,
+        "slice_max": 363098.3678683812
+      }
+    ],
+    "218_SinglePhoton_CrossTalkCorrected": [
+      {
+        "iteration": 50,
+        "frame_sha256": "7455a03059e34a5d0f25d80db1042af8290e462f3e26fa42f43e2f5804226bbe",
+        "panel_p99_5": 22.726256511289574,
+        "slice_sum": 282133.70895028027,
+        "slice_max": 23.043431287947435
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "4effb71937a1d46313878733381da2415dbe4d251a358197418968f8d6e0c56d",
+        "panel_p99_5": 31.431406372044616,
+        "slice_sum": 285581.51364394533,
+        "slice_max": 35.22685013699916
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "4ba80af1b5d6d986e009853480ffd067a71a2e910903eac3e86e33742db177cd",
+        "panel_p99_5": 42.90907766544944,
+        "slice_sum": 290222.6642355613,
+        "slice_max": 53.14263144114432
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "a35e0ad383cc5c662104eec4475cd96224beb48d30c00aca8da8745fe3c5e0cf",
+        "panel_p99_5": 112.20354904661141,
+        "slice_sum": 310889.87300904456,
+        "slice_max": 169.2202024281972
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "64ccf912386f54d1c7788980f46a858ec60bccf61dd9e64810215213456f7117",
+        "panel_p99_5": 220.1446763630751,
+        "slice_sum": 332735.4606425421,
+        "slice_max": 384.90507672415083
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "0155748f1c89f554c6b123551000101d6afb0c6759d08829f6ade67ebf368a96",
+        "panel_p99_5": 592.6349466968312,
+        "slice_sum": 387631.7410300567,
+        "slice_max": 2941.964386521314
+      }
+    ],
+    "440SinglePlus218Single": [
+      {
+        "iteration": 50,
+        "frame_sha256": "34bc7a4b7234d9ddc889f1163ca67740ef4f9ef9f7040b8b611d101da56e7c9e",
+        "panel_p99_5": 72.44839585647455,
+        "slice_sum": 923416.2474610357,
+        "slice_max": 73.20833923993004
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "329bfedd3cb8736e0460f8a361557cdee789b12aa5c488cdf1ec6a55a9390057",
+        "panel_p99_5": 86.5977193740638,
+        "slice_sum": 928100.7287061296,
+        "slice_max": 95.11068003799961
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "30e93e5afb95d543875d1ee9d65caee93190a219ec30c2e8a658677dd9e92359",
+        "panel_p99_5": 104.27493185331376,
+        "slice_sum": 931903.531462298,
+        "slice_max": 130.081832391814
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "dcb3c8c251c92f773e7f77b6bf98f2b8322d98ccf5a6de9401d3f75d5523ce3d",
+        "panel_p99_5": 206.89888654926386,
+        "slice_sum": 939436.6717419412,
+        "slice_max": 434.5298900316958
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "f2dbb6cfdc847d37e9dec15b75e4328db71220a73cc66c0e82d34668fd0c5819",
+        "panel_p99_5": 387.0469421939747,
+        "slice_sum": 948354.5462055366,
+        "slice_max": 1211.3973267478532
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "85ba9ae6c8b77a2e642b13b835d23ac13ba7b3814331ed626643c7df1a39d950",
+        "panel_p99_5": 1189.3313961005267,
+        "slice_sum": 1035239.1712727266,
+        "slice_max": 6515.443223042016
+      }
+    ],
+    "440SingleComptonPlus218Single": [
+      {
+        "iteration": 50,
+        "frame_sha256": "ce089e89a97d36dd0c4894bf54c870e748accec029ddb360d0044b97148d6e71",
+        "panel_p99_5": 149.40779030107933,
+        "slice_sum": 974127.9107673108,
+        "slice_max": 657.0587501525767
+      },
+      {
+        "iteration": 500,
+        "frame_sha256": "c774876be473f54749a6a2d5536dfe4c984c87ed17fccfa1b0db6dd2975a7638",
+        "panel_p99_5": 1176.3737854427895,
+        "slice_sum": 1470338.7872903456,
+        "slice_max": 47136.653370347485
+      },
+      {
+        "iteration": 1000,
+        "frame_sha256": "ee711a363c44b747c1830715d25264f9d15c01e8090c155c88586a962fa3863d",
+        "panel_p99_5": 2133.0373931155077,
+        "slice_sum": 1928065.1752172213,
+        "slice_max": 111826.98535510513
+      },
+      {
+        "iteration": 3000,
+        "frame_sha256": "97bc4799012704576b476c29af5d5d47d219b78fc322ca851784a7ef1b54484a",
+        "panel_p99_5": 4764.456663878683,
+        "slice_sum": 2998490.169789126,
+        "slice_max": 191692.44106371078
+      },
+      {
+        "iteration": 5000,
+        "frame_sha256": "01ca45f5a91fe278ca9dfe9f5a499f275fe62ee5e772dd3517054f130f9597f8",
+        "panel_p99_5": 6470.444001323734,
+        "slice_sum": 3450113.941226491,
+        "slice_max": 304121.463979241
+      },
+      {
+        "iteration": 10000,
+        "frame_sha256": "ccf792cbcc3766c79851480998d9e1b30f2eae7afca232b2ba722a2cdc4f3672",
+        "panel_p99_5": 8586.207728658193,
+        "slice_sum": 3768045.5272525707,
+        "slice_max": 363099.70073670306
+      }
+    ]
+  }
+}

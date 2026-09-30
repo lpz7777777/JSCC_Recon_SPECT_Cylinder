@@ -1,0 +1,98 @@
+[
+  {
+    "dataset": "CircleNewDist",
+    "result": "CircleNewDist_1e9_1640673",
+    "slice": "center",
+    "z_mm": 1.5,
+    "figure": "CircleNewDist_1e9_1640673_center.png",
+    "metadata": "CircleNewDist_1e9_1640673_center.json"
+  },
+  {
+    "dataset": "CircleNewDist",
+    "result": "CircleNewDist_1e9_1640673",
+    "slice": "lower_edge",
+    "z_mm": -58.5,
+    "figure": "CircleNewDist_1e9_1640673_lower_edge.png",
+    "metadata": "CircleNewDist_1e9_1640673_lower_edge.json"
+  },
+  {
+    "dataset": "CircleNewDist",
+    "result": "CircleNewDist_1e9_1640673",
+    "slice": "upper_edge",
+    "z_mm": 58.5,
+    "figure": "CircleNewDist_1e9_1640673_upper_edge.png",
+    "metadata": "CircleNewDist_1e9_1640673_upper_edge.json"
+  },
+  {
+    "dataset": "EllipseUniform",
+    "result": "EllipseUniform_1e9_1640929",
+    "slice": "center",
+    "z_mm": 1.5,
+    "figure": "EllipseUniform_1e9_1640929_center.png",
+    "metadata": "EllipseUniform_1e9_1640929_center.json"
+  },
+  {
+    "dataset": "EllipseUniform",
+    "result": "EllipseUniform_1e9_1640929",
+    "slice": "lower_edge",
+    "z_mm": -58.5,
+    "figure": "EllipseUniform_1e9_1640929_lower_edge.png",
+    "metadata": "EllipseUniform_1e9_1640929_lower_edge.json"
+  },
+  {
+    "dataset": "EllipseUniform",
+    "result": "EllipseUniform_1e9_1640929",
+    "slice": "upper_edge",
+    "z_mm": 58.5,
+    "figure": "EllipseUniform_1e9_1640929_upper_edge.png",
+    "metadata": "EllipseUniform_1e9_1640929_upper_edge.json"
+  },
+  {
+    "dataset": "EllipseContrast",
+    "result": "EllipseContrast_1e9_1641013",
+    "slice": "center",
+    "z_mm": 1.5,
+    "figure": "EllipseContrast_1e9_1641013_center.png",
+    "metadata": "EllipseContrast_1e9_1641013_center.json"
+  },
+  {
+    "dataset": "EllipseContrast",
+    "result": "EllipseContrast_1e9_1641013",
+    "slice": "lower_rods",
+    "z_mm": -46.5,
+    "figure": "EllipseContrast_1e9_1641013_lower_rods.png",
+    "metadata": "EllipseContrast_1e9_1641013_lower_rods.json"
+  },
+  {
+    "dataset": "EllipseContrast",
+    "result": "EllipseContrast_1e9_1641013",
+    "slice": "upper_rods",
+    "z_mm": 46.5,
+    "figure": "EllipseContrast_1e9_1641013_upper_rods.png",
+    "metadata": "EllipseContrast_1e9_1641013_upper_rods.json"
+  },
+  {
+    "dataset": "XCAT",
+    "result": "XCAT_1e9_1641014",
+    "slice": "center",
+    "z_mm": 1.5,
+    "figure": "XCAT_1e9_1641014_center.png",
+    "metadata": "XCAT_1e9_1641014_center.json"
+  },
+  {
+    "dataset": "XCAT",
+    "result": "XCAT_1e9_1641014",
+    "slice": "lower",
+    "z_mm": -46.5,
+    "figure": "XCAT_1e9_1641014_lower.png",
+    "metadata": "XCAT_1e9_1641014_lower.json"
+  },
+  {
+    "dataset": "XCAT",
+    "result": "XCAT_1e9_1641014",
+    "slice": "upper",
+    "z_mm": 46.5,
+    "figure": "XCAT_1e9_1641014_upper.png",
+    "metadata": "XCAT_1e9_1641014_upper.json"
+  }
+]
