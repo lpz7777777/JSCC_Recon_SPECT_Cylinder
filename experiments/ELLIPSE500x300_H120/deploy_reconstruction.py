@@ -21,6 +21,7 @@ FILES=("config.json","geometry.py","torch_active_operator.py",
        "validate_factors.py","run_reconstruction.py","run_sensitivity.py",
        "resource_budget.py","reconstruct.sh","test_active_dist.py",
        "diagnose_geometry_payload.py","diagnose_nccl.py","diagnose_nccl.sh",
+       "check_remote_pilot.py","verify_formal_result.py","analyze_circle_uniform.py",
        "README.md")
 
 
