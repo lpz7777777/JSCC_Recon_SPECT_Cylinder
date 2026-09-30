@@ -15,7 +15,8 @@ REMOTE=("/data/run01/scxi717/lpz/"
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("result_name")
-    p.add_argument("--kind",choices=("integrity","circle_uniformity"),default="integrity")
+    p.add_argument("--kind",choices=("integrity","circle_uniformity","ellipse_uniformity"),
+                   default="integrity")
     args=p.parse_args()
     if "/" in args.result_name or "\\" in args.result_name:
         p.error("result_name must be a directory name")
