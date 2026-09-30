@@ -1,0 +1,318 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "datasets": 10,
+  "factor_interpolation": "nearest polar center; no interpolation",
+  "comparison": "flattened 20-view direct-window detector pattern",
+  "rows": [
+    {
+      "dataset": "Point_center_z+00_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nearest_factor_mm": [
+        0.0,
+        0.0,
+        -1.5
+      ],
+      "nearest_distance_mm": 1.5,
+      "measured_counts": 54690,
+      "cntstat_sha256": "3932e06ee92aee294d579f42c09e7b5094b9d91af6ff6fcd3f80082ac37b5b1a",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.5282937344212385,
+          "pearson": 0.33447560865633497,
+          "count_scale": 5865.1404613086315,
+          "modeled_scaled_sum": 54690.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.5282937344212385,
+          "pearson": 0.33447560865633497,
+          "count_scale": 5865.1404613086315,
+          "modeled_scaled_sum": 54690.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_center_z+00_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nearest_factor_mm": [
+        0.0,
+        0.0,
+        -1.5
+      ],
+      "nearest_distance_mm": 1.5,
+      "measured_counts": 14337,
+      "cntstat_sha256": "de470344838c8d1b35fa3a390542229637917530958499f3ba39fbf9774bce28",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.2735418983549624,
+          "pearson": 0.11059142847912264,
+          "count_scale": 5872.873322683214,
+          "modeled_scaled_sum": 14337.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.2735418983549624,
+          "pearson": 0.11059142847912264,
+          "count_scale": 5872.873322683214,
+          "modeled_scaled_sum": 14337.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a00_z-57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        245.0,
+        0.0,
+        -57.0
+      ],
+      "nearest_factor_mm": [
+        246.0,
+        0.0,
+        -58.5
+      ],
+      "nearest_distance_mm": 1.8027756377319946,
+      "measured_counts": 79245,
+      "cntstat_sha256": "4e05b7ff2e8425c2fcc0135712b04ae67701171e4f174596ee9d8bc8e98e944c",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.8324486760936727,
+          "pearson": 0.8092680146063015,
+          "count_scale": 2526.222803665952,
+          "modeled_scaled_sum": 79245.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.09328937158552472,
+          "pearson": -0.044451682543411475,
+          "count_scale": 2526.222803665952,
+          "modeled_scaled_sum": 79245.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a00_z-57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        245.0,
+        0.0,
+        -57.0
+      ],
+      "nearest_factor_mm": [
+        246.0,
+        0.0,
+        -58.5
+      ],
+      "nearest_distance_mm": 1.8027756377319946,
+      "measured_counts": 21699,
+      "cntstat_sha256": "d2eb1035901f8776e1f13984b99a0acdfcee79d3e724adcc6d1d13139683213c",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.5455160669779187,
+          "pearson": 0.4931810333674646,
+          "count_scale": 2503.911641378741,
+          "modeled_scaled_sum": 21699.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.07222548200546637,
+          "pearson": -0.07140076415031707,
+          "count_scale": 2503.911641378741,
+          "modeled_scaled_sum": 21698.999999999996
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a00_z+57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        245.0,
+        0.0,
+        57.0
+      ],
+      "nearest_factor_mm": [
+        246.0,
+        0.0,
+        55.5
+      ],
+      "nearest_distance_mm": 1.8027756377319946,
+      "measured_counts": 79176,
+      "cntstat_sha256": "f26716091f69014374974a93d210881c7a0d288164f0c53b72dce4dd82c6ddb2",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.8315938180528983,
+          "pearson": 0.8078831239010701,
+          "count_scale": 2490.602672675504,
+          "modeled_scaled_sum": 79175.99999999999
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.0929511176879683,
+          "pearson": -0.04581720172779777,
+          "count_scale": 2490.602672675504,
+          "modeled_scaled_sum": 79176.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a00_z+57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        245.0,
+        0.0,
+        57.0
+      ],
+      "nearest_factor_mm": [
+        246.0,
+        0.0,
+        55.5
+      ],
+      "nearest_distance_mm": 1.8027756377319946,
+      "measured_counts": 21831,
+      "cntstat_sha256": "272d66e7c8f1ec3c254c2e7ea5698dffbfd0867d042b3c93e2018c13863b0100",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.5452858368834637,
+          "pearson": 0.49246582566600616,
+          "count_scale": 2494.605848260264,
+          "modeled_scaled_sum": 21831.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.07374871248870406,
+          "pearson": -0.06957278925445866,
+          "count_scale": 2494.605848260264,
+          "modeled_scaled_sum": 21831.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a02_z-57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        -57.0
+      ],
+      "nearest_factor_mm": [
+        8.817456953860943e-15,
+        144.0,
+        -58.5
+      ],
+      "nearest_distance_mm": 3.3541019662496847,
+      "measured_counts": 59888,
+      "cntstat_sha256": "163dd37189f86abf42b8f4fb2fbf88bea287584c1de41bed0971ec0484830f44",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.6252645668244403,
+          "pearson": 0.5144197913006793,
+          "count_scale": 2485.673687477873,
+          "modeled_scaled_sum": 59888.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.5501236025038329,
+          "pearson": 0.40295835394128393,
+          "count_scale": 2485.673687477873,
+          "modeled_scaled_sum": 59888.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a02_z-57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        -57.0
+      ],
+      "nearest_factor_mm": [
+        8.817456953860943e-15,
+        144.0,
+        -58.5
+      ],
+      "nearest_distance_mm": 3.3541019662496847,
+      "measured_counts": 16201,
+      "cntstat_sha256": "c92d45efa4dff4ddeb662a817dd66fb0f1eba606fe53ff7c061d86e2bfd5ae55",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.336856894380111,
+          "pearson": 0.2205571225039928,
+          "count_scale": 2501.641685317499,
+          "modeled_scaled_sum": 16200.999999999998
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.3142428260738574,
+          "pearson": 0.18358410929112648,
+          "count_scale": 2501.641685317499,
+          "modeled_scaled_sum": 16201.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a02_z+57_218keV",
+      "energy_keV": 218,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        57.0
+      ],
+      "nearest_factor_mm": [
+        8.817456953860943e-15,
+        144.0,
+        55.5
+      ],
+      "nearest_distance_mm": 3.3541019662496847,
+      "measured_counts": 59651,
+      "cntstat_sha256": "ff35c9494ebfa293dc1f11282315623118444d0ddc7433b7e526fb390e326074",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.6214828772236707,
+          "pearson": 0.507956495647665,
+          "count_scale": 2455.399025814718,
+          "modeled_scaled_sum": 59650.99999999999
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.5494423677209079,
+          "pearson": 0.4009414656203224,
+          "count_scale": 2455.399025814718,
+          "modeled_scaled_sum": 59651.0
+        }
+      }
+    },
+    {
+      "dataset": "Point_rho98_a02_z+57_440keV",
+      "energy_keV": 440,
+      "object_mm": [
+        1.5001923289555078e-14,
+        147.0,
+        57.0
+      ],
+      "nearest_factor_mm": [
+        8.817456953860943e-15,
+        144.0,
+        55.5
+      ],
+      "nearest_distance_mm": 3.3541019662496847,
+      "measured_counts": 16059,
+      "cntstat_sha256": "dec903e44db6e6a6d9bbde25a79e8c707df861fe64bc884b7ac59e7e25e3d55f",
+      "orientation": {
+        "physical_negative_angle": {
+          "cosine": 0.3381716426308128,
+          "pearson": 0.22282938349827391,
+          "count_scale": 2466.6725033533726,
+          "modeled_scaled_sum": 16059.0
+        },
+        "opposite_positive_angle": {
+          "cosine": 0.31773135454457724,
+          "pearson": 0.18944329997882203,
+          "count_scale": 2466.6725033533726,
+          "modeled_scaled_sum": 16058.999999999998
+        }
+      }
+    }
+  ]
+}

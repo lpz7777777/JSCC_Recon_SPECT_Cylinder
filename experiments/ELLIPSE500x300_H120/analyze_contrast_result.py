@@ -78,6 +78,14 @@ def main():
             slab = np.stack([LinearNDInterpolator(tri, polar[k], fill_value=0)(query)
                              .reshape(yy.shape) for k in slices])
             slab = np.maximum(slab, 0)
+            sampled_truth = np.ones_like(xy[:, 0])
+            for rod in same_group:
+                if rod["energy"] != energy:
+                    continue
+                rx, ry, _ = rod["center_mm"]
+                sampled_truth[((xy[:, 0] - rx) ** 2 + (xy[:, 1] - ry) ** 2)
+                              <= rod["radius_mm"] ** 2] += rod["excess_activity"]
+            synthetic = LinearNDInterpolator(tri, sampled_truth, fill_value=0)(query).reshape(yy.shape)
             local = ellipse & ((xx - cx) ** 2 + (yy - cy) ** 2 <= 55 ** 2)
             for rod in same_group:
                 rx, ry, _ = rod["center_mm"]
@@ -87,6 +95,7 @@ def main():
                 raise ValueError(f"Insufficient local background: {energy}/{group}")
             bg_mean = float(background.mean())
             bg_std = float(background.std())
+            synthetic_bg = float(synthetic[local].mean())
             for rod in same_group:
                 if rod["energy"] != energy:
                     continue
@@ -96,12 +105,15 @@ def main():
                 if values.size < 20:
                     raise ValueError(f"Too few rod samples: {energy}/{group}/{rod['radius_mm']}")
                 rod_mean = float(values.mean())
+                synthetic_rod = float(synthetic[mask].mean())
                 report["rows"].append({"group": group, "energy_keV": energy,
                     "diameter_mm": 2 * rod["radius_mm"], "rod_voxels": int(values.size),
                     "background_voxels": int(background.size),
                     "rod_mean": rod_mean, "background_mean": bg_mean,
                     "background_cv": bg_std / bg_mean,
                     "crc": (rod_mean / bg_mean - 1) / rod["excess_activity"],
+                    "sampled_truth_crc": (synthetic_rod / synthetic_bg - 1) /
+                    rod["excess_activity"],
                     "cnr": (rod_mean - bg_mean) / bg_std if bg_std > 0 else None})
     suffix = "contrast_metrics" if args.iteration == 10000 else f"contrast_iter{args.iteration:05d}"
     out = HERE / "reports" / f"{args.result_name}_{suffix}.json"
