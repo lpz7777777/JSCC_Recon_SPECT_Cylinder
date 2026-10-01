@@ -1,57 +1,57 @@
 {
   "job_id": "1644876",
-  "checked_utc": "2026-10-01T09:33:55.461581+00:00",
+  "checked_utc": "2026-10-01T10:01:41.846146+00:00",
   "state": "RUNNING",
   "iterations": [
     "440_compton_and_jscc",
-    "3550",
+    "3950",
     "10000"
   ],
   "gpu_live_memory_used_total_MiB_and_utilization_percent": [
     [
       2655,
       24564,
-      34
+      93
     ],
     [
       2655,
       24564,
-      11
+      56
+    ],
+    [
+      2675,
+      24564,
+      48
     ],
     [
       2655,
       24564,
-      11
-    ],
-    [
-      2655,
-      24564,
-      12
-    ],
-    [
-      2655,
-      24564,
-      49
+      66
     ],
     [
       2637,
       24564,
-      70
+      100
+    ],
+    [
+      2655,
+      24564,
+      100
     ],
     [
       2675,
+      24564,
+      78
+    ],
+    [
+      2655,
       24564,
       49
-    ],
-    [
-      2675,
-      24564,
-      62
     ]
   ],
   "live_gpu_below_80_percent": true,
   "not_a_peak_resource_or_final_integrity_verification": true,
-  "snapshot": "JobId=1644876 JobName=NEMA_5e9_formal UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=* JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=04:35:29 TimeLimit=2-00:00:00 TimeMin=N/A SubmitTime=2026-10-01T12:55:25 EligibleTime=2026-10-01T12:55:25 AccrueTime=2026-10-01T12:55:25 StartTime=2026-10-01T12:55:47 EndTime=2026-10-03T12:55:47 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-01T12:55:47 Scheduler=Backfill Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:1813977 ReqNodeList=(null) ExcNodeList=(null) NodeList=wqd10naf13g[1,7-8],wqd10nba06g[1-5] BatchHost=wqd10naf13g1 NumNodes=8 NumCPUs=48 NumTasks=8 CPUs/Task=6 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8 AllocTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8 Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=* MinCPUsNode=6 MinMemoryCPU=10000M MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/reconstruct.sh WorkDir=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/recon.1644876.err StdIn=/dev/null StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/recon.1644876.out TresPerNode=gres/gpu:1 TresPerTask=cpu=6 \nJobID|AveCPU|MaxRSS\n1644876.0|05:39:24|30483472K\nELLIPSE_ITERATION 440_compton_and_jscc 3350/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3400/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3450/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3500/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3550/10000\ncuda-12.9 loaded successful\n2655, 24564, 34\n2655, 24564, 11\n2655, 24564, 11\n2655, 24564, 12\n2655, 24564, 49\n2637, 24564, 70\n2675, 24564, 49\n2675, 24564, 62\n",
+  "snapshot": "JobId=1644876 JobName=NEMA_5e9_formal UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=* JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=05:03:16 TimeLimit=2-00:00:00 TimeMin=N/A SubmitTime=2026-10-01T12:55:25 EligibleTime=2026-10-01T12:55:25 AccrueTime=2026-10-01T12:55:25 StartTime=2026-10-01T12:55:47 EndTime=2026-10-03T12:55:47 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-01T12:55:47 Scheduler=Backfill Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:1813977 ReqNodeList=(null) ExcNodeList=(null) NodeList=wqd10naf13g[1,7-8],wqd10nba06g[1-5] BatchHost=wqd10naf13g1 NumNodes=8 NumCPUs=48 NumTasks=8 CPUs/Task=6 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8 AllocTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8 Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=* MinCPUsNode=6 MinMemoryCPU=10000M MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/reconstruct.sh WorkDir=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/recon.1644876.err StdIn=/dev/null StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/recon.1644876.out TresPerNode=gres/gpu:1 TresPerTask=cpu=6 \nJobID|AveCPU|MaxRSS\n1644876.0|06:12:06|30483472K\nELLIPSE_ITERATION 440_compton_and_jscc 3750/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3800/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3850/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3900/10000\nELLIPSE_ITERATION 440_compton_and_jscc 3950/10000\ncuda-12.9 loaded successful\n2655, 24564, 93\n2655, 24564, 56\n2675, 24564, 48\n2655, 24564, 66\n2637, 24564, 100\n2655, 24564, 100\n2675, 24564, 78\n2655, 24564, 49\n",
   "stderr": "",
   "formal_result_verified": false,
   "completed_iterations_by_stage": {
@@ -80,12 +80,12 @@
   "throughput_two_same_stage_checks": {
     "previous_checked_utc": "2026-10-01T05:32:13.136353+00:00",
     "previous_saved_iteration": 150,
-    "elapsed_seconds": 14502.325228,
-    "saved_iteration_increase": 3400,
-    "seconds_per_iteration_estimate": 4.265389772941177,
+    "elapsed_seconds": 16168.709793,
+    "saved_iteration_increase": 3800,
+    "seconds_per_iteration_estimate": 4.254923629736842,
     "remaining_compute_hours_coarse_range": [
-      7.531400782657005,
-      7.756218716467661
+      7.057770147738095,
+      7.245977351677778
     ],
     "excludes_final_output_verification_and_visualization": true,
     "assumes_current_speed_continues": true,
