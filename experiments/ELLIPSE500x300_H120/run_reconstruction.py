@@ -127,7 +127,7 @@ def main():
     p.add_argument("--geometry",type=Path,required=True)
     p.add_argument("--data-root",type=Path,required=True)
     p.add_argument("--dataset",required=True)
-    p.add_argument("--level",choices=("1e9","1e10"),required=True)
+    p.add_argument("--level",choices=("1e9","5e9","1e10"),required=True)
     p.add_argument("--output",type=Path,required=True)
     p.add_argument("--iterations",type=int,default=10000)
     p.add_argument("--save-step",type=int,default=50)
@@ -151,9 +151,26 @@ def main():
     rank,world,device=setup(args.backend)
     if rank==0: print("ELLIPSE_STAGE validate_factors",flush=True)
     validation_error=None
+    input_hashes={}
     if rank==0:
         try:
             validate(args.factors)
+            collection_path=args.data_root/"collections"/f"{args.dataset}_{args.level}.json"
+            collection=json.loads(collection_path.read_text())
+            expected={"1e9":10**9,"5e9":5*10**9,"1e10":10**10}[args.level]
+            if (collection["dataset"]!=args.dataset or collection["level"]!=args.level or
+                collection["views"]!=list(range(1,21)) or
+                sum(collection["primary_counts"])!=expected or
+                len(collection["seeds"])!=200 or len(set(collection["seeds"]))!=200 or
+                sorted(collection["worker_indices"])!=list(range(200))):
+                raise ValueError("Input collection dose/view/seed closure failed")
+            input_paths=[collection_path]
+            input_paths.extend(args.data_root/"CntStat"/f"{energy}keV_RotateNum20_Geant4JSCC"/
+                               f"CntStat_{args.dataset}_{args.level}.csv" for energy in (218,440))
+            input_paths.extend(args.data_root/"List/218-440keV_RotateNum20_Geant4JSCC"/
+                               f"List_{args.dataset}_{args.level}"/f"{view}.csv" for view in range(1,21))
+            input_hashes={path.relative_to(args.data_root).as_posix():digest(path)
+                          for path in input_paths}
         except Exception as error:
             validation_error=f"{type(error).__name__}: {error}"
         print("ELLIPSE_STAGE factors_validated",flush=True)
@@ -312,7 +329,10 @@ def main():
           "accepted_compton_events":int(accepted_tensor.item()),
           "energy_resolution_fwhm_at_511keV":.13,"compton_sum_threshold_MeV":.350,
           "list_energies_already_smeared":True,"geometry_sha256":digest(args.geometry),
-          "sensi_d_sha256":digest(sensi_path),"resources":resources},indent=2)+"\n")
+          "sensi_d_sha256":digest(sensi_path),"input_sha256":input_hashes,
+          "factor_manifest_sha256":{name:digest(args.factors/name/"factor_manifest.json")
+                                    for name in NAMES.values()},
+          "resources":resources},indent=2)+"\n")
     dist.barrier()
     dist.destroy_process_group()
 

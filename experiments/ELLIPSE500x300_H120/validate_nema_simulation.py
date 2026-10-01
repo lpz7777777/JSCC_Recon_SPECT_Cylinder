@@ -22,15 +22,19 @@ def validate(manifest_path: Path, stage: str):
     manifest = json.loads(manifest_path.read_text())
     root = manifest_path.parent
     jobs = manifest["jobs"]
+    doses = {"1e9": 1_000_000_000, "5e9": 5_000_000_000, "1e10": 10_000_000_000}
+    expected_total = doses[manifest["level"]]
+    worker_count = 20*manifest["workers_per_view"]
     if (manifest["dataset"] != "NEMA_Body_H60" or
-        manifest["total_primary_photons"] != 1_000_000_000 or
-        len(jobs) != 200 or
+        manifest["total_primary_photons"] != expected_total or
+        len(jobs) != worker_count or
         len(manifest["macros"]) != 20 or
-        [row["index"] for row in jobs] != list(range(200)) or
-        len({row["seed"] for row in jobs}) != 200 or
+        [row["index"] for row in jobs] != list(range(worker_count)) or
+        len({row["seed"] for row in jobs}) != worker_count or
         sorted({row["view"] for row in jobs}) != list(range(1, 21)) or
-        sum(row["photons"] for row in jobs) != 1_000_000_000):
-        raise ValueError("NEMA 1e9 primary/view/seed closure failed")
+        sum(row["photons"] for row in jobs) != expected_total or
+        any(row["level"] != manifest["level"] or row["dataset"] != manifest["dataset"] for row in jobs)):
+        raise ValueError("NEMA primary/view/seed closure failed")
     for item in manifest["macros"]:
         path = root / item["path"]
         if (path.stat().st_size != item["bytes"] or
@@ -38,7 +42,7 @@ def validate(manifest_path: Path, stage: str):
             raise ValueError(f"Transferred macro changed: {path}")
         text = path.read_text(encoding="ascii")
         if (text.count("/xcat/angle ") != 1 or
-            text.count("/run/beamOn 5000000") != 1 or
+            text.splitlines().count(f"/run/beamOn {jobs[0]['photons']}") != 1 or
             text.count("/xcat/add ") !=
               sum(manifest["source_boxes_by_energy"].values())):
             raise ValueError(f"Malformed source macro: {path}")
@@ -80,7 +84,7 @@ def validate(manifest_path: Path, stage: str):
         standard_error = math.sqrt(expected * (1-expected) / total)
         if abs(fraction-expected) > 6*standard_error:
             raise ValueError("Observed 218/440 mixture differs from yield-weighted truth")
-        if stage == "complete" and (len(records) != 200 or total != 1_000_000_000):
+        if stage == "complete" and (len(records) != worker_count or total != expected_total):
             raise ValueError("Production workers did not close")
         result.update({"verified_workers": len(records),
                        "observed_primary_counts_218_440_other": primaries.tolist(),

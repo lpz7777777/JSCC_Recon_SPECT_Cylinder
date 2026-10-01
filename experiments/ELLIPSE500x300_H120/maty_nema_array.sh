@@ -15,7 +15,9 @@ source /apps/soft/geant/geant4-v11.1.0/bin/geant4.sh
 
 root=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928
 cd "$root"
-manifest=experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/Simulation_1e9/jobs.json
+level=${NEMA_LEVEL:-1e9}
+case "$level" in 1e9|5e9|1e10) ;; *) echo "Invalid NEMA level" >&2; exit 1 ;; esac
+manifest="experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/Simulation_${level}/jobs.json"
 if [[ ${NEMA_SMOKE:-0} == 1 ]]; then
   python3 experiments/FOV120/workflow.py run \
     --manifest "$manifest" --index "${SLURM_ARRAY_TASK_ID:?Array index required}" \
@@ -26,4 +28,9 @@ else
     --manifest "$manifest" --index "${SLURM_ARRAY_TASK_ID:?Array index required}" \
     --executable Geant4Build/gamma01 \
     --crystal Geant4Sim/Geant4Code/CrystalMatrix.txt
+fi
+if [[ ${SLURM_ARRAY_TASK_ID} == 0 ]]; then
+  stage=first
+  if [[ ${NEMA_SMOKE:-0} == 1 ]]; then stage=smoke; fi
+  python3 experiments/ELLIPSE500x300_H120/validate_nema_simulation.py "$manifest" --stage "$stage"
 fi

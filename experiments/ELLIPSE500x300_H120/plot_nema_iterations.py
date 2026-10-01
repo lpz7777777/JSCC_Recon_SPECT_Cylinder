@@ -41,8 +41,17 @@ def main():
     integrity = json.loads(integrity_path.read_text())
     run = json.loads((data / "run_manifest.json").read_text())
     if (run["dataset"] != "NEMA_Body_H60" or run["iterations"] != 10000
-            or run["save_step"] != 50 or integrity["accepted_compton_events"] != 97299):
+            or run["save_step"] != 50 or integrity["accepted_compton_events"] <= 0
+            or integrity["accepted_compton_events"] != run["accepted_compton_events"]):
         raise ValueError("Unexpected NEMA run provenance")
+    level = run["count_level"]
+    collection_path = HERE / "generated/collections" / f"NEMA_Body_H60_{level}.json"
+    if digest(collection_path) != integrity["collection_sha256"]:
+        raise ValueError("Collection hash mismatch")
+    collection = json.loads(collection_path.read_text())
+    expected_total = {"1e9":10**9,"5e9":5*10**9,"1e10":10**10}[level]
+    if sum(collection["primary_counts"]) != expected_total or collection["level"] != level:
+        raise ValueError("Actual emitted photon total differs from dose label")
     truth_path = HERE / "generated/NEMA_Body_H60/truth_3mm.npz"
     manifest = json.loads((HERE / "reports/NEMA_Body_H60/manifest.json").read_text())
     if digest(truth_path) != manifest["truth_sha256"]:
@@ -74,7 +83,8 @@ def main():
     final_views = []
     selected_volumes = {}
     rows, summary = [], {}
-    primaries = {218: 293821153, 440: 706178847, "sum": 1000000000}
+    primaries = {218: collection["primary_counts"][0],
+                 440: collection["primary_counts"][1], "sum": expected_total}
     expected_bg = {e: primaries[e]/float(truth[e].sum(dtype=np.float64)*27) for e in (218,440)}
     expected_bg["sum"] = expected_bg[218]+expected_bg[440]
     outside_z = np.abs(coords[active,2]) > 30
@@ -150,7 +160,7 @@ def main():
                 if c==0: ax.set_ylabel(title)
                 ax.tick_params(labelsize=7)
         fig.colorbar(im, ax=axes, shrink=.6, label="relative gamma density; fixed final-background normalization")
-        fig.suptitle(f"NEMA H60 1e9: six channels, z={z[s]:+.1f} mm; no smoothing, full ellipse FOV")
+        fig.suptitle(f"NEMA H60 {level}: six channels, z={z[s]:+.1f} mm; no smoothing, full ellipse FOV")
         fig.savefig(out/f"iterations_z{s:02d}.png", dpi=115); plt.close(fig)
     fig,axes=plt.subplots(2,7,figsize=(21,7),layout="constrained")
     for r,(channel,title,energy) in enumerate((CHANNELS[3],CHANNELS[2])):
@@ -197,7 +207,8 @@ def main():
         axes[r,0].axhline(1,color="black",ls=":",lw=.8)
         axes[r,0].legend(fontsize=7,ncol=3)
     fig.savefig(out/"crc_cnr_cv_iterations.png",dpi=130);plt.close(fig)
-    report={"result":args.result,"truth_sha256":digest(truth_path),"integrity_sha256":digest(integrity_path),
+    report={"result":args.result,"count_level":level,"primary_counts_218_440_other":collection["primary_counts"],
+        "truth_sha256":digest(truth_path),"integrity_sha256":digest(integrity_path),
         "selected_iterations":SELECTED,"all_metric_iterations":list(range(50,10001,50)),
         "method":"3-mm XY barycentric interpolation; no smoothing/crop; ellipse mask; gray_r; fixed 0..10 color range; each channel uses one final-background scalar for all gallery frames; least-squares truth-fit scalar used only for NRMSE metrics, not gallery rendering",
         "composite_truth":"(.114*activity218+.259*activity440)/.373; gamma density, not parent Ac activity",
@@ -205,7 +216,7 @@ def main():
         "summary":summary,"final_spheres":[row for row in rows if row["iteration"]==10000]}
     (out/"analysis.json").write_text(json.dumps(report,indent=2)+"\n")
     np.savez_compressed(data/"nema_gallery_truth.npz",**{str(k):v for k,v in truth.items()})
-    (out/"README.md").write_text("# NEMA H60: verified six-channel 1e9 result\n\n"
+    (out/"README.md").write_text(f"# NEMA H60: verified six-channel {level} result\n\n"
         "See analysis.json and iteration_metrics.csv for reproducible methods and 200-frame metrics. "
         "All figures retain the ellipse FOV, use gray_r (white low, black high), sigma=0 and no edge crop. "
         "Color limits are fixed at 0..10. Background normalization is fixed per channel across iterations; "

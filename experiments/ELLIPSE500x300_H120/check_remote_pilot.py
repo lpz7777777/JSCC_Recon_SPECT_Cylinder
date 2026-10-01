@@ -29,6 +29,15 @@ def main():
             manifest=json.load(stream)
         if manifest["iterations"]!=10 or not manifest["pilot_only"]:
             raise ValueError("Expected 10-iteration pilot")
+        resources=manifest["resources"]
+        if (manifest["pixels_active"]!=82040 or manifest["pixels_full"]!=132040 or
+            sorted(row["rank"] for row in resources)!=list(range(manifest["world_size"])) or
+            sum(row["accepted_events"] for row in resources)!=manifest["accepted_compton_events"] or
+            manifest["accepted_compton_events"]<=0):
+            raise ValueError("Incomplete pilot geometry or distributed events")
+        gpu_fraction=max(row["peak_reserved_bytes"]/row["total_device_bytes"] for row in resources)
+        if gpu_fraction>.8:
+            raise ValueError(f"Pilot exceeds GPU 80% capacity gate: {gpu_fraction}")
         results=[]
         for channel in CHANNELS:
             shapes=(("active",82040),("full",132040),("history",82040))
@@ -47,6 +56,9 @@ def main():
             raise ValueError("Invalid cross-talk prediction")
         report={"job":args.result_name,"accepted_events":manifest["accepted_compton_events"],
                 "world_size":manifest["world_size"],"channels":results,
+                "gpu_peak_reserved_fraction":gpu_fraction,
+                "gpu_20_percent_margin_pass":True,
+                "host_memory_gate":"Check Slurm MaxRSS against granted per-node memory separately",
                 "peak_reserved_gib":max(r["peak_reserved_bytes"] for r in manifest["resources"])/2**30,
                 "min_gpu_capacity_gib":min(r["total_device_bytes"] for r in manifest["resources"])/2**30}
         print(json.dumps(report,indent=2))

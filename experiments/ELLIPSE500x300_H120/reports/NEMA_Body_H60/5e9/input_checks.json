@@ -1,0 +1,34 @@
+{
+  "level": "5e9",
+  "status": "prepared_source_and_budget_verified",
+  "total_primary_photons": 5000000000,
+  "views": 20,
+  "workers": 200,
+  "photons_per_worker": 25000000,
+  "seed_range": [
+    30100101,
+    30100300
+  ],
+  "seeds_disjoint_from_1e9": true,
+  "all_20_source_macros_equal_except_beamOn": true,
+  "nema_truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "jobs_sha256": "4fafc624c97dcac7b91c26ce0635fc66956da8986fc146b2c1aa23af65adc212",
+  "source_integrals": {
+    "218": 366938.72015625,
+    "440": 881968.632890625
+  },
+  "planning_budget": {
+    "world_size": 8,
+    "ranks_per_node": 1,
+    "accepted_events_assumed": 550000,
+    "event_rows_gib_per_rank": 21.01156860589981,
+    "estimated_gpu_peak_gib_per_rank": 9.663722038269043,
+    "gpu_capacity_gib": 22,
+    "estimated_host_gib_per_node": 37.645473062992096,
+    "host_capacity_gib_per_node": 55,
+    "gpu_20_percent_margin_pass": true,
+    "host_20_percent_margin_pass": true,
+    "note": "Estimates omit allocator fragmentation, packed event rows and CUDA framework overhead; full-event 10-iteration pilot is mandatory."
+  },
+  "budget_is_not_a_measured_resource_gate": true
+}

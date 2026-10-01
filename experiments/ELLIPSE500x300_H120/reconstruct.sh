@@ -10,7 +10,7 @@
 #SBATCH --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/recon.%j.out
 #SBATCH --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/recon.%j.err
 set -euo pipefail
-: "${ELLIPSE_ACCEPTED_EVENTS:?Use measured accepted-event count from 1e9 or 1e10 input}"
+: "${ELLIPSE_ACCEPTED_EVENTS:?Use a conservative pilot budget or measured accepted-event count}"
 : "${ELLIPSE_GPU_GIB:?Provide GPU capacity in GiB}"
 : "${ELLIPSE_HOST_GIB:?Provide granted host memory per node in GiB}"
 root=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor
@@ -40,7 +40,7 @@ if not entry or not entry['gpu_20_percent_margin_pass'] or not entry['host_20_pe
 print(entry)
 PY
 dataset=${ELLIPSE_DATASET:?Set CircleNewDist, EllipseUniform, EllipseContrast, XCAT or NEMA_Body_H60}
-level=${ELLIPSE_LEVEL:?Set 1e9 or 1e10}
+level=${ELLIPSE_LEVEL:?Set 1e9, 5e9 or 1e10}
 mode=()
 iterations=10000
 save_step=50

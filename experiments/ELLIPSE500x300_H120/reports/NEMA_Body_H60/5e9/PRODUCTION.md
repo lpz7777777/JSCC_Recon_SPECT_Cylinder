@@ -1,0 +1,63 @@
+# NEMA Body H60：独立 5e9 初级 γ 实验
+
+2026-10-01，按用户“推进做一个 NEMA 5e9 重建”的指示启动。1e9 的数据、结果、图集和科学结论保留为比较基线。本次计数是所有视角合计 **5,000,000,000 个初级 γ**，不是 List 行数、衰变数或单一能量的发射数。
+
+## 冻结条件
+
+- 物理源与全部重建始终限定在 500×300×120 mm 椭圆柱 FOV；NEMA 主体高 60 mm、居中，主体内无材料衰减。
+- 218 keV 的 Ø10/17/28 mm 球及 440 keV 的 Ø13/22/37 mm 球各自浓度10；两能量背景各为1。单能热球/背景10:1，产额0.114/0.259。
+- 保留10496晶体、270 mm准直器距离、132040完整圆计算列、82040椭圆活动列、20视角、既有三路校准 Factors 和匹配的 `Sensi_d`。
+- 使用既有 JSCC 联合 MLEM、440→218固定加性串窗校正、13% FWHM@511 keV与350 keV Compton筛选阈值。List能量已展宽，不再次随机展宽。
+- 六路正式输出10000次迭代、每50次保存，共200帧/路。复合图解释为γ通道密度和，不直接解释为母体²²⁵Ac活度。
+
+真值SHA-256：`2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af`。
+
+准备清单SHA-256：`4fafc624c97dcac7b91c26ce0635fc66956da8986fc146b2c1aa23af65adc212`。
+
+[输入检查与预算](input_checks.json)证明：20个源宏逐行一致，仅 `/run/beamOn` 从5000000改为25000000；几何、真值与逐能积分一致。新种子 **30100101–30100300** 与1e9完全不重叠。200独立worker，每视角10个，全部重新模拟，不追加或复制旧List。
+
+## 当前输运作业
+
+| 阶段 | maty Slurm作业 | 门槛 |
+|---|---:|---|
+| 10000初级γ短程 | 15514663 | worker0的宏/输出哈希、发射数、能量比例、10496晶体计数检查；已完成15秒，退出0:0，输出检查通过 |
+| 首个25000000γ完整worker | 15514664 | 依赖短程通过；当前运行中；完成后运行 `--stage first` |
+| 其余199个完整worker | 15514665 | 依赖首worker通过，`--array=1-199%32`，避免重复worker0 |
+| 完整核验、合并与打包 | 15514666 | 依赖完整worker链成功；再逐个验证200worker和5e9发射闭合，然后合并 |
+
+提交记录见 [transport_jobs.json](transport_jobs.json)。若上游失败，后续依赖作业不能自动跳过门槛。检查失败原因后只补缺失/失败worker，禁止直接重新运行完整阵列。已完成的集合和归档保持不可覆盖；输运失败不应提交占用GPU的重建。
+
+maty目录：
+`/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/Simulation_5e9`。
+
+合并输出包含 `collections/NEMA_Body_H60_5e9.json`、两份20×10496 CntStat、20份List；归档名 `nema_h60_imaging_5e9.tar.gz`、SHA与逐文件清单。`fetch_nema_imaging.py --level 5e9` 经SSH agent取回并逐成员核验；`deploy_imaging.py --archive-stem nema_h60_imaging_5e9` 安装到scxi717同一工程实验的 `generated/`。不输出或保存凭证。
+
+## 重建资源与正式启动门槛
+
+1e9接受97299个Compton事件，线性参考约486495；**550000是规划上限估计，不是已测事件数**。首选8节点×1 GPU、6CPU/GPU，显存按22GiB保守容量，主存按55GiB/节点预算。估计主存37.65GiB/节点、GPU9.66GiB/rank，暂满足20%余量；此估算不能代替实际完整事件试跑。也可在满足账户8节点上限和主存余量时选择4节点×2 GPU，须重新预算且按节点计入两个rank的事件存储。
+
+先提交完整网格、完整List的10迭代试跑，NCCL固定 `bond0`。`check_remote_pilot.py`核对六路图、串窗预测、所有rank事件闭合和显存≤80%；另用Slurm MaxRSS/实际分配核对主存≤80%。若任一不满足，调整分配或保持同一MLEM更新的精确分块，不降采样、不丢弃事件。通过后使用**实测接受数**更新预算，提交10000次正式作业，并持续读日志及实际资源，不能仅凭GPU利用率或Slurm状态作结论。
+
+scxi717固定工程根：
+`/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120`。
+
+示例试跑参数（须在数据部署完成且核对调度余量后使用，命令本身未提交）：
+
+```bash
+sbatch -N 8 --gres=gpu:1 --cpus-per-task=6 -p gpu_4090,gpu_5090 --time=02:00:00 \
+ --job-name=NEMA_5e9_pilot \
+ --export=ALL,ELLIPSE_ACCEPTED_EVENTS=550000,ELLIPSE_GPU_GIB=22,ELLIPSE_HOST_GIB=55,ELLIPSE_GPUS_PER_NODE=1,ELLIPSE_DATASET=NEMA_Body_H60,ELLIPSE_LEVEL=5e9,ELLIPSE_PILOT=1,NCCL_SOCKET_IFNAME=bond0 \
+ experiments/ELLIPSE500x300_H120/reconstruct.sh
+```
+
+正式任务移除试跑标记、设置实测事件数，时限可先48小时。当前GPU集群未见可用空卡，故等待输运完成再根据实时资源选择拓扑。
+
+## 验收和交付
+
+`verify_formal_result.py`须核对实际5e9初级γ、20视角、200唯一种子/worker、82040活动列、六路最终图及每路200帧、串窗预测、有限非负值、末帧一致、几何/灵敏度/23份成像输入/三路Factor清单哈希、实测接受数与分布式rank闭合、20%显存余量。另保存Slurm主存与时长证据。
+
+取回结果与实际collection后，`plot_nema_iterations.py`、`analyze_nema_result.py`使用同一3D球体真值和实际逐能发射数生成全FOV多平面/MIP、固定色标迭代图集、200帧CRC/CNR/CV曲线和积分恢复。增加与1e9相同ROI、迭代点及尺度的比较，展示小球恢复、高迭代噪声和源外轴向泄漏；不保证增加计数即可消除既有模型/空间问题，不使用额外平滑隐藏不足。
+
+按既有1e9吞吐粗估：输运1.5–2小时，正式重建10–15小时，另加排队、传输、试跑与验收；首worker与试跑结束后用实测速率修订。这是估计，不是完成时刻承诺。
+
+自动推进 **`nema-5e9` 已成功创建、ACTIVE**，每30分钟在本聊天检查本链及后续重建，正常排队或运行无实质变化时保持安静，完成、故障或关键指标变化时通知。此次只完成5e9及其与1e9的比较，**不自动启动1e10**；完整交付后停止本轮轮询。旧的已验收 `nema-1e9` 保持暂停。

@@ -39,6 +39,17 @@ def main():
                 temporary.replace(path)
             print("VERIFIED", name, flush=True)
         sftp.get(remote + "/run_manifest.json", str(dest / "run_manifest.json"))
+        run = json.loads((dest / "run_manifest.json").read_text())
+        name = f"{run['dataset']}_{run['count_level']}.json"
+        collection = HERE / "generated/collections" / name
+        collection.parent.mkdir(parents=True, exist_ok=True)
+        temporary = collection.with_suffix(".downloading")
+        sftp.get(remote.rsplit('/Results/',1)[0]+"/collections/"+name, str(temporary))
+        if digest(temporary) != report["collection_sha256"]:
+            raise ValueError("Transferred collection hash mismatch")
+        if collection.exists() and digest(collection) != report["collection_sha256"]:
+            raise ValueError("Refusing to replace a different frozen collection")
+        temporary.replace(collection)
     (dest / "transfer_manifest.json").write_text(json.dumps(expected, indent=2)+"\n")
 
 if __name__ == "__main__":

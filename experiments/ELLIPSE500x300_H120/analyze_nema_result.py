@@ -73,6 +73,7 @@ def analyze(result_name):
         raise ValueError("Result name must be one directory")
     integrity_path = HERE / "reports" / f"{result_name}_integrity.json"
     integrity = json.loads(integrity_path.read_text())
+    run = json.loads((GENERATED / "RemoteResults" / result_name / "run_manifest.json").read_text())
     if integrity["dataset"] != "NEMA_Body_H60" or integrity["job_result"] != result_name:
         raise ValueError("A verified NEMA formal result is required")
     truth_path = GENERATED / "NEMA_Body_H60/truth_3mm.npz"
@@ -166,7 +167,7 @@ def analyze(result_name):
             ax.set(xlim=(-160, 160), ylim=(-120, 120), aspect="equal",
                    title=f"{energy} keV {title}", xlabel="object x (mm)", ylabel="object y (mm)")
     fig.colorbar(im, ax=axes, shrink=.7, label="relative concentration / recovery")
-    fig.suptitle(f"NEMA H60, z={z[index]:+.1f} mm; 1e9 primaries, 10000 MLEM iterations")
+    fig.suptitle(f"NEMA H60, z={z[index]:+.1f} mm; {run['count_level']} primaries, 10000 MLEM iterations")
     figure_path = REPORTS / f"{result_name}_truth_vs_recon.png"
     fig.savefig(figure_path, dpi=175)
     plt.close(fig)

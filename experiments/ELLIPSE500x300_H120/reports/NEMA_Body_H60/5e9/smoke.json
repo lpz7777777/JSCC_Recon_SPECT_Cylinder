@@ -1,0 +1,17 @@
+{
+  "job": "15514663",
+  "state": "COMPLETED",
+  "elapsed": "00:00:15",
+  "exit_code": "0:0",
+  "validator": "validate_nema_simulation.py --stage smoke",
+  "verified_workers": 1,
+  "actual_primary_counts_218_440_other": [3002, 6998, 0],
+  "actual_primary_total": 10000,
+  "expected_218_fraction": 0.29380779868182727,
+  "observed_218_fraction": 0.3002,
+  "energy_fraction_within_six_standard_errors": true,
+  "macros_count": 20,
+  "primary_and_output_hash_checks": "passed",
+  "full_production_total": 5000000000,
+  "stage": "smoke_only_not_full_production"
+}

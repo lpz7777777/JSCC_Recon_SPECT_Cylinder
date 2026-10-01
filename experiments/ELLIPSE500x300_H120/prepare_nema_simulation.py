@@ -23,6 +23,8 @@ TRUTH = HERE / "generated/NEMA_Body_H60/truth_3mm.npz"
 TRUTH_MANIFEST = HERE / "reports/NEMA_Body_H60/manifest.json"
 DEFAULT_OUTPUT = HERE / "generated/NEMA_Body_H60/Simulation_1e9"
 DATASET = "NEMA_Body_H60"
+DOSES = {"1e9": 1_000_000_000, "5e9": 5_000_000_000, "1e10": 10_000_000_000}
+SEED_BASES = {"1e9": 30093001, "5e9": 30100101, "1e10": 30110101}
 
 
 def digest(path: Path) -> str:
@@ -74,7 +76,8 @@ def boxes(source: np.ndarray, x: np.ndarray, y: np.ndarray, z: np.ndarray,
     return result, expected
 
 
-def prepare(output: Path, total_photons: int, workers_per_view: int):
+def prepare(output: Path, total_photons: int, workers_per_view: int,
+            level: str = "1e9", seed_base: int = 30093001):
     if output.exists():
         raise FileExistsError(output)
     cfg = json.loads(CONFIG.read_text())
@@ -92,7 +95,9 @@ def prepare(output: Path, total_photons: int, workers_per_view: int):
         phantom["relative_activity_concentration"]["hot_sphere_to_own_background_ratio"] != 10):
         raise ValueError("Unapproved geometry or source prescription")
     views = int(cfg["rotate_num"])
-    if (views != 20 or workers_per_view <= 0 or
+    if (total_photons != DOSES[level] or seed_base < 1 or
+        seed_base+views*workers_per_view-1 > 2_147_483_647 or
+        views != 20 or workers_per_view <= 0 or
         total_photons % (views * workers_per_view) or
         total_photons // (views * workers_per_view) > 2_147_483_647):
         raise ValueError("Invalid photon partition")
@@ -140,17 +145,18 @@ def prepare(output: Path, total_photons: int, workers_per_view: int):
                            "bytes": macro.stat().st_size, "sha256": macro_hash})
         for worker in range(workers_per_view):
             index = len(jobs)
-            jobs.append({"index": index, "dataset": DATASET, "level": "1e9",
+            jobs.append({"index": index, "dataset": DATASET, "level": level,
                          "view": view, "worker": worker,
                          "photons": photons_per_worker,
-                         "seed": 30093001+index, "mono_keV": None,
+                         "seed": seed_base+index, "mono_keV": None,
                          "role": "imaging",
                          "macro": macro.relative_to(output).as_posix(),
                          "macro_sha256": macro_hash})
     if sum(job["photons"] for job in jobs) != total_photons:
         raise AssertionError("Photon total did not close")
     manifest = {"format_version": 1, "experiment_id": cfg["experiment_id"],
-                "dataset": DATASET, "level": "1e9", "jobs": jobs,
+                "dataset": DATASET, "level": level, "jobs": jobs,
+                "seed_base": seed_base,
                 "nema_manifest_sha256": digest(TRUTH_MANIFEST),
                 "nema_truth_sha256": digest(TRUTH),
                 "config_sha256": digest(CONFIG),
@@ -173,11 +179,16 @@ def prepare(output: Path, total_photons: int, workers_per_view: int):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--total", type=int, default=1_000_000_000)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--level", choices=tuple(DOSES), default="1e9")
+    parser.add_argument("--total", type=int)
+    parser.add_argument("--seed-base", type=int)
     parser.add_argument("--workers-per-view", type=int, default=10)
     args = parser.parse_args()
-    prepare(args.output.resolve(), args.total, args.workers_per_view)
+    output = args.output or HERE / f"generated/NEMA_Body_H60/Simulation_{args.level}"
+    prepare(output.resolve(), args.total if args.total is not None else DOSES[args.level],
+            args.workers_per_view, args.level,
+            args.seed_base if args.seed_base is not None else SEED_BASES[args.level])
 
 
 if __name__ == "__main__":

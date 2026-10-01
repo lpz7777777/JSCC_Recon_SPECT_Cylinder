@@ -17,7 +17,7 @@
 
 代表性科学指标：椭圆均匀源 `ρ≤0.9、|z|≤30 mm` 的 440 联合图在第 10000 次 CV 约 2.95；`45<|z|≤60 mm` 的 440 联合均值约为中心的 0.575，见 [均匀性报告](reports/EllipseUniform_1e9_1640929_ellipse_uniformity.json)。椭圆热柱五组的 CRC 中位数在第 10000 次包含负值，见 [热柱报告](reports/EllipseContrast_1e9_1641013_contrast_metrics.json)。XCAT 的空间积分恢复也未达到定量验收，见 [XCAT 报告](reports/XCAT_1e9_1641014_xcat_spatial.json)。这些结果指出需要继续核查响应、统计和空间覆盖；不能靠平滑宣称整个椭圆 FOV 可用。
 
-## NEMA Body Phantom H60：1e9 流程完成，定量质量有待改善
+## NEMA Body Phantom H60：1e9 已验收，独立 5e9 正在推进
 
 用户已验收其几何与双能填充。标准图的相切圆弧截面、六球安排、3 mm 双能真值及预览见 [NEMA 说明与图](reports/NEMA_Body_H60/README.md)。主体高 60 mm，位于椭圆 FOV 正中央。背景同时有 218 和 440 keV，各自相对浓度 1；Ø10/17/28 mm 球仅含 218 keV、浓度 10，Ø13/22/37 mm 球仅含 440 keV、浓度 10。各自单能热球/背景均为 10:1，初级 γ 权重在生成 Geant4 宏时再乘产额 0.114/0.259。
 
@@ -27,13 +27,18 @@
 
 2026-10-01 更新：`1643142` 于北京时间 04:37:25 完成，总耗时 5:41:33。正式完整性核验通过，六路最终图、每路200帧历史和串窗预测均已逐文件验哈希取回。GPU 最大预留占比51.02%，主存保守55GiB/节点预算下峰值约46.24%，满足20%余量。[完整图集与200帧指标](reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/README.md) 包含固定色标的全FOV轴位迭代图、最终多平面/MIP、CRC/CNR/CV曲线。218校正图的10/17/28mm球CRC为−0.025/0.691/0.880；440联合图13/22/37mm为−0.053/0.208/0.430。背景CV分别为1.505/1.773，高迭代噪声和源外轴向泄漏显著；流程完成不等于小球或整个FOV性能达标。本轮止于1e9验收，未启动1e10。
 
-在本地复现输入：
+2026-10-01，用户授权新增独立 **5e9** 实验。20视角、200worker×2500万初级γ，新种子30100101–30100300，与1e9不重叠；体模和全部源宏除发射数外保持一致。maty门控链为短程15514663、首完整worker15514664、其余worker15514665、核验打包15514666；短程已通过，首worker运行中。将先做完整事件10次资源试跑，再做10000次六路正式重建；暂按8节点×1GPU预算，以实测主存/显存20%余量决定。详见 [5e9运行簿](reports/NEMA_Body_H60/5e9/PRODUCTION.md)。不覆盖1e9，不自动启动1e10。
+
+在本实验目录复现输入：
 
 ```powershell
 python make_nema_body_h60.py
 python -m unittest -v test_nema_body_h60.py
 python prepare_nema_simulation.py
 python validate_nema_simulation.py generated/NEMA_Body_H60/Simulation_1e9/jobs.json
+# 新计数级别（已有冻结目录时不要重跑生成器）
+python prepare_nema_simulation.py --level 5e9
+python validate_nema_simulation.py generated/NEMA_Body_H60/Simulation_5e9/jobs.json
 ```
 
 生成器拒绝覆盖已冻结的 `Simulation_1e9` 目录；要重做正式输入须使用新的实验子目录和清单，不应原地改写作业宏。正式重建结束后，应先运行 `verify_formal_result.py` 核对六路最终图、各 200 帧历史、串窗预测和资源余量，再以 NEMA 双能真值评估六球 CRC/CNR、背景噪声与轴向边缘。

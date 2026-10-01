@@ -1,0 +1,13 @@
+{
+  "level": "5e9",
+  "jobs_sha256": "4fafc624c97dcac7b91c26ce0635fc66956da8986fc146b2c1aa23af65adc212",
+  "archive_sha256": "232756bc3975d49b2446c6ce39fb66c725e153587ae7c85b8827fe2b9cfc3699",
+  "remote": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/Simulation_5e9",
+  "script_sha256": {
+    "validate_nema_simulation.py": "ca0d9e603ee03d227e492521887bc9b2728bba2125cf0643b2e5a7ca7ddddc10",
+    "maty_nema_array.sh": "5f4b35cfcbcbd3f58d0b3a124e9c242ad405408ef2890d3b37ff03ae66cb1c84",
+    "maty_nema_collect.sh": "155c0a893374cde6822fb4b2cac85cfeed69f6e377f90ccb78c3e923f4f25038",
+    "package_imaging.py": "cc92e826d0fe7383edd81622458275babb2357e7e8e6d6d26b4c426984985b24",
+    "check_simulation.py": "cef6c8819cb8a6ed67b003e8219a07a83c8a7d1d27dcfd1e773d7e3437be08c7"
+  }
+}

@@ -1,4 +1,4 @@
-"""Deploy a hash-verified ellipse 1e9 projection package to scxi717."""
+"""Deploy a hash-verified ellipse projection package to scxi717."""
 from __future__ import annotations
 
 import argparse

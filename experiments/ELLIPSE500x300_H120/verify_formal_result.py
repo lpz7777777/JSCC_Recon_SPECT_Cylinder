@@ -44,12 +44,26 @@ def main():
         raise ValueError("Formal run metadata mismatch")
     collection_path=ROOT/"collections"/f'{run["dataset"]}_{run["count_level"]}.json'
     collection=json.loads(collection_path.read_text())
+    expected_primaries={"1e9":10**9,"5e9":5*10**9,"1e10":10**10}[run["count_level"]]
     if (collection["dataset"]!=run["dataset"] or
         collection["level"]!=run["count_level"] or
         collection["views"]!=list(range(1,21)) or
-        sum(collection["primary_counts"])!=10**9 or
-        len(set(collection["worker_indices"]))!=200):
+        sum(collection["primary_counts"])!=expected_primaries or
+        sorted(collection["worker_indices"])!=list(range(200)) or
+        len(collection["seeds"])!=200 or len(set(collection["seeds"]))!=200):
         raise ValueError("Geant4 collection provenance mismatch")
+    if run["count_level"]=="5e9" and (len(run.get("input_sha256",{}))!=23 or
+                                     len(run.get("factor_manifest_sha256",{}))!=3):
+        raise ValueError("5e9 run must freeze all imaging inputs and Factor manifests")
+    for name, expected in run.get("input_sha256",{}).items():
+        path=(ROOT/name).resolve()
+        if not path.is_relative_to(ROOT.resolve()) or sha256(path)!=expected:
+            raise ValueError(f"Reconstruction input hash mismatch: {name}")
+    for name, expected in run.get("factor_manifest_sha256",{}).items():
+        if name not in ("218keV_RotateNum20","440keV_RotateNum20","440keV_to218win_RotateNum20"):
+            raise ValueError("Unexpected Factor manifest name")
+        if sha256(ROOT/"FactorsCalibrated"/name/"factor_manifest.json")!=expected:
+            raise ValueError(f"Factor manifest hash mismatch: {name}")
     with np.load(ROOT/"Geometry/geometry.npz") as geometry:
         active=geometry["active_indices"]
     if len(active)!=82040 or np.any(np.diff(active)<=0):
@@ -60,7 +74,8 @@ def main():
         raise ValueError("Geometry or Compton sensitivity hash mismatch")
     if sum(x["accepted_events"] for x in run["resources"])!=run["accepted_compton_events"]:
         raise ValueError("Accepted event total mismatch")
-    if len(run["resources"])!=run["world_size"] or run["accepted_compton_events"]<=0:
+    if (sorted(x["rank"] for x in run["resources"])!=list(range(run["world_size"])) or
+        run["accepted_compton_events"]<=0):
         raise ValueError("Incomplete distributed resources")
     gpu_fraction=max(x["peak_reserved_bytes"]/x["total_device_bytes"]
                      for x in run["resources"])
@@ -85,12 +100,15 @@ def main():
     predicted_path=result/"PredictedCntStat_218_From440.float32"
     predicted=check_array(predicted_path,10496*20)
     report={"experiment":run["experiment"],"dataset":run["dataset"],
+            "count_level":run["count_level"],
             "job_result":result.name,"primaries":sum(collection["primary_counts"]),
             "views":len(collection["views"]),"worker_count":len(collection["worker_indices"]),
             "accepted_compton_events":run["accepted_compton_events"],
             "history_frames_per_channel":200,"gpu_peak_reserved_fraction":gpu_fraction,
             "geometry_sha256":geometry_hash,"sensi_d_sha256":sensi_hash,
-            "collection_sha256":sha256(collection_path),"outputs":outputs,
+            "collection_sha256":sha256(collection_path),
+            "input_sha256":run.get("input_sha256",{}),
+            "factor_manifest_sha256":run.get("factor_manifest_sha256",{}),"outputs":outputs,
             "predicted_sha256":sha256(predicted_path),
             "predicted_sum":float(predicted.sum(dtype=np.float64))}
     out=result/"integrity_report.json"
