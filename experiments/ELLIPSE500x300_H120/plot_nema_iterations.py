@@ -1,7 +1,8 @@
 """Six-channel NEMA H60 galleries and 200-frame spatial metrics.
 
 Uses the experiment's explicit dual-energy 3D truth, not the skill's legacy
-all-hot cylindrical NEMA catalog. No crop or smoothing; gray_r. Gallery
+all-hot cylindrical NEMA catalog. No XY crop or smoothing; gray_r. MIP
+excludes three axial layers per end by default. Gallery
 normalization is fixed across iterations using each channel's final background.
 """
 import argparse
@@ -15,6 +16,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from analyze_nema_result import digest, xy_interpolator, weighted_mean
+from mip_projection import axial_mip, axial_selection, DEFAULT_TRIM_LAYERS
 
 HERE = Path(__file__).resolve().parent
 CHANNELS = (
@@ -31,6 +33,8 @@ DIAMETERS = (10, 13, 17, 22, 28, 37)
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("result")
+    p.add_argument("--mip-trim-layers",type=int,default=DEFAULT_TRIM_LAYERS,
+                   help="Exclude this many z layers per end from MIP only (default 3)")
     args = p.parse_args()
     if "/" in args.result or "\\" in args.result:
         p.error("Result must be one directory name")
@@ -63,6 +67,7 @@ def main():
         bg_fraction = np.maximum(t["body_fraction_zyx"]-t["lung_fraction_zyx"]-sum(spheres.values()), 0)
     # Gamma-density composite: source concentrations times the frozen yields.
     truth["sum"] = (truth[218]*.114 + truth[440]*.259)/(.114+.259)
+    _, mip_policy = axial_selection(z,args.mip_trim_layers)
     with np.load(HERE / "generated/Geometry/geometry.npz") as g:
         coords = g["coordinates_mm"].copy()
         active = g["active_indices"].copy()
@@ -183,14 +188,14 @@ def main():
                 if kind==0: panel,ex=volume[iz],extent
                 elif kind==1: panel,ex=volume[:,iy,:],(x[0]-1.5,x[-1]+1.5,-60,60)
                 elif kind==2: panel,ex=volume[:,:,ix],(y[0]-1.5,y[-1]+1.5,-60,60)
-                else: panel,ex=volume.max(axis=0),extent
+                else: panel,ex=axial_mip(volume,z,args.mip_trim_layers),extent
                 ax=axes[r,2*kind+col]
                 im=ax.imshow(panel,origin="lower",extent=ex,cmap="gray_r",vmin=0,vmax=10,interpolation="nearest")
-                ax.set_title(("axial","coronal","sagittal","MIP")[kind]+(" truth" if col==0 else " recon"),fontsize=9)
+                ax.set_title(("axial","coronal","sagittal",f"MIP trim {args.mip_trim_layers}/end")[kind]+(" truth" if col==0 else " recon"),fontsize=9)
                 if kind==0 and col==0: ax.set_ylabel(title)
                 ax.tick_params(labelsize=6)
     fig.colorbar(im,ax=axes,shrink=.6,label="relative gamma density")
-    fig.suptitle("NEMA H60: 10000 iterations, full ellipse FOV, sigma=0")
+    fig.suptitle(f"NEMA H60: 10000 iterations, full XY ellipse; MIP z slab {mip_policy['retained_slab_bounds_mm']} mm; sigma=0")
     fig.savefig(out/"final_multiplanar.png",dpi=115);plt.close(fig)
     fig,axes=plt.subplots(6,3,figsize=(15,19),layout="constrained")
     for r,(channel,title,energy) in enumerate(CHANNELS):
@@ -209,8 +214,8 @@ def main():
     fig.savefig(out/"crc_cnr_cv_iterations.png",dpi=130);plt.close(fig)
     report={"result":args.result,"count_level":level,"primary_counts_218_440_other":collection["primary_counts"],
         "truth_sha256":digest(truth_path),"integrity_sha256":digest(integrity_path),
-        "selected_iterations":SELECTED,"all_metric_iterations":list(range(50,10001,50)),
-        "method":"3-mm XY barycentric interpolation; no smoothing/crop; ellipse mask; gray_r; fixed 0..10 color range; each channel uses one final-background scalar for all gallery frames; least-squares truth-fit scalar used only for NRMSE metrics, not gallery rendering",
+        "selected_iterations":SELECTED,"all_metric_iterations":list(range(50,10001,50)),"mip_policy":mip_policy,
+        "method":"3-mm XY barycentric interpolation; no smoothing/XY crop; MIP-only axial trim per mip_policy; ellipse mask; gray_r; fixed 0..10 color range; each channel uses one final-background scalar for all gallery frames; least-squares truth-fit scalar used only for NRMSE metrics, not gallery rendering",
         "composite_truth":"(.114*activity218+.259*activity440)/.373; gamma density, not parent Ac activity",
         "roi":"volume-fraction sphere means; local pure background within sphere radius+25mm in XY and radius+3mm in z; global pure background |z|<=25.5mm; spatial std ddof=1; CRC denominator=expected hot/background ratio-1",
         "summary":summary,"final_spheres":[row for row in rows if row["iteration"]==10000]}
@@ -222,6 +227,7 @@ def main():
         "Color limits are fixed at 0..10. Background normalization is fixed per channel across iterations; "
         "values above 10 saturate visually but remain unchanged in metrics. Composite truth includes gamma yields, "
         "and is not parent 225Ac activity.\n\n"
+        f"Only MIP excludes {args.mip_trim_layers} z layers per end; retained slab {mip_policy['retained_slab_bounds_mm']} mm. Quantitative metrics and other views use the complete reconstruction.\n\n"
         "![Six-channel iteration gallery](iterations_z20.png)\n\n"
         "![Final multiplanar truth comparison](final_multiplanar.png)\n\n"
         "![Central two-energy detail](central_detail.png)\n\n"

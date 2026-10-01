@@ -4,6 +4,8 @@
 
 本页是当前入口和文件索引。早期操作、作业号、故障及逐次结果详见 [HISTORY.md](HISTORY.md)；历史中较早的“待运行”等状态可能已过时。远端连接方法见 [docs/REMOTE_COMPUTE_ACCESS.md](../../docs/REMOTE_COMPUTE_ACCESS.md)，不在本实验目录保存密码或私钥。
 
+2026-10-02显示约定更新：NEMA的轴向MIP默认上下各排除3层（各9mm），保留z中心−49.5～+49.5mm、投影体积范围−51～+51mm。只排除MIP投影的端层，重建物理FOV仍500×300×120mm，原始图像与定量指标不改。1e9及5e9均已有[端层排除MIP及全范围对照](reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/README.md)。`iterations_z20.png`是z=+1.5mm单层轴位图，不是MIP。后续`plot_nema_iterations.py`默认此MIP策略；`plot_nema_mip.py --trim-layers N`可只重画MIP而不重算指标。
+
 ## 当前已形成的基线
 
 | 环节 | 已完成内容及证据 | 限制 |

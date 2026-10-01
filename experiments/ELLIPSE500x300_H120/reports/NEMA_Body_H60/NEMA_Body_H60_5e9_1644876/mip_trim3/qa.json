@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "selection_test": "Synthetic endpoint-only peaks removed; interior retained; trim0 retains endpoint peaks",
+  "visual_inspection": "5e9 six-route iteration MIP and full-vs-trimmed comparison; labels and fixed scales checked",
+  "original_analysis_sha256": "88e1eddc791bc6e51d59449ae6e7365bdd01d0caf8a69fb0f71435d9cfe56635",
+  "figure_sha256": {
+    "final_multiplanar.png": "cbd466146875dd6691062a3f93836cd62f5f11bed3321f9e17ecad61c23c16f2",
+    "mip_full_vs_trimmed.png": "0b86ceebc078ef5d8f68a6a5fa7fcd9bde6d3922b5b50c938df560e271f2e4b3",
+    "mip_iterations.png": "26c2037b2fa03a84a3b232cbb5e6acf0b2de126b79812051ea99d3fb944106ac"
+  }
+}

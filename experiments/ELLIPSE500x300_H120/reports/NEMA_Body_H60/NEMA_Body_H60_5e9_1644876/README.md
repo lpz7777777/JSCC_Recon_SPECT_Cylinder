@@ -4,7 +4,7 @@ See analysis.json and iteration_metrics.csv for reproducible methods and 200-fra
 
 ![Six-channel iteration gallery](iterations_z20.png)
 
-![Final multiplanar truth comparison](final_multiplanar.png)
+![Final multiplanar truth comparison](mip_trim3/final_multiplanar.png)
 
 ![Central two-energy detail](central_detail.png)
 
@@ -22,3 +22,7 @@ See analysis.json and iteration_metrics.csv for reproducible methods and 200-fra
 - [z层39六路迭代图](iterations_z39.png)
 
 central_detail.png仅额外提供x±160/y±120mm显示窗；所有主图和指标保留全FOV。使用原始三维双能球真值，无Gaussian滤波。
+
+## 2026-10-02：MIP排除端层
+
+默认显示上下各排除3层（各9mm），MIP保留z体积范围−51～+51mm。以下多平面图已链接新版；原始全z版本仍保存在本目录final_multiplanar.png。[逐迭代MIP与全z对照](mip_trim3/README.md)。iterations_z20.png为z=+1.5mm单层轴位图，不是MIP；原始重建和全部定量指标不变。
