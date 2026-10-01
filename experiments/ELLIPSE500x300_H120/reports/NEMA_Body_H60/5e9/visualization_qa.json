@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "figures": {
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/central_detail.png": {
+      "width": 2835,
+      "height": 945,
+      "sha256": "22c28d43624e51d4861200f1cde2247d28e59cd4ac916c196c26b7f68a2515e7"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/crc_cnr_cv_iterations.png": {
+      "width": 1950,
+      "height": 2470,
+      "sha256": "ae00c4c4f5fa5ea2a5f64231995ed535dfa11ecb4ee1e27e81fc2ac452143c08"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/final_multiplanar.png": {
+      "width": 2645,
+      "height": 1955,
+      "sha256": "e1c66aaf09aed3b3d5bda32d43c0bcdaa4562c9a4169e9c27816f077711b5bd2"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iterations_z00.png": {
+      "width": 2530,
+      "height": 1725,
+      "sha256": "be9b9255e5f88fa5be6a85495ba704ec93755359a6ab0bb1d92f6dcff76c15df"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iterations_z10.png": {
+      "width": 2530,
+      "height": 1725,
+      "sha256": "30521d72cb2de9e12fdbc7ef5f740a76906e665fdc498ea7db99795c2d1de996"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iterations_z20.png": {
+      "width": 2530,
+      "height": 1725,
+      "sha256": "d14b12d03794da870d6e5779b6ddfc509dc10f9d609373d64097c0e9d9b79287"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iterations_z29.png": {
+      "width": 2530,
+      "height": 1725,
+      "sha256": "cabe85e7a4de888639b7031c0946d08bcf3a69d4d7906f80cf433966d0bf85c8"
+    },
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iterations_z39.png": {
+      "width": 2530,
+      "height": 1725,
+      "sha256": "00dc0d22f513d9c324e0c3dd3308139f98c0c3c2dfe2fc53e4c69e47372f4eab"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/218_SinglePhoton_CrossTalkCorrected_expected_density.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "7d87c7c28abfd98189acb6824362df040e9da1a33d13f4142c414b7db8581fc1"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/218_SinglePhoton_CrossTalkCorrected_fixed_final_background.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "d62f8f9f72260fa46c2aa46feb48177fe8f101fb434bbec9056aa7740c570563"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440SingleComptonPlus218Single_expected_density.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "ace9135047b5e80eef09b35f8b08240e79675e5b67a558804dbd49837262db97"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440SingleComptonPlus218Single_fixed_final_background.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "860b6960e2bb6fc6846d30a329d2fb1cef1991df7a6a1afced787e344cdf8598"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440SinglePlus218Single_expected_density.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "36310becf17abb095918ecc5e60e6c28c146bce7249cfc72b1a938a67deee135"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440SinglePlus218Single_fixed_final_background.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "b144c83ad27d2122b1d093f22d00f0733207e7a0e6f059070406ad4cf3f35c58"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440_ComptonOnly_expected_density.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "50e9456de30ec16bef968f7326104375706a06d9a915bedcd07486f538c1629a"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440_ComptonOnly_fixed_final_background.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "e4f5b0b94a8a1008e6e124938e47392136860afc202755a788497b68156fceb1"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440_SinglePhoton_expected_density.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "7bb03a0a30d40821f0b78ba0b21eabfcb1bbcf5769b3cc1f35738d4139d24b9e"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440_SinglePhoton_fixed_final_background.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "15abdfc799bc89cfe1017951ef2d425b86a0b6afce21c3f327c4ef6fd3427d56"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440_SinglePlusCompton_expected_density.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "00fefb4741147ee99f472f1d673df6c4a437c8fe273d9b22f61e9a553f78f9eb"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/440_SinglePlusCompton_fixed_final_background.png": {
+      "width": 2310,
+      "height": 660,
+      "sha256": "e557ce1babef2e793d8064380ba87e1b931a94b0bd0c0ed911c156a0ad0fedfa"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/bias_integral_axial_leakage.png": {
+      "width": 1800,
+      "height": 2280,
+      "sha256": "5bdea7666a8ace5ea48d83fa5c3d11dd3ec024c1835b1f233fa21fd5a5551e69"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/final_expected_density.png": {
+      "width": 1560,
+      "height": 1950,
+      "sha256": "b560ee13a19fcda60a002c868a65e47b8ed21f65a88a5e4581ed6fbe5569ebf3"
+    },
+    "reports/NEMA_Body_H60/5e9/comparison/matched_crc_cnr_cv.png": {
+      "width": 1800,
+      "height": 2400,
+      "sha256": "cdafbfa1d521747aac952adf131ef2b664b6793636cdae561066f03d26ea3dd0"
+    }
+  },
+  "csv_rows": {
+    "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iteration_metrics.csv": 4800,
+    "reports/NEMA_Body_H60/5e9/comparison/final_channel_comparison.csv": 24,
+    "reports/NEMA_Body_H60/5e9/comparison/final_sphere_comparison.csv": 24,
+    "reports/NEMA_Body_H60/5e9/comparison/regional_metrics.csv": 2400
+  },
+  "visual_inspection": [
+    "5e9 central_detail and final_multiplanar",
+    "5e9 z=+58.5mm six-route endpoint iterations",
+    "matched final_expected_density",
+    "matched_crc_cnr_cv",
+    "218 expected-density iteration comparison"
+  ],
+  "observations": "Labels and shared scales readable; real low signal and edge spikes retained; sigma0; explicit dual-energy spherical truth; raw data unchanged"
+}

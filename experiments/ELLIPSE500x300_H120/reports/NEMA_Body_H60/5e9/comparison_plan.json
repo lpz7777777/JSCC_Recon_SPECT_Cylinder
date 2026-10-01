@@ -1,5 +1,5 @@
 {
-  "status": "planned_comparison_requires_candidate_formal_integrity_and_complete_200_frame_histories",
+  "status": "completed_matched_comparison",
   "baseline_result": "NEMA_Body_H60_1e9_1643142",
   "candidate_result": "NEMA_Body_H60_5e9_1644876",
   "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
@@ -254,5 +254,6 @@
     "volume-integrated emitted photon recovery and source-exterior axial leakage",
     "no smoothing to conceal limitations"
   ],
-  "no_scientific_candidate_results_yet": true
+  "no_scientific_candidate_results_yet": false,
+  "evidence": "comparison/comparison.json"
 }

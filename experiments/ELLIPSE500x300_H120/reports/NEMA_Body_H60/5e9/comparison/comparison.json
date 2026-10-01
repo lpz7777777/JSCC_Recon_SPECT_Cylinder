@@ -1,0 +1,445 @@
+{
+  "status": "matched_comparison_complete",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "sensi_d_sha256": "60a05c2cbc60d0d847fe5cda15b529221774fc4f561d66c121c378753f5d6e2a",
+  "provenance": [
+    {
+      "result": "NEMA_Body_H60_1e9_1643142",
+      "analysis_sha256": "1b4665279bdd691edefc4359f8744319f1c08927bfe39e60a156b17384756a43",
+      "metrics_sha256": "1325e28446d96415f4cc6b3db854a7b85ba020d5c57478795a90c986c14dbb15",
+      "integrity_sha256": "720194d8814170a96838226b8a9a85fe82691d392e4d9bd63c24c5593e7a08c1",
+      "run_manifest_sha256": "6159a1a372ca2accdc52a22c858644fb2a911088acf9c6519266e09767c1e819",
+      "actual_primary_photons": 1000000000,
+      "accepted_compton_events": 97299
+    },
+    {
+      "result": "NEMA_Body_H60_5e9_1644876",
+      "analysis_sha256": "88e1eddc791bc6e51d59449ae6e7365bdd01d0caf8a69fb0f71435d9cfe56635",
+      "metrics_sha256": "d16f1571a2f236cfb6c85925d7b9e1762010fb61374b5bb5ea737bd19df97ec1",
+      "integrity_sha256": "d300137d7ce03adb4f4b87395e862e92a0f1e5916e7bd32f7974e1d3141f91ac",
+      "run_manifest_sha256": "9d7042726693894d11e35944e02f054618501c649b3a83a92cb01a39615c6239",
+      "actual_primary_photons": 5000000000,
+      "accepted_compton_events": 484936
+    }
+  ],
+  "roi": "volume-fraction sphere means; local pure background within sphere radius+25mm in XY and radius+3mm in z; global pure background |z|<=25.5mm; spatial std ddof=1; CRC denominator=expected hot/background ratio-1",
+  "selected_iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "sigma_pixels": 0,
+  "crop_pixels": 0,
+  "fov_mm": [
+    500,
+    300,
+    120
+  ],
+  "display_limits": [
+    0,
+    10
+  ],
+  "normalizations": [
+    "expected emitted BG density: preserves absolute bias",
+    "one final BG scalar per channel/dose fixed across iterations"
+  ],
+  "composite": "gamma density, not parent Ac activity",
+  "final_channels": [
+    {
+      "channel": "440_SinglePhoton",
+      "metric": "final_background_cv",
+      "baseline_1e9": 1.9641369750831854,
+      "candidate_5e9": 0.7020358222941738,
+      "change": -1.2621011527890116
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "metric": "final_background_bias",
+      "baseline_1e9": -0.10204898048684585,
+      "candidate_5e9": -0.0781383947210269,
+      "change": 0.023910585765818948
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "metric": "final_emitted_photon_integral_recovery",
+      "baseline_1e9": 0.9905143006279528,
+      "candidate_5e9": 0.9943013444370742,
+      "change": 0.0037870438091214265
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "metric": "final_mass_fraction_outside_source_z",
+      "baseline_1e9": 0.07471433626142267,
+      "candidate_5e9": 0.0611891952750776,
+      "change": -0.013525140986345066
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "metric": "final_background_cv",
+      "baseline_1e9": 5.921135796542706,
+      "candidate_5e9": 3.2001775386163507,
+      "change": -2.7209582579263554
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "metric": "final_background_bias",
+      "baseline_1e9": -0.1759760269778381,
+      "candidate_5e9": -0.10057019773255316,
+      "change": 0.07540582924528494
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "metric": "final_emitted_photon_integral_recovery",
+      "baseline_1e9": 1.0087528432230906,
+      "candidate_5e9": 1.005883210156087,
+      "change": -0.0028696330670034964
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "metric": "final_mass_fraction_outside_source_z",
+      "baseline_1e9": 0.17322269409797783,
+      "candidate_5e9": 0.1575875814782459,
+      "change": -0.01563511261973194
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "metric": "final_background_cv",
+      "baseline_1e9": 1.7731504014875727,
+      "candidate_5e9": 0.9507024420469364,
+      "change": -0.8224479594406363
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "metric": "final_background_bias",
+      "baseline_1e9": -0.10444260571877484,
+      "candidate_5e9": -0.10948658705456005,
+      "change": -0.005043981335785208
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "metric": "final_emitted_photon_integral_recovery",
+      "baseline_1e9": 0.9838207948347492,
+      "candidate_5e9": 0.9834635134961985,
+      "change": -0.00035728133855061905
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "metric": "final_mass_fraction_outside_source_z",
+      "baseline_1e9": 0.13862785424196558,
+      "candidate_5e9": 0.13599508993348344,
+      "change": -0.0026327643084821384
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "metric": "final_background_cv",
+      "baseline_1e9": 1.5048891169416085,
+      "candidate_5e9": 0.6685851422638148,
+      "change": -0.8363039746777937
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "metric": "final_background_bias",
+      "baseline_1e9": -0.11749549202546028,
+      "candidate_5e9": -0.04743412210037168,
+      "change": 0.0700613699250886
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "metric": "final_emitted_photon_integral_recovery",
+      "baseline_1e9": 0.9902269486450597,
+      "candidate_5e9": 0.9929222023556112,
+      "change": 0.0026952537105515706
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "metric": "final_mass_fraction_outside_source_z",
+      "baseline_1e9": 0.05522797677613525,
+      "candidate_5e9": 0.030328913910265386,
+      "change": -0.024899062865869865
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "metric": "final_background_cv",
+      "baseline_1e9": 1.4222094201260544,
+      "candidate_5e9": 0.5229225479455902,
+      "change": -0.8992868721804642
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "metric": "final_background_bias",
+      "baseline_1e9": -0.10677010920796337,
+      "candidate_5e9": -0.0687540522960044,
+      "change": 0.03801605691195897
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "metric": "final_emitted_photon_integral_recovery",
+      "baseline_1e9": 0.9904298702905248,
+      "candidate_5e9": 0.9938961373182821,
+      "change": 0.0034662670277573193
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "metric": "final_mass_fraction_outside_source_z",
+      "baseline_1e9": 0.06899000466207027,
+      "candidate_5e9": 0.05213099797492952,
+      "change": -0.01685900668714075
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "metric": "final_background_cv",
+      "baseline_1e9": 1.303678966103286,
+      "candidate_5e9": 0.6811409392836361,
+      "change": -0.6225380268196499
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "metric": "final_background_bias",
+      "baseline_1e9": -0.10843208691070283,
+      "candidate_5e9": -0.09052128299018103,
+      "change": 0.0179108039205218
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "metric": "final_emitted_photon_integral_recovery",
+      "baseline_1e9": 0.985703058668211,
+      "candidate_5e9": 0.9862425777875019,
+      "change": 0.0005395191192909543
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "metric": "final_mass_fraction_outside_source_z",
+      "baseline_1e9": 0.11401074214751035,
+      "candidate_5e9": 0.1047389643104024,
+      "change": -0.009271777837107947
+    }
+  ],
+  "final_spheres": [
+    {
+      "channel": "440_SinglePhoton",
+      "diameter_mm": 13,
+      "crc_1e9": -0.04969458938524344,
+      "crc_5e9": 0.18265315900394366,
+      "cnr_1e9": -0.31329053729201695,
+      "cnr_5e9": 3.2062376008554185,
+      "sampled_truth_crc": 0.767810015966734
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "diameter_mm": 22,
+      "crc_1e9": 0.10660505920871016,
+      "crc_5e9": 0.31753432716985963,
+      "cnr_1e9": 0.7166879018650703,
+      "cnr_5e9": 5.507160495818858,
+      "sampled_truth_crc": 0.8559791485191638
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "diameter_mm": 37,
+      "crc_1e9": 0.33826418507587125,
+      "crc_5e9": 0.38815314044546656,
+      "cnr_1e9": 1.505920063904047,
+      "cnr_5e9": 5.32136877835333,
+      "sampled_truth_crc": 0.9192475988592439
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "diameter_mm": 13,
+      "crc_1e9": -0.10886371039228435,
+      "crc_5e9": -0.09959251311001535,
+      "cnr_1e9": -0.18506556897958307,
+      "cnr_5e9": -0.34463122538046126,
+      "sampled_truth_crc": 0.767810015966734
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "diameter_mm": 22,
+      "crc_1e9": 1.291030802813221,
+      "crc_5e9": 0.6655390131842346,
+      "cnr_1e9": 2.3573621303577568,
+      "cnr_5e9": 1.4027860941229262,
+      "sampled_truth_crc": 0.8559791485191638
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "diameter_mm": 37,
+      "crc_1e9": 1.2173006124846018,
+      "crc_5e9": 0.4870374205477439,
+      "cnr_1e9": 2.2574005718244035,
+      "cnr_5e9": 1.5841912240577385,
+      "sampled_truth_crc": 0.9192475988592439
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "diameter_mm": 13,
+      "crc_1e9": -0.05327071347764953,
+      "crc_5e9": 0.15123896082938415,
+      "cnr_1e9": -0.38053191643213197,
+      "cnr_5e9": 2.787414712610493,
+      "sampled_truth_crc": 0.767810015966734
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "diameter_mm": 22,
+      "crc_1e9": 0.20756183350830476,
+      "crc_5e9": 0.41129321975393157,
+      "cnr_1e9": 1.7034223585389838,
+      "cnr_5e9": 3.2486923803025136,
+      "sampled_truth_crc": 0.8559791485191638
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "diameter_mm": 37,
+      "crc_1e9": 0.42998380207037773,
+      "crc_5e9": 0.4377852358658264,
+      "cnr_1e9": 2.056253646304622,
+      "cnr_5e9": 5.247428442991376,
+      "sampled_truth_crc": 0.9192475988592439
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "diameter_mm": 10,
+      "crc_1e9": -0.02457321963056147,
+      "crc_5e9": 0.009360749470947758,
+      "cnr_1e9": -0.1530599706083078,
+      "cnr_5e9": 0.11514423452861688,
+      "sampled_truth_crc": 0.6616634847266881
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "diameter_mm": 17,
+      "crc_1e9": 0.6913281696003426,
+      "crc_5e9": 0.21128881610583783,
+      "cnr_1e9": 4.436516126298552,
+      "cnr_5e9": 3.0917231739660616,
+      "sampled_truth_crc": 0.8297703103207811
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "diameter_mm": 28,
+      "crc_1e9": 0.8804710329106433,
+      "crc_5e9": 0.5239727682356233,
+      "cnr_1e9": 5.802767556845635,
+      "cnr_5e9": 6.441863732810111,
+      "sampled_truth_crc": 0.8973043863020929
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 10,
+      "crc_1e9": 2.00928678460086,
+      "crc_5e9": -0.14397688535518183,
+      "cnr_1e9": 5.099812926735223,
+      "cnr_5e9": -0.6288233092722649,
+      "sampled_truth_crc": 0.6616634577241001
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 13,
+      "crc_1e9": 0.02785228031170261,
+      "crc_5e9": 0.1822106921541644,
+      "cnr_1e9": 0.14586476702330203,
+      "cnr_5e9": 2.789245710735291,
+      "sampled_truth_crc": 0.7678100552279652
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 17,
+      "crc_1e9": 0.6392019233148596,
+      "crc_5e9": 0.32068494142993725,
+      "cnr_1e9": 0.9633244700346916,
+      "cnr_5e9": 1.933818452972107,
+      "sampled_truth_crc": 0.8297702896359938
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 22,
+      "crc_1e9": 0.1982260569376711,
+      "crc_5e9": 0.3658845910057063,
+      "cnr_1e9": 1.1110068746422024,
+      "cnr_5e9": 5.329552371873082,
+      "sampled_truth_crc": 0.8559792216149562
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 28,
+      "crc_1e9": 1.384816896187434,
+      "crc_5e9": 0.7824625333121501,
+      "cnr_1e9": 3.7375233326994746,
+      "cnr_5e9": 3.319156694597264,
+      "sampled_truth_crc": 0.8973043589927827
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 37,
+      "crc_1e9": 0.40599169535827506,
+      "crc_5e9": 0.4573794095539908,
+      "cnr_1e9": 1.4589300153952758,
+      "cnr_5e9": 5.237400307721593,
+      "sampled_truth_crc": 0.91924767517433
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 10,
+      "crc_1e9": 1.7002296428122705,
+      "crc_5e9": -0.13000584380143984,
+      "cnr_1e9": 4.045403790222771,
+      "cnr_5e9": -0.5351525078245674,
+      "sampled_truth_crc": 0.6616634577241001
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 13,
+      "crc_1e9": 0.011143174729213905,
+      "crc_5e9": 0.1437089999916101,
+      "cnr_1e9": 0.06499392678136126,
+      "cnr_5e9": 2.348292285907062,
+      "sampled_truth_crc": 0.7678100552279652
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 17,
+      "crc_1e9": 0.5597332045943376,
+      "crc_5e9": 0.3612230354793463,
+      "cnr_1e9": 0.8415718971811081,
+      "cnr_5e9": 2.1209393782671824,
+      "sampled_truth_crc": 0.8297702896359938
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 22,
+      "crc_1e9": 0.31490191189303574,
+      "crc_5e9": 0.45289171377936976,
+      "cnr_1e9": 2.1592768754261193,
+      "cnr_5e9": 3.2585146722959455,
+      "sampled_truth_crc": 0.8559792216149562
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 28,
+      "crc_1e9": 1.3557010289173308,
+      "crc_5e9": 0.7971215567286919,
+      "cnr_1e9": 3.511666030095255,
+      "cnr_5e9": 3.3595279772261537,
+      "sampled_truth_crc": 0.8973043589927827
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 37,
+      "crc_1e9": 0.4956938205221995,
+      "crc_5e9": 0.4999519651534119,
+      "cnr_1e9": 1.9799508443008982,
+      "cnr_5e9": 5.040280509518478,
+      "sampled_truth_crc": 0.91924767517433
+    }
+  ],
+  "provenance_limit": "1e9 historical run/integrity lacks Factor manifest hashes; geometry and Sensi_d hashes match, but Factor byte identity between runs cannot be independently proven from these historical manifests",
+  "candidate_factor_manifest_sha256": {
+    "218keV_RotateNum20": "b8ba0829d9fc99aa52a9f35d4f1edc1168287c06a7c41d77039875a941c30f8d",
+    "440keV_RotateNum20": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc",
+    "440keV_to218win_RotateNum20": "6b947252d1529341ca3801daa763572515f566dbbb148253a0a4177e0c44971f"
+  }
+}

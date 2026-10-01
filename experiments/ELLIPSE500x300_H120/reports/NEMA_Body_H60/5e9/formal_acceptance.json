@@ -1,0 +1,104 @@
+{
+  "checked_utc": "2026-10-01T17:03:46.680094+00:00",
+  "job_id": "1644876",
+  "result": "NEMA_Body_H60_5e9_1644876",
+  "status": "formal_integrity_and_resource_gates_pass",
+  "integrity_sha256": "d300137d7ce03adb4f4b87395e862e92a0f1e5916e7bd32f7974e1d3141f91ac",
+  "run_manifest_sha256": "9d7042726693894d11e35944e02f054618501c649b3a83a92cb01a39615c6239",
+  "slurm_accounting": "JobID|State|ExitCode|Elapsed|MaxRSS|AllocTRES\n1644876|COMPLETED|0:0|11:49:28||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.batch|COMPLETED|0:0|11:49:28|5824K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1644876.extern|COMPLETED|0:0|11:49:28|0|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.0|COMPLETED|0:0|11:49:23|30483472K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.1|COMPLETED|0:0|00:00:00|188K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.2|COMPLETED|0:0|00:00:00|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.3|COMPLETED|0:0|00:00:00|100K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.4|COMPLETED|0:0|00:00:00|100K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.5|COMPLETED|0:0|00:00:01|84K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.6|COMPLETED|0:0|00:00:00|120K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.7|COMPLETED|0:0|00:00:00|196K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.8|COMPLETED|0:0|00:00:00|100K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.9|COMPLETED|0:0|00:00:00|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.10|COMPLETED|0:0|00:00:00|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.11|COMPLETED|0:0|00:00:00|100K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.12|COMPLETED|0:0|00:00:00|180K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.13|COMPLETED|0:0|00:00:01|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.14|COMPLETED|0:0|00:00:00|200K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.15|COMPLETED|0:0|00:00:00|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.16|COMPLETED|0:0|00:00:00|180K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.17|COMPLETED|0:0|00:00:00|188K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.18|COMPLETED|0:0|00:00:00|84K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.19|COMPLETED|0:0|00:00:00|236K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.20|COMPLETED|0:0|00:00:00|300K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.21|COMPLETED|0:0|00:00:00|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.22|COMPLETED|0:0|00:00:01|188K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.23|COMPLETED|0:0|00:00:01|240K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644876.24|COMPLETED|0:0|00:00:01|184K|cpu=48,gres/gpu=8,mem=480000M,node=8\nJobID|Start|End\n1644876|2026-10-01T12:55:47|2026-10-02T00:45:15\n",
+  "elapsed": "11:49:28",
+  "nodes": 8,
+  "gpus": 8,
+  "host_max_rss_KiB": 30483472,
+  "host_max_rss_GiB": 29.071304321289062,
+  "actual_host_allocation_per_node_MiB": 60000,
+  "host_peak_fraction_actual_allocation": 0.49615026041666666,
+  "host_20_percent_margin_pass": true,
+  "gpu_peak_reserved_fraction": 0.42348959495865496,
+  "gpu_20_percent_margin_pass": true,
+  "resources": [
+    {
+      "rank": 0,
+      "device": "cuda:0",
+      "accepted_events": 60592,
+      "event_bytes_cpu": 19883870720,
+      "peak_allocated_bytes": 10365788160,
+      "peak_reserved_bytes": 10441719808,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 1,
+      "device": "cuda:0",
+      "accepted_events": 60525,
+      "event_bytes_cpu": 19861884000,
+      "peak_allocated_bytes": 10340129792,
+      "peak_reserved_bytes": 10399776768,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 2,
+      "device": "cuda:0",
+      "accepted_events": 60741,
+      "event_bytes_cpu": 19932766560,
+      "peak_allocated_bytes": 10421993472,
+      "peak_reserved_bytes": 10462691328,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 3,
+      "device": "cuda:0",
+      "accepted_events": 60491,
+      "event_bytes_cpu": 19850726560,
+      "peak_allocated_bytes": 10423577600,
+      "peak_reserved_bytes": 10483662848,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 4,
+      "device": "cuda:0",
+      "accepted_events": 60851,
+      "event_bytes_cpu": 19968864160,
+      "peak_allocated_bytes": 10423578112,
+      "peak_reserved_bytes": 10483662848,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 5,
+      "device": "cuda:0",
+      "accepted_events": 60446,
+      "event_bytes_cpu": 19835959360,
+      "peak_allocated_bytes": 10488538624,
+      "peak_reserved_bytes": 10567548928,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 6,
+      "device": "cuda:0",
+      "accepted_events": 60749,
+      "event_bytes_cpu": 19935391840,
+      "peak_allocated_bytes": 10588362240,
+      "peak_reserved_bytes": 10693378048,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 7,
+      "device": "cuda:0",
+      "accepted_events": 60541,
+      "event_bytes_cpu": 19867134560,
+      "peak_allocated_bytes": 10524981248,
+      "peak_reserved_bytes": 10651435008,
+      "total_device_bytes": 25250627584
+    }
+  ],
+  "primary_counts": [
+    1469053733,
+    3530946267,
+    0
+  ],
+  "exact_seed_range_verified": true,
+  "six_channels_200_frames_each_verified": true,
+  "scientific_acceptance": "analysis_delivered; quantitative small-sphere and whole-FOV performance not demonstrated",
+  "visualization_and_comparison_complete": true,
+  "analysis_sha256": "88e1eddc791bc6e51d59449ae6e7365bdd01d0caf8a69fb0f71435d9cfe56635",
+  "comparison_sha256": "0f0f697b9731568ee95692de673715fb0a393a371afe91f6216e4700b990c942"
+}
