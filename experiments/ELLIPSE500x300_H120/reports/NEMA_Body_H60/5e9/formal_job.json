@@ -1,0 +1,63 @@
+{
+  "job_id": "1644876",
+  "level": "5e9",
+  "dataset": "NEMA_Body_H60",
+  "submitted_utc": "2026-10-01T04:58:03.874929+00:00",
+  "pilot_job": "1644842",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "world_size": 8,
+  "iterations": 10000,
+  "save_step": 50,
+  "accepted_events": 484936,
+  "result_name": "NEMA_Body_H60_5e9_1644876",
+  "pilot_image_gpu_check": {
+    "job": "NEMA_Body_H60_5e9_1644842",
+    "accepted_events": 484936,
+    "world_size": 8,
+    "channels": [
+      {
+        "channel": "440_SinglePhoton",
+        "sum": 19067064.0,
+        "positive_voxels": 82040
+      },
+      {
+        "channel": "440_ComptonOnly",
+        "sum": 21665044.0,
+        "positive_voxels": 82040
+      },
+      {
+        "channel": "440_SinglePlusCompton",
+        "sum": 19318660.0,
+        "positive_voxels": 82040
+      },
+      {
+        "channel": "218_SinglePhoton_CrossTalkCorrected",
+        "sum": 7981484.0,
+        "positive_voxels": 82040
+      },
+      {
+        "channel": "440SinglePlus218Single",
+        "sum": 27048546.0,
+        "positive_voxels": 82040
+      },
+      {
+        "channel": "440SingleComptonPlus218Single",
+        "sum": 27300144.0,
+        "positive_voxels": 82040
+      }
+    ],
+    "gpu_peak_reserved_fraction": 0.42348959495865496,
+    "gpu_20_percent_margin_pass": true,
+    "host_memory_gate": "Check Slurm MaxRSS against granted per-node memory separately",
+    "peak_reserved_gib": 9.958984375,
+    "min_gpu_capacity_gib": 23.5164794921875
+  },
+  "pilot_manifest_sha256": "ed1bbb62a3bdb4c0d79ebda75afe988e6c9648ba64eb4433d4aea2e03279a177",
+  "pilot_slurm_accounting": "1644842|COMPLETED|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1644842.batch|COMPLETED|0:0|5640K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1644842.extern|COMPLETED|0:0|0|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1644842.0|COMPLETED|0:0|38733192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1644842.1|COMPLETED|0:0|208K|cpu=48,gres/gpu=8,mem=480000M,node=8",
+  "host_peak_fraction_conservative": 0.6716154618696732,
+  "host_20_percent_margin_pass": true,
+  "nccl_interface": "bond0",
+  "memory_policy": "Cluster auto-grants 60GB per GPU; explicit --mem flags prohibited",
+  "cuda_allocator_config": "expandable_segments:True"
+}

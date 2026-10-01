@@ -1,0 +1,33 @@
+{
+  "job_id": "1644811",
+  "job_name": "NEMA_5e9_pilot_a2",
+  "level": "5e9",
+  "pilot_only": true,
+  "submitted_utc": "2026-10-01T04:37:39.380563+00:00",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "world_size": 8,
+  "iterations": 10,
+  "save_step": 10,
+  "accepted_budget_not_measured": 550000,
+  "planning_budget": {
+    "world_size": 8,
+    "ranks_per_node": 1,
+    "accepted_events_assumed": 550000,
+    "event_rows_gib_per_rank": 21.01156860589981,
+    "estimated_gpu_peak_gib_per_rank": 9.663722038269043,
+    "gpu_capacity_gib": 22,
+    "estimated_host_gib_per_node": 37.645473062992096,
+    "host_capacity_gib_per_node": 55,
+    "gpu_20_percent_margin_pass": true,
+    "host_20_percent_margin_pass": true,
+    "note": "Estimates omit allocator fragmentation, packed event rows and CUDA framework overhead; full-event 10-iteration pilot is mandatory."
+  },
+  "input_closure": {
+    "primaries": 5000000000,
+    "collection_sha256": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032",
+    "files_verified": 23
+  },
+  "result_name": "NEMA_Body_H60_5e9_1644811",
+  "nccl_interface": "bond0"
+}

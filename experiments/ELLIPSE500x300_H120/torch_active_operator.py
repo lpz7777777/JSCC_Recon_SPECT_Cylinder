@@ -119,7 +119,7 @@ def forward_project(response, image):
 
 
 def single_mlem(response, projection, sensitivity, iterations, save_step,
-                additive_background=None, save_history=True):
+                additive_background=None, save_history=True, progress_label=None):
     if iterations <= 0 or iterations % save_step:
         raise ValueError("Iteration count must divide by save step")
     n = response.geometry.active_count
@@ -137,6 +137,8 @@ def single_mlem(response, projection, sensitivity, iterations, save_step,
         image = _update(image,_reduce_sum(weight),sensitivity)
         if save_history and (iteration+1) % save_step == 0:
             history.append(image.detach().cpu().clone())
+            if progress_label:
+                print(f"ELLIPSE_ITERATION {progress_label} {iteration+1}/{iterations}",flush=True)
     return image, torch.stack(history) if history else None
 
 
@@ -166,7 +168,7 @@ def _event_weight(blocks, image, device):
 
 def compton_and_joint_mlem(response, projection, event_blocks,
                            single_sensitivity, compton_sensitivity,
-                           iterations, save_step, save_history=True):
+                           iterations, save_step, save_history=True, progress_label=None):
     if iterations <= 0 or iterations % save_step:
         raise ValueError("Iteration count must divide by save step")
     n=response.geometry.active_count
@@ -190,5 +192,7 @@ def compton_and_joint_mlem(response, projection, event_blocks,
         if save_history and (iteration+1)%save_step==0:
             history_d.append(image_d.detach().cpu().clone())
             history_j.append(image_j.detach().cpu().clone())
+            if progress_label:
+                print(f"ELLIPSE_ITERATION {progress_label} {iteration+1}/{iterations}",flush=True)
     return ((image_d,torch.stack(history_d) if history_d else None),
             (image_j,torch.stack(history_j) if history_j else None))

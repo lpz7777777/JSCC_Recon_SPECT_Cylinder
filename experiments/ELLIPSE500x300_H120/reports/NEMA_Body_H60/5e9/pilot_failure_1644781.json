@@ -1,0 +1,21 @@
+{
+  "job_id": "1644781",
+  "state": "FAILED",
+  "elapsed": "00:01:31",
+  "exit_code": "15:0",
+  "compute_step_exit_code": "1:0",
+  "compute_step_maxrss_kib": 6166532,
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "observed_error": "DistStoreError: wait timeout after 60000ms at torchelastic/assigned_ranks keys 1,4,5,6",
+  "stage": "startup_before_images",
+  "output_directory_created_but_empty": true,
+  "oom_evidence": false,
+  "transport_and_input_hash_checks_passed": true,
+  "response_model_or_data_changes": false,
+  "root_cause_scope": "elastic rank-assignment publication timed out; precise upstream PyTorch/TCPStore trigger is not proven",
+  "repair": "static rendezvous, Slurm per-task node_rank, identical local worker count fast path, no automatic restart; NCCL bond0",
+  "bounded_diagnostic_job": "1644806",
+  "diagnostic_timeout_minutes": 5,
+  "formal_reconstruction_gate": "Do not submit until repaired full-data pilot and memory checks pass"
+}

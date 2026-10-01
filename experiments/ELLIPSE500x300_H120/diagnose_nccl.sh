@@ -17,8 +17,15 @@ module load cuda/12.9 miniforge3/25.11.0-1
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate torch
 export PYTHONUNBUFFERED=1 NCCL_DEBUG=INFO
+export NCCL_SOCKET_IFNAME=${NCCL_SOCKET_IFNAME:-bond0}
 master=$(scontrol show hostname "$SLURM_JOB_NODELIST" | head -n1)
 port=$((50000+SLURM_JOB_ID%10000))
-srun --kill-on-bad-exit=1 torchrun --nnodes="$SLURM_NNODES" --nproc_per_node=1 \
-  --rdzv_id="$SLURM_JOB_ID" --rdzv_backend=c10d --rdzv_endpoint="$master:$port" \
+export ELLIPSE_MASTER_ADDR="$master" ELLIPSE_MASTER_PORT="$port"
+export TORCH_ELASTIC_WORKER_IDENTICAL=1
+srun --kill-on-bad-exit=1 bash -c '
+  exec torchrun --nnodes="$SLURM_NNODES" --nproc_per_node=1 \
+    --node_rank="$SLURM_PROCID" --master_addr="$ELLIPSE_MASTER_ADDR" \
+    --master_port="$ELLIPSE_MASTER_PORT" --rdzv_backend=static \
+    --rdzv_conf=timeout=120 --rdzv_id="$SLURM_JOB_ID" --max_restarts=0 "$@"
+' bash \
   experiments/ELLIPSE500x300_H120/diagnose_nccl.py

@@ -44,6 +44,7 @@ def main():
             for suffix,count in shapes:
                 name=f"Image_{channel}_{suffix}.float32"
                 with sftp.open(f"{folder}/{name}","rb") as stream:
+                    stream.prefetch()  # Small files; pipeline SFTP reads over the cluster WAN.
                     data=np.frombuffer(stream.read(),dtype="<f4")
                 if data.size!=count or not np.isfinite(data).all() or (data<0).any():
                     raise ValueError(f"Invalid output {name}: {data.size} values")
@@ -51,6 +52,7 @@ def main():
                     results.append({"channel":channel,"sum":float(data.sum()),
                                     "positive_voxels":int(np.count_nonzero(data))})
         with sftp.open(f"{folder}/PredictedCntStat_218_From440.float32","rb") as stream:
+            stream.prefetch()
             predicted=np.frombuffer(stream.read(),dtype="<f4")
         if predicted.size!=10496*20 or not np.isfinite(predicted).all() or (predicted<0).any():
             raise ValueError("Invalid cross-talk prediction")

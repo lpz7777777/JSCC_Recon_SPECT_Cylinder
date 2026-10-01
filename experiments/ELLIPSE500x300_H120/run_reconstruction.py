@@ -181,6 +181,7 @@ def main():
         raise ValueError(f"Factors validation failed: {shared_error[0]}")
     if rank==0: print("ELLIPSE_STAGE geometry",flush=True)
     geometry=ActiveGeometry.from_npz(args.geometry,device)
+    if rank==0: print("ELLIPSE_STAGE geometry_loaded",flush=True)
     if geometry.full_count!=132040 or geometry.active_count!=82040 or geometry.views!=20:
         raise ValueError("Ellipse geometry mismatch")
     total_bins=cfg["detector_count"]
@@ -227,18 +228,23 @@ def main():
     raw218=load_matrix(args.factors,NAMES["A218"],geometry.full_count,total_bins)
     raw440=load_matrix(args.factors,NAMES["A440"],geometry.full_count,total_bins)
     rawcross=load_matrix(args.factors,NAMES["C440to218"],geometry.full_count,total_bins)
+    if rank==0: print("ELLIPSE_STAGE loading_440_detector_shard",flush=True)
     response440=ViewResponse(local_rows(raw440,begin,end,device),geometry,args.cache_views)
+    if rank==0: print("ELLIPSE_STAGE 440_detector_shard_ready",flush=True)
     sensi440=response440.sensitivity()
     dist.all_reduce(sensi440,op=dist.ReduceOp.SUM)
     image440,h440=single_mlem(response440,projections[440],sensi440,
-                              args.iterations,args.save_step,save_history=rank==0)
+                              args.iterations,args.save_step,save_history=rank==0,
+                              progress_label="440_single")
+    if rank==0: print("ELLIPSE_STAGE loading_cross_and_218_shards",flush=True)
     cross=ViewResponse(local_rows(rawcross,begin,end,device),geometry,args.cache_views)
     predicted=forward_project(cross,image440)
     response218=ViewResponse(local_rows(raw218,begin,end,device),geometry,args.cache_views)
     sensi218=response218.sensitivity()
     dist.all_reduce(sensi218,op=dist.ReduceOp.SUM)
     image218,h218=single_mlem(response218,projections[218],sensi218,
-                              args.iterations,args.save_step,predicted,rank==0)
+                              args.iterations,args.save_step,predicted,rank==0,
+                              progress_label="218_corrected")
     if rank==0:
         predicted_parts=[torch.empty_like(predicted) for _ in range(world)]
     else:
@@ -261,7 +267,9 @@ def main():
                                             delimiter=",",dtype=np.float32))
     projector=build_compton_sparse_projector(coordinates,theta_stride=1,z_stride=1,
                                               rotate_num=20,dtype=torch.float32).to(device)
+    if rank==0: print("ELLIPSE_STAGE loading_full_440_compton_response",flush=True)
     sysfull=full_rows(raw440,device)
+    if rank==0: print("ELLIPSE_STAGE preparing_compton_event_blocks",flush=True)
     resolution=.13*(511/440)**.5
     threshold_max=2*.440**2/(.511+2*.440)-.001
     blocks=[]
@@ -295,13 +303,15 @@ def main():
     dist.all_reduce(accepted_tensor,op=dist.ReduceOp.SUM)
     if int(accepted_tensor.item())<=0:
         raise ValueError("No accepted 440-keV Compton events")
+    if rank==0: print(f"ELLIPSE_STAGE compton_events_ready accepted={int(accepted_tensor.item())}",flush=True)
     full_sensi=np.fromfile(sensi_path,dtype="<f4")
     if len(full_sensi)!=geometry.full_count or not np.isfinite(full_sensi).all():
         raise ValueError("Invalid full Compton sensitivity")
     sensid=geometry.compton_sensitivity(torch.from_numpy(full_sensi))
     (image_d,hd),(image_j,hj)=compton_and_joint_mlem(
         response440,projections[440],blocks,sensi440,sensid,
-        args.iterations,args.save_step,save_history=rank==0)
+        args.iterations,args.save_step,save_history=rank==0,
+        progress_label="440_compton_and_jscc")
     collect_response(args.output,"440_SinglePhoton",image440,h440,geometry,rank)
     collect_response(args.output,"440_ComptonOnly",image_d,hd,geometry,rank)
     collect_response(args.output,"440_SinglePlusCompton",image_j,hj,geometry,rank)
@@ -326,6 +336,7 @@ def main():
           "pixels_full":geometry.full_count,"pixels_active":geometry.active_count,
           "iterations":args.iterations,"save_step":args.save_step,"world_size":world,
           "pilot_only":args.pilot_only,
+          "cuda_allocator_config":os.environ.get("PYTORCH_CUDA_ALLOC_CONF", "default"),
           "accepted_compton_events":int(accepted_tensor.item()),
           "energy_resolution_fwhm_at_511keV":.13,"compton_sum_threshold_MeV":.350,
           "list_energies_already_smeared":True,"geometry_sha256":digest(args.geometry),

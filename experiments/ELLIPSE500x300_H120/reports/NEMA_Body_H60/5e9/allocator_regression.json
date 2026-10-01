@@ -1,0 +1,124 @@
+{
+  "pilot_before": "1644811",
+  "pilot_after": "1644842",
+  "input_geometry_factors_sensitivity_event_count_identical": true,
+  "array_count": 19,
+  "checks": {
+    "Image_218_SinglePhoton_CrossTalkCorrected_active.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.000335693359375,
+      "relative_to_global_peak": 2.3191339089002035e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_218_SinglePhoton_CrossTalkCorrected_full.float32": {
+      "values": 132040,
+      "max_absolute_difference": 0.000335693359375,
+      "relative_to_global_peak": 2.3191339089002035e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_218_SinglePhoton_CrossTalkCorrected_history.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.000335693359375,
+      "relative_to_global_peak": 2.3191339089002035e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440SingleComptonPlus218Single_active.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 3.040849116281462e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440SingleComptonPlus218Single_full.float32": {
+      "values": 132040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 3.040849116281462e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440SingleComptonPlus218Single_history.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 3.040849116281462e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440SinglePlus218Single_active.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 1.6969117962823451e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440SinglePlus218Single_full.float32": {
+      "values": 132040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 1.6969117962823451e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440SinglePlus218Single_history.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 1.6969117962823451e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_ComptonOnly_active.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.009765625,
+      "relative_to_global_peak": 7.819479374058809e-08,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_ComptonOnly_full.float32": {
+      "values": 132040,
+      "max_absolute_difference": 0.009765625,
+      "relative_to_global_peak": 7.819479374058809e-08,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_ComptonOnly_history.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.009765625,
+      "relative_to_global_peak": 7.819479374058809e-08,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_SinglePhoton_active.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.000732421875,
+      "relative_to_global_peak": 2.04103657103815e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_SinglePhoton_full.float32": {
+      "values": 132040,
+      "max_absolute_difference": 0.000732421875,
+      "relative_to_global_peak": 2.04103657103815e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_SinglePhoton_history.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.000732421875,
+      "relative_to_global_peak": 2.04103657103815e-06,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_SinglePlusCompton_active.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 3.125907350428236e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_SinglePlusCompton_full.float32": {
+      "values": 132040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 3.125907350428236e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "Image_440_SinglePlusCompton_history.float32": {
+      "values": 82040,
+      "max_absolute_difference": 0.0008544921875,
+      "relative_to_global_peak": 3.125907350428236e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    },
+    "PredictedCntStat_218_From440.float32": {
+      "values": 209920,
+      "max_absolute_difference": 2.288818359375e-05,
+      "relative_to_global_peak": 4.86012282988428e-07,
+      "allclose_rtol_1e_5_atol_1e_7": true
+    }
+  },
+  "all_pass": true,
+  "note": "Allocator and logging changes; GPUs differ (5090 vs4090). All six outputs and cross-talk prediction compared without smoothing."
+}

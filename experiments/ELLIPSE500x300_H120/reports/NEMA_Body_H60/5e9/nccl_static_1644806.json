@@ -1,0 +1,15 @@
+{
+  "job_id": "1644806",
+  "state": "COMPLETED",
+  "elapsed": "00:00:18",
+  "exit_code": "0:0",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "world_size": 8,
+  "verified_ranks": [0, 1, 2, 3, 4, 5, 6, 7],
+  "all_reduce_values_by_rank": [36.0, 36.0, 36.0, 36.0, 36.0, 36.0, 36.0, 36.0],
+  "broadcast_all_ranks": "success",
+  "startup": "static rendezvous; node_rank=SLURM_PROCID; TORCH_ELASTIC_WORKER_IDENTICAL=1",
+  "nccl_socket_ifname": "bond0",
+  "test_scope": "bounded collective transport smoke only; full-event memory and image pilot remains mandatory"
+}

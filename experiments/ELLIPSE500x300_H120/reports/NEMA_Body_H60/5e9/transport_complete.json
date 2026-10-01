@@ -1,0 +1,56 @@
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "dataset": "NEMA_Body_H60",
+  "level": "5e9",
+  "stage": "transport_complete_local_archive_hash_verified",
+  "actual_primaries": 5000000000,
+  "primary_counts_218_440_other": [
+    1469053733,
+    3530946267,
+    0
+  ],
+  "views": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "workers": 200,
+  "unique_seeds": 200,
+  "seed_range": [
+    30100101,
+    30100300
+  ],
+  "jobs_sha256": "4fafc624c97dcac7b91c26ce0635fc66956da8986fc146b2c1aa23af65adc212",
+  "collection_sha256": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032",
+  "archive_sha256": "039dc151ff5340fadfdcdda353e4053bfa2d17c4f4728a8afa9562d64cbcdfa1",
+  "archive_bytes": 78159498,
+  "archive_files": 23,
+  "cntstat_window_sums": {
+    "218": 12314473,
+    "440": 5363190
+  },
+  "list_rows_before_selection": 5462327,
+  "accepted_compton_events": "not_measured_until_full_data_reconstruction_pilot",
+  "validation": "all 200 worker outputs and primary closure independently verified; 23 archive members SHA-256 verified",
+  "collector_job": "15514666",
+  "collector_elapsed": "00:00:29",
+  "collector_exit_code": "0:0",
+  "statistics_method": "sum integer CSV counts; count newline-delimited List records inside the verified archive"
+}
