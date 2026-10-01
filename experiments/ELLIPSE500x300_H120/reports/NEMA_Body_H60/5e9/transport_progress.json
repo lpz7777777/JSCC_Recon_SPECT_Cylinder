@@ -1,0 +1,70 @@
+{
+  "level": "5e9",
+  "jobs_sha256": "4fafc624c97dcac7b91c26ce0635fc66956da8986fc146b2c1aa23af65adc212",
+  "stage": "partial_transport_output_audit",
+  "verified_completed_workers": 33,
+  "verified_worker_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "unfinished_workers": 167,
+  "failed_worker_indices": [],
+  "verified_primary_counts_218_440_other": [
+    242378637,
+    582621363,
+    0
+  ],
+  "verified_primary_total": 825000000,
+  "expected_primary_total": 5000000000,
+  "verified_views": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "observed_218_fraction": 0.29379228727272727,
+  "expected_218_fraction": 0.29380779868182727,
+  "completed_worker_elapsed_seconds_min_max": [
+    757.4151375293732,
+    954.3640084266663
+  ],
+  "worker_binary_geometry_signatures": [
+    [
+      "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6",
+      "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb"
+    ]
+  ],
+  "complete_transport_gate": false,
+  "checked_utc": "2026-10-01T03:17:25.439348+00:00"
+}

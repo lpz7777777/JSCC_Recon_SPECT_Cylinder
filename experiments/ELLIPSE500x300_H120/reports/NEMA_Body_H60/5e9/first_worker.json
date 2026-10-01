@@ -1,0 +1,14 @@
+{
+  "job": "15514664",
+  "state": "COMPLETED",
+  "elapsed": "00:12:40",
+  "exit_code": "0:0",
+  "validator": "validate_nema_simulation.py --stage first",
+  "verified_workers": 1,
+  "actual_primary_counts_218_440_other": [7348382, 17651618, 0],
+  "actual_primary_total": 25000000,
+  "expected_218_fraction": 0.29380779868182727,
+  "observed_218_fraction": 0.29393528,
+  "primary_and_output_hash_checks": "passed",
+  "stage": "first_worker_only_not_full_transport"
+}
