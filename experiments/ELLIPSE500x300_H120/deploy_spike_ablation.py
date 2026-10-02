@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import shlex
 import sys
@@ -41,7 +42,11 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--submit",action="store_true")
     p.add_argument("--replace-pending",action="store_true",help="Replace only this study's pending older release; preserve its job ledger")
+    p.add_argument("--replace-failed",action="store_true",help="Replace only a terminated study with no passed gates; preserve its ledger")
+    p.add_argument("--exclude",default="",help="Slurm nodes excluded after a confirmed node preflight failure")
     a=p.parse_args()
+    if a.exclude and not re.fullmatch(r"[A-Za-z0-9,._\[\]-]+",a.exclude):
+        raise ValueError("Invalid Slurm node exclusion list")
     names=("run_reconstruction.py","torch_active_operator.py","regularized_update.py",
            "verify_spike_ablation.py","reconstruct_spike_ablation.sh","resource_budget.py",
            "test_spike_ablation.py","test_spike_ablation_dist.py","validate_factors.py",
@@ -102,7 +107,9 @@ def main():
         existing=run(client,"if test -f "+shlex.quote(registry)+"; then cat "+shlex.quote(registry)+"; fi")
         if existing:
             old=json.loads(existing)
-            if not a.replace_pending or old["release_sha256"]==digest(release_bytes):
+            if (not (a.replace_pending or a.replace_failed) or
+                (not a.replace_failed and old["release_sha256"]==digest(release_bytes) and
+                 old["topology"].get("excluded_nodes","")==a.exclude)):
                 (REPORT/"jobs.json").write_text(existing+"\n")
                 print("EXISTING_ABLATION_JOBS",existing)
                 return
@@ -111,19 +118,37 @@ def main():
             job=old["jobs"][0]["job"]
             if not job.isdigit():
                 raise ValueError("Unsafe recorded job ID")
-            snapshot=run(client,"squeue -h -j "+job+" -o '%T|%j'")
-            if snapshot!="PENDING|NEMA_ABL_sweep":
-                raise RuntimeError("Only this study's pending job may be replaced: "+snapshot)
-            run(client,"scancel "+job)
-            archived=registry+".cancelled_"+job
+            queue_rows=run(client,"squeue -u scxi717 -h -o '%i|%T|%j'")
+            snapshot=next((line.split("|",1)[1] for line in queue_rows.splitlines()
+                           if line.split("|",1)[0]==job),"")
+            disposition="cancelled"
+            if a.replace_pending and snapshot=="PENDING|NEMA_ABL_sweep":
+                run(client,"scancel "+job)
+            elif a.replace_failed and not snapshot:
+                state=run(client,"sacct -X -n -P -j "+job+" --format=State,JobName%100").strip().strip("|")
+                if state not in {name+"|NEMA_ABL_sweep" for name in
+                                 ("FAILED","CANCELLED","TIMEOUT","NODE_FAIL","OUT_OF_MEMORY")}:
+                    raise RuntimeError("Existing study is not a confirmed terminated failure: "+state)
+                with client.open_sftp() as sftp:
+                    try:
+                        gates=sftp.listdir(remote_study+"/gates")
+                    except FileNotFoundError:
+                        gates=[]
+                if any(name.endswith(".json") for name in gates):
+                    raise RuntimeError("Passed gates exist; inspect release compatibility before repairing")
+                disposition="failed"
+            else:
+                raise RuntimeError("Existing study cannot be safely replaced: "+snapshot)
+            archived=registry+"."+disposition+"_"+job
             with client.open_sftp() as sftp:
                 sftp.rename(registry,archived)
-            (REPORT/f"jobs.cancelled_{job}.json").write_text(existing+"\n")
+            (REPORT/f"jobs.{disposition}_{job}.json").write_text(existing+"\n")
         queue=run(client,"squeue -u scxi717 -h -o '%i|%j|%T'")
         if any("NEMA_ABL_" in line for line in queue.splitlines()):
             raise RuntimeError("Existing ablation jobs without ledger; inspect before submitting")
         record={"study":STUDY,"release":remote_release,"release_sha256":digest(release_bytes),
                 "topology":{"nodes":8,"gpus_per_node":1,"cpus_per_node":6,
+                            "excluded_nodes":a.exclude,
                             "memory":"scheduler assigns per GPU; actual grant recorded; at least 55GiB required"},
                 "jobs":[],"gate":"Each variant: 10 -> 200 -> 10000, next variant only after formal gate; failure stops the sweep"}
         # One account submission slot. 270h is only a ceiling equal to all phase
@@ -133,6 +158,8 @@ def main():
               "--error="+BASE+"/logs/ablation_sweep.%j.err",
               "--export=ALL,ABLATION_RELEASE="+remote_release+",ABLATION_PHASE=pipeline",
               remote_release+"/reconstruct_spike_ablation.sh"]
+        if a.exclude:
+            args.insert(-1,"--exclude="+a.exclude)
         job=run(client," ".join(shlex.quote(arg) for arg in args)).split(";")[0]
         if not job.isdigit():
             raise ValueError("Unexpected sbatch job ID")

@@ -6,13 +6,12 @@
     "nodes": 8,
     "gpus_per_node": 1,
     "cpus_per_node": 6,
-    "excluded_nodes": "wqd10nba06g6",
     "memory": "scheduler assigns per GPU; actual grant recorded; at least 55GiB required"
   },
   "jobs": [
     {
       "phase": "pipeline",
-      "job": "1651956",
+      "job": "1651944",
       "variants": [
         "bind_f010",
         "huber_weak",

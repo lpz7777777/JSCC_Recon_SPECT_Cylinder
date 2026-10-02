@@ -13,11 +13,11 @@ test_tv_surrogate_against_constrained_reference (__main__.Checks) ... ok
 test_zero_strength_matches_original_joint (__main__.Checks) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 1.207s
+Ran 8 tests in 1.206s
 
 OK
 
-[Gloo] Rank [Gloo] Rank 01 is connected to  is connected to 11 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 11
+[Gloo] Rank [Gloo] Rank 10 is connected to  is connected to 11 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 11
 
 binding distributed_max_abs_difference 1.1920928955078125e-07
 huber distributed_max_abs_difference 2.384185791015625e-07

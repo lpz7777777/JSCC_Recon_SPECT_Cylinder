@@ -2,7 +2,13 @@
   "study": "NEMA_5e9_SPIKE_ABLATION_V1",
   "variants": {
     "bind_f010": {
-      "pilot": "not_verified",
+      "pilot": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0",
+        "elapsed_max_seconds": 295.6686292178929,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.4543483723958333,
+        "slurm_host_fraction": 0.63363203125
+      },
       "short": "not_verified",
       "formal": "not_verified"
     },

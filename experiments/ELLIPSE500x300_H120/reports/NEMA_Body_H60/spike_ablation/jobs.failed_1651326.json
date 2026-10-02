@@ -1,18 +1,17 @@
 {
   "study": "NEMA_5e9_SPIKE_ABLATION_V1",
-  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/spike_ablation_v1_003e56d32a6e836a",
-  "release_sha256": "003e56d32a6e836aec127672b59f2cb2fc7e9b3e23388de50410ce291864655c",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/spike_ablation_v1_c83a6854046cf32c",
+  "release_sha256": "c83a6854046cf32ca5b446ace5aa0590a34e59e3022b07d66b9024077590185a",
   "topology": {
     "nodes": 8,
     "gpus_per_node": 1,
     "cpus_per_node": 6,
-    "excluded_nodes": "wqd10nba06g6",
     "memory": "scheduler assigns per GPU; actual grant recorded; at least 55GiB required"
   },
   "jobs": [
     {
       "phase": "pipeline",
-      "job": "1651956",
+      "job": "1651326",
       "variants": [
         "bind_f010",
         "huber_weak",

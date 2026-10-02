@@ -1,0 +1,5 @@
+JobID|State|Start|End|Elapsed|ExitCode|NodeList|MaxRSS|AllocTRES
+1651944|FAILED|2026-10-02T20:00:28|2026-10-02T20:01:46|00:01:18|78:0|wqd10naf05g[4-5],wqd10nba06g[4-8],wqd10nba07g1||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8
+1651944.batch|FAILED|2026-10-02T20:00:28|2026-10-02T20:01:46|00:01:18|78:0|wqd10naf05g4|50656K|cpu=6,gres/gpu=1,mem=60000M,node=1
+1651944.extern|COMPLETED|2026-10-02T20:00:28|2026-10-02T20:01:46|00:01:18|0:0|wqd10naf05g[4-5],wqd10nba06g[4-8],wqd10nba07g1|0|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8
+1651944.0|FAILED|2026-10-02T20:00:46|2026-10-02T20:01:46|00:01:00|78:0|wqd10naf05g[4-5],wqd10nba06g[4-8],wqd10nba07g1|466996K|cpu=48,gres/gpu=8,mem=480000M,node=8

@@ -1,0 +1,259 @@
+SPIKE_ABLATION_START bind_f010 pilot /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+7: [rank 7] initializing nccl process group
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+7: [rank 7] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 10/10
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 10/10
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+4: [rank 4] view 1 accepted=2804
+3: [rank 3] view 1 accepted=2767
+0: [rank 0] view 1 accepted=2711
+5: [rank 5] view 1 accepted=2775
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 1 accepted=2710
+2: [rank 2] view 1 accepted=2741
+3: [rank 3] view 2 accepted=2851
+0: [rank 0] view 2 accepted=2801
+4: [rank 4] view 2 accepted=2864
+5: [rank 5] view 2 accepted=2796
+6: [rank 6] view 2 accepted=2725
+1: [rank 1] view 2 accepted=2790
+7: [rank 7] view 1 accepted=2703
+0: [rank 0] view 3 accepted=2908
+3: [rank 3] view 3 accepted=2785
+2: [rank 2] view 2 accepted=2763
+5: [rank 5] view 3 accepted=2885
+4: [rank 4] view 3 accepted=2864
+6: [rank 6] view 3 accepted=2820
+1: [rank 1] view 3 accepted=2858
+7: [rank 7] view 2 accepted=2771
+0: [rank 0] view 4 accepted=2990
+5: [rank 5] view 4 accepted=2911
+3: [rank 3] view 4 accepted=2923
+4: [rank 4] view 4 accepted=2887
+2: [rank 2] view 3 accepted=2781
+6: [rank 6] view 4 accepted=2990
+1: [rank 1] view 4 accepted=2840
+7: [rank 7] view 3 accepted=2842
+0: [rank 0] view 5 accepted=2992
+5: [rank 5] view 5 accepted=3002
+3: [rank 3] view 5 accepted=2969
+4: [rank 4] view 5 accepted=3054
+2: [rank 2] view 4 accepted=2885
+6: [rank 6] view 5 accepted=2989
+1: [rank 1] view 5 accepted=2953
+7: [rank 7] view 4 accepted=2884
+0: [rank 0] view 6 accepted=3095
+5: [rank 5] view 6 accepted=3083
+4: [rank 4] view 6 accepted=3090
+2: [rank 2] view 5 accepted=2989
+6: [rank 6] view 6 accepted=3088
+7: [rank 7] view 5 accepted=3060
+3: [rank 3] view 6 accepted=3119
+1: [rank 1] view 6 accepted=3057
+0: [rank 0] view 7 accepted=3193
+5: [rank 5] view 7 accepted=3129
+4: [rank 4] view 7 accepted=3181
+6: [rank 6] view 7 accepted=3148
+2: [rank 2] view 6 accepted=3082
+7: [rank 7] view 6 accepted=3050
+3: [rank 3] view 7 accepted=3105
+0: [rank 0] view 8 accepted=3234
+1: [rank 1] view 7 accepted=3153
+4: [rank 4] view 8 accepted=3160
+5: [rank 5] view 8 accepted=3129
+6: [rank 6] view 8 accepted=3136
+2: [rank 2] view 7 accepted=3165
+3: [rank 3] view 8 accepted=3131
+0: [rank 0] view 9 accepted=3134
+7: [rank 7] view 7 accepted=3109
+1: [rank 1] view 8 accepted=3245
+6: [rank 6] view 9 accepted=3084
+5: [rank 5] view 9 accepted=3060
+4: [rank 4] view 9 accepted=3211
+2: [rank 2] view 8 accepted=3301
+3: [rank 3] view 9 accepted=3084
+0: [rank 0] view 10 accepted=3123
+7: [rank 7] view 8 accepted=3130
+1: [rank 1] view 9 accepted=3126
+4: [rank 4] view 10 accepted=3135
+6: [rank 6] view 10 accepted=3138
+5: [rank 5] view 10 accepted=3111
+2: [rank 2] view 9 accepted=3189
+0: [rank 0] view 11 accepted=3069
+3: [rank 3] view 10 accepted=3189
+1: [rank 1] view 10 accepted=3088
+4: [rank 4] view 11 accepted=3097
+6: [rank 6] view 11 accepted=3068
+5: [rank 5] view 11 accepted=3170
+7: [rank 7] view 9 accepted=3110
+0: [rank 0] view 12 accepted=3061
+3: [rank 3] view 11 accepted=3162
+2: [rank 2] view 10 accepted=3161
+1: [rank 1] view 11 accepted=3123
+4: [rank 4] view 12 accepted=3101
+5: [rank 5] view 12 accepted=3174
+6: [rank 6] view 12 accepted=3218
+7: [rank 7] view 10 accepted=3187
+0: [rank 0] view 13 accepted=3126
+3: [rank 3] view 12 accepted=3089
+2: [rank 2] view 11 accepted=3161
+6: [rank 6] view 13 accepted=3109
+5: [rank 5] view 13 accepted=3224
+1: [rank 1] view 12 accepted=3134
+4: [rank 4] view 13 accepted=3248
+7: [rank 7] view 11 accepted=3144
+0: [rank 0] view 14 accepted=3195
+2: [rank 2] view 12 accepted=3173
+3: [rank 3] view 13 accepted=3206
+4: [rank 4] view 14 accepted=3102
+5: [rank 5] view 14 accepted=3236
+6: [rank 6] view 14 accepted=3309
+1: [rank 1] view 13 accepted=3145
+0: [rank 0] view 15 accepted=3160
+7: [rank 7] view 12 accepted=3218
+2: [rank 2] view 13 accepted=3310
+3: [rank 3] view 14 accepted=3178
+5: [rank 5] view 15 accepted=3203
+4: [rank 4] view 15 accepted=3253
+6: [rank 6] view 15 accepted=3302
+1: [rank 1] view 14 accepted=3222
+0: [rank 0] view 16 accepted=3190
+7: [rank 7] view 13 accepted=3172
+2: [rank 2] view 14 accepted=3147
+3: [rank 3] view 15 accepted=3217
+4: [rank 4] view 16 accepted=3100
+5: [rank 5] view 16 accepted=3093
+6: [rank 6] view 16 accepted=3187
+1: [rank 1] view 15 accepted=3235
+0: [rank 0] view 17 accepted=3035
+7: [rank 7] view 14 accepted=3273
+2: [rank 2] view 15 accepted=3157
+5: [rank 5] view 17 accepted=2990
+4: [rank 4] view 17 accepted=3040
+6: [rank 6] view 17 accepted=3111
+3: [rank 3] view 16 accepted=3149
+0: [rank 0] view 18 accepted=2970
+1: [rank 1] view 16 accepted=3058
+7: [rank 7] view 15 accepted=3143
+5: [rank 5] view 18 accepted=2856
+6: [rank 6] view 18 accepted=2991
+2: [rank 2] view 16 accepted=3129
+0: [rank 0] view 19 accepted=2908
+3: [rank 3] view 17 accepted=3064
+4: [rank 4] view 18 accepted=2990
+1: [rank 1] view 17 accepted=3076
+7: [rank 7] view 16 accepted=3184
+5: [rank 5] view 19 accepted=2860
+6: [rank 6] view 19 accepted=2833
+0: [rank 0] view 20 accepted=2697
+3: [rank 3] view 18 accepted=2952
+2: [rank 2] view 17 accepted=3123
+4: [rank 4] view 19 accepted=2931
+1: [rank 1] view 18 accepted=2938
+7: [rank 7] view 17 accepted=3024
+5: [rank 5] view 20 accepted=2759
+6: [rank 6] view 20 accepted=2793
+3: [rank 3] view 19 accepted=2804
+2: [rank 2] view 18 accepted=2873
+4: [rank 4] view 20 accepted=2739
+1: [rank 1] view 19 accepted=2891
+7: [rank 7] view 18 accepted=2941
+3: [rank 3] view 20 accepted=2747
+2: [rank 2] view 19 accepted=2876
+7: [rank 7] view 19 accepted=2782
+1: [rank 1] view 20 accepted=2879
+2: [rank 2] view 20 accepted=2735
+7: [rank 7] view 20 accepted=2814
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 10/10
+SPIKE_ABLATION_GATE_PASSED {"variant": "bind_f010", "phase": "pilot", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.4543483723958333, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START bind_f010 short /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_short_1651956_0
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+1: [rank 1] initializing nccl process group
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+1: [rank 1] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/200
+0: ELLIPSE_ITERATION 440_single 100/200
+0: ELLIPSE_ITERATION 440_single 150/200
+0: ELLIPSE_ITERATION 440_single 200/200
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/200
+0: ELLIPSE_ITERATION 218_corrected 100/200
+0: ELLIPSE_ITERATION 218_corrected 150/200
+0: ELLIPSE_ITERATION 218_corrected 200/200
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks

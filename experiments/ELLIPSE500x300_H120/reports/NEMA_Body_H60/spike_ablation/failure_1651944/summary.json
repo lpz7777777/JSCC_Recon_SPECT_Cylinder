@@ -1,0 +1,21 @@
+{
+  "job": "1651944",
+  "state": "FAILED",
+  "runtime_seconds": 78,
+  "exit_code": "78:0",
+  "reconstruction_entered": false,
+  "output_directory_created": false,
+  "passed_gates": 0,
+  "preflight_cuda_passed_nodes": [
+    "wqd10naf05g4",
+    "wqd10naf05g5",
+    "wqd10nba06g4",
+    "wqd10nba06g5",
+    "wqd10nba06g7",
+    "wqd10nba06g8",
+    "wqd10nba07g1"
+  ],
+  "unavailable_node": "wqd10nba06g6",
+  "bounded_path_attempts": 12,
+  "repair": "Exclude the persistently unavailable node only; retain node preflight and absolute module launcher"
+}

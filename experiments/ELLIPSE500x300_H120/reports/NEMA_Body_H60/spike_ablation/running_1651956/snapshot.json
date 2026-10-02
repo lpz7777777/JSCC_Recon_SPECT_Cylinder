@@ -1,0 +1,31 @@
+{
+  "checked_cluster_time": "2026-10-02T20:11:19+08:00",
+  "job": "1651956",
+  "queue": "1651956|NEMA_ABL_sweep|RUNNING|7:21|8|wqd10naf05g[4-5],wqd10nba07g[3-8]",
+  "release_sha256": "003e56d32a6e836aec127672b59f2cb2fc7e9b3e23388de50410ce291864655c",
+  "pilot_passed": true,
+  "pilot_gate": "../gates/bind_f010.pilot.json",
+  "stage_lines": [
+    "SPIKE_ABLATION_START bind_f010 pilot /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0",
+    "0: ELLIPSE_ITERATION 440_single 10/10",
+    "0: ELLIPSE_ITERATION 218_corrected 10/10",
+    "0: ELLIPSE_STAGE compton_events_ready accepted=484936",
+    "0: ELLIPSE_ITERATION 440_compton_and_jscc 10/10",
+    "SPIKE_ABLATION_GATE_PASSED {\"variant\": \"bind_f010\", \"phase\": \"pilot\", \"result\": \"/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0\", \"gpu_reserved_fraction\": 0.44071882837072035, \"host_peak_fraction\": 0.4543483723958333, \"slurm_host_fraction\": 0.63363203125}",
+    "SPIKE_ABLATION_START bind_f010 short /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_short_1651956_0",
+    "0: ELLIPSE_ITERATION 440_single 50/200",
+    "0: ELLIPSE_ITERATION 440_single 100/200",
+    "0: ELLIPSE_ITERATION 440_single 150/200",
+    "0: ELLIPSE_ITERATION 440_single 200/200",
+    "0: ELLIPSE_ITERATION 218_corrected 50/200",
+    "0: ELLIPSE_ITERATION 218_corrected 100/200",
+    "0: ELLIPSE_ITERATION 218_corrected 150/200",
+    "0: ELLIPSE_ITERATION 218_corrected 200/200"
+  ],
+  "note": "Steps .2/.3 were cancelled read-only diagnostic GPU queries; production pilot was .1 and short is .5. These probe failures did not fail the reconstruction.",
+  "sha256": {
+    "log.out": "67fea3a1b69537955b1f9f0d7833dfcf0c67b31e366b0603a75849f41cf39102",
+    "log.err": "15edcd6edbc1dab9bf7ea078607639b3e28a3e30e76f68781f3bc9749d16c9b1",
+    "accounting.txt": "9ad505086fa1ec837b555cc070994239c1d75b6cd1661d6dc6ecdf6a8f81d873"
+  }
+}

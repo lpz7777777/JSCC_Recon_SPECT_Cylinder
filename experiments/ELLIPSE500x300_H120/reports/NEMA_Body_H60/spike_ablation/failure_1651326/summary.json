@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-02T20:01:37.335703+08:00",
+  "job": "1651326",
+  "state": "FAILED",
+  "runtime_seconds": 36,
+  "reconstruction_entered": false,
+  "output_directory_created": false,
+  "passed_gates": 0,
+  "errors": [
+    "project working directory unavailable on some nodes",
+    "torchrun not found on wqd10nba06g6"
+  ],
+  "repair": [
+    "all-node path and CUDA preflight with bounded retries",
+    "absolute Python module launcher",
+    "srun working directory /tmp; all project paths remain absolute under the experiment root"
+  ]
+}

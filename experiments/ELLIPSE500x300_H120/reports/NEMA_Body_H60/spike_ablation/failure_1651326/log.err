@@ -1,0 +1,15 @@
+cuda-12.9 loaded successful
+slurmstepd: error: couldn't chdir to `/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor': No such file or directory: going to /tmp instead
+bash: line 2: exec: torchrun: not found
+srun: error: wqd10nba06g6: task 3: Exited with exit code 127
+srun: Terminating StepId=1651326.0
+slurmstepd: error: *** STEP 1651326.0 ON wqd10nae09g3 CANCELLED AT 2026-10-02T18:33:33 ***
+srun: error: wqd10nba07g1: task 5: Terminated
+srun: error: wqd10nae09g3: task 0: Terminated
+srun: error: wqd10nba06g5: task 2: Terminated
+srun: error: wqd10nba07g4: task 6: Terminated
+srun: error: wqd10nba07g6: task 7: Terminated
+srun: error: wqd10naf05g5: task 1: Terminated
+srun: error: wqd10nba06g8: task 4: Terminated
+srun: Force Terminated StepId=1651326.0

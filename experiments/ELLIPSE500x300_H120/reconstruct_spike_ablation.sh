@@ -16,6 +16,14 @@ study="$base/generated/SpikeAblation/NEMA_5e9_SPIKE_ABLATION_V1/study.json"
 export JSCC_PROJECT_ROOT="$root" PYTHONUNBUFFERED=1 NCCL_SOCKET_IFNAME=bond0
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1} TORCH_ELASTIC_WORKER_IDENTICAL=1
+export ABLATION_PYTHON=/data/home/scxi717/.conda/envs/torch/bin/python
+# Some compute nodes expose shared paths only after the first access. Do not
+# initialize a process group before every allocated node passes its path check.
+for attempt in 1 2 3 4 5 6; do
+  if [[ -d $root && -x $ABLATION_PYTHON ]]; then break; fi
+  sleep 5
+done
+test -d "$root" && test -x "$ABLATION_PYTHON"
 cd "$root"
 source /etc/profile.d/modules.sh
 module load cuda/12.9
@@ -108,8 +116,28 @@ export ELLIPSE_MASTER_ADDR="$master" ELLIPSE_MASTER_PORT=$((50000+SLURM_JOB_ID%1
 study_job=${SLURM_ARRAY_JOB_ID:-$SLURM_JOB_ID}
 output="$base/generated/Results/NEMA_Body_H60_5e9_${variant}_${ABLATION_PHASE}_${study_job}_${index}"
 echo "SPIKE_ABLATION_START $variant $ABLATION_PHASE $output"
-srun --kill-on-bad-exit=1 bash -c '
-  exec torchrun --nnodes="$SLURM_NNODES" --nproc_per_node=1 \
+srun --chdir=/tmp --label --kill-on-bad-exit=1 bash -c '
+  echo "SPIKE_NODE_PREFLIGHT $(hostname) rank=$SLURM_PROCID"
+  base="$JSCC_PROJECT_ROOT/experiments/ELLIPSE500x300_H120"
+  ready=0
+  for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
+    if [[ -x $ABLATION_PYTHON && -r $ABLATION_RELEASE/run_reconstruction.py &&
+          -r $base/generated/Geometry/geometry.npz &&
+          -r $base/generated/FactorsCalibrated/440keV_RotateNum20/SysMat_polar &&
+          -r $base/generated/List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/20.csv ]]; then
+      ready=1; break
+    fi
+    echo "SPIKE_NODE_PATH_WAIT $(hostname) attempt=$attempt"
+    sleep 5
+  done
+  if [[ $ready != 1 ]]; then
+    echo "SPIKE_NODE_PATH_FAILED $(hostname)" >&2
+    exit 78
+  fi
+  "$ABLATION_PYTHON" -c "import socket,torch; print(\"SPIKE_NODE_CUDA_OK\",socket.gethostname(),torch.__version__,torch.cuda.device_count(),flush=True); assert torch.cuda.is_available() and torch.cuda.device_count()==1"
+'
+srun --chdir=/tmp --label --kill-on-bad-exit=1 bash -c '
+  exec "$ABLATION_PYTHON" -m torch.distributed.run --nnodes="$SLURM_NNODES" --nproc_per_node=1 \
     --node_rank="$SLURM_PROCID" --master_addr="$ELLIPSE_MASTER_ADDR" \
     --master_port="$ELLIPSE_MASTER_PORT" --rdzv_backend=static \
     --rdzv_conf=timeout=300 --rdzv_id="$SLURM_JOB_ID" --max_restarts=0 "$@"
