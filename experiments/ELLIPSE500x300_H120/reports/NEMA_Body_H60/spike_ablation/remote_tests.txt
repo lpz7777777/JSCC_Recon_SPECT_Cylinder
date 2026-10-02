@@ -1,0 +1,25 @@
+ELLIPSE_ITERATION single 10/40
+ELLIPSE_ITERATION single 20/40
+ELLIPSE_ITERATION single 30/40
+ELLIPSE_ITERATION single 40/40
+
+test_binding_is_explicit_reduced_operator_mlem (__main__.Checks) ... ok
+test_frozen_full_geometry_graph_and_ties (__main__.Checks) ... ok
+test_graph_adjoint_and_constant (__main__.Checks) ... ok
+test_huber_surrogate_against_scipy (__main__.Checks) ... ok
+test_kl_prox_stationarity (__main__.Checks) ... ok
+test_penalized_joint_objective_decreases (__main__.Checks) ... ok
+test_tv_surrogate_against_constrained_reference (__main__.Checks) ... ok
+test_zero_strength_matches_original_joint (__main__.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.207s
+
+OK
+
+[Gloo] Rank [Gloo] Rank 01 is connected to  is connected to 11 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 11
+
+binding distributed_max_abs_difference 1.1920928955078125e-07
+huber distributed_max_abs_difference 2.384185791015625e-07
+tv distributed_max_abs_difference 2.384185791015625e-07
+SPIKE_ABLATION_TWO_RANK_MATCHES_SINGLE: binding, Huber, TV; three likelihoods

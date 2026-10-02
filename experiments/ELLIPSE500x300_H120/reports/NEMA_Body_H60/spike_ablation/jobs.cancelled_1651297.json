@@ -1,0 +1,30 @@
+{
+  "study": "NEMA_5e9_SPIKE_ABLATION_V1",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/spike_ablation_v1_b18e8f6b656a9492",
+  "release_sha256": "b18e8f6b656a9492647c170887961e5dd477eb865e9dcc787eff2b26541a7a2e",
+  "topology": {
+    "nodes": 8,
+    "gpus_per_node": 1,
+    "cpus_per_node": 6,
+    "memory": "scheduler assigns per GPU; actual grant recorded; at least 55GiB required"
+  },
+  "jobs": [
+    {
+      "phase": "pipeline",
+      "job": "1651297",
+      "variants": [
+        "bind_f010",
+        "huber_weak",
+        "huber_medium",
+        "huber_strong",
+        "tv_medium"
+      ],
+      "phase_timeout_hours": {
+        "pilot": 2,
+        "short": 4,
+        "formal": 48
+      }
+    }
+  ],
+  "gate": "Each variant: 10 -> 200 -> 10000, next variant only after formal gate; failure stops the sweep"
+}

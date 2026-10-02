@@ -13,16 +13,21 @@ import hashlib
 import io
 import json
 import os
+import time
 from pathlib import Path
 import sys
 
 import numpy as np
 import torch
 import torch.distributed as dist
+try:
+    import resource as resource_usage
+except ImportError:  # Windows local preflight; production resource gates require Linux.
+    resource_usage=None
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
-sys.path[:0] = [str(ROOT), str(ROOT / "distributed/dual_energy_compton_python"), str(HERE)]
+ROOT = Path(os.environ.get("JSCC_PROJECT_ROOT", str(HERE.parents[1])))
+sys.path[:0] = [str(HERE), str(ROOT), str(ROOT / "distributed/dual_energy_compton_python")]
 from compton_sparse_ops import build_compton_sparse_projector, materialize_sparse_event_rows_to_fine
 from detector_csv import load_detector_coordinates
 from process_list_plane_sparse import get_compton_backproj_list_single_sparse
@@ -122,6 +127,7 @@ def collect_response(output,name,image,history,geometry,rank):
 
 
 def main():
+    started=time.monotonic()
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--factors",type=Path,required=True)
     p.add_argument("--geometry",type=Path,required=True)
@@ -138,16 +144,35 @@ def main():
     p.add_argument("--dry-run",action="store_true")
     p.add_argument("--pilot-only",action="store_true",
                    help="Run full events/grid for 10 iterations to measure peak memory")
+    p.add_argument("--study-json",type=Path)
+    p.add_argument("--variant")
+    p.add_argument("--study-short",action="store_true",
+                   help="Frozen spike-ablation 200-iteration numerical check")
     args=p.parse_args()
     if args.iterations<=0 or args.iterations%args.save_step:
         raise ValueError("Iterations must divide by save-step")
     cfg=json.loads((HERE/"config.json").read_text())
     if args.pilot_only and args.iterations!=10:
         raise ValueError("Resource pilot must run exactly 10 iterations")
-    if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only):
+    if args.study_short and (args.iterations!=200 or args.study_json is None):
+        raise ValueError("Study short run requires frozen study and 200 iterations")
+    if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only or args.study_short):
         raise ValueError("Formal experiment requires 10000 iterations")
     if args.event_chunks<=0 or args.event_block<=0:
         raise ValueError("Invalid event chunk sizes")
+    study=None
+    variant=None
+    spatial_path=None
+    if args.study_json is not None:
+        study=json.loads(args.study_json.read_text())
+        variant=next((v for v in study["variants"] if v["id"]==args.variant),None)
+        spatial_path=args.study_json.parent/"spatial_model.npz"
+        if (variant is None or args.dataset!=study["dataset"] or args.level!=study["level"] or
+            digest(args.geometry)!=study["geometry_sha256"] or
+            digest(spatial_path)!=study["spatial_model_sha256"]):
+            raise ValueError("Frozen ablation config/geometry mismatch")
+    elif args.variant is not None or args.study_short:
+        raise ValueError("Variant requires study-json")
     rank,world,device=setup(args.backend)
     if rank==0: print("ELLIPSE_STAGE validate_factors",flush=True)
     validation_error=None
@@ -171,6 +196,12 @@ def main():
                                f"List_{args.dataset}_{args.level}"/f"{view}.csv" for view in range(1,21))
             input_hashes={path.relative_to(args.data_root).as_posix():digest(path)
                           for path in input_paths}
+            if study is not None:
+                if input_hashes!=study["baseline_input_sha256"]:
+                    raise ValueError("Ablation must use precisely the frozen baseline inputs")
+                for name,expected_hash in study["baseline_factor_manifest_sha256"].items():
+                    if digest(args.factors/name/"factor_manifest.json")!=expected_hash:
+                        raise ValueError("Ablation Factor provenance differs from baseline")
         except Exception as error:
             validation_error=f"{type(error).__name__}: {error}"
         print("ELLIPSE_STAGE factors_validated",flush=True)
@@ -191,11 +222,13 @@ def main():
         if not path.is_dir(): raise FileNotFoundError(path)
     data=args.data_root
     projections={}
+    count_totals={}
     for energy in (218,440):
         path=data/"CntStat"/f"{energy}keV_RotateNum20_Geant4JSCC"/f"CntStat_{args.dataset}_{args.level}.csv"
         counts=np.loadtxt(path,delimiter=",",dtype=np.float32)
         if counts.shape!=(20,total_bins) or not np.isfinite(counts).all() or np.any(counts<0):
             raise ValueError(f"CntStat shape or values invalid: {path}")
+        count_totals[energy]=float(counts.sum(dtype=np.float64))
         projections[energy]=torch.from_numpy(np.ascontiguousarray(counts[:,begin:end].T)).to(device)
     list_dir=data/"List"/"218-440keV_RotateNum20_Geant4JSCC"/f"List_{args.dataset}_{args.level}"
     for view in range(1,21):
@@ -205,6 +238,8 @@ def main():
     if not sensi_path.is_file() or not provenance_path.is_file():
         raise FileNotFoundError("Validated new-distance Compton sensitivity required")
     provenance=json.loads(provenance_path.read_text())
+    if study is not None and digest(sensi_path)!=study["baseline_sensi_d_sha256"]:
+        raise ValueError("Ablation Compton sensitivity differs from baseline")
     if (provenance["experiment"]!=cfg["experiment_id"] or
         provenance["pixel_count"]!=geometry.full_count or
         provenance["resolution_fwhm"]!=.13 or provenance["reference_keV"]!=511 or
@@ -225,6 +260,10 @@ def main():
     dist.broadcast_object_list(shared_error,src=0)
     if shared_error[0]:
         raise ValueError(f"Output creation failed: {shared_error[0]}")
+    update_rule=None
+    if study is not None:
+        from regularized_update import AblationUpdate
+        update_rule=AblationUpdate(study,spatial_path,variant,device,args.output)
     raw218=load_matrix(args.factors,NAMES["A218"],geometry.full_count,total_bins)
     raw440=load_matrix(args.factors,NAMES["A440"],geometry.full_count,total_bins)
     rawcross=load_matrix(args.factors,NAMES["C440to218"],geometry.full_count,total_bins)
@@ -233,18 +272,22 @@ def main():
     if rank==0: print("ELLIPSE_STAGE 440_detector_shard_ready",flush=True)
     sensi440=response440.sensitivity()
     dist.all_reduce(sensi440,op=dist.ReduceOp.SUM)
+    if update_rule:
+        update_rule.configure("440_single",sensi440,count_totals[440])
     image440,h440=single_mlem(response440,projections[440],sensi440,
                               args.iterations,args.save_step,save_history=rank==0,
-                              progress_label="440_single")
+                              progress_label="440_single",update_rule=update_rule)
     if rank==0: print("ELLIPSE_STAGE loading_cross_and_218_shards",flush=True)
     cross=ViewResponse(local_rows(rawcross,begin,end,device),geometry,args.cache_views)
     predicted=forward_project(cross,image440)
     response218=ViewResponse(local_rows(raw218,begin,end,device),geometry,args.cache_views)
     sensi218=response218.sensitivity()
     dist.all_reduce(sensi218,op=dist.ReduceOp.SUM)
+    if update_rule:
+        update_rule.configure("218_corrected",sensi218,count_totals[218])
     image218,h218=single_mlem(response218,projections[218],sensi218,
                               args.iterations,args.save_step,predicted,rank==0,
-                              progress_label="218_corrected")
+                              progress_label="218_corrected",update_rule=update_rule)
     if rank==0:
         predicted_parts=[torch.empty_like(predicted) for _ in range(world)]
     else:
@@ -303,15 +346,20 @@ def main():
     dist.all_reduce(accepted_tensor,op=dist.ReduceOp.SUM)
     if int(accepted_tensor.item())<=0:
         raise ValueError("No accepted 440-keV Compton events")
+    if study is not None and int(accepted_tensor.item())!=study["baseline_accepted_compton_events"]:
+        raise ValueError("Ablation accepted events differ from frozen baseline")
     if rank==0: print(f"ELLIPSE_STAGE compton_events_ready accepted={int(accepted_tensor.item())}",flush=True)
     full_sensi=np.fromfile(sensi_path,dtype="<f4")
     if len(full_sensi)!=geometry.full_count or not np.isfinite(full_sensi).all():
         raise ValueError("Invalid full Compton sensitivity")
     sensid=geometry.compton_sensitivity(torch.from_numpy(full_sensi))
+    if update_rule:
+        update_rule.configure("440_compton",sensid,int(accepted_tensor.item()))
+        update_rule.configure("440_jscc",sensi440+sensid,count_totals[440]+int(accepted_tensor.item()))
     (image_d,hd),(image_j,hj)=compton_and_joint_mlem(
         response440,projections[440],blocks,sensi440,sensid,
         args.iterations,args.save_step,save_history=rank==0,
-        progress_label="440_compton_and_jscc")
+        progress_label="440_compton_and_jscc",update_rule=update_rule)
     collect_response(args.output,"440_SinglePhoton",image440,h440,geometry,rank)
     collect_response(args.output,"440_ComptonOnly",image_d,hd,geometry,rank)
     collect_response(args.output,"440_SinglePlusCompton",image_j,hj,geometry,rank)
@@ -320,8 +368,16 @@ def main():
                      h440+h218 if rank==0 else None,geometry,rank)
     collect_response(args.output,"440SingleComptonPlus218Single",image_j+image218,
                      hj+h218 if rank==0 else None,geometry,rank)
+    if update_rule:
+        update_rule.save()
     resource={"rank":rank,"device":str(device),"accepted_events":accepted,
-              "event_bytes_cpu":sum(item.numel()*item.element_size() for view in blocks for item in view)}
+              "event_bytes_cpu":sum(item.numel()*item.element_size() for view in blocks for item in view),
+              "host_peak_rss_bytes":(int(resource_usage.getrusage(resource_usage.RUSAGE_SELF).ru_maxrss)*1024
+                                     if resource_usage is not None else 0),
+              "node":os.environ.get("SLURMD_NODENAME", "unknown"),
+              "host_allocated_bytes":int(os.environ.get("ABLATION_HOST_ALLOCATED_BYTES",
+                   str(int(os.environ.get("SLURM_MEM_PER_NODE", "0"))*1024**2))),
+              "elapsed_seconds":time.monotonic()-started}
     if device.type=="cuda":
         resource.update(peak_allocated_bytes=torch.cuda.max_memory_allocated(device),
                         peak_reserved_bytes=torch.cuda.max_memory_reserved(device),
@@ -331,11 +387,21 @@ def main():
     if rank==0:
         (args.output/"run_manifest.json").write_text(json.dumps({
           "experiment":cfg["experiment_id"],"dataset":args.dataset,"count_level":args.level,
-          "algorithm":"JSCC joint MLEM; active ellipse density; fixed additive 440-to-218",
+          "algorithm":("JSCC joint MLEM; active ellipse density; fixed additive 440-to-218" if study is None else
+                       f"JSCC {variant['method']}; global descent-checked update; active ellipse density; fixed additive 440-to-218"),
           "gamma_channels_not_parent_ac225_activity":True,
           "pixels_full":geometry.full_count,"pixels_active":geometry.active_count,
           "iterations":args.iterations,"save_step":args.save_step,"world_size":world,
           "pilot_only":args.pilot_only,
+          "study_short":args.study_short,
+          "spike_ablation":None if study is None else {"study":study["study"],"variant":variant,
+             "study_sha256":digest(args.study_json),"spatial_model_sha256":digest(spatial_path),
+             "baseline":study["baseline"],"independent_parameters":(int(update_rule.group_count)
+               if variant["method"]=="binding" else geometry.active_count),
+             "code_sha256":{name:digest(HERE/name if (HERE/name).is_file() else ROOT/name) for name in
+                            ("run_reconstruction.py","torch_active_operator.py","regularized_update.py",
+                             "compton_sparse_ops.py","process_list_plane_sparse.py",
+                             "compton_event_response.py","detector_csv.py")}},
           "cuda_allocator_config":os.environ.get("PYTORCH_CUDA_ALLOC_CONF", "default"),
           "accepted_compton_events":int(accepted_tensor.item()),
           "energy_resolution_fwhm_at_511keV":.13,"compton_sum_threshold_MeV":.350,

@@ -119,7 +119,8 @@ def forward_project(response, image):
 
 
 def single_mlem(response, projection, sensitivity, iterations, save_step,
-                additive_background=None, save_history=True, progress_label=None):
+                additive_background=None, save_history=True, progress_label=None,
+                update_rule=None):
     if iterations <= 0 or iterations % save_step:
         raise ValueError("Iteration count must divide by save step")
     n = response.geometry.active_count
@@ -127,6 +128,7 @@ def single_mlem(response, projection, sensitivity, iterations, save_step,
     history = []
     for iteration in range(iterations):
         weight = torch.zeros_like(image)
+        logterm = torch.zeros((),dtype=torch.float64,device=image.device) if update_rule else None
         for view in range(response.geometry.views):
             matrix = response.matrix(view)
             forward = matrix @ image
@@ -134,11 +136,25 @@ def single_mlem(response, projection, sensitivity, iterations, save_step,
                 forward += additive_background[:,view:view+1] * response.geometry.views
             ratio = projection[:,view:view+1] / forward.clamp_min(1e-12)
             weight += matrix.T @ ratio
-        image = _update(image,_reduce_sum(weight),sensitivity)
+            if update_rule:
+                logterm -= torch.sum(projection[:,view:view+1].double()*torch.log((forward/response.geometry.views).double().clamp_min(1e-12)))
+        if update_rule:
+            update_rule.record_objective(progress_label,image,sensitivity,logterm,iteration)
+        reduced=_reduce_sum(weight)
+        image = (update_rule(image,reduced,sensitivity,iteration,progress_label)
+                 if update_rule else _update(image,reduced,sensitivity))
         if save_history and (iteration+1) % save_step == 0:
             history.append(image.detach().cpu().clone())
             if progress_label:
                 print(f"ELLIPSE_ITERATION {progress_label} {iteration+1}/{iterations}",flush=True)
+    if update_rule:
+        logterm=torch.zeros((),dtype=torch.float64,device=image.device)
+        for view in range(response.geometry.views):
+            forward=response.matrix(view)@image/response.geometry.views
+            if additive_background is not None:
+                forward=forward+additive_background[:,view:view+1]
+            logterm -= torch.sum(projection[:,view:view+1].double()*torch.log(forward.double().clamp_min(1e-12)))
+        update_rule.record_objective(progress_label,image,sensitivity,logterm,iterations,final=True)
     return image, torch.stack(history) if history else None
 
 
@@ -158,17 +174,22 @@ def compact_event_blocks(blocks_by_view, geometry, storage_device="cpu", pin_mem
     return result
 
 
-def _event_weight(blocks, image, device):
+def _event_weight(blocks, image, device, with_log=False):
     weight=torch.zeros_like(image)
+    logterm=torch.zeros((),dtype=torch.float64,device=device) if with_log else None
     for stored in blocks:
         matrix=stored if stored.device==device else stored.to(device,non_blocking=True)
-        weight += matrix.T @ (1.0 / (matrix @ image).clamp_min(1e-12))
-    return weight
+        forward=(matrix @ image).clamp_min(1e-12)
+        weight += matrix.T @ (1.0 / forward)
+        if with_log:
+            logterm -= torch.sum(torch.log(forward.double()))
+    return (weight,logterm) if with_log else weight
 
 
 def compton_and_joint_mlem(response, projection, event_blocks,
                            single_sensitivity, compton_sensitivity,
-                           iterations, save_step, save_history=True, progress_label=None):
+                           iterations, save_step, save_history=True, progress_label=None,
+                           update_rule=None):
     if iterations <= 0 or iterations % save_step:
         raise ValueError("Iteration count must divide by save step")
     n=response.geometry.active_count
@@ -180,19 +201,49 @@ def compton_and_joint_mlem(response, projection, event_blocks,
     for iteration in range(iterations):
         weight_d=torch.zeros_like(image_d)
         weight_j=torch.zeros_like(image_j)
+        if update_rule:
+            log_d=torch.zeros((),dtype=torch.float64,device=device)
+            log_j=torch.zeros_like(log_d)
         for view in range(response.geometry.views):
             matrix=response.matrix(view)
+            forward=matrix @ image_j
             weight_j += matrix.T @ (projection[:,view:view+1] /
-                                    (matrix @ image_j).clamp_min(1e-12))
-            weight_d += _event_weight(event_blocks[view],image_d,device)
-            weight_j += _event_weight(event_blocks[view],image_j,device)
-        image_d=_update(image_d,_reduce_sum(weight_d),compton_sensitivity)
-        image_j=_update(image_j,_reduce_sum(weight_j),
-                        single_sensitivity+compton_sensitivity)
+                                    forward.clamp_min(1e-12))
+            if update_rule:
+                log_j -= torch.sum(projection[:,view:view+1].double()*torch.log((forward/response.geometry.views).double().clamp_min(1e-12)))
+                wd,ld=_event_weight(event_blocks[view],image_d,device,True)
+                wj,lj=_event_weight(event_blocks[view],image_j,device,True)
+                weight_d += wd; log_d += ld
+                weight_j += wj; log_j += lj
+            else:
+                weight_d += _event_weight(event_blocks[view],image_d,device)
+                weight_j += _event_weight(event_blocks[view],image_j,device)
+        total_sensitivity=single_sensitivity+compton_sensitivity
+        if update_rule:
+            update_rule.record_objective("440_compton",image_d,compton_sensitivity,log_d,iteration)
+            update_rule.record_objective("440_jscc",image_j,total_sensitivity,log_j,iteration)
+        reduced_d=_reduce_sum(weight_d)
+        reduced_j=_reduce_sum(weight_j)
+        image_d=(update_rule(image_d,reduced_d,compton_sensitivity,iteration,"440_compton")
+                 if update_rule else _update(image_d,reduced_d,compton_sensitivity))
+        image_j=(update_rule(image_j,reduced_j,total_sensitivity,iteration,"440_jscc")
+                 if update_rule else _update(image_j,reduced_j,total_sensitivity))
         if save_history and (iteration+1)%save_step==0:
             history_d.append(image_d.detach().cpu().clone())
             history_j.append(image_j.detach().cpu().clone())
             if progress_label:
                 print(f"ELLIPSE_ITERATION {progress_label} {iteration+1}/{iterations}",flush=True)
+    if update_rule:
+        log_d=torch.zeros((),dtype=torch.float64,device=device)
+        log_j=torch.zeros_like(log_d)
+        for view in range(response.geometry.views):
+            forward=response.matrix(view)@image_j/response.geometry.views
+            log_j -= torch.sum(projection[:,view:view+1].double()*torch.log(forward.double().clamp_min(1e-12)))
+            for stored in event_blocks[view]:
+                matrix=stored if stored.device==device else stored.to(device,non_blocking=True)
+                log_d -= torch.sum(torch.log((matrix@image_d).double().clamp_min(1e-12)))
+                log_j -= torch.sum(torch.log((matrix@image_j).double().clamp_min(1e-12)))
+        update_rule.record_objective("440_compton",image_d,compton_sensitivity,log_d,iterations,final=True)
+        update_rule.record_objective("440_jscc",image_j,total_sensitivity,log_j,iterations,final=True)
     return ((image_d,torch.stack(history_d) if history_d else None),
             (image_j,torch.stack(history_j) if history_j else None))
