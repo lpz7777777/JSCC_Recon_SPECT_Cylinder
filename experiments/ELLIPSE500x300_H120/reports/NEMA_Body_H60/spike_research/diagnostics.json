@@ -1,0 +1,785 @@
+{
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "sensi_d_sha256": "60a05c2cbc60d0d847fe5cda15b529221774fc4f561d66c121c378753f5d6e2a",
+  "script_sha256": "b2932b6c670ae44c46832cf2c92f31731aaf49b54442375a580448d6ab0f303a",
+  "method": "Unfiltered native polar densities; integrals use cell_volume * ellipse_fraction; each curve uses its channel's fixed final Cartesian background from the verified gallery. All 40 z layers remain in raw metrics.",
+  "sensitivity_note": "Compton sensitivity only: sd = full_Sensi_d[active] * fraction. Unit-volume sensitivity = sd / effective_volume. JSCC total sensitivity is not analyzed here.",
+  "support_volume_mm3": 14137165.869449275,
+  "active_cells": 82040,
+  "sensi_d_active_min_max": [
+    0.0004213989626082497,
+    0.047255080193281174
+  ],
+  "compton_unit_volume_sensitivity_min_max": [
+    0.0001210705708789574,
+    0.0002675721044355486
+  ],
+  "groups": {
+    "fraction_lt_0p01": {
+      "cells": 160,
+      "volume_fraction": 2.1874728034577178e-05
+    },
+    "fraction_lt_0p1": {
+      "cells": 800,
+      "volume_fraction": 0.0005303292080467228
+    },
+    "partial_cell": {
+      "cells": 6880,
+      "volume_fraction": 0.05207764242598816
+    },
+    "full_cell": {
+      "cells": 75160,
+      "volume_fraction": 0.9479223575740118
+    },
+    "outer_three_z_layers": {
+      "cells": 12306,
+      "volume_fraction": 0.15
+    },
+    "inner_z": {
+      "cells": 69734,
+      "volume_fraction": 0.8500000000000001
+    },
+    "full_cell_inner_z": {
+      "cells": 63886,
+      "volume_fraction": 0.8057340039379101
+    },
+    "outside_source_z": {
+      "cells": 41020,
+      "volume_fraction": 0.5000000000000001
+    }
+  },
+  "results": {
+    "NEMA_Body_H60_1e9_1643142": {
+      "integrity_sha256": "720194d8814170a96838226b8a9a85fe82691d392e4d9bd63c24c5593e7a08c1",
+      "analysis_sha256": "1b4665279bdd691edefc4359f8744319f1c08927bfe39e60a156b17384756a43",
+      "channels": {
+        "440_SinglePhoton": {
+          "history_sha256": "e6450ead87646f04860236bc4830614bddf778f6543f2e52e479ce2dec14fd37",
+          "fixed_final_background": 186.21470642089844,
+          "peak": {
+            "active_index": 45532,
+            "full_index": 73032,
+            "coordinate_mm": [
+              31.72545815991238,
+              -71.25654569612288,
+              7.5
+            ],
+            "ellipse_fraction": 1.0,
+            "effective_volume_mm3": 147.02653618800315,
+            "density": 12060.537109375,
+            "density_over_background": 64.76683469948254,
+            "integral_fraction": 0.00253505228201353,
+            "compton_sensitivity": 0.01908440887928009,
+            "compton_sensitivity_per_mm3": 0.0001298024790224046,
+            "compton_unit_volume_sensitivity_volume_percentile": 18.23984138271873
+          },
+          "groups": {
+            "fraction_lt_0p01": {
+              "integral_fraction": 6.035336650874801e-07,
+              "max_density_over_background": 0.40330235737866843
+            },
+            "fraction_lt_0p1": {
+              "integral_fraction": 5.500325449800373e-05,
+              "max_density_over_background": 3.178129507061221
+            },
+            "partial_cell": {
+              "integral_fraction": 0.014642959590928923,
+              "max_density_over_background": 20.049611238890417
+            },
+            "full_cell": {
+              "integral_fraction": 0.9853570404090712,
+              "max_density_over_background": 64.76683469948254
+            },
+            "outer_three_z_layers": {
+              "integral_fraction": 0.02154407756826931,
+              "max_density_over_background": 20.049611238890417
+            },
+            "inner_z": {
+              "integral_fraction": 0.9784559224317311,
+              "max_density_over_background": 64.76683469948254
+            },
+            "full_cell_inner_z": {
+              "integral_fraction": 0.9678500866504582,
+              "max_density_over_background": 64.76683469948254
+            },
+            "outside_source_z": {
+              "integral_fraction": 0.07471433626142267,
+              "max_density_over_background": 20.049611238890417
+            }
+          },
+          "selected_iterations": [
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 50,
+              "peak_over_fixed_final_background": 0.6505286441473358,
+              "peak_inner_z_over_fixed_final_background": 0.6505286441473358,
+              "tiny_cells_integral_fraction": 0.0003037081299394511,
+              "outside_source_z_integral_fraction": 0.48709047682012213
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 100,
+              "peak_over_fixed_final_background": 0.7368711644527465,
+              "peak_inner_z_over_fixed_final_background": 0.7368711644527465,
+              "tiny_cells_integral_fraction": 0.0002863710852661422,
+              "outside_source_z_integral_fraction": 0.4730052013585145
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 500,
+              "peak_over_fixed_final_background": 1.4414527907653432,
+              "peak_inner_z_over_fixed_final_background": 1.4414527907653432,
+              "tiny_cells_integral_fraction": 0.0001925815038690486,
+              "outside_source_z_integral_fraction": 0.36865469031660925
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 1000,
+              "peak_over_fixed_final_background": 3.6068459845226477,
+              "peak_inner_z_over_fixed_final_background": 3.6068459845226477,
+              "tiny_cells_integral_fraction": 0.00012608784526903406,
+              "outside_source_z_integral_fraction": 0.27175647045540063
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 2000,
+              "peak_over_fixed_final_background": 8.91894510932567,
+              "peak_inner_z_over_fixed_final_background": 8.91894510932567,
+              "tiny_cells_integral_fraction": 7.458683737521898e-05,
+              "outside_source_z_integral_fraction": 0.17583395041754743
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 5000,
+              "peak_over_fixed_final_background": 28.289893112511898,
+              "peak_inner_z_over_fixed_final_background": 28.289893112511898,
+              "tiny_cells_integral_fraction": 5.104576590356415e-05,
+              "outside_source_z_integral_fraction": 0.10030311957353942
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePhoton",
+              "iteration": 10000,
+              "peak_over_fixed_final_background": 64.76683469948254,
+              "peak_inner_z_over_fixed_final_background": 64.76683469948254,
+              "tiny_cells_integral_fraction": 5.500325449800373e-05,
+              "outside_source_z_integral_fraction": 0.07471433626142267
+            }
+          ]
+        },
+        "440_ComptonOnly": {
+          "history_sha256": "5d037ed2da5aa730e2d7aabb818be7578a3b19016de6e4e894ff2f615a5d0ee1",
+          "fixed_final_background": 170.8839111328125,
+          "peak": {
+            "active_index": 1523,
+            "full_index": 1616,
+            "coordinate_mm": [
+              -102.2746338988903,
+              140.76895702124085,
+              -58.5
+            ],
+            "ellipse_fraction": 0.023076657293092075,
+            "effective_volume_mm3": 4.5412407078196795,
+            "density": 831403.8125,
+            "density_over_background": 4865.313574510977,
+            "integral_fraction": 0.0053001365368291215,
+            "compton_sensitivity": 0.0007109788387975329,
+            "compton_sensitivity_per_mm3": 0.0001565604830356779,
+            "compton_unit_volume_sensitivity_volume_percentile": 71.83068349535459
+          },
+          "groups": {
+            "fraction_lt_0p01": {
+              "integral_fraction": 0.009866131657733665,
+              "max_density_over_background": 3932.663236375092
+            },
+            "fraction_lt_0p1": {
+              "integral_fraction": 0.07421855724395734,
+              "max_density_over_background": 4865.313574510977
+            },
+            "partial_cell": {
+              "integral_fraction": 0.10914551952450398,
+              "max_density_over_background": 4865.313574510977
+            },
+            "full_cell": {
+              "integral_fraction": 0.890854480475496,
+              "max_density_over_background": 397.75828945460364
+            },
+            "outer_three_z_layers": {
+              "integral_fraction": 0.10194938488476356,
+              "max_density_over_background": 4865.313574510977
+            },
+            "inner_z": {
+              "integral_fraction": 0.8980506151152365,
+              "max_density_over_background": 1116.653726995366
+            },
+            "full_cell_inner_z": {
+              "integral_fraction": 0.8840437118586827,
+              "max_density_over_background": 397.75828945460364
+            },
+            "outside_source_z": {
+              "integral_fraction": 0.17322269409797783,
+              "max_density_over_background": 4865.313574510977
+            }
+          },
+          "selected_iterations": [
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 50,
+              "peak_over_fixed_final_background": 471.84467822622065,
+              "peak_inner_z_over_fixed_final_background": 15.55604512097814,
+              "tiny_cells_integral_fraction": 0.004413425916712476,
+              "outside_source_z_integral_fraction": 0.31399094780262515
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 100,
+              "peak_over_fixed_final_background": 1115.2832790787218,
+              "peak_inner_z_over_fixed_final_background": 28.715009347223084,
+              "tiny_cells_integral_fraction": 0.009162278324181773,
+              "outside_source_z_integral_fraction": 0.2572185368140817
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 500,
+              "peak_over_fixed_final_background": 4537.58706632921,
+              "peak_inner_z_over_fixed_final_background": 132.29945116763497,
+              "tiny_cells_integral_fraction": 0.04380013753462985,
+              "outside_source_z_integral_fraction": 0.18786514638005328
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 1000,
+              "peak_over_fixed_final_background": 4883.662288437375,
+              "peak_inner_z_over_fixed_final_background": 219.57758980941952,
+              "tiny_cells_integral_fraction": 0.05745694311871053,
+              "outside_source_z_integral_fraction": 0.1847415760939942
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 2000,
+              "peak_over_fixed_final_background": 4879.514735895408,
+              "peak_inner_z_over_fixed_final_background": 280.00402891388626,
+              "tiny_cells_integral_fraction": 0.06533058054308954,
+              "outside_source_z_integral_fraction": 0.1839103472472868
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 5000,
+              "peak_over_fixed_final_background": 4875.615524462436,
+              "peak_inner_z_over_fixed_final_background": 742.4564802293909,
+              "tiny_cells_integral_fraction": 0.07213035156670947,
+              "outside_source_z_integral_fraction": 0.1776595119339191
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_ComptonOnly",
+              "iteration": 10000,
+              "peak_over_fixed_final_background": 4865.313574510977,
+              "peak_inner_z_over_fixed_final_background": 1116.653726995366,
+              "tiny_cells_integral_fraction": 0.07421855724395734,
+              "outside_source_z_integral_fraction": 0.17322269409797783
+            }
+          ]
+        },
+        "440_SinglePlusCompton": {
+          "history_sha256": "fcc050ec3c3a070b020731c9336aa97d5c593d34d2a4da12dbf74991122b8ffa",
+          "fixed_final_background": 185.71832275390625,
+          "peak": {
+            "active_index": 1523,
+            "full_index": 1616,
+            "coordinate_mm": [
+              -102.2746338988903,
+              140.76895702124085,
+              -58.5
+            ],
+            "ellipse_fraction": 0.023076657293092075,
+            "effective_volume_mm3": 4.5412407078196795,
+            "density": 665082.125,
+            "density_over_background": 3581.1335959634666,
+            "integral_fraction": 0.004347294838556697,
+            "compton_sensitivity": 0.0007109788387975329,
+            "compton_sensitivity_per_mm3": 0.0001565604830356779,
+            "compton_unit_volume_sensitivity_volume_percentile": 71.83068349535459
+          },
+          "groups": {
+            "fraction_lt_0p01": {
+              "integral_fraction": 0.00828602969538824,
+              "max_density_over_background": 2685.047401923683
+            },
+            "fraction_lt_0p1": {
+              "integral_fraction": 0.0497469436850879,
+              "max_density_over_background": 3581.1335959634666
+            },
+            "partial_cell": {
+              "integral_fraction": 0.10699691886773212,
+              "max_density_over_background": 3581.1335959634666
+            },
+            "full_cell": {
+              "integral_fraction": 0.8930030811322678,
+              "max_density_over_background": 71.35942085093083
+            },
+            "outer_three_z_layers": {
+              "integral_fraction": 0.1016259833558635,
+              "max_density_over_background": 3581.1335959634666
+            },
+            "inner_z": {
+              "integral_fraction": 0.8983740166441365,
+              "max_density_over_background": 71.35942085093083
+            },
+            "full_cell_inner_z": {
+              "integral_fraction": 0.8891303467898318,
+              "max_density_over_background": 71.35942085093083
+            },
+            "outside_source_z": {
+              "integral_fraction": 0.13862785424196558,
+              "max_density_over_background": 3581.1335959634666
+            }
+          },
+          "selected_iterations": [
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 50,
+              "peak_over_fixed_final_background": 1.7748330572178537,
+              "peak_inner_z_over_fixed_final_background": 1.4427898694923014,
+              "tiny_cells_integral_fraction": 0.00035351500510454536,
+              "outside_source_z_integral_fraction": 0.456090325146401
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 100,
+              "peak_over_fixed_final_background": 13.173793031373313,
+              "peak_inner_z_over_fixed_final_background": 2.64377734520964,
+              "tiny_cells_integral_fraction": 0.0007404850791632497,
+              "outside_source_z_integral_fraction": 0.41883024789147766
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 500,
+              "peak_over_fixed_final_background": 479.1085815770888,
+              "peak_inner_z_over_fixed_final_background": 10.507918176921391,
+              "tiny_cells_integral_fraction": 0.0047811437819095855,
+              "outside_source_z_integral_fraction": 0.2739339200587347
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 1000,
+              "peak_over_fixed_final_background": 915.5242330359874,
+              "peak_inner_z_over_fixed_final_background": 20.756039567386583,
+              "tiny_cells_integral_fraction": 0.008955268589563335,
+              "outside_source_z_integral_fraction": 0.21920533252988636
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 2000,
+              "peak_over_fixed_final_background": 1755.678109273372,
+              "peak_inner_z_over_fixed_final_background": 37.48719554858685,
+              "tiny_cells_integral_fraction": 0.017810104652144398,
+              "outside_source_z_integral_fraction": 0.1812037421617712
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 5000,
+              "peak_over_fixed_final_background": 3053.6977536217355,
+              "peak_inner_z_over_fixed_final_background": 59.817480492531736,
+              "tiny_cells_integral_fraction": 0.03731270816866458,
+              "outside_source_z_integral_fraction": 0.15160433235299933
+            },
+            {
+              "result": "NEMA_Body_H60_1e9_1643142",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 10000,
+              "peak_over_fixed_final_background": 3581.1335959634666,
+              "peak_inner_z_over_fixed_final_background": 71.35942085093083,
+              "tiny_cells_integral_fraction": 0.0497469436850879,
+              "outside_source_z_integral_fraction": 0.13862785424196558
+            }
+          ]
+        }
+      }
+    },
+    "NEMA_Body_H60_5e9_1644876": {
+      "integrity_sha256": "d300137d7ce03adb4f4b87395e862e92a0f1e5916e7bd32f7974e1d3141f91ac",
+      "analysis_sha256": "88e1eddc791bc6e51d59449ae6e7365bdd01d0caf8a69fb0f71435d9cfe56635",
+      "channels": {
+        "440_SinglePhoton": {
+          "history_sha256": "c2b5083f1ec47dd4ac1bd901a8767175075ab56f0edd8d9fca91d0426102e7cd",
+          "fixed_final_background": 955.8801879882812,
+          "peak": {
+            "active_index": 43345,
+            "full_index": 69595,
+            "coordinate_mm": [
+              27.239429984372798,
+              -53.46039145130208,
+              4.5
+            ],
+            "ellipse_fraction": 1.0,
+            "effective_volume_mm3": 169.64600329384785,
+            "density": 33089.46484375,
+            "density_over_background": 34.61674931603004,
+            "integral_fraction": 0.0015989108169162424,
+            "compton_sensitivity": 0.0215919129550457,
+            "compton_sensitivity_per_mm3": 0.00012727628435575837,
+            "compton_unit_volume_sensitivity_volume_percentile": 11.579200877791509
+          },
+          "groups": {
+            "fraction_lt_0p01": {
+              "integral_fraction": 2.393406018674015e-07,
+              "max_density_over_background": 0.06259551906211687
+            },
+            "fraction_lt_0p1": {
+              "integral_fraction": 2.061215137223381e-05,
+              "max_density_over_background": 0.5353990810758935
+            },
+            "partial_cell": {
+              "integral_fraction": 0.0059312182184835215,
+              "max_density_over_background": 1.9637519386358886
+            },
+            "full_cell": {
+              "integral_fraction": 0.9940687817815167,
+              "max_density_over_background": 34.61674931603004
+            },
+            "outer_three_z_layers": {
+              "integral_fraction": 0.01243317862835642,
+              "max_density_over_background": 0.6625915697968622
+            },
+            "inner_z": {
+              "integral_fraction": 0.9875668213716435,
+              "max_density_over_background": 34.61674931603004
+            },
+            "full_cell_inner_z": {
+              "integral_fraction": 0.9822142576770769,
+              "max_density_over_background": 34.61674931603004
+            },
+            "outside_source_z": {
+              "integral_fraction": 0.0611891952750776,
+              "max_density_over_background": 2.1794141308094983
+            }
+          },
+          "selected_iterations": [
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 50,
+              "peak_over_fixed_final_background": 0.6141131734909991,
+              "peak_inner_z_over_fixed_final_background": 0.6141131734909991,
+              "tiny_cells_integral_fraction": 0.00030311561148192636,
+              "outside_source_z_integral_fraction": 0.48726167215348465
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 100,
+              "peak_over_fixed_final_background": 0.6838013909714497,
+              "peak_inner_z_over_fixed_final_background": 0.6838013909714497,
+              "tiny_cells_integral_fraction": 0.00028472220994974883,
+              "outside_source_z_integral_fraction": 0.473256910187309
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 500,
+              "peak_over_fixed_final_background": 1.3610843552203509,
+              "peak_inner_z_over_fixed_final_background": 1.3610843552203509,
+              "tiny_cells_integral_fraction": 0.00018756020322854944,
+              "outside_source_z_integral_fraction": 0.3695909773256596
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 1000,
+              "peak_over_fixed_final_background": 3.274958574218826,
+              "peak_inner_z_over_fixed_final_background": 3.274958574218826,
+              "tiny_cells_integral_fraction": 0.00011888243602594418,
+              "outside_source_z_integral_fraction": 0.27305849735573356
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 2000,
+              "peak_over_fixed_final_background": 7.953215158461315,
+              "peak_inner_z_over_fixed_final_background": 7.953215158461315,
+              "tiny_cells_integral_fraction": 6.44196233819557e-05,
+              "outside_source_z_integral_fraction": 0.1766292450790863
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 5000,
+              "peak_over_fixed_final_background": 19.42106874588512,
+              "peak_inner_z_over_fixed_final_background": 19.42106874588512,
+              "tiny_cells_integral_fraction": 3.145079413349212e-05,
+              "outside_source_z_integral_fraction": 0.09741948699846753
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePhoton",
+              "iteration": 10000,
+              "peak_over_fixed_final_background": 34.61674931603004,
+              "peak_inner_z_over_fixed_final_background": 34.61674931603004,
+              "tiny_cells_integral_fraction": 2.061215137223381e-05,
+              "outside_source_z_integral_fraction": 0.0611891952750776
+            }
+          ]
+        },
+        "440_ComptonOnly": {
+          "history_sha256": "99b457a854116c3664e724686aac4c223071f34ac843d9a74c15032d4783c14a",
+          "fixed_final_background": 932.62060546875,
+          "peak": {
+            "active_index": 81542,
+            "full_index": 130385,
+            "coordinate_mm": [
+              -102.27463389889034,
+              -140.76895702124085,
+              58.5
+            ],
+            "ellipse_fraction": 0.02307665729309257,
+            "effective_volume_mm3": 4.541240707819777,
+            "density": 3745857.25,
+            "density_over_background": 4016.4856191626523,
+            "integral_fraction": 0.004789465810453533,
+            "compton_sensitivity": 0.0007070801811382172,
+            "compton_sensitivity_per_mm3": 0.0001557019824825983,
+            "compton_unit_volume_sensitivity_volume_percentile": 71.01784902863051
+          },
+          "groups": {
+            "fraction_lt_0p01": {
+              "integral_fraction": 0.011003190715731977,
+              "max_density_over_background": 3265.937115413713
+            },
+            "fraction_lt_0p1": {
+              "integral_fraction": 0.07311792833968951,
+              "max_density_over_background": 4016.4856191626523
+            },
+            "partial_cell": {
+              "integral_fraction": 0.11199145330335208,
+              "max_density_over_background": 4016.4856191626523
+            },
+            "full_cell": {
+              "integral_fraction": 0.888008546696648,
+              "max_density_over_background": 199.41154142367017
+            },
+            "outer_three_z_layers": {
+              "integral_fraction": 0.10129756531595949,
+              "max_density_over_background": 4016.4856191626523
+            },
+            "inner_z": {
+              "integral_fraction": 0.8987024346840405,
+              "max_density_over_background": 450.6346458416121
+            },
+            "full_cell_inner_z": {
+              "integral_fraction": 0.8875920352630078,
+              "max_density_over_background": 199.41154142367017
+            },
+            "outside_source_z": {
+              "integral_fraction": 0.1575875814782459,
+              "max_density_over_background": 4016.4856191626523
+            }
+          },
+          "selected_iterations": [
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 50,
+              "peak_over_fixed_final_background": 2299.6556557122567,
+              "peak_inner_z_over_fixed_final_background": 4.343715494236409,
+              "tiny_cells_integral_fraction": 0.007759086254407956,
+              "outside_source_z_integral_fraction": 0.31868474679095465
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 100,
+              "peak_over_fixed_final_background": 2978.252339389332,
+              "peak_inner_z_over_fixed_final_background": 8.099637331172085,
+              "tiny_cells_integral_fraction": 0.013393297417169926,
+              "outside_source_z_integral_fraction": 0.26266546549074254
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 500,
+              "peak_over_fixed_final_background": 3245.805670869269,
+              "peak_inner_z_over_fixed_final_background": 34.65770125449802,
+              "tiny_cells_integral_fraction": 0.044640019135028644,
+              "outside_source_z_integral_fraction": 0.1886643369882928
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 1000,
+              "peak_over_fixed_final_background": 3799.9203311820324,
+              "peak_inner_z_over_fixed_final_background": 62.21586413034088,
+              "tiny_cells_integral_fraction": 0.05946699987890328,
+              "outside_source_z_integral_fraction": 0.18001920363048438
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 2000,
+              "peak_over_fixed_final_background": 3943.796897079435,
+              "peak_inner_z_over_fixed_final_background": 117.28620471024452,
+              "tiny_cells_integral_fraction": 0.06802889873094847,
+              "outside_source_z_integral_fraction": 0.17172879446975534
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 5000,
+              "peak_over_fixed_final_background": 3973.6056422829865,
+              "peak_inner_z_over_fixed_final_background": 223.0550819970817,
+              "tiny_cells_integral_fraction": 0.07173411948081075,
+              "outside_source_z_integral_fraction": 0.1620194313668424
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_ComptonOnly",
+              "iteration": 10000,
+              "peak_over_fixed_final_background": 4016.4856191626523,
+              "peak_inner_z_over_fixed_final_background": 450.6346458416121,
+              "tiny_cells_integral_fraction": 0.07311792833968951,
+              "outside_source_z_integral_fraction": 0.1575875814782459
+            }
+          ]
+        },
+        "440_SinglePlusCompton": {
+          "history_sha256": "542db5a24e476b1663e6d48199700adc85aac7a57f95650ab45c540b9bc70c5e",
+          "fixed_final_background": 923.3751831054688,
+          "peak": {
+            "active_index": 81543,
+            "full_index": 130405,
+            "coordinate_mm": [
+              102.27463389889029,
+              -140.76895702124088,
+              58.5
+            ],
+            "ellipse_fraction": 0.02307665729309159,
+            "effective_volume_mm3": 4.541240707819584,
+            "density": 2983527.25,
+            "density_over_background": 3231.1105004640553,
+            "integral_fraction": 0.003901711648282454,
+            "compton_sensitivity": 0.0007070803530726822,
+            "compton_sensitivity_per_mm3": 0.00015570202034328573,
+            "compton_unit_volume_sensitivity_volume_percentile": 71.03186539781392
+          },
+          "groups": {
+            "fraction_lt_0p01": {
+              "integral_fraction": 0.010045177202925032,
+              "max_density_over_background": 3215.4849451491777
+            },
+            "fraction_lt_0p1": {
+              "integral_fraction": 0.048520301308878,
+              "max_density_over_background": 3231.1105004640553
+            },
+            "partial_cell": {
+              "integral_fraction": 0.10685652819453596,
+              "max_density_over_background": 3231.1105004640553
+            },
+            "full_cell": {
+              "integral_fraction": 0.893143471805464,
+              "max_density_over_background": 62.79777842981816
+            },
+            "outer_three_z_layers": {
+              "integral_fraction": 0.10272198161562819,
+              "max_density_over_background": 3231.1105004640553
+            },
+            "inner_z": {
+              "integral_fraction": 0.8972780183843715,
+              "max_density_over_background": 62.79777842981816
+            },
+            "full_cell_inner_z": {
+              "integral_fraction": 0.8917629551081666,
+              "max_density_over_background": 62.79777842981816
+            },
+            "outside_source_z": {
+              "integral_fraction": 0.13599508993348344,
+              "max_density_over_background": 3231.1105004640553
+            }
+          },
+          "selected_iterations": [
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 50,
+              "peak_over_fixed_final_background": 37.47052780039685,
+              "peak_inner_z_over_fixed_final_background": 0.7250002792727592,
+              "tiny_cells_integral_fraction": 0.0004559179163740954,
+              "outside_source_z_integral_fraction": 0.4569374294960781
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 100,
+              "peak_over_fixed_final_background": 183.55319901492402,
+              "peak_inner_z_over_fixed_final_background": 1.2014319388489825,
+              "tiny_cells_integral_fraction": 0.0012196666618050928,
+              "outside_source_z_integral_fraction": 0.4203054122465368
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 500,
+              "peak_over_fixed_final_background": 2323.9521586263986,
+              "peak_inner_z_over_fixed_final_background": 4.135779044416531,
+              "tiny_cells_integral_fraction": 0.008710261536178921,
+              "outside_source_z_integral_fraction": 0.2769447127607804
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 1000,
+              "peak_over_fixed_final_background": 2796.974401363142,
+              "peak_inner_z_over_fixed_final_background": 7.037544504345054,
+              "tiny_cells_integral_fraction": 0.013214286987047422,
+              "outside_source_z_integral_fraction": 0.22237826624039567
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 2000,
+              "peak_over_fixed_final_background": 2830.4913840222534,
+              "peak_inner_z_over_fixed_final_background": 13.220816046239372,
+              "tiny_cells_integral_fraction": 0.021613087316613416,
+              "outside_source_z_integral_fraction": 0.18336591118122017
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 5000,
+              "peak_over_fixed_final_background": 2997.3896858389676,
+              "peak_inner_z_over_fixed_final_background": 33.19474433124221,
+              "tiny_cells_integral_fraction": 0.03732953894297004,
+              "outside_source_z_integral_fraction": 0.1517757088991274
+            },
+            {
+              "result": "NEMA_Body_H60_5e9_1644876",
+              "channel": "440_SinglePlusCompton",
+              "iteration": 10000,
+              "peak_over_fixed_final_background": 3231.1105004640553,
+              "peak_inner_z_over_fixed_final_background": 62.79777842981816,
+              "tiny_cells_integral_fraction": 0.048520301308878,
+              "outside_source_z_integral_fraction": 0.13599508993348344
+            }
+          ]
+        }
+      }
+    }
+  }
+}
