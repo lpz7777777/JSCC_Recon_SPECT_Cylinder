@@ -1,0 +1,5 @@
+JobID|JobName|State|Elapsed|ExitCode|MaxRSS|NodeList|AllocTRES
+1657745|NEMA_response_cut3|FAILED|00:01:45|15:0||wqd10naf05g[2,4],wqd10nah05g4,wqd10nba06g[1-2,6],wqd10nba07g6,wqd10nba08g2|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8
+1657745.batch|batch|FAILED|00:01:45|15:0|54772K|wqd10naf05g2|cpu=6,gres/gpu=1,mem=60000M,node=1
+1657745.extern|extern|COMPLETED|00:01:45|0:0|0|wqd10naf05g[2,4],wqd10nah05g4,wqd10nba06g[1-2,6],wqd10nba07g6,wqd10nba08g2|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8
+1657745.0|bash|CANCELLED|00:01:00|0:15|443448K|wqd10naf05g[2,4],wqd10nah05g4,wqd10nba06g[1-2,6],wqd10nba07g6,wqd10nba08g2|cpu=48,gres/gpu=8,mem=480000M,node=8

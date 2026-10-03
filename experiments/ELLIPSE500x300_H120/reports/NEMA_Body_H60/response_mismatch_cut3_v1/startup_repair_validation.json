@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-10-03T21:15:04.144976+00:00",
+  "python_compile": true,
+  "remote_bash_n": true,
+  "deployment_file_sha256": "all 12 code and 5 scan payload files matched",
+  "same_filter_config": true,
+  "same_sensitivity": true,
+  "replacement_policy_cases_passed": 4,
+  "idempotent_submit_job_id": "1657887",
+  "regression_actual_passed": false,
+  "pilot_actual_passed": false,
+  "formal_actual_passed": false,
+  "note": "Startup and safe-submission validation only; queued job has no numerical acceptance yet."
+}

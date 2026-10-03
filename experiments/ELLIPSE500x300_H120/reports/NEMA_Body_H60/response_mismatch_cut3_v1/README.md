@@ -4,7 +4,9 @@
 
 2026-10-04：**完整20视角扫描、删除清单、两张响应诊断图以及独立匹配灵敏度已完成。图像对照尚未完成。** 原接受数准确复现为484936，删除1168（0.2408565%），保留483768。没有重跑Geant4，没有更改热球、能窗、核宽、有效支持阈值或原始List。
 
-正式执行链为scxi717作业 **1657745**，8节点×1 GPU、NCCL `bond0`，目前已提交等待调度。链内先进行关闭筛选50次回归，然后开启筛选10次完整数据试跑；两者通过后才执行10000次Compton/JSCC，每50次保存。第2000次另写出只读检查点用于中期观察。前一排队作业1657719为了补充此检查点，在启动前取消，实际运行00:00:00；不是第二组实验。详情见[运行簿](PRODUCTION.md)、[当前作业登记](job.json)和[冻结发布清单](deployment.json)。
+原执行链 **1657745** 在启动后1分45秒失败，未进入重建：节点wqd10nba06g6无法访问工程目录，并找不到`torchrun`。已保存[故障证据](failure_1657745/summary.json)和[旧作业登记](job_1657745_failed.json)。新发布`a527ffaad51223a9`沿用此前已验证的启动修复：绝对Python路径、`srun --chdir=/tmp`、全节点有时限的共享目录/CUDA预检，提交仅排除已确认故障节点。修复已重新提交为 **1657887**，当前因Priority排队，见[当前登记](job.json)及[状态快照](job_status.json)。submission_wait.json保留的是入队前账户50作业上限的历史状态。
+
+仍为8节点×1 GPU、NCCL `bond0`的一组科学对照。链内先进行关闭筛选50次回归，然后开启筛选10次完整数据试跑；两者实际通过后才执行10000次Compton/JSCC，每50次保存。第2000次另写出只读检查点用于中期观察。前一排队作业1657719为了补充此检查点，在启动前取消，实际运行00:00:00；禁止恢复旧失败/取消作业。详情见[运行簿](PRODUCTION.md)和[冻结发布清单](deployment.json)。
 
 **不能把扫描通过、灵敏度闭合或作业提交解释为尖峰已经改善。** 50次图像回归、10次资源实测、正式200帧验收和科学对比均需该作业实际执行后完成。
 
@@ -67,12 +69,13 @@ Sensi_d来自原纯440均匀圆支持域数据，使用同一3σ规则。训练�
 结果完成后，在工程根执行：
 
 ```powershell
-python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job 1657745 --phase regression
-python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job 1657745 --phase pilot
+$job = (Get-Content experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/job.json | ConvertFrom-Json).job_id
+python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job $job --phase regression
+python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job $job --phase pilot
 # 中期快照只用于观察，不判定最终效应
-python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job 1657745 --phase interim
+python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job $job --phase interim
 # 正式验收后取回两路全部200帧，逐文件检查传输SHA256
-python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job 1657745 --phase formal
+python experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py --job $job --phase formal
 # 上述工具打印对应的compare_response_mismatch.py执行命令
 ```
 

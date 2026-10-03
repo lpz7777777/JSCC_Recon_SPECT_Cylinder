@@ -1,6 +1,6 @@
 {
-  "checked_blobs": 1260,
-  "total_blob_bytes": 50594887,
+  "checked_blobs": 1269,
+  "total_blob_bytes": 50612074,
   "largest_blobs": [
     [
       1323422,
@@ -33,5 +33,7 @@
       ]
     ]
   ],
-  "findings": []
+  "findings": [],
+  "checked_utc": "2026-10-03T21:17:12.692347+00:00",
+  "scope": "Staged repository and outgoing history against origin/codex/ellipse500x300-h120; startup repair and failure evidence included."
 }

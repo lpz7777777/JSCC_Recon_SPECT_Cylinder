@@ -10,12 +10,20 @@
 #SBATCH --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/response_cut3.%j.out
 #SBATCH --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/response_cut3.%j.err
 set -euo pipefail
-release=$(cd -- "$(dirname -- "$0")" && pwd)
 : "${RESPONSE_RELEASE:?Use the frozen deployed release}"
 release="$RESPONSE_RELEASE"
 root=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor
 base="$root/experiments/ELLIPSE500x300_H120"
 study="$base/generated/response_mismatch_cut3_v1"
+export RESPONSE_PROJECT_ROOT="$root"
+export RESPONSE_PYTHON=/data/home/scxi717/.conda/envs/torch/bin/python
+# Do not start a process group until every node can see the shared paths.
+# This also avoids relying on conda activation propagating through srun.
+for attempt in 1 2 3 4 5 6; do
+  if [[ -d $root && -x $RESPONSE_PYTHON ]]; then break; fi
+  sleep 5
+done
+test -d "$root" && test -x "$RESPONSE_PYTHON"
 cd "$root"
 source /etc/profile.d/modules.sh
 module load cuda/12.9
@@ -40,6 +48,29 @@ export ELLIPSE_GPUS_PER_NODE=1
 scontrol show job "$SLURM_JOB_ID" > "$study/allocation_${SLURM_JOB_ID}.txt"
 baseline="$base/generated/Results/NEMA_Body_H60_5e9_1644876"
 config="$release/response_mismatch_cut3_v1.json"
+srun --chdir=/tmp --label --kill-on-bad-exit=1 bash -c '
+  echo "RESPONSE_NODE_PREFLIGHT $(hostname) rank=$SLURM_PROCID"
+  base="$RESPONSE_PROJECT_ROOT/experiments/ELLIPSE500x300_H120"
+  ready=0
+  for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
+    if [[ -x $RESPONSE_PYTHON && -r $RESPONSE_RELEASE/run_reconstruction.py &&
+          -r $RESPONSE_RELEASE/response_mismatch_cut3_v1.json &&
+          -r $base/generated/Geometry/geometry.npz &&
+          -r $base/generated/FactorsCalibrated/440keV_RotateNum20/SysMat_polar &&
+          -r $base/generated/response_mismatch_cut3_v1/scan/Sensi_d &&
+          -r $base/generated/List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/1.csv &&
+          -r $base/generated/List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/20.csv ]]; then
+      ready=1; break
+    fi
+    echo "RESPONSE_NODE_PATH_WAIT $(hostname) attempt=$attempt"
+    sleep 5
+  done
+  if [[ $ready != 1 ]]; then
+    echo "RESPONSE_NODE_PATH_FAILED $(hostname)" >&2
+    exit 78
+  fi
+  timeout --signal=TERM --kill-after=10s 60s "$RESPONSE_PYTHON" -c "import socket,torch; print(\"RESPONSE_NODE_CUDA_OK\",socket.gethostname(),torch.__version__,torch.cuda.device_count(),flush=True); assert torch.cuda.is_available() and torch.cuda.device_count()==1"
+'
 for phase in regression pilot formal; do
   case "$phase" in
     regression) iterations=50; save=50; mode=(--baseline-regression);;
@@ -47,9 +78,11 @@ for phase in regression pilot formal; do
     formal) iterations=10000; save=50; mode=(--compton-sensitivity "$study/scan/Sensi_d");;
   esac
   output="$study/${phase}_${SLURM_JOB_ID}"
+  case "$phase" in regression|pilot) limit=2h;; formal) limit=48h;; esac
   echo "RESPONSE_PHASE $phase $iterations"
-  srun --kill-on-bad-exit=1 bash -c '
-    exec torchrun --nnodes="$SLURM_NNODES" --nproc_per_node=1 \
+  timeout --signal=TERM --kill-after=60s "$limit" \
+    srun --chdir=/tmp --label --kill-on-bad-exit=1 bash -c '
+    exec "$RESPONSE_PYTHON" -m torch.distributed.run --nnodes="$SLURM_NNODES" --nproc_per_node=1 \
       --node_rank="$SLURM_PROCID" --master_addr="$ELLIPSE_MASTER_ADDR" \
       --master_port="$ELLIPSE_MASTER_PORT" --rdzv_backend=static --rdzv_conf=timeout=300 \
       --rdzv_id="${SLURM_JOB_ID}_$1" --max_restarts=0 "${@:2}"
@@ -58,7 +91,7 @@ for phase in regression pilot formal; do
     --data-root "$base/generated" --dataset NEMA_Body_H60 --level 5e9 --channels compton-jscc \
     --response-filter-config "$config" --iterations "$iterations" --save-step "$save" \
     --output "$output" "${mode[@]}"
-  python "$release/verify_response_mismatch.py" --result "$output" --config "$config" \
+  "$RESPONSE_PYTHON" "$release/verify_response_mismatch.py" --result "$output" --config "$config" \
     --baseline "$baseline" --geometry "$base/generated/Geometry/geometry.npz" --mode "$phase"
   echo "RESPONSE_PHASE_PASSED $phase"
 done

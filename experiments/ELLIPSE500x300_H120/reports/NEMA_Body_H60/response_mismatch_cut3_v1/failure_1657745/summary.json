@@ -1,0 +1,13 @@
+{
+  "job_id": "1657745",
+  "state": "FAILED",
+  "elapsed": "00:01:45",
+  "exit_code": "15:0",
+  "checked_utc": "2026-10-03T21:10:50.362252+00:00",
+  "cause": "Compute node wqd10nba06g6 could not see project mount or torchrun; launcher omitted previously established absolute-Python and /tmp preflight workaround.",
+  "reconstruction_started": false,
+  "regression_passed": false,
+  "formal_started": false,
+  "all_steps_terminal": true,
+  "repair": "Use absolute Python, bounded all-node shared-path/CUDA preflight, srun --chdir=/tmp, exclude only confirmed bad node wqd10nba06g6. Keep q/config/Sensi and MLEM unchanged."
+}

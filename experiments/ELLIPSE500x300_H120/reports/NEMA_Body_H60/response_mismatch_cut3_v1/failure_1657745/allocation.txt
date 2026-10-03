@@ -1,0 +1,28 @@
+JobId=1657745 JobName=NEMA_response_cut3
+   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A
+   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:44 TimeLimit=2-00:00:00 TimeMin=N/A
+   SubmitTime=2026-10-04T03:47:37 EligibleTime=2026-10-04T03:47:37
+   AccrueTime=2026-10-04T03:47:37
+   StartTime=2026-10-04T04:56:10 EndTime=2026-10-06T04:56:10 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T04:56:10 Scheduler=Backfill
+   Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:1434950
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=wqd10naf05g[2,4],wqd10nah05g4,wqd10nba06g[1-2,6],wqd10nba07g6,wqd10nba08g2
+   BatchHost=wqd10naf05g2
+   NumNodes=8 NumCPUs=48 NumTasks=8 CPUs/Task=6 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8
+   AllocTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   MinCPUsNode=6 MinMemoryCPU=10000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/response_mismatch_cut3_v1_749de269c15ebe99/reconstruct_response_mismatch.sh
+   WorkDir=/data/home/scxi717
+   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/response_cut3.1657745.err
+   StdIn=/dev/null
+   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/response_cut3.1657745.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=6

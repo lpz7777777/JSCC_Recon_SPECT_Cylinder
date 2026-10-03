@@ -6,5 +6,10 @@
   "rrule": "FREQ=MINUTELY;INTERVAL=30",
   "notification": "quiet for unchanged queue/running state; report fault, iteration-2000 figures or final delivery",
   "stop_condition": "pause after complete baseline-cut3 report/figures/curves/event list delivered",
-  "official_documentation": "https://learn.chatgpt.com/docs/automations?surface=app"
+  "official_documentation": "https://learn.chatgpt.com/docs/automations?surface=app",
+  "last_updated_utc": "2026-10-03T21:13:59.472930+00:00",
+  "job_source": "job.json; if absent submission_wait.json and idempotent submit tool",
+  "excluded_nodes": [
+    "wqd10nba06g6"
+  ]
 }

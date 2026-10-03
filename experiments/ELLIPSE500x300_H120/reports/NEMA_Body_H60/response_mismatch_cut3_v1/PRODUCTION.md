@@ -1,6 +1,20 @@
 # response_mismatch_cut3_v1 运行簿
 
-## 2026-10-04：全量扫描与匹配灵敏度完成，重建已提交
+## 2026-10-04 05:04–05:12：启动故障定位及修复
+
+1657745于集群时间04:56:10启动、04:57:55退出，Slurm FAILED、ExitCode15:0；全部步骤已终止。stdout仅出现`RESPONSE_PHASE regression 50`，尚无回归输出目录或图像。节点wqd10nba06g6无法切换到工程目录，并报告`torchrun`缺失。原始日志、实际8节点/8GPU/每节点60000MiB分配及终态记账见[failure_1657745](failure_1657745/summary.json)。这与此前1651326/1651944的挂载故障一致；本次新启动脚本遗漏了已记录的绝对Python和/tmp预检修复。
+
+现已修复`reconstruct_response_mismatch.sh`：调用`/data/home/scxi717/.conda/envs/torch/bin/python -m torch.distributed.run`，每个srun在/tmp启动；全部节点先检查发布代码、几何、Factors、首末List和匹配S可读，路径检查最多12次×5秒，CUDA检查最多60秒。预检通过后才初始化进程组。50次回归及10次试跑各有2小时上限，正式阶段受48小时作业上限约束；任一阶段失败即退出释放分配。数据根与冻结代码根分别传递，保持JSCC核导入原冻结发布。
+
+发布`response_mismatch_cut3_v1_a527ffaad51223a9`已逐文件SHA核对及远端`bash -n`通过。修复只改启动和安全重提工具，筛选配置、响应核、MLEM、独立Sensi及所有输入哈希不变。仅排除确认故障节点wqd10nba06g6；不恢复Huber/TV。原失败发布保留、不原地改写。
+
+`submit_response_mismatch.py --replace-failed`先核实旧作业不在队列、sacct为同名终态失败且无阶段verification证据，才归档旧登记；遇到活动作业或验收证据拒绝自动替换。当前账户达到50个作业，工具等待空出的提交位，不取消其它项目任务。重提后当前编号写入job.json；历史编号见job_1657745_failed.json。自动任务已更新为读取当前登记，登记暂缺时按`--exclude wqd10nba06g6 --wait-seconds 0`安全重试。
+
+修复作业已重新提交为 **1657887**（2026-10-03T21:13:56Z本地提交记录），8节点×1GPU、NCCL bond0，当前Priority排队。scontrol确认ExcNodeList=wqd10nba06g6、WorkDir=/tmp及新冻结发布；同名活动作业只有此一个。安全重提策略的4个用例均通过：拒绝活动作业、拒绝COMPLETED、拒绝已存在验收文件的作业，只归档无验收的终态失败；再次执行提交工具直接返回1657887，无重复提交。
+
+此时50次回归、10次试跑、正式图像及科学结论均未通过。重新入队或启动预检通过不算数值验收。
+
+## 2026-10-04：全量扫描与匹配灵敏度完成，首次重建提交（历史）
 
 唯一删除组已冻结；[README](README.md)是实验定义、统计、诊断和验收方法的入口。当前无已完成删除组图像，不宣告尖峰改善。
 
