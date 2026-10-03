@@ -1,0 +1,36 @@
+{
+  "view": 7,
+  "first_id": 7629,
+  "second_id": 1936,
+  "e1_keV": 128.853,
+  "e2_keV": 316.147,
+  "sum_keV": 445,
+  "positions_mm": [
+    [
+      40.95000076293945,
+      390.0,
+      -40.95000076293945
+    ],
+    [
+      39.900001525878906,
+      360.0,
+      -60.900001525878906
+    ]
+  ],
+  "inferred_theta_deg": 58.73124694824219,
+  "geometric_angle_full_circle_deg": [
+    109.8129653930664,
+    153.5010223388672
+  ],
+  "geometric_angle_actual_source_cells_deg": [
+    128.06988525390625,
+    145.02207946777344
+  ],
+  "best_standardized_ARM_full_circle": 9.137535095214844,
+  "best_standardized_ARM_actual_source": 12.505249977111816,
+  "first_energy_expected_range_keV_on_full_grid": [
+    235.62571100371886,
+    272.8047016740493
+  ],
+  "note": "Measured two-crystal event. Deposited E1 need not equal a single free-electron transfer; trajectory is absent from stored List. Coordinates are detector frame."
+}

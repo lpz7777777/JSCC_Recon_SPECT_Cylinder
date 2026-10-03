@@ -1,0 +1,17 @@
+{
+  "source": "actual piecewise-constant transported cuboid activity_440_zyx",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "quadratures": {
+    "32": {
+      "integral": 3405190.8662832025,
+      "relative_integral_error": -2.743694318951828e-05
+    },
+    "64": {
+      "integral": 3405291.3102276637,
+      "relative_integral_error": 2.059549820909723e-06
+    }
+  },
+  "actual_440_primaries": 3530946267,
+  "polar_truth_sha256": "0edc1a5b5f6f7e204667be18ab2cafedce1fe8b7d4617ccf9185a91bcb5158eb",
+  "note": "Mapping discretization check, not a proof of response accuracy."
+}

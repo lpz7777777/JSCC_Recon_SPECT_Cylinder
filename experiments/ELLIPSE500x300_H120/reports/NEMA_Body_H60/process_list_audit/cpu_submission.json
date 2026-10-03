@@ -1,0 +1,23 @@
+{
+  "server": "65114_lipeize",
+  "remote": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/Diagnostics/process_list_audit_20261004",
+  "device": "cpu",
+  "threads": 8,
+  "timeout_seconds": 1200,
+  "sample_per_view": 512,
+  "reason": "scxi717 has 50 submitted jobs and rejected additional diagnostic; no other project jobs cancelled; 65114 CPU available, all GPUs left untouched",
+  "result_directory": "result_final",
+  "status": "complete",
+  "elapsed_seconds": 139.22464421298355,
+  "host_maxrss_gib": 15.965709686279297,
+  "executed_script_sha256": "fbbc6741837393a409873d4eb5def2904304833e496f57e55ce551567cbfa024",
+  "initial_uploaded_script_sha256": {
+    "audit_compton_response.py": "c39068cc708eddae0cee8cb069df97c3b867b130fd91997de41f938fa365398b",
+    "compton_event_response.py": "aec03ab57c4c9990e7e801e27d0068b5d93ac0f27113c06e332002b2e6453fdf",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "nema_h60_imaging_5e9.tar.gz": "039dc151ff5340fadfdcdda353e4053bfa2d17c4f4728a8afa9562d64cbcdfa1",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "run_manifest.json": "9d7042726693894d11e35944e02f054618501c649b3a83a92cb01a39615c6239",
+    "Image_440_ComptonOnly_full.float32": "c4c3f46ca1c7f0c25649da239e46ea5603f0ec2dc756f2d125c1f9ae69f6f61e"
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "commit": "64ff63a",
+    "metadata": "64ff63af5a47d8c1e1baf5272b3e3025f9f38bcf 2026-04-14T14:43:44+08:00 Sync project sources without large data",
+    "files": {
+      "process_list_plane.py": "98954bc6ee1941c7fedc791ca5c3bc6215d2cc24f97a8900c460173a22aa00df",
+      "process_list_plane_strict.py": "cecf01c577c0866d78c8bdfa32caf76706c1cd4246b9b2f65510bd9a83567ad7",
+      "process_list_plane_sparse.py": "75c4b4a6c5060e9bdc195c030d1b0b5103a5c1ca3ca164713d5e4ac717548d0a",
+      "main_plane.py": "a66805edb8739f43d9095e3ef5fd2538e374f61f423d516959e29b35c8f3c556"
+    }
+  },
+  {
+    "commit": "d8f83c1",
+    "metadata": "d8f83c11e13174ea85f779fed4c56e74a83b6efa 2026-05-29T13:35:52+08:00 Add CPU distributed, sparse JSCCSD-only, auxiliary studies, update reconstruction pipeline",
+    "files": {
+      "process_list_plane.py": "98954bc6ee1941c7fedc791ca5c3bc6215d2cc24f97a8900c460173a22aa00df",
+      "process_list_plane_strict.py": "a1141f0702a05d63c499eeff6746197a03f7f146a60023249b9c563da01fcb5e",
+      "process_list_plane_sparse.py": "5d1f3a5959325079f988d2df9434e8ba56729dc453245d1ebd120be716909e0f",
+      "main_plane.py": "ef9158b4dad72c7fbd2e3f22fec6eeaa3f2e14e20d8ae211c958db96e5d17d19",
+      "main_local_sparse_jsccsd_only.py": "98dbf80885933a811fc80b0dce6b5826fdaafbe8b9be394c3343f21e1bf24cd1"
+    }
+  },
+  {
+    "commit": "ec96a97",
+    "metadata": "ec96a970a0d0d76b1534d45525c2f70f88230069 2026-07-21T22:44:30+08:00 Restore point-response Compton sensitivity convention",
+    "files": {
+      "process_list_plane.py": "98954bc6ee1941c7fedc791ca5c3bc6215d2cc24f97a8900c460173a22aa00df",
+      "process_list_plane_strict.py": "6dcf15b98470330a61d6c91409a180fe7a2823e9740e7f2845b1bbbc8cf88028",
+      "process_list_plane_sparse.py": "7e6d2f52911f9b5813922d204c4f60e96dba862fc51c3eb8fe705440ff7e860a",
+      "main_plane.py": "ef9158b4dad72c7fbd2e3f22fec6eeaa3f2e14e20d8ae211c958db96e5d17d19",
+      "main_local_sparse_jsccsd_only.py": "98dbf80885933a811fc80b0dce6b5826fdaafbe8b9be394c3343f21e1bf24cd1"
+    }
+  },
+  {
+    "commit": "b39f1dc",
+    "metadata": "b39f1dc4ce9a9c1dcf1f653972b6a3f77353f8b2 2026-07-27T21:24:34+08:00 Unify Compton density-basis response and add closure validation",
+    "files": {
+      "process_list_plane.py": "98954bc6ee1941c7fedc791ca5c3bc6215d2cc24f97a8900c460173a22aa00df",
+      "process_list_plane_strict.py": "7ff040735bf92d81a9c8b3845153bb0ccb48353b0321c9278456533078fe60cb",
+      "process_list_plane_sparse.py": "62390eb4038668d18be97da28b7f01ba84127fa02444c7d6c74bcbb7abcc2f1c",
+      "main_plane.py": "ef9158b4dad72c7fbd2e3f22fec6eeaa3f2e14e20d8ae211c958db96e5d17d19",
+      "main_local_sparse_jsccsd_only.py": "98dbf80885933a811fc80b0dce6b5826fdaafbe8b9be394c3343f21e1bf24cd1",
+      "compton_event_response.py": "aec03ab57c4c9990e7e801e27d0068b5d93ac0f27113c06e332002b2e6453fdf"
+    }
+  }
+]

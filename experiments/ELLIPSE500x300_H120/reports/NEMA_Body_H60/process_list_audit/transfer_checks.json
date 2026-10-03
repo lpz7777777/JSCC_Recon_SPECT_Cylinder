@@ -1,0 +1,17 @@
+{
+  "audit.json": {
+    "sha256": "444dcd79af71a039625a8f65cfe1c44a2a220f5ac3b32e260b4fde83f3c48454",
+    "bytes": 21758,
+    "matched": true
+  },
+  "events.csv": {
+    "sha256": "b72ae16570eb57091c2517ed147b59030a350520fb8cddcaca118e0efb3ceb56",
+    "bytes": 11336795,
+    "matched": true
+  },
+  "density_64_truth_score.npy": {
+    "sha256": "4688d968dd6dbb2d0b677ed11c3d8bdb219ec34d099fd26e6533424c3e5a7d9c",
+    "bytes": 656448,
+    "matched": true
+  }
+}

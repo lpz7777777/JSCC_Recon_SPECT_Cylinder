@@ -6,6 +6,8 @@
 
 ## 最新进展：2026-10-04
 
+**当前状态覆盖下述01:10快照：用户已要求停止 Huber/TV 路线。1651956 于01:46:10取消、01:46:21退出；中档正式组未完成，强档/TV未启动，不再续跑或自动重提。** 完整基线与已完成组保留。新工作转为[process_list—Geant4—MLEM响应审计](../process_list_audit/README.md)，取消证据见[ablation_stop.json](../process_list_audit/ablation_stop.json)。以下“继续运行”等内容仅记录取消前的计划。
+
 集群01:10:49快照：作业 **1651956 / RUNNING**，同一8节点×1张4090。新增五组已有 **边界绑定、弱Huber两组完整完成并通过10000次正式门控**；中档Huber已通过10/200次门控并在10000次正式重建，440单光子及218校正已完成，Compton/JSCC到 **1350/10000**。强Huber和TV尚未开始。当前卡上即时GPU利用率28%–82%，日志持续推进，未见OOM或通信故障；完整快照见 [status_20261004/snapshot.json](status_20261004/snapshot.json)。以下旧入口中的10月2日状态保留为启动历史。
 
 | 组 | 正式重建阶段 | Slurm计算时长 | GPU预留峰值 | 主进程RSS峰值 / 实际分配 | Slurm MaxRSS / 实际分配 |

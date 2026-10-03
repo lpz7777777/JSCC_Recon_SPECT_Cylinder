@@ -1,0 +1,19 @@
+{
+  "crystals": 10496,
+  "front_active": 2304,
+  "rear_active": 8192,
+  "normal_planes": [
+    300.0,
+    330.0,
+    360.0,
+    390.0
+  ],
+  "max_coordinate_error_mm": 6.103999993456455e-06,
+  "all_ID_coordinates_match_at_1e-4_mm": true,
+  "source_center_world_y_mm": -345,
+  "geant4_world_to_response_y_shift_mm": 345,
+  "factor_manifest_sha256": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc",
+  "SysMat_polar_sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38",
+  "matches_frozen_deployed_matrix_file_manifest": true,
+  "SysMat_polar_bytes": 5543567360
+}

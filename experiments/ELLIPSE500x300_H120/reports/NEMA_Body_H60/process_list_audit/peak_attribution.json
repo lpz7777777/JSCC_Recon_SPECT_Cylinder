@@ -1,0 +1,30 @@
+{
+  "all": {
+    "count": 10238,
+    "peak_truth_score": 672687.9619542924,
+    "peak_truth_score_with_floor": 17503.999694315098,
+    "retained_peak_responsibility": 1.0,
+    "retained_tiny_responsibility": 1.0
+  },
+  "exclude_neff_lt50": {
+    "count": 10235,
+    "peak_truth_score": 21.034606778697768,
+    "peak_truth_score_with_floor": 21.034606778697768,
+    "retained_peak_responsibility": 0.9999999997519617,
+    "retained_tiny_responsibility": 0.9977268869373179
+  },
+  "exclude_arm_full_gt3": {
+    "count": 10214,
+    "peak_truth_score": 8.641821456173219,
+    "peak_truth_score_with_floor": 8.641821456173219,
+    "retained_peak_responsibility": 0.9916060930311198,
+    "retained_tiny_responsibility": 0.9823144106340321
+  },
+  "exclude_sum_lt400": {
+    "count": 9146,
+    "peak_truth_score": 672687.203264161,
+    "peak_truth_score_with_floor": 17503.241004183637,
+    "retained_peak_responsibility": 0.883506385468976,
+    "retained_tiny_responsibility": 0.8438874500848447
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "remote": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Diagnostics/process_list_audit_20261004",
+  "submission": "",
+  "exit_code": 1,
+  "script_sha256": {
+    "audit_compton_response.py": "72a4a3b9cbb9d32a93f1a2a7266ebeeda5fcdf08fa4a951a3ca9dc6900d9ff9d",
+    "compton_event_response.py": "aec03ab57c4c9990e7e801e27d0068b5d93ac0f27113c06e332002b2e6453fdf",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f"
+  },
+  "kind": "response audit only; no reconstruction",
+  "time_limit_minutes": 15,
+  "sample_per_view": 128,
+  "nodes": 1,
+  "gpus": 1,
+  "host_memory": "60 GiB per allocated GPU, cluster default; explicit --mem prohibited"
+}

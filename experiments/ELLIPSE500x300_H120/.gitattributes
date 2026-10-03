@@ -1,0 +1,4 @@
+# Keep audited execution-source bytes reproducible across Windows/Linux.
+audit_compton_response.py -text
+prepare_response_audit_truth.py -text
+plot_response_audit.py -text

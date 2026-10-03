@@ -1,0 +1,17 @@
+{
+  "requested_action": "Stop Huber/TV and remaining ablation reconstruction; retain all data",
+  "job": "1651956",
+  "utc_time": "2026-10-03T17:48:49.715844+00:00",
+  "before": "JobId=1651956 JobName=NEMA_ABL_sweep UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=* JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=1-05:42:12 TimeLimit=11-06:00:00 TimeMin=N/A SubmitTime=2026-10-02T20:03:33 EligibleTime=2026-10-02T20:03:33 AccrueTime=2026-10-02T20:03:33 StartTime=2026-10-02T20:03:58 EndTime=2026-10-14T02:03:58 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-02T20:03:58 Scheduler=Backfill Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:979382 ReqNodeList=(null) ExcNodeList=wqd10nba06g6 NodeList=wqd10naf05g[4-5],wqd10nba07g[3-8] BatchHost=wqd10naf05g4 NumNodes=8 NumCPUs=48 NumTasks=8 CPUs/Task=6 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8 AllocTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8 Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=* MinCPUsNode=6 MinMemoryCPU=10000M MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/spike_ablation_v1_003e56d32a6e836a/reconstruct_spike_ablation.sh WorkDir=/data/home/scxi717 StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/ablation_sweep.1651956.err StdIn=/dev/null StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/logs/ablation_sweep.1651956.out TresPerNode=gres/gpu:1 TresPerTask=cpu=6 \n",
+  "scancel_succeeded": true,
+  "queue_after_cancel": "1651956 COMPLETING wqd10naf05g[4-5],wqd10nba07g[3-8]\n",
+  "accounting_after_cancel": "JobID|JobName|State|Elapsed|ExitCode\n1651956|NEMA_ABL_sweep|CANCELLED by 1721|1-05:42:12|0:0\n1651956.batch|batch|CANCELLED|1-05:42:12|0:0\n1651956.extern|extern|CANCELLED|1-05:42:12|0:0\n1651956.0|bash|COMPLETED|00:00:48|0:0\n1651956.1|bash|COMPLETED|00:05:08|0:0\n1651956.2|bash|CANCELLED|00:00:01|0:15\n1651956.3|bash|CANCELLED|00:00:01|0:15\n1651956.4|bash|COMPLETED|00:00:05|0:0\n1651956.5|bash|COMPLETED|00:15:22|0:0\n1651956.6|timeout|COMPLETED|00:00:00|0:0\n1651956.7|bash|COMPLETED|00:00:05|0:0\n1651956.8|bash|COMPLETED|11:46:29|0:0\n1651956.9|bash|COMPLETED|00:00:29|0:0\n1651956.10|bash|COMPLETED|00:04:27|0:0\n1651956.11|bash|COMPLETED|00:00:06|0:0\n1651956.12|bash|COMPLETED|00:15:30|0:0\n1651956.13|bash|COMPLETED|00:00:05|0:0\n1651956.14|bash|COMPLETED|13:31:36|0:0\n1651956.15|bash|COMPLETED|00:00:53|0:0\n1651956.16|bash|COMPLETED|00:04:52|0:0\n1651956.17|bash|COMPLETED|00:00:05|0:0\n1651956.18|bash|COMPLETED|00:21:03|0:0\n1651956.19|bash|COMPLETED|00:00:06|0:0\n1651956.20|bash|CANCELLED|03:11:54|0:0\n1651956.21|timeout|COMPLETED|00:00:01|0:0\n1651956.22|timeout|COMPLETED|00:00:00|0:0\n",
+  "resubmit_authorized": false,
+  "final_queue_check": "Job no longer in squeue",
+  "final_accounting": {
+    "state": "CANCELLED by 1721",
+    "cancelled_cluster_time": "2026-10-04T01:46:10",
+    "batch_exit": "2026-10-04T01:46:11",
+    "extern_exit": "2026-10-04T01:46:21"
+  }
+}

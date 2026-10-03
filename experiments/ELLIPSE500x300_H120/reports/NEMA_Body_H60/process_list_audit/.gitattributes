@@ -1,0 +1,2 @@
+# Preserve diagnostic evidence bytes referenced by SHA256 on Windows checkout.
+*.json -text whitespace=cr-at-eol

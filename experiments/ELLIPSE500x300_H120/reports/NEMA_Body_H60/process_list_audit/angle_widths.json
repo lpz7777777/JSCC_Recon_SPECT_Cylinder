@@ -1,0 +1,86 @@
+{
+  "resolution_FWHM_at_440_current": 0.1400965576113327,
+  "resolution_FWHM_at_440_old_10pct662": 0.12265991417514749,
+  "energy_sigma_comparison_same_current_resolution": [
+    {
+      "e1_keV": 50,
+      "theta_deg": 31.667697621101375,
+      "old_minus_deg": 3.310146866763821,
+      "old_plus_deg": 3.1603794615679686,
+      "current_minus_deg": 3.3215908259603943,
+      "current_plus_deg": 3.169670232453192
+    },
+    {
+      "e1_keV": 100,
+      "theta_deg": 48.8203286919784,
+      "old_minus_deg": 4.179596412880881,
+      "old_plus_deg": 4.21860616619968,
+      "current_minus_deg": 4.188010964925668,
+      "current_plus_deg": 4.226603003474877
+    },
+    {
+      "e1_keV": 150,
+      "theta_deg": 66.46590764928288,
+      "old_minus_deg": 5.625407938636747,
+      "old_plus_deg": 5.981077219266638,
+      "current_minus_deg": 5.6427564212352825,
+      "current_plus_deg": 6.000336378361979
+    },
+    {
+      "e1_keV": 200,
+      "theta_deg": 88.15493064929649,
+      "old_minus_deg": 8.337511023257287,
+      "old_plus_deg": 9.612063348515429,
+      "current_minus_deg": 8.410083328738846,
+      "current_plus_deg": 9.707026539462635
+    },
+    {
+      "e1_keV": 230,
+      "theta_deg": 105.78150897573292,
+      "old_minus_deg": 11.459234399019197,
+      "old_plus_deg": 14.653276662547647,
+      "current_minus_deg": 11.720862879378748,
+      "current_plus_deg": 15.080578655199758
+    },
+    {
+      "e1_keV": 240,
+      "theta_deg": 113.18095465787601,
+      "old_minus_deg": 13.019374092507917,
+      "old_plus_deg": 17.76573801176221,
+      "current_minus_deg": 13.483727667737334,
+      "current_plus_deg": 18.656758160491083
+    },
+    {
+      "e1_keV": 250,
+      "theta_deg": 121.87784709422078,
+      "old_minus_deg": 14.95995539265152,
+      "old_plus_deg": 22.72791006243095,
+      "current_minus_deg": 15.909919404750086,
+      "current_plus_deg": 25.236609684924062
+    },
+    {
+      "e1_keV": 260,
+      "theta_deg": 132.6505589156681,
+      "old_minus_deg": 17.044868839574423,
+      "old_plus_deg": 32.39709287417189,
+      "current_minus_deg": 19.5658562213703,
+      "current_plus_deg": 47.32381763256208
+    },
+    {
+      "e1_keV": 270,
+      "theta_deg": 147.6204069526762,
+      "old_minus_deg": 13.40464428454539,
+      "old_plus_deg": 64.17358574045114,
+      "current_minus_deg": 26.221682389773676,
+      "current_plus_deg": 32.353969595554
+    },
+    {
+      "e1_keV": 276,
+      "theta_deg": 162.647904850738,
+      "old_minus_deg": 93.80086562075654,
+      "old_plus_deg": 245.13371986956864,
+      "current_minus_deg": 35.43181862681428,
+      "current_plus_deg": 17.326471697492188
+    }
+  ]
+}

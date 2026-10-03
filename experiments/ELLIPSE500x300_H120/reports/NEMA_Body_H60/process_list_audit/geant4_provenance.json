@@ -1,0 +1,24 @@
+{
+  "workers": 200,
+  "worker_executable_hashes": [
+    "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6"
+  ],
+  "worker_crystal_hashes": [
+    "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb"
+  ],
+  "current_files_sha256": {
+    "Geant4Sim/Geant4Code/src/EventAction.cc": "e928bbd25345e09eb5b359bda86bca8227d228c1e0eea2239bb9bada8e76b8ae",
+    "Geant4Sim/Geant4Code/src/SteppingAction.cc": "07c73228a23b9974a44fb4a42676e9289765692d1d1edef0037ce40d810a01c6",
+    "Geant4Sim/Geant4Code/src/DetectorConstruction.cc": "42edc6e62b126cf5621a888d4f28d590e61c1ada08ba54e11dfefea869a60a2b",
+    "Geant4Sim/Geant4Code/CrystalMatrix.txt": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+    "Geant4Build/gamma01": "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6"
+  },
+  "geant4_version": "11.1.0",
+  "physics_constructor": "G4EmStandardPhysics_option4",
+  "local_source_sha256": {
+    "Geant4Sim/Geant4Code/src/EventAction.cc": "e928bbd25345e09eb5b359bda86bca8227d228c1e0eea2239bb9bada8e76b8ae",
+    "Geant4Sim/Geant4Code/src/SteppingAction.cc": "07c73228a23b9974a44fb4a42676e9289765692d1d1edef0037ce40d810a01c6",
+    "Geant4Sim/Geant4Code/src/DetectorConstruction.cc": "42edc6e62b126cf5621a888d4f28d590e61c1ada08ba54e11dfefea869a60a2b",
+    "Geant4Sim/Geant4Code/CrystalMatrix.txt": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb"
+  }
+}
