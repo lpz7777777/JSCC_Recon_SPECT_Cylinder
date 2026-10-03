@@ -69,7 +69,7 @@ def main():
             for filename in ("optimization.json","run_manifest.json"):
                 (dest/filename).write_bytes((REPORT/f"{name}.formal.{filename}").read_bytes())
             subprocess.run([sys.executable,str(HERE/"analyze_nema_result.py"),result],check=True)
-            subprocess.run([sys.executable,str(HERE/"plot_nema_iterations.py"),result,"--mip-trim-layers","3"],check=True)
+            subprocess.run([sys.executable,str(HERE/"plot_nema_iterations.py"),result],check=True)
 
 
 if __name__=="__main__":

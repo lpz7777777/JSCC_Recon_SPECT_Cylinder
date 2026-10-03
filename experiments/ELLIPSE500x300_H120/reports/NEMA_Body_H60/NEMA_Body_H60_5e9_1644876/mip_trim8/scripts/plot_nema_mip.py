@@ -116,7 +116,7 @@ def main():
         warning="Display-only trimmed MIP does not demonstrate full-FOV edge stability; retain untrimmed images and original quantitative metrics")
     (out/"metadata.json").write_text(json.dumps(metadata,indent=2)+"\n")
     (out/"scripts").mkdir(exist_ok=True)
-    (out/".gitattributes").write_text("*.json -text whitespace=cr-at-eol\nscripts/*.py -text\n",encoding="utf-8")
+    (out/".gitattributes").write_text("*.json -text\nscripts/*.py -text\n",encoding="utf-8")
     for name in metadata["script_sha256"]:
         shutil.copy2(HERE/name,out/"scripts"/name)
     (out/"README.md").write_text(f"# NEMA H60：排除轴向端层的MIP\n\n上下各排除{args.trim_layers}层（每端{policy['removed_mm_each_end']:g}mm），保留{policy['retained_layer_count']}层，中心范围{policy['retained_center_range_mm']}mm，对应投影体积z∈[{lo:g},{hi:g}]mm。只改变MIP显示，重建数组、轴冠矢位、CRC/CNR/CV与积分/泄漏指标不变。横向椭圆FOV完整，无平滑，白低黑高，固定色标0..10。附图iterations_z20.png是z=+1.5mm单层轴位图，不是MIP。\n\n![六路逐迭代MIP](mip_iterations.png)\n\n![全轴向MIP与端层排除MIP的同色标对照](mip_full_vs_trimmed.png)\n\n![多平面：仅MIP排除端层](final_multiplanar.png)\n\n排除端层后仍可能存在内部噪声尖峰；改善显示不能作为边缘性能已修复的证据。原始全轴向MIP保留对照，输入/脚本哈希及实际选择见metadata.json。\n",encoding="utf-8")

@@ -1,0 +1,67 @@
+{
+  "status": "partial_completed_groups_only",
+  "variants": [
+    "baseline",
+    "bind_f010",
+    "huber_weak"
+  ],
+  "study_sha256": "d7445068aba0cee810f6a2a15a9ed87e8e06d7056c3c4890a98ad421995c5b09",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "script_sha256": "147fe197d83537a486af48ad37d2c62dd09f9a406a80933cbd124ee4b08d10ae",
+  "provenance": [
+    {
+      "variant": "baseline",
+      "result": "NEMA_Body_H60_5e9_1644876",
+      "run_manifest_sha256": "9d7042726693894d11e35944e02f054618501c649b3a83a92cb01a39615c6239",
+      "integrity_sha256": "d300137d7ce03adb4f4b87395e862e92a0f1e5916e7bd32f7974e1d3141f91ac",
+      "analysis_sha256": "88e1eddc791bc6e51d59449ae6e7365bdd01d0caf8a69fb0f71435d9cfe56635",
+      "metrics_sha256": "d16f1571a2f236cfb6c85925d7b9e1762010fb61374b5bb5ea737bd19df97ec1"
+    },
+    {
+      "variant": "bind_f010",
+      "result": "NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+      "run_manifest_sha256": "49c6ce8cf5ca6f3e390c1a43b2f979542d23252960333410907370f3c4fe6787",
+      "integrity_sha256": "26f702e8220320f365137a39a91a9854199aa1f2330406d719833351b3e2b3f9",
+      "analysis_sha256": "50c60f242bf8f0e7ff41f1742c00e3c81873ac93369cfe626a20de0af0bb4a8d",
+      "metrics_sha256": "46052c110ac50a33924acc762196bc2a16362573d8b3b42f3c22b36382ad418f"
+    },
+    {
+      "variant": "huber_weak",
+      "result": "NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+      "run_manifest_sha256": "beafe632565b5b825562ec2b6191e847be3f33016be5c8fd1eca1792d7240aff",
+      "integrity_sha256": "6ca9b817bbe2555a232055d26e23eec9fc9ee8e5601ec19fb3120f7196e1ebec",
+      "analysis_sha256": "3cc3297826aed8db3267f1fdf499e3de8b40af9a28b7c49ad31d6547a24b4b54",
+      "metrics_sha256": "4d3fca76dace4629f7495efcfa8fff19b8a2ae57abc36cd86f456895d19e23bf"
+    }
+  ],
+  "mip_policy": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "roi": "volume-fraction sphere means; local pure background within sphere radius+25mm in XY and radius+3mm in z; global pure background |z|<=25.5mm; spatial std ddof=1; CRC denominator=expected hot/background ratio-1",
+  "tiny_cell_volume_fraction": 0.0005303292080467228,
+  "display": "gray_r, full ellipse XY, sigma=0, fixed 0..10. MIP trims 8 layers/end; all quantitative metrics use all 40 layers.",
+  "inner_z_metric_center_range_mm": [
+    -49.5,
+    49.5
+  ],
+  "scales": "final_bg: each method/channel's fixed final pure-background scalar. emitted_density: identical source-primary-based expected background per channel. Neither rescales truth.",
+  "native_metrics": "Native active polar density and cell_volume*ellipse_fraction integrals; P99.9 weighted by physical cell volume. CRC/CNR/CV use the existing matched H60 3D spherical ROIs, no smoothing."
+}

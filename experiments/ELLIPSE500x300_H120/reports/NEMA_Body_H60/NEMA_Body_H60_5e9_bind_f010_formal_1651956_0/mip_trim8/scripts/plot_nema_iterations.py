@@ -2,7 +2,7 @@
 
 Uses the experiment's explicit dual-energy 3D truth, not the skill's legacy
 all-hot cylindrical NEMA catalog. No XY crop or smoothing; gray_r. MIP
-uses the central 72 mm (eight axial layers removed per end) by default. Gallery
+excludes three axial layers per end by default. Gallery
 normalization is fixed across iterations using each channel's final background.
 """
 import argparse
@@ -34,7 +34,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("result")
     p.add_argument("--mip-trim-layers",type=int,default=DEFAULT_TRIM_LAYERS,
-                   help="Exclude this many z layers per end from MIP only (default 8: central 72 mm)")
+                   help="Exclude this many z layers per end from MIP only (default 3)")
     args = p.parse_args()
     if "/" in args.result or "\\" in args.result:
         p.error("Result must be one directory name")

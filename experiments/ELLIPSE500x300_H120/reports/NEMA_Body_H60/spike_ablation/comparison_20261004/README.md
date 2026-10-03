@@ -78,5 +78,5 @@ f<0.1单元占物理FOV体积约0.053%。绑定后的这些单元积分接近零
 
 ```powershell
 python experiments/ELLIPSE500x300_H120/fetch_spike_ablation.py --results
-python experiments/ELLIPSE500x300_H120/compare_spike_ablation.py --variants bind_f010 huber_weak --output-name comparison_20261004
+python experiments/ELLIPSE500x300_H120/compare_spike_ablation.py --variants bind_f010 huber_weak --mip-trim-layers 3 --output-name comparison_20261004
 ```

@@ -1,0 +1,98 @@
+{
+  "result": "NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+  "variant": "huber_weak",
+  "policy": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "projection": "max along z after endpoint selection",
+  "selected_iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "analysis_sha256": "3cc3297826aed8db3267f1fdf499e3de8b40af9a28b7c49ad31d6547a24b4b54",
+  "integrity_sha256": "6ca9b817bbe2555a232055d26e23eec9fc9ee8e5601ec19fb3120f7196e1ebec",
+  "history_sha256": {
+    "440_SinglePhoton": "1f1fd85956027b0a1fdfe24b7de66fc42631702fba49140d3eb513ccfa59dff5",
+    "440_ComptonOnly": "b14f5a09bb0fbcf9d5bd05170a3eab25330e31d17a7cefa44c5b8d78cc8bf54c",
+    "440_SinglePlusCompton": "18a7e35e38d1023dd4b303aa114dbba4fe4982db540d098f9778ce4effe1c6b4",
+    "218_SinglePhoton_CrossTalkCorrected": "f0110dae3a51be41b7210f1c0e9b816fce98cbec0e51fe843d2554c5f115702c",
+    "440SinglePlus218Single": "06dec485346f6f7871953c19f094f7a0a8e9278aeb62ccee3134c296c39d10a1",
+    "440SingleComptonPlus218Single": "1b034f7788f7a201abe21904923321288ab077451a5245642d574248ef25b5a2"
+  },
+  "display_range": [
+    0,
+    10
+  ],
+  "colormap": "gray_r",
+  "gaussian_sigma": 0,
+  "xy_crop": 0,
+  "script_sha256": {
+    "plot_nema_mip.py": "14ce627228e0140c30bb3daded4f3e33212195ee75f651310fc89531084ee90e",
+    "mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "plot_nema_iterations.py": "87f1c1bb218dab0b04d542d7d70cbaef2864857c79179239ce26d33327fe44dd"
+  },
+  "normalization": "one existing final BG scalar per channel fixed over all iterations; no per-frame fit",
+  "peaks": [
+    {
+      "channel": "440_SinglePhoton",
+      "full_mip_max": 3.5799732208251953,
+      "trimmed_mip_max": 3.5799732208251953,
+      "fixed_final_background": 909.1129150390625
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "full_mip_max": 225.59988403320312,
+      "trimmed_mip_max": 11.862176895141602,
+      "fixed_final_background": 929.20703125
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "full_mip_max": 28.137035369873047,
+      "trimmed_mip_max": 3.7745232582092285,
+      "fixed_final_background": 889.6791381835938
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "full_mip_max": 3.108851909637451,
+      "trimmed_mip_max": 3.108851909637451,
+      "fixed_final_background": 412.9679260253906
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "full_mip_max": 2.8567042350769043,
+      "trimmed_mip_max": 2.8567042350769043,
+      "fixed_final_background": 1322.080810546875
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "full_mip_max": 19.217008590698242,
+      "trimmed_mip_max": 2.9880857467651367,
+      "fixed_final_background": 1302.6470947265625
+    }
+  ],
+  "warning": "Display-only trimmed MIP does not demonstrate full-FOV edge stability; retain untrimmed images and original quantitative metrics"
+}

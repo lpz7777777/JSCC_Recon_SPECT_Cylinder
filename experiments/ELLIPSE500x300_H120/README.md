@@ -4,13 +4,13 @@
 
 本页是当前入口和文件索引。早期操作、作业号、故障及逐次结果详见 [HISTORY.md](HISTORY.md)；历史中较早的“待运行”等状态可能已过时。远端连接方法见 [docs/REMOTE_COMPUTE_ACCESS.md](../../docs/REMOTE_COMPUTE_ACCESS.md)，不在本实验目录保存密码或私钥。
 
-2026-10-02显示约定更新：NEMA的轴向MIP默认上下各排除3层（各9mm），保留z中心−49.5～+49.5mm、投影体积范围−51～+51mm。只排除MIP投影的端层，重建物理FOV仍500×300×120mm，原始图像与定量指标不改。1e9及5e9均已有[端层排除MIP及全范围对照](reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/README.md)。`iterations_z20.png`是z=+1.5mm单层轴位图，不是MIP。后续`plot_nema_iterations.py`默认此MIP策略；`plot_nema_mip.py --trim-layers N`可只重画MIP而不重算指标。
+2026-10-04按用户要求更新显示约定：NEMA轴向MIP默认**仅取中央72mm，即z∈[−36,+36]mm**。40层、3mm间距的网格上下各去掉8层（各24mm），保留24层，层中心−34.5～+34.5mm。重建物理FOV仍500×300×120mm，原始图像及定量指标不改。已完成的MLEM、边界绑定、弱Huber均已重画[中央72mm六路对照和逐迭代MIP](reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/README.md)。`iterations_z20.png`仍是z=+1.5mm单层轴位图，不是MIP。`plot_nema_iterations.py`、`compare_spike_ablation.py`和后续取回流程共用此默认策略；`plot_nema_mip.py --trim-layers 8`可只重画MIP而不重算指标。此前上下各去掉3层的[102mm历史显示](reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/README.md)及原始全120mm图均保留。
 
 ## 当前已形成的基线
 
 2026-10-02新增用户授权的[尖峰算法对照](reports/NEMA_Body_H60/spike_ablation/README.md)：复用NEMA 5e9已完成MLEM基线，分开比较仅边界小单元密度绑定、MAP-Huber弱/中/强、MAP-TV。核心更新及本地8项数值/几何测试已通过，采用完整数据10次→200次→10000次的验收门控；发布、作业登记和最新证据见对照报告目录。此处新增对照不改变已验收基线、Factors或Geant4输入。
 
-2026-10-04集群01:10进度：作业 **1651956** 仍在8节点×1张4090运行。边界绑定、弱Huber两组已完成10000次并通过六路×200帧正式验收；中档Huber在正式Compton/JSCC **1350/10000**，强Huber/TV尚待执行。[已完成组的统一尺度图像和逐迭代指标](reports/NEMA_Body_H60/spike_ablation/comparison_20261004/README.md)已生成：绑定压低小单元尖峰但主体噪声几乎不变；弱Huber明显降低噪声，同时明显损失热球CRC并增加轴向源外积分。当前不判定最优算法。完整FOV原始指标保留40层，MIP仅按约定上下各排除3层。
+2026-10-04集群01:10进度：作业 **1651956** 仍在8节点×1张4090运行。边界绑定、弱Huber两组已完成10000次并通过六路×200帧正式验收；中档Huber在正式Compton/JSCC **1350/10000**，强Huber/TV尚待执行。[已完成组的统一尺度图像和逐迭代指标](reports/NEMA_Body_H60/spike_ablation/comparison_20261004/README.md)已生成：绑定压低小单元尖峰但主体噪声几乎不变；弱Huber明显降低噪声，同时明显损失热球CRC并增加轴向源外积分。当前不判定最优算法。完整FOV原始指标保留40层，最新[中央72mm MIP显示](reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/README.md)沿用完全相同的重建和定量指标。
 
 2026-10-02算法研究更新：[Compton/JSCC尖峰诊断与改进方案](reports/NEMA_Body_H60/spike_research/README.md)对1e9/5e9原始历史做了体积加权核查。只占椭圆体积0.053%的小相交单元，分别承载约7.3%–7.4%的Compton积分、4.9%的JSCC积分；最大尖峰单元的单位体积Compton灵敏度并非低谷，且尖峰在早期已形成。建议优先核查相交体积核积分、事件责任与空间可辨识性，并对照几何一致的三维MAP-JSCC及边界密度约束。该报告区分已测事实与待测假设；本次没有更改生产算法或提交新重建。
 

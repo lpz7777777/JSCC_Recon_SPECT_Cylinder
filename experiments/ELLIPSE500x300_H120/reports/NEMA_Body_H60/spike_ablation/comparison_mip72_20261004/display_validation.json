@@ -1,0 +1,306 @@
+{
+  "passed": true,
+  "scope": "display-only central 72 mm MIP; no reconstruction or quantitative metric change",
+  "mip_policy": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "synthetic_endpoint_exclusion_and_center_peak_check_passed": true,
+  "source_provenance_unchanged": true,
+  "quantitative_csv_checks": {
+    "final_channels.csv": {
+      "sha256": "9c4de599655697350367bacc768adf2ebe1debbaa45bf6b33a15c709712df135",
+      "byte_identical_to_previous": true
+    },
+    "final_spheres.csv": {
+      "sha256": "22dccf37ca6f2cc32bb9214f0c04d9e567705dd9e85ba651bafc03cd95f5ac40",
+      "byte_identical_to_previous": true
+    },
+    "native_iteration_metrics.csv": {
+      "sha256": "207e9465e645b9a891e6de7cc49749a6efc592ceaea0903f182c4bb6415d6c1a",
+      "byte_identical_to_previous": true
+    }
+  },
+  "original_inner_z_diagnostic_unchanged_center_range_mm": [
+    -49.5,
+    49.5
+  ],
+  "comparison_metadata_sha256": "1dc8447d27fa51699823ca01f5d9c5fd8c45080816b0e942ba2cac9e0a9ef4bd",
+  "groups": [
+    {
+      "variant": "baseline",
+      "result": "NEMA_Body_H60_5e9_1644876",
+      "mip_metadata_sha256": "6966113b979dfbd5e26899de8f623aca8b5e23f9bcf1f1b8ef0368117f6638f6",
+      "peaks": [
+        {
+          "channel": "440_SinglePhoton",
+          "full_mip_max": 34.17379379272461,
+          "trimmed_mip_max": 34.17379379272461,
+          "fixed_final_background": 955.8801879882812
+        },
+        {
+          "channel": "440_ComptonOnly",
+          "full_mip_max": 2260.346435546875,
+          "trimmed_mip_max": 253.60240173339844,
+          "fixed_final_background": 932.62060546875
+        },
+        {
+          "channel": "440_SinglePlusCompton",
+          "full_mip_max": 1818.3642578125,
+          "trimmed_mip_max": 51.2856559753418,
+          "fixed_final_background": 923.3751831054688
+        },
+        {
+          "channel": "218_SinglePhoton_CrossTalkCorrected",
+          "full_mip_max": 21.144596099853516,
+          "trimmed_mip_max": 21.144596099853516,
+          "fixed_final_background": 434.7544250488281
+        },
+        {
+          "channel": "440SinglePlus218Single",
+          "full_mip_max": 23.669979095458984,
+          "trimmed_mip_max": 23.669979095458984,
+          "fixed_final_background": 1390.634765625
+        },
+        {
+          "channel": "440SingleComptonPlus218Single",
+          "full_mip_max": 1236.28515625,
+          "trimmed_mip_max": 35.128421783447266,
+          "fixed_final_background": 1358.129638671875
+        }
+      ]
+    },
+    {
+      "variant": "bind_f010",
+      "result": "NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+      "mip_metadata_sha256": "25af069331d922e8930b6e5bc7c6aed3a24eb01f43e2bece8ef34c3446643c0d",
+      "peaks": [
+        {
+          "channel": "440_SinglePhoton",
+          "full_mip_max": 34.17366409301758,
+          "trimmed_mip_max": 34.17366409301758,
+          "fixed_final_background": 955.8854370117188
+        },
+        {
+          "channel": "440_ComptonOnly",
+          "full_mip_max": 234.15670776367188,
+          "trimmed_mip_max": 163.93162536621094,
+          "fixed_final_background": 937.5470581054688
+        },
+        {
+          "channel": "440_SinglePlusCompton",
+          "full_mip_max": 192.40280151367188,
+          "trimmed_mip_max": 51.19178771972656,
+          "fixed_final_background": 924.1528930664062
+        },
+        {
+          "channel": "218_SinglePhoton_CrossTalkCorrected",
+          "full_mip_max": 21.144424438476562,
+          "trimmed_mip_max": 21.144424438476562,
+          "fixed_final_background": 434.7552795410156
+        },
+        {
+          "channel": "440SinglePlus218Single",
+          "full_mip_max": 23.669919967651367,
+          "trimmed_mip_max": 23.669919967651367,
+          "fixed_final_background": 1390.6407470703125
+        },
+        {
+          "channel": "440SingleComptonPlus218Single",
+          "full_mip_max": 130.84762573242188,
+          "trimmed_mip_max": 35.07381057739258,
+          "fixed_final_background": 1358.908203125
+        }
+      ]
+    },
+    {
+      "variant": "huber_weak",
+      "result": "NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+      "mip_metadata_sha256": "6525bc5f259b8e2e57235849a1bca9e10ea529bbd49e84b5cae89e4f72098f7a",
+      "peaks": [
+        {
+          "channel": "440_SinglePhoton",
+          "full_mip_max": 3.5799732208251953,
+          "trimmed_mip_max": 3.5799732208251953,
+          "fixed_final_background": 909.1129150390625
+        },
+        {
+          "channel": "440_ComptonOnly",
+          "full_mip_max": 225.59988403320312,
+          "trimmed_mip_max": 11.862176895141602,
+          "fixed_final_background": 929.20703125
+        },
+        {
+          "channel": "440_SinglePlusCompton",
+          "full_mip_max": 28.137035369873047,
+          "trimmed_mip_max": 3.7745232582092285,
+          "fixed_final_background": 889.6791381835938
+        },
+        {
+          "channel": "218_SinglePhoton_CrossTalkCorrected",
+          "full_mip_max": 3.108851909637451,
+          "trimmed_mip_max": 3.108851909637451,
+          "fixed_final_background": 412.9679260253906
+        },
+        {
+          "channel": "440SinglePlus218Single",
+          "full_mip_max": 2.8567042350769043,
+          "trimmed_mip_max": 2.8567042350769043,
+          "fixed_final_background": 1322.080810546875
+        },
+        {
+          "channel": "440SingleComptonPlus218Single",
+          "full_mip_max": 19.217008590698242,
+          "trimmed_mip_max": 2.9880857467651367,
+          "fixed_final_background": 1302.6470947265625
+        }
+      ]
+    }
+  ],
+  "verified_figures": [
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/final_multiplanar.png",
+      "shape_pixels": [
+        2645,
+        1955
+      ],
+      "sha256": "8f30610f717ffdbb022c06329259f0e026f0bb611f7476715ccb1fd084b8e692"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/mip_full_vs_trimmed.png",
+      "shape_pixels": [
+        1440,
+        1800
+      ],
+      "sha256": "1df1aaf2dba79763cf04974404cfe1b1c2dd776e2e76d5851964b880707f5b7c"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/mip_iterations.png",
+      "shape_pixels": [
+        2530,
+        1725
+      ],
+      "sha256": "8e593e1e26cee3a0e6abe23691a69566c93f46489897e80905d0be3d769de90c"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/final_multiplanar.png",
+      "shape_pixels": [
+        2645,
+        1955
+      ],
+      "sha256": "0af7ea3514fe3081ed52625ad808cc9aa6539023e26b9d0fb2e18a8781594c7c"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/mip_full_vs_trimmed.png",
+      "shape_pixels": [
+        1440,
+        1800
+      ],
+      "sha256": "fdda1e9af434a040196c76195e6b580f3acc0ccc4f3f50d48b144f6fc389fdda"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/mip_iterations.png",
+      "shape_pixels": [
+        2530,
+        1725
+      ],
+      "sha256": "838537c44bd7bbf490880047529f7299fd9025dee80c99f360c67de2f8a7a6c7"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/final_multiplanar.png",
+      "shape_pixels": [
+        2645,
+        1955
+      ],
+      "sha256": "6a13e996c20d4f3ac0622c0163146dd47c7642bdeea13910ffca12f5b80d1879"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/mip_full_vs_trimmed.png",
+      "shape_pixels": [
+        1440,
+        1800
+      ],
+      "sha256": "3bc5645463522c0f3b4bfffd04a02f4c39ba8e1aa9c3f294fbcf5c46b5ff2239"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/mip_iterations.png",
+      "shape_pixels": [
+        2530,
+        1725
+      ],
+      "sha256": "cd994aa5e30b62f8a64b4a217f1b95a8f4fc5b5d4bfac266ebf1a651f6a62287"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/center_emitted_density.png",
+      "shape_pixels": [
+        2080,
+        1820
+      ],
+      "sha256": "fb6390bb32d780f3852a6f4f1fe3f89d9069325a2b69a29014761cd341e28a30"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/center_final_bg.png",
+      "shape_pixels": [
+        2080,
+        1820
+      ],
+      "sha256": "ca8807c5711f3ba4753b46f506e50d693df6faa9b0b005c678eb5a46bab209a9"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/matched_cnr.png",
+      "shape_pixels": [
+        1960,
+        1400
+      ],
+      "sha256": "4a884e13f58c2ec2544f052225e6de3fe5241e992a3cfa7e364a5c72527d8d4b"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/matched_crc.png",
+      "shape_pixels": [
+        1960,
+        1400
+      ],
+      "sha256": "da439c85a063478bb9cd7ab105e78efe39b44327a56412e795a40f99778eec6d"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/mip_emitted_density.png",
+      "shape_pixels": [
+        2080,
+        1820
+      ],
+      "sha256": "272d235e1c876c961341255acac335ac7de6daa67e4c76fa1b8a2f932a002b89"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/mip_final_bg.png",
+      "shape_pixels": [
+        2080,
+        1820
+      ],
+      "sha256": "b4359af35c8f9ab05ca224c745777975da7e492c8df877e1a87e01fa41fe3bb5"
+    },
+    {
+      "path": "reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/spike_noise_leakage.png",
+      "shape_pixels": [
+        2380,
+        1400
+      ],
+      "sha256": "70465dac5da73ca084e3031c88b8f581efc99a3a3a3a22a3a25469489087a61c"
+    }
+  ]
+}
