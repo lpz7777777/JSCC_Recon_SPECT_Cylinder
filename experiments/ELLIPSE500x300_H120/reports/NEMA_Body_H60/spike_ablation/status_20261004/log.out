@@ -1,0 +1,3612 @@
+SPIKE_ABLATION_START bind_f010 pilot /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+7: [rank 7] initializing nccl process group
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+7: [rank 7] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 10/10
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 10/10
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+4: [rank 4] view 1 accepted=2804
+3: [rank 3] view 1 accepted=2767
+0: [rank 0] view 1 accepted=2711
+5: [rank 5] view 1 accepted=2775
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 1 accepted=2710
+2: [rank 2] view 1 accepted=2741
+3: [rank 3] view 2 accepted=2851
+0: [rank 0] view 2 accepted=2801
+4: [rank 4] view 2 accepted=2864
+5: [rank 5] view 2 accepted=2796
+6: [rank 6] view 2 accepted=2725
+1: [rank 1] view 2 accepted=2790
+7: [rank 7] view 1 accepted=2703
+0: [rank 0] view 3 accepted=2908
+3: [rank 3] view 3 accepted=2785
+2: [rank 2] view 2 accepted=2763
+5: [rank 5] view 3 accepted=2885
+4: [rank 4] view 3 accepted=2864
+6: [rank 6] view 3 accepted=2820
+1: [rank 1] view 3 accepted=2858
+7: [rank 7] view 2 accepted=2771
+0: [rank 0] view 4 accepted=2990
+5: [rank 5] view 4 accepted=2911
+3: [rank 3] view 4 accepted=2923
+4: [rank 4] view 4 accepted=2887
+2: [rank 2] view 3 accepted=2781
+6: [rank 6] view 4 accepted=2990
+1: [rank 1] view 4 accepted=2840
+7: [rank 7] view 3 accepted=2842
+0: [rank 0] view 5 accepted=2992
+5: [rank 5] view 5 accepted=3002
+3: [rank 3] view 5 accepted=2969
+4: [rank 4] view 5 accepted=3054
+2: [rank 2] view 4 accepted=2885
+6: [rank 6] view 5 accepted=2989
+1: [rank 1] view 5 accepted=2953
+7: [rank 7] view 4 accepted=2884
+0: [rank 0] view 6 accepted=3095
+5: [rank 5] view 6 accepted=3083
+4: [rank 4] view 6 accepted=3090
+2: [rank 2] view 5 accepted=2989
+6: [rank 6] view 6 accepted=3088
+7: [rank 7] view 5 accepted=3060
+3: [rank 3] view 6 accepted=3119
+1: [rank 1] view 6 accepted=3057
+0: [rank 0] view 7 accepted=3193
+5: [rank 5] view 7 accepted=3129
+4: [rank 4] view 7 accepted=3181
+6: [rank 6] view 7 accepted=3148
+2: [rank 2] view 6 accepted=3082
+7: [rank 7] view 6 accepted=3050
+3: [rank 3] view 7 accepted=3105
+0: [rank 0] view 8 accepted=3234
+1: [rank 1] view 7 accepted=3153
+4: [rank 4] view 8 accepted=3160
+5: [rank 5] view 8 accepted=3129
+6: [rank 6] view 8 accepted=3136
+2: [rank 2] view 7 accepted=3165
+3: [rank 3] view 8 accepted=3131
+0: [rank 0] view 9 accepted=3134
+7: [rank 7] view 7 accepted=3109
+1: [rank 1] view 8 accepted=3245
+6: [rank 6] view 9 accepted=3084
+5: [rank 5] view 9 accepted=3060
+4: [rank 4] view 9 accepted=3211
+2: [rank 2] view 8 accepted=3301
+3: [rank 3] view 9 accepted=3084
+0: [rank 0] view 10 accepted=3123
+7: [rank 7] view 8 accepted=3130
+1: [rank 1] view 9 accepted=3126
+4: [rank 4] view 10 accepted=3135
+6: [rank 6] view 10 accepted=3138
+5: [rank 5] view 10 accepted=3111
+2: [rank 2] view 9 accepted=3189
+0: [rank 0] view 11 accepted=3069
+3: [rank 3] view 10 accepted=3189
+1: [rank 1] view 10 accepted=3088
+4: [rank 4] view 11 accepted=3097
+6: [rank 6] view 11 accepted=3068
+5: [rank 5] view 11 accepted=3170
+7: [rank 7] view 9 accepted=3110
+0: [rank 0] view 12 accepted=3061
+3: [rank 3] view 11 accepted=3162
+2: [rank 2] view 10 accepted=3161
+1: [rank 1] view 11 accepted=3123
+4: [rank 4] view 12 accepted=3101
+5: [rank 5] view 12 accepted=3174
+6: [rank 6] view 12 accepted=3218
+7: [rank 7] view 10 accepted=3187
+0: [rank 0] view 13 accepted=3126
+3: [rank 3] view 12 accepted=3089
+2: [rank 2] view 11 accepted=3161
+6: [rank 6] view 13 accepted=3109
+5: [rank 5] view 13 accepted=3224
+1: [rank 1] view 12 accepted=3134
+4: [rank 4] view 13 accepted=3248
+7: [rank 7] view 11 accepted=3144
+0: [rank 0] view 14 accepted=3195
+2: [rank 2] view 12 accepted=3173
+3: [rank 3] view 13 accepted=3206
+4: [rank 4] view 14 accepted=3102
+5: [rank 5] view 14 accepted=3236
+6: [rank 6] view 14 accepted=3309
+1: [rank 1] view 13 accepted=3145
+0: [rank 0] view 15 accepted=3160
+7: [rank 7] view 12 accepted=3218
+2: [rank 2] view 13 accepted=3310
+3: [rank 3] view 14 accepted=3178
+5: [rank 5] view 15 accepted=3203
+4: [rank 4] view 15 accepted=3253
+6: [rank 6] view 15 accepted=3302
+1: [rank 1] view 14 accepted=3222
+0: [rank 0] view 16 accepted=3190
+7: [rank 7] view 13 accepted=3172
+2: [rank 2] view 14 accepted=3147
+3: [rank 3] view 15 accepted=3217
+4: [rank 4] view 16 accepted=3100
+5: [rank 5] view 16 accepted=3093
+6: [rank 6] view 16 accepted=3187
+1: [rank 1] view 15 accepted=3235
+0: [rank 0] view 17 accepted=3035
+7: [rank 7] view 14 accepted=3273
+2: [rank 2] view 15 accepted=3157
+5: [rank 5] view 17 accepted=2990
+4: [rank 4] view 17 accepted=3040
+6: [rank 6] view 17 accepted=3111
+3: [rank 3] view 16 accepted=3149
+0: [rank 0] view 18 accepted=2970
+1: [rank 1] view 16 accepted=3058
+7: [rank 7] view 15 accepted=3143
+5: [rank 5] view 18 accepted=2856
+6: [rank 6] view 18 accepted=2991
+2: [rank 2] view 16 accepted=3129
+0: [rank 0] view 19 accepted=2908
+3: [rank 3] view 17 accepted=3064
+4: [rank 4] view 18 accepted=2990
+1: [rank 1] view 17 accepted=3076
+7: [rank 7] view 16 accepted=3184
+5: [rank 5] view 19 accepted=2860
+6: [rank 6] view 19 accepted=2833
+0: [rank 0] view 20 accepted=2697
+3: [rank 3] view 18 accepted=2952
+2: [rank 2] view 17 accepted=3123
+4: [rank 4] view 19 accepted=2931
+1: [rank 1] view 18 accepted=2938
+7: [rank 7] view 17 accepted=3024
+5: [rank 5] view 20 accepted=2759
+6: [rank 6] view 20 accepted=2793
+3: [rank 3] view 19 accepted=2804
+2: [rank 2] view 18 accepted=2873
+4: [rank 4] view 20 accepted=2739
+1: [rank 1] view 19 accepted=2891
+7: [rank 7] view 18 accepted=2941
+3: [rank 3] view 20 accepted=2747
+2: [rank 2] view 19 accepted=2876
+7: [rank 7] view 19 accepted=2782
+1: [rank 1] view 20 accepted=2879
+2: [rank 2] view 20 accepted=2735
+7: [rank 7] view 20 accepted=2814
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 10/10
+SPIKE_ABLATION_GATE_PASSED {"variant": "bind_f010", "phase": "pilot", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_pilot_1651956_0", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.4543483723958333, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START bind_f010 short /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_short_1651956_0
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+1: [rank 1] initializing nccl process group
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+1: [rank 1] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/200
+0: ELLIPSE_ITERATION 440_single 100/200
+0: ELLIPSE_ITERATION 440_single 150/200
+0: ELLIPSE_ITERATION 440_single 200/200
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/200
+0: ELLIPSE_ITERATION 218_corrected 100/200
+0: ELLIPSE_ITERATION 218_corrected 150/200
+0: ELLIPSE_ITERATION 218_corrected 200/200
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+4: [rank 4] view 1 accepted=2804
+6: [rank 6] view 1 accepted=2710
+3: [rank 3] view 1 accepted=2767
+2: [rank 2] view 1 accepted=2741
+7: [rank 7] view 1 accepted=2703
+5: [rank 5] view 1 accepted=2775
+0: [rank 0] view 1 accepted=2711
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 2 accepted=2725
+4: [rank 4] view 2 accepted=2864
+3: [rank 3] view 2 accepted=2851
+2: [rank 2] view 2 accepted=2763
+7: [rank 7] view 2 accepted=2771
+5: [rank 5] view 2 accepted=2796
+0: [rank 0] view 2 accepted=2801
+1: [rank 1] view 2 accepted=2790
+6: [rank 6] view 3 accepted=2820
+4: [rank 4] view 3 accepted=2864
+3: [rank 3] view 3 accepted=2785
+2: [rank 2] view 3 accepted=2781
+7: [rank 7] view 3 accepted=2842
+5: [rank 5] view 3 accepted=2885
+0: [rank 0] view 3 accepted=2908
+1: [rank 1] view 3 accepted=2858
+4: [rank 4] view 4 accepted=2887
+6: [rank 6] view 4 accepted=2990
+3: [rank 3] view 4 accepted=2923
+7: [rank 7] view 4 accepted=2884
+2: [rank 2] view 4 accepted=2885
+5: [rank 5] view 4 accepted=2911
+0: [rank 0] view 4 accepted=2990
+1: [rank 1] view 4 accepted=2840
+4: [rank 4] view 5 accepted=3054
+6: [rank 6] view 5 accepted=2989
+3: [rank 3] view 5 accepted=2969
+7: [rank 7] view 5 accepted=3060
+5: [rank 5] view 5 accepted=3002
+2: [rank 2] view 5 accepted=2989
+0: [rank 0] view 5 accepted=2992
+1: [rank 1] view 5 accepted=2953
+4: [rank 4] view 6 accepted=3090
+6: [rank 6] view 6 accepted=3088
+3: [rank 3] view 6 accepted=3119
+5: [rank 5] view 6 accepted=3083
+7: [rank 7] view 6 accepted=3050
+0: [rank 0] view 6 accepted=3095
+2: [rank 2] view 6 accepted=3082
+1: [rank 1] view 6 accepted=3057
+4: [rank 4] view 7 accepted=3181
+6: [rank 6] view 7 accepted=3148
+3: [rank 3] view 7 accepted=3105
+5: [rank 5] view 7 accepted=3129
+7: [rank 7] view 7 accepted=3109
+0: [rank 0] view 7 accepted=3193
+2: [rank 2] view 7 accepted=3165
+1: [rank 1] view 7 accepted=3153
+4: [rank 4] view 8 accepted=3160
+6: [rank 6] view 8 accepted=3136
+3: [rank 3] view 8 accepted=3131
+5: [rank 5] view 8 accepted=3129
+7: [rank 7] view 8 accepted=3130
+0: [rank 0] view 8 accepted=3234
+2: [rank 2] view 8 accepted=3301
+1: [rank 1] view 8 accepted=3245
+6: [rank 6] view 9 accepted=3084
+4: [rank 4] view 9 accepted=3211
+3: [rank 3] view 9 accepted=3084
+5: [rank 5] view 9 accepted=3060
+7: [rank 7] view 9 accepted=3110
+0: [rank 0] view 9 accepted=3134
+6: [rank 6] view 10 accepted=3138
+4: [rank 4] view 10 accepted=3135
+1: [rank 1] view 9 accepted=3126
+2: [rank 2] view 9 accepted=3189
+5: [rank 5] view 10 accepted=3111
+3: [rank 3] view 10 accepted=3189
+7: [rank 7] view 10 accepted=3187
+0: [rank 0] view 10 accepted=3123
+6: [rank 6] view 11 accepted=3068
+4: [rank 4] view 11 accepted=3097
+1: [rank 1] view 10 accepted=3088
+5: [rank 5] view 11 accepted=3170
+2: [rank 2] view 10 accepted=3161
+0: [rank 0] view 11 accepted=3069
+7: [rank 7] view 11 accepted=3144
+3: [rank 3] view 11 accepted=3162
+4: [rank 4] view 12 accepted=3101
+6: [rank 6] view 12 accepted=3218
+5: [rank 5] view 12 accepted=3174
+2: [rank 2] view 11 accepted=3161
+0: [rank 0] view 12 accepted=3061
+7: [rank 7] view 12 accepted=3218
+1: [rank 1] view 11 accepted=3123
+3: [rank 3] view 12 accepted=3089
+4: [rank 4] view 13 accepted=3248
+6: [rank 6] view 13 accepted=3109
+0: [rank 0] view 13 accepted=3126
+5: [rank 5] view 13 accepted=3224
+2: [rank 2] view 12 accepted=3173
+7: [rank 7] view 13 accepted=3172
+3: [rank 3] view 13 accepted=3206
+1: [rank 1] view 12 accepted=3134
+4: [rank 4] view 14 accepted=3102
+6: [rank 6] view 14 accepted=3309
+0: [rank 0] view 14 accepted=3195
+5: [rank 5] view 14 accepted=3236
+7: [rank 7] view 14 accepted=3273
+3: [rank 3] view 14 accepted=3178
+1: [rank 1] view 13 accepted=3145
+2: [rank 2] view 13 accepted=3310
+4: [rank 4] view 15 accepted=3253
+6: [rank 6] view 15 accepted=3302
+0: [rank 0] view 15 accepted=3160
+5: [rank 5] view 15 accepted=3203
+7: [rank 7] view 15 accepted=3143
+3: [rank 3] view 15 accepted=3217
+1: [rank 1] view 14 accepted=3222
+2: [rank 2] view 14 accepted=3147
+4: [rank 4] view 16 accepted=3100
+6: [rank 6] view 16 accepted=3187
+0: [rank 0] view 16 accepted=3190
+5: [rank 5] view 16 accepted=3093
+7: [rank 7] view 16 accepted=3184
+3: [rank 3] view 16 accepted=3149
+1: [rank 1] view 15 accepted=3235
+4: [rank 4] view 17 accepted=3040
+2: [rank 2] view 15 accepted=3157
+6: [rank 6] view 17 accepted=3111
+0: [rank 0] view 17 accepted=3035
+5: [rank 5] view 17 accepted=2990
+7: [rank 7] view 17 accepted=3024
+3: [rank 3] view 17 accepted=3064
+1: [rank 1] view 16 accepted=3058
+4: [rank 4] view 18 accepted=2990
+6: [rank 6] view 18 accepted=2991
+5: [rank 5] view 18 accepted=2856
+0: [rank 0] view 18 accepted=2970
+2: [rank 2] view 16 accepted=3129
+7: [rank 7] view 18 accepted=2941
+3: [rank 3] view 18 accepted=2952
+4: [rank 4] view 19 accepted=2931
+1: [rank 1] view 17 accepted=3076
+6: [rank 6] view 19 accepted=2833
+5: [rank 5] view 19 accepted=2860
+0: [rank 0] view 19 accepted=2908
+7: [rank 7] view 19 accepted=2782
+2: [rank 2] view 17 accepted=3123
+3: [rank 3] view 19 accepted=2804
+4: [rank 4] view 20 accepted=2739
+5: [rank 5] view 20 accepted=2759
+6: [rank 6] view 20 accepted=2793
+0: [rank 0] view 20 accepted=2697
+1: [rank 1] view 18 accepted=2938
+7: [rank 7] view 20 accepted=2814
+2: [rank 2] view 18 accepted=2873
+3: [rank 3] view 20 accepted=2747
+1: [rank 1] view 19 accepted=2891
+2: [rank 2] view 19 accepted=2876
+1: [rank 1] view 20 accepted=2879
+2: [rank 2] view 20 accepted=2735
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 50/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 100/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 150/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 200/200
+SPIKE_ABLATION_GATE_PASSED {"variant": "bind_f010", "phase": "short", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_short_1651956_0", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.45435813802083336, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START bind_f010 formal /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/10000
+0: ELLIPSE_ITERATION 440_single 100/10000
+0: ELLIPSE_ITERATION 440_single 150/10000
+0: ELLIPSE_ITERATION 440_single 200/10000
+0: ELLIPSE_ITERATION 440_single 250/10000
+0: ELLIPSE_ITERATION 440_single 300/10000
+0: ELLIPSE_ITERATION 440_single 350/10000
+0: ELLIPSE_ITERATION 440_single 400/10000
+0: ELLIPSE_ITERATION 440_single 450/10000
+0: ELLIPSE_ITERATION 440_single 500/10000
+0: ELLIPSE_ITERATION 440_single 550/10000
+0: ELLIPSE_ITERATION 440_single 600/10000
+0: ELLIPSE_ITERATION 440_single 650/10000
+0: ELLIPSE_ITERATION 440_single 700/10000
+0: ELLIPSE_ITERATION 440_single 750/10000
+0: ELLIPSE_ITERATION 440_single 800/10000
+0: ELLIPSE_ITERATION 440_single 850/10000
+0: ELLIPSE_ITERATION 440_single 900/10000
+0: ELLIPSE_ITERATION 440_single 950/10000
+0: ELLIPSE_ITERATION 440_single 1000/10000
+0: ELLIPSE_ITERATION 440_single 1050/10000
+0: ELLIPSE_ITERATION 440_single 1100/10000
+0: ELLIPSE_ITERATION 440_single 1150/10000
+0: ELLIPSE_ITERATION 440_single 1200/10000
+0: ELLIPSE_ITERATION 440_single 1250/10000
+0: ELLIPSE_ITERATION 440_single 1300/10000
+0: ELLIPSE_ITERATION 440_single 1350/10000
+0: ELLIPSE_ITERATION 440_single 1400/10000
+0: ELLIPSE_ITERATION 440_single 1450/10000
+0: ELLIPSE_ITERATION 440_single 1500/10000
+0: ELLIPSE_ITERATION 440_single 1550/10000
+0: ELLIPSE_ITERATION 440_single 1600/10000
+0: ELLIPSE_ITERATION 440_single 1650/10000
+0: ELLIPSE_ITERATION 440_single 1700/10000
+0: ELLIPSE_ITERATION 440_single 1750/10000
+0: ELLIPSE_ITERATION 440_single 1800/10000
+0: ELLIPSE_ITERATION 440_single 1850/10000
+0: ELLIPSE_ITERATION 440_single 1900/10000
+0: ELLIPSE_ITERATION 440_single 1950/10000
+0: ELLIPSE_ITERATION 440_single 2000/10000
+0: ELLIPSE_ITERATION 440_single 2050/10000
+0: ELLIPSE_ITERATION 440_single 2100/10000
+0: ELLIPSE_ITERATION 440_single 2150/10000
+0: ELLIPSE_ITERATION 440_single 2200/10000
+0: ELLIPSE_ITERATION 440_single 2250/10000
+0: ELLIPSE_ITERATION 440_single 2300/10000
+0: ELLIPSE_ITERATION 440_single 2350/10000
+0: ELLIPSE_ITERATION 440_single 2400/10000
+0: ELLIPSE_ITERATION 440_single 2450/10000
+0: ELLIPSE_ITERATION 440_single 2500/10000
+0: ELLIPSE_ITERATION 440_single 2550/10000
+0: ELLIPSE_ITERATION 440_single 2600/10000
+0: ELLIPSE_ITERATION 440_single 2650/10000
+0: ELLIPSE_ITERATION 440_single 2700/10000
+0: ELLIPSE_ITERATION 440_single 2750/10000
+0: ELLIPSE_ITERATION 440_single 2800/10000
+0: ELLIPSE_ITERATION 440_single 2850/10000
+0: ELLIPSE_ITERATION 440_single 2900/10000
+0: ELLIPSE_ITERATION 440_single 2950/10000
+0: ELLIPSE_ITERATION 440_single 3000/10000
+0: ELLIPSE_ITERATION 440_single 3050/10000
+0: ELLIPSE_ITERATION 440_single 3100/10000
+0: ELLIPSE_ITERATION 440_single 3150/10000
+0: ELLIPSE_ITERATION 440_single 3200/10000
+0: ELLIPSE_ITERATION 440_single 3250/10000
+0: ELLIPSE_ITERATION 440_single 3300/10000
+0: ELLIPSE_ITERATION 440_single 3350/10000
+0: ELLIPSE_ITERATION 440_single 3400/10000
+0: ELLIPSE_ITERATION 440_single 3450/10000
+0: ELLIPSE_ITERATION 440_single 3500/10000
+0: ELLIPSE_ITERATION 440_single 3550/10000
+0: ELLIPSE_ITERATION 440_single 3600/10000
+0: ELLIPSE_ITERATION 440_single 3650/10000
+0: ELLIPSE_ITERATION 440_single 3700/10000
+0: ELLIPSE_ITERATION 440_single 3750/10000
+0: ELLIPSE_ITERATION 440_single 3800/10000
+0: ELLIPSE_ITERATION 440_single 3850/10000
+0: ELLIPSE_ITERATION 440_single 3900/10000
+0: ELLIPSE_ITERATION 440_single 3950/10000
+0: ELLIPSE_ITERATION 440_single 4000/10000
+0: ELLIPSE_ITERATION 440_single 4050/10000
+0: ELLIPSE_ITERATION 440_single 4100/10000
+0: ELLIPSE_ITERATION 440_single 4150/10000
+0: ELLIPSE_ITERATION 440_single 4200/10000
+0: ELLIPSE_ITERATION 440_single 4250/10000
+0: ELLIPSE_ITERATION 440_single 4300/10000
+0: ELLIPSE_ITERATION 440_single 4350/10000
+0: ELLIPSE_ITERATION 440_single 4400/10000
+0: ELLIPSE_ITERATION 440_single 4450/10000
+0: ELLIPSE_ITERATION 440_single 4500/10000
+0: ELLIPSE_ITERATION 440_single 4550/10000
+0: ELLIPSE_ITERATION 440_single 4600/10000
+0: ELLIPSE_ITERATION 440_single 4650/10000
+0: ELLIPSE_ITERATION 440_single 4700/10000
+0: ELLIPSE_ITERATION 440_single 4750/10000
+0: ELLIPSE_ITERATION 440_single 4800/10000
+0: ELLIPSE_ITERATION 440_single 4850/10000
+0: ELLIPSE_ITERATION 440_single 4900/10000
+0: ELLIPSE_ITERATION 440_single 4950/10000
+0: ELLIPSE_ITERATION 440_single 5000/10000
+0: ELLIPSE_ITERATION 440_single 5050/10000
+0: ELLIPSE_ITERATION 440_single 5100/10000
+0: ELLIPSE_ITERATION 440_single 5150/10000
+0: ELLIPSE_ITERATION 440_single 5200/10000
+0: ELLIPSE_ITERATION 440_single 5250/10000
+0: ELLIPSE_ITERATION 440_single 5300/10000
+0: ELLIPSE_ITERATION 440_single 5350/10000
+0: ELLIPSE_ITERATION 440_single 5400/10000
+0: ELLIPSE_ITERATION 440_single 5450/10000
+0: ELLIPSE_ITERATION 440_single 5500/10000
+0: ELLIPSE_ITERATION 440_single 5550/10000
+0: ELLIPSE_ITERATION 440_single 5600/10000
+0: ELLIPSE_ITERATION 440_single 5650/10000
+0: ELLIPSE_ITERATION 440_single 5700/10000
+0: ELLIPSE_ITERATION 440_single 5750/10000
+0: ELLIPSE_ITERATION 440_single 5800/10000
+0: ELLIPSE_ITERATION 440_single 5850/10000
+0: ELLIPSE_ITERATION 440_single 5900/10000
+0: ELLIPSE_ITERATION 440_single 5950/10000
+0: ELLIPSE_ITERATION 440_single 6000/10000
+0: ELLIPSE_ITERATION 440_single 6050/10000
+0: ELLIPSE_ITERATION 440_single 6100/10000
+0: ELLIPSE_ITERATION 440_single 6150/10000
+0: ELLIPSE_ITERATION 440_single 6200/10000
+0: ELLIPSE_ITERATION 440_single 6250/10000
+0: ELLIPSE_ITERATION 440_single 6300/10000
+0: ELLIPSE_ITERATION 440_single 6350/10000
+0: ELLIPSE_ITERATION 440_single 6400/10000
+0: ELLIPSE_ITERATION 440_single 6450/10000
+0: ELLIPSE_ITERATION 440_single 6500/10000
+0: ELLIPSE_ITERATION 440_single 6550/10000
+0: ELLIPSE_ITERATION 440_single 6600/10000
+0: ELLIPSE_ITERATION 440_single 6650/10000
+0: ELLIPSE_ITERATION 440_single 6700/10000
+0: ELLIPSE_ITERATION 440_single 6750/10000
+0: ELLIPSE_ITERATION 440_single 6800/10000
+0: ELLIPSE_ITERATION 440_single 6850/10000
+0: ELLIPSE_ITERATION 440_single 6900/10000
+0: ELLIPSE_ITERATION 440_single 6950/10000
+0: ELLIPSE_ITERATION 440_single 7000/10000
+0: ELLIPSE_ITERATION 440_single 7050/10000
+0: ELLIPSE_ITERATION 440_single 7100/10000
+0: ELLIPSE_ITERATION 440_single 7150/10000
+0: ELLIPSE_ITERATION 440_single 7200/10000
+0: ELLIPSE_ITERATION 440_single 7250/10000
+0: ELLIPSE_ITERATION 440_single 7300/10000
+0: ELLIPSE_ITERATION 440_single 7350/10000
+0: ELLIPSE_ITERATION 440_single 7400/10000
+0: ELLIPSE_ITERATION 440_single 7450/10000
+0: ELLIPSE_ITERATION 440_single 7500/10000
+0: ELLIPSE_ITERATION 440_single 7550/10000
+0: ELLIPSE_ITERATION 440_single 7600/10000
+0: ELLIPSE_ITERATION 440_single 7650/10000
+0: ELLIPSE_ITERATION 440_single 7700/10000
+0: ELLIPSE_ITERATION 440_single 7750/10000
+0: ELLIPSE_ITERATION 440_single 7800/10000
+0: ELLIPSE_ITERATION 440_single 7850/10000
+0: ELLIPSE_ITERATION 440_single 7900/10000
+0: ELLIPSE_ITERATION 440_single 7950/10000
+0: ELLIPSE_ITERATION 440_single 8000/10000
+0: ELLIPSE_ITERATION 440_single 8050/10000
+0: ELLIPSE_ITERATION 440_single 8100/10000
+0: ELLIPSE_ITERATION 440_single 8150/10000
+0: ELLIPSE_ITERATION 440_single 8200/10000
+0: ELLIPSE_ITERATION 440_single 8250/10000
+0: ELLIPSE_ITERATION 440_single 8300/10000
+0: ELLIPSE_ITERATION 440_single 8350/10000
+0: ELLIPSE_ITERATION 440_single 8400/10000
+0: ELLIPSE_ITERATION 440_single 8450/10000
+0: ELLIPSE_ITERATION 440_single 8500/10000
+0: ELLIPSE_ITERATION 440_single 8550/10000
+0: ELLIPSE_ITERATION 440_single 8600/10000
+0: ELLIPSE_ITERATION 440_single 8650/10000
+0: ELLIPSE_ITERATION 440_single 8700/10000
+0: ELLIPSE_ITERATION 440_single 8750/10000
+0: ELLIPSE_ITERATION 440_single 8800/10000
+0: ELLIPSE_ITERATION 440_single 8850/10000
+0: ELLIPSE_ITERATION 440_single 8900/10000
+0: ELLIPSE_ITERATION 440_single 8950/10000
+0: ELLIPSE_ITERATION 440_single 9000/10000
+0: ELLIPSE_ITERATION 440_single 9050/10000
+0: ELLIPSE_ITERATION 440_single 9100/10000
+0: ELLIPSE_ITERATION 440_single 9150/10000
+0: ELLIPSE_ITERATION 440_single 9200/10000
+0: ELLIPSE_ITERATION 440_single 9250/10000
+0: ELLIPSE_ITERATION 440_single 9300/10000
+0: ELLIPSE_ITERATION 440_single 9350/10000
+0: ELLIPSE_ITERATION 440_single 9400/10000
+0: ELLIPSE_ITERATION 440_single 9450/10000
+0: ELLIPSE_ITERATION 440_single 9500/10000
+0: ELLIPSE_ITERATION 440_single 9550/10000
+0: ELLIPSE_ITERATION 440_single 9600/10000
+0: ELLIPSE_ITERATION 440_single 9650/10000
+0: ELLIPSE_ITERATION 440_single 9700/10000
+0: ELLIPSE_ITERATION 440_single 9750/10000
+0: ELLIPSE_ITERATION 440_single 9800/10000
+0: ELLIPSE_ITERATION 440_single 9850/10000
+0: ELLIPSE_ITERATION 440_single 9900/10000
+0: ELLIPSE_ITERATION 440_single 9950/10000
+0: ELLIPSE_ITERATION 440_single 10000/10000
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/10000
+0: ELLIPSE_ITERATION 218_corrected 100/10000
+0: ELLIPSE_ITERATION 218_corrected 150/10000
+0: ELLIPSE_ITERATION 218_corrected 200/10000
+0: ELLIPSE_ITERATION 218_corrected 250/10000
+0: ELLIPSE_ITERATION 218_corrected 300/10000
+0: ELLIPSE_ITERATION 218_corrected 350/10000
+0: ELLIPSE_ITERATION 218_corrected 400/10000
+0: ELLIPSE_ITERATION 218_corrected 450/10000
+0: ELLIPSE_ITERATION 218_corrected 500/10000
+0: ELLIPSE_ITERATION 218_corrected 550/10000
+0: ELLIPSE_ITERATION 218_corrected 600/10000
+0: ELLIPSE_ITERATION 218_corrected 650/10000
+0: ELLIPSE_ITERATION 218_corrected 700/10000
+0: ELLIPSE_ITERATION 218_corrected 750/10000
+0: ELLIPSE_ITERATION 218_corrected 800/10000
+0: ELLIPSE_ITERATION 218_corrected 850/10000
+0: ELLIPSE_ITERATION 218_corrected 900/10000
+0: ELLIPSE_ITERATION 218_corrected 950/10000
+0: ELLIPSE_ITERATION 218_corrected 1000/10000
+0: ELLIPSE_ITERATION 218_corrected 1050/10000
+0: ELLIPSE_ITERATION 218_corrected 1100/10000
+0: ELLIPSE_ITERATION 218_corrected 1150/10000
+0: ELLIPSE_ITERATION 218_corrected 1200/10000
+0: ELLIPSE_ITERATION 218_corrected 1250/10000
+0: ELLIPSE_ITERATION 218_corrected 1300/10000
+0: ELLIPSE_ITERATION 218_corrected 1350/10000
+0: ELLIPSE_ITERATION 218_corrected 1400/10000
+0: ELLIPSE_ITERATION 218_corrected 1450/10000
+0: ELLIPSE_ITERATION 218_corrected 1500/10000
+0: ELLIPSE_ITERATION 218_corrected 1550/10000
+0: ELLIPSE_ITERATION 218_corrected 1600/10000
+0: ELLIPSE_ITERATION 218_corrected 1650/10000
+0: ELLIPSE_ITERATION 218_corrected 1700/10000
+0: ELLIPSE_ITERATION 218_corrected 1750/10000
+0: ELLIPSE_ITERATION 218_corrected 1800/10000
+0: ELLIPSE_ITERATION 218_corrected 1850/10000
+0: ELLIPSE_ITERATION 218_corrected 1900/10000
+0: ELLIPSE_ITERATION 218_corrected 1950/10000
+0: ELLIPSE_ITERATION 218_corrected 2000/10000
+0: ELLIPSE_ITERATION 218_corrected 2050/10000
+0: ELLIPSE_ITERATION 218_corrected 2100/10000
+0: ELLIPSE_ITERATION 218_corrected 2150/10000
+0: ELLIPSE_ITERATION 218_corrected 2200/10000
+0: ELLIPSE_ITERATION 218_corrected 2250/10000
+0: ELLIPSE_ITERATION 218_corrected 2300/10000
+0: ELLIPSE_ITERATION 218_corrected 2350/10000
+0: ELLIPSE_ITERATION 218_corrected 2400/10000
+0: ELLIPSE_ITERATION 218_corrected 2450/10000
+0: ELLIPSE_ITERATION 218_corrected 2500/10000
+0: ELLIPSE_ITERATION 218_corrected 2550/10000
+0: ELLIPSE_ITERATION 218_corrected 2600/10000
+0: ELLIPSE_ITERATION 218_corrected 2650/10000
+0: ELLIPSE_ITERATION 218_corrected 2700/10000
+0: ELLIPSE_ITERATION 218_corrected 2750/10000
+0: ELLIPSE_ITERATION 218_corrected 2800/10000
+0: ELLIPSE_ITERATION 218_corrected 2850/10000
+0: ELLIPSE_ITERATION 218_corrected 2900/10000
+0: ELLIPSE_ITERATION 218_corrected 2950/10000
+0: ELLIPSE_ITERATION 218_corrected 3000/10000
+0: ELLIPSE_ITERATION 218_corrected 3050/10000
+0: ELLIPSE_ITERATION 218_corrected 3100/10000
+0: ELLIPSE_ITERATION 218_corrected 3150/10000
+0: ELLIPSE_ITERATION 218_corrected 3200/10000
+0: ELLIPSE_ITERATION 218_corrected 3250/10000
+0: ELLIPSE_ITERATION 218_corrected 3300/10000
+0: ELLIPSE_ITERATION 218_corrected 3350/10000
+0: ELLIPSE_ITERATION 218_corrected 3400/10000
+0: ELLIPSE_ITERATION 218_corrected 3450/10000
+0: ELLIPSE_ITERATION 218_corrected 3500/10000
+0: ELLIPSE_ITERATION 218_corrected 3550/10000
+0: ELLIPSE_ITERATION 218_corrected 3600/10000
+0: ELLIPSE_ITERATION 218_corrected 3650/10000
+0: ELLIPSE_ITERATION 218_corrected 3700/10000
+0: ELLIPSE_ITERATION 218_corrected 3750/10000
+0: ELLIPSE_ITERATION 218_corrected 3800/10000
+0: ELLIPSE_ITERATION 218_corrected 3850/10000
+0: ELLIPSE_ITERATION 218_corrected 3900/10000
+0: ELLIPSE_ITERATION 218_corrected 3950/10000
+0: ELLIPSE_ITERATION 218_corrected 4000/10000
+0: ELLIPSE_ITERATION 218_corrected 4050/10000
+0: ELLIPSE_ITERATION 218_corrected 4100/10000
+0: ELLIPSE_ITERATION 218_corrected 4150/10000
+0: ELLIPSE_ITERATION 218_corrected 4200/10000
+0: ELLIPSE_ITERATION 218_corrected 4250/10000
+0: ELLIPSE_ITERATION 218_corrected 4300/10000
+0: ELLIPSE_ITERATION 218_corrected 4350/10000
+0: ELLIPSE_ITERATION 218_corrected 4400/10000
+0: ELLIPSE_ITERATION 218_corrected 4450/10000
+0: ELLIPSE_ITERATION 218_corrected 4500/10000
+0: ELLIPSE_ITERATION 218_corrected 4550/10000
+0: ELLIPSE_ITERATION 218_corrected 4600/10000
+0: ELLIPSE_ITERATION 218_corrected 4650/10000
+0: ELLIPSE_ITERATION 218_corrected 4700/10000
+0: ELLIPSE_ITERATION 218_corrected 4750/10000
+0: ELLIPSE_ITERATION 218_corrected 4800/10000
+0: ELLIPSE_ITERATION 218_corrected 4850/10000
+0: ELLIPSE_ITERATION 218_corrected 4900/10000
+0: ELLIPSE_ITERATION 218_corrected 4950/10000
+0: ELLIPSE_ITERATION 218_corrected 5000/10000
+0: ELLIPSE_ITERATION 218_corrected 5050/10000
+0: ELLIPSE_ITERATION 218_corrected 5100/10000
+0: ELLIPSE_ITERATION 218_corrected 5150/10000
+0: ELLIPSE_ITERATION 218_corrected 5200/10000
+0: ELLIPSE_ITERATION 218_corrected 5250/10000
+0: ELLIPSE_ITERATION 218_corrected 5300/10000
+0: ELLIPSE_ITERATION 218_corrected 5350/10000
+0: ELLIPSE_ITERATION 218_corrected 5400/10000
+0: ELLIPSE_ITERATION 218_corrected 5450/10000
+0: ELLIPSE_ITERATION 218_corrected 5500/10000
+0: ELLIPSE_ITERATION 218_corrected 5550/10000
+0: ELLIPSE_ITERATION 218_corrected 5600/10000
+0: ELLIPSE_ITERATION 218_corrected 5650/10000
+0: ELLIPSE_ITERATION 218_corrected 5700/10000
+0: ELLIPSE_ITERATION 218_corrected 5750/10000
+0: ELLIPSE_ITERATION 218_corrected 5800/10000
+0: ELLIPSE_ITERATION 218_corrected 5850/10000
+0: ELLIPSE_ITERATION 218_corrected 5900/10000
+0: ELLIPSE_ITERATION 218_corrected 5950/10000
+0: ELLIPSE_ITERATION 218_corrected 6000/10000
+0: ELLIPSE_ITERATION 218_corrected 6050/10000
+0: ELLIPSE_ITERATION 218_corrected 6100/10000
+0: ELLIPSE_ITERATION 218_corrected 6150/10000
+0: ELLIPSE_ITERATION 218_corrected 6200/10000
+0: ELLIPSE_ITERATION 218_corrected 6250/10000
+0: ELLIPSE_ITERATION 218_corrected 6300/10000
+0: ELLIPSE_ITERATION 218_corrected 6350/10000
+0: ELLIPSE_ITERATION 218_corrected 6400/10000
+0: ELLIPSE_ITERATION 218_corrected 6450/10000
+0: ELLIPSE_ITERATION 218_corrected 6500/10000
+0: ELLIPSE_ITERATION 218_corrected 6550/10000
+0: ELLIPSE_ITERATION 218_corrected 6600/10000
+0: ELLIPSE_ITERATION 218_corrected 6650/10000
+0: ELLIPSE_ITERATION 218_corrected 6700/10000
+0: ELLIPSE_ITERATION 218_corrected 6750/10000
+0: ELLIPSE_ITERATION 218_corrected 6800/10000
+0: ELLIPSE_ITERATION 218_corrected 6850/10000
+0: ELLIPSE_ITERATION 218_corrected 6900/10000
+0: ELLIPSE_ITERATION 218_corrected 6950/10000
+0: ELLIPSE_ITERATION 218_corrected 7000/10000
+0: ELLIPSE_ITERATION 218_corrected 7050/10000
+0: ELLIPSE_ITERATION 218_corrected 7100/10000
+0: ELLIPSE_ITERATION 218_corrected 7150/10000
+0: ELLIPSE_ITERATION 218_corrected 7200/10000
+0: ELLIPSE_ITERATION 218_corrected 7250/10000
+0: ELLIPSE_ITERATION 218_corrected 7300/10000
+0: ELLIPSE_ITERATION 218_corrected 7350/10000
+0: ELLIPSE_ITERATION 218_corrected 7400/10000
+0: ELLIPSE_ITERATION 218_corrected 7450/10000
+0: ELLIPSE_ITERATION 218_corrected 7500/10000
+0: ELLIPSE_ITERATION 218_corrected 7550/10000
+0: ELLIPSE_ITERATION 218_corrected 7600/10000
+0: ELLIPSE_ITERATION 218_corrected 7650/10000
+0: ELLIPSE_ITERATION 218_corrected 7700/10000
+0: ELLIPSE_ITERATION 218_corrected 7750/10000
+0: ELLIPSE_ITERATION 218_corrected 7800/10000
+0: ELLIPSE_ITERATION 218_corrected 7850/10000
+0: ELLIPSE_ITERATION 218_corrected 7900/10000
+0: ELLIPSE_ITERATION 218_corrected 7950/10000
+0: ELLIPSE_ITERATION 218_corrected 8000/10000
+0: ELLIPSE_ITERATION 218_corrected 8050/10000
+0: ELLIPSE_ITERATION 218_corrected 8100/10000
+0: ELLIPSE_ITERATION 218_corrected 8150/10000
+0: ELLIPSE_ITERATION 218_corrected 8200/10000
+0: ELLIPSE_ITERATION 218_corrected 8250/10000
+0: ELLIPSE_ITERATION 218_corrected 8300/10000
+0: ELLIPSE_ITERATION 218_corrected 8350/10000
+0: ELLIPSE_ITERATION 218_corrected 8400/10000
+0: ELLIPSE_ITERATION 218_corrected 8450/10000
+0: ELLIPSE_ITERATION 218_corrected 8500/10000
+0: ELLIPSE_ITERATION 218_corrected 8550/10000
+0: ELLIPSE_ITERATION 218_corrected 8600/10000
+0: ELLIPSE_ITERATION 218_corrected 8650/10000
+0: ELLIPSE_ITERATION 218_corrected 8700/10000
+0: ELLIPSE_ITERATION 218_corrected 8750/10000
+0: ELLIPSE_ITERATION 218_corrected 8800/10000
+0: ELLIPSE_ITERATION 218_corrected 8850/10000
+0: ELLIPSE_ITERATION 218_corrected 8900/10000
+0: ELLIPSE_ITERATION 218_corrected 8950/10000
+0: ELLIPSE_ITERATION 218_corrected 9000/10000
+0: ELLIPSE_ITERATION 218_corrected 9050/10000
+0: ELLIPSE_ITERATION 218_corrected 9100/10000
+0: ELLIPSE_ITERATION 218_corrected 9150/10000
+0: ELLIPSE_ITERATION 218_corrected 9200/10000
+0: ELLIPSE_ITERATION 218_corrected 9250/10000
+0: ELLIPSE_ITERATION 218_corrected 9300/10000
+0: ELLIPSE_ITERATION 218_corrected 9350/10000
+0: ELLIPSE_ITERATION 218_corrected 9400/10000
+0: ELLIPSE_ITERATION 218_corrected 9450/10000
+0: ELLIPSE_ITERATION 218_corrected 9500/10000
+0: ELLIPSE_ITERATION 218_corrected 9550/10000
+0: ELLIPSE_ITERATION 218_corrected 9600/10000
+0: ELLIPSE_ITERATION 218_corrected 9650/10000
+0: ELLIPSE_ITERATION 218_corrected 9700/10000
+0: ELLIPSE_ITERATION 218_corrected 9750/10000
+0: ELLIPSE_ITERATION 218_corrected 9800/10000
+0: ELLIPSE_ITERATION 218_corrected 9850/10000
+0: ELLIPSE_ITERATION 218_corrected 9900/10000
+0: ELLIPSE_ITERATION 218_corrected 9950/10000
+0: ELLIPSE_ITERATION 218_corrected 10000/10000
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+4: [rank 4] view 1 accepted=2804
+5: [rank 5] view 1 accepted=2775
+7: [rank 7] view 1 accepted=2703
+6: [rank 6] view 1 accepted=2710
+0: [rank 0] view 1 accepted=2711
+2: [rank 2] view 1 accepted=2741
+1: [rank 1] view 1 accepted=2714
+3: [rank 3] view 1 accepted=2767
+6: [rank 6] view 2 accepted=2725
+5: [rank 5] view 2 accepted=2796
+7: [rank 7] view 2 accepted=2771
+4: [rank 4] view 2 accepted=2864
+0: [rank 0] view 2 accepted=2801
+2: [rank 2] view 2 accepted=2763
+1: [rank 1] view 2 accepted=2790
+3: [rank 3] view 2 accepted=2851
+6: [rank 6] view 3 accepted=2820
+7: [rank 7] view 3 accepted=2842
+4: [rank 4] view 3 accepted=2864
+5: [rank 5] view 3 accepted=2885
+2: [rank 2] view 3 accepted=2781
+0: [rank 0] view 3 accepted=2908
+3: [rank 3] view 3 accepted=2785
+1: [rank 1] view 3 accepted=2858
+7: [rank 7] view 4 accepted=2884
+6: [rank 6] view 4 accepted=2990
+4: [rank 4] view 4 accepted=2887
+5: [rank 5] view 4 accepted=2911
+2: [rank 2] view 4 accepted=2885
+0: [rank 0] view 4 accepted=2990
+3: [rank 3] view 4 accepted=2923
+1: [rank 1] view 4 accepted=2840
+6: [rank 6] view 5 accepted=2989
+5: [rank 5] view 5 accepted=3002
+7: [rank 7] view 5 accepted=3060
+4: [rank 4] view 5 accepted=3054
+2: [rank 2] view 5 accepted=2989
+0: [rank 0] view 5 accepted=2992
+3: [rank 3] view 5 accepted=2969
+1: [rank 1] view 5 accepted=2953
+6: [rank 6] view 6 accepted=3088
+5: [rank 5] view 6 accepted=3083
+4: [rank 4] view 6 accepted=3090
+7: [rank 7] view 6 accepted=3050
+0: [rank 0] view 6 accepted=3095
+2: [rank 2] view 6 accepted=3082
+3: [rank 3] view 6 accepted=3119
+1: [rank 1] view 6 accepted=3057
+5: [rank 5] view 7 accepted=3129
+6: [rank 6] view 7 accepted=3148
+4: [rank 4] view 7 accepted=3181
+7: [rank 7] view 7 accepted=3109
+0: [rank 0] view 7 accepted=3193
+2: [rank 2] view 7 accepted=3165
+3: [rank 3] view 7 accepted=3105
+1: [rank 1] view 7 accepted=3153
+5: [rank 5] view 8 accepted=3129
+6: [rank 6] view 8 accepted=3136
+4: [rank 4] view 8 accepted=3160
+7: [rank 7] view 8 accepted=3130
+0: [rank 0] view 8 accepted=3234
+2: [rank 2] view 8 accepted=3301
+3: [rank 3] view 8 accepted=3131
+1: [rank 1] view 8 accepted=3245
+5: [rank 5] view 9 accepted=3060
+6: [rank 6] view 9 accepted=3084
+7: [rank 7] view 9 accepted=3110
+4: [rank 4] view 9 accepted=3211
+0: [rank 0] view 9 accepted=3134
+2: [rank 2] view 9 accepted=3189
+3: [rank 3] view 9 accepted=3084
+1: [rank 1] view 9 accepted=3126
+5: [rank 5] view 10 accepted=3111
+6: [rank 6] view 10 accepted=3138
+4: [rank 4] view 10 accepted=3135
+7: [rank 7] view 10 accepted=3187
+0: [rank 0] view 10 accepted=3123
+2: [rank 2] view 10 accepted=3161
+3: [rank 3] view 10 accepted=3189
+1: [rank 1] view 10 accepted=3088
+6: [rank 6] view 11 accepted=3068
+5: [rank 5] view 11 accepted=3170
+4: [rank 4] view 11 accepted=3097
+7: [rank 7] view 11 accepted=3144
+0: [rank 0] view 11 accepted=3069
+2: [rank 2] view 11 accepted=3161
+3: [rank 3] view 11 accepted=3162
+1: [rank 1] view 11 accepted=3123
+5: [rank 5] view 12 accepted=3174
+6: [rank 6] view 12 accepted=3218
+4: [rank 4] view 12 accepted=3101
+7: [rank 7] view 12 accepted=3218
+0: [rank 0] view 12 accepted=3061
+2: [rank 2] view 12 accepted=3173
+3: [rank 3] view 12 accepted=3089
+1: [rank 1] view 12 accepted=3134
+6: [rank 6] view 13 accepted=3109
+5: [rank 5] view 13 accepted=3224
+4: [rank 4] view 13 accepted=3248
+7: [rank 7] view 13 accepted=3172
+0: [rank 0] view 13 accepted=3126
+2: [rank 2] view 13 accepted=3310
+3: [rank 3] view 13 accepted=3206
+1: [rank 1] view 13 accepted=3145
+6: [rank 6] view 14 accepted=3309
+4: [rank 4] view 14 accepted=3102
+5: [rank 5] view 14 accepted=3236
+7: [rank 7] view 14 accepted=3273
+0: [rank 0] view 14 accepted=3195
+2: [rank 2] view 14 accepted=3147
+3: [rank 3] view 14 accepted=3178
+1: [rank 1] view 14 accepted=3222
+5: [rank 5] view 15 accepted=3203
+4: [rank 4] view 15 accepted=3253
+6: [rank 6] view 15 accepted=3302
+7: [rank 7] view 15 accepted=3143
+0: [rank 0] view 15 accepted=3160
+2: [rank 2] view 15 accepted=3157
+3: [rank 3] view 15 accepted=3217
+5: [rank 5] view 16 accepted=3093
+4: [rank 4] view 16 accepted=3100
+6: [rank 6] view 16 accepted=3187
+1: [rank 1] view 15 accepted=3235
+7: [rank 7] view 16 accepted=3184
+0: [rank 0] view 16 accepted=3190
+2: [rank 2] view 16 accepted=3129
+3: [rank 3] view 16 accepted=3149
+5: [rank 5] view 17 accepted=2990
+4: [rank 4] view 17 accepted=3040
+6: [rank 6] view 17 accepted=3111
+7: [rank 7] view 17 accepted=3024
+1: [rank 1] view 16 accepted=3058
+0: [rank 0] view 17 accepted=3035
+2: [rank 2] view 17 accepted=3123
+5: [rank 5] view 18 accepted=2856
+3: [rank 3] view 17 accepted=3064
+4: [rank 4] view 18 accepted=2990
+6: [rank 6] view 18 accepted=2991
+7: [rank 7] view 18 accepted=2941
+1: [rank 1] view 17 accepted=3076
+0: [rank 0] view 18 accepted=2970
+2: [rank 2] view 18 accepted=2873
+5: [rank 5] view 19 accepted=2860
+4: [rank 4] view 19 accepted=2931
+3: [rank 3] view 18 accepted=2952
+6: [rank 6] view 19 accepted=2833
+7: [rank 7] view 19 accepted=2782
+0: [rank 0] view 19 accepted=2908
+1: [rank 1] view 18 accepted=2938
+5: [rank 5] view 20 accepted=2759
+2: [rank 2] view 19 accepted=2876
+4: [rank 4] view 20 accepted=2739
+6: [rank 6] view 20 accepted=2793
+7: [rank 7] view 20 accepted=2814
+3: [rank 3] view 19 accepted=2804
+0: [rank 0] view 20 accepted=2697
+1: [rank 1] view 19 accepted=2891
+2: [rank 2] view 20 accepted=2735
+3: [rank 3] view 20 accepted=2747
+1: [rank 1] view 20 accepted=2879
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 50/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 10000/10000
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "dataset": "NEMA_Body_H60",
+  "count_level": "5e9",
+  "job_result": "NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+  "primaries": 5000000000,
+  "views": 20,
+  "worker_count": 200,
+  "accepted_compton_events": 484936,
+  "history_frames_per_channel": 200,
+  "gpu_peak_reserved_fraction": 0.44071882837072035,
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "sensi_d_sha256": "60a05c2cbc60d0d847fe5cda15b529221774fc4f561d66c121c378753f5d6e2a",
+  "collection_sha256": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032",
+  "input_sha256": {
+    "collections/NEMA_Body_H60_5e9.json": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032",
+    "CntStat/218keV_RotateNum20_Geant4JSCC/CntStat_NEMA_Body_H60_5e9.csv": "8ef3844fc347813be116bea16ad021e1bb6f6dc2de4ee18a2ff8f78d939843ff",
+    "CntStat/440keV_RotateNum20_Geant4JSCC/CntStat_NEMA_Body_H60_5e9.csv": "04239ca2df0016c85b28610c5a3bb24ca9d71f1c532204584551b337a3f7f935",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/1.csv": "feb38f136daa6c93d8b80442ab0ab05e2039c03a1397cd99b85b6d6b97d3e402",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/2.csv": "63c72c7c0b30491bc3e3641460e92540dad94839c90c2d75f026816f15dc5887",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/3.csv": "a10845a1580a170caedc12dd0ea41b11f50df1fb853a3660143d2655ad29cd26",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/4.csv": "75577c1ac018968eeb148d8ab30ecf993d4788ee70f46c9d534632067bd28c7f",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/5.csv": "d33c891dc1ed6df42e58704af0947cd59b7cd80d169a05db179e4aa58cdf7390",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/6.csv": "4ea00298ac7f23e27d168a5afd0cb0e408afce7eac583f9b3c7778417d144336",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/7.csv": "bfde717a9efc03c76cb2308a24aa81df7f2718a94a0312f09ff3f19074e7b224",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/8.csv": "43ecb989490a7c41f0d99615c745a535eaf1532fb7cdeea41a6bf6d57183554c",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/9.csv": "f05a63c724e9841451f795551846018b16a88186d138f4d1601dcc044be1578d",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/10.csv": "800f07d63d481b3a1732fb114834dbbfa1d28ed08556031faa1893455fd0ba25",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/11.csv": "14ad01263b455740a391d4736d534e030c8e7e5025f383e2c99467af927b85bd",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/12.csv": "a3b420a60397a55fc6d2531326185c5bf1282f0a01b2b5c073ff68b59329f99b",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/13.csv": "a0a51b0b94abbfd83d75b38eed25f281dddb5e8ddec5c96156a0aae914cf42a0",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/14.csv": "3bbfa2dbca04ba0649e30a34cc96b794631148c29411225addb4ee0005830ee5",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/15.csv": "0ff314702ec9b1bcfab111ff445e386c722ef905b267fc859f78c5bb02d7a0ca",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/16.csv": "d7a593e696ed9f3758e2aa1030396846b1f96465904f94f61794d48a4bfe4cd2",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/17.csv": "d76b14f04d3bcee0322f350f2672612bf448e0f7593f4a50ba304441c3ef9fd2",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/18.csv": "46015e2c0d0d8042807c82aa6c3c4e79fe78d0af4f380b93f6d66c0b0d00eb5d",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/19.csv": "eff8d2c487aabfe78e09e3cef7f70293e153f15af8878b7d2e2e30bc84338331",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/20.csv": "2c7400c11c41120de946f44c045b728e6b1a74f9d4d891418c656a193fc6763d"
+  },
+  "factor_manifest_sha256": {
+    "218keV_RotateNum20": "b8ba0829d9fc99aa52a9f35d4f1edc1168287c06a7c41d77039875a941c30f8d",
+    "440keV_RotateNum20": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc",
+    "440keV_to218win_RotateNum20": "6b947252d1529341ca3801daa763572515f566dbbb148253a0a4177e0c44971f"
+  },
+  "predicted_sha256": "26f1ebfc9c81730e421f8075651c0b4a8d7180f99d98872e159afe6fe05893d4",
+  "predicted_sum": 3862809.611196518
+}
+ELLIPSE_FORMAL_INTEGRITY_OK /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/integrity_report.json
+SPIKE_ABLATION_GATE_PASSED {"variant": "bind_f010", "phase": "formal", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.455530078125, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START huber_weak pilot /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_pilot_1651956_1
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 10/10
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 10/10
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+7: [rank 7] view 1 accepted=2703
+4: [rank 4] view 1 accepted=2804
+2: [rank 2] view 1 accepted=2741
+3: [rank 3] view 1 accepted=2767
+0: [rank 0] view 1 accepted=2711
+5: [rank 5] view 1 accepted=2775
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 1 accepted=2710
+7: [rank 7] view 2 accepted=2771
+4: [rank 4] view 2 accepted=2864
+2: [rank 2] view 2 accepted=2763
+3: [rank 3] view 2 accepted=2851
+0: [rank 0] view 2 accepted=2801
+5: [rank 5] view 2 accepted=2796
+1: [rank 1] view 2 accepted=2790
+6: [rank 6] view 2 accepted=2725
+7: [rank 7] view 3 accepted=2842
+2: [rank 2] view 3 accepted=2781
+3: [rank 3] view 3 accepted=2785
+4: [rank 4] view 3 accepted=2864
+0: [rank 0] view 3 accepted=2908
+5: [rank 5] view 3 accepted=2885
+6: [rank 6] view 3 accepted=2820
+1: [rank 1] view 3 accepted=2858
+7: [rank 7] view 4 accepted=2884
+2: [rank 2] view 4 accepted=2885
+4: [rank 4] view 4 accepted=2887
+3: [rank 3] view 4 accepted=2923
+0: [rank 0] view 4 accepted=2990
+5: [rank 5] view 4 accepted=2911
+6: [rank 6] view 4 accepted=2990
+1: [rank 1] view 4 accepted=2840
+7: [rank 7] view 5 accepted=3060
+4: [rank 4] view 5 accepted=3054
+2: [rank 2] view 5 accepted=2989
+3: [rank 3] view 5 accepted=2969
+0: [rank 0] view 5 accepted=2992
+5: [rank 5] view 5 accepted=3002
+6: [rank 6] view 5 accepted=2989
+1: [rank 1] view 5 accepted=2953
+7: [rank 7] view 6 accepted=3050
+4: [rank 4] view 6 accepted=3090
+2: [rank 2] view 6 accepted=3082
+3: [rank 3] view 6 accepted=3119
+0: [rank 0] view 6 accepted=3095
+5: [rank 5] view 6 accepted=3083
+6: [rank 6] view 6 accepted=3088
+1: [rank 1] view 6 accepted=3057
+7: [rank 7] view 7 accepted=3109
+4: [rank 4] view 7 accepted=3181
+2: [rank 2] view 7 accepted=3165
+3: [rank 3] view 7 accepted=3105
+0: [rank 0] view 7 accepted=3193
+5: [rank 5] view 7 accepted=3129
+6: [rank 6] view 7 accepted=3148
+1: [rank 1] view 7 accepted=3153
+7: [rank 7] view 8 accepted=3130
+4: [rank 4] view 8 accepted=3160
+2: [rank 2] view 8 accepted=3301
+3: [rank 3] view 8 accepted=3131
+0: [rank 0] view 8 accepted=3234
+5: [rank 5] view 8 accepted=3129
+6: [rank 6] view 8 accepted=3136
+7: [rank 7] view 9 accepted=3110
+4: [rank 4] view 9 accepted=3211
+1: [rank 1] view 8 accepted=3245
+3: [rank 3] view 9 accepted=3084
+2: [rank 2] view 9 accepted=3189
+0: [rank 0] view 9 accepted=3134
+5: [rank 5] view 9 accepted=3060
+6: [rank 6] view 9 accepted=3084
+7: [rank 7] view 10 accepted=3187
+4: [rank 4] view 10 accepted=3135
+1: [rank 1] view 9 accepted=3126
+3: [rank 3] view 10 accepted=3189
+2: [rank 2] view 10 accepted=3161
+0: [rank 0] view 10 accepted=3123
+5: [rank 5] view 10 accepted=3111
+6: [rank 6] view 10 accepted=3138
+4: [rank 4] view 11 accepted=3097
+7: [rank 7] view 11 accepted=3144
+0: [rank 0] view 11 accepted=3069
+2: [rank 2] view 11 accepted=3161
+1: [rank 1] view 10 accepted=3088
+3: [rank 3] view 11 accepted=3162
+5: [rank 5] view 11 accepted=3170
+6: [rank 6] view 11 accepted=3068
+4: [rank 4] view 12 accepted=3101
+7: [rank 7] view 12 accepted=3218
+0: [rank 0] view 12 accepted=3061
+2: [rank 2] view 12 accepted=3173
+5: [rank 5] view 12 accepted=3174
+1: [rank 1] view 11 accepted=3123
+3: [rank 3] view 12 accepted=3089
+6: [rank 6] view 12 accepted=3218
+4: [rank 4] view 13 accepted=3248
+7: [rank 7] view 13 accepted=3172
+0: [rank 0] view 13 accepted=3126
+2: [rank 2] view 13 accepted=3310
+5: [rank 5] view 13 accepted=3224
+1: [rank 1] view 12 accepted=3134
+3: [rank 3] view 13 accepted=3206
+6: [rank 6] view 13 accepted=3109
+4: [rank 4] view 14 accepted=3102
+7: [rank 7] view 14 accepted=3273
+0: [rank 0] view 14 accepted=3195
+2: [rank 2] view 14 accepted=3147
+5: [rank 5] view 14 accepted=3236
+1: [rank 1] view 13 accepted=3145
+3: [rank 3] view 14 accepted=3178
+6: [rank 6] view 14 accepted=3309
+4: [rank 4] view 15 accepted=3253
+0: [rank 0] view 15 accepted=3160
+2: [rank 2] view 15 accepted=3157
+5: [rank 5] view 15 accepted=3203
+7: [rank 7] view 15 accepted=3143
+1: [rank 1] view 14 accepted=3222
+3: [rank 3] view 15 accepted=3217
+6: [rank 6] view 15 accepted=3302
+4: [rank 4] view 16 accepted=3100
+0: [rank 0] view 16 accepted=3190
+2: [rank 2] view 16 accepted=3129
+5: [rank 5] view 16 accepted=3093
+7: [rank 7] view 16 accepted=3184
+3: [rank 3] view 16 accepted=3149
+1: [rank 1] view 15 accepted=3235
+4: [rank 4] view 17 accepted=3040
+6: [rank 6] view 16 accepted=3187
+0: [rank 0] view 17 accepted=3035
+5: [rank 5] view 17 accepted=2990
+2: [rank 2] view 17 accepted=3123
+7: [rank 7] view 17 accepted=3024
+3: [rank 3] view 17 accepted=3064
+4: [rank 4] view 18 accepted=2990
+1: [rank 1] view 16 accepted=3058
+6: [rank 6] view 17 accepted=3111
+0: [rank 0] view 18 accepted=2970
+5: [rank 5] view 18 accepted=2856
+7: [rank 7] view 18 accepted=2941
+2: [rank 2] view 18 accepted=2873
+3: [rank 3] view 18 accepted=2952
+4: [rank 4] view 19 accepted=2931
+6: [rank 6] view 18 accepted=2991
+0: [rank 0] view 19 accepted=2908
+5: [rank 5] view 19 accepted=2860
+7: [rank 7] view 19 accepted=2782
+1: [rank 1] view 17 accepted=3076
+2: [rank 2] view 19 accepted=2876
+4: [rank 4] view 20 accepted=2739
+3: [rank 3] view 19 accepted=2804
+0: [rank 0] view 20 accepted=2697
+6: [rank 6] view 19 accepted=2833
+5: [rank 5] view 20 accepted=2759
+7: [rank 7] view 20 accepted=2814
+1: [rank 1] view 18 accepted=2938
+2: [rank 2] view 20 accepted=2735
+3: [rank 3] view 20 accepted=2747
+6: [rank 6] view 20 accepted=2793
+1: [rank 1] view 19 accepted=2891
+1: [rank 1] view 20 accepted=2879
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 10/10
+SPIKE_ABLATION_GATE_PASSED {"variant": "huber_weak", "phase": "pilot", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_pilot_1651956_1", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.4540042317708333, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START huber_weak short /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_short_1651956_1
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+6: [rank 6] initializing nccl process group
+4: [rank 4] initializing nccl process group
+6: [rank 6] process group ready
+4: [rank 4] process group ready
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/200
+0: ELLIPSE_ITERATION 440_single 100/200
+0: ELLIPSE_ITERATION 440_single 150/200
+0: ELLIPSE_ITERATION 440_single 200/200
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/200
+0: ELLIPSE_ITERATION 218_corrected 100/200
+0: ELLIPSE_ITERATION 218_corrected 150/200
+0: ELLIPSE_ITERATION 218_corrected 200/200
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+6: [rank 6] view 1 accepted=2710
+0: [rank 0] view 1 accepted=2711
+2: [rank 2] view 1 accepted=2741
+5: [rank 5] view 1 accepted=2775
+3: [rank 3] view 1 accepted=2767
+4: [rank 4] view 1 accepted=2804
+7: [rank 7] view 1 accepted=2703
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 2 accepted=2725
+2: [rank 2] view 2 accepted=2763
+0: [rank 0] view 2 accepted=2801
+5: [rank 5] view 2 accepted=2796
+4: [rank 4] view 2 accepted=2864
+7: [rank 7] view 2 accepted=2771
+3: [rank 3] view 2 accepted=2851
+1: [rank 1] view 2 accepted=2790
+6: [rank 6] view 3 accepted=2820
+2: [rank 2] view 3 accepted=2781
+0: [rank 0] view 3 accepted=2908
+5: [rank 5] view 3 accepted=2885
+4: [rank 4] view 3 accepted=2864
+7: [rank 7] view 3 accepted=2842
+3: [rank 3] view 3 accepted=2785
+1: [rank 1] view 3 accepted=2858
+6: [rank 6] view 4 accepted=2990
+2: [rank 2] view 4 accepted=2885
+0: [rank 0] view 4 accepted=2990
+5: [rank 5] view 4 accepted=2911
+4: [rank 4] view 4 accepted=2887
+7: [rank 7] view 4 accepted=2884
+3: [rank 3] view 4 accepted=2923
+1: [rank 1] view 4 accepted=2840
+6: [rank 6] view 5 accepted=2989
+0: [rank 0] view 5 accepted=2992
+5: [rank 5] view 5 accepted=3002
+2: [rank 2] view 5 accepted=2989
+4: [rank 4] view 5 accepted=3054
+7: [rank 7] view 5 accepted=3060
+3: [rank 3] view 5 accepted=2969
+1: [rank 1] view 5 accepted=2953
+6: [rank 6] view 6 accepted=3088
+5: [rank 5] view 6 accepted=3083
+0: [rank 0] view 6 accepted=3095
+2: [rank 2] view 6 accepted=3082
+4: [rank 4] view 6 accepted=3090
+7: [rank 7] view 6 accepted=3050
+3: [rank 3] view 6 accepted=3119
+1: [rank 1] view 6 accepted=3057
+6: [rank 6] view 7 accepted=3148
+5: [rank 5] view 7 accepted=3129
+2: [rank 2] view 7 accepted=3165
+0: [rank 0] view 7 accepted=3193
+4: [rank 4] view 7 accepted=3181
+7: [rank 7] view 7 accepted=3109
+3: [rank 3] view 7 accepted=3105
+1: [rank 1] view 7 accepted=3153
+6: [rank 6] view 8 accepted=3136
+5: [rank 5] view 8 accepted=3129
+0: [rank 0] view 8 accepted=3234
+2: [rank 2] view 8 accepted=3301
+4: [rank 4] view 8 accepted=3160
+7: [rank 7] view 8 accepted=3130
+3: [rank 3] view 8 accepted=3131
+1: [rank 1] view 8 accepted=3245
+6: [rank 6] view 9 accepted=3084
+5: [rank 5] view 9 accepted=3060
+0: [rank 0] view 9 accepted=3134
+2: [rank 2] view 9 accepted=3189
+4: [rank 4] view 9 accepted=3211
+7: [rank 7] view 9 accepted=3110
+3: [rank 3] view 9 accepted=3084
+1: [rank 1] view 9 accepted=3126
+6: [rank 6] view 10 accepted=3138
+5: [rank 5] view 10 accepted=3111
+0: [rank 0] view 10 accepted=3123
+4: [rank 4] view 10 accepted=3135
+2: [rank 2] view 10 accepted=3161
+7: [rank 7] view 10 accepted=3187
+3: [rank 3] view 10 accepted=3189
+1: [rank 1] view 10 accepted=3088
+6: [rank 6] view 11 accepted=3068
+5: [rank 5] view 11 accepted=3170
+0: [rank 0] view 11 accepted=3069
+4: [rank 4] view 11 accepted=3097
+2: [rank 2] view 11 accepted=3161
+7: [rank 7] view 11 accepted=3144
+3: [rank 3] view 11 accepted=3162
+1: [rank 1] view 11 accepted=3123
+6: [rank 6] view 12 accepted=3218
+5: [rank 5] view 12 accepted=3174
+0: [rank 0] view 12 accepted=3061
+4: [rank 4] view 12 accepted=3101
+2: [rank 2] view 12 accepted=3173
+7: [rank 7] view 12 accepted=3218
+3: [rank 3] view 12 accepted=3089
+1: [rank 1] view 12 accepted=3134
+6: [rank 6] view 13 accepted=3109
+5: [rank 5] view 13 accepted=3224
+0: [rank 0] view 13 accepted=3126
+4: [rank 4] view 13 accepted=3248
+7: [rank 7] view 13 accepted=3172
+3: [rank 3] view 13 accepted=3206
+2: [rank 2] view 13 accepted=3310
+1: [rank 1] view 13 accepted=3145
+6: [rank 6] view 14 accepted=3309
+5: [rank 5] view 14 accepted=3236
+0: [rank 0] view 14 accepted=3195
+4: [rank 4] view 14 accepted=3102
+7: [rank 7] view 14 accepted=3273
+2: [rank 2] view 14 accepted=3147
+3: [rank 3] view 14 accepted=3178
+5: [rank 5] view 15 accepted=3203
+1: [rank 1] view 14 accepted=3222
+6: [rank 6] view 15 accepted=3302
+0: [rank 0] view 15 accepted=3160
+4: [rank 4] view 15 accepted=3253
+7: [rank 7] view 15 accepted=3143
+2: [rank 2] view 15 accepted=3157
+3: [rank 3] view 15 accepted=3217
+5: [rank 5] view 16 accepted=3093
+6: [rank 6] view 16 accepted=3187
+1: [rank 1] view 15 accepted=3235
+0: [rank 0] view 16 accepted=3190
+4: [rank 4] view 16 accepted=3100
+7: [rank 7] view 16 accepted=3184
+2: [rank 2] view 16 accepted=3129
+3: [rank 3] view 16 accepted=3149
+5: [rank 5] view 17 accepted=2990
+6: [rank 6] view 17 accepted=3111
+0: [rank 0] view 17 accepted=3035
+4: [rank 4] view 17 accepted=3040
+1: [rank 1] view 16 accepted=3058
+7: [rank 7] view 17 accepted=3024
+2: [rank 2] view 17 accepted=3123
+3: [rank 3] view 17 accepted=3064
+5: [rank 5] view 18 accepted=2856
+6: [rank 6] view 18 accepted=2991
+0: [rank 0] view 18 accepted=2970
+4: [rank 4] view 18 accepted=2990
+1: [rank 1] view 17 accepted=3076
+7: [rank 7] view 18 accepted=2941
+2: [rank 2] view 18 accepted=2873
+3: [rank 3] view 18 accepted=2952
+5: [rank 5] view 19 accepted=2860
+6: [rank 6] view 19 accepted=2833
+0: [rank 0] view 19 accepted=2908
+4: [rank 4] view 19 accepted=2931
+7: [rank 7] view 19 accepted=2782
+3: [rank 3] view 19 accepted=2804
+1: [rank 1] view 18 accepted=2938
+2: [rank 2] view 19 accepted=2876
+5: [rank 5] view 20 accepted=2759
+6: [rank 6] view 20 accepted=2793
+0: [rank 0] view 20 accepted=2697
+4: [rank 4] view 20 accepted=2739
+7: [rank 7] view 20 accepted=2814
+3: [rank 3] view 20 accepted=2747
+2: [rank 2] view 20 accepted=2735
+1: [rank 1] view 19 accepted=2891
+1: [rank 1] view 20 accepted=2879
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 50/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 100/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 150/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 200/200
+SPIKE_ABLATION_GATE_PASSED {"variant": "huber_weak", "phase": "short", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_short_1651956_1", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.4541971354166667, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START huber_weak formal /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/10000
+0: ELLIPSE_ITERATION 440_single 100/10000
+0: ELLIPSE_ITERATION 440_single 150/10000
+0: ELLIPSE_ITERATION 440_single 200/10000
+0: ELLIPSE_ITERATION 440_single 250/10000
+0: ELLIPSE_ITERATION 440_single 300/10000
+0: ELLIPSE_ITERATION 440_single 350/10000
+0: ELLIPSE_ITERATION 440_single 400/10000
+0: ELLIPSE_ITERATION 440_single 450/10000
+0: ELLIPSE_ITERATION 440_single 500/10000
+0: ELLIPSE_ITERATION 440_single 550/10000
+0: ELLIPSE_ITERATION 440_single 600/10000
+0: ELLIPSE_ITERATION 440_single 650/10000
+0: ELLIPSE_ITERATION 440_single 700/10000
+0: ELLIPSE_ITERATION 440_single 750/10000
+0: ELLIPSE_ITERATION 440_single 800/10000
+0: ELLIPSE_ITERATION 440_single 850/10000
+0: ELLIPSE_ITERATION 440_single 900/10000
+0: ELLIPSE_ITERATION 440_single 950/10000
+0: ELLIPSE_ITERATION 440_single 1000/10000
+0: ELLIPSE_ITERATION 440_single 1050/10000
+0: ELLIPSE_ITERATION 440_single 1100/10000
+0: ELLIPSE_ITERATION 440_single 1150/10000
+0: ELLIPSE_ITERATION 440_single 1200/10000
+0: ELLIPSE_ITERATION 440_single 1250/10000
+0: ELLIPSE_ITERATION 440_single 1300/10000
+0: ELLIPSE_ITERATION 440_single 1350/10000
+0: ELLIPSE_ITERATION 440_single 1400/10000
+0: ELLIPSE_ITERATION 440_single 1450/10000
+0: ELLIPSE_ITERATION 440_single 1500/10000
+0: ELLIPSE_ITERATION 440_single 1550/10000
+0: ELLIPSE_ITERATION 440_single 1600/10000
+0: ELLIPSE_ITERATION 440_single 1650/10000
+0: ELLIPSE_ITERATION 440_single 1700/10000
+0: ELLIPSE_ITERATION 440_single 1750/10000
+0: ELLIPSE_ITERATION 440_single 1800/10000
+0: ELLIPSE_ITERATION 440_single 1850/10000
+0: ELLIPSE_ITERATION 440_single 1900/10000
+0: ELLIPSE_ITERATION 440_single 1950/10000
+0: ELLIPSE_ITERATION 440_single 2000/10000
+0: ELLIPSE_ITERATION 440_single 2050/10000
+0: ELLIPSE_ITERATION 440_single 2100/10000
+0: ELLIPSE_ITERATION 440_single 2150/10000
+0: ELLIPSE_ITERATION 440_single 2200/10000
+0: ELLIPSE_ITERATION 440_single 2250/10000
+0: ELLIPSE_ITERATION 440_single 2300/10000
+0: ELLIPSE_ITERATION 440_single 2350/10000
+0: ELLIPSE_ITERATION 440_single 2400/10000
+0: ELLIPSE_ITERATION 440_single 2450/10000
+0: ELLIPSE_ITERATION 440_single 2500/10000
+0: ELLIPSE_ITERATION 440_single 2550/10000
+0: ELLIPSE_ITERATION 440_single 2600/10000
+0: ELLIPSE_ITERATION 440_single 2650/10000
+0: ELLIPSE_ITERATION 440_single 2700/10000
+0: ELLIPSE_ITERATION 440_single 2750/10000
+0: ELLIPSE_ITERATION 440_single 2800/10000
+0: ELLIPSE_ITERATION 440_single 2850/10000
+0: ELLIPSE_ITERATION 440_single 2900/10000
+0: ELLIPSE_ITERATION 440_single 2950/10000
+0: ELLIPSE_ITERATION 440_single 3000/10000
+0: ELLIPSE_ITERATION 440_single 3050/10000
+0: ELLIPSE_ITERATION 440_single 3100/10000
+0: ELLIPSE_ITERATION 440_single 3150/10000
+0: ELLIPSE_ITERATION 440_single 3200/10000
+0: ELLIPSE_ITERATION 440_single 3250/10000
+0: ELLIPSE_ITERATION 440_single 3300/10000
+0: ELLIPSE_ITERATION 440_single 3350/10000
+0: ELLIPSE_ITERATION 440_single 3400/10000
+0: ELLIPSE_ITERATION 440_single 3450/10000
+0: ELLIPSE_ITERATION 440_single 3500/10000
+0: ELLIPSE_ITERATION 440_single 3550/10000
+0: ELLIPSE_ITERATION 440_single 3600/10000
+0: ELLIPSE_ITERATION 440_single 3650/10000
+0: ELLIPSE_ITERATION 440_single 3700/10000
+0: ELLIPSE_ITERATION 440_single 3750/10000
+0: ELLIPSE_ITERATION 440_single 3800/10000
+0: ELLIPSE_ITERATION 440_single 3850/10000
+0: ELLIPSE_ITERATION 440_single 3900/10000
+0: ELLIPSE_ITERATION 440_single 3950/10000
+0: ELLIPSE_ITERATION 440_single 4000/10000
+0: ELLIPSE_ITERATION 440_single 4050/10000
+0: ELLIPSE_ITERATION 440_single 4100/10000
+0: ELLIPSE_ITERATION 440_single 4150/10000
+0: ELLIPSE_ITERATION 440_single 4200/10000
+0: ELLIPSE_ITERATION 440_single 4250/10000
+0: ELLIPSE_ITERATION 440_single 4300/10000
+0: ELLIPSE_ITERATION 440_single 4350/10000
+0: ELLIPSE_ITERATION 440_single 4400/10000
+0: ELLIPSE_ITERATION 440_single 4450/10000
+0: ELLIPSE_ITERATION 440_single 4500/10000
+0: ELLIPSE_ITERATION 440_single 4550/10000
+0: ELLIPSE_ITERATION 440_single 4600/10000
+0: ELLIPSE_ITERATION 440_single 4650/10000
+0: ELLIPSE_ITERATION 440_single 4700/10000
+0: ELLIPSE_ITERATION 440_single 4750/10000
+0: ELLIPSE_ITERATION 440_single 4800/10000
+0: ELLIPSE_ITERATION 440_single 4850/10000
+0: ELLIPSE_ITERATION 440_single 4900/10000
+0: ELLIPSE_ITERATION 440_single 4950/10000
+0: ELLIPSE_ITERATION 440_single 5000/10000
+0: ELLIPSE_ITERATION 440_single 5050/10000
+0: ELLIPSE_ITERATION 440_single 5100/10000
+0: ELLIPSE_ITERATION 440_single 5150/10000
+0: ELLIPSE_ITERATION 440_single 5200/10000
+0: ELLIPSE_ITERATION 440_single 5250/10000
+0: ELLIPSE_ITERATION 440_single 5300/10000
+0: ELLIPSE_ITERATION 440_single 5350/10000
+0: ELLIPSE_ITERATION 440_single 5400/10000
+0: ELLIPSE_ITERATION 440_single 5450/10000
+0: ELLIPSE_ITERATION 440_single 5500/10000
+0: ELLIPSE_ITERATION 440_single 5550/10000
+0: ELLIPSE_ITERATION 440_single 5600/10000
+0: ELLIPSE_ITERATION 440_single 5650/10000
+0: ELLIPSE_ITERATION 440_single 5700/10000
+0: ELLIPSE_ITERATION 440_single 5750/10000
+0: ELLIPSE_ITERATION 440_single 5800/10000
+0: ELLIPSE_ITERATION 440_single 5850/10000
+0: ELLIPSE_ITERATION 440_single 5900/10000
+0: ELLIPSE_ITERATION 440_single 5950/10000
+0: ELLIPSE_ITERATION 440_single 6000/10000
+0: ELLIPSE_ITERATION 440_single 6050/10000
+0: ELLIPSE_ITERATION 440_single 6100/10000
+0: ELLIPSE_ITERATION 440_single 6150/10000
+0: ELLIPSE_ITERATION 440_single 6200/10000
+0: ELLIPSE_ITERATION 440_single 6250/10000
+0: ELLIPSE_ITERATION 440_single 6300/10000
+0: ELLIPSE_ITERATION 440_single 6350/10000
+0: ELLIPSE_ITERATION 440_single 6400/10000
+0: ELLIPSE_ITERATION 440_single 6450/10000
+0: ELLIPSE_ITERATION 440_single 6500/10000
+0: ELLIPSE_ITERATION 440_single 6550/10000
+0: ELLIPSE_ITERATION 440_single 6600/10000
+0: ELLIPSE_ITERATION 440_single 6650/10000
+0: ELLIPSE_ITERATION 440_single 6700/10000
+0: ELLIPSE_ITERATION 440_single 6750/10000
+0: ELLIPSE_ITERATION 440_single 6800/10000
+0: ELLIPSE_ITERATION 440_single 6850/10000
+0: ELLIPSE_ITERATION 440_single 6900/10000
+0: ELLIPSE_ITERATION 440_single 6950/10000
+0: ELLIPSE_ITERATION 440_single 7000/10000
+0: ELLIPSE_ITERATION 440_single 7050/10000
+0: ELLIPSE_ITERATION 440_single 7100/10000
+0: ELLIPSE_ITERATION 440_single 7150/10000
+0: ELLIPSE_ITERATION 440_single 7200/10000
+0: ELLIPSE_ITERATION 440_single 7250/10000
+0: ELLIPSE_ITERATION 440_single 7300/10000
+0: ELLIPSE_ITERATION 440_single 7350/10000
+0: ELLIPSE_ITERATION 440_single 7400/10000
+0: ELLIPSE_ITERATION 440_single 7450/10000
+0: ELLIPSE_ITERATION 440_single 7500/10000
+0: ELLIPSE_ITERATION 440_single 7550/10000
+0: ELLIPSE_ITERATION 440_single 7600/10000
+0: ELLIPSE_ITERATION 440_single 7650/10000
+0: ELLIPSE_ITERATION 440_single 7700/10000
+0: ELLIPSE_ITERATION 440_single 7750/10000
+0: ELLIPSE_ITERATION 440_single 7800/10000
+0: ELLIPSE_ITERATION 440_single 7850/10000
+0: ELLIPSE_ITERATION 440_single 7900/10000
+0: ELLIPSE_ITERATION 440_single 7950/10000
+0: ELLIPSE_ITERATION 440_single 8000/10000
+0: ELLIPSE_ITERATION 440_single 8050/10000
+0: ELLIPSE_ITERATION 440_single 8100/10000
+0: ELLIPSE_ITERATION 440_single 8150/10000
+0: ELLIPSE_ITERATION 440_single 8200/10000
+0: ELLIPSE_ITERATION 440_single 8250/10000
+0: ELLIPSE_ITERATION 440_single 8300/10000
+0: ELLIPSE_ITERATION 440_single 8350/10000
+0: ELLIPSE_ITERATION 440_single 8400/10000
+0: ELLIPSE_ITERATION 440_single 8450/10000
+0: ELLIPSE_ITERATION 440_single 8500/10000
+0: ELLIPSE_ITERATION 440_single 8550/10000
+0: ELLIPSE_ITERATION 440_single 8600/10000
+0: ELLIPSE_ITERATION 440_single 8650/10000
+0: ELLIPSE_ITERATION 440_single 8700/10000
+0: ELLIPSE_ITERATION 440_single 8750/10000
+0: ELLIPSE_ITERATION 440_single 8800/10000
+0: ELLIPSE_ITERATION 440_single 8850/10000
+0: ELLIPSE_ITERATION 440_single 8900/10000
+0: ELLIPSE_ITERATION 440_single 8950/10000
+0: ELLIPSE_ITERATION 440_single 9000/10000
+0: ELLIPSE_ITERATION 440_single 9050/10000
+0: ELLIPSE_ITERATION 440_single 9100/10000
+0: ELLIPSE_ITERATION 440_single 9150/10000
+0: ELLIPSE_ITERATION 440_single 9200/10000
+0: ELLIPSE_ITERATION 440_single 9250/10000
+0: ELLIPSE_ITERATION 440_single 9300/10000
+0: ELLIPSE_ITERATION 440_single 9350/10000
+0: ELLIPSE_ITERATION 440_single 9400/10000
+0: ELLIPSE_ITERATION 440_single 9450/10000
+0: ELLIPSE_ITERATION 440_single 9500/10000
+0: ELLIPSE_ITERATION 440_single 9550/10000
+0: ELLIPSE_ITERATION 440_single 9600/10000
+0: ELLIPSE_ITERATION 440_single 9650/10000
+0: ELLIPSE_ITERATION 440_single 9700/10000
+0: ELLIPSE_ITERATION 440_single 9750/10000
+0: ELLIPSE_ITERATION 440_single 9800/10000
+0: ELLIPSE_ITERATION 440_single 9850/10000
+0: ELLIPSE_ITERATION 440_single 9900/10000
+0: ELLIPSE_ITERATION 440_single 9950/10000
+0: ELLIPSE_ITERATION 440_single 10000/10000
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/10000
+0: ELLIPSE_ITERATION 218_corrected 100/10000
+0: ELLIPSE_ITERATION 218_corrected 150/10000
+0: ELLIPSE_ITERATION 218_corrected 200/10000
+0: ELLIPSE_ITERATION 218_corrected 250/10000
+0: ELLIPSE_ITERATION 218_corrected 300/10000
+0: ELLIPSE_ITERATION 218_corrected 350/10000
+0: ELLIPSE_ITERATION 218_corrected 400/10000
+0: ELLIPSE_ITERATION 218_corrected 450/10000
+0: ELLIPSE_ITERATION 218_corrected 500/10000
+0: ELLIPSE_ITERATION 218_corrected 550/10000
+0: ELLIPSE_ITERATION 218_corrected 600/10000
+0: ELLIPSE_ITERATION 218_corrected 650/10000
+0: ELLIPSE_ITERATION 218_corrected 700/10000
+0: ELLIPSE_ITERATION 218_corrected 750/10000
+0: ELLIPSE_ITERATION 218_corrected 800/10000
+0: ELLIPSE_ITERATION 218_corrected 850/10000
+0: ELLIPSE_ITERATION 218_corrected 900/10000
+0: ELLIPSE_ITERATION 218_corrected 950/10000
+0: ELLIPSE_ITERATION 218_corrected 1000/10000
+0: ELLIPSE_ITERATION 218_corrected 1050/10000
+0: ELLIPSE_ITERATION 218_corrected 1100/10000
+0: ELLIPSE_ITERATION 218_corrected 1150/10000
+0: ELLIPSE_ITERATION 218_corrected 1200/10000
+0: ELLIPSE_ITERATION 218_corrected 1250/10000
+0: ELLIPSE_ITERATION 218_corrected 1300/10000
+0: ELLIPSE_ITERATION 218_corrected 1350/10000
+0: ELLIPSE_ITERATION 218_corrected 1400/10000
+0: ELLIPSE_ITERATION 218_corrected 1450/10000
+0: ELLIPSE_ITERATION 218_corrected 1500/10000
+0: ELLIPSE_ITERATION 218_corrected 1550/10000
+0: ELLIPSE_ITERATION 218_corrected 1600/10000
+0: ELLIPSE_ITERATION 218_corrected 1650/10000
+0: ELLIPSE_ITERATION 218_corrected 1700/10000
+0: ELLIPSE_ITERATION 218_corrected 1750/10000
+0: ELLIPSE_ITERATION 218_corrected 1800/10000
+0: ELLIPSE_ITERATION 218_corrected 1850/10000
+0: ELLIPSE_ITERATION 218_corrected 1900/10000
+0: ELLIPSE_ITERATION 218_corrected 1950/10000
+0: ELLIPSE_ITERATION 218_corrected 2000/10000
+0: ELLIPSE_ITERATION 218_corrected 2050/10000
+0: ELLIPSE_ITERATION 218_corrected 2100/10000
+0: ELLIPSE_ITERATION 218_corrected 2150/10000
+0: ELLIPSE_ITERATION 218_corrected 2200/10000
+0: ELLIPSE_ITERATION 218_corrected 2250/10000
+0: ELLIPSE_ITERATION 218_corrected 2300/10000
+0: ELLIPSE_ITERATION 218_corrected 2350/10000
+0: ELLIPSE_ITERATION 218_corrected 2400/10000
+0: ELLIPSE_ITERATION 218_corrected 2450/10000
+0: ELLIPSE_ITERATION 218_corrected 2500/10000
+0: ELLIPSE_ITERATION 218_corrected 2550/10000
+0: ELLIPSE_ITERATION 218_corrected 2600/10000
+0: ELLIPSE_ITERATION 218_corrected 2650/10000
+0: ELLIPSE_ITERATION 218_corrected 2700/10000
+0: ELLIPSE_ITERATION 218_corrected 2750/10000
+0: ELLIPSE_ITERATION 218_corrected 2800/10000
+0: ELLIPSE_ITERATION 218_corrected 2850/10000
+0: ELLIPSE_ITERATION 218_corrected 2900/10000
+0: ELLIPSE_ITERATION 218_corrected 2950/10000
+0: ELLIPSE_ITERATION 218_corrected 3000/10000
+0: ELLIPSE_ITERATION 218_corrected 3050/10000
+0: ELLIPSE_ITERATION 218_corrected 3100/10000
+0: ELLIPSE_ITERATION 218_corrected 3150/10000
+0: ELLIPSE_ITERATION 218_corrected 3200/10000
+0: ELLIPSE_ITERATION 218_corrected 3250/10000
+0: ELLIPSE_ITERATION 218_corrected 3300/10000
+0: ELLIPSE_ITERATION 218_corrected 3350/10000
+0: ELLIPSE_ITERATION 218_corrected 3400/10000
+0: ELLIPSE_ITERATION 218_corrected 3450/10000
+0: ELLIPSE_ITERATION 218_corrected 3500/10000
+0: ELLIPSE_ITERATION 218_corrected 3550/10000
+0: ELLIPSE_ITERATION 218_corrected 3600/10000
+0: ELLIPSE_ITERATION 218_corrected 3650/10000
+0: ELLIPSE_ITERATION 218_corrected 3700/10000
+0: ELLIPSE_ITERATION 218_corrected 3750/10000
+0: ELLIPSE_ITERATION 218_corrected 3800/10000
+0: ELLIPSE_ITERATION 218_corrected 3850/10000
+0: ELLIPSE_ITERATION 218_corrected 3900/10000
+0: ELLIPSE_ITERATION 218_corrected 3950/10000
+0: ELLIPSE_ITERATION 218_corrected 4000/10000
+0: ELLIPSE_ITERATION 218_corrected 4050/10000
+0: ELLIPSE_ITERATION 218_corrected 4100/10000
+0: ELLIPSE_ITERATION 218_corrected 4150/10000
+0: ELLIPSE_ITERATION 218_corrected 4200/10000
+0: ELLIPSE_ITERATION 218_corrected 4250/10000
+0: ELLIPSE_ITERATION 218_corrected 4300/10000
+0: ELLIPSE_ITERATION 218_corrected 4350/10000
+0: ELLIPSE_ITERATION 218_corrected 4400/10000
+0: ELLIPSE_ITERATION 218_corrected 4450/10000
+0: ELLIPSE_ITERATION 218_corrected 4500/10000
+0: ELLIPSE_ITERATION 218_corrected 4550/10000
+0: ELLIPSE_ITERATION 218_corrected 4600/10000
+0: ELLIPSE_ITERATION 218_corrected 4650/10000
+0: ELLIPSE_ITERATION 218_corrected 4700/10000
+0: ELLIPSE_ITERATION 218_corrected 4750/10000
+0: ELLIPSE_ITERATION 218_corrected 4800/10000
+0: ELLIPSE_ITERATION 218_corrected 4850/10000
+0: ELLIPSE_ITERATION 218_corrected 4900/10000
+0: ELLIPSE_ITERATION 218_corrected 4950/10000
+0: ELLIPSE_ITERATION 218_corrected 5000/10000
+0: ELLIPSE_ITERATION 218_corrected 5050/10000
+0: ELLIPSE_ITERATION 218_corrected 5100/10000
+0: ELLIPSE_ITERATION 218_corrected 5150/10000
+0: ELLIPSE_ITERATION 218_corrected 5200/10000
+0: ELLIPSE_ITERATION 218_corrected 5250/10000
+0: ELLIPSE_ITERATION 218_corrected 5300/10000
+0: ELLIPSE_ITERATION 218_corrected 5350/10000
+0: ELLIPSE_ITERATION 218_corrected 5400/10000
+0: ELLIPSE_ITERATION 218_corrected 5450/10000
+0: ELLIPSE_ITERATION 218_corrected 5500/10000
+0: ELLIPSE_ITERATION 218_corrected 5550/10000
+0: ELLIPSE_ITERATION 218_corrected 5600/10000
+0: ELLIPSE_ITERATION 218_corrected 5650/10000
+0: ELLIPSE_ITERATION 218_corrected 5700/10000
+0: ELLIPSE_ITERATION 218_corrected 5750/10000
+0: ELLIPSE_ITERATION 218_corrected 5800/10000
+0: ELLIPSE_ITERATION 218_corrected 5850/10000
+0: ELLIPSE_ITERATION 218_corrected 5900/10000
+0: ELLIPSE_ITERATION 218_corrected 5950/10000
+0: ELLIPSE_ITERATION 218_corrected 6000/10000
+0: ELLIPSE_ITERATION 218_corrected 6050/10000
+0: ELLIPSE_ITERATION 218_corrected 6100/10000
+0: ELLIPSE_ITERATION 218_corrected 6150/10000
+0: ELLIPSE_ITERATION 218_corrected 6200/10000
+0: ELLIPSE_ITERATION 218_corrected 6250/10000
+0: ELLIPSE_ITERATION 218_corrected 6300/10000
+0: ELLIPSE_ITERATION 218_corrected 6350/10000
+0: ELLIPSE_ITERATION 218_corrected 6400/10000
+0: ELLIPSE_ITERATION 218_corrected 6450/10000
+0: ELLIPSE_ITERATION 218_corrected 6500/10000
+0: ELLIPSE_ITERATION 218_corrected 6550/10000
+0: ELLIPSE_ITERATION 218_corrected 6600/10000
+0: ELLIPSE_ITERATION 218_corrected 6650/10000
+0: ELLIPSE_ITERATION 218_corrected 6700/10000
+0: ELLIPSE_ITERATION 218_corrected 6750/10000
+0: ELLIPSE_ITERATION 218_corrected 6800/10000
+0: ELLIPSE_ITERATION 218_corrected 6850/10000
+0: ELLIPSE_ITERATION 218_corrected 6900/10000
+0: ELLIPSE_ITERATION 218_corrected 6950/10000
+0: ELLIPSE_ITERATION 218_corrected 7000/10000
+0: ELLIPSE_ITERATION 218_corrected 7050/10000
+0: ELLIPSE_ITERATION 218_corrected 7100/10000
+0: ELLIPSE_ITERATION 218_corrected 7150/10000
+0: ELLIPSE_ITERATION 218_corrected 7200/10000
+0: ELLIPSE_ITERATION 218_corrected 7250/10000
+0: ELLIPSE_ITERATION 218_corrected 7300/10000
+0: ELLIPSE_ITERATION 218_corrected 7350/10000
+0: ELLIPSE_ITERATION 218_corrected 7400/10000
+0: ELLIPSE_ITERATION 218_corrected 7450/10000
+0: ELLIPSE_ITERATION 218_corrected 7500/10000
+0: ELLIPSE_ITERATION 218_corrected 7550/10000
+0: ELLIPSE_ITERATION 218_corrected 7600/10000
+0: ELLIPSE_ITERATION 218_corrected 7650/10000
+0: ELLIPSE_ITERATION 218_corrected 7700/10000
+0: ELLIPSE_ITERATION 218_corrected 7750/10000
+0: ELLIPSE_ITERATION 218_corrected 7800/10000
+0: ELLIPSE_ITERATION 218_corrected 7850/10000
+0: ELLIPSE_ITERATION 218_corrected 7900/10000
+0: ELLIPSE_ITERATION 218_corrected 7950/10000
+0: ELLIPSE_ITERATION 218_corrected 8000/10000
+0: ELLIPSE_ITERATION 218_corrected 8050/10000
+0: ELLIPSE_ITERATION 218_corrected 8100/10000
+0: ELLIPSE_ITERATION 218_corrected 8150/10000
+0: ELLIPSE_ITERATION 218_corrected 8200/10000
+0: ELLIPSE_ITERATION 218_corrected 8250/10000
+0: ELLIPSE_ITERATION 218_corrected 8300/10000
+0: ELLIPSE_ITERATION 218_corrected 8350/10000
+0: ELLIPSE_ITERATION 218_corrected 8400/10000
+0: ELLIPSE_ITERATION 218_corrected 8450/10000
+0: ELLIPSE_ITERATION 218_corrected 8500/10000
+0: ELLIPSE_ITERATION 218_corrected 8550/10000
+0: ELLIPSE_ITERATION 218_corrected 8600/10000
+0: ELLIPSE_ITERATION 218_corrected 8650/10000
+0: ELLIPSE_ITERATION 218_corrected 8700/10000
+0: ELLIPSE_ITERATION 218_corrected 8750/10000
+0: ELLIPSE_ITERATION 218_corrected 8800/10000
+0: ELLIPSE_ITERATION 218_corrected 8850/10000
+0: ELLIPSE_ITERATION 218_corrected 8900/10000
+0: ELLIPSE_ITERATION 218_corrected 8950/10000
+0: ELLIPSE_ITERATION 218_corrected 9000/10000
+0: ELLIPSE_ITERATION 218_corrected 9050/10000
+0: ELLIPSE_ITERATION 218_corrected 9100/10000
+0: ELLIPSE_ITERATION 218_corrected 9150/10000
+0: ELLIPSE_ITERATION 218_corrected 9200/10000
+0: ELLIPSE_ITERATION 218_corrected 9250/10000
+0: ELLIPSE_ITERATION 218_corrected 9300/10000
+0: ELLIPSE_ITERATION 218_corrected 9350/10000
+0: ELLIPSE_ITERATION 218_corrected 9400/10000
+0: ELLIPSE_ITERATION 218_corrected 9450/10000
+0: ELLIPSE_ITERATION 218_corrected 9500/10000
+0: ELLIPSE_ITERATION 218_corrected 9550/10000
+0: ELLIPSE_ITERATION 218_corrected 9600/10000
+0: ELLIPSE_ITERATION 218_corrected 9650/10000
+0: ELLIPSE_ITERATION 218_corrected 9700/10000
+0: ELLIPSE_ITERATION 218_corrected 9750/10000
+0: ELLIPSE_ITERATION 218_corrected 9800/10000
+0: ELLIPSE_ITERATION 218_corrected 9850/10000
+0: ELLIPSE_ITERATION 218_corrected 9900/10000
+0: ELLIPSE_ITERATION 218_corrected 9950/10000
+0: ELLIPSE_ITERATION 218_corrected 10000/10000
+6: [rank 6] view 1 accepted=2710
+4: [rank 4] view 1 accepted=2804
+7: [rank 7] view 1 accepted=2703
+3: [rank 3] view 1 accepted=2767
+2: [rank 2] view 1 accepted=2741
+1: [rank 1] view 1 accepted=2714
+5: [rank 5] view 1 accepted=2775
+6: [rank 6] view 2 accepted=2725
+4: [rank 4] view 2 accepted=2864
+7: [rank 7] view 2 accepted=2771
+3: [rank 3] view 2 accepted=2851
+2: [rank 2] view 2 accepted=2763
+5: [rank 5] view 2 accepted=2796
+1: [rank 1] view 2 accepted=2790
+6: [rank 6] view 3 accepted=2820
+4: [rank 4] view 3 accepted=2864
+7: [rank 7] view 3 accepted=2842
+2: [rank 2] view 3 accepted=2781
+3: [rank 3] view 3 accepted=2785
+5: [rank 5] view 3 accepted=2885
+1: [rank 1] view 3 accepted=2858
+0: ELLIPSE_STAGE loading_full_440_compton_response
+6: [rank 6] view 4 accepted=2990
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+4: [rank 4] view 4 accepted=2887
+7: [rank 7] view 4 accepted=2884
+2: [rank 2] view 4 accepted=2885
+3: [rank 3] view 4 accepted=2923
+5: [rank 5] view 4 accepted=2911
+1: [rank 1] view 4 accepted=2840
+0: [rank 0] view 1 accepted=2711
+6: [rank 6] view 5 accepted=2989
+4: [rank 4] view 5 accepted=3054
+7: [rank 7] view 5 accepted=3060
+3: [rank 3] view 5 accepted=2969
+2: [rank 2] view 5 accepted=2989
+5: [rank 5] view 5 accepted=3002
+1: [rank 1] view 5 accepted=2953
+0: [rank 0] view 2 accepted=2801
+6: [rank 6] view 6 accepted=3088
+7: [rank 7] view 6 accepted=3050
+4: [rank 4] view 6 accepted=3090
+3: [rank 3] view 6 accepted=3119
+2: [rank 2] view 6 accepted=3082
+5: [rank 5] view 6 accepted=3083
+1: [rank 1] view 6 accepted=3057
+0: [rank 0] view 3 accepted=2908
+6: [rank 6] view 7 accepted=3148
+7: [rank 7] view 7 accepted=3109
+4: [rank 4] view 7 accepted=3181
+3: [rank 3] view 7 accepted=3105
+2: [rank 2] view 7 accepted=3165
+5: [rank 5] view 7 accepted=3129
+1: [rank 1] view 7 accepted=3153
+0: [rank 0] view 4 accepted=2990
+6: [rank 6] view 8 accepted=3136
+7: [rank 7] view 8 accepted=3130
+4: [rank 4] view 8 accepted=3160
+3: [rank 3] view 8 accepted=3131
+5: [rank 5] view 8 accepted=3129
+2: [rank 2] view 8 accepted=3301
+1: [rank 1] view 8 accepted=3245
+0: [rank 0] view 5 accepted=2992
+6: [rank 6] view 9 accepted=3084
+7: [rank 7] view 9 accepted=3110
+4: [rank 4] view 9 accepted=3211
+3: [rank 3] view 9 accepted=3084
+5: [rank 5] view 9 accepted=3060
+2: [rank 2] view 9 accepted=3189
+1: [rank 1] view 9 accepted=3126
+0: [rank 0] view 6 accepted=3095
+6: [rank 6] view 10 accepted=3138
+7: [rank 7] view 10 accepted=3187
+4: [rank 4] view 10 accepted=3135
+3: [rank 3] view 10 accepted=3189
+5: [rank 5] view 10 accepted=3111
+2: [rank 2] view 10 accepted=3161
+0: [rank 0] view 7 accepted=3193
+1: [rank 1] view 10 accepted=3088
+6: [rank 6] view 11 accepted=3068
+7: [rank 7] view 11 accepted=3144
+4: [rank 4] view 11 accepted=3097
+5: [rank 5] view 11 accepted=3170
+3: [rank 3] view 11 accepted=3162
+2: [rank 2] view 11 accepted=3161
+0: [rank 0] view 8 accepted=3234
+6: [rank 6] view 12 accepted=3218
+1: [rank 1] view 11 accepted=3123
+7: [rank 7] view 12 accepted=3218
+4: [rank 4] view 12 accepted=3101
+3: [rank 3] view 12 accepted=3089
+5: [rank 5] view 12 accepted=3174
+2: [rank 2] view 12 accepted=3173
+0: [rank 0] view 9 accepted=3134
+6: [rank 6] view 13 accepted=3109
+7: [rank 7] view 13 accepted=3172
+4: [rank 4] view 13 accepted=3248
+1: [rank 1] view 12 accepted=3134
+3: [rank 3] view 13 accepted=3206
+5: [rank 5] view 13 accepted=3224
+2: [rank 2] view 13 accepted=3310
+0: [rank 0] view 10 accepted=3123
+6: [rank 6] view 14 accepted=3309
+4: [rank 4] view 14 accepted=3102
+7: [rank 7] view 14 accepted=3273
+1: [rank 1] view 13 accepted=3145
+3: [rank 3] view 14 accepted=3178
+5: [rank 5] view 14 accepted=3236
+2: [rank 2] view 14 accepted=3147
+0: [rank 0] view 11 accepted=3069
+6: [rank 6] view 15 accepted=3302
+7: [rank 7] view 15 accepted=3143
+4: [rank 4] view 15 accepted=3253
+1: [rank 1] view 14 accepted=3222
+3: [rank 3] view 15 accepted=3217
+5: [rank 5] view 15 accepted=3203
+2: [rank 2] view 15 accepted=3157
+0: [rank 0] view 12 accepted=3061
+6: [rank 6] view 16 accepted=3187
+4: [rank 4] view 16 accepted=3100
+7: [rank 7] view 16 accepted=3184
+3: [rank 3] view 16 accepted=3149
+5: [rank 5] view 16 accepted=3093
+1: [rank 1] view 15 accepted=3235
+2: [rank 2] view 16 accepted=3129
+0: [rank 0] view 13 accepted=3126
+4: [rank 4] view 17 accepted=3040
+6: [rank 6] view 17 accepted=3111
+7: [rank 7] view 17 accepted=3024
+5: [rank 5] view 17 accepted=2990
+3: [rank 3] view 17 accepted=3064
+1: [rank 1] view 16 accepted=3058
+2: [rank 2] view 17 accepted=3123
+0: [rank 0] view 14 accepted=3195
+4: [rank 4] view 18 accepted=2990
+6: [rank 6] view 18 accepted=2991
+7: [rank 7] view 18 accepted=2941
+5: [rank 5] view 18 accepted=2856
+3: [rank 3] view 18 accepted=2952
+1: [rank 1] view 17 accepted=3076
+2: [rank 2] view 18 accepted=2873
+0: [rank 0] view 15 accepted=3160
+7: [rank 7] view 19 accepted=2782
+4: [rank 4] view 19 accepted=2931
+6: [rank 6] view 19 accepted=2833
+5: [rank 5] view 19 accepted=2860
+3: [rank 3] view 19 accepted=2804
+2: [rank 2] view 19 accepted=2876
+1: [rank 1] view 18 accepted=2938
+4: [rank 4] view 20 accepted=2739
+7: [rank 7] view 20 accepted=2814
+0: [rank 0] view 16 accepted=3190
+6: [rank 6] view 20 accepted=2793
+5: [rank 5] view 20 accepted=2759
+3: [rank 3] view 20 accepted=2747
+2: [rank 2] view 20 accepted=2735
+1: [rank 1] view 19 accepted=2891
+0: [rank 0] view 17 accepted=3035
+1: [rank 1] view 20 accepted=2879
+0: [rank 0] view 18 accepted=2970
+0: [rank 0] view 19 accepted=2908
+0: [rank 0] view 20 accepted=2697
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 50/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 2950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 3950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 4950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 5950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 6950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 7950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 8950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 9950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 10000/10000
+{
+  "experiment": "ELLIPSE500x300_H120",
+  "dataset": "NEMA_Body_H60",
+  "count_level": "5e9",
+  "job_result": "NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+  "primaries": 5000000000,
+  "views": 20,
+  "worker_count": 200,
+  "accepted_compton_events": 484936,
+  "history_frames_per_channel": 200,
+  "gpu_peak_reserved_fraction": 0.44071882837072035,
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "sensi_d_sha256": "60a05c2cbc60d0d847fe5cda15b529221774fc4f561d66c121c378753f5d6e2a",
+  "collection_sha256": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032",
+  "input_sha256": {
+    "collections/NEMA_Body_H60_5e9.json": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032",
+    "CntStat/218keV_RotateNum20_Geant4JSCC/CntStat_NEMA_Body_H60_5e9.csv": "8ef3844fc347813be116bea16ad021e1bb6f6dc2de4ee18a2ff8f78d939843ff",
+    "CntStat/440keV_RotateNum20_Geant4JSCC/CntStat_NEMA_Body_H60_5e9.csv": "04239ca2df0016c85b28610c5a3bb24ca9d71f1c532204584551b337a3f7f935",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/1.csv": "feb38f136daa6c93d8b80442ab0ab05e2039c03a1397cd99b85b6d6b97d3e402",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/2.csv": "63c72c7c0b30491bc3e3641460e92540dad94839c90c2d75f026816f15dc5887",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/3.csv": "a10845a1580a170caedc12dd0ea41b11f50df1fb853a3660143d2655ad29cd26",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/4.csv": "75577c1ac018968eeb148d8ab30ecf993d4788ee70f46c9d534632067bd28c7f",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/5.csv": "d33c891dc1ed6df42e58704af0947cd59b7cd80d169a05db179e4aa58cdf7390",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/6.csv": "4ea00298ac7f23e27d168a5afd0cb0e408afce7eac583f9b3c7778417d144336",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/7.csv": "bfde717a9efc03c76cb2308a24aa81df7f2718a94a0312f09ff3f19074e7b224",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/8.csv": "43ecb989490a7c41f0d99615c745a535eaf1532fb7cdeea41a6bf6d57183554c",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/9.csv": "f05a63c724e9841451f795551846018b16a88186d138f4d1601dcc044be1578d",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/10.csv": "800f07d63d481b3a1732fb114834dbbfa1d28ed08556031faa1893455fd0ba25",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/11.csv": "14ad01263b455740a391d4736d534e030c8e7e5025f383e2c99467af927b85bd",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/12.csv": "a3b420a60397a55fc6d2531326185c5bf1282f0a01b2b5c073ff68b59329f99b",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/13.csv": "a0a51b0b94abbfd83d75b38eed25f281dddb5e8ddec5c96156a0aae914cf42a0",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/14.csv": "3bbfa2dbca04ba0649e30a34cc96b794631148c29411225addb4ee0005830ee5",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/15.csv": "0ff314702ec9b1bcfab111ff445e386c722ef905b267fc859f78c5bb02d7a0ca",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/16.csv": "d7a593e696ed9f3758e2aa1030396846b1f96465904f94f61794d48a4bfe4cd2",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/17.csv": "d76b14f04d3bcee0322f350f2672612bf448e0f7593f4a50ba304441c3ef9fd2",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/18.csv": "46015e2c0d0d8042807c82aa6c3c4e79fe78d0af4f380b93f6d66c0b0d00eb5d",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/19.csv": "eff8d2c487aabfe78e09e3cef7f70293e153f15af8878b7d2e2e30bc84338331",
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/20.csv": "2c7400c11c41120de946f44c045b728e6b1a74f9d4d891418c656a193fc6763d"
+  },
+  "factor_manifest_sha256": {
+    "218keV_RotateNum20": "b8ba0829d9fc99aa52a9f35d4f1edc1168287c06a7c41d77039875a941c30f8d",
+    "440keV_RotateNum20": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc",
+    "440keV_to218win_RotateNum20": "6b947252d1529341ca3801daa763572515f566dbbb148253a0a4177e0c44971f"
+  },
+  "predicted_sha256": "80776c11e06978c025b5aec3d18bbe7af36df5351900e17ba99653280c23185d",
+  "predicted_sum": 3862019.3679857254
+}
+ELLIPSE_FORMAL_INTEGRITY_OK /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/integrity_report.json
+SPIKE_ABLATION_GATE_PASSED {"variant": "huber_weak", "phase": "formal", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.45507220052083336, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START huber_medium pilot /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_pilot_1651956_2
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+4: [rank 4] initializing nccl process group
+2: [rank 2] initializing nccl process group
+4: [rank 4] process group ready
+2: [rank 2] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 10/10
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 10/10
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+4: [rank 4] view 1 accepted=2804
+0: [rank 0] view 1 accepted=2711
+3: [rank 3] view 1 accepted=2767
+2: [rank 2] view 1 accepted=2741
+7: [rank 7] view 1 accepted=2703
+5: [rank 5] view 1 accepted=2775
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 1 accepted=2710
+4: [rank 4] view 2 accepted=2864
+0: [rank 0] view 2 accepted=2801
+7: [rank 7] view 2 accepted=2771
+5: [rank 5] view 2 accepted=2796
+1: [rank 1] view 2 accepted=2790
+3: [rank 3] view 2 accepted=2851
+2: [rank 2] view 2 accepted=2763
+6: [rank 6] view 2 accepted=2725
+4: [rank 4] view 3 accepted=2864
+0: [rank 0] view 3 accepted=2908
+7: [rank 7] view 3 accepted=2842
+5: [rank 5] view 3 accepted=2885
+1: [rank 1] view 3 accepted=2858
+3: [rank 3] view 3 accepted=2785
+2: [rank 2] view 3 accepted=2781
+6: [rank 6] view 3 accepted=2820
+4: [rank 4] view 4 accepted=2887
+0: [rank 0] view 4 accepted=2990
+7: [rank 7] view 4 accepted=2884
+5: [rank 5] view 4 accepted=2911
+1: [rank 1] view 4 accepted=2840
+3: [rank 3] view 4 accepted=2923
+2: [rank 2] view 4 accepted=2885
+6: [rank 6] view 4 accepted=2990
+4: [rank 4] view 5 accepted=3054
+0: [rank 0] view 5 accepted=2992
+5: [rank 5] view 5 accepted=3002
+7: [rank 7] view 5 accepted=3060
+1: [rank 1] view 5 accepted=2953
+3: [rank 3] view 5 accepted=2969
+2: [rank 2] view 5 accepted=2989
+6: [rank 6] view 5 accepted=2989
+4: [rank 4] view 6 accepted=3090
+0: [rank 0] view 6 accepted=3095
+5: [rank 5] view 6 accepted=3083
+7: [rank 7] view 6 accepted=3050
+1: [rank 1] view 6 accepted=3057
+3: [rank 3] view 6 accepted=3119
+2: [rank 2] view 6 accepted=3082
+6: [rank 6] view 6 accepted=3088
+4: [rank 4] view 7 accepted=3181
+0: [rank 0] view 7 accepted=3193
+7: [rank 7] view 7 accepted=3109
+5: [rank 5] view 7 accepted=3129
+1: [rank 1] view 7 accepted=3153
+3: [rank 3] view 7 accepted=3105
+2: [rank 2] view 7 accepted=3165
+6: [rank 6] view 7 accepted=3148
+0: [rank 0] view 8 accepted=3234
+4: [rank 4] view 8 accepted=3160
+7: [rank 7] view 8 accepted=3130
+5: [rank 5] view 8 accepted=3129
+3: [rank 3] view 8 accepted=3131
+1: [rank 1] view 8 accepted=3245
+6: [rank 6] view 8 accepted=3136
+0: [rank 0] view 9 accepted=3134
+4: [rank 4] view 9 accepted=3211
+2: [rank 2] view 8 accepted=3301
+7: [rank 7] view 9 accepted=3110
+5: [rank 5] view 9 accepted=3060
+3: [rank 3] view 9 accepted=3084
+1: [rank 1] view 9 accepted=3126
+0: [rank 0] view 10 accepted=3123
+6: [rank 6] view 9 accepted=3084
+4: [rank 4] view 10 accepted=3135
+7: [rank 7] view 10 accepted=3187
+2: [rank 2] view 9 accepted=3189
+5: [rank 5] view 10 accepted=3111
+1: [rank 1] view 10 accepted=3088
+3: [rank 3] view 10 accepted=3189
+0: [rank 0] view 11 accepted=3069
+6: [rank 6] view 10 accepted=3138
+4: [rank 4] view 11 accepted=3097
+7: [rank 7] view 11 accepted=3144
+5: [rank 5] view 11 accepted=3170
+2: [rank 2] view 10 accepted=3161
+1: [rank 1] view 11 accepted=3123
+3: [rank 3] view 11 accepted=3162
+0: [rank 0] view 12 accepted=3061
+6: [rank 6] view 11 accepted=3068
+4: [rank 4] view 12 accepted=3101
+7: [rank 7] view 12 accepted=3218
+5: [rank 5] view 12 accepted=3174
+2: [rank 2] view 11 accepted=3161
+1: [rank 1] view 12 accepted=3134
+0: [rank 0] view 13 accepted=3126
+3: [rank 3] view 12 accepted=3089
+4: [rank 4] view 13 accepted=3248
+6: [rank 6] view 12 accepted=3218
+7: [rank 7] view 13 accepted=3172
+5: [rank 5] view 13 accepted=3224
+2: [rank 2] view 12 accepted=3173
+0: [rank 0] view 14 accepted=3195
+1: [rank 1] view 13 accepted=3145
+3: [rank 3] view 13 accepted=3206
+4: [rank 4] view 14 accepted=3102
+6: [rank 6] view 13 accepted=3109
+7: [rank 7] view 14 accepted=3273
+5: [rank 5] view 14 accepted=3236
+2: [rank 2] view 13 accepted=3310
+0: [rank 0] view 15 accepted=3160
+1: [rank 1] view 14 accepted=3222
+3: [rank 3] view 14 accepted=3178
+4: [rank 4] view 15 accepted=3253
+7: [rank 7] view 15 accepted=3143
+6: [rank 6] view 14 accepted=3309
+5: [rank 5] view 15 accepted=3203
+2: [rank 2] view 14 accepted=3147
+0: [rank 0] view 16 accepted=3190
+1: [rank 1] view 15 accepted=3235
+4: [rank 4] view 16 accepted=3100
+3: [rank 3] view 15 accepted=3217
+7: [rank 7] view 16 accepted=3184
+6: [rank 6] view 15 accepted=3302
+5: [rank 5] view 16 accepted=3093
+0: [rank 0] view 17 accepted=3035
+2: [rank 2] view 15 accepted=3157
+1: [rank 1] view 16 accepted=3058
+4: [rank 4] view 17 accepted=3040
+3: [rank 3] view 16 accepted=3149
+7: [rank 7] view 17 accepted=3024
+0: [rank 0] view 18 accepted=2970
+6: [rank 6] view 16 accepted=3187
+5: [rank 5] view 17 accepted=2990
+2: [rank 2] view 16 accepted=3129
+1: [rank 1] view 17 accepted=3076
+4: [rank 4] view 18 accepted=2990
+3: [rank 3] view 17 accepted=3064
+0: [rank 0] view 19 accepted=2908
+5: [rank 5] view 18 accepted=2856
+7: [rank 7] view 18 accepted=2941
+6: [rank 6] view 17 accepted=3111
+1: [rank 1] view 18 accepted=2938
+2: [rank 2] view 17 accepted=3123
+4: [rank 4] view 19 accepted=2931
+3: [rank 3] view 18 accepted=2952
+0: [rank 0] view 20 accepted=2697
+7: [rank 7] view 19 accepted=2782
+5: [rank 5] view 19 accepted=2860
+6: [rank 6] view 18 accepted=2991
+1: [rank 1] view 19 accepted=2891
+4: [rank 4] view 20 accepted=2739
+2: [rank 2] view 18 accepted=2873
+5: [rank 5] view 20 accepted=2759
+3: [rank 3] view 19 accepted=2804
+7: [rank 7] view 20 accepted=2814
+6: [rank 6] view 19 accepted=2833
+1: [rank 1] view 20 accepted=2879
+2: [rank 2] view 19 accepted=2876
+3: [rank 3] view 20 accepted=2747
+6: [rank 6] view 20 accepted=2793
+2: [rank 2] view 20 accepted=2735
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 10/10
+SPIKE_ABLATION_GATE_PASSED {"variant": "huber_medium", "phase": "pilot", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_pilot_1651956_2", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.45392669270833336, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START huber_medium short /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_short_1651956_2
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/200
+0: ELLIPSE_ITERATION 440_single 100/200
+0: ELLIPSE_ITERATION 440_single 150/200
+0: ELLIPSE_ITERATION 440_single 200/200
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/200
+0: ELLIPSE_ITERATION 218_corrected 100/200
+0: ELLIPSE_ITERATION 218_corrected 150/200
+0: ELLIPSE_ITERATION 218_corrected 200/200
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+2: [rank 2] view 1 accepted=2741
+5: [rank 5] view 1 accepted=2775
+7: [rank 7] view 1 accepted=2703
+1: [rank 1] view 1 accepted=2714
+6: [rank 6] view 1 accepted=2710
+4: [rank 4] view 1 accepted=2804
+3: [rank 3] view 1 accepted=2767
+0: [rank 0] view 1 accepted=2711
+2: [rank 2] view 2 accepted=2763
+5: [rank 5] view 2 accepted=2796
+7: [rank 7] view 2 accepted=2771
+1: [rank 1] view 2 accepted=2790
+3: [rank 3] view 2 accepted=2851
+4: [rank 4] view 2 accepted=2864
+6: [rank 6] view 2 accepted=2725
+0: [rank 0] view 2 accepted=2801
+2: [rank 2] view 3 accepted=2781
+7: [rank 7] view 3 accepted=2842
+5: [rank 5] view 3 accepted=2885
+3: [rank 3] view 3 accepted=2785
+1: [rank 1] view 3 accepted=2858
+4: [rank 4] view 3 accepted=2864
+6: [rank 6] view 3 accepted=2820
+0: [rank 0] view 3 accepted=2908
+2: [rank 2] view 4 accepted=2885
+7: [rank 7] view 4 accepted=2884
+5: [rank 5] view 4 accepted=2911
+3: [rank 3] view 4 accepted=2923
+1: [rank 1] view 4 accepted=2840
+4: [rank 4] view 4 accepted=2887
+6: [rank 6] view 4 accepted=2990
+0: [rank 0] view 4 accepted=2990
+2: [rank 2] view 5 accepted=2989
+3: [rank 3] view 5 accepted=2969
+7: [rank 7] view 5 accepted=3060
+5: [rank 5] view 5 accepted=3002
+1: [rank 1] view 5 accepted=2953
+0: [rank 0] view 5 accepted=2992
+4: [rank 4] view 5 accepted=3054
+6: [rank 6] view 5 accepted=2989
+2: [rank 2] view 6 accepted=3082
+3: [rank 3] view 6 accepted=3119
+7: [rank 7] view 6 accepted=3050
+5: [rank 5] view 6 accepted=3083
+1: [rank 1] view 6 accepted=3057
+0: [rank 0] view 6 accepted=3095
+4: [rank 4] view 6 accepted=3090
+6: [rank 6] view 6 accepted=3088
+2: [rank 2] view 7 accepted=3165
+3: [rank 3] view 7 accepted=3105
+7: [rank 7] view 7 accepted=3109
+5: [rank 5] view 7 accepted=3129
+0: [rank 0] view 7 accepted=3193
+1: [rank 1] view 7 accepted=3153
+4: [rank 4] view 7 accepted=3181
+6: [rank 6] view 7 accepted=3148
+2: [rank 2] view 8 accepted=3301
+3: [rank 3] view 8 accepted=3131
+7: [rank 7] view 8 accepted=3130
+0: [rank 0] view 8 accepted=3234
+5: [rank 5] view 8 accepted=3129
+1: [rank 1] view 8 accepted=3245
+4: [rank 4] view 8 accepted=3160
+6: [rank 6] view 8 accepted=3136
+2: [rank 2] view 9 accepted=3189
+3: [rank 3] view 9 accepted=3084
+7: [rank 7] view 9 accepted=3110
+0: [rank 0] view 9 accepted=3134
+5: [rank 5] view 9 accepted=3060
+1: [rank 1] view 9 accepted=3126
+4: [rank 4] view 9 accepted=3211
+6: [rank 6] view 9 accepted=3084
+2: [rank 2] view 10 accepted=3161
+3: [rank 3] view 10 accepted=3189
+7: [rank 7] view 10 accepted=3187
+0: [rank 0] view 10 accepted=3123
+1: [rank 1] view 10 accepted=3088
+5: [rank 5] view 10 accepted=3111
+4: [rank 4] view 10 accepted=3135
+6: [rank 6] view 10 accepted=3138
+2: [rank 2] view 11 accepted=3161
+3: [rank 3] view 11 accepted=3162
+0: [rank 0] view 11 accepted=3069
+7: [rank 7] view 11 accepted=3144
+1: [rank 1] view 11 accepted=3123
+5: [rank 5] view 11 accepted=3170
+4: [rank 4] view 11 accepted=3097
+6: [rank 6] view 11 accepted=3068
+2: [rank 2] view 12 accepted=3173
+3: [rank 3] view 12 accepted=3089
+0: [rank 0] view 12 accepted=3061
+7: [rank 7] view 12 accepted=3218
+1: [rank 1] view 12 accepted=3134
+4: [rank 4] view 12 accepted=3101
+5: [rank 5] view 12 accepted=3174
+6: [rank 6] view 12 accepted=3218
+3: [rank 3] view 13 accepted=3206
+0: [rank 0] view 13 accepted=3126
+2: [rank 2] view 13 accepted=3310
+7: [rank 7] view 13 accepted=3172
+1: [rank 1] view 13 accepted=3145
+4: [rank 4] view 13 accepted=3248
+6: [rank 6] view 13 accepted=3109
+5: [rank 5] view 13 accepted=3224
+3: [rank 3] view 14 accepted=3178
+0: [rank 0] view 14 accepted=3195
+2: [rank 2] view 14 accepted=3147
+7: [rank 7] view 14 accepted=3273
+1: [rank 1] view 14 accepted=3222
+4: [rank 4] view 14 accepted=3102
+3: [rank 3] view 15 accepted=3217
+6: [rank 6] view 14 accepted=3309
+0: [rank 0] view 15 accepted=3160
+5: [rank 5] view 14 accepted=3236
+2: [rank 2] view 15 accepted=3157
+7: [rank 7] view 15 accepted=3143
+1: [rank 1] view 15 accepted=3235
+4: [rank 4] view 15 accepted=3253
+3: [rank 3] view 16 accepted=3149
+0: [rank 0] view 16 accepted=3190
+5: [rank 5] view 15 accepted=3203
+6: [rank 6] view 15 accepted=3302
+2: [rank 2] view 16 accepted=3129
+7: [rank 7] view 16 accepted=3184
+1: [rank 1] view 16 accepted=3058
+4: [rank 4] view 16 accepted=3100
+3: [rank 3] view 17 accepted=3064
+0: [rank 0] view 17 accepted=3035
+5: [rank 5] view 16 accepted=3093
+2: [rank 2] view 17 accepted=3123
+6: [rank 6] view 16 accepted=3187
+7: [rank 7] view 17 accepted=3024
+1: [rank 1] view 17 accepted=3076
+4: [rank 4] view 17 accepted=3040
+3: [rank 3] view 18 accepted=2952
+0: [rank 0] view 18 accepted=2970
+5: [rank 5] view 17 accepted=2990
+2: [rank 2] view 18 accepted=2873
+6: [rank 6] view 17 accepted=3111
+7: [rank 7] view 18 accepted=2941
+1: [rank 1] view 18 accepted=2938
+4: [rank 4] view 18 accepted=2990
+3: [rank 3] view 19 accepted=2804
+0: [rank 0] view 19 accepted=2908
+5: [rank 5] view 18 accepted=2856
+2: [rank 2] view 19 accepted=2876
+7: [rank 7] view 19 accepted=2782
+6: [rank 6] view 18 accepted=2991
+1: [rank 1] view 19 accepted=2891
+0: [rank 0] view 20 accepted=2697
+3: [rank 3] view 20 accepted=2747
+4: [rank 4] view 19 accepted=2931
+5: [rank 5] view 19 accepted=2860
+2: [rank 2] view 20 accepted=2735
+1: [rank 1] view 20 accepted=2879
+6: [rank 6] view 19 accepted=2833
+7: [rank 7] view 20 accepted=2814
+4: [rank 4] view 20 accepted=2739
+5: [rank 5] view 20 accepted=2759
+6: [rank 6] view 20 accepted=2793
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 50/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 100/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 150/200
+0: ELLIPSE_ITERATION 440_compton_and_jscc 200/200
+SPIKE_ABLATION_GATE_PASSED {"variant": "huber_medium", "phase": "short", "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_short_1651956_2", "gpu_reserved_fraction": 0.44071882837072035, "host_peak_fraction": 0.45396458333333334, "slurm_host_fraction": 0.63363203125}
+SPIKE_ABLATION_START huber_medium formal /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_formal_1651956_2
+0: SPIKE_NODE_PREFLIGHT wqd10naf05g4 rank=0
+1: SPIKE_NODE_PREFLIGHT wqd10naf05g5 rank=1
+3: SPIKE_NODE_PREFLIGHT wqd10nba07g4 rank=3
+2: SPIKE_NODE_PREFLIGHT wqd10nba07g3 rank=2
+7: SPIKE_NODE_PREFLIGHT wqd10nba07g8 rank=7
+6: SPIKE_NODE_PREFLIGHT wqd10nba07g7 rank=6
+4: SPIKE_NODE_PREFLIGHT wqd10nba07g5 rank=4
+5: SPIKE_NODE_PREFLIGHT wqd10nba07g6 rank=5
+3: SPIKE_NODE_CUDA_OK wqd10nba07g4 2.8.0+cu128 1
+1: SPIKE_NODE_CUDA_OK wqd10naf05g5 2.8.0+cu128 1
+0: SPIKE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1
+4: SPIKE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1
+6: SPIKE_NODE_CUDA_OK wqd10nba07g7 2.8.0+cu128 1
+5: SPIKE_NODE_CUDA_OK wqd10nba07g6 2.8.0+cu128 1
+2: SPIKE_NODE_CUDA_OK wqd10nba07g3 2.8.0+cu128 1
+7: SPIKE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1
+1: [rank 1] initializing nccl process group
+1: [rank 1] process group ready
+2: [rank 2] initializing nccl process group
+2: [rank 2] process group ready
+5: [rank 5] initializing nccl process group
+5: [rank 5] process group ready
+3: [rank 3] initializing nccl process group
+3: [rank 3] process group ready
+6: [rank 6] initializing nccl process group
+6: [rank 6] process group ready
+4: [rank 4] initializing nccl process group
+4: [rank 4] process group ready
+0: [rank 0] initializing nccl process group
+0: [rank 0] process group ready
+0: ELLIPSE_STAGE validate_factors
+7: [rank 7] initializing nccl process group
+7: [rank 7] process group ready
+0: ELLIPSE_STAGE factors_validated
+0: ELLIPSE_STAGE broadcast_validation
+0: ELLIPSE_STAGE geometry
+0: ELLIPSE_STAGE geometry_loaded
+0: ELLIPSE_STAGE loading_440_detector_shard
+0: ELLIPSE_STAGE 440_detector_shard_ready
+0: ELLIPSE_ITERATION 440_single 50/10000
+0: ELLIPSE_ITERATION 440_single 100/10000
+0: ELLIPSE_ITERATION 440_single 150/10000
+0: ELLIPSE_ITERATION 440_single 200/10000
+0: ELLIPSE_ITERATION 440_single 250/10000
+0: ELLIPSE_ITERATION 440_single 300/10000
+0: ELLIPSE_ITERATION 440_single 350/10000
+0: ELLIPSE_ITERATION 440_single 400/10000
+0: ELLIPSE_ITERATION 440_single 450/10000
+0: ELLIPSE_ITERATION 440_single 500/10000
+0: ELLIPSE_ITERATION 440_single 550/10000
+0: ELLIPSE_ITERATION 440_single 600/10000
+0: ELLIPSE_ITERATION 440_single 650/10000
+0: ELLIPSE_ITERATION 440_single 700/10000
+0: ELLIPSE_ITERATION 440_single 750/10000
+0: ELLIPSE_ITERATION 440_single 800/10000
+0: ELLIPSE_ITERATION 440_single 850/10000
+0: ELLIPSE_ITERATION 440_single 900/10000
+0: ELLIPSE_ITERATION 440_single 950/10000
+0: ELLIPSE_ITERATION 440_single 1000/10000
+0: ELLIPSE_ITERATION 440_single 1050/10000
+0: ELLIPSE_ITERATION 440_single 1100/10000
+0: ELLIPSE_ITERATION 440_single 1150/10000
+0: ELLIPSE_ITERATION 440_single 1200/10000
+0: ELLIPSE_ITERATION 440_single 1250/10000
+0: ELLIPSE_ITERATION 440_single 1300/10000
+0: ELLIPSE_ITERATION 440_single 1350/10000
+0: ELLIPSE_ITERATION 440_single 1400/10000
+0: ELLIPSE_ITERATION 440_single 1450/10000
+0: ELLIPSE_ITERATION 440_single 1500/10000
+0: ELLIPSE_ITERATION 440_single 1550/10000
+0: ELLIPSE_ITERATION 440_single 1600/10000
+0: ELLIPSE_ITERATION 440_single 1650/10000
+0: ELLIPSE_ITERATION 440_single 1700/10000
+0: ELLIPSE_ITERATION 440_single 1750/10000
+0: ELLIPSE_ITERATION 440_single 1800/10000
+0: ELLIPSE_ITERATION 440_single 1850/10000
+0: ELLIPSE_ITERATION 440_single 1900/10000
+0: ELLIPSE_ITERATION 440_single 1950/10000
+0: ELLIPSE_ITERATION 440_single 2000/10000
+0: ELLIPSE_ITERATION 440_single 2050/10000
+0: ELLIPSE_ITERATION 440_single 2100/10000
+0: ELLIPSE_ITERATION 440_single 2150/10000
+0: ELLIPSE_ITERATION 440_single 2200/10000
+0: ELLIPSE_ITERATION 440_single 2250/10000
+0: ELLIPSE_ITERATION 440_single 2300/10000
+0: ELLIPSE_ITERATION 440_single 2350/10000
+0: ELLIPSE_ITERATION 440_single 2400/10000
+0: ELLIPSE_ITERATION 440_single 2450/10000
+0: ELLIPSE_ITERATION 440_single 2500/10000
+0: ELLIPSE_ITERATION 440_single 2550/10000
+0: ELLIPSE_ITERATION 440_single 2600/10000
+0: ELLIPSE_ITERATION 440_single 2650/10000
+0: ELLIPSE_ITERATION 440_single 2700/10000
+0: ELLIPSE_ITERATION 440_single 2750/10000
+0: ELLIPSE_ITERATION 440_single 2800/10000
+0: ELLIPSE_ITERATION 440_single 2850/10000
+0: ELLIPSE_ITERATION 440_single 2900/10000
+0: ELLIPSE_ITERATION 440_single 2950/10000
+0: ELLIPSE_ITERATION 440_single 3000/10000
+0: ELLIPSE_ITERATION 440_single 3050/10000
+0: ELLIPSE_ITERATION 440_single 3100/10000
+0: ELLIPSE_ITERATION 440_single 3150/10000
+0: ELLIPSE_ITERATION 440_single 3200/10000
+0: ELLIPSE_ITERATION 440_single 3250/10000
+0: ELLIPSE_ITERATION 440_single 3300/10000
+0: ELLIPSE_ITERATION 440_single 3350/10000
+0: ELLIPSE_ITERATION 440_single 3400/10000
+0: ELLIPSE_ITERATION 440_single 3450/10000
+0: ELLIPSE_ITERATION 440_single 3500/10000
+0: ELLIPSE_ITERATION 440_single 3550/10000
+0: ELLIPSE_ITERATION 440_single 3600/10000
+0: ELLIPSE_ITERATION 440_single 3650/10000
+0: ELLIPSE_ITERATION 440_single 3700/10000
+0: ELLIPSE_ITERATION 440_single 3750/10000
+0: ELLIPSE_ITERATION 440_single 3800/10000
+0: ELLIPSE_ITERATION 440_single 3850/10000
+0: ELLIPSE_ITERATION 440_single 3900/10000
+0: ELLIPSE_ITERATION 440_single 3950/10000
+0: ELLIPSE_ITERATION 440_single 4000/10000
+0: ELLIPSE_ITERATION 440_single 4050/10000
+0: ELLIPSE_ITERATION 440_single 4100/10000
+0: ELLIPSE_ITERATION 440_single 4150/10000
+0: ELLIPSE_ITERATION 440_single 4200/10000
+0: ELLIPSE_ITERATION 440_single 4250/10000
+0: ELLIPSE_ITERATION 440_single 4300/10000
+0: ELLIPSE_ITERATION 440_single 4350/10000
+0: ELLIPSE_ITERATION 440_single 4400/10000
+0: ELLIPSE_ITERATION 440_single 4450/10000
+0: ELLIPSE_ITERATION 440_single 4500/10000
+0: ELLIPSE_ITERATION 440_single 4550/10000
+0: ELLIPSE_ITERATION 440_single 4600/10000
+0: ELLIPSE_ITERATION 440_single 4650/10000
+0: ELLIPSE_ITERATION 440_single 4700/10000
+0: ELLIPSE_ITERATION 440_single 4750/10000
+0: ELLIPSE_ITERATION 440_single 4800/10000
+0: ELLIPSE_ITERATION 440_single 4850/10000
+0: ELLIPSE_ITERATION 440_single 4900/10000
+0: ELLIPSE_ITERATION 440_single 4950/10000
+0: ELLIPSE_ITERATION 440_single 5000/10000
+0: ELLIPSE_ITERATION 440_single 5050/10000
+0: ELLIPSE_ITERATION 440_single 5100/10000
+0: ELLIPSE_ITERATION 440_single 5150/10000
+0: ELLIPSE_ITERATION 440_single 5200/10000
+0: ELLIPSE_ITERATION 440_single 5250/10000
+0: ELLIPSE_ITERATION 440_single 5300/10000
+0: ELLIPSE_ITERATION 440_single 5350/10000
+0: ELLIPSE_ITERATION 440_single 5400/10000
+0: ELLIPSE_ITERATION 440_single 5450/10000
+0: ELLIPSE_ITERATION 440_single 5500/10000
+0: ELLIPSE_ITERATION 440_single 5550/10000
+0: ELLIPSE_ITERATION 440_single 5600/10000
+0: ELLIPSE_ITERATION 440_single 5650/10000
+0: ELLIPSE_ITERATION 440_single 5700/10000
+0: ELLIPSE_ITERATION 440_single 5750/10000
+0: ELLIPSE_ITERATION 440_single 5800/10000
+0: ELLIPSE_ITERATION 440_single 5850/10000
+0: ELLIPSE_ITERATION 440_single 5900/10000
+0: ELLIPSE_ITERATION 440_single 5950/10000
+0: ELLIPSE_ITERATION 440_single 6000/10000
+0: ELLIPSE_ITERATION 440_single 6050/10000
+0: ELLIPSE_ITERATION 440_single 6100/10000
+0: ELLIPSE_ITERATION 440_single 6150/10000
+0: ELLIPSE_ITERATION 440_single 6200/10000
+0: ELLIPSE_ITERATION 440_single 6250/10000
+0: ELLIPSE_ITERATION 440_single 6300/10000
+0: ELLIPSE_ITERATION 440_single 6350/10000
+0: ELLIPSE_ITERATION 440_single 6400/10000
+0: ELLIPSE_ITERATION 440_single 6450/10000
+0: ELLIPSE_ITERATION 440_single 6500/10000
+0: ELLIPSE_ITERATION 440_single 6550/10000
+0: ELLIPSE_ITERATION 440_single 6600/10000
+0: ELLIPSE_ITERATION 440_single 6650/10000
+0: ELLIPSE_ITERATION 440_single 6700/10000
+0: ELLIPSE_ITERATION 440_single 6750/10000
+0: ELLIPSE_ITERATION 440_single 6800/10000
+0: ELLIPSE_ITERATION 440_single 6850/10000
+0: ELLIPSE_ITERATION 440_single 6900/10000
+0: ELLIPSE_ITERATION 440_single 6950/10000
+0: ELLIPSE_ITERATION 440_single 7000/10000
+0: ELLIPSE_ITERATION 440_single 7050/10000
+0: ELLIPSE_ITERATION 440_single 7100/10000
+0: ELLIPSE_ITERATION 440_single 7150/10000
+0: ELLIPSE_ITERATION 440_single 7200/10000
+0: ELLIPSE_ITERATION 440_single 7250/10000
+0: ELLIPSE_ITERATION 440_single 7300/10000
+0: ELLIPSE_ITERATION 440_single 7350/10000
+0: ELLIPSE_ITERATION 440_single 7400/10000
+0: ELLIPSE_ITERATION 440_single 7450/10000
+0: ELLIPSE_ITERATION 440_single 7500/10000
+0: ELLIPSE_ITERATION 440_single 7550/10000
+0: ELLIPSE_ITERATION 440_single 7600/10000
+0: ELLIPSE_ITERATION 440_single 7650/10000
+0: ELLIPSE_ITERATION 440_single 7700/10000
+0: ELLIPSE_ITERATION 440_single 7750/10000
+0: ELLIPSE_ITERATION 440_single 7800/10000
+0: ELLIPSE_ITERATION 440_single 7850/10000
+0: ELLIPSE_ITERATION 440_single 7900/10000
+0: ELLIPSE_ITERATION 440_single 7950/10000
+0: ELLIPSE_ITERATION 440_single 8000/10000
+0: ELLIPSE_ITERATION 440_single 8050/10000
+0: ELLIPSE_ITERATION 440_single 8100/10000
+0: ELLIPSE_ITERATION 440_single 8150/10000
+0: ELLIPSE_ITERATION 440_single 8200/10000
+0: ELLIPSE_ITERATION 440_single 8250/10000
+0: ELLIPSE_ITERATION 440_single 8300/10000
+0: ELLIPSE_ITERATION 440_single 8350/10000
+0: ELLIPSE_ITERATION 440_single 8400/10000
+0: ELLIPSE_ITERATION 440_single 8450/10000
+0: ELLIPSE_ITERATION 440_single 8500/10000
+0: ELLIPSE_ITERATION 440_single 8550/10000
+0: ELLIPSE_ITERATION 440_single 8600/10000
+0: ELLIPSE_ITERATION 440_single 8650/10000
+0: ELLIPSE_ITERATION 440_single 8700/10000
+0: ELLIPSE_ITERATION 440_single 8750/10000
+0: ELLIPSE_ITERATION 440_single 8800/10000
+0: ELLIPSE_ITERATION 440_single 8850/10000
+0: ELLIPSE_ITERATION 440_single 8900/10000
+0: ELLIPSE_ITERATION 440_single 8950/10000
+0: ELLIPSE_ITERATION 440_single 9000/10000
+0: ELLIPSE_ITERATION 440_single 9050/10000
+0: ELLIPSE_ITERATION 440_single 9100/10000
+0: ELLIPSE_ITERATION 440_single 9150/10000
+0: ELLIPSE_ITERATION 440_single 9200/10000
+0: ELLIPSE_ITERATION 440_single 9250/10000
+0: ELLIPSE_ITERATION 440_single 9300/10000
+0: ELLIPSE_ITERATION 440_single 9350/10000
+0: ELLIPSE_ITERATION 440_single 9400/10000
+0: ELLIPSE_ITERATION 440_single 9450/10000
+0: ELLIPSE_ITERATION 440_single 9500/10000
+0: ELLIPSE_ITERATION 440_single 9550/10000
+0: ELLIPSE_ITERATION 440_single 9600/10000
+0: ELLIPSE_ITERATION 440_single 9650/10000
+0: ELLIPSE_ITERATION 440_single 9700/10000
+0: ELLIPSE_ITERATION 440_single 9750/10000
+0: ELLIPSE_ITERATION 440_single 9800/10000
+0: ELLIPSE_ITERATION 440_single 9850/10000
+0: ELLIPSE_ITERATION 440_single 9900/10000
+0: ELLIPSE_ITERATION 440_single 9950/10000
+0: ELLIPSE_ITERATION 440_single 10000/10000
+0: ELLIPSE_STAGE loading_cross_and_218_shards
+0: ELLIPSE_ITERATION 218_corrected 50/10000
+0: ELLIPSE_ITERATION 218_corrected 100/10000
+0: ELLIPSE_ITERATION 218_corrected 150/10000
+0: ELLIPSE_ITERATION 218_corrected 200/10000
+0: ELLIPSE_ITERATION 218_corrected 250/10000
+0: ELLIPSE_ITERATION 218_corrected 300/10000
+0: ELLIPSE_ITERATION 218_corrected 350/10000
+0: ELLIPSE_ITERATION 218_corrected 400/10000
+0: ELLIPSE_ITERATION 218_corrected 450/10000
+0: ELLIPSE_ITERATION 218_corrected 500/10000
+0: ELLIPSE_ITERATION 218_corrected 550/10000
+0: ELLIPSE_ITERATION 218_corrected 600/10000
+0: ELLIPSE_ITERATION 218_corrected 650/10000
+0: ELLIPSE_ITERATION 218_corrected 700/10000
+0: ELLIPSE_ITERATION 218_corrected 750/10000
+0: ELLIPSE_ITERATION 218_corrected 800/10000
+0: ELLIPSE_ITERATION 218_corrected 850/10000
+0: ELLIPSE_ITERATION 218_corrected 900/10000
+0: ELLIPSE_ITERATION 218_corrected 950/10000
+0: ELLIPSE_ITERATION 218_corrected 1000/10000
+0: ELLIPSE_ITERATION 218_corrected 1050/10000
+0: ELLIPSE_ITERATION 218_corrected 1100/10000
+0: ELLIPSE_ITERATION 218_corrected 1150/10000
+0: ELLIPSE_ITERATION 218_corrected 1200/10000
+0: ELLIPSE_ITERATION 218_corrected 1250/10000
+0: ELLIPSE_ITERATION 218_corrected 1300/10000
+0: ELLIPSE_ITERATION 218_corrected 1350/10000
+0: ELLIPSE_ITERATION 218_corrected 1400/10000
+0: ELLIPSE_ITERATION 218_corrected 1450/10000
+0: ELLIPSE_ITERATION 218_corrected 1500/10000
+0: ELLIPSE_ITERATION 218_corrected 1550/10000
+0: ELLIPSE_ITERATION 218_corrected 1600/10000
+0: ELLIPSE_ITERATION 218_corrected 1650/10000
+0: ELLIPSE_ITERATION 218_corrected 1700/10000
+0: ELLIPSE_ITERATION 218_corrected 1750/10000
+0: ELLIPSE_ITERATION 218_corrected 1800/10000
+0: ELLIPSE_ITERATION 218_corrected 1850/10000
+0: ELLIPSE_ITERATION 218_corrected 1900/10000
+0: ELLIPSE_ITERATION 218_corrected 1950/10000
+0: ELLIPSE_ITERATION 218_corrected 2000/10000
+0: ELLIPSE_ITERATION 218_corrected 2050/10000
+0: ELLIPSE_ITERATION 218_corrected 2100/10000
+0: ELLIPSE_ITERATION 218_corrected 2150/10000
+0: ELLIPSE_ITERATION 218_corrected 2200/10000
+0: ELLIPSE_ITERATION 218_corrected 2250/10000
+0: ELLIPSE_ITERATION 218_corrected 2300/10000
+0: ELLIPSE_ITERATION 218_corrected 2350/10000
+0: ELLIPSE_ITERATION 218_corrected 2400/10000
+0: ELLIPSE_ITERATION 218_corrected 2450/10000
+0: ELLIPSE_ITERATION 218_corrected 2500/10000
+0: ELLIPSE_ITERATION 218_corrected 2550/10000
+0: ELLIPSE_ITERATION 218_corrected 2600/10000
+0: ELLIPSE_ITERATION 218_corrected 2650/10000
+0: ELLIPSE_ITERATION 218_corrected 2700/10000
+0: ELLIPSE_ITERATION 218_corrected 2750/10000
+0: ELLIPSE_ITERATION 218_corrected 2800/10000
+0: ELLIPSE_ITERATION 218_corrected 2850/10000
+0: ELLIPSE_ITERATION 218_corrected 2900/10000
+0: ELLIPSE_ITERATION 218_corrected 2950/10000
+0: ELLIPSE_ITERATION 218_corrected 3000/10000
+0: ELLIPSE_ITERATION 218_corrected 3050/10000
+0: ELLIPSE_ITERATION 218_corrected 3100/10000
+0: ELLIPSE_ITERATION 218_corrected 3150/10000
+0: ELLIPSE_ITERATION 218_corrected 3200/10000
+0: ELLIPSE_ITERATION 218_corrected 3250/10000
+0: ELLIPSE_ITERATION 218_corrected 3300/10000
+0: ELLIPSE_ITERATION 218_corrected 3350/10000
+0: ELLIPSE_ITERATION 218_corrected 3400/10000
+0: ELLIPSE_ITERATION 218_corrected 3450/10000
+0: ELLIPSE_ITERATION 218_corrected 3500/10000
+0: ELLIPSE_ITERATION 218_corrected 3550/10000
+0: ELLIPSE_ITERATION 218_corrected 3600/10000
+0: ELLIPSE_ITERATION 218_corrected 3650/10000
+0: ELLIPSE_ITERATION 218_corrected 3700/10000
+0: ELLIPSE_ITERATION 218_corrected 3750/10000
+0: ELLIPSE_ITERATION 218_corrected 3800/10000
+0: ELLIPSE_ITERATION 218_corrected 3850/10000
+0: ELLIPSE_ITERATION 218_corrected 3900/10000
+0: ELLIPSE_ITERATION 218_corrected 3950/10000
+0: ELLIPSE_ITERATION 218_corrected 4000/10000
+0: ELLIPSE_ITERATION 218_corrected 4050/10000
+0: ELLIPSE_ITERATION 218_corrected 4100/10000
+0: ELLIPSE_ITERATION 218_corrected 4150/10000
+0: ELLIPSE_ITERATION 218_corrected 4200/10000
+0: ELLIPSE_ITERATION 218_corrected 4250/10000
+0: ELLIPSE_ITERATION 218_corrected 4300/10000
+0: ELLIPSE_ITERATION 218_corrected 4350/10000
+0: ELLIPSE_ITERATION 218_corrected 4400/10000
+0: ELLIPSE_ITERATION 218_corrected 4450/10000
+0: ELLIPSE_ITERATION 218_corrected 4500/10000
+0: ELLIPSE_ITERATION 218_corrected 4550/10000
+0: ELLIPSE_ITERATION 218_corrected 4600/10000
+0: ELLIPSE_ITERATION 218_corrected 4650/10000
+0: ELLIPSE_ITERATION 218_corrected 4700/10000
+0: ELLIPSE_ITERATION 218_corrected 4750/10000
+0: ELLIPSE_ITERATION 218_corrected 4800/10000
+0: ELLIPSE_ITERATION 218_corrected 4850/10000
+0: ELLIPSE_ITERATION 218_corrected 4900/10000
+0: ELLIPSE_ITERATION 218_corrected 4950/10000
+0: ELLIPSE_ITERATION 218_corrected 5000/10000
+0: ELLIPSE_ITERATION 218_corrected 5050/10000
+0: ELLIPSE_ITERATION 218_corrected 5100/10000
+0: ELLIPSE_ITERATION 218_corrected 5150/10000
+0: ELLIPSE_ITERATION 218_corrected 5200/10000
+0: ELLIPSE_ITERATION 218_corrected 5250/10000
+0: ELLIPSE_ITERATION 218_corrected 5300/10000
+0: ELLIPSE_ITERATION 218_corrected 5350/10000
+0: ELLIPSE_ITERATION 218_corrected 5400/10000
+0: ELLIPSE_ITERATION 218_corrected 5450/10000
+0: ELLIPSE_ITERATION 218_corrected 5500/10000
+0: ELLIPSE_ITERATION 218_corrected 5550/10000
+0: ELLIPSE_ITERATION 218_corrected 5600/10000
+0: ELLIPSE_ITERATION 218_corrected 5650/10000
+0: ELLIPSE_ITERATION 218_corrected 5700/10000
+0: ELLIPSE_ITERATION 218_corrected 5750/10000
+0: ELLIPSE_ITERATION 218_corrected 5800/10000
+0: ELLIPSE_ITERATION 218_corrected 5850/10000
+0: ELLIPSE_ITERATION 218_corrected 5900/10000
+0: ELLIPSE_ITERATION 218_corrected 5950/10000
+0: ELLIPSE_ITERATION 218_corrected 6000/10000
+0: ELLIPSE_ITERATION 218_corrected 6050/10000
+0: ELLIPSE_ITERATION 218_corrected 6100/10000
+0: ELLIPSE_ITERATION 218_corrected 6150/10000
+0: ELLIPSE_ITERATION 218_corrected 6200/10000
+0: ELLIPSE_ITERATION 218_corrected 6250/10000
+0: ELLIPSE_ITERATION 218_corrected 6300/10000
+0: ELLIPSE_ITERATION 218_corrected 6350/10000
+0: ELLIPSE_ITERATION 218_corrected 6400/10000
+0: ELLIPSE_ITERATION 218_corrected 6450/10000
+0: ELLIPSE_ITERATION 218_corrected 6500/10000
+0: ELLIPSE_ITERATION 218_corrected 6550/10000
+0: ELLIPSE_ITERATION 218_corrected 6600/10000
+0: ELLIPSE_ITERATION 218_corrected 6650/10000
+0: ELLIPSE_ITERATION 218_corrected 6700/10000
+0: ELLIPSE_ITERATION 218_corrected 6750/10000
+0: ELLIPSE_ITERATION 218_corrected 6800/10000
+0: ELLIPSE_ITERATION 218_corrected 6850/10000
+0: ELLIPSE_ITERATION 218_corrected 6900/10000
+0: ELLIPSE_ITERATION 218_corrected 6950/10000
+0: ELLIPSE_ITERATION 218_corrected 7000/10000
+0: ELLIPSE_ITERATION 218_corrected 7050/10000
+0: ELLIPSE_ITERATION 218_corrected 7100/10000
+0: ELLIPSE_ITERATION 218_corrected 7150/10000
+0: ELLIPSE_ITERATION 218_corrected 7200/10000
+0: ELLIPSE_ITERATION 218_corrected 7250/10000
+0: ELLIPSE_ITERATION 218_corrected 7300/10000
+0: ELLIPSE_ITERATION 218_corrected 7350/10000
+0: ELLIPSE_ITERATION 218_corrected 7400/10000
+0: ELLIPSE_ITERATION 218_corrected 7450/10000
+0: ELLIPSE_ITERATION 218_corrected 7500/10000
+0: ELLIPSE_ITERATION 218_corrected 7550/10000
+0: ELLIPSE_ITERATION 218_corrected 7600/10000
+0: ELLIPSE_ITERATION 218_corrected 7650/10000
+0: ELLIPSE_ITERATION 218_corrected 7700/10000
+0: ELLIPSE_ITERATION 218_corrected 7750/10000
+0: ELLIPSE_ITERATION 218_corrected 7800/10000
+0: ELLIPSE_ITERATION 218_corrected 7850/10000
+0: ELLIPSE_ITERATION 218_corrected 7900/10000
+0: ELLIPSE_ITERATION 218_corrected 7950/10000
+0: ELLIPSE_ITERATION 218_corrected 8000/10000
+0: ELLIPSE_ITERATION 218_corrected 8050/10000
+0: ELLIPSE_ITERATION 218_corrected 8100/10000
+0: ELLIPSE_ITERATION 218_corrected 8150/10000
+0: ELLIPSE_ITERATION 218_corrected 8200/10000
+0: ELLIPSE_ITERATION 218_corrected 8250/10000
+0: ELLIPSE_ITERATION 218_corrected 8300/10000
+0: ELLIPSE_ITERATION 218_corrected 8350/10000
+0: ELLIPSE_ITERATION 218_corrected 8400/10000
+0: ELLIPSE_ITERATION 218_corrected 8450/10000
+0: ELLIPSE_ITERATION 218_corrected 8500/10000
+0: ELLIPSE_ITERATION 218_corrected 8550/10000
+0: ELLIPSE_ITERATION 218_corrected 8600/10000
+0: ELLIPSE_ITERATION 218_corrected 8650/10000
+0: ELLIPSE_ITERATION 218_corrected 8700/10000
+0: ELLIPSE_ITERATION 218_corrected 8750/10000
+0: ELLIPSE_ITERATION 218_corrected 8800/10000
+0: ELLIPSE_ITERATION 218_corrected 8850/10000
+0: ELLIPSE_ITERATION 218_corrected 8900/10000
+0: ELLIPSE_ITERATION 218_corrected 8950/10000
+0: ELLIPSE_ITERATION 218_corrected 9000/10000
+0: ELLIPSE_ITERATION 218_corrected 9050/10000
+0: ELLIPSE_ITERATION 218_corrected 9100/10000
+0: ELLIPSE_ITERATION 218_corrected 9150/10000
+0: ELLIPSE_ITERATION 218_corrected 9200/10000
+0: ELLIPSE_ITERATION 218_corrected 9250/10000
+0: ELLIPSE_ITERATION 218_corrected 9300/10000
+0: ELLIPSE_ITERATION 218_corrected 9350/10000
+0: ELLIPSE_ITERATION 218_corrected 9400/10000
+0: ELLIPSE_ITERATION 218_corrected 9450/10000
+0: ELLIPSE_ITERATION 218_corrected 9500/10000
+0: ELLIPSE_ITERATION 218_corrected 9550/10000
+0: ELLIPSE_ITERATION 218_corrected 9600/10000
+0: ELLIPSE_ITERATION 218_corrected 9650/10000
+0: ELLIPSE_ITERATION 218_corrected 9700/10000
+0: ELLIPSE_ITERATION 218_corrected 9750/10000
+0: ELLIPSE_ITERATION 218_corrected 9800/10000
+0: ELLIPSE_ITERATION 218_corrected 9850/10000
+0: ELLIPSE_ITERATION 218_corrected 9900/10000
+0: ELLIPSE_ITERATION 218_corrected 9950/10000
+0: ELLIPSE_ITERATION 218_corrected 10000/10000
+0: ELLIPSE_STAGE loading_full_440_compton_response
+0: ELLIPSE_STAGE preparing_compton_event_blocks
+3: [rank 3] view 1 accepted=2767
+2: [rank 2] view 1 accepted=2741
+1: [rank 1] view 1 accepted=2714
+0: [rank 0] view 1 accepted=2711
+7: [rank 7] view 1 accepted=2703
+4: [rank 4] view 1 accepted=2804
+5: [rank 5] view 1 accepted=2775
+6: [rank 6] view 1 accepted=2710
+3: [rank 3] view 2 accepted=2851
+2: [rank 2] view 2 accepted=2763
+1: [rank 1] view 2 accepted=2790
+0: [rank 0] view 2 accepted=2801
+7: [rank 7] view 2 accepted=2771
+6: [rank 6] view 2 accepted=2725
+5: [rank 5] view 2 accepted=2796
+4: [rank 4] view 2 accepted=2864
+3: [rank 3] view 3 accepted=2785
+2: [rank 2] view 3 accepted=2781
+0: [rank 0] view 3 accepted=2908
+1: [rank 1] view 3 accepted=2858
+7: [rank 7] view 3 accepted=2842
+6: [rank 6] view 3 accepted=2820
+5: [rank 5] view 3 accepted=2885
+4: [rank 4] view 3 accepted=2864
+3: [rank 3] view 4 accepted=2923
+2: [rank 2] view 4 accepted=2885
+0: [rank 0] view 4 accepted=2990
+1: [rank 1] view 4 accepted=2840
+7: [rank 7] view 4 accepted=2884
+5: [rank 5] view 4 accepted=2911
+6: [rank 6] view 4 accepted=2990
+4: [rank 4] view 4 accepted=2887
+3: [rank 3] view 5 accepted=2969
+2: [rank 2] view 5 accepted=2989
+0: [rank 0] view 5 accepted=2992
+1: [rank 1] view 5 accepted=2953
+7: [rank 7] view 5 accepted=3060
+5: [rank 5] view 5 accepted=3002
+6: [rank 6] view 5 accepted=2989
+4: [rank 4] view 5 accepted=3054
+3: [rank 3] view 6 accepted=3119
+2: [rank 2] view 6 accepted=3082
+0: [rank 0] view 6 accepted=3095
+7: [rank 7] view 6 accepted=3050
+1: [rank 1] view 6 accepted=3057
+5: [rank 5] view 6 accepted=3083
+4: [rank 4] view 6 accepted=3090
+6: [rank 6] view 6 accepted=3088
+3: [rank 3] view 7 accepted=3105
+2: [rank 2] view 7 accepted=3165
+0: [rank 0] view 7 accepted=3193
+7: [rank 7] view 7 accepted=3109
+1: [rank 1] view 7 accepted=3153
+5: [rank 5] view 7 accepted=3129
+4: [rank 4] view 7 accepted=3181
+6: [rank 6] view 7 accepted=3148
+3: [rank 3] view 8 accepted=3131
+0: [rank 0] view 8 accepted=3234
+2: [rank 2] view 8 accepted=3301
+7: [rank 7] view 8 accepted=3130
+1: [rank 1] view 8 accepted=3245
+5: [rank 5] view 8 accepted=3129
+4: [rank 4] view 8 accepted=3160
+6: [rank 6] view 8 accepted=3136
+3: [rank 3] view 9 accepted=3084
+0: [rank 0] view 9 accepted=3134
+2: [rank 2] view 9 accepted=3189
+7: [rank 7] view 9 accepted=3110
+1: [rank 1] view 9 accepted=3126
+5: [rank 5] view 9 accepted=3060
+4: [rank 4] view 9 accepted=3211
+6: [rank 6] view 9 accepted=3084
+3: [rank 3] view 10 accepted=3189
+0: [rank 0] view 10 accepted=3123
+2: [rank 2] view 10 accepted=3161
+7: [rank 7] view 10 accepted=3187
+1: [rank 1] view 10 accepted=3088
+5: [rank 5] view 10 accepted=3111
+4: [rank 4] view 10 accepted=3135
+6: [rank 6] view 10 accepted=3138
+0: [rank 0] view 11 accepted=3069
+3: [rank 3] view 11 accepted=3162
+2: [rank 2] view 11 accepted=3161
+7: [rank 7] view 11 accepted=3144
+1: [rank 1] view 11 accepted=3123
+5: [rank 5] view 11 accepted=3170
+4: [rank 4] view 11 accepted=3097
+6: [rank 6] view 11 accepted=3068
+0: [rank 0] view 12 accepted=3061
+3: [rank 3] view 12 accepted=3089
+2: [rank 2] view 12 accepted=3173
+7: [rank 7] view 12 accepted=3218
+1: [rank 1] view 12 accepted=3134
+5: [rank 5] view 12 accepted=3174
+4: [rank 4] view 12 accepted=3101
+0: [rank 0] view 13 accepted=3126
+3: [rank 3] view 13 accepted=3206
+6: [rank 6] view 12 accepted=3218
+2: [rank 2] view 13 accepted=3310
+7: [rank 7] view 13 accepted=3172
+1: [rank 1] view 13 accepted=3145
+5: [rank 5] view 13 accepted=3224
+4: [rank 4] view 13 accepted=3248
+0: [rank 0] view 14 accepted=3195
+3: [rank 3] view 14 accepted=3178
+6: [rank 6] view 13 accepted=3109
+2: [rank 2] view 14 accepted=3147
+7: [rank 7] view 14 accepted=3273
+1: [rank 1] view 14 accepted=3222
+5: [rank 5] view 14 accepted=3236
+4: [rank 4] view 14 accepted=3102
+0: [rank 0] view 15 accepted=3160
+3: [rank 3] view 15 accepted=3217
+2: [rank 2] view 15 accepted=3157
+6: [rank 6] view 14 accepted=3309
+7: [rank 7] view 15 accepted=3143
+5: [rank 5] view 15 accepted=3203
+1: [rank 1] view 15 accepted=3235
+0: [rank 0] view 16 accepted=3190
+4: [rank 4] view 15 accepted=3253
+3: [rank 3] view 16 accepted=3149
+2: [rank 2] view 16 accepted=3129
+6: [rank 6] view 15 accepted=3302
+7: [rank 7] view 16 accepted=3184
+1: [rank 1] view 16 accepted=3058
+5: [rank 5] view 16 accepted=3093
+0: [rank 0] view 17 accepted=3035
+4: [rank 4] view 16 accepted=3100
+3: [rank 3] view 17 accepted=3064
+2: [rank 2] view 17 accepted=3123
+6: [rank 6] view 16 accepted=3187
+7: [rank 7] view 17 accepted=3024
+1: [rank 1] view 17 accepted=3076
+0: [rank 0] view 18 accepted=2970
+5: [rank 5] view 17 accepted=2990
+3: [rank 3] view 18 accepted=2952
+4: [rank 4] view 17 accepted=3040
+2: [rank 2] view 18 accepted=2873
+7: [rank 7] view 18 accepted=2941
+0: [rank 0] view 19 accepted=2908
+1: [rank 1] view 18 accepted=2938
+6: [rank 6] view 17 accepted=3111
+5: [rank 5] view 18 accepted=2856
+3: [rank 3] view 19 accepted=2804
+4: [rank 4] view 18 accepted=2990
+2: [rank 2] view 19 accepted=2876
+0: [rank 0] view 20 accepted=2697
+7: [rank 7] view 19 accepted=2782
+1: [rank 1] view 19 accepted=2891
+3: [rank 3] view 20 accepted=2747
+6: [rank 6] view 18 accepted=2991
+5: [rank 5] view 19 accepted=2860
+4: [rank 4] view 19 accepted=2931
+2: [rank 2] view 20 accepted=2735
+7: [rank 7] view 20 accepted=2814
+1: [rank 1] view 20 accepted=2879
+5: [rank 5] view 20 accepted=2759
+6: [rank 6] view 19 accepted=2833
+4: [rank 4] view 20 accepted=2739
+6: [rank 6] view 20 accepted=2793
+0: ELLIPSE_STAGE compton_events_ready accepted=484936
+0: ELLIPSE_ITERATION 440_compton_and_jscc 50/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 350/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 400/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 450/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 500/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 550/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 600/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 650/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 700/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 750/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 800/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 850/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 900/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 950/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1000/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1050/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1100/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1150/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1200/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1250/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1300/10000
+0: ELLIPSE_ITERATION 440_compton_and_jscc 1350/10000

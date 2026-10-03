@@ -1,6 +1,9 @@
 # Preserve fetched evidence bytes so SHA256 checks survive a Windows checkout.
 *.json -text whitespace=cr-at-eol
+*.csv -text whitespace=cr-at-eol
+scripts/*.py -text
 log.out -text
 accounting.txt -text whitespace=cr-at-eol
+gpu.txt -text
 # Raw stderr includes upstream warning whitespace; retain it without text diffs.
 log.err -text -diff

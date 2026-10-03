@@ -1,0 +1,29 @@
+{
+  "checked_cluster_time": "2026-10-04T01:10:49+08:00",
+  "job": "1651956",
+  "queue": "1651956|NEMA_ABL_sweep|RUNNING|1-05:06:52|8|wqd10naf05g[4-5],wqd10nba07g[3-8]",
+  "release_sha256": "003e56d32a6e836aec127672b59f2cb2fc7e9b3e23388de50410ce291864655c",
+  "current_variant": "huber_medium",
+  "phase": "formal",
+  "last_iteration_lines": [
+    "0: ELLIPSE_ITERATION 440_compton_and_jscc 1200/10000",
+    "0: ELLIPSE_ITERATION 440_compton_and_jscc 1250/10000",
+    "0: ELLIPSE_ITERATION 440_compton_and_jscc 1300/10000",
+    "0: ELLIPSE_ITERATION 440_compton_and_jscc 1350/10000"
+  ],
+  "completed_formal": [
+    "bind_f010",
+    "huber_weak"
+  ],
+  "gates_sha256": {
+    "bind_f010": "a3d0eccb4417f728e070f67a8b857973060b99d34aa58d63a8c7856f937bdbbc",
+    "huber_weak": "8ecf09b2374ffe4787562a9bdcc2357bd9f6fdabedfae30d43f78e66696836ee"
+  },
+  "evidence_sha256": {
+    "log.out": "fcda09ac73c79b05fa30615be54623b5daabd820fd80b56e853728663986657a",
+    "log.err": "c5d6a35fdc32f33e37ad22335ea4b30ac506ee3ebf1aac39c8361afa70ebbf1c",
+    "accounting.txt": "dfd89321fc9a60f3d9291b65840540dd03ccd335a957c5dcad2b3d170e111035",
+    "gpu.txt": "c24a8daf6041a3df3528746cf1c5dede416d81e75d7693d5c4dd38b3f7a51423"
+  },
+  "resource_note": "GPU samples are instantaneous, not peaks. Completed-phase peaks are in formal gates. Read-only overlap probes are distinct from reconstruction steps."
+}

@@ -9,17 +9,59 @@
         "host_peak_fraction": 0.4543483723958333,
         "slurm_host_fraction": 0.63363203125
       },
-      "short": "not_verified",
-      "formal": "not_verified"
+      "short": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_short_1651956_0",
+        "elapsed_max_seconds": 910.98225723207,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.45435813802083336,
+        "slurm_host_fraction": 0.63363203125
+      },
+      "formal": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+        "elapsed_max_seconds": 42377.58237459883,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.455530078125,
+        "slurm_host_fraction": 0.63363203125
+      }
     },
     "huber_weak": {
-      "pilot": "not_verified",
-      "short": "not_verified",
-      "formal": "not_verified"
+      "pilot": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_pilot_1651956_1",
+        "elapsed_max_seconds": 255.10691047087312,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.4540042317708333,
+        "slurm_host_fraction": 0.63363203125
+      },
+      "short": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_short_1651956_1",
+        "elapsed_max_seconds": 918.7242635339499,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.4541971354166667,
+        "slurm_host_fraction": 0.63363203125
+      },
+      "formal": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+        "elapsed_max_seconds": 48676.18021836132,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.45507220052083336,
+        "slurm_host_fraction": 0.63363203125
+      }
     },
     "huber_medium": {
-      "pilot": "not_verified",
-      "short": "not_verified",
+      "pilot": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_pilot_1651956_2",
+        "elapsed_max_seconds": 276.5028924793005,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.45392669270833336,
+        "slurm_host_fraction": 0.63363203125
+      },
+      "short": {
+        "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_medium_short_1651956_2",
+        "elapsed_max_seconds": 1250.7053696326911,
+        "gpu_reserved_fraction": 0.44071882837072035,
+        "host_peak_fraction": 0.45396458333333334,
+        "slurm_host_fraction": 0.63363203125
+      },
       "formal": "not_verified"
     },
     "huber_strong": {

@@ -1,0 +1,124 @@
+{
+  "result": "NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "integrity_sha256": "26f702e8220320f365137a39a91a9854199aa1f2330406d719833351b3e2b3f9",
+  "method": "3-mm XY barycentric interpolation, matching z centers, no smoothing; CRC=(sphere/background-1)/9; relative channel scaling by pure-background mean",
+  "channels": {
+    "218": {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "background_mean_original_units": 434.7552795410156,
+      "background_cv": 0.6685801148414612,
+      "image_sha256": "bed2f2afd1931f3f14b196fd540e36059db249fb9a6f478865991292c09b7ae9"
+    },
+    "440": {
+      "channel": "440_SinglePlusCompton",
+      "background_mean_original_units": 924.1528930664062,
+      "background_cv": 0.9530699253082275,
+      "image_sha256": "f0903a07ac4a6f2bc073d6c01b22e393db4596bf60b3a8d9e32be79cb632f4f0"
+    }
+  },
+  "spheres": [
+    {
+      "energy_keV": 218,
+      "diameter_mm": 10,
+      "center_mm": [
+        57.0,
+        0.0,
+        0.0
+      ],
+      "sphere_effective_voxels": 19.4375,
+      "background_voxels": 1840,
+      "hot_mean": 618.6970559270436,
+      "local_background_mean": 570.6244506835938,
+      "local_background_cv": 0.7314638258118874,
+      "crc": 0.009360623394610364,
+      "cnr": 0.11517399436395236,
+      "truth_sampled_crc": 0.6616634847266881
+    },
+    {
+      "energy_keV": 218,
+      "diameter_mm": 17,
+      "center_mm": [
+        -28.499999999999986,
+        49.363448015713004,
+        0.0
+      ],
+      "sphere_effective_voxels": 95.2265625,
+      "background_voxels": 2916,
+      "hot_mean": 1460.624137721311,
+      "local_background_mean": 503.3842468261719,
+      "local_background_cv": 0.6149562637409938,
+      "crc": 0.2112898616669778,
+      "cnr": 3.092266665331043,
+      "truth_sampled_crc": 0.8297703103207811
+    },
+    {
+      "energy_keV": 218,
+      "diameter_mm": 28,
+      "center_mm": [
+        -28.500000000000025,
+        -49.363448015713,
+        0.0
+      ],
+      "sphere_effective_voxels": 425.546875,
+      "background_voxels": 5420,
+      "hot_mean": 3015.9092354600966,
+      "local_background_mean": 527.6473999023438,
+      "local_background_cv": 0.7319805436105946,
+      "crc": 0.5239740351897197,
+      "cnr": 6.44247495083177,
+      "truth_sampled_crc": 0.8973043863020929
+    },
+    {
+      "energy_keV": 440,
+      "diameter_mm": 13,
+      "center_mm": [
+        28.500000000000007,
+        49.363448015713,
+        0.0
+      ],
+      "sphere_effective_voxels": 42.5078125,
+      "background_voxels": 2000,
+      "hot_mean": 2543.341680705164,
+      "local_background_mean": 1069.9986572265625,
+      "local_background_cv": 0.49165899353015124,
+      "crc": 0.1529953138547241,
+      "cnr": 2.800635893601475,
+      "truth_sampled_crc": 0.767810015966734
+    },
+    {
+      "energy_keV": 440,
+      "diameter_mm": 22,
+      "center_mm": [
+        -57.0,
+        6.980486755139913e-15,
+        0.0
+      ],
+      "sphere_effective_voxels": 206.28125,
+      "background_voxels": 4056,
+      "hot_mean": 4984.900103636789,
+      "local_background_mean": 1063.9215087890625,
+      "local_background_cv": 1.1565484826424206,
+      "crc": 0.4094891255768293,
+      "cnr": 3.1865522159272146,
+      "truth_sampled_crc": 0.8559791485191638
+    },
+    {
+      "energy_keV": 440,
+      "diameter_mm": 37,
+      "center_mm": [
+        28.500000000000007,
+        -49.363448015713,
+        0.0
+      ],
+      "sphere_effective_voxels": 982.25,
+      "background_voxels": 7438,
+      "hot_mean": 6561.081470514503,
+      "local_background_mean": 1328.6060791015625,
+      "local_background_cv": 0.7500528990372145,
+      "crc": 0.4375910691260619,
+      "cnr": 5.250722485293871,
+      "truth_sampled_crc": 0.9192475988592439
+    }
+  ]
+}

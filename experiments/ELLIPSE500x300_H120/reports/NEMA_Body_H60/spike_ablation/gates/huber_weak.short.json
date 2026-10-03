@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "study": "NEMA_5e9_SPIKE_ABLATION_V1",
+  "variant": "huber_weak",
+  "phase": "short",
+  "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_huber_weak_short_1651956_1",
+  "iterations": 200,
+  "frames": 4,
+  "primaries": 5000000000,
+  "accepted_events": 484936,
+  "nodes": 8,
+  "gpu_reserved_fraction": 0.44071882837072035,
+  "host_peak_fraction": 0.4541971354166667,
+  "slurm_host_fraction": 0.63363203125,
+  "elapsed_max_seconds": 918.7242635339499,
+  "accounting": {
+    "job": "1651956",
+    "sacct": "1651956||480000M\n1651956.batch||\n1651956.extern||\n1651956.0|552072K|\n1651956.1|38930352K|\n1651956.2|124K|\n1651956.3|15368K|\n1651956.4|23672K|\n1651956.5|23464348K|\n1651956.6|144K|\n1651956.7|28052K|\n1651956.8|22599016K|\n1651956.9|32200K|\n1651956.10|38697948K|\n1651956.11|7652K|\n1651956.12|25313368K|\n",
+    "max_rss_bytes": 39864680448.0
+  },
+  "study_sha256": "d7445068aba0cee810f6a2a15a9ed87e8e06d7056c3c4890a98ad421995c5b09",
+  "release_sha256": "003e56d32a6e836aec127672b59f2cb2fc7e9b3e23388de50410ce291864655c",
+  "run_manifest_sha256": "9c24f31a5930ba0d0cff0d972b864ab42725f45a367387e4497ed9efcd5b424d",
+  "optimization_sha256": "1618554128133076cb17e197e8ebe043c7bf33927f059d3f34ed953c30403069",
+  "outputs_sha256": {
+    "440_SinglePhoton": {
+      "active": "460c31b2c0e410b7c3b1a7d4b7cf69d8aedd5d089b1692787d181a5bf2a13fda",
+      "full": "80e41f4edfbf0aadf5a7b80be507fdefffb2a057b90296c5e644e4f609ecbc8a",
+      "history": "a5d3b9058db42ad75d254f8aada8da1fd6964c9a47bc2420f6ef1a3cb667deb7"
+    },
+    "440_ComptonOnly": {
+      "active": "766e8972e20feb6ad4cf24e84c1bf231aa3982ddada0619d03c26e44cf53879e",
+      "full": "97233aa28544aabcfbe898b3dba7eef25e067a2befccd6440c496169256465a0",
+      "history": "d04705b810f45d5b3159d85d885c1ab3edd6b58575719b82038a5e73347b44fa"
+    },
+    "440_SinglePlusCompton": {
+      "active": "19e1d4ac06711345e5944b32507995f9ccddaf8c9ba2038cddff910a76671c49",
+      "full": "57df7dd0573c2ff4c6dac773342bdabb258bf11bc21e477787a2deb67f79c19c",
+      "history": "72e3d6b8345126b8efe6e1c19c86d3a4b09281c6ec5d010017111afb3880c611"
+    },
+    "218_SinglePhoton_CrossTalkCorrected": {
+      "active": "8a18d983bc8168d9406a42c43dd03c92110432f8cca413411734e3609c77b112",
+      "full": "1e9abef0ca030b00a3d33cc39b140cb2574b3892854d0d1b7bfe9e5ea461384e",
+      "history": "f3262108e4d4e98e38602cb34c1cf7c652919fb027f23ed1dd4e2e9875486440"
+    },
+    "440SinglePlus218Single": {
+      "active": "b4b581e41d24b9d1b66d2d3c908c7737f56394308210f8cae62d5b5d2d69c021",
+      "full": "d3d1e68a9e430b8823fa1e6fb207c2fa64b05198363de27ee6880b94a5a98127",
+      "history": "e48798f9f8f92d5afa8163d60745858b1181307ac5e0269e2d32c80fa13afbe2"
+    },
+    "440SingleComptonPlus218Single": {
+      "active": "af5cd514ec45bb4415258b0a1870edbb13b3ad336d75f9343394c348d5189a1a",
+      "full": "1c9e50d17955b7a32188498172295a8dae8b994fea323201edabf95d8bd49db4",
+      "history": "6d12a8037a8434852a584d88fa5fd5185d62d6c523eaa268887ba7922258372c"
+    }
+  },
+  "prediction_sha256": "fb07beff9abdc7e63d02239253ddf95c00215596371199f95394c822d53cac2b",
+  "optimization_states": {
+    "440_single": {
+      "alpha": 227.8150539537276,
+      "count": 5363190.0,
+      "previous_objective": -2.309504800104101,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 3.173191946658721e-07,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    },
+    "218_corrected": {
+      "alpha": 139.52256849014955,
+      "count": 12314473.0,
+      "previous_objective": -3.4800973739455743,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 7.730353965342963e-07,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    },
+    "440_compton": {
+      "alpha": 229.24311955073483,
+      "count": 484936.0,
+      "previous_objective": -3.8836907814379478,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 2.672788119777206e-06,
+      "inner_cap_count": 90.0,
+      "updates": 200.0
+    },
+    "440_jscc": {
+      "alpha": 227.9327946445387,
+      "count": 5848126.0,
+      "previous_objective": -2.4394604247819456,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 5.280047132829912e-07,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    }
+  }
+}

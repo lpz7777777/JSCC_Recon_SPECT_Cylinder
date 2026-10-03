@@ -1,0 +1,5681 @@
+{
+  "variant": {
+    "id": "bind_f010",
+    "method": "binding",
+    "fraction_threshold": 0.1
+  },
+  "states": {
+    "440_single": {
+      "alpha": 227.8150539537276,
+      "count": 5363190.0,
+      "previous_objective": -2.310100817453284,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 10000.0
+    },
+    "218_corrected": {
+      "alpha": 139.52256849014955,
+      "count": 12314473.0,
+      "previous_objective": -3.4827504968874,
+      "max_objective_increase": 3.2666465088482255e-09,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 10000.0
+    },
+    "440_compton": {
+      "alpha": 229.24311955073483,
+      "count": 484936.0,
+      "previous_objective": -3.885277631182653,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 10000.0
+    },
+    "440_jscc": {
+      "alpha": 227.9327946445387,
+      "count": 5848126.0,
+      "previous_objective": -2.4406009487564884,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 10000.0
+    }
+  },
+  "history": [
+    {
+      "channel": "440_single",
+      "iteration": 0,
+      "likelihood_over_count": 2.1300984417190345,
+      "prior": 0.0,
+      "objective": 2.1300984417190345
+    },
+    {
+      "channel": "440_single",
+      "iteration": 50,
+      "likelihood_over_count": -2.3092102075138126,
+      "prior": 0.0,
+      "objective": -2.3092102075138126
+    },
+    {
+      "channel": "440_single",
+      "iteration": 100,
+      "likelihood_over_count": -2.309423985308209,
+      "prior": 0.0,
+      "objective": -2.309423985308209
+    },
+    {
+      "channel": "440_single",
+      "iteration": 150,
+      "likelihood_over_count": -2.309474397556861,
+      "prior": 0.0,
+      "objective": -2.309474397556861
+    },
+    {
+      "channel": "440_single",
+      "iteration": 200,
+      "likelihood_over_count": -2.3095117303867894,
+      "prior": 0.0,
+      "objective": -2.3095117303867894
+    },
+    {
+      "channel": "440_single",
+      "iteration": 250,
+      "likelihood_over_count": -2.3095466190046574,
+      "prior": 0.0,
+      "objective": -2.3095466190046574
+    },
+    {
+      "channel": "440_single",
+      "iteration": 300,
+      "likelihood_over_count": -2.309579987440043,
+      "prior": 0.0,
+      "objective": -2.309579987440043
+    },
+    {
+      "channel": "440_single",
+      "iteration": 350,
+      "likelihood_over_count": -2.3096118825481513,
+      "prior": 0.0,
+      "objective": -2.3096118825481513
+    },
+    {
+      "channel": "440_single",
+      "iteration": 400,
+      "likelihood_over_count": -2.309642263579417,
+      "prior": 0.0,
+      "objective": -2.309642263579417
+    },
+    {
+      "channel": "440_single",
+      "iteration": 450,
+      "likelihood_over_count": -2.3096710857589766,
+      "prior": 0.0,
+      "objective": -2.3096710857589766
+    },
+    {
+      "channel": "440_single",
+      "iteration": 500,
+      "likelihood_over_count": -2.3096983196992036,
+      "prior": 0.0,
+      "objective": -2.3096983196992036
+    },
+    {
+      "channel": "440_single",
+      "iteration": 550,
+      "likelihood_over_count": -2.3097239510161414,
+      "prior": 0.0,
+      "objective": -2.3097239510161414
+    },
+    {
+      "channel": "440_single",
+      "iteration": 600,
+      "likelihood_over_count": -2.3097479845732893,
+      "prior": 0.0,
+      "objective": -2.3097479845732893
+    },
+    {
+      "channel": "440_single",
+      "iteration": 650,
+      "likelihood_over_count": -2.309770440907123,
+      "prior": 0.0,
+      "objective": -2.309770440907123
+    },
+    {
+      "channel": "440_single",
+      "iteration": 700,
+      "likelihood_over_count": -2.3097913571590794,
+      "prior": 0.0,
+      "objective": -2.3097913571590794
+    },
+    {
+      "channel": "440_single",
+      "iteration": 750,
+      "likelihood_over_count": -2.3098107822239973,
+      "prior": 0.0,
+      "objective": -2.3098107822239973
+    },
+    {
+      "channel": "440_single",
+      "iteration": 800,
+      "likelihood_over_count": -2.309828775952838,
+      "prior": 0.0,
+      "objective": -2.309828775952838
+    },
+    {
+      "channel": "440_single",
+      "iteration": 850,
+      "likelihood_over_count": -2.309845406589463,
+      "prior": 0.0,
+      "objective": -2.309845406589463
+    },
+    {
+      "channel": "440_single",
+      "iteration": 900,
+      "likelihood_over_count": -2.3098607482786457,
+      "prior": 0.0,
+      "objective": -2.3098607482786457
+    },
+    {
+      "channel": "440_single",
+      "iteration": 950,
+      "likelihood_over_count": -2.3098748778785323,
+      "prior": 0.0,
+      "objective": -2.3098748778785323
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1000,
+      "likelihood_over_count": -2.309887875480361,
+      "prior": 0.0,
+      "objective": -2.309887875480361
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1050,
+      "likelihood_over_count": -2.309899819071351,
+      "prior": 0.0,
+      "objective": -2.309899819071351
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1100,
+      "likelihood_over_count": -2.3099107877316505,
+      "prior": 0.0,
+      "objective": -2.3099107877316505
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1150,
+      "likelihood_over_count": -2.3099208570731293,
+      "prior": 0.0,
+      "objective": -2.3099208570731293
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1200,
+      "likelihood_over_count": -2.3099300991912486,
+      "prior": 0.0,
+      "objective": -2.3099300991912486
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1250,
+      "likelihood_over_count": -2.3099385838553954,
+      "prior": 0.0,
+      "objective": -2.3099385838553954
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1300,
+      "likelihood_over_count": -2.3099463759047034,
+      "prior": 0.0,
+      "objective": -2.3099463759047034
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1350,
+      "likelihood_over_count": -2.309953536534731,
+      "prior": 0.0,
+      "objective": -2.309953536534731
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1400,
+      "likelihood_over_count": -2.309960121681675,
+      "prior": 0.0,
+      "objective": -2.309960121681675
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1450,
+      "likelihood_over_count": -2.309966184868517,
+      "prior": 0.0,
+      "objective": -2.309966184868517
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1500,
+      "likelihood_over_count": -2.309971772962778,
+      "prior": 0.0,
+      "objective": -2.309971772962778
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1550,
+      "likelihood_over_count": -2.3099769306823807,
+      "prior": 0.0,
+      "objective": -2.3099769306823807
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1600,
+      "likelihood_over_count": -2.3099816982079537,
+      "prior": 0.0,
+      "objective": -2.3099816982079537
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1650,
+      "likelihood_over_count": -2.309986112080726,
+      "prior": 0.0,
+      "objective": -2.309986112080726
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1700,
+      "likelihood_over_count": -2.3099902053543784,
+      "prior": 0.0,
+      "objective": -2.3099902053543784
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1750,
+      "likelihood_over_count": -2.3099940090016857,
+      "prior": 0.0,
+      "objective": -2.3099940090016857
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1800,
+      "likelihood_over_count": -2.309997549501793,
+      "prior": 0.0,
+      "objective": -2.309997549501793
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1850,
+      "likelihood_over_count": -2.3100008514553974,
+      "prior": 0.0,
+      "objective": -2.3100008514553974
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1900,
+      "likelihood_over_count": -2.3100039368942284,
+      "prior": 0.0,
+      "objective": -2.3100039368942284
+    },
+    {
+      "channel": "440_single",
+      "iteration": 1950,
+      "likelihood_over_count": -2.3100068263450764,
+      "prior": 0.0,
+      "objective": -2.3100068263450764
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2000,
+      "likelihood_over_count": -2.310009537765638,
+      "prior": 0.0,
+      "objective": -2.310009537765638
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2050,
+      "likelihood_over_count": -2.310012086755814,
+      "prior": 0.0,
+      "objective": -2.310012086755814
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2100,
+      "likelihood_over_count": -2.3100144885728686,
+      "prior": 0.0,
+      "objective": -2.3100144885728686
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2150,
+      "likelihood_over_count": -2.310016755222164,
+      "prior": 0.0,
+      "objective": -2.310016755222164
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2200,
+      "likelihood_over_count": -2.3100188993393096,
+      "prior": 0.0,
+      "objective": -2.3100188993393096
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2250,
+      "likelihood_over_count": -2.3100209314498303,
+      "prior": 0.0,
+      "objective": -2.3100209314498303
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2300,
+      "likelihood_over_count": -2.3100228603505863,
+      "prior": 0.0,
+      "objective": -2.3100228603505863
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2350,
+      "likelihood_over_count": -2.3100246959155064,
+      "prior": 0.0,
+      "objective": -2.3100246959155064
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2400,
+      "likelihood_over_count": -2.310026444484426,
+      "prior": 0.0,
+      "objective": -2.310026444484426
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2450,
+      "likelihood_over_count": -2.310028113741428,
+      "prior": 0.0,
+      "objective": -2.310028113741428
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2500,
+      "likelihood_over_count": -2.3100297093175572,
+      "prior": 0.0,
+      "objective": -2.3100297093175572
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2550,
+      "likelihood_over_count": -2.3100312378443224,
+      "prior": 0.0,
+      "objective": -2.3100312378443224
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2600,
+      "likelihood_over_count": -2.310032703568891,
+      "prior": 0.0,
+      "objective": -2.310032703568891
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2650,
+      "likelihood_over_count": -2.3100341115454683,
+      "prior": 0.0,
+      "objective": -2.3100341115454683
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2700,
+      "likelihood_over_count": -2.310035465625664,
+      "prior": 0.0,
+      "objective": -2.310035465625664
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2750,
+      "likelihood_over_count": -2.310036769769815,
+      "prior": 0.0,
+      "objective": -2.310036769769815
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2800,
+      "likelihood_over_count": -2.3100380272636514,
+      "prior": 0.0,
+      "objective": -2.3100380272636514
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2850,
+      "likelihood_over_count": -2.310039241341277,
+      "prior": 0.0,
+      "objective": -2.310039241341277
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2900,
+      "likelihood_over_count": -2.31004041481999,
+      "prior": 0.0,
+      "objective": -2.31004041481999
+    },
+    {
+      "channel": "440_single",
+      "iteration": 2950,
+      "likelihood_over_count": -2.3100415504105567,
+      "prior": 0.0,
+      "objective": -2.3100415504105567
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3000,
+      "likelihood_over_count": -2.310042650330864,
+      "prior": 0.0,
+      "objective": -2.310042650330864
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3050,
+      "likelihood_over_count": -2.3100437168370163,
+      "prior": 0.0,
+      "objective": -2.3100437168370163
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3100,
+      "likelihood_over_count": -2.3100447515162146,
+      "prior": 0.0,
+      "objective": -2.3100447515162146
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3150,
+      "likelihood_over_count": -2.3100457565389814,
+      "prior": 0.0,
+      "objective": -2.3100457565389814
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3200,
+      "likelihood_over_count": -2.3100467338083415,
+      "prior": 0.0,
+      "objective": -2.3100467338083415
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3250,
+      "likelihood_over_count": -2.310047683511631,
+      "prior": 0.0,
+      "objective": -2.310047683511631
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3300,
+      "likelihood_over_count": -2.310048609311726,
+      "prior": 0.0,
+      "objective": -2.310048609311726
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3350,
+      "likelihood_over_count": -2.3100495101878074,
+      "prior": 0.0,
+      "objective": -2.3100495101878074
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3400,
+      "likelihood_over_count": -2.3100503890648616,
+      "prior": 0.0,
+      "objective": -2.3100503890648616
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3450,
+      "likelihood_over_count": -2.310051246227795,
+      "prior": 0.0,
+      "objective": -2.310051246227795
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3500,
+      "likelihood_over_count": -2.3100520829578235,
+      "prior": 0.0,
+      "objective": -2.3100520829578235
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3550,
+      "likelihood_over_count": -2.310052899949228,
+      "prior": 0.0,
+      "objective": -2.310052899949228
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3600,
+      "likelihood_over_count": -2.3100536974718895,
+      "prior": 0.0,
+      "objective": -2.3100536974718895
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3650,
+      "likelihood_over_count": -2.310054478193279,
+      "prior": 0.0,
+      "objective": -2.310054478193279
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3700,
+      "likelihood_over_count": -2.310055241249,
+      "prior": 0.0,
+      "objective": -2.310055241249
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3750,
+      "likelihood_over_count": -2.310055988144173,
+      "prior": 0.0,
+      "objective": -2.310055988144173
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3800,
+      "likelihood_over_count": -2.3100567190554187,
+      "prior": 0.0,
+      "objective": -2.3100567190554187
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3850,
+      "likelihood_over_count": -2.3100574353562475,
+      "prior": 0.0,
+      "objective": -2.3100574353562475
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3900,
+      "likelihood_over_count": -2.310058136936999,
+      "prior": 0.0,
+      "objective": -2.310058136936999
+    },
+    {
+      "channel": "440_single",
+      "iteration": 3950,
+      "likelihood_over_count": -2.310058824408142,
+      "prior": 0.0,
+      "objective": -2.310058824408142
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4000,
+      "likelihood_over_count": -2.310059498878333,
+      "prior": 0.0,
+      "objective": -2.310059498878333
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4050,
+      "likelihood_over_count": -2.310060160019092,
+      "prior": 0.0,
+      "objective": -2.310060160019092
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4100,
+      "likelihood_over_count": -2.310060809017566,
+      "prior": 0.0,
+      "objective": -2.310060809017566
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4150,
+      "likelihood_over_count": -2.3100614456555344,
+      "prior": 0.0,
+      "objective": -2.3100614456555344
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4200,
+      "likelihood_over_count": -2.3100620709206376,
+      "prior": 0.0,
+      "objective": -2.3100620709206376
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4250,
+      "likelihood_over_count": -2.3100626850563906,
+      "prior": 0.0,
+      "objective": -2.3100626850563906
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4300,
+      "likelihood_over_count": -2.310063288266329,
+      "prior": 0.0,
+      "objective": -2.310063288266329
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4350,
+      "likelihood_over_count": -2.3100638812662497,
+      "prior": 0.0,
+      "objective": -2.3100638812662497
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4400,
+      "likelihood_over_count": -2.3100644639574632,
+      "prior": 0.0,
+      "objective": -2.3100644639574632
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4450,
+      "likelihood_over_count": -2.3100650370669213,
+      "prior": 0.0,
+      "objective": -2.3100650370669213
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4500,
+      "likelihood_over_count": -2.3100656006842577,
+      "prior": 0.0,
+      "objective": -2.3100656006842577
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4550,
+      "likelihood_over_count": -2.3100661551921555,
+      "prior": 0.0,
+      "objective": -2.3100661551921555
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4600,
+      "likelihood_over_count": -2.310066700807996,
+      "prior": 0.0,
+      "objective": -2.310066700807996
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4650,
+      "likelihood_over_count": -2.310067237451367,
+      "prior": 0.0,
+      "objective": -2.310067237451367
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4700,
+      "likelihood_over_count": -2.3100677657848796,
+      "prior": 0.0,
+      "objective": -2.3100677657848796
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4750,
+      "likelihood_over_count": -2.3100682864918434,
+      "prior": 0.0,
+      "objective": -2.3100682864918434
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4800,
+      "likelihood_over_count": -2.3100687990257156,
+      "prior": 0.0,
+      "objective": -2.3100687990257156
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4850,
+      "likelihood_over_count": -2.3100693037806868,
+      "prior": 0.0,
+      "objective": -2.3100693037806868
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4900,
+      "likelihood_over_count": -2.3100698010858554,
+      "prior": 0.0,
+      "objective": -2.3100698010858554
+    },
+    {
+      "channel": "440_single",
+      "iteration": 4950,
+      "likelihood_over_count": -2.3100702916140192,
+      "prior": 0.0,
+      "objective": -2.3100702916140192
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5000,
+      "likelihood_over_count": -2.310070774653538,
+      "prior": 0.0,
+      "objective": -2.310070774653538
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5050,
+      "likelihood_over_count": -2.3100712512079604,
+      "prior": 0.0,
+      "objective": -2.3100712512079604
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5100,
+      "likelihood_over_count": -2.3100717206476973,
+      "prior": 0.0,
+      "objective": -2.3100717206476973
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5150,
+      "likelihood_over_count": -2.310072184040404,
+      "prior": 0.0,
+      "objective": -2.310072184040404
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5200,
+      "likelihood_over_count": -2.3100726413405157,
+      "prior": 0.0,
+      "objective": -2.3100726413405157
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5250,
+      "likelihood_over_count": -2.310073091976533,
+      "prior": 0.0,
+      "objective": -2.310073091976533
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5300,
+      "likelihood_over_count": -2.310073536767593,
+      "prior": 0.0,
+      "objective": -2.310073536767593
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5350,
+      "likelihood_over_count": -2.310073975743571,
+      "prior": 0.0,
+      "objective": -2.310073975743571
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5400,
+      "likelihood_over_count": -2.3100744093392858,
+      "prior": 0.0,
+      "objective": -2.3100744093392858
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5450,
+      "likelihood_over_count": -2.3100748375053004,
+      "prior": 0.0,
+      "objective": -2.3100748375053004
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5500,
+      "likelihood_over_count": -2.310075259637246,
+      "prior": 0.0,
+      "objective": -2.310075259637246
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5550,
+      "likelihood_over_count": -2.3100756772474496,
+      "prior": 0.0,
+      "objective": -2.3100756772474496
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5600,
+      "likelihood_over_count": -2.31007608939745,
+      "prior": 0.0,
+      "objective": -2.31007608939745
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5650,
+      "likelihood_over_count": -2.310076496637674,
+      "prior": 0.0,
+      "objective": -2.310076496637674
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5700,
+      "likelihood_over_count": -2.3100768989494838,
+      "prior": 0.0,
+      "objective": -2.3100768989494838
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5750,
+      "likelihood_over_count": -2.310077296067103,
+      "prior": 0.0,
+      "objective": -2.310077296067103
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5800,
+      "likelihood_over_count": -2.3100776891114454,
+      "prior": 0.0,
+      "objective": -2.3100776891114454
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5850,
+      "likelihood_over_count": -2.3100780772348752,
+      "prior": 0.0,
+      "objective": -2.3100780772348752
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5900,
+      "likelihood_over_count": -2.3100784613750176,
+      "prior": 0.0,
+      "objective": -2.3100784613750176
+    },
+    {
+      "channel": "440_single",
+      "iteration": 5950,
+      "likelihood_over_count": -2.310078841197759,
+      "prior": 0.0,
+      "objective": -2.310078841197759
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6000,
+      "likelihood_over_count": -2.3100792163260473,
+      "prior": 0.0,
+      "objective": -2.3100792163260473
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6050,
+      "likelihood_over_count": -2.310079587676988,
+      "prior": 0.0,
+      "objective": -2.310079587676988
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6100,
+      "likelihood_over_count": -2.310079955083364,
+      "prior": 0.0,
+      "objective": -2.310079955083364
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6150,
+      "likelihood_over_count": -2.310080318038209,
+      "prior": 0.0,
+      "objective": -2.310080318038209
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6200,
+      "likelihood_over_count": -2.310080677097659,
+      "prior": 0.0,
+      "objective": -2.310080677097659
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6250,
+      "likelihood_over_count": -2.3100810330617043,
+      "prior": 0.0,
+      "objective": -2.3100810330617043
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6300,
+      "likelihood_over_count": -2.310081385017815,
+      "prior": 0.0,
+      "objective": -2.310081385017815
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6350,
+      "likelihood_over_count": -2.3100817331179777,
+      "prior": 0.0,
+      "objective": -2.3100817331179777
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6400,
+      "likelihood_over_count": -2.310082078015106,
+      "prior": 0.0,
+      "objective": -2.310082078015106
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6450,
+      "likelihood_over_count": -2.310082418952625,
+      "prior": 0.0,
+      "objective": -2.310082418952625
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6500,
+      "likelihood_over_count": -2.310082757301684,
+      "prior": 0.0,
+      "objective": -2.310082757301684
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6550,
+      "likelihood_over_count": -2.3100830919459376,
+      "prior": 0.0,
+      "objective": -2.3100830919459376
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6600,
+      "likelihood_over_count": -2.310083422959567,
+      "prior": 0.0,
+      "objective": -2.310083422959567
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6650,
+      "likelihood_over_count": -2.310083751373612,
+      "prior": 0.0,
+      "objective": -2.310083751373612
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6700,
+      "likelihood_over_count": -2.310084076470298,
+      "prior": 0.0,
+      "objective": -2.310084076470298
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6750,
+      "likelihood_over_count": -2.3100843988418704,
+      "prior": 0.0,
+      "objective": -2.3100843988418704
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6800,
+      "likelihood_over_count": -2.3100847175276877,
+      "prior": 0.0,
+      "objective": -2.3100847175276877
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6850,
+      "likelihood_over_count": -2.3100850335997256,
+      "prior": 0.0,
+      "objective": -2.3100850335997256
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6900,
+      "likelihood_over_count": -2.310085346914844,
+      "prior": 0.0,
+      "objective": -2.310085346914844
+    },
+    {
+      "channel": "440_single",
+      "iteration": 6950,
+      "likelihood_over_count": -2.3100856572867645,
+      "prior": 0.0,
+      "objective": -2.3100856572867645
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7000,
+      "likelihood_over_count": -2.3100859651971297,
+      "prior": 0.0,
+      "objective": -2.3100859651971297
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7050,
+      "likelihood_over_count": -2.3100862700060496,
+      "prior": 0.0,
+      "objective": -2.3100862700060496
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7100,
+      "likelihood_over_count": -2.3100865722763775,
+      "prior": 0.0,
+      "objective": -2.3100865722763775
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7150,
+      "likelihood_over_count": -2.3100868723877204,
+      "prior": 0.0,
+      "objective": -2.3100868723877204
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7200,
+      "likelihood_over_count": -2.310087169241112,
+      "prior": 0.0,
+      "objective": -2.310087169241112
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7250,
+      "likelihood_over_count": -2.310087463627436,
+      "prior": 0.0,
+      "objective": -2.310087463627436
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7300,
+      "likelihood_over_count": -2.3100877560604363,
+      "prior": 0.0,
+      "objective": -2.3100877560604363
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7350,
+      "likelihood_over_count": -2.3100880458606747,
+      "prior": 0.0,
+      "objective": -2.3100880458606747
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7400,
+      "likelihood_over_count": -2.3100883331120787,
+      "prior": 0.0,
+      "objective": -2.3100883331120787
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7450,
+      "likelihood_over_count": -2.3100886182214646,
+      "prior": 0.0,
+      "objective": -2.3100886182214646
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7500,
+      "likelihood_over_count": -2.310088900835781,
+      "prior": 0.0,
+      "objective": -2.310088900835781
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7550,
+      "likelihood_over_count": -2.3100891814450764,
+      "prior": 0.0,
+      "objective": -2.3100891814450764
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7600,
+      "likelihood_over_count": -2.3100894597953396,
+      "prior": 0.0,
+      "objective": -2.3100894597953396
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7650,
+      "likelihood_over_count": -2.310089736163206,
+      "prior": 0.0,
+      "objective": -2.310089736163206
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7700,
+      "likelihood_over_count": -2.3100900099394184,
+      "prior": 0.0,
+      "objective": -2.3100900099394184
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7750,
+      "likelihood_over_count": -2.310090282032219,
+      "prior": 0.0,
+      "objective": -2.310090282032219
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7800,
+      "likelihood_over_count": -2.3100905518574715,
+      "prior": 0.0,
+      "objective": -2.3100905518574715
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7850,
+      "likelihood_over_count": -2.310090819836009,
+      "prior": 0.0,
+      "objective": -2.310090819836009
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7900,
+      "likelihood_over_count": -2.310091085567365,
+      "prior": 0.0,
+      "objective": -2.310091085567365
+    },
+    {
+      "channel": "440_single",
+      "iteration": 7950,
+      "likelihood_over_count": -2.3100913492406567,
+      "prior": 0.0,
+      "objective": -2.3100913492406567
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8000,
+      "likelihood_over_count": -2.310091611229288,
+      "prior": 0.0,
+      "objective": -2.310091611229288
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8050,
+      "likelihood_over_count": -2.3100918714286824,
+      "prior": 0.0,
+      "objective": -2.3100918714286824
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8100,
+      "likelihood_over_count": -2.310092129775117,
+      "prior": 0.0,
+      "objective": -2.310092129775117
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8150,
+      "likelihood_over_count": -2.310092386226389,
+      "prior": 0.0,
+      "objective": -2.310092386226389
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8200,
+      "likelihood_over_count": -2.3100926408328895,
+      "prior": 0.0,
+      "objective": -2.3100926408328895
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8250,
+      "likelihood_over_count": -2.3100928938300633,
+      "prior": 0.0,
+      "objective": -2.3100928938300633
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8300,
+      "likelihood_over_count": -2.3100931449895117,
+      "prior": 0.0,
+      "objective": -2.3100931449895117
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8350,
+      "likelihood_over_count": -2.3100933943878097,
+      "prior": 0.0,
+      "objective": -2.3100933943878097
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8400,
+      "likelihood_over_count": -2.3100936419515397,
+      "prior": 0.0,
+      "objective": -2.3100936419515397
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8450,
+      "likelihood_over_count": -2.310093888570534,
+      "prior": 0.0,
+      "objective": -2.310093888570534
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8500,
+      "likelihood_over_count": -2.3100941326650974,
+      "prior": 0.0,
+      "objective": -2.3100941326650974
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8550,
+      "likelihood_over_count": -2.3100943756526235,
+      "prior": 0.0,
+      "objective": -2.3100943756526235
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8600,
+      "likelihood_over_count": -2.310094617099639,
+      "prior": 0.0,
+      "objective": -2.310094617099639
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8650,
+      "likelihood_over_count": -2.3100948567236457,
+      "prior": 0.0,
+      "objective": -2.3100948567236457
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8700,
+      "likelihood_over_count": -2.310095094897637,
+      "prior": 0.0,
+      "objective": -2.310095094897637
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8750,
+      "likelihood_over_count": -2.3100953317127115,
+      "prior": 0.0,
+      "objective": -2.3100953317127115
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8800,
+      "likelihood_over_count": -2.3100955668561243,
+      "prior": 0.0,
+      "objective": -2.3100955668561243
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8850,
+      "likelihood_over_count": -2.3100958003563736,
+      "prior": 0.0,
+      "objective": -2.3100958003563736
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8900,
+      "likelihood_over_count": -2.310096032815786,
+      "prior": 0.0,
+      "objective": -2.310096032815786
+    },
+    {
+      "channel": "440_single",
+      "iteration": 8950,
+      "likelihood_over_count": -2.310096263829388,
+      "prior": 0.0,
+      "objective": -2.310096263829388
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9000,
+      "likelihood_over_count": -2.310096493194101,
+      "prior": 0.0,
+      "objective": -2.310096493194101
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9050,
+      "likelihood_over_count": -2.3100967212588,
+      "prior": 0.0,
+      "objective": -2.3100967212588
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9100,
+      "likelihood_over_count": -2.3100969481909748,
+      "prior": 0.0,
+      "objective": -2.3100969481909748
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9150,
+      "likelihood_over_count": -2.310097173765402,
+      "prior": 0.0,
+      "objective": -2.310097173765402
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9200,
+      "likelihood_over_count": -2.310097397777653,
+      "prior": 0.0,
+      "objective": -2.310097397777653
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9250,
+      "likelihood_over_count": -2.3100976206391604,
+      "prior": 0.0,
+      "objective": -2.3100976206391604
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9300,
+      "likelihood_over_count": -2.3100978418743106,
+      "prior": 0.0,
+      "objective": -2.3100978418743106
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9350,
+      "likelihood_over_count": -2.310098061946405,
+      "prior": 0.0,
+      "objective": -2.310098061946405
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9400,
+      "likelihood_over_count": -2.3100982810239903,
+      "prior": 0.0,
+      "objective": -2.3100982810239903
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9450,
+      "likelihood_over_count": -2.3100984989678706,
+      "prior": 0.0,
+      "objective": -2.3100984989678706
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9500,
+      "likelihood_over_count": -2.3100987154052635,
+      "prior": 0.0,
+      "objective": -2.3100987154052635
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9550,
+      "likelihood_over_count": -2.310098930675065,
+      "prior": 0.0,
+      "objective": -2.310098930675065
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9600,
+      "likelihood_over_count": -2.3100991448564643,
+      "prior": 0.0,
+      "objective": -2.3100991448564643
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9650,
+      "likelihood_over_count": -2.310099357883297,
+      "prior": 0.0,
+      "objective": -2.310099357883297
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9700,
+      "likelihood_over_count": -2.3100995699128886,
+      "prior": 0.0,
+      "objective": -2.3100995699128886
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9750,
+      "likelihood_over_count": -2.3100997807122634,
+      "prior": 0.0,
+      "objective": -2.3100997807122634
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9800,
+      "likelihood_over_count": -2.3100999898864982,
+      "prior": 0.0,
+      "objective": -2.3100999898864982
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9850,
+      "likelihood_over_count": -2.310100198836993,
+      "prior": 0.0,
+      "objective": -2.310100198836993
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9900,
+      "likelihood_over_count": -2.31010040581237,
+      "prior": 0.0,
+      "objective": -2.31010040581237
+    },
+    {
+      "channel": "440_single",
+      "iteration": 9950,
+      "likelihood_over_count": -2.3101006126114854,
+      "prior": 0.0,
+      "objective": -2.3101006126114854
+    },
+    {
+      "channel": "440_single",
+      "iteration": 10000,
+      "likelihood_over_count": -2.310100817453284,
+      "prior": 0.0,
+      "objective": -2.310100817453284
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 0,
+      "likelihood_over_count": -2.9978061111357435,
+      "prior": 0.0,
+      "objective": -2.9978061111357435
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 50,
+      "likelihood_over_count": -3.481631239073834,
+      "prior": 0.0,
+      "objective": -3.481631239073834
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 100,
+      "likelihood_over_count": -3.4819397794119267,
+      "prior": 0.0,
+      "objective": -3.4819397794119267
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 150,
+      "likelihood_over_count": -3.4820639412061007,
+      "prior": 0.0,
+      "objective": -3.4820639412061007
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 200,
+      "likelihood_over_count": -3.482158886075026,
+      "prior": 0.0,
+      "objective": -3.482158886075026
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 250,
+      "likelihood_over_count": -3.4822392278612826,
+      "prior": 0.0,
+      "objective": -3.4822392278612826
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 300,
+      "likelihood_over_count": -3.482307426686836,
+      "prior": 0.0,
+      "objective": -3.482307426686836
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 350,
+      "likelihood_over_count": -3.482364815925548,
+      "prior": 0.0,
+      "objective": -3.482364815925548
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 400,
+      "likelihood_over_count": -3.482412742323777,
+      "prior": 0.0,
+      "objective": -3.482412742323777
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 450,
+      "likelihood_over_count": -3.4824525825026433,
+      "prior": 0.0,
+      "objective": -3.4824525825026433
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 500,
+      "likelihood_over_count": -3.4824856513400793,
+      "prior": 0.0,
+      "objective": -3.4824856513400793
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 550,
+      "likelihood_over_count": -3.482513134656985,
+      "prior": 0.0,
+      "objective": -3.482513134656985
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 600,
+      "likelihood_over_count": -3.482536058839232,
+      "prior": 0.0,
+      "objective": -3.482536058839232
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 650,
+      "likelihood_over_count": -3.48255528460544,
+      "prior": 0.0,
+      "objective": -3.48255528460544
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 700,
+      "likelihood_over_count": -3.4825715205600214,
+      "prior": 0.0,
+      "objective": -3.4825715205600214
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 750,
+      "likelihood_over_count": -3.482585338958089,
+      "prior": 0.0,
+      "objective": -3.482585338958089
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 800,
+      "likelihood_over_count": -3.482597199585929,
+      "prior": 0.0,
+      "objective": -3.482597199585929
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 850,
+      "likelihood_over_count": -3.4826074672519245,
+      "prior": 0.0,
+      "objective": -3.4826074672519245
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 900,
+      "likelihood_over_count": -3.482616432876521,
+      "prior": 0.0,
+      "objective": -3.482616432876521
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 950,
+      "likelihood_over_count": -3.4826243263917487,
+      "prior": 0.0,
+      "objective": -3.4826243263917487
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1000,
+      "likelihood_over_count": -3.482631330775035,
+      "prior": 0.0,
+      "objective": -3.482631330775035
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1050,
+      "likelihood_over_count": -3.4826375916235985,
+      "prior": 0.0,
+      "objective": -3.4826375916235985
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1100,
+      "likelihood_over_count": -3.482643225729962,
+      "prior": 0.0,
+      "objective": -3.482643225729962
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1150,
+      "likelihood_over_count": -3.4826483269212503,
+      "prior": 0.0,
+      "objective": -3.4826483269212503
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1200,
+      "likelihood_over_count": -3.4826529713712895,
+      "prior": 0.0,
+      "objective": -3.4826529713712895
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1250,
+      "likelihood_over_count": -3.4826572205670443,
+      "prior": 0.0,
+      "objective": -3.4826572205670443
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1300,
+      "likelihood_over_count": -3.4826611253835056,
+      "prior": 0.0,
+      "objective": -3.4826611253835056
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1350,
+      "likelihood_over_count": -3.4826647286140675,
+      "prior": 0.0,
+      "objective": -3.4826647286140675
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1400,
+      "likelihood_over_count": -3.482668064505065,
+      "prior": 0.0,
+      "objective": -3.482668064505065
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1450,
+      "likelihood_over_count": -3.4826711636151932,
+      "prior": 0.0,
+      "objective": -3.4826711636151932
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1500,
+      "likelihood_over_count": -3.482674050657263,
+      "prior": 0.0,
+      "objective": -3.482674050657263
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1550,
+      "likelihood_over_count": -3.4826767467498505,
+      "prior": 0.0,
+      "objective": -3.4826767467498505
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1600,
+      "likelihood_over_count": -3.482679271160134,
+      "prior": 0.0,
+      "objective": -3.482679271160134
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1650,
+      "likelihood_over_count": -3.482681639335141,
+      "prior": 0.0,
+      "objective": -3.482681639335141
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1700,
+      "likelihood_over_count": -3.4826838659440473,
+      "prior": 0.0,
+      "objective": -3.4826838659440473
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1750,
+      "likelihood_over_count": -3.482685962796434,
+      "prior": 0.0,
+      "objective": -3.482685962796434
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1800,
+      "likelihood_over_count": -3.4826879407671907,
+      "prior": 0.0,
+      "objective": -3.4826879407671907
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1850,
+      "likelihood_over_count": -3.48268981031244,
+      "prior": 0.0,
+      "objective": -3.48268981031244
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1900,
+      "likelihood_over_count": -3.4826915793302935,
+      "prior": 0.0,
+      "objective": -3.4826915793302935
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 1950,
+      "likelihood_over_count": -3.482693256293614,
+      "prior": 0.0,
+      "objective": -3.482693256293614
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2000,
+      "likelihood_over_count": -3.4826948473008312,
+      "prior": 0.0,
+      "objective": -3.4826948473008312
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2050,
+      "likelihood_over_count": -3.4826963590598257,
+      "prior": 0.0,
+      "objective": -3.4826963590598257
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2100,
+      "likelihood_over_count": -3.48269779803669,
+      "prior": 0.0,
+      "objective": -3.48269779803669
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2150,
+      "likelihood_over_count": -3.4826991686370588,
+      "prior": 0.0,
+      "objective": -3.4826991686370588
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2200,
+      "likelihood_over_count": -3.4827004755867934,
+      "prior": 0.0,
+      "objective": -3.4827004755867934
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2250,
+      "likelihood_over_count": -3.4827017235597713,
+      "prior": 0.0,
+      "objective": -3.4827017235597713
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2300,
+      "likelihood_over_count": -3.48270291610457,
+      "prior": 0.0,
+      "objective": -3.48270291610457
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2350,
+      "likelihood_over_count": -3.4827040568325773,
+      "prior": 0.0,
+      "objective": -3.4827040568325773
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2400,
+      "likelihood_over_count": -3.4827051503097475,
+      "prior": 0.0,
+      "objective": -3.4827051503097475
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2450,
+      "likelihood_over_count": -3.482706198069172,
+      "prior": 0.0,
+      "objective": -3.482706198069172
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2500,
+      "likelihood_over_count": -3.482707203443207,
+      "prior": 0.0,
+      "objective": -3.482707203443207
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2550,
+      "likelihood_over_count": -3.4827081696104645,
+      "prior": 0.0,
+      "objective": -3.4827081696104645
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2600,
+      "likelihood_over_count": -3.4827090979975956,
+      "prior": 0.0,
+      "objective": -3.4827090979975956
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2650,
+      "likelihood_over_count": -3.4827099915555215,
+      "prior": 0.0,
+      "objective": -3.4827099915555215
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2700,
+      "likelihood_over_count": -3.482710852299783,
+      "prior": 0.0,
+      "objective": -3.482710852299783
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2750,
+      "likelihood_over_count": -3.482711681470112,
+      "prior": 0.0,
+      "objective": -3.482711681470112
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2800,
+      "likelihood_over_count": -3.482712481751711,
+      "prior": 0.0,
+      "objective": -3.482712481751711
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2850,
+      "likelihood_over_count": -3.4827132546751636,
+      "prior": 0.0,
+      "objective": -3.4827132546751636
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2900,
+      "likelihood_over_count": -3.4827140010091244,
+      "prior": 0.0,
+      "objective": -3.4827140010091244
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 2950,
+      "likelihood_over_count": -3.4827147225974366,
+      "prior": 0.0,
+      "objective": -3.4827147225974366
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3000,
+      "likelihood_over_count": -3.48271542102572,
+      "prior": 0.0,
+      "objective": -3.48271542102572
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3050,
+      "likelihood_over_count": -3.482716097537501,
+      "prior": 0.0,
+      "objective": -3.482716097537501
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3100,
+      "likelihood_over_count": -3.482716752877039,
+      "prior": 0.0,
+      "objective": -3.482716752877039
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3150,
+      "likelihood_over_count": -3.4827173884583016,
+      "prior": 0.0,
+      "objective": -3.4827173884583016
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3200,
+      "likelihood_over_count": -3.4827180051730093,
+      "prior": 0.0,
+      "objective": -3.4827180051730093
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3250,
+      "likelihood_over_count": -3.4827186040795493,
+      "prior": 0.0,
+      "objective": -3.4827186040795493
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3300,
+      "likelihood_over_count": -3.482719185729154,
+      "prior": 0.0,
+      "objective": -3.482719185729154
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3350,
+      "likelihood_over_count": -3.482719751551522,
+      "prior": 0.0,
+      "objective": -3.482719751551522
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3400,
+      "likelihood_over_count": -3.4827203013889494,
+      "prior": 0.0,
+      "objective": -3.4827203013889494
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3450,
+      "likelihood_over_count": -3.482720836930512,
+      "prior": 0.0,
+      "objective": -3.482720836930512
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3500,
+      "likelihood_over_count": -3.4827213586363013,
+      "prior": 0.0,
+      "objective": -3.4827213586363013
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3550,
+      "likelihood_over_count": -3.4827218664555826,
+      "prior": 0.0,
+      "objective": -3.4827218664555826
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3600,
+      "likelihood_over_count": -3.4827223616107634,
+      "prior": 0.0,
+      "objective": -3.4827223616107634
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3650,
+      "likelihood_over_count": -3.4827228453337447,
+      "prior": 0.0,
+      "objective": -3.4827228453337447
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3700,
+      "likelihood_over_count": -3.4827233169015632,
+      "prior": 0.0,
+      "objective": -3.4827233169015632
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3750,
+      "likelihood_over_count": -3.4827237771417123,
+      "prior": 0.0,
+      "objective": -3.4827237771417123
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3800,
+      "likelihood_over_count": -3.482724226870645,
+      "prior": 0.0,
+      "objective": -3.482724226870645
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3850,
+      "likelihood_over_count": -3.482724666480395,
+      "prior": 0.0,
+      "objective": -3.482724666480395
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3900,
+      "likelihood_over_count": -3.482725096432463,
+      "prior": 0.0,
+      "objective": -3.482725096432463
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 3950,
+      "likelihood_over_count": -3.4827255170703784,
+      "prior": 0.0,
+      "objective": -3.4827255170703784
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4000,
+      "likelihood_over_count": -3.482725928323043,
+      "prior": 0.0,
+      "objective": -3.482725928323043
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4050,
+      "likelihood_over_count": -3.4827263311504715,
+      "prior": 0.0,
+      "objective": -3.4827263311504715
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4100,
+      "likelihood_over_count": -3.48272672588278,
+      "prior": 0.0,
+      "objective": -3.48272672588278
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4150,
+      "likelihood_over_count": -3.4827271121452315,
+      "prior": 0.0,
+      "objective": -3.4827271121452315
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4200,
+      "likelihood_over_count": -3.4827274913205373,
+      "prior": 0.0,
+      "objective": -3.4827274913205373
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4250,
+      "likelihood_over_count": -3.4827278629990697,
+      "prior": 0.0,
+      "objective": -3.4827278629990697
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4300,
+      "likelihood_over_count": -3.48272822771682,
+      "prior": 0.0,
+      "objective": -3.48272822771682
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4350,
+      "likelihood_over_count": -3.4827285850794363,
+      "prior": 0.0,
+      "objective": -3.4827285850794363
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4400,
+      "likelihood_over_count": -3.4827289363269465,
+      "prior": 0.0,
+      "objective": -3.4827289363269465
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4450,
+      "likelihood_over_count": -3.482729280766717,
+      "prior": 0.0,
+      "objective": -3.482729280766717
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4500,
+      "likelihood_over_count": -3.4827296194437998,
+      "prior": 0.0,
+      "objective": -3.4827296194437998
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4550,
+      "likelihood_over_count": -3.4827299522187465,
+      "prior": 0.0,
+      "objective": -3.4827299522187465
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4600,
+      "likelihood_over_count": -3.482730279402382,
+      "prior": 0.0,
+      "objective": -3.482730279402382
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4650,
+      "likelihood_over_count": -3.4827306008450862,
+      "prior": 0.0,
+      "objective": -3.4827306008450862
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4700,
+      "likelihood_over_count": -3.4827309170417844,
+      "prior": 0.0,
+      "objective": -3.4827309170417844
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4750,
+      "likelihood_over_count": -3.48273122803571,
+      "prior": 0.0,
+      "objective": -3.48273122803571
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4800,
+      "likelihood_over_count": -3.4827315341226264,
+      "prior": 0.0,
+      "objective": -3.4827315341226264
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4850,
+      "likelihood_over_count": -3.4827318352718373,
+      "prior": 0.0,
+      "objective": -3.4827318352718373
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4900,
+      "likelihood_over_count": -3.482732132151023,
+      "prior": 0.0,
+      "objective": -3.482732132151023
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 4950,
+      "likelihood_over_count": -3.4827324243843143,
+      "prior": 0.0,
+      "objective": -3.4827324243843143
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5000,
+      "likelihood_over_count": -3.4827327117267157,
+      "prior": 0.0,
+      "objective": -3.4827327117267157
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5050,
+      "likelihood_over_count": -3.4827329952983415,
+      "prior": 0.0,
+      "objective": -3.4827329952983415
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5100,
+      "likelihood_over_count": -3.4827332745884845,
+      "prior": 0.0,
+      "objective": -3.4827332745884845
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5150,
+      "likelihood_over_count": -3.4827335502647103,
+      "prior": 0.0,
+      "objective": -3.4827335502647103
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5200,
+      "likelihood_over_count": -3.482733821422483,
+      "prior": 0.0,
+      "objective": -3.482733821422483
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5250,
+      "likelihood_over_count": -3.4827340892523226,
+      "prior": 0.0,
+      "objective": -3.4827340892523226
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5300,
+      "likelihood_over_count": -3.4827343534105437,
+      "prior": 0.0,
+      "objective": -3.4827343534105437
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5350,
+      "likelihood_over_count": -3.4827346138311803,
+      "prior": 0.0,
+      "objective": -3.4827346138311803
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5400,
+      "likelihood_over_count": -3.482734871031296,
+      "prior": 0.0,
+      "objective": -3.482734871031296
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5450,
+      "likelihood_over_count": -3.4827351246185283,
+      "prior": 0.0,
+      "objective": -3.4827351246185283
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5500,
+      "likelihood_over_count": -3.4827353753041996,
+      "prior": 0.0,
+      "objective": -3.4827353753041996
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5550,
+      "likelihood_over_count": -3.482735622668288,
+      "prior": 0.0,
+      "objective": -3.482735622668288
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5600,
+      "likelihood_over_count": -3.482735867020611,
+      "prior": 0.0,
+      "objective": -3.482735867020611
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5650,
+      "likelihood_over_count": -3.482736108106999,
+      "prior": 0.0,
+      "objective": -3.482736108106999
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5700,
+      "likelihood_over_count": -3.482736346429971,
+      "prior": 0.0,
+      "objective": -3.482736346429971
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5750,
+      "likelihood_over_count": -3.482736582010239,
+      "prior": 0.0,
+      "objective": -3.482736582010239
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5800,
+      "likelihood_over_count": -3.4827368146496536,
+      "prior": 0.0,
+      "objective": -3.4827368146496536
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5850,
+      "likelihood_over_count": -3.4827370444603245,
+      "prior": 0.0,
+      "objective": -3.4827370444603245
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5900,
+      "likelihood_over_count": -3.4827372718827445,
+      "prior": 0.0,
+      "objective": -3.4827372718827445
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 5950,
+      "likelihood_over_count": -3.482737496544898,
+      "prior": 0.0,
+      "objective": -3.482737496544898
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6000,
+      "likelihood_over_count": -3.4827377187214954,
+      "prior": 0.0,
+      "objective": -3.4827377187214954
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6050,
+      "likelihood_over_count": -3.4827379381740817,
+      "prior": 0.0,
+      "objective": -3.4827379381740817
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6100,
+      "likelihood_over_count": -3.4827381557857073,
+      "prior": 0.0,
+      "objective": -3.4827381557857073
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6150,
+      "likelihood_over_count": -3.4827383705797232,
+      "prior": 0.0,
+      "objective": -3.4827383705797232
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6200,
+      "likelihood_over_count": -3.482738583225846,
+      "prior": 0.0,
+      "objective": -3.482738583225846
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6250,
+      "likelihood_over_count": -3.4827387937058494,
+      "prior": 0.0,
+      "objective": -3.4827387937058494
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6300,
+      "likelihood_over_count": -3.4827390019383198,
+      "prior": 0.0,
+      "objective": -3.4827390019383198
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6350,
+      "likelihood_over_count": -3.482739208113688,
+      "prior": 0.0,
+      "objective": -3.482739208113688
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6400,
+      "likelihood_over_count": -3.48273941219846,
+      "prior": 0.0,
+      "objective": -3.48273941219846
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6450,
+      "likelihood_over_count": -3.4827396142665332,
+      "prior": 0.0,
+      "objective": -3.4827396142665332
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6500,
+      "likelihood_over_count": -3.482739814253941,
+      "prior": 0.0,
+      "objective": -3.482739814253941
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6550,
+      "likelihood_over_count": -3.4827400121876133,
+      "prior": 0.0,
+      "objective": -3.4827400121876133
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6600,
+      "likelihood_over_count": -3.482740208693959,
+      "prior": 0.0,
+      "objective": -3.482740208693959
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6650,
+      "likelihood_over_count": -3.4827404025424737,
+      "prior": 0.0,
+      "objective": -3.4827404025424737
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6700,
+      "likelihood_over_count": -3.4827405950893713,
+      "prior": 0.0,
+      "objective": -3.4827405950893713
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6750,
+      "likelihood_over_count": -3.4827407855382075,
+      "prior": 0.0,
+      "objective": -3.4827407855382075
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6800,
+      "likelihood_over_count": -3.4827409744860427,
+      "prior": 0.0,
+      "objective": -3.4827409744860427
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6850,
+      "likelihood_over_count": -3.4827411618270623,
+      "prior": 0.0,
+      "objective": -3.4827411618270623
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6900,
+      "likelihood_over_count": -3.482741346834946,
+      "prior": 0.0,
+      "objective": -3.482741346834946
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 6950,
+      "likelihood_over_count": -3.482741530809725,
+      "prior": 0.0,
+      "objective": -3.482741530809725
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7000,
+      "likelihood_over_count": -3.482741713151062,
+      "prior": 0.0,
+      "objective": -3.482741713151062
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7050,
+      "likelihood_over_count": -3.48274189339827,
+      "prior": 0.0,
+      "objective": -3.48274189339827
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7100,
+      "likelihood_over_count": -3.4827420725930476,
+      "prior": 0.0,
+      "objective": -3.4827420725930476
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7150,
+      "likelihood_over_count": -3.482742249947517,
+      "prior": 0.0,
+      "objective": -3.482742249947517
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7200,
+      "likelihood_over_count": -3.4827424258124258,
+      "prior": 0.0,
+      "objective": -3.4827424258124258
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7250,
+      "likelihood_over_count": -3.482742600492954,
+      "prior": 0.0,
+      "objective": -3.482742600492954
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7300,
+      "likelihood_over_count": -3.4827427733012906,
+      "prior": 0.0,
+      "objective": -3.4827427733012906
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7350,
+      "likelihood_over_count": -3.4827429451272693,
+      "prior": 0.0,
+      "objective": -3.4827429451272693
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7400,
+      "likelihood_over_count": -3.4827431152932338,
+      "prior": 0.0,
+      "objective": -3.4827431152932338
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7450,
+      "likelihood_over_count": -3.4827432841937895,
+      "prior": 0.0,
+      "objective": -3.4827432841937895
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7500,
+      "likelihood_over_count": -3.482743451691523,
+      "prior": 0.0,
+      "objective": -3.482743451691523
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7550,
+      "likelihood_over_count": -3.4827436180028726,
+      "prior": 0.0,
+      "objective": -3.4827436180028726
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7600,
+      "likelihood_over_count": -3.4827437826524354,
+      "prior": 0.0,
+      "objective": -3.4827437826524354
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7650,
+      "likelihood_over_count": -3.4827439461705967,
+      "prior": 0.0,
+      "objective": -3.4827439461705967
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7700,
+      "likelihood_over_count": -3.4827441086064805,
+      "prior": 0.0,
+      "objective": -3.4827441086064805
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7750,
+      "likelihood_over_count": -3.4827442692963517,
+      "prior": 0.0,
+      "objective": -3.4827442692963517
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7800,
+      "likelihood_over_count": -3.4827444295062477,
+      "prior": 0.0,
+      "objective": -3.4827444295062477
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7850,
+      "likelihood_over_count": -3.482744587914404,
+      "prior": 0.0,
+      "objective": -3.482744587914404
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7900,
+      "likelihood_over_count": -3.482744745505155,
+      "prior": 0.0,
+      "objective": -3.482744745505155
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 7950,
+      "likelihood_over_count": -3.482744902004994,
+      "prior": 0.0,
+      "objective": -3.482744902004994
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8000,
+      "likelihood_over_count": -3.482745056978549,
+      "prior": 0.0,
+      "objective": -3.482745056978549
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8050,
+      "likelihood_over_count": -3.48274521124501,
+      "prior": 0.0,
+      "objective": -3.48274521124501
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8100,
+      "likelihood_over_count": -3.482745364000433,
+      "prior": 0.0,
+      "objective": -3.482745364000433
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8150,
+      "likelihood_over_count": -3.4827455161676224,
+      "prior": 0.0,
+      "objective": -3.4827455161676224
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8200,
+      "likelihood_over_count": -3.4827456667626713,
+      "prior": 0.0,
+      "objective": -3.4827456667626713
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8250,
+      "likelihood_over_count": -3.482745816890558,
+      "prior": 0.0,
+      "objective": -3.482745816890558
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8300,
+      "likelihood_over_count": -3.482745965620482,
+      "prior": 0.0,
+      "objective": -3.482745965620482
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8350,
+      "likelihood_over_count": -3.4827461128738,
+      "prior": 0.0,
+      "objective": -3.4827461128738
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8400,
+      "likelihood_over_count": -3.482746259795348,
+      "prior": 0.0,
+      "objective": -3.482746259795348
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8450,
+      "likelihood_over_count": -3.482746405491713,
+      "prior": 0.0,
+      "objective": -3.482746405491713
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8500,
+      "likelihood_over_count": -3.482746550087622,
+      "prior": 0.0,
+      "objective": -3.482746550087622
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8550,
+      "likelihood_over_count": -3.4827466940233234,
+      "prior": 0.0,
+      "objective": -3.4827466940233234
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8600,
+      "likelihood_over_count": -3.482746836941823,
+      "prior": 0.0,
+      "objective": -3.482746836941823
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8650,
+      "likelihood_over_count": -3.4827469791033066,
+      "prior": 0.0,
+      "objective": -3.4827469791033066
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8700,
+      "likelihood_over_count": -3.482747119793029,
+      "prior": 0.0,
+      "objective": -3.482747119793029
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8750,
+      "likelihood_over_count": -3.482747259798233,
+      "prior": 0.0,
+      "objective": -3.482747259798233
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8800,
+      "likelihood_over_count": -3.4827473991895235,
+      "prior": 0.0,
+      "objective": -3.4827473991895235
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8850,
+      "likelihood_over_count": -3.4827475376407424,
+      "prior": 0.0,
+      "objective": -3.4827475376407424
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8900,
+      "likelihood_over_count": -3.482747675305282,
+      "prior": 0.0,
+      "objective": -3.482747675305282
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 8950,
+      "likelihood_over_count": -3.4827478115146064,
+      "prior": 0.0,
+      "objective": -3.4827478115146064
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9000,
+      "likelihood_over_count": -3.4827479474326615,
+      "prior": 0.0,
+      "objective": -3.4827479474326615
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9050,
+      "likelihood_over_count": -3.4827480823999406,
+      "prior": 0.0,
+      "objective": -3.4827480823999406
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9100,
+      "likelihood_over_count": -3.4827482163984036,
+      "prior": 0.0,
+      "objective": -3.4827482163984036
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9150,
+      "likelihood_over_count": -3.48274834994442,
+      "prior": 0.0,
+      "objective": -3.48274834994442
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9200,
+      "likelihood_over_count": -3.482748482269737,
+      "prior": 0.0,
+      "objective": -3.482748482269737
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9250,
+      "likelihood_over_count": -3.4827486139029147,
+      "prior": 0.0,
+      "objective": -3.4827486139029147
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9300,
+      "likelihood_over_count": -3.4827487451304733,
+      "prior": 0.0,
+      "objective": -3.4827487451304733
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9350,
+      "likelihood_over_count": -3.482748875412815,
+      "prior": 0.0,
+      "objective": -3.482748875412815
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9400,
+      "likelihood_over_count": -3.4827490046393588,
+      "prior": 0.0,
+      "objective": -3.4827490046393588
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9450,
+      "likelihood_over_count": -3.482749133230196,
+      "prior": 0.0,
+      "objective": -3.482749133230196
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9500,
+      "likelihood_over_count": -3.482749261260775,
+      "prior": 0.0,
+      "objective": -3.482749261260775
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9550,
+      "likelihood_over_count": -3.4827493886452223,
+      "prior": 0.0,
+      "objective": -3.4827493886452223
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9600,
+      "likelihood_over_count": -3.4827495152059926,
+      "prior": 0.0,
+      "objective": -3.4827495152059926
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9650,
+      "likelihood_over_count": -3.4827496408849465,
+      "prior": 0.0,
+      "objective": -3.4827496408849465
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9700,
+      "likelihood_over_count": -3.482749765883267,
+      "prior": 0.0,
+      "objective": -3.482749765883267
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9750,
+      "likelihood_over_count": -3.4827498906960717,
+      "prior": 0.0,
+      "objective": -3.4827498906960717
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9800,
+      "likelihood_over_count": -3.4827500141648535,
+      "prior": 0.0,
+      "objective": -3.4827500141648535
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9850,
+      "likelihood_over_count": -3.482750137380416,
+      "prior": 0.0,
+      "objective": -3.482750137380416
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9900,
+      "likelihood_over_count": -3.48275025962012,
+      "prior": 0.0,
+      "objective": -3.48275025962012
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 9950,
+      "likelihood_over_count": -3.4827503809920324,
+      "prior": 0.0,
+      "objective": -3.4827503809920324
+    },
+    {
+      "channel": "218_corrected",
+      "iteration": 10000,
+      "likelihood_over_count": -3.4827504968874,
+      "prior": 0.0,
+      "objective": -3.4827504968874
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 0,
+      "likelihood_over_count": 0.6287551085937062,
+      "prior": 0.0,
+      "objective": 0.6287551085937062
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 0,
+      "likelihood_over_count": 2.0056046413804394,
+      "prior": 0.0,
+      "objective": 2.0056046413804394
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 50,
+      "likelihood_over_count": -3.8805673091951656,
+      "prior": 0.0,
+      "objective": -3.8805673091951656
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 50,
+      "likelihood_over_count": -2.4381376851323067,
+      "prior": 0.0,
+      "objective": -2.4381376851323067
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 100,
+      "likelihood_over_count": -3.88293799151396,
+      "prior": 0.0,
+      "objective": -3.88293799151396
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 100,
+      "likelihood_over_count": -2.438929865658589,
+      "prior": 0.0,
+      "objective": -2.438929865658589
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 150,
+      "likelihood_over_count": -3.8837508331818436,
+      "prior": 0.0,
+      "objective": -3.8837508331818436
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 150,
+      "likelihood_over_count": -2.4393417865935207,
+      "prior": 0.0,
+      "objective": -2.4393417865935207
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 200,
+      "likelihood_over_count": -3.8841293876232745,
+      "prior": 0.0,
+      "objective": -3.8841293876232745
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 200,
+      "likelihood_over_count": -2.439592424903879,
+      "prior": 0.0,
+      "objective": -2.439592424903879
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 250,
+      "likelihood_over_count": -3.8843362412738562,
+      "prior": 0.0,
+      "objective": -3.8843362412738562
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 250,
+      "likelihood_over_count": -2.4397587429030114,
+      "prior": 0.0,
+      "objective": -2.4397587429030114
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 300,
+      "likelihood_over_count": -3.88446317396738,
+      "prior": 0.0,
+      "objective": -3.88446317396738
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 300,
+      "likelihood_over_count": -2.4398782629753133,
+      "prior": 0.0,
+      "objective": -2.4398782629753133
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 350,
+      "likelihood_over_count": -3.8845485693432895,
+      "prior": 0.0,
+      "objective": -3.8845485693432895
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 350,
+      "likelihood_over_count": -2.4399694273519272,
+      "prior": 0.0,
+      "objective": -2.4399694273519272
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 400,
+      "likelihood_over_count": -3.884610390282141,
+      "prior": 0.0,
+      "objective": -3.884610390282141
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 400,
+      "likelihood_over_count": -2.440041776070365,
+      "prior": 0.0,
+      "objective": -2.440041776070365
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 450,
+      "likelihood_over_count": -3.8846578065072372,
+      "prior": 0.0,
+      "objective": -3.8846578065072372
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 450,
+      "likelihood_over_count": -2.440100714273796,
+      "prior": 0.0,
+      "objective": -2.440100714273796
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 500,
+      "likelihood_over_count": -3.8846958490818113,
+      "prior": 0.0,
+      "objective": -3.8846958490818113
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 500,
+      "likelihood_over_count": -2.4401496235884568,
+      "prior": 0.0,
+      "objective": -2.4401496235884568
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 550,
+      "likelihood_over_count": -3.8847274467078203,
+      "prior": 0.0,
+      "objective": -3.8847274467078203
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 550,
+      "likelihood_over_count": -2.4401907926945987,
+      "prior": 0.0,
+      "objective": -2.4401907926945987
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 600,
+      "likelihood_over_count": -3.884754405153606,
+      "prior": 0.0,
+      "objective": -3.884754405153606
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 600,
+      "likelihood_over_count": -2.4402258567740613,
+      "prior": 0.0,
+      "objective": -2.4402258567740613
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 650,
+      "likelihood_over_count": -3.8847778933240895,
+      "prior": 0.0,
+      "objective": -3.8847778933240895
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 650,
+      "likelihood_over_count": -2.4402560238650675,
+      "prior": 0.0,
+      "objective": -2.4402560238650675
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 700,
+      "likelihood_over_count": -3.884798694448649,
+      "prior": 0.0,
+      "objective": -3.884798694448649
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 700,
+      "likelihood_over_count": -2.4402822084012055,
+      "prior": 0.0,
+      "objective": -2.4402822084012055
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 750,
+      "likelihood_over_count": -3.8848173567563706,
+      "prior": 0.0,
+      "objective": -3.8848173567563706
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 750,
+      "likelihood_over_count": -2.4403051128018016,
+      "prior": 0.0,
+      "objective": -2.4403051128018016
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 800,
+      "likelihood_over_count": -3.8848342806298413,
+      "prior": 0.0,
+      "objective": -3.8848342806298413
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 800,
+      "likelihood_over_count": -2.4403252863046974,
+      "prior": 0.0,
+      "objective": -2.4403252863046974
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 850,
+      "likelihood_over_count": -3.884849757472024,
+      "prior": 0.0,
+      "objective": -3.884849757472024
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 850,
+      "likelihood_over_count": -2.4403431631353936,
+      "prior": 0.0,
+      "objective": -2.4403431631353936
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 900,
+      "likelihood_over_count": -3.884864004710921,
+      "prior": 0.0,
+      "objective": -3.884864004710921
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 900,
+      "likelihood_over_count": -2.4403590910000115,
+      "prior": 0.0,
+      "objective": -2.4403590910000115
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 950,
+      "likelihood_over_count": -3.8848771992481685,
+      "prior": 0.0,
+      "objective": -3.8848771992481685
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 950,
+      "likelihood_over_count": -2.440373354455987,
+      "prior": 0.0,
+      "objective": -2.440373354455987
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1000,
+      "likelihood_over_count": -3.8848894794159246,
+      "prior": 0.0,
+      "objective": -3.8848894794159246
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1000,
+      "likelihood_over_count": -2.440386194280931,
+      "prior": 0.0,
+      "objective": -2.440386194280931
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1050,
+      "likelihood_over_count": -3.884900951281762,
+      "prior": 0.0,
+      "objective": -3.884900951281762
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1050,
+      "likelihood_over_count": -2.440397790155107,
+      "prior": 0.0,
+      "objective": -2.440397790155107
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1100,
+      "likelihood_over_count": -3.884911705397971,
+      "prior": 0.0,
+      "objective": -3.884911705397971
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1100,
+      "likelihood_over_count": -2.440408302994809,
+      "prior": 0.0,
+      "objective": -2.440408302994809
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1150,
+      "likelihood_over_count": -3.8849218142524036,
+      "prior": 0.0,
+      "objective": -3.8849218142524036
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1150,
+      "likelihood_over_count": -2.4404178673976156,
+      "prior": 0.0,
+      "objective": -2.4404178673976156
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1200,
+      "likelihood_over_count": -3.8849313421881413,
+      "prior": 0.0,
+      "objective": -3.8849313421881413
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1200,
+      "likelihood_over_count": -2.4404266026086865,
+      "prior": 0.0,
+      "objective": -2.4404266026086865
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1250,
+      "likelihood_over_count": -3.8849403447466395,
+      "prior": 0.0,
+      "objective": -3.8849403447466395
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1250,
+      "likelihood_over_count": -2.4404346060598487,
+      "prior": 0.0,
+      "objective": -2.4404346060598487
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1300,
+      "likelihood_over_count": -3.8849488696426513,
+      "prior": 0.0,
+      "objective": -3.8849488696426513
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1300,
+      "likelihood_over_count": -2.4404419564540123,
+      "prior": 0.0,
+      "objective": -2.4404419564540123
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1350,
+      "likelihood_over_count": -3.884956955756104,
+      "prior": 0.0,
+      "objective": -3.884956955756104
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1350,
+      "likelihood_over_count": -2.4404487265944623,
+      "prior": 0.0,
+      "objective": -2.4404487265944623
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1400,
+      "likelihood_over_count": -3.884964641155613,
+      "prior": 0.0,
+      "objective": -3.884964641155613
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1400,
+      "likelihood_over_count": -2.440454978173925,
+      "prior": 0.0,
+      "objective": -2.440454978173925
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1450,
+      "likelihood_over_count": -3.884971959804729,
+      "prior": 0.0,
+      "objective": -3.884971959804729
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1450,
+      "likelihood_over_count": -2.440460766154233,
+      "prior": 0.0,
+      "objective": -2.440460766154233
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1500,
+      "likelihood_over_count": -3.884978943224744,
+      "prior": 0.0,
+      "objective": -3.884978943224744
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1500,
+      "likelihood_over_count": -2.4404661379551817,
+      "prior": 0.0,
+      "objective": -2.4404661379551817
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1550,
+      "likelihood_over_count": -3.8849856174949586,
+      "prior": 0.0,
+      "objective": -3.8849856174949586
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1550,
+      "likelihood_over_count": -2.4404711356616264,
+      "prior": 0.0,
+      "objective": -2.4404711356616264
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1600,
+      "likelihood_over_count": -3.884992004575831,
+      "prior": 0.0,
+      "objective": -3.884992004575831
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1600,
+      "likelihood_over_count": -2.4404757951239557,
+      "prior": 0.0,
+      "objective": -2.4404757951239557
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1650,
+      "likelihood_over_count": -3.8849981251679395,
+      "prior": 0.0,
+      "objective": -3.8849981251679395
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1650,
+      "likelihood_over_count": -2.4404801485032404,
+      "prior": 0.0,
+      "objective": -2.4404801485032404
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1700,
+      "likelihood_over_count": -3.8850040008333795,
+      "prior": 0.0,
+      "objective": -3.8850040008333795
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1700,
+      "likelihood_over_count": -2.4404842241062368,
+      "prior": 0.0,
+      "objective": -2.4404842241062368
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1750,
+      "likelihood_over_count": -3.8850096500132127,
+      "prior": 0.0,
+      "objective": -3.8850096500132127
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1750,
+      "likelihood_over_count": -2.4404880475519204,
+      "prior": 0.0,
+      "objective": -2.4404880475519204
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1800,
+      "likelihood_over_count": -3.8850150891547997,
+      "prior": 0.0,
+      "objective": -3.8850150891547997
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1800,
+      "likelihood_over_count": -2.440491641343846,
+      "prior": 0.0,
+      "objective": -2.440491641343846
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1850,
+      "likelihood_over_count": -3.8850203319079917,
+      "prior": 0.0,
+      "objective": -3.8850203319079917
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1850,
+      "likelihood_over_count": -2.440495026626681,
+      "prior": 0.0,
+      "objective": -2.440495026626681
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1900,
+      "likelihood_over_count": -3.885025391113997,
+      "prior": 0.0,
+      "objective": -3.885025391113997
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1900,
+      "likelihood_over_count": -2.440498223723523,
+      "prior": 0.0,
+      "objective": -2.440498223723523
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 1950,
+      "likelihood_over_count": -3.885030279694779,
+      "prior": 0.0,
+      "objective": -3.885030279694779
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 1950,
+      "likelihood_over_count": -2.4405012446035994,
+      "prior": 0.0,
+      "objective": -2.4405012446035994
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2000,
+      "likelihood_over_count": -3.8850350088168293,
+      "prior": 0.0,
+      "objective": -3.8850350088168293
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2000,
+      "likelihood_over_count": -2.440504104313822,
+      "prior": 0.0,
+      "objective": -2.440504104313822
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2050,
+      "likelihood_over_count": -3.8850395882720186,
+      "prior": 0.0,
+      "objective": -3.8850395882720186
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2050,
+      "likelihood_over_count": -2.440506814135094,
+      "prior": 0.0,
+      "objective": -2.440506814135094
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2100,
+      "likelihood_over_count": -3.8850440268649242,
+      "prior": 0.0,
+      "objective": -3.8850440268649242
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2100,
+      "likelihood_over_count": -2.440509387372367,
+      "prior": 0.0,
+      "objective": -2.440509387372367
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2150,
+      "likelihood_over_count": -3.885048332895058,
+      "prior": 0.0,
+      "objective": -3.885048332895058
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2150,
+      "likelihood_over_count": -2.440511833778521,
+      "prior": 0.0,
+      "objective": -2.440511833778521
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2200,
+      "likelihood_over_count": -3.885052512629321,
+      "prior": 0.0,
+      "objective": -3.885052512629321
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2200,
+      "likelihood_over_count": -2.4405141632630856,
+      "prior": 0.0,
+      "objective": -2.4405141632630856
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2250,
+      "likelihood_over_count": -3.8850565735899227,
+      "prior": 0.0,
+      "objective": -3.8850565735899227
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2250,
+      "likelihood_over_count": -2.440516383679888,
+      "prior": 0.0,
+      "objective": -2.440516383679888
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2300,
+      "likelihood_over_count": -3.8850605235373354,
+      "prior": 0.0,
+      "objective": -3.8850605235373354
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2300,
+      "likelihood_over_count": -2.440518503648583,
+      "prior": 0.0,
+      "objective": -2.440518503648583
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2350,
+      "likelihood_over_count": -3.8850643673486536,
+      "prior": 0.0,
+      "objective": -3.8850643673486536
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2350,
+      "likelihood_over_count": -2.440520529960105,
+      "prior": 0.0,
+      "objective": -2.440520529960105
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2400,
+      "likelihood_over_count": -3.885068110243375,
+      "prior": 0.0,
+      "objective": -3.885068110243375
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2400,
+      "likelihood_over_count": -2.4405224695876497,
+      "prior": 0.0,
+      "objective": -2.4405224695876497
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2450,
+      "likelihood_over_count": -3.8850717563192956,
+      "prior": 0.0,
+      "objective": -3.8850717563192956
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2450,
+      "likelihood_over_count": -2.440524327252892,
+      "prior": 0.0,
+      "objective": -2.440524327252892
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2500,
+      "likelihood_over_count": -3.8850753110975167,
+      "prior": 0.0,
+      "objective": -3.8850753110975167
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2500,
+      "likelihood_over_count": -2.44052610961538,
+      "prior": 0.0,
+      "objective": -2.44052610961538
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2550,
+      "likelihood_over_count": -3.885078779053369,
+      "prior": 0.0,
+      "objective": -3.885078779053369
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2550,
+      "likelihood_over_count": -2.4405278216066564,
+      "prior": 0.0,
+      "objective": -2.4405278216066564
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2600,
+      "likelihood_over_count": -3.8850821630382715,
+      "prior": 0.0,
+      "objective": -3.8850821630382715
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2600,
+      "likelihood_over_count": -2.4405294670497493,
+      "prior": 0.0,
+      "objective": -2.4405294670497493
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2650,
+      "likelihood_over_count": -3.8850854666467156,
+      "prior": 0.0,
+      "objective": -3.8850854666467156
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2650,
+      "likelihood_over_count": -2.4405310503356334,
+      "prior": 0.0,
+      "objective": -2.4405310503356334
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2700,
+      "likelihood_over_count": -3.885088694057593,
+      "prior": 0.0,
+      "objective": -3.885088694057593
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2700,
+      "likelihood_over_count": -2.4405325753340295,
+      "prior": 0.0,
+      "objective": -2.4405325753340295
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2750,
+      "likelihood_over_count": -3.8850918483324444,
+      "prior": 0.0,
+      "objective": -3.8850918483324444
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2750,
+      "likelihood_over_count": -2.4405340456841564,
+      "prior": 0.0,
+      "objective": -2.4405340456841564
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2800,
+      "likelihood_over_count": -3.885094932940822,
+      "prior": 0.0,
+      "objective": -3.885094932940822
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2800,
+      "likelihood_over_count": -2.4405354640917407,
+      "prior": 0.0,
+      "objective": -2.4405354640917407
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2850,
+      "likelihood_over_count": -3.8850979503210783,
+      "prior": 0.0,
+      "objective": -3.8850979503210783
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2850,
+      "likelihood_over_count": -2.4405368334389763,
+      "prior": 0.0,
+      "objective": -2.4405368334389763
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2900,
+      "likelihood_over_count": -3.885100903564586,
+      "prior": 0.0,
+      "objective": -3.885100903564586
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2900,
+      "likelihood_over_count": -2.440538157624671,
+      "prior": 0.0,
+      "objective": -2.440538157624671
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 2950,
+      "likelihood_over_count": -3.8851037950070992,
+      "prior": 0.0,
+      "objective": -3.8851037950070992
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 2950,
+      "likelihood_over_count": -2.440539438743194,
+      "prior": 0.0,
+      "objective": -2.440539438743194
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3000,
+      "likelihood_over_count": -3.885106626499278,
+      "prior": 0.0,
+      "objective": -3.885106626499278
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3000,
+      "likelihood_over_count": -2.4405406796265683,
+      "prior": 0.0,
+      "objective": -2.4405406796265683
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3050,
+      "likelihood_over_count": -3.8851094002280084,
+      "prior": 0.0,
+      "objective": -3.8851094002280084
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3050,
+      "likelihood_over_count": -2.440541881350019,
+      "prior": 0.0,
+      "objective": -2.440541881350019
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3100,
+      "likelihood_over_count": -3.8851121185245585,
+      "prior": 0.0,
+      "objective": -3.8851121185245585
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3100,
+      "likelihood_over_count": -2.440543046735302,
+      "prior": 0.0,
+      "objective": -2.440543046735302
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3150,
+      "likelihood_over_count": -3.8851147827643273,
+      "prior": 0.0,
+      "objective": -3.8851147827643273
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3150,
+      "likelihood_over_count": -2.4405441768500524,
+      "prior": 0.0,
+      "objective": -2.4405441768500524
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3200,
+      "likelihood_over_count": -3.885117395370657,
+      "prior": 0.0,
+      "objective": -3.885117395370657
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3200,
+      "likelihood_over_count": -2.4405452740460207,
+      "prior": 0.0,
+      "objective": -2.4405452740460207
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3250,
+      "likelihood_over_count": -3.8851199572620705,
+      "prior": 0.0,
+      "objective": -3.8851199572620705
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3250,
+      "likelihood_over_count": -2.4405463401063323,
+      "prior": 0.0,
+      "objective": -2.4405463401063323
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3300,
+      "likelihood_over_count": -3.8851224705601974,
+      "prior": 0.0,
+      "objective": -3.8851224705601974
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3300,
+      "likelihood_over_count": -2.4405473764913053,
+      "prior": 0.0,
+      "objective": -2.4405473764913053
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3350,
+      "likelihood_over_count": -3.885124936811331,
+      "prior": 0.0,
+      "objective": -3.885124936811331
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3350,
+      "likelihood_over_count": -2.4405483839383226,
+      "prior": 0.0,
+      "objective": -2.4405483839383226
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3400,
+      "likelihood_over_count": -3.885127357062609,
+      "prior": 0.0,
+      "objective": -3.885127357062609
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3400,
+      "likelihood_over_count": -2.440549364431327,
+      "prior": 0.0,
+      "objective": -2.440549364431327
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3450,
+      "likelihood_over_count": -3.8851297339996917,
+      "prior": 0.0,
+      "objective": -3.8851297339996917
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3450,
+      "likelihood_over_count": -2.4405503186053004,
+      "prior": 0.0,
+      "objective": -2.4405503186053004
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3500,
+      "likelihood_over_count": -3.885132069192708,
+      "prior": 0.0,
+      "objective": -3.885132069192708
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3500,
+      "likelihood_over_count": -2.440551248974844,
+      "prior": 0.0,
+      "objective": -2.440551248974844
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3550,
+      "likelihood_over_count": -3.8851343639382616,
+      "prior": 0.0,
+      "objective": -3.8851343639382616
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3550,
+      "likelihood_over_count": -2.440552155392604,
+      "prior": 0.0,
+      "objective": -2.440552155392604
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3600,
+      "likelihood_over_count": -3.8851366200408224,
+      "prior": 0.0,
+      "objective": -3.8851366200408224
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3600,
+      "likelihood_over_count": -2.440553038786607,
+      "prior": 0.0,
+      "objective": -2.440553038786607
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3650,
+      "likelihood_over_count": -3.885138838312405,
+      "prior": 0.0,
+      "objective": -3.885138838312405
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3650,
+      "likelihood_over_count": -2.4405538999588945,
+      "prior": 0.0,
+      "objective": -2.4405538999588945
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3700,
+      "likelihood_over_count": -3.885141020257102,
+      "prior": 0.0,
+      "objective": -3.885141020257102
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3700,
+      "likelihood_over_count": -2.440554740615894,
+      "prior": 0.0,
+      "objective": -2.440554740615894
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3750,
+      "likelihood_over_count": -3.885143166979978,
+      "prior": 0.0,
+      "objective": -3.885143166979978
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3750,
+      "likelihood_over_count": -2.4405555608421885,
+      "prior": 0.0,
+      "objective": -2.4405555608421885
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3800,
+      "likelihood_over_count": -3.8851452789218595,
+      "prior": 0.0,
+      "objective": -3.8851452789218595
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3800,
+      "likelihood_over_count": -2.44055636255264,
+      "prior": 0.0,
+      "objective": -2.44055636255264
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3850,
+      "likelihood_over_count": -3.8851473567816353,
+      "prior": 0.0,
+      "objective": -3.8851473567816353
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3850,
+      "likelihood_over_count": -2.440557145631882,
+      "prior": 0.0,
+      "objective": -2.440557145631882
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3900,
+      "likelihood_over_count": -3.8851494016097847,
+      "prior": 0.0,
+      "objective": -3.8851494016097847
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3900,
+      "likelihood_over_count": -2.440557911691536,
+      "prior": 0.0,
+      "objective": -2.440557911691536
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 3950,
+      "likelihood_over_count": -3.8851514136084173,
+      "prior": 0.0,
+      "objective": -3.8851514136084173
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 3950,
+      "likelihood_over_count": -2.4405586604644114,
+      "prior": 0.0,
+      "objective": -2.4405586604644114
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4000,
+      "likelihood_over_count": -3.8851533943421397,
+      "prior": 0.0,
+      "objective": -3.8851533943421397
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4000,
+      "likelihood_over_count": -2.4405593931783556,
+      "prior": 0.0,
+      "objective": -2.4405593931783556
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4050,
+      "likelihood_over_count": -3.885155343968046,
+      "prior": 0.0,
+      "objective": -3.885155343968046
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4050,
+      "likelihood_over_count": -2.4405601107430224,
+      "prior": 0.0,
+      "objective": -2.4405601107430224
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4100,
+      "likelihood_over_count": -3.8851572645676535,
+      "prior": 0.0,
+      "objective": -3.8851572645676535
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4100,
+      "likelihood_over_count": -2.4405608131587253,
+      "prior": 0.0,
+      "objective": -2.4405608131587253
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4150,
+      "likelihood_over_count": -3.8851591560286383,
+      "prior": 0.0,
+      "objective": -3.8851591560286383
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4150,
+      "likelihood_over_count": -2.440561501577752,
+      "prior": 0.0,
+      "objective": -2.440561501577752
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4200,
+      "likelihood_over_count": -3.8851610196833897,
+      "prior": 0.0,
+      "objective": -3.8851610196833897
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4200,
+      "likelihood_over_count": -2.440562175524857,
+      "prior": 0.0,
+      "objective": -2.440562175524857
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4250,
+      "likelihood_over_count": -3.885162856205021,
+      "prior": 0.0,
+      "objective": -3.885162856205021
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4250,
+      "likelihood_over_count": -2.4405628362745686,
+      "prior": 0.0,
+      "objective": -2.4405628362745686
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4300,
+      "likelihood_over_count": -3.8851646662713804,
+      "prior": 0.0,
+      "objective": -3.8851646662713804
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4300,
+      "likelihood_over_count": -2.4405634840203305,
+      "prior": 0.0,
+      "objective": -2.4405634840203305
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4350,
+      "likelihood_over_count": -3.8851664501650953,
+      "prior": 0.0,
+      "objective": -3.8851664501650953
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4350,
+      "likelihood_over_count": -2.4405641194324708,
+      "prior": 0.0,
+      "objective": -2.4405641194324708
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4400,
+      "likelihood_over_count": -3.8851682083517716,
+      "prior": 0.0,
+      "objective": -3.8851682083517716
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4400,
+      "likelihood_over_count": -2.4405647428988577,
+      "prior": 0.0,
+      "objective": -2.4405647428988577
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4450,
+      "likelihood_over_count": -3.8851699412835456,
+      "prior": 0.0,
+      "objective": -3.8851699412835456
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4450,
+      "likelihood_over_count": -2.4405653542686054,
+      "prior": 0.0,
+      "objective": -2.4405653542686054
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4500,
+      "likelihood_over_count": -3.885171649772928,
+      "prior": 0.0,
+      "objective": -3.885171649772928
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4500,
+      "likelihood_over_count": -2.440565954166924,
+      "prior": 0.0,
+      "objective": -2.440565954166924
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4550,
+      "likelihood_over_count": -3.885173333959981,
+      "prior": 0.0,
+      "objective": -3.885173333959981
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4550,
+      "likelihood_over_count": -2.440566543495282,
+      "prior": 0.0,
+      "objective": -2.440566543495282
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4600,
+      "likelihood_over_count": -3.8851749951120484,
+      "prior": 0.0,
+      "objective": -3.8851749951120484
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4600,
+      "likelihood_over_count": -2.4405671217199387,
+      "prior": 0.0,
+      "objective": -2.4405671217199387
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4650,
+      "likelihood_over_count": -3.8851766333204,
+      "prior": 0.0,
+      "objective": -3.8851766333204
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4650,
+      "likelihood_over_count": -2.440567690027345,
+      "prior": 0.0,
+      "objective": -2.440567690027345
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4700,
+      "likelihood_over_count": -3.8851782492200546,
+      "prior": 0.0,
+      "objective": -3.8851782492200546
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4700,
+      "likelihood_over_count": -2.4405682479427533,
+      "prior": 0.0,
+      "objective": -2.4405682479427533
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4750,
+      "likelihood_over_count": -3.8851798428360023,
+      "prior": 0.0,
+      "objective": -3.8851798428360023
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4750,
+      "likelihood_over_count": -2.440568796294804,
+      "prior": 0.0,
+      "objective": -2.440568796294804
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4800,
+      "likelihood_over_count": -3.8851814150698334,
+      "prior": 0.0,
+      "objective": -3.8851814150698334
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4800,
+      "likelihood_over_count": -2.4405693351979054,
+      "prior": 0.0,
+      "objective": -2.4405693351979054
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4850,
+      "likelihood_over_count": -3.885182966641933,
+      "prior": 0.0,
+      "objective": -3.885182966641933
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4850,
+      "likelihood_over_count": -2.440569865262313,
+      "prior": 0.0,
+      "objective": -2.440569865262313
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4900,
+      "likelihood_over_count": -3.8851844978186953,
+      "prior": 0.0,
+      "objective": -3.8851844978186953
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4900,
+      "likelihood_over_count": -2.4405703864643193,
+      "prior": 0.0,
+      "objective": -2.4405703864643193
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 4950,
+      "likelihood_over_count": -3.885186009260615,
+      "prior": 0.0,
+      "objective": -3.885186009260615
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 4950,
+      "likelihood_over_count": -2.440570898919825,
+      "prior": 0.0,
+      "objective": -2.440570898919825
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5000,
+      "likelihood_over_count": -3.8851875007496166,
+      "prior": 0.0,
+      "objective": -3.8851875007496166
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5000,
+      "likelihood_over_count": -2.4405714039570454,
+      "prior": 0.0,
+      "objective": -2.4405714039570454
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5050,
+      "likelihood_over_count": -3.885188973456107,
+      "prior": 0.0,
+      "objective": -3.885188973456107
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5050,
+      "likelihood_over_count": -2.440571900011436,
+      "prior": 0.0,
+      "objective": -2.440571900011436
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5100,
+      "likelihood_over_count": -3.8851904275501736,
+      "prior": 0.0,
+      "objective": -3.8851904275501736
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5100,
+      "likelihood_over_count": -2.4405723885093145,
+      "prior": 0.0,
+      "objective": -2.4405723885093145
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5150,
+      "likelihood_over_count": -3.8851918631660305,
+      "prior": 0.0,
+      "objective": -3.8851918631660305
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5150,
+      "likelihood_over_count": -2.4405728695933373,
+      "prior": 0.0,
+      "objective": -2.4405728695933373
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5200,
+      "likelihood_over_count": -3.885193280987994,
+      "prior": 0.0,
+      "objective": -3.885193280987994
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5200,
+      "likelihood_over_count": -2.440573343366104,
+      "prior": 0.0,
+      "objective": -2.440573343366104
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5250,
+      "likelihood_over_count": -3.8851946812470834,
+      "prior": 0.0,
+      "objective": -3.8851946812470834
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5250,
+      "likelihood_over_count": -2.4405738097228933,
+      "prior": 0.0,
+      "objective": -2.4405738097228933
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5300,
+      "likelihood_over_count": -3.8851960644601142,
+      "prior": 0.0,
+      "objective": -3.8851960644601142
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5300,
+      "likelihood_over_count": -2.440574269454268,
+      "prior": 0.0,
+      "objective": -2.440574269454268
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5350,
+      "likelihood_over_count": -3.88519743045478,
+      "prior": 0.0,
+      "objective": -3.88519743045478
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5350,
+      "likelihood_over_count": -2.440574722057607,
+      "prior": 0.0,
+      "objective": -2.440574722057607
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5400,
+      "likelihood_over_count": -3.885198779761562,
+      "prior": 0.0,
+      "objective": -3.885198779761562
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5400,
+      "likelihood_over_count": -2.440575168512107,
+      "prior": 0.0,
+      "objective": -2.440575168512107
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5450,
+      "likelihood_over_count": -3.88520011262953,
+      "prior": 0.0,
+      "objective": -3.88520011262953
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5450,
+      "likelihood_over_count": -2.4405756085568235,
+      "prior": 0.0,
+      "objective": -2.4405756085568235
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5500,
+      "likelihood_over_count": -3.8852014296057327,
+      "prior": 0.0,
+      "objective": -3.8852014296057327
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5500,
+      "likelihood_over_count": -2.440576042255926,
+      "prior": 0.0,
+      "objective": -2.440576042255926
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5550,
+      "likelihood_over_count": -3.8852027304095285,
+      "prior": 0.0,
+      "objective": -3.8852027304095285
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5550,
+      "likelihood_over_count": -2.4405764700622354,
+      "prior": 0.0,
+      "objective": -2.4405764700622354
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5600,
+      "likelihood_over_count": -3.8852040157342755,
+      "prior": 0.0,
+      "objective": -3.8852040157342755
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5600,
+      "likelihood_over_count": -2.4405768917645094,
+      "prior": 0.0,
+      "objective": -2.4405768917645094
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5650,
+      "likelihood_over_count": -3.8852052857392727,
+      "prior": 0.0,
+      "objective": -3.8852052857392727
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5650,
+      "likelihood_over_count": -2.4405773078123603,
+      "prior": 0.0,
+      "objective": -2.4405773078123603
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5700,
+      "likelihood_over_count": -3.8852065402392197,
+      "prior": 0.0,
+      "objective": -3.8852065402392197
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5700,
+      "likelihood_over_count": -2.440577718408704,
+      "prior": 0.0,
+      "objective": -2.440577718408704
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5750,
+      "likelihood_over_count": -3.885207780718048,
+      "prior": 0.0,
+      "objective": -3.885207780718048
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5750,
+      "likelihood_over_count": -2.440578123185021,
+      "prior": 0.0,
+      "objective": -2.440578123185021
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5800,
+      "likelihood_over_count": -3.8852090061740614,
+      "prior": 0.0,
+      "objective": -3.8852090061740614
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5800,
+      "likelihood_over_count": -2.4405785228719408,
+      "prior": 0.0,
+      "objective": -2.4405785228719408
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5850,
+      "likelihood_over_count": -3.885210217867485,
+      "prior": 0.0,
+      "objective": -3.885210217867485
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5850,
+      "likelihood_over_count": -2.440578917103964,
+      "prior": 0.0,
+      "objective": -2.440578917103964
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5900,
+      "likelihood_over_count": -3.885211415152996,
+      "prior": 0.0,
+      "objective": -3.885211415152996
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5900,
+      "likelihood_over_count": -2.440579306123514,
+      "prior": 0.0,
+      "objective": -2.440579306123514
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 5950,
+      "likelihood_over_count": -3.8852125985746158,
+      "prior": 0.0,
+      "objective": -3.8852125985746158
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 5950,
+      "likelihood_over_count": -2.4405796904942454,
+      "prior": 0.0,
+      "objective": -2.4405796904942454
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6000,
+      "likelihood_over_count": -3.8852137685742822,
+      "prior": 0.0,
+      "objective": -3.8852137685742822
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6000,
+      "likelihood_over_count": -2.4405800698276328,
+      "prior": 0.0,
+      "objective": -2.4405800698276328
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6050,
+      "likelihood_over_count": -3.88521492530727,
+      "prior": 0.0,
+      "objective": -3.88521492530727
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6050,
+      "likelihood_over_count": -2.440580444873497,
+      "prior": 0.0,
+      "objective": -2.440580444873497
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6100,
+      "likelihood_over_count": -3.8852160685800317,
+      "prior": 0.0,
+      "objective": -3.8852160685800317
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6100,
+      "likelihood_over_count": -2.4405808149677193,
+      "prior": 0.0,
+      "objective": -2.4405808149677193
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6150,
+      "likelihood_over_count": -3.8852171993777653,
+      "prior": 0.0,
+      "objective": -3.8852171993777653
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6150,
+      "likelihood_over_count": -2.440581180375588,
+      "prior": 0.0,
+      "objective": -2.440581180375588
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6200,
+      "likelihood_over_count": -3.8852183176611073,
+      "prior": 0.0,
+      "objective": -3.8852183176611073
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6200,
+      "likelihood_over_count": -2.440581541314059,
+      "prior": 0.0,
+      "objective": -2.440581541314059
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6250,
+      "likelihood_over_count": -3.8852194233033583,
+      "prior": 0.0,
+      "objective": -3.8852194233033583
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6250,
+      "likelihood_over_count": -2.4405818982722343,
+      "prior": 0.0,
+      "objective": -2.4405818982722343
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6300,
+      "likelihood_over_count": -3.885220517091934,
+      "prior": 0.0,
+      "objective": -3.885220517091934
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6300,
+      "likelihood_over_count": -2.4405822507160164,
+      "prior": 0.0,
+      "objective": -2.4405822507160164
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6350,
+      "likelihood_over_count": -3.8852215983213187,
+      "prior": 0.0,
+      "objective": -3.8852215983213187
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6350,
+      "likelihood_over_count": -2.440582599342927,
+      "prior": 0.0,
+      "objective": -2.440582599342927
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6400,
+      "likelihood_over_count": -3.885222668051855,
+      "prior": 0.0,
+      "objective": -3.885222668051855
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6400,
+      "likelihood_over_count": -2.4405829441011737,
+      "prior": 0.0,
+      "objective": -2.4405829441011737
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6450,
+      "likelihood_over_count": -3.8852237261931184,
+      "prior": 0.0,
+      "objective": -3.8852237261931184
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6450,
+      "likelihood_over_count": -2.4405832848633726,
+      "prior": 0.0,
+      "objective": -2.4405832848633726
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6500,
+      "likelihood_over_count": -3.885224773134088,
+      "prior": 0.0,
+      "objective": -3.885224773134088
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6500,
+      "likelihood_over_count": -2.4405836217917307,
+      "prior": 0.0,
+      "objective": -2.4405836217917307
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6550,
+      "likelihood_over_count": -3.8852258086660663,
+      "prior": 0.0,
+      "objective": -3.8852258086660663
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6550,
+      "likelihood_over_count": -2.440583954991548,
+      "prior": 0.0,
+      "objective": -2.440583954991548
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6600,
+      "likelihood_over_count": -3.8852268334014792,
+      "prior": 0.0,
+      "objective": -3.8852268334014792
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6600,
+      "likelihood_over_count": -2.4405842845398253,
+      "prior": 0.0,
+      "objective": -2.4405842845398253
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6650,
+      "likelihood_over_count": -3.8852278472553805,
+      "prior": 0.0,
+      "objective": -3.8852278472553805
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6650,
+      "likelihood_over_count": -2.4405846102549944,
+      "prior": 0.0,
+      "objective": -2.4405846102549944
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6700,
+      "likelihood_over_count": -3.885228850032384,
+      "prior": 0.0,
+      "objective": -3.885228850032384
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6700,
+      "likelihood_over_count": -2.440584932355124,
+      "prior": 0.0,
+      "objective": -2.440584932355124
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6750,
+      "likelihood_over_count": -3.885229842731855,
+      "prior": 0.0,
+      "objective": -3.885229842731855
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6750,
+      "likelihood_over_count": -2.4405852512214343,
+      "prior": 0.0,
+      "objective": -2.4405852512214343
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6800,
+      "likelihood_over_count": -3.885230824875013,
+      "prior": 0.0,
+      "objective": -3.885230824875013
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6800,
+      "likelihood_over_count": -2.4405855671008068,
+      "prior": 0.0,
+      "objective": -2.4405855671008068
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6850,
+      "likelihood_over_count": -3.8852317973703565,
+      "prior": 0.0,
+      "objective": -3.8852317973703565
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6850,
+      "likelihood_over_count": -2.4405858790862798,
+      "prior": 0.0,
+      "objective": -2.4405858790862798
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6900,
+      "likelihood_over_count": -3.8852327598206697,
+      "prior": 0.0,
+      "objective": -3.8852327598206697
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6900,
+      "likelihood_over_count": -2.4405861879198336,
+      "prior": 0.0,
+      "objective": -2.4405861879198336
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 6950,
+      "likelihood_over_count": -3.8852337124143963,
+      "prior": 0.0,
+      "objective": -3.8852337124143963
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 6950,
+      "likelihood_over_count": -2.4405864938195414,
+      "prior": 0.0,
+      "objective": -2.4405864938195414
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7000,
+      "likelihood_over_count": -3.8852346554661796,
+      "prior": 0.0,
+      "objective": -3.8852346554661796
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7000,
+      "likelihood_over_count": -2.4405867966924935,
+      "prior": 0.0,
+      "objective": -2.4405867966924935
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7050,
+      "likelihood_over_count": -3.8852355888942687,
+      "prior": 0.0,
+      "objective": -3.8852355888942687
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7050,
+      "likelihood_over_count": -2.440587096833366,
+      "prior": 0.0,
+      "objective": -2.440587096833366
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7100,
+      "likelihood_over_count": -3.8852365128614554,
+      "prior": 0.0,
+      "objective": -3.8852365128614554
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7100,
+      "likelihood_over_count": -2.4405873935274007,
+      "prior": 0.0,
+      "objective": -2.4405873935274007
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7150,
+      "likelihood_over_count": -3.885237427841841,
+      "prior": 0.0,
+      "objective": -3.885237427841841
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7150,
+      "likelihood_over_count": -2.440587687931793,
+      "prior": 0.0,
+      "objective": -2.440587687931793
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7200,
+      "likelihood_over_count": -3.8852383336400784,
+      "prior": 0.0,
+      "objective": -3.8852383336400784
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7200,
+      "likelihood_over_count": -2.4405879787174096,
+      "prior": 0.0,
+      "objective": -2.4405879787174096
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7250,
+      "likelihood_over_count": -3.885239229852306,
+      "prior": 0.0,
+      "objective": -3.885239229852306
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7250,
+      "likelihood_over_count": -2.440588267028632,
+      "prior": 0.0,
+      "objective": -2.440588267028632
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7300,
+      "likelihood_over_count": -3.885240117624916,
+      "prior": 0.0,
+      "objective": -3.885240117624916
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7300,
+      "likelihood_over_count": -2.4405885525477236,
+      "prior": 0.0,
+      "objective": -2.4405885525477236
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7350,
+      "likelihood_over_count": -3.8852409967590384,
+      "prior": 0.0,
+      "objective": -3.8852409967590384
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7350,
+      "likelihood_over_count": -2.4405888352259386,
+      "prior": 0.0,
+      "objective": -2.4405888352259386
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7400,
+      "likelihood_over_count": -3.8852418673887383,
+      "prior": 0.0,
+      "objective": -3.8852418673887383
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7400,
+      "likelihood_over_count": -2.440589115490984,
+      "prior": 0.0,
+      "objective": -2.440589115490984
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7450,
+      "likelihood_over_count": -3.8852427293812384,
+      "prior": 0.0,
+      "objective": -3.8852427293812384
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7450,
+      "likelihood_over_count": -2.440589392965011,
+      "prior": 0.0,
+      "objective": -2.440589392965011
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7500,
+      "likelihood_over_count": -3.8852435828645087,
+      "prior": 0.0,
+      "objective": -3.8852435828645087
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7500,
+      "likelihood_over_count": -2.440589668033776,
+      "prior": 0.0,
+      "objective": -2.440589668033776
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7550,
+      "likelihood_over_count": -3.8852444284012653,
+      "prior": 0.0,
+      "objective": -3.8852444284012653
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7550,
+      "likelihood_over_count": -2.440589940840057,
+      "prior": 0.0,
+      "objective": -2.440589940840057
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7600,
+      "likelihood_over_count": -3.8852452654107688,
+      "prior": 0.0,
+      "objective": -3.8852452654107688
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7600,
+      "likelihood_over_count": -2.440590210395203,
+      "prior": 0.0,
+      "objective": -2.440590210395203
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7650,
+      "likelihood_over_count": -3.8852460947938985,
+      "prior": 0.0,
+      "objective": -3.8852460947938985
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7650,
+      "likelihood_over_count": -2.4405904781894034,
+      "prior": 0.0,
+      "objective": -2.4405904781894034
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7700,
+      "likelihood_over_count": -3.8852469161124286,
+      "prior": 0.0,
+      "objective": -3.8852469161124286
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7700,
+      "likelihood_over_count": -2.440590743583026,
+      "prior": 0.0,
+      "objective": -2.440590743583026
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7750,
+      "likelihood_over_count": -3.8852477300344885,
+      "prior": 0.0,
+      "objective": -3.8852477300344885
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7750,
+      "likelihood_over_count": -2.4405910065162364,
+      "prior": 0.0,
+      "objective": -2.4405910065162364
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7800,
+      "likelihood_over_count": -3.885248536213803,
+      "prior": 0.0,
+      "objective": -3.885248536213803
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7800,
+      "likelihood_over_count": -2.44059126692248,
+      "prior": 0.0,
+      "objective": -2.44059126692248
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7850,
+      "likelihood_over_count": -3.8852493344758834,
+      "prior": 0.0,
+      "objective": -3.8852493344758834
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7850,
+      "likelihood_over_count": -2.440591525461109,
+      "prior": 0.0,
+      "objective": -2.440591525461109
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7900,
+      "likelihood_over_count": -3.8852501260252623,
+      "prior": 0.0,
+      "objective": -3.8852501260252623
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7900,
+      "likelihood_over_count": -2.4405917813531506,
+      "prior": 0.0,
+      "objective": -2.4405917813531506
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 7950,
+      "likelihood_over_count": -3.8852509092388874,
+      "prior": 0.0,
+      "objective": -3.8852509092388874
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 7950,
+      "likelihood_over_count": -2.440592035387996,
+      "prior": 0.0,
+      "objective": -2.440592035387996
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8000,
+      "likelihood_over_count": -3.885251685512632,
+      "prior": 0.0,
+      "objective": -3.885251685512632
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8000,
+      "likelihood_over_count": -2.4405922874228962,
+      "prior": 0.0,
+      "objective": -2.4405922874228962
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8050,
+      "likelihood_over_count": -3.885252454628274,
+      "prior": 0.0,
+      "objective": -3.885252454628274
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8050,
+      "likelihood_over_count": -2.4405925369011428,
+      "prior": 0.0,
+      "objective": -2.4405925369011428
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8100,
+      "likelihood_over_count": -3.8852532168163254,
+      "prior": 0.0,
+      "objective": -3.8852532168163254
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8100,
+      "likelihood_over_count": -2.4405927845317086,
+      "prior": 0.0,
+      "objective": -2.4405927845317086
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8150,
+      "likelihood_over_count": -3.8852539718395693,
+      "prior": 0.0,
+      "objective": -3.8852539718395693
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8150,
+      "likelihood_over_count": -2.44059303041485,
+      "prior": 0.0,
+      "objective": -2.44059303041485
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8200,
+      "likelihood_over_count": -3.885254719593239,
+      "prior": 0.0,
+      "objective": -3.885254719593239
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8200,
+      "likelihood_over_count": -2.440593274067366,
+      "prior": 0.0,
+      "objective": -2.440593274067366
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8250,
+      "likelihood_over_count": -3.8852554605967,
+      "prior": 0.0,
+      "objective": -3.8852554605967
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8250,
+      "likelihood_over_count": -2.4405935157939522,
+      "prior": 0.0,
+      "objective": -2.4405935157939522
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8300,
+      "likelihood_over_count": -3.885256194956673,
+      "prior": 0.0,
+      "objective": -3.885256194956673
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8300,
+      "likelihood_over_count": -2.4405937554896675,
+      "prior": 0.0,
+      "objective": -2.4405937554896675
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8350,
+      "likelihood_over_count": -3.8852569221140802,
+      "prior": 0.0,
+      "objective": -3.8852569221140802
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8350,
+      "likelihood_over_count": -2.440593993434533,
+      "prior": 0.0,
+      "objective": -2.440593993434533
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8400,
+      "likelihood_over_count": -3.8852576426757754,
+      "prior": 0.0,
+      "objective": -3.8852576426757754
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8400,
+      "likelihood_over_count": -2.440594229609149,
+      "prior": 0.0,
+      "objective": -2.440594229609149
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8450,
+      "likelihood_over_count": -3.8852583566172285,
+      "prior": 0.0,
+      "objective": -3.8852583566172285
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8450,
+      "likelihood_over_count": -2.4405944640049198,
+      "prior": 0.0,
+      "objective": -2.4405944640049198
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8500,
+      "likelihood_over_count": -3.885259064048428,
+      "prior": 0.0,
+      "objective": -3.885259064048428
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8500,
+      "likelihood_over_count": -2.440594696166101,
+      "prior": 0.0,
+      "objective": -2.440594696166101
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8550,
+      "likelihood_over_count": -3.885259764899106,
+      "prior": 0.0,
+      "objective": -3.885259764899106
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8550,
+      "likelihood_over_count": -2.4405949267793994,
+      "prior": 0.0,
+      "objective": -2.4405949267793994
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8600,
+      "likelihood_over_count": -3.8852604591206052,
+      "prior": 0.0,
+      "objective": -3.8852604591206052
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8600,
+      "likelihood_over_count": -2.440595155629138,
+      "prior": 0.0,
+      "objective": -2.440595155629138
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8650,
+      "likelihood_over_count": -3.88526114748231,
+      "prior": 0.0,
+      "objective": -3.88526114748231
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8650,
+      "likelihood_over_count": -2.4405953832728624,
+      "prior": 0.0,
+      "objective": -2.4405953832728624
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8700,
+      "likelihood_over_count": -3.8852618299292097,
+      "prior": 0.0,
+      "objective": -3.8852618299292097
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8700,
+      "likelihood_over_count": -2.440595608377025,
+      "prior": 0.0,
+      "objective": -2.440595608377025
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8750,
+      "likelihood_over_count": -3.885262505634304,
+      "prior": 0.0,
+      "objective": -3.885262505634304
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8750,
+      "likelihood_over_count": -2.440595832314762,
+      "prior": 0.0,
+      "objective": -2.440595832314762
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8800,
+      "likelihood_over_count": -3.885263175566342,
+      "prior": 0.0,
+      "objective": -3.885263175566342
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8800,
+      "likelihood_over_count": -2.440596054643437,
+      "prior": 0.0,
+      "objective": -2.440596054643437
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8850,
+      "likelihood_over_count": -3.8852638401653357,
+      "prior": 0.0,
+      "objective": -3.8852638401653357
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8850,
+      "likelihood_over_count": -2.4405962752796344,
+      "prior": 0.0,
+      "objective": -2.4405962752796344
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8900,
+      "likelihood_over_count": -3.8852644982647258,
+      "prior": 0.0,
+      "objective": -3.8852644982647258
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8900,
+      "likelihood_over_count": -2.4405964939546547,
+      "prior": 0.0,
+      "objective": -2.4405964939546547
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 8950,
+      "likelihood_over_count": -3.885265150866969,
+      "prior": 0.0,
+      "objective": -3.885265150866969
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 8950,
+      "likelihood_over_count": -2.4405967113087086,
+      "prior": 0.0,
+      "objective": -2.4405967113087086
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9000,
+      "likelihood_over_count": -3.8852657978643608,
+      "prior": 0.0,
+      "objective": -3.8852657978643608
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9000,
+      "likelihood_over_count": -2.4405969273107737,
+      "prior": 0.0,
+      "objective": -2.4405969273107737
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9050,
+      "likelihood_over_count": -3.885266438682082,
+      "prior": 0.0,
+      "objective": -3.885266438682082
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9050,
+      "likelihood_over_count": -2.4405971418767534,
+      "prior": 0.0,
+      "objective": -2.4405971418767534
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9100,
+      "likelihood_over_count": -3.8852670747567646,
+      "prior": 0.0,
+      "objective": -3.8852670747567646
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9100,
+      "likelihood_over_count": -2.440597354788732,
+      "prior": 0.0,
+      "objective": -2.440597354788732
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9150,
+      "likelihood_over_count": -3.885267704845985,
+      "prior": 0.0,
+      "objective": -3.885267704845985
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9150,
+      "likelihood_over_count": -2.440597566321483,
+      "prior": 0.0,
+      "objective": -2.440597566321483
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9200,
+      "likelihood_over_count": -3.8852683297382047,
+      "prior": 0.0,
+      "objective": -3.8852683297382047
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9200,
+      "likelihood_over_count": -2.4405977761872744,
+      "prior": 0.0,
+      "objective": -2.4405977761872744
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9250,
+      "likelihood_over_count": -3.8852689494687755,
+      "prior": 0.0,
+      "objective": -3.8852689494687755
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9250,
+      "likelihood_over_count": -2.4405979847079857,
+      "prior": 0.0,
+      "objective": -2.4405979847079857
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9300,
+      "likelihood_over_count": -3.885269564010402,
+      "prior": 0.0,
+      "objective": -3.885269564010402
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9300,
+      "likelihood_over_count": -2.4405981919659063,
+      "prior": 0.0,
+      "objective": -2.4405981919659063
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9350,
+      "likelihood_over_count": -3.885270173061111,
+      "prior": 0.0,
+      "objective": -3.885270173061111
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9350,
+      "likelihood_over_count": -2.4405983977477033,
+      "prior": 0.0,
+      "objective": -2.4405983977477033
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9400,
+      "likelihood_over_count": -3.885270777144059,
+      "prior": 0.0,
+      "objective": -3.885270777144059
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9400,
+      "likelihood_over_count": -2.4405986016927135,
+      "prior": 0.0,
+      "objective": -2.4405986016927135
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9450,
+      "likelihood_over_count": -3.8852713753584185,
+      "prior": 0.0,
+      "objective": -3.8852713753584185
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9450,
+      "likelihood_over_count": -2.440598804113882,
+      "prior": 0.0,
+      "objective": -2.440598804113882
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9500,
+      "likelihood_over_count": -3.8852719690825874,
+      "prior": 0.0,
+      "objective": -3.8852719690825874
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9500,
+      "likelihood_over_count": -2.4405990061668317,
+      "prior": 0.0,
+      "objective": -2.4405990061668317
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9550,
+      "likelihood_over_count": -3.885272557555966,
+      "prior": 0.0,
+      "objective": -3.885272557555966
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9550,
+      "likelihood_over_count": -2.4405992062390824,
+      "prior": 0.0,
+      "objective": -2.4405992062390824
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9600,
+      "likelihood_over_count": -3.885273140843036,
+      "prior": 0.0,
+      "objective": -3.885273140843036
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9600,
+      "likelihood_over_count": -2.440599404889915,
+      "prior": 0.0,
+      "objective": -2.440599404889915
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9650,
+      "likelihood_over_count": -3.885273718858371,
+      "prior": 0.0,
+      "objective": -3.885273718858371
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9650,
+      "likelihood_over_count": -2.440599602236861,
+      "prior": 0.0,
+      "objective": -2.440599602236861
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9700,
+      "likelihood_over_count": -3.885274292263484,
+      "prior": 0.0,
+      "objective": -3.885274292263484
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9700,
+      "likelihood_over_count": -2.440599798199819,
+      "prior": 0.0,
+      "objective": -2.440599798199819
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9750,
+      "likelihood_over_count": -3.8852748606117307,
+      "prior": 0.0,
+      "objective": -3.8852748606117307
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9750,
+      "likelihood_over_count": -2.440599993121431,
+      "prior": 0.0,
+      "objective": -2.440599993121431
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9800,
+      "likelihood_over_count": -3.8852754241783436,
+      "prior": 0.0,
+      "objective": -3.8852754241783436
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9800,
+      "likelihood_over_count": -2.4406001868097706,
+      "prior": 0.0,
+      "objective": -2.4406001868097706
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9850,
+      "likelihood_over_count": -3.8852759826438,
+      "prior": 0.0,
+      "objective": -3.8852759826438
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9850,
+      "likelihood_over_count": -2.4406003793503763,
+      "prior": 0.0,
+      "objective": -2.4406003793503763
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9900,
+      "likelihood_over_count": -3.8852765369355975,
+      "prior": 0.0,
+      "objective": -3.8852765369355975
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9900,
+      "likelihood_over_count": -2.4406005697493107,
+      "prior": 0.0,
+      "objective": -2.4406005697493107
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 9950,
+      "likelihood_over_count": -3.885277086222647,
+      "prior": 0.0,
+      "objective": -3.885277086222647
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 9950,
+      "likelihood_over_count": -2.4406007598933286,
+      "prior": 0.0,
+      "objective": -2.4406007598933286
+    },
+    {
+      "channel": "440_compton",
+      "iteration": 10000,
+      "likelihood_over_count": -3.885277631182653,
+      "prior": 0.0,
+      "objective": -3.885277631182653
+    },
+    {
+      "channel": "440_jscc",
+      "iteration": 10000,
+      "likelihood_over_count": -2.4406009487564884,
+      "prior": 0.0,
+      "objective": -2.4406009487564884
+    }
+  ],
+  "inner_solution": "best feasible primal iterate; descent checked; gap/cap recorded",
+  "prior_applied_once_after_global_backprojection": true
+}

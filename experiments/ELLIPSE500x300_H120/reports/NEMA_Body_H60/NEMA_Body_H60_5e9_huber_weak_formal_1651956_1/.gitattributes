@@ -1,0 +1,4 @@
+# Preserve checksummed analysis and archived source bytes across platforms.
+*.json -text whitespace=cr-at-eol
+*.csv -text whitespace=cr-at-eol
+scripts/*.py -text

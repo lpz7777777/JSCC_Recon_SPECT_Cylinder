@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "study": "NEMA_5e9_SPIKE_ABLATION_V1",
+  "variant": "bind_f010",
+  "phase": "short",
+  "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/Results/NEMA_Body_H60_5e9_bind_f010_short_1651956_0",
+  "iterations": 200,
+  "frames": 4,
+  "primaries": 5000000000,
+  "accepted_events": 484936,
+  "nodes": 8,
+  "gpu_reserved_fraction": 0.44071882837072035,
+  "host_peak_fraction": 0.45435813802083336,
+  "slurm_host_fraction": 0.63363203125,
+  "elapsed_max_seconds": 910.98225723207,
+  "accounting": {
+    "job": "1651956",
+    "sacct": "1651956||480000M\n1651956.batch||\n1651956.extern||\n1651956.0|552072K|\n1651956.1|38930352K|\n1651956.2|124K|\n1651956.3|15368K|\n1651956.4|23672K|\n1651956.5|23464348K|\n1651956.6|144K|\n",
+    "max_rss_bytes": 39864680448.0
+  },
+  "study_sha256": "d7445068aba0cee810f6a2a15a9ed87e8e06d7056c3c4890a98ad421995c5b09",
+  "release_sha256": "003e56d32a6e836aec127672b59f2cb2fc7e9b3e23388de50410ce291864655c",
+  "run_manifest_sha256": "1faed62cc0568b9b40adfd8a2d186988213c075c5c7f14f465bce4db7561a1ae",
+  "optimization_sha256": "843d9017677c30e73be9447b442788fefcb2fd4248370cdd54800c11c303c4ad",
+  "outputs_sha256": {
+    "440_SinglePhoton": {
+      "active": "87060c3dad9a92e0d2b0fa8297aa1e99d75ca93f6697a7553daf4c9e832ee8d0",
+      "full": "f2191588261527b0aa063f07df5faaaa858941a0ae0e520deaf94b0cbc3e1f6c",
+      "history": "c2e3c4faa30e5f022acee20ef49e0bf963a76b44523e926d18c2ceaf3def9519"
+    },
+    "440_ComptonOnly": {
+      "active": "6e9f2c96abc09422168fe24fc6be17dc3bdfd08bb62b754e5cbb346516f44a66",
+      "full": "d7ba5716019a4dd75cfac92ade8eae256344fe7426eab5256b4bf872a28165e5",
+      "history": "b30ead6d48b74b37d8797fe68bdfa9545945b4d6d04ddabdfe414bdf28e79a69"
+    },
+    "440_SinglePlusCompton": {
+      "active": "d2a4626aacf7556a07f293eec2210da6fc03ff9d38e1e74b084d9664c696502a",
+      "full": "0902c2e4e546666c4b0072b7aafc39b3c5135ad654cd57b6ecd99fe4039eb127",
+      "history": "faf0a212b583cf8283556c59b1993c1ecc35dbf9d229b24c6a79281c563ed8aa"
+    },
+    "218_SinglePhoton_CrossTalkCorrected": {
+      "active": "415f12402cc47f01f6fc0da543f911d132ddb6184b9022db93652ec176826537",
+      "full": "3b72459a646b6539d780ddb5d5c925cbc19ed114bba305c57450fcfbbb8a74c5",
+      "history": "a588d31c74e83c50f6fe9336af33dc978712f9156557b22fcfd76409033e8df3"
+    },
+    "440SinglePlus218Single": {
+      "active": "e33a60ab729688b8b36d6888cea143564903338af37dd5ed05693bd4af91e218",
+      "full": "27057eb0f1a903eada46c8a1277f9a9e394a68e6c2696bcaa262017ba3bac807",
+      "history": "281befe42d09607c213dd9f8d671064df3c97ced643c9129bdda2685060eba3a"
+    },
+    "440SingleComptonPlus218Single": {
+      "active": "5c0e857fb35b8cffec7f7de36c941399b6a783d7d08bbe7c26ab230460bdbc2a",
+      "full": "1b8544774f2b70ee648f83b602182845b21420efcee75d20d87d6dc393fcdbac",
+      "history": "2f35ff8cce9ec941608fb1f6c4b0802b75469204ef27ba0d2abb9a61a494a4c5"
+    }
+  },
+  "prediction_sha256": "8d68a62e1b2ec1c09af89210c4729d3a59d8701ac0d2465c48bf6e7c3faac85b",
+  "optimization_states": {
+    "440_single": {
+      "alpha": 227.8150539537276,
+      "count": 5363190.0,
+      "previous_objective": -2.3095117303867894,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    },
+    "218_corrected": {
+      "alpha": 139.52256849014955,
+      "count": 12314473.0,
+      "previous_objective": -3.4801285310509984,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    },
+    "440_compton": {
+      "alpha": 229.24311955073483,
+      "count": 484936.0,
+      "previous_objective": -3.88412938762343,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    },
+    "440_jscc": {
+      "alpha": 227.9327946445387,
+      "count": 5848126.0,
+      "previous_objective": -2.4395924249038954,
+      "max_objective_increase": 0.0,
+      "max_surrogate_increase": 0.0,
+      "max_inner_gap": 0.0,
+      "inner_cap_count": 0.0,
+      "updates": 200.0
+    }
+  }
+}
