@@ -1,0 +1,17 @@
+{
+  "study": "response_mismatch_cut3_v1",
+  "job_id": "1657745",
+  "job_name": "NEMA_response_cut3",
+  "submitted_utc": "2026-10-03T19:50:15.898550+00:00",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/response_mismatch_cut3_v1_749de269c15ebe99",
+  "phases": [
+    "filter-off 50",
+    "cut3 full-data 10",
+    "cut3 formal 10000"
+  ],
+  "formal_output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/response_mismatch_cut3_v1/formal_1657745",
+  "nccl_interface": "bond0",
+  "attempts": 1
+}

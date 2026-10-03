@@ -4,6 +4,8 @@
 
 本页是当前入口和文件索引。早期操作、作业号、故障及逐次结果详见 [HISTORY.md](HISTORY.md)；历史中较早的“待运行”等状态可能已过时。远端连接方法见 [docs/REMOTE_COMPUTE_ACCESS.md](../../docs/REMOTE_COMPUTE_ACCESS.md)，不在本实验目录保存密码或私钥。
 
+**2026-10-04当前推进：NEMA 5e9仅删除3σ严重失配事件的唯一对照 `response_mismatch_cut3_v1`。** 全20视角复现原484936个接受事件，新增删除1168（0.241%）、保留483768；两个独立1e9均匀源的匹配灵敏度核验已完成，平均闭合1.00095、空间CV0.293%。两张响应诊断图和逐事件原行号清单已形成。scxi717唯一作业**1657745**已提交，8节点×1GPU：关闭筛选50次回归→开启筛选10次完整数据试跑→Compton/JSCC各10000次、每50次保存，另写2000次只读检查点。新组不重跑Geant4、218或单光子，不启用Huber/TV/边界绑定/平滑。**新图像尚未完成，不能宣告尖峰改善。** 入口见[失配删除对照报告](reports/NEMA_Body_H60/response_mismatch_cut3_v1/README.md)、[运行簿](reports/NEMA_Body_H60/response_mismatch_cut3_v1/PRODUCTION.md)；原排队1657719因补齐检查点在启动前取消，零运行，不是第二个对照组。
+
 2026-10-04按用户要求更新显示约定：NEMA轴向MIP默认**仅取中央72mm，即z∈[−36,+36]mm**。40层、3mm间距的网格上下各去掉8层（各24mm），保留24层，层中心−34.5～+34.5mm。重建物理FOV仍500×300×120mm，原始图像及定量指标不改。已完成的MLEM、边界绑定、弱Huber均已重画[中央72mm六路对照和逐迭代MIP](reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/README.md)。`iterations_z20.png`仍是z=+1.5mm单层轴位图，不是MIP。`plot_nema_iterations.py`、`compare_spike_ablation.py`和后续取回流程共用此默认策略；`plot_nema_mip.py --trim-layers 8`可只重画MIP而不重算指标。此前上下各去掉3层的[102mm历史显示](reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/README.md)及原始全120mm图均保留。
 
 ## 当前已形成的基线

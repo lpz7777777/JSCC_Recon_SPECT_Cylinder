@@ -1,0 +1,3 @@
+# Preserve execution-source bytes referenced by response-study SHA256 manifests.
+compton_event_response.py -text whitespace=cr-at-eol
+process_list_plane_sparse.py -text whitespace=cr-at-eol

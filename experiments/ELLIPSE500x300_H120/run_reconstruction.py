@@ -148,6 +148,11 @@ def main():
     p.add_argument("--variant")
     p.add_argument("--study-short",action="store_true",
                    help="Frozen spike-ablation 200-iteration numerical check")
+    p.add_argument("--channels",choices=("six","compton-jscc"),default="six")
+    p.add_argument("--response-filter-config",type=Path)
+    p.add_argument("--compton-sensitivity",type=Path)
+    p.add_argument("--baseline-regression",action="store_true",
+                   help="Filter-off 50-iteration check for the response-mismatch study")
     args=p.parse_args()
     if args.iterations<=0 or args.iterations%args.save_step:
         raise ValueError("Iterations must divide by save-step")
@@ -156,8 +161,26 @@ def main():
         raise ValueError("Resource pilot must run exactly 10 iterations")
     if args.study_short and (args.iterations!=200 or args.study_json is None):
         raise ValueError("Study short run requires frozen study and 200 iterations")
-    if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only or args.study_short):
+    if args.baseline_regression and (args.iterations!=50 or args.save_step!=50 or
+        args.channels!="compton-jscc" or args.response_filter_config is None):
+        raise ValueError("Baseline regression requires response study, two channels and 50 iterations")
+    if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only or args.study_short or args.baseline_regression):
         raise ValueError("Formal experiment requires 10000 iterations")
+    response_study=None
+    max_min_arm=None
+    if args.response_filter_config is not None:
+        response_study=json.loads(args.response_filter_config.read_text())
+        if (response_study["study"]!="response_mismatch_cut3_v1" or
+            response_study["max_min_standardized_arm"]!=3.0 or
+            response_study["quality_domain"]!="full_circle_132040" or
+            args.channels!="compton-jscc" or args.study_json is not None or
+            args.dataset!="NEMA_Body_H60" or args.level!="5e9"):
+            raise ValueError("Response mismatch study configuration mismatch")
+        max_min_arm=None if args.baseline_regression else 3.0
+        if max_min_arm is not None and args.compton_sensitivity is None:
+            raise ValueError("Filtered events require an explicit matched sensitivity")
+    elif args.compton_sensitivity is not None or args.baseline_regression:
+        raise ValueError("Sensitivity override requires a frozen response study")
     if args.event_chunks<=0 or args.event_block<=0:
         raise ValueError("Invalid event chunk sizes")
     study=None
@@ -202,6 +225,14 @@ def main():
                 for name,expected_hash in study["baseline_factor_manifest_sha256"].items():
                     if digest(args.factors/name/"factor_manifest.json")!=expected_hash:
                         raise ValueError("Ablation Factor provenance differs from baseline")
+            if response_study is not None:
+                if input_hashes!=response_study["baseline_input_sha256"]:
+                    raise ValueError("Response study inputs differ from baseline")
+                if digest(args.geometry)!=response_study["geometry_sha256"]:
+                    raise ValueError("Response study geometry differs from baseline")
+                for name,expected_hash in response_study["baseline_factor_manifest_sha256"].items():
+                    if digest(args.factors/name/"factor_manifest.json")!=expected_hash:
+                        raise ValueError("Response study Factors differ from baseline")
         except Exception as error:
             validation_error=f"{type(error).__name__}: {error}"
         print("ELLIPSE_STAGE factors_validated",flush=True)
@@ -233,8 +264,9 @@ def main():
     list_dir=data/"List"/"218-440keV_RotateNum20_Geant4JSCC"/f"List_{args.dataset}_{args.level}"
     for view in range(1,21):
         if not (list_dir/f"{view}.csv").is_file(): raise FileNotFoundError(list_dir/f"{view}.csv")
-    sensi_path=factor_paths["A440"]/"Sensi_d"
-    provenance_path=factor_paths["A440"]/"Sensi_d_provenance.json"
+    sensi_path=(args.compton_sensitivity if args.compton_sensitivity is not None
+                else factor_paths["A440"]/"Sensi_d")
+    provenance_path=sensi_path.parent/"Sensi_d_provenance.json"
     if not sensi_path.is_file() or not provenance_path.is_file():
         raise FileNotFoundError("Validated new-distance Compton sensitivity required")
     provenance=json.loads(provenance_path.read_text())
@@ -246,6 +278,13 @@ def main():
         provenance["sum_threshold_MeV"]!=.350 or
         not provenance["input_already_smeared"]):
         raise ValueError("Compton sensitivity provenance mismatch")
+    if response_study is not None:
+        expected_sensi=(response_study["baseline_sensi_d_sha256"] if args.baseline_regression
+                        else response_study["sensi_d_sha256"])
+        if digest(sensi_path)!=expected_sensi:
+            raise ValueError("Response study sensitivity SHA256 mismatch")
+        if not args.baseline_regression and provenance.get("max_min_standardized_arm")!=3.0:
+            raise ValueError("Sensitivity does not match the 3-sigma event filter")
     if args.dry_run:
         if rank==0: print("ELLIPSE_RECON_PREFLIGHT_OK",flush=True)
         dist.destroy_process_group()
@@ -264,9 +303,7 @@ def main():
     if study is not None:
         from regularized_update import AblationUpdate
         update_rule=AblationUpdate(study,spatial_path,variant,device,args.output)
-    raw218=load_matrix(args.factors,NAMES["A218"],geometry.full_count,total_bins)
     raw440=load_matrix(args.factors,NAMES["A440"],geometry.full_count,total_bins)
-    rawcross=load_matrix(args.factors,NAMES["C440to218"],geometry.full_count,total_bins)
     if rank==0: print("ELLIPSE_STAGE loading_440_detector_shard",flush=True)
     response440=ViewResponse(local_rows(raw440,begin,end,device),geometry,args.cache_views)
     if rank==0: print("ELLIPSE_STAGE 440_detector_shard_ready",flush=True)
@@ -274,36 +311,39 @@ def main():
     dist.all_reduce(sensi440,op=dist.ReduceOp.SUM)
     if update_rule:
         update_rule.configure("440_single",sensi440,count_totals[440])
-    image440,h440=single_mlem(response440,projections[440],sensi440,
+    if args.channels=="six":
+        raw218=load_matrix(args.factors,NAMES["A218"],geometry.full_count,total_bins)
+        rawcross=load_matrix(args.factors,NAMES["C440to218"],geometry.full_count,total_bins)
+        image440,h440=single_mlem(response440,projections[440],sensi440,
                               args.iterations,args.save_step,save_history=rank==0,
                               progress_label="440_single",update_rule=update_rule)
-    if rank==0: print("ELLIPSE_STAGE loading_cross_and_218_shards",flush=True)
-    cross=ViewResponse(local_rows(rawcross,begin,end,device),geometry,args.cache_views)
-    predicted=forward_project(cross,image440)
-    response218=ViewResponse(local_rows(raw218,begin,end,device),geometry,args.cache_views)
-    sensi218=response218.sensitivity()
-    dist.all_reduce(sensi218,op=dist.ReduceOp.SUM)
-    if update_rule:
-        update_rule.configure("218_corrected",sensi218,count_totals[218])
-    image218,h218=single_mlem(response218,projections[218],sensi218,
-                              args.iterations,args.save_step,predicted,rank==0,
-                              progress_label="218_corrected",update_rule=update_rule)
-    if rank==0:
-        predicted_parts=[torch.empty_like(predicted) for _ in range(world)]
-    else:
-        predicted_parts=None
-    # Unequal detector shards: gather padded arrays on all ranks.
-    max_rows=(total_bins+world-1)//world
-    padded=torch.zeros((max_rows,20),device=device)
-    padded[:end-begin]=predicted
-    gathered=[torch.empty_like(padded) for _ in range(world)]
-    dist.all_gather(gathered,padded)
-    if rank==0:
-        np.concatenate([part[:split_bins(total_bins,k,world)[1]-split_bins(total_bins,k,world)[0]].cpu().numpy()
-                        for k,part in enumerate(gathered)]).astype("<f4").tofile(
-                        args.output/"PredictedCntStat_218_From440.float32")
-    del response218,cross,raw218,rawcross
-    torch.cuda.empty_cache() if device.type=="cuda" else None
+        if rank==0: print("ELLIPSE_STAGE loading_cross_and_218_shards",flush=True)
+        cross=ViewResponse(local_rows(rawcross,begin,end,device),geometry,args.cache_views)
+        predicted=forward_project(cross,image440)
+        response218=ViewResponse(local_rows(raw218,begin,end,device),geometry,args.cache_views)
+        sensi218=response218.sensitivity()
+        dist.all_reduce(sensi218,op=dist.ReduceOp.SUM)
+        if update_rule:
+            update_rule.configure("218_corrected",sensi218,count_totals[218])
+        image218,h218=single_mlem(response218,projections[218],sensi218,
+                                  args.iterations,args.save_step,predicted,rank==0,
+                                  progress_label="218_corrected",update_rule=update_rule)
+        if rank==0:
+            predicted_parts=[torch.empty_like(predicted) for _ in range(world)]
+        else:
+            predicted_parts=None
+        # Unequal detector shards: gather padded arrays on all ranks.
+        max_rows=(total_bins+world-1)//world
+        padded=torch.zeros((max_rows,20),device=device)
+        padded[:end-begin]=predicted
+        gathered=[torch.empty_like(padded) for _ in range(world)]
+        dist.all_gather(gathered,padded)
+        if rank==0:
+            np.concatenate([part[:split_bins(total_bins,k,world)[1]-split_bins(total_bins,k,world)[0]].cpu().numpy()
+                            for k,part in enumerate(gathered)]).astype("<f4").tofile(
+                            args.output/"PredictedCntStat_218_From440.float32")
+        del response218,cross,raw218,rawcross
+        torch.cuda.empty_cache() if device.type=="cuda" else None
     detector=torch.from_numpy(load_detector_coordinates(factor_paths["A440"]/"Detector.csv",
                                                    expected_count=total_bins)).to(device)
     coordinates=torch.from_numpy(np.loadtxt(factor_paths["A440"]/"coor_polar_full.csv",
@@ -327,7 +367,8 @@ def main():
             result,_,_=get_compton_backproj_list_single_sparse(
                 sysfull,detector,projector,part.to(device),0.0,0.0,
                 .440,resolution,threshold_max,.05,.350,device,
-                input_energies_already_smeared=True)
+                input_energies_already_smeared=True,
+                max_min_standardized_arm=max_min_arm)
             if result.numel(): packed.append(result)
         view_blocks=[]
         if packed:
@@ -344,10 +385,17 @@ def main():
     torch.cuda.empty_cache() if device.type=="cuda" else None
     accepted_tensor=torch.tensor([accepted],dtype=torch.int64,device=device)
     dist.all_reduce(accepted_tensor,op=dist.ReduceOp.SUM)
+    accepted_per_view=torch.tensor([sum(item.size(0) for item in view) for view in blocks],
+                                  dtype=torch.int64,device=device)
+    dist.all_reduce(accepted_per_view,op=dist.ReduceOp.SUM)
     if int(accepted_tensor.item())<=0:
         raise ValueError("No accepted 440-keV Compton events")
     if study is not None and int(accepted_tensor.item())!=study["baseline_accepted_compton_events"]:
         raise ValueError("Ablation accepted events differ from frozen baseline")
+    if response_study is not None:
+        expected_events=(484936 if args.baseline_regression else response_study["kept_compton_events"])
+        if int(accepted_tensor.item())!=expected_events:
+            raise ValueError("Response-filter accepted event closure failed")
     if rank==0: print(f"ELLIPSE_STAGE compton_events_ready accepted={int(accepted_tensor.item())}",flush=True)
     full_sensi=np.fromfile(sensi_path,dtype="<f4")
     if len(full_sensi)!=geometry.full_count or not np.isfinite(full_sensi).all():
@@ -356,18 +404,40 @@ def main():
     if update_rule:
         update_rule.configure("440_compton",sensid,int(accepted_tensor.item()))
         update_rule.configure("440_jscc",sensi440+sensid,count_totals[440]+int(accepted_tensor.item()))
+    checkpoint_callback=None
+    if response_study is not None and not (args.baseline_regression or args.pilot_only) and rank==0:
+        def checkpoint_callback(iteration, history_d, history_j):
+            if iteration!=2000:
+                return
+            folder=args.output/"checkpoint_2000"
+            folder.mkdir(exist_ok=False)
+            outputs=[]
+            for channel,history in (("440_ComptonOnly",history_d),("440_SinglePlusCompton",history_j)):
+                collect_response(folder,channel,history[-1],torch.stack(history),geometry,0)
+                paths={kind:folder/f"Image_{channel}_{kind}.float32" for kind in ("active","full","history")}
+                outputs.append({"channel":channel,"frames":len(history),
+                                "sha256":{kind:digest(path) for kind,path in paths.items()}})
+            checkpoint={"study":response_study["study"],"mode":"interim","iteration":iteration,
+                "save_step":args.save_step,"input_sha256":input_hashes,"geometry_sha256":digest(args.geometry),
+                "sensi_d_sha256":digest(sensi_path),"config_sha256":digest(args.response_filter_config),
+                "accepted_events":int(accepted_tensor.item()),"outputs":outputs,
+                "warning":"Read-only interim observation, not formal acceptance; continue to 10000 with fixed threshold"}
+            # Write the ready marker last, after all immutable snapshot files exist.
+            (folder/"checkpoint_manifest.json").write_text(json.dumps(checkpoint,indent=2)+"\n")
+            print("RESPONSE_CHECKPOINT_READY 2000",flush=True)
     (image_d,hd),(image_j,hj)=compton_and_joint_mlem(
         response440,projections[440],blocks,sensi440,sensid,
         args.iterations,args.save_step,save_history=rank==0,
-        progress_label="440_compton_and_jscc",update_rule=update_rule)
-    collect_response(args.output,"440_SinglePhoton",image440,h440,geometry,rank)
+        progress_label="440_compton_and_jscc",update_rule=update_rule,checkpoint_callback=checkpoint_callback)
     collect_response(args.output,"440_ComptonOnly",image_d,hd,geometry,rank)
     collect_response(args.output,"440_SinglePlusCompton",image_j,hj,geometry,rank)
-    collect_response(args.output,"218_SinglePhoton_CrossTalkCorrected",image218,h218,geometry,rank)
-    collect_response(args.output,"440SinglePlus218Single",image440+image218,
-                     h440+h218 if rank==0 else None,geometry,rank)
-    collect_response(args.output,"440SingleComptonPlus218Single",image_j+image218,
-                     hj+h218 if rank==0 else None,geometry,rank)
+    if args.channels=="six":
+        collect_response(args.output,"440_SinglePhoton",image440,h440,geometry,rank)
+        collect_response(args.output,"218_SinglePhoton_CrossTalkCorrected",image218,h218,geometry,rank)
+        collect_response(args.output,"440SinglePlus218Single",image440+image218,
+                         h440+h218 if rank==0 else None,geometry,rank)
+        collect_response(args.output,"440SingleComptonPlus218Single",image_j+image218,
+                         hj+h218 if rank==0 else None,geometry,rank)
     if update_rule:
         update_rule.save()
     resource={"rank":rank,"device":str(device),"accepted_events":accepted,
@@ -394,6 +464,18 @@ def main():
           "iterations":args.iterations,"save_step":args.save_step,"world_size":world,
           "pilot_only":args.pilot_only,
           "study_short":args.study_short,
+          "channels":args.channels,
+          "response_mismatch":None if response_study is None else {
+              "study":response_study["study"],"filter_enabled":not args.baseline_regression,
+              "max_min_standardized_arm":max_min_arm,
+              "config_sha256":digest(args.response_filter_config),
+              "scan_manifest_sha256":response_study["scan_manifest_sha256"],
+              "removed_compton_events":0 if args.baseline_regression else response_study["removed_compton_events"],
+              "baseline_accepted_compton_events":484936,
+              "baseline_result":"NEMA_Body_H60_5e9_1644876"},
+          "code_sha256":{name:digest(HERE/name if (HERE/name).is_file() else ROOT/name) for name in
+                         ("run_reconstruction.py","torch_active_operator.py",
+                          "compton_sparse_ops.py","process_list_plane_sparse.py","compton_event_response.py")},
           "spike_ablation":None if study is None else {"study":study["study"],"variant":variant,
              "study_sha256":digest(args.study_json),"spatial_model_sha256":digest(spatial_path),
              "baseline":study["baseline"],"independent_parameters":(int(update_rule.group_count)
@@ -404,6 +486,7 @@ def main():
                              "compton_event_response.py","detector_csv.py")}},
           "cuda_allocator_config":os.environ.get("PYTORCH_CUDA_ALLOC_CONF", "default"),
           "accepted_compton_events":int(accepted_tensor.item()),
+          "accepted_compton_events_per_view":accepted_per_view.cpu().tolist(),
           "energy_resolution_fwhm_at_511keV":.13,"compton_sum_threshold_MeV":.350,
           "list_energies_already_smeared":True,"geometry_sha256":digest(args.geometry),
           "sensi_d_sha256":digest(sensi_path),"input_sha256":input_hashes,

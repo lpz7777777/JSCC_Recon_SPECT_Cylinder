@@ -7,6 +7,8 @@ from compton_event_response import (
     build_compton_cone_weights,
     build_detector_position_variance,
     prepare_compton_events,
+    min_standardized_compton_arm,
+    select_normalized_response_rows,
 )
 from compton_sparse_ops import pack_sparse_event_rows, reduce_fine_rows_to_coarse
 
@@ -26,6 +28,7 @@ def get_compton_backproj_list_single_sparse(
     device,
     model_compton_generator=None,
     input_energies_already_smeared=False,
+    max_min_standardized_arm=None,
 ):
     """Filter events and store their cone component on the selected sparse grid.
 
@@ -45,6 +48,7 @@ def get_compton_backproj_list_single_sparse(
         energy_threshold_sum_mev=ene_threshold_sum,
         delta_r1_mm=delta_r1,
         delta_r2_mm=delta_r2,
+        max_min_standardized_arm=max_min_standardized_arm,
     )
     detector_sigma_r1_sq = build_detector_position_variance(detector, delta_r1)
     detector_sigma_r2_sq = build_detector_position_variance(detector, delta_r2)
@@ -69,8 +73,13 @@ def get_compton_backproj_list_single_sparse(
 
     # Match the fine-grid MLEM support criterion when full-grid mode is used.
     normalized = raw[valid] / raw[valid].sum(dim=1, keepdim=True)
-    support = 1.0 / torch.sum(normalized**2, dim=1)
-    stable = support >= settings.min_event_effective_support
+    quality = None
+    if max_min_standardized_arm is not None:
+        if sparse_projector.coarse_pixel_num != sysmat.shape[1]:
+            raise ValueError("Mismatch cut requires the complete calculation grid")
+        quality = min_standardized_compton_arm(prepared, sparse_projector.coor_coarse, settings)[valid]
+    stable, _, _ = select_normalized_response_rows(normalized,
+        settings.min_event_effective_support, quality, max_min_standardized_arm)
     cpnum1 = prepared.cpnum1[valid][stable]
     cone_coarse = cone_coarse[valid][stable]
     if cone_coarse.numel() == 0:

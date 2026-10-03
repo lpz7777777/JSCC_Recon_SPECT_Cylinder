@@ -16,6 +16,7 @@ class ComptonPhysicsConfig:
     delta_r2_mm: float = 0.0
     min_event_effective_support: float = 1.0
     include_first_hit_source_leg_uncertainty: bool = True
+    max_min_standardized_arm: float | None = None
 
     @property
     def energy_resolution(self) -> float:
@@ -68,6 +69,8 @@ class ComptonPhysicsConfig:
             raise ValueError("Position uncertainty values cannot be negative.")
         if self.min_event_effective_support <= 0:
             raise ValueError("min_event_effective_support must be positive.")
+        if self.max_min_standardized_arm is not None and self.max_min_standardized_arm <= 0:
+            raise ValueError("max_min_standardized_arm must be positive when enabled.")
 
     def to_dict(self) -> dict[str, Any]:
         result = asdict(self)

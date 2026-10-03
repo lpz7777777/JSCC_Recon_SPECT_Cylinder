@@ -50,6 +50,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--energy-resolution-reference-kev", type=float, default=511.0)
     parser.add_argument("--energy-threshold-sum-mev", type=float, default=0.350)
     parser.add_argument("--batch-size", type=int, default=256)
+    parser.add_argument("--max-min-standardized-arm", type=float, default=None)
     parser.add_argument("--device", choices=("cpu", "cuda"), default="cuda")
     parser.add_argument("--output-dir", type=Path, required=True)
     return parser.parse_args()
@@ -156,6 +157,7 @@ def main() -> None:
 
     resolution = args.energy_resolution_fwhm * (args.energy_resolution_reference_kev / 1000.0 / args.energy_mev) ** 0.5
     physics = ComptonPhysicsConfig(
+        max_min_standardized_arm=args.max_min_standardized_arm,
         energy_mev=args.energy_mev,
         energy_resolution_662kev=args.energy_resolution_fwhm,
         energy_resolution_reference_kev=args.energy_resolution_reference_kev,

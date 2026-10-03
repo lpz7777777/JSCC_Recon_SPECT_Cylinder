@@ -1,0 +1,442 @@
+[
+  {
+    "group": "nema",
+    "view": 1,
+    "raw_rows": 250532,
+    "baseline_accepted": 21925,
+    "removed": 41,
+    "kept": 21884,
+    "input_sha256": "feb38f136daa6c93d8b80442ab0ab05e2039c03a1397cd99b85b6d6b97d3e402",
+    "diagnostics": {
+      "input_events": 250532,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 139318,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 89285,
+      "invalid_kernel_events": 4,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 41,
+      "kept_events": 21884
+    }
+  },
+  {
+    "group": "nema",
+    "view": 2,
+    "raw_rows": 252355,
+    "baseline_accepted": 22361,
+    "removed": 50,
+    "kept": 22311,
+    "input_sha256": "63c72c7c0b30491bc3e3641460e92540dad94839c90c2d75f026816f15dc5887",
+    "diagnostics": {
+      "input_events": 252355,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 139988,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 90004,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 50,
+      "kept_events": 22311
+    }
+  },
+  {
+    "group": "nema",
+    "view": 3,
+    "raw_rows": 257447,
+    "baseline_accepted": 22743,
+    "removed": 57,
+    "kept": 22686,
+    "input_sha256": "a10845a1580a170caedc12dd0ea41b11f50df1fb853a3660143d2655ad29cd26",
+    "diagnostics": {
+      "input_events": 257447,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 143380,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 91323,
+      "invalid_kernel_events": 1,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 57,
+      "kept_events": 22686
+    }
+  },
+  {
+    "group": "nema",
+    "view": 4,
+    "raw_rows": 264140,
+    "baseline_accepted": 23310,
+    "removed": 51,
+    "kept": 23259,
+    "input_sha256": "75577c1ac018968eeb148d8ab30ecf993d4788ee70f46c9d534632067bd28c7f",
+    "diagnostics": {
+      "input_events": 264140,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 146782,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 94046,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 51,
+      "kept_events": 23259
+    }
+  },
+  {
+    "group": "nema",
+    "view": 5,
+    "raw_rows": 272015,
+    "baseline_accepted": 24008,
+    "removed": 55,
+    "kept": 23953,
+    "input_sha256": "d33c891dc1ed6df42e58704af0947cd59b7cd80d169a05db179e4aa58cdf7390",
+    "diagnostics": {
+      "input_events": 272015,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 151536,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 96467,
+      "invalid_kernel_events": 4,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 55,
+      "kept_events": 23953
+    }
+  },
+  {
+    "group": "nema",
+    "view": 6,
+    "raw_rows": 279353,
+    "baseline_accepted": 24664,
+    "removed": 56,
+    "kept": 24608,
+    "input_sha256": "4ea00298ac7f23e27d168a5afd0cb0e408afce7eac583f9b3c7778417d144336",
+    "diagnostics": {
+      "input_events": 279353,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 155236,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 99451,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 56,
+      "kept_events": 24608
+    }
+  },
+  {
+    "group": "nema",
+    "view": 7,
+    "raw_rows": 284636,
+    "baseline_accepted": 25183,
+    "removed": 55,
+    "kept": 25128,
+    "input_sha256": "bfde717a9efc03c76cb2308a24aa81df7f2718a94a0312f09ff3f19074e7b224",
+    "diagnostics": {
+      "input_events": 284636,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 158151,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 101300,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 55,
+      "kept_events": 25128
+    }
+  },
+  {
+    "group": "nema",
+    "view": 8,
+    "raw_rows": 285800,
+    "baseline_accepted": 25466,
+    "removed": 75,
+    "kept": 25391,
+    "input_sha256": "43ecb989490a7c41f0d99615c745a535eaf1532fb7cdeea41a6bf6d57183554c",
+    "diagnostics": {
+      "input_events": 285800,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 158685,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 101649,
+      "invalid_kernel_events": 0,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 75,
+      "kept_events": 25391
+    }
+  },
+  {
+    "group": "nema",
+    "view": 9,
+    "raw_rows": 283937,
+    "baseline_accepted": 24998,
+    "removed": 60,
+    "kept": 24938,
+    "input_sha256": "f05a63c724e9841451f795551846018b16a88186d138f4d1601dcc044be1578d",
+    "diagnostics": {
+      "input_events": 283937,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 157606,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 101331,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 60,
+      "kept_events": 24938
+    }
+  },
+  {
+    "group": "nema",
+    "view": 10,
+    "raw_rows": 281348,
+    "baseline_accepted": 25132,
+    "removed": 69,
+    "kept": 25063,
+    "input_sha256": "800f07d63d481b3a1732fb114834dbbfa1d28ed08556031faa1893455fd0ba25",
+    "diagnostics": {
+      "input_events": 281348,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 156113,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 100101,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 69,
+      "kept_events": 25063
+    }
+  },
+  {
+    "group": "nema",
+    "view": 11,
+    "raw_rows": 279367,
+    "baseline_accepted": 24994,
+    "removed": 50,
+    "kept": 24944,
+    "input_sha256": "14ad01263b455740a391d4736d534e030c8e7e5025f383e2c99467af927b85bd",
+    "diagnostics": {
+      "input_events": 279367,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 154548,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 99823,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 50,
+      "kept_events": 24944
+    }
+  },
+  {
+    "group": "nema",
+    "view": 12,
+    "raw_rows": 281821,
+    "baseline_accepted": 25168,
+    "removed": 53,
+    "kept": 25115,
+    "input_sha256": "a3b420a60397a55fc6d2531326185c5bf1282f0a01b2b5c073ff68b59329f99b",
+    "diagnostics": {
+      "input_events": 281821,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 155513,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 101137,
+      "invalid_kernel_events": 3,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 53,
+      "kept_events": 25115
+    }
+  },
+  {
+    "group": "nema",
+    "view": 13,
+    "raw_rows": 285001,
+    "baseline_accepted": 25540,
+    "removed": 57,
+    "kept": 25483,
+    "input_sha256": "a0a51b0b94abbfd83d75b38eed25f281dddb5e8ddec5c96156a0aae914cf42a0",
+    "diagnostics": {
+      "input_events": 285001,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 157688,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 101771,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 57,
+      "kept_events": 25483
+    }
+  },
+  {
+    "group": "nema",
+    "view": 14,
+    "raw_rows": 287455,
+    "baseline_accepted": 25662,
+    "removed": 64,
+    "kept": 25598,
+    "input_sha256": "3bbfa2dbca04ba0649e30a34cc96b794631148c29411225addb4ee0005830ee5",
+    "diagnostics": {
+      "input_events": 287455,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 158759,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 103031,
+      "invalid_kernel_events": 3,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 64,
+      "kept_events": 25598
+    }
+  },
+  {
+    "group": "nema",
+    "view": 15,
+    "raw_rows": 285807,
+    "baseline_accepted": 25670,
+    "removed": 58,
+    "kept": 25612,
+    "input_sha256": "0ff314702ec9b1bcfab111ff445e386c722ef905b267fc859f78c5bb02d7a0ca",
+    "diagnostics": {
+      "input_events": 285807,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 158050,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 102082,
+      "invalid_kernel_events": 5,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 58,
+      "kept_events": 25612
+    }
+  },
+  {
+    "group": "nema",
+    "view": 16,
+    "raw_rows": 280865,
+    "baseline_accepted": 25090,
+    "removed": 65,
+    "kept": 25025,
+    "input_sha256": "d7a593e696ed9f3758e2aa1030396846b1f96465904f94f61794d48a4bfe4cd2",
+    "diagnostics": {
+      "input_events": 280865,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 155714,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 100058,
+      "invalid_kernel_events": 3,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 65,
+      "kept_events": 25025
+    }
+  },
+  {
+    "group": "nema",
+    "view": 17,
+    "raw_rows": 274529,
+    "baseline_accepted": 24463,
+    "removed": 60,
+    "kept": 24403,
+    "input_sha256": "d76b14f04d3bcee0322f350f2672612bf448e0f7593f4a50ba304441c3ef9fd2",
+    "diagnostics": {
+      "input_events": 274529,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 151972,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 98092,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 60,
+      "kept_events": 24403
+    }
+  },
+  {
+    "group": "nema",
+    "view": 18,
+    "raw_rows": 264671,
+    "baseline_accepted": 23511,
+    "removed": 64,
+    "kept": 23447,
+    "input_sha256": "46015e2c0d0d8042807c82aa6c3c4e79fe78d0af4f380b93f6d66c0b0d00eb5d",
+    "diagnostics": {
+      "input_events": 264671,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 146483,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 94675,
+      "invalid_kernel_events": 2,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 64,
+      "kept_events": 23447
+    }
+  },
+  {
+    "group": "nema",
+    "view": 19,
+    "raw_rows": 258502,
+    "baseline_accepted": 22885,
+    "removed": 69,
+    "kept": 22816,
+    "input_sha256": "eff8d2c487aabfe78e09e3cef7f70293e153f15af8878b7d2e2e30bc84338331",
+    "diagnostics": {
+      "input_events": 258502,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 143247,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 92369,
+      "invalid_kernel_events": 1,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 69,
+      "kept_events": 22816
+    }
+  },
+  {
+    "group": "nema",
+    "view": 20,
+    "raw_rows": 252746,
+    "baseline_accepted": 22163,
+    "removed": 59,
+    "kept": 22104,
+    "input_sha256": "2c7400c11c41120de946f44c045b728e6b1a74f9d4d891418c656a193fc6763d",
+    "diagnostics": {
+      "input_events": 252746,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 140952,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 89631,
+      "invalid_kernel_events": 0,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 59,
+      "kept_events": 22104
+    }
+  },
+  {
+    "group": "train",
+    "view": 1,
+    "raw_rows": 1280771,
+    "baseline_accepted": 170539,
+    "removed": 484,
+    "kept": 170055,
+    "input_sha256": "1c98c0d6a19b194eaa2b7a9148f9c7557b34d56dad59dd74d619702a9a14fe30",
+    "diagnostics": {
+      "input_events": 1280771,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 469068,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 641153,
+      "invalid_kernel_events": 11,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 484,
+      "kept_events": 170055
+    }
+  },
+  {
+    "group": "validation",
+    "view": 1,
+    "raw_rows": 1281294,
+    "baseline_accepted": 170705,
+    "removed": 466,
+    "kept": 170239,
+    "input_sha256": "4210254a0e2603efdf8828ba8a3ea98a3bd887d82d37c20b25164d8288ab506d",
+    "diagnostics": {
+      "input_events": 1281294,
+      "invalid_raw_energy_events": 0,
+      "energy_rejected_events": 469731,
+      "kinematic_rejected_events": 0,
+      "same_layer_rejected_events": 640845,
+      "invalid_kernel_events": 13,
+      "low_support_rejected_events": 0,
+      "mismatch_rejected_events": 466,
+      "kept_events": 170239
+    }
+  }
+]

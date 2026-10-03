@@ -189,7 +189,7 @@ def _event_weight(blocks, image, device, with_log=False):
 def compton_and_joint_mlem(response, projection, event_blocks,
                            single_sensitivity, compton_sensitivity,
                            iterations, save_step, save_history=True, progress_label=None,
-                           update_rule=None):
+                           update_rule=None, checkpoint_callback=None):
     if iterations <= 0 or iterations % save_step:
         raise ValueError("Iteration count must divide by save step")
     n=response.geometry.active_count
@@ -231,6 +231,8 @@ def compton_and_joint_mlem(response, projection, event_blocks,
         if save_history and (iteration+1)%save_step==0:
             history_d.append(image_d.detach().cpu().clone())
             history_j.append(image_j.detach().cpu().clone())
+            if checkpoint_callback is not None:
+                checkpoint_callback(iteration+1, history_d, history_j)
             if progress_label:
                 print(f"ELLIPSE_ITERATION {progress_label} {iteration+1}/{iterations}",flush=True)
     if update_rule:

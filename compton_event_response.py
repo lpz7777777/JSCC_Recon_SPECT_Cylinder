@@ -31,6 +31,7 @@ class ComptonEventSettings:
     min_event_effective_support: float = 1.0
     include_first_hit_source_leg_uncertainty: bool = True
     require_different_layers: bool = True
+    max_min_standardized_arm: float | None = None
 
 
 @dataclass
@@ -42,6 +43,7 @@ class BatchDiagnostics:
     same_layer_rejected_events: int = 0
     invalid_kernel_events: int = 0
     low_support_rejected_events: int = 0
+    mismatch_rejected_events: int = 0
     kept_events: int = 0
 
     def add_(self, other: "BatchDiagnostics") -> None:
@@ -66,6 +68,7 @@ class PreparedComptonEvents:
     pos2: torch.Tensor
     sigma_pos1_sq: torch.Tensor
     sigma_pos2_sq: torch.Tensor
+    source_row_indices: torch.Tensor | None = None
 
     @property
     def count(self) -> int:
@@ -151,9 +154,11 @@ def prepare_compton_events(
     cpnum2 = torch.round(events[:, 2]).long()
     e1 = events[:, 1]
     e2 = events[:, 3]
+    source_rows = torch.arange(events.shape[0], device=events.device)
 
     valid_raw_energy = torch.isfinite(e1) & torch.isfinite(e2) & (e1 > 0) & (e2 > 0)
     diagnostics.invalid_raw_energy_events = int((~valid_raw_energy).sum().item())
+    source_rows = source_rows[valid_raw_energy]
     cpnum1, cpnum2, e1, e2 = (
         value[valid_raw_energy] for value in (cpnum1, cpnum2, e1, e2)
     )
@@ -173,6 +178,7 @@ def prepare_compton_events(
         & ((e1 + e2) > settings.energy_threshold_sum_mev)
     )
     diagnostics.energy_rejected_events = int((~valid_energy).sum().item())
+    source_rows = source_rows[valid_energy]
     cpnum1, cpnum2, e1, e2 = (
         value[valid_energy] for value in (cpnum1, cpnum2, e1, e2)
     )
@@ -189,6 +195,7 @@ def prepare_compton_events(
         & (cos_theta_raw < 1.0 - 1e-6)
     )
     diagnostics.kinematic_rejected_events = int((~valid_kinematics).sum().item())
+    source_rows = source_rows[valid_kinematics]
     cpnum1, cpnum2, e1, e2 = (
         value[valid_kinematics] for value in (cpnum1, cpnum2, e1, e2)
     )
@@ -202,6 +209,7 @@ def prepare_compton_events(
     if settings.require_different_layers:
         valid_layer = torch.abs(pos1[:, 1] - pos2[:, 1]) > 0.1
         diagnostics.same_layer_rejected_events = int((~valid_layer).sum().item())
+        source_rows = source_rows[valid_layer]
         cpnum1, cpnum2, e1, e2, pos1, pos2, sigma_pos1_sq, sigma_pos2_sq = (
             value[valid_layer]
             for value in (cpnum1, cpnum2, e1, e2, pos1, pos2, sigma_pos1_sq, sigma_pos2_sq)
@@ -218,6 +226,7 @@ def prepare_compton_events(
         pos2=pos2,
         sigma_pos1_sq=sigma_pos1_sq,
         sigma_pos2_sq=sigma_pos2_sq,
+        source_row_indices=source_rows,
     ), diagnostics
 
 
@@ -298,6 +307,10 @@ def normalize_event_response(
     cpnum1: torch.Tensor,
     system_matrix_density: torch.Tensor,
     min_event_effective_support: float,
+    *,
+    min_standardized_arm: torch.Tensor | None = None,
+    max_min_standardized_arm: float | None = None,
+    diagnostics: BatchDiagnostics | None = None,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, int, int]:
     """Return normalized rows for the density-basis response K_i * B[c1_i,:]."""
     point_response = torch.index_select(system_matrix_density, 0, cpnum1 - 1)
@@ -311,7 +324,49 @@ def normalize_event_response(
         return weights, cpnum1, valid, invalid_count, 0
 
     normalized = weights / torch.sum(weights, dim=1, keepdim=True)
-    effective_support = 1.0 / torch.sum(normalized**2, dim=1)
-    stable = effective_support >= min_event_effective_support
-    low_support_count = int((~stable).sum().item())
+    stable, low_support_count, mismatch_count = select_normalized_response_rows(
+        normalized, min_event_effective_support,
+        None if min_standardized_arm is None else min_standardized_arm[valid],
+        max_min_standardized_arm)
+    if diagnostics is not None:
+        diagnostics.mismatch_rejected_events = mismatch_count
     return normalized[stable], cpnum1[stable], valid, invalid_count, low_support_count
+
+
+def min_standardized_compton_arm(prepared, voxel_coordinates, settings):
+    """Best angular compatibility over the complete calculation grid, before B.
+
+    Uses exactly the production angle/uncertainty expressions. No phantom,
+    activity, sensitivity or reconstruction enters this quality criterion.
+    """
+    vector01 = prepared.pos1.unsqueeze(1) - voxel_coordinates.unsqueeze(0)
+    vector12 = (prepared.pos2 - prepared.pos1).unsqueeze(1)
+    distance01 = torch.norm(vector01, dim=2)
+    distance12 = torch.norm(vector12, dim=2)
+    theta = compton_theta_from_e1(prepared.e1, settings.energy_mev)
+    beta_cos = torch.sum(vector01 * vector12, dim=2) / torch.clamp(distance01 * distance12, min=1e-7)
+    beta = torch.acos(torch.clamp(beta_cos, -1.0 + 1e-7, 1.0 - 1e-7))
+    sigma_energy = _energy_angle_sigma(prepared.e1, settings, beta, theta)
+    sigma_position = _position_angle_sigma(vector01, vector12,
+        prepared.sigma_pos1_sq, prepared.sigma_pos2_sq,
+        settings.include_first_hit_source_leg_uncertainty)
+    sigma = torch.sqrt(torch.clamp(sigma_energy**2 + sigma_position**2, min=1e-12))
+    score = ((beta-theta.unsqueeze(1)).abs()/sigma).amin(dim=1)
+    if not bool(torch.isfinite(score).all()):
+        raise ValueError("Nonfinite complete-grid Compton ARM score")
+    return score
+
+
+def select_normalized_response_rows(normalized, min_support, min_arm=None, max_min_arm=None):
+    """Apply original support selection first, then the optional mismatch cut."""
+    effective_support = 1.0 / torch.sum(normalized**2, dim=1)
+    baseline = effective_support >= min_support
+    low_count = int((~baseline).sum().item())
+    if max_min_arm is None:
+        return baseline, low_count, 0
+    if max_min_arm <= 0 or min_arm is None or min_arm.shape != baseline.shape:
+        raise ValueError("Mismatch selection requires positive threshold and aligned scores")
+    if not bool(torch.isfinite(min_arm).all()):
+        raise ValueError("Nonfinite Compton mismatch score")
+    mismatch = min_arm > max_min_arm
+    return baseline & ~mismatch, low_count, int((baseline & mismatch).sum().item())

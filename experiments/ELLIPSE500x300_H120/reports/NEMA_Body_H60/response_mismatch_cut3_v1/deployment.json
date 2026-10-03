@@ -1,0 +1,27 @@
+{
+  "study": "response_mismatch_cut3_v1",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/response_mismatch_cut3_v1_749de269c15ebe99",
+  "code_sha256": {
+    "run_reconstruction.py": "f79a26d11caba470242bf33a87e8a45e5a232a910ebd5d485ec9b28ee23dcbea",
+    "torch_active_operator.py": "0908e5b2aa98b86f4ff0eceac5db2bc9b6414af8ad3f6dea9850153e54824236",
+    "validate_factors.py": "d529fe6c4ee27ce49e8e2a7b778c1abb1b8e818a6711d838533368978e4e7b91",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "response_mismatch_cut3_v1.json": "3e26ba4bdb734f0d35e128c1ae858aff48fecbc8691f3d49fd828f85b2caf14f",
+    "verify_response_mismatch.py": "5fbe1d583389c25d2f73483cdf2f3e87f2f5125fca78c06b9d4ce8b8ec8bf7a4",
+    "reconstruct_response_mismatch.sh": "6884b147c5b4414efd1e0d7d16170314d013eb69449fe92e6e56ffa1c7547a41",
+    "compton_event_response.py": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225",
+    "process_list_plane_sparse.py": "e489ddeb4506f3daf43904bdae6d30da1aef2845dd076fe9365c554bc0d9708c",
+    "compton_sparse_ops.py": "39c78522927f7396db1c58f760a636fda729c195dd4c2cc05ae98ca513ab3b9b",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f"
+  },
+  "scan_payload_sha256": {
+    "Sensi_d": "08f0e35b177c0f5d141b0baff8995313871d7a4798693b7d84497ed6bb890d2a",
+    "Sensi_d_provenance.json": "215278e78f4c271eb5445b24b5a0fec1ce5abf54b5fd22bfd69c894061d686f3",
+    "scan_manifest.json": "bf4d48c2634af61075f67a25e9346ff2e0ad4a0af888520e9b5386c889d28c77",
+    "progress.json": "21a77074ea47a0eeac1652310b54ce819591bdd2abc52e4fb7bfbea143e1f950",
+    "rejected_events.csv": "e6d79541539b16f042ddc90bc5f582ffc7c1b33231a8e02e2e64b2ca2539d2e5"
+  },
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "submitted": false
+}

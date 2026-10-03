@@ -2,3 +2,16 @@
 audit_compton_response.py -text
 prepare_response_audit_truth.py -text
 plot_response_audit.py -text
+run_reconstruction.py -text whitespace=cr-at-eol
+torch_active_operator.py -text whitespace=cr-at-eol
+response_mismatch_cut3_v1.json -text whitespace=cr-at-eol
+scan_response_mismatch.py -text whitespace=cr-at-eol
+verify_response_mismatch.py -text whitespace=cr-at-eol
+reconstruct_response_mismatch.sh -text
+deploy_response_mismatch.py -text whitespace=cr-at-eol
+submit_response_mismatch.py -text whitespace=cr-at-eol
+fetch_response_mismatch.py -text whitespace=cr-at-eol
+plot_response_mismatch_diagnostics.py -text whitespace=cr-at-eol
+compare_response_mismatch.py -text whitespace=cr-at-eol
+test_response_mismatch.py -text whitespace=cr-at-eol
+test_compare_response_mismatch.py -text whitespace=cr-at-eol

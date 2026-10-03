@@ -1,0 +1,10 @@
+{
+  "id": "nema-5e9-3",
+  "name": "NEMA 5e9 3\u03c3\u4e8b\u4ef6\u5220\u9664\u5bf9\u7167\u9a8c\u6536",
+  "status": "ACTIVE",
+  "kind": "heartbeat",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "notification": "quiet for unchanged queue/running state; report fault, iteration-2000 figures or final delivery",
+  "stop_condition": "pause after complete baseline-cut3 report/figures/curves/event list delivered",
+  "official_documentation": "https://learn.chatgpt.com/docs/automations?surface=app"
+}

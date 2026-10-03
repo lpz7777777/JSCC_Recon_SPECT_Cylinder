@@ -1,0 +1,4 @@
+# Keep downloaded evidence and event-list hashes stable on all platforms.
+*.json -text whitespace=cr-at-eol
+*.csv -text whitespace=cr-at-eol
+scripts/*.py -text whitespace=cr-at-eol

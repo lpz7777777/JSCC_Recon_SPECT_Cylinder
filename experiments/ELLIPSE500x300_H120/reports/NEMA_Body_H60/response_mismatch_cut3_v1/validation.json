@@ -1,0 +1,44 @@
+{
+  "study": "response_mismatch_cut3_v1",
+  "checked_utc": "2026-10-03T19:56:33.147009+00:00",
+  "local_tests": {
+    "shared_response_tests": {
+      "passed": 4,
+      "covers": [
+        "disabled kernel bitwise vs 87d1713",
+        "event-batch/rank-independent scores",
+        "q=3 inclusive and original-invalid not newly rejected",
+        "checkpoint-enabled joint MLEM bitwise vs 87d1713"
+      ]
+    },
+    "analysis_identical_history_smoke": {
+      "passed": true,
+      "formal_native_metric_rows": 800,
+      "formal_sphere_metric_rows": 2400,
+      "all_differences_zero": true,
+      "interim_mode_checked": true,
+      "synthetic_outputs": "ignored temporary fixture deleted after test"
+    },
+    "existing_compton_operator_and_density_tests": {
+      "passed": 5
+    }
+  },
+  "pre_existing_sensitivity_test_failures": {
+    "suite": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/tests/test_sensitivity_pipeline.py",
+    "total_tests": 8,
+    "passes": 6,
+    "failures": [
+      "test_density_matrix_is_deweighted_before_event_kernel",
+      "test_legacy_integrated_activity_normalization_is_retained"
+    ],
+    "reproduced_on_frozen_baseline": "87d1713",
+    "production_physics_unchanged": true
+  },
+  "full_scan_passed": true,
+  "independent_sensitivity_passed": true,
+  "shell_syntax_passed": true,
+  "remote_regression_50": "pending",
+  "remote_pilot_10": "pending",
+  "formal_10000": "pending",
+  "no_reconstruction_improvement_claim": true
+}

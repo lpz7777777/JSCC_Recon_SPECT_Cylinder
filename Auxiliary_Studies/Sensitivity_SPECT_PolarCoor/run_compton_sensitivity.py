@@ -102,6 +102,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--delta-r1-mm", type=float, default=0.0)
     parser.add_argument("--delta-r2-mm", type=float, default=0.0)
     parser.add_argument("--min-event-effective-support", type=float, default=1.0)
+    parser.add_argument("--max-min-standardized-arm", type=float, default=None)
     source_leg_group = parser.add_mutually_exclusive_group()
     source_leg_group.add_argument(
         "--include-first-hit-source-leg-uncertainty",
@@ -156,6 +157,7 @@ def main() -> None:
         delta_r1_mm=args.delta_r1_mm,
         delta_r2_mm=args.delta_r2_mm,
         min_event_effective_support=args.min_event_effective_support,
+        max_min_standardized_arm=args.max_min_standardized_arm,
         include_first_hit_source_leg_uncertainty=args.include_first_hit_source_leg_uncertainty,
     )
     config = SensitivityRunConfig(

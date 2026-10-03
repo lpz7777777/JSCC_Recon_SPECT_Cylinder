@@ -21,6 +21,7 @@ from compton_event_response import (  # noqa: E402
     build_detector_position_variance,
     normalize_event_response,
     prepare_compton_events,
+    min_standardized_compton_arm,
 )
 
 
@@ -35,6 +36,7 @@ def _settings_from_physics(physics: ComptonPhysicsConfig) -> ComptonEventSetting
         delta_r2_mm=physics.delta_r2_mm,
         min_event_effective_support=physics.min_event_effective_support,
         include_first_hit_source_leg_uncertainty=physics.include_first_hit_source_leg_uncertainty,
+        max_min_standardized_arm=physics.max_min_standardized_arm,
     )
 
 
@@ -69,11 +71,16 @@ def accumulate_event_batch(
         return empty_sum, diagnostics
 
     cone_weights = build_compton_cone_weights(prepared, voxel_coordinates, settings)
+    quality = (None if settings.max_min_standardized_arm is None else
+               min_standardized_compton_arm(prepared, voxel_coordinates, settings))
     normalized, _, _, invalid_count, low_support_count = normalize_event_response(
         cone_weights,
         prepared.cpnum1,
         system_matrix,
         settings.min_event_effective_support,
+        min_standardized_arm=quality,
+        max_min_standardized_arm=settings.max_min_standardized_arm,
+        diagnostics=diagnostics,
     )
     diagnostics.invalid_kernel_events = invalid_count
     diagnostics.low_support_rejected_events = low_support_count
