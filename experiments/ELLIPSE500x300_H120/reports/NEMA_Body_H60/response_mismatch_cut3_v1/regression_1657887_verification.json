@@ -1,0 +1,103 @@
+{
+  "study": "response_mismatch_cut3_v1",
+  "mode": "regression",
+  "passed": true,
+  "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/response_mismatch_cut3_v1/regression_1657887",
+  "iterations": 50,
+  "save_step": 50,
+  "accepted_events": 484936,
+  "outputs": [
+    {
+      "channel": "440_ComptonOnly",
+      "frames": 1,
+      "sha256": {
+        "active": "b534d05a5f18940cf237ab44ea7491845066149060043dc351d4478db4f45540",
+        "full": "d60c775baa7a26880aa70d68c10f2ebb83da033c35606de9ed101b2bd6141aa9",
+        "history": "b534d05a5f18940cf237ab44ea7491845066149060043dc351d4478db4f45540"
+      },
+      "relative_l2_baseline_frame50": 0.0
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "frames": 1,
+      "sha256": {
+        "active": "c70371de166b4cb0c42ef3c283147df22b13ddbbe39c21af6d06ddf70dbd27f6",
+        "full": "da73763a304f2da833e5da3286dac8929f350c2b9694b46085449ae92a106da2",
+        "history": "c70371de166b4cb0c42ef3c283147df22b13ddbbe39c21af6d06ddf70dbd27f6"
+      },
+      "relative_l2_baseline_frame50": 0.0
+    }
+  ],
+  "resources": [
+    {
+      "rank": 0,
+      "node": "wqd10naf05g4",
+      "gpu_reserved_fraction": 0.41427066084600334,
+      "host_rss_fraction": 0.4501935546875,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 1,
+      "node": "wqd10naf06g3",
+      "gpu_reserved_fraction": 0.4423149931414795,
+      "host_rss_fraction": 0.45122213541666667,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 2,
+      "node": "wqd10naf13g7",
+      "gpu_reserved_fraction": 0.4159317300554901,
+      "host_rss_fraction": 0.45146634114583334,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 3,
+      "node": "wqd10nba06g1",
+      "gpu_reserved_fraction": 0.41842333386972025,
+      "host_rss_fraction": 0.3612015625,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 4,
+      "node": "wqd10nba06g4",
+      "gpu_reserved_fraction": 0.4167622646602335,
+      "host_rss_fraction": 0.4521772135416667,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 5,
+      "node": "wqd10nba07g5",
+      "gpu_reserved_fraction": 0.4217454722886938,
+      "host_rss_fraction": 0.450123046875,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 6,
+      "node": "wqd10nba07g8",
+      "gpu_reserved_fraction": 0.4267286799171542,
+      "host_rss_fraction": 0.45165807291666665,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 7,
+      "node": "wqd10nba08g2",
+      "gpu_reserved_fraction": 0.4225760068934372,
+      "host_rss_fraction": 0.45078203125,
+      "allocated_host_bytes": 62914560000
+    }
+  ],
+  "run_manifest_sha256": "b9b33afcf1f7d5d13e20fd7c7004b02814520572125aae3f9d31098a40d591c7",
+  "config_sha256": "3e26ba4bdb734f0d35e128c1ae858aff48fecbc8691f3d49fd828f85b2caf14f",
+  "transfer_sha256": {
+    "Image_440_ComptonOnly_active.float32": "b534d05a5f18940cf237ab44ea7491845066149060043dc351d4478db4f45540",
+    "Image_440_ComptonOnly_full.float32": "d60c775baa7a26880aa70d68c10f2ebb83da033c35606de9ed101b2bd6141aa9",
+    "Image_440_ComptonOnly_history.float32": "b534d05a5f18940cf237ab44ea7491845066149060043dc351d4478db4f45540",
+    "Image_440_SinglePlusCompton_active.float32": "c70371de166b4cb0c42ef3c283147df22b13ddbbe39c21af6d06ddf70dbd27f6",
+    "Image_440_SinglePlusCompton_full.float32": "da73763a304f2da833e5da3286dac8929f350c2b9694b46085449ae92a106da2",
+    "Image_440_SinglePlusCompton_history.float32": "c70371de166b4cb0c42ef3c283147df22b13ddbbe39c21af6d06ddf70dbd27f6",
+    "run_manifest.json": "b9b33afcf1f7d5d13e20fd7c7004b02814520572125aae3f9d31098a40d591c7"
+  },
+  "local_result": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\RemoteResults\\NEMA_Body_H60_5e9_cut3_regression_1657887",
+  "active_full_consistency": true,
+  "unique_ranks_and_nodes": true
+}

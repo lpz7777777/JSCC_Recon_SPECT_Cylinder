@@ -1,0 +1,101 @@
+{
+  "study": "response_mismatch_cut3_v1",
+  "mode": "pilot",
+  "passed": true,
+  "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/response_mismatch_cut3_v1/pilot_1657887",
+  "iterations": 10,
+  "save_step": 10,
+  "accepted_events": 483768,
+  "outputs": [
+    {
+      "channel": "440_ComptonOnly",
+      "frames": 1,
+      "sha256": {
+        "active": "3fbd51bae458e1b9713b8259719cb21479cb5adc1eb996516a40c4dc2ea378d1",
+        "full": "837e6585a1023345d469c4a64def282efa639fe5ca67a9c6ded3fe92470724eb",
+        "history": "3fbd51bae458e1b9713b8259719cb21479cb5adc1eb996516a40c4dc2ea378d1"
+      }
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "frames": 1,
+      "sha256": {
+        "active": "bdd9ed6c12062b868dcb62b52a694a763306a9340ba714887eb06c9d9e76f03d",
+        "full": "bf5d447d17876ede27840f52d18164987f85d51125b189f5f293184e3ebbeb04",
+        "history": "bdd9ed6c12062b868dcb62b52a694a763306a9340ba714887eb06c9d9e76f03d"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "rank": 0,
+      "node": "wqd10naf05g4",
+      "gpu_reserved_fraction": 0.43503402596458807,
+      "host_rss_fraction": 0.4494571614583333,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 1,
+      "node": "wqd10naf06g3",
+      "gpu_reserved_fraction": 0.46714422290884405,
+      "host_rss_fraction": 0.450816796875,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 2,
+      "node": "wqd10naf13g7",
+      "gpu_reserved_fraction": 0.4358645605693315,
+      "host_rss_fraction": 0.45054505208333334,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 3,
+      "node": "wqd10nba06g1",
+      "gpu_reserved_fraction": 0.43752562977881826,
+      "host_rss_fraction": 0.3608778645833333,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 4,
+      "node": "wqd10nba06g4",
+      "gpu_reserved_fraction": 0.4358645605693315,
+      "host_rss_fraction": 0.4512886067708333,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 5,
+      "node": "wqd10nba07g5",
+      "gpu_reserved_fraction": 0.4416783028025352,
+      "host_rss_fraction": 0.4493520833333333,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 6,
+      "node": "wqd10nba07g8",
+      "gpu_reserved_fraction": 0.4474920450357389,
+      "host_rss_fraction": 0.451039453125,
+      "allocated_host_bytes": 62914560000
+    },
+    {
+      "rank": 7,
+      "node": "wqd10nba08g2",
+      "gpu_reserved_fraction": 0.4425088374072786,
+      "host_rss_fraction": 0.4501630859375,
+      "allocated_host_bytes": 62914560000
+    }
+  ],
+  "run_manifest_sha256": "c47b95c0b9eb9b434e57799412529860ea2ef14140052c42f7286f43f4b52579",
+  "config_sha256": "3e26ba4bdb734f0d35e128c1ae858aff48fecbc8691f3d49fd828f85b2caf14f",
+  "transfer_sha256": {
+    "Image_440_ComptonOnly_active.float32": "3fbd51bae458e1b9713b8259719cb21479cb5adc1eb996516a40c4dc2ea378d1",
+    "Image_440_ComptonOnly_full.float32": "837e6585a1023345d469c4a64def282efa639fe5ca67a9c6ded3fe92470724eb",
+    "Image_440_ComptonOnly_history.float32": "3fbd51bae458e1b9713b8259719cb21479cb5adc1eb996516a40c4dc2ea378d1",
+    "Image_440_SinglePlusCompton_active.float32": "bdd9ed6c12062b868dcb62b52a694a763306a9340ba714887eb06c9d9e76f03d",
+    "Image_440_SinglePlusCompton_full.float32": "bf5d447d17876ede27840f52d18164987f85d51125b189f5f293184e3ebbeb04",
+    "Image_440_SinglePlusCompton_history.float32": "bdd9ed6c12062b868dcb62b52a694a763306a9340ba714887eb06c9d9e76f03d",
+    "run_manifest.json": "c47b95c0b9eb9b434e57799412529860ea2ef14140052c42f7286f43f4b52579"
+  },
+  "local_result": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\RemoteResults\\NEMA_Body_H60_5e9_cut3_pilot_1657887",
+  "active_full_consistency": true,
+  "unique_ranks_and_nodes": true
+}

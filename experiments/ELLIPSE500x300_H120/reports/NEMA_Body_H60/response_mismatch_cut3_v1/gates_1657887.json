@@ -1,0 +1,20 @@
+{
+  "job_id": "1657887",
+  "checked_utc": "2026-10-03T22:07:05.973127+00:00",
+  "phase": "formal",
+  "regression_passed": true,
+  "regression_accepted": 484936,
+  "regression_relative_l2": [
+    0.0,
+    0.0
+  ],
+  "pilot_passed": true,
+  "pilot_accepted": 483768,
+  "pilot_max_gpu_reserved_fraction": 0.46714422290884405,
+  "pilot_max_host_rss_fraction": 0.4512886067708333,
+  "actual_granted_host_bytes_per_node": 62914560000,
+  "numerical_verifier_rerun_locally": true,
+  "formal_result_available": false,
+  "scientific_comparison_pending": true,
+  "nccl_interface": "bond0"
+}

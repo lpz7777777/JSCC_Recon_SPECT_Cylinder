@@ -1,12 +1,26 @@
 {
   "job_id": "1657887",
-  "checked_utc": "2026-10-03T21:14:16.421228+00:00",
-  "squeue": "1657887|NEMA_response_cut3|PENDING|0:00|8|(Priority)",
-  "previous_job": "1657745",
-  "previous_state": "FAILED",
-  "excluded_nodes": [
-    "wqd10nba06g6"
+  "checked_utc": "2026-10-03T22:07:05.973127+00:00",
+  "squeue": "1657887|NEMA_response_cut3|RUNNING|21:11|8|wqd10naf05g4,wqd10naf06g3,wqd10naf13g7,wqd10nba06g[1,4],wqd10nba07g[5,8],wqd10nba08g2",
+  "phase": "formal",
+  "regression_passed": true,
+  "regression_accepted": 484936,
+  "regression_relative_l2": [
+    0.0,
+    0.0
   ],
+  "pilot_passed": true,
+  "pilot_accepted": 483768,
+  "pilot_max_gpu_reserved_fraction": 0.46714422290884405,
+  "pilot_max_host_rss_fraction": 0.4512886067708333,
+  "actual_granted_host_bytes_per_node": 62914560000,
+  "numerical_verifier_rerun_locally": true,
   "formal_result_available": false,
-  "scientific_comparison_pending": true
+  "scientific_comparison_pending": true,
+  "nccl_interface": "bond0",
+  "log_progress_and_slurm_accounting": "3: RESPONSE_NODE_CUDA_OK wqd10nba06g1 2.8.0+cu128 1\n2: RESPONSE_NODE_CUDA_OK wqd10naf13g7 2.8.0+cu128 1\n1: RESPONSE_NODE_CUDA_OK wqd10naf06g3 2.8.0+cu128 1\n4: RESPONSE_NODE_CUDA_OK wqd10nba06g4 2.8.0+cu128 1\n5: RESPONSE_NODE_CUDA_OK wqd10nba07g5 2.8.0+cu128 1\n7: RESPONSE_NODE_CUDA_OK wqd10nba08g2 2.8.0+cu128 1\n6: RESPONSE_NODE_CUDA_OK wqd10nba07g8 2.8.0+cu128 1\n0: RESPONSE_NODE_CUDA_OK wqd10naf05g4 2.8.0+cu128 1\n0: ELLIPSE_ITERATION 440_compton_and_jscc 50/50\nRESPONSE_PHASE_PASSED regression\n0: ELLIPSE_ITERATION 440_compton_and_jscc 10/10\nRESPONSE_PHASE_PASSED pilot\n0: ELLIPSE_ITERATION 440_compton_and_jscc 50/10000\nJobID|JobName|State|Elapsed|ExitCode|MaxRSS|AllocTRES\n1657887|NEMA_response_cut3|RUNNING|00:21:11|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.batch|batch|RUNNING|00:21:11|0:0||cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.extern|extern|RUNNING|00:21:11|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.0|bash|COMPLETED|00:00:13|0:0|247192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.1|bash|COMPLETED|00:07:55|0:0|27858332K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.2|bash|COMPLETED|00:02:37|0:0|22572412K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.3|bash|RUNNING|00:09:50|0:0||cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.4|timeout|COMPLETED|00:00:00|0:0|888K|cpu=48,gres/gpu=8,mem=480000M,node=8\n",
+  "gpu_snapshot": "0: NVIDIA GeForce RTX 4090, 100 %, 2653 MiB, 24564 MiB\n3: NVIDIA GeForce RTX 4090, 53 %, 2653 MiB, 24564 MiB\n2: NVIDIA GeForce RTX 4090, 100 %, 2673 MiB, 24564 MiB\n1: NVIDIA GeForce RTX 4090, 100 %, 2673 MiB, 23028 MiB\n7: NVIDIA GeForce RTX 4090, 100 %, 2673 MiB, 24564 MiB\n4: NVIDIA GeForce RTX 4090, 100 %, 2653 MiB, 24564 MiB\n5: NVIDIA GeForce RTX 4090, 100 %, 2673 MiB, 24564 MiB\n6: NVIDIA GeForce RTX 4090, 100 %, 2673 MiB, 24564 MiB\n",
+  "last_confirmed_formal_iteration": 100,
+  "last_progress_confirmed_utc": "2026-10-03T22:10:20.920309+00:00",
+  "checkpoint_2000_available": false
 }
