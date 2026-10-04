@@ -166,15 +166,18 @@ def main():
         raise ValueError("Baseline regression requires response study, two channels and 50 iterations")
     response_study=None
     first_scatter_study=False
+    geometry_study=False
+    geometry_mode='legacy'
     max_min_arm=None
     if args.response_filter_config is not None:
         response_study=json.loads(args.response_filter_config.read_text())
         first_scatter_study=response_study["study"]=="compton_first_scatter_v2"
-        if (response_study["study"] not in ("response_mismatch_cut3_v1","compton_first_scatter_v2") or
+        geometry_study=response_study['study']=='compton_response_geometry_v3'
+        if (response_study["study"] not in ("response_mismatch_cut3_v1","compton_first_scatter_v2","compton_response_geometry_v3") or
             response_study["max_min_standardized_arm"]!=3.0 or
             response_study["quality_domain"]!="full_circle_132040" or
             args.channels!="compton-jscc" or args.study_json is not None or
-            args.dataset!="NEMA_Body_H60" or args.level!=("1e9" if first_scatter_study else "5e9")):
+            args.dataset!="NEMA_Body_H60" or args.level!=("1e9" if first_scatter_study or geometry_study else "5e9")):
             raise ValueError("Response mismatch study configuration mismatch")
         if first_scatter_study and (response_study["iterations"]!=2000 or
             response_study["save_step"]!=50 or
@@ -192,12 +195,20 @@ def main():
             if digest(ROOT/"compton_event_response.py")!=response_study["kernel_sha256"]:
                 raise ValueError("First-scatter study must use the frozen, unchanged response kernel")
         max_min_arm=None if args.baseline_regression else 3.0
+        if geometry_study:
+            from compton_geometry_run_contract import validate_run
+            geometry_mode,max_min_arm=validate_run(response_study,
+                regression=args.baseline_regression,pilot=args.pilot_only,dry_run=args.dry_run,
+                iterations=args.iterations,save_step=args.save_step,dataset=args.dataset,level=args.level,
+                channels=args.channels,sensitivity=args.compton_sensitivity,
+                geometry_sha=digest(args.geometry),kernel_sha=digest(ROOT/'compton_event_response.py'),
+                digest=digest,config_directory=args.response_filter_config.parent)
         if max_min_arm is not None and args.compton_sensitivity is None:
             raise ValueError("Filtered events require an explicit matched sensitivity")
     elif args.compton_sensitivity is not None or args.baseline_regression:
         raise ValueError("Sensitivity override requires a frozen response study")
     if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only or args.study_short or
-        args.baseline_regression or (first_scatter_study and args.iterations==2000 and args.save_step==50)):
+        args.baseline_regression or ((first_scatter_study or geometry_study) and args.iterations==2000 and args.save_step==50)):
         raise ValueError("Formal experiment requires 10000 iterations, or the frozen 2000-iteration first-scatter study")
     if args.event_chunks<=0 or args.event_block<=0:
         raise ValueError("Invalid event chunk sizes")
@@ -303,6 +314,8 @@ def main():
             raise ValueError("Response study sensitivity SHA256 mismatch")
         if not args.baseline_regression and provenance.get("max_min_standardized_arm")!=3.0:
             raise ValueError("Sensitivity does not match the 3-sigma event filter")
+        if geometry_study and provenance.get('geometry_mode','legacy')!=geometry_mode:
+            raise ValueError('Sensitivity does not match the Compton geometry mode')
     if args.dry_run:
         if rank==0: print("ELLIPSE_RECON_PREFLIGHT_OK",flush=True)
         dist.destroy_process_group()
@@ -386,7 +399,7 @@ def main():
                 sysfull,detector,projector,part.to(device),0.0,0.0,
                 .440,resolution,threshold_max,.05,.350,device,
                 input_energies_already_smeared=True,
-                max_min_standardized_arm=max_min_arm)
+                max_min_standardized_arm=max_min_arm,geometry_mode=geometry_mode)
             if result.numel(): packed.append(result)
         view_blocks=[]
         if packed:
@@ -426,7 +439,7 @@ def main():
     checkpoint_callback=None
     if response_study is not None and not (args.baseline_regression or args.pilot_only) and rank==0:
         def checkpoint_callback(iteration, history_d, history_j):
-            if first_scatter_study:
+            if first_scatter_study or geometry_study:
                 folder=args.output/f"checkpoint_{iteration:06d}"
                 folder.mkdir(exist_ok=False)
                 outputs={}
@@ -501,7 +514,8 @@ def main():
           "study_short":args.study_short,
           "channels":args.channels,
           "response_mismatch":None if response_study is None else {
-              "study":response_study["study"],"filter_enabled":not args.baseline_regression,
+              "study":response_study["study"],"filter_enabled":max_min_arm is not None,
+              "geometry_mode":geometry_mode,"variant":response_study.get('variant'),
               "max_min_standardized_arm":max_min_arm,
               "config_sha256":digest(args.response_filter_config),
               "scan_manifest_sha256":response_study["scan_manifest_sha256"],

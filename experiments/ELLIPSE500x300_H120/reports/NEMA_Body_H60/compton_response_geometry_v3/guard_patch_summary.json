@@ -1,0 +1,120 @@
+{
+  "status": "HOLD",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+  "measure_manifest_sha256": "ccbbc417d5aa49f2be8982d8d11920119ebd4ef57ae365e5d84c5bb45a689abb",
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "predefined_cells": [
+    3161,
+    3231
+  ],
+  "layers": [
+    0,
+    20,
+    39
+  ],
+  "events": [
+    {
+      "dataset": "point_0",
+      "view": 6,
+      "input_row": 3,
+      "input_sha256": "ddc08699b327026393dd1de2345dc887de2b713b54f624a202b4e66b81646c4d"
+    },
+    {
+      "dataset": "point_0",
+      "view": 16,
+      "input_row": 1,
+      "input_sha256": "ae9504e48a1176b9f81c50cb409373f468c63a5153a1057d2eedf90e77f5de54"
+    },
+    {
+      "dataset": "point_1",
+      "view": 6,
+      "input_row": 10,
+      "input_sha256": "3a7f28346776c6b6f1b9f78854630374e6bee391b68b13cc85047b67636471a4"
+    },
+    {
+      "dataset": "point_1",
+      "view": 16,
+      "input_row": 13,
+      "input_sha256": "b001e8cf8c7fc4afbf8767c0cf425411e4de3ba41fe4d835e2da75846de2de04"
+    },
+    {
+      "dataset": "point_2",
+      "view": 6,
+      "input_row": 6,
+      "input_sha256": "f7b70f358e59d2b7716c20bc95aa3cf8831259319d4291cc12501f5ff1715373"
+    },
+    {
+      "dataset": "point_2",
+      "view": 16,
+      "input_row": 2,
+      "input_sha256": "8ce4c3a7ed8def6c8f8d3941c9e7bd6b400b433bcf029ec54ba58bd6c309b712"
+    },
+    {
+      "dataset": "point_3",
+      "view": 6,
+      "input_row": 18,
+      "input_sha256": "0bb89cb33342da5b838be5f8d1a35e6b175880c28009d6506c2b686e6c62ee91"
+    },
+    {
+      "dataset": "point_3",
+      "view": 16,
+      "input_row": 9,
+      "input_sha256": "afcdb2da54abd3fbbe2bbc7c06846d87131cbbb30b78f17aa7149f98cb7d76a2"
+    },
+    {
+      "dataset": "point_4",
+      "view": 6,
+      "input_row": 6,
+      "input_sha256": "1f8d01be608bf5939b6b276e4ba4e673a9b0e7a3c7da4705f5fe9dc141b23609"
+    },
+    {
+      "dataset": "point_4",
+      "view": 16,
+      "input_row": 5,
+      "input_sha256": "fa5fe49eb8490458f212427ba4fd24061a11880d8e8a21d6cd3b8276ebaf90fb"
+    },
+    {
+      "dataset": "point_5",
+      "view": 6,
+      "input_row": 7,
+      "input_sha256": "7a6859eca149ec0c07dc8bf69fe4db65fb5930e6a3c42135ec35023b7f081067"
+    },
+    {
+      "dataset": "point_5",
+      "view": 16,
+      "input_row": 19,
+      "input_sha256": "ac6a58f19d2c480219b4714161671fe9ac21f9577a1fbbfb52fab6f191c7f1ee"
+    },
+    {
+      "dataset": "point_6",
+      "view": 6,
+      "input_row": 1,
+      "input_sha256": "bb985db7d5445a1ae8f5b493cac1792ed0e54a27209d02d54669633f624bba6e"
+    },
+    {
+      "dataset": "point_6",
+      "view": 16,
+      "input_row": 1,
+      "input_sha256": "cc6c2ac6cc3b462802d2f4fda603410c2b1cd2d7a5b931a61e711bdcc224f84c"
+    }
+  ],
+  "cases": 84,
+  "quadrature_passed": 84,
+  "maximum_quadrature_relative_change": 0.0009508867362479127,
+  "maximum_volume_relative_error": 2.4424906541753444e-15,
+  "sampled_support_checks": 12,
+  "patch_cases": 84,
+  "patch_refinement_passed": 60,
+  "interpretation": "Same frozen stable-q eligible held-out events; object and full-cell K*A integrals. Diagnostic baseline Z is common to all comparisons, not the new mixed Z or a matched S2. Quadrature convergence alone does not certify A accuracy or permit imaging.",
+  "output_sha256": "4529ffb3c09c06c35acceb0bd7c3eac72823a6238b288d4c8e1ac7e8e11f9c79",
+  "new_transport_photons": 0,
+  "reconstruction_permitted": false,
+  "elapsed_seconds": 1.123273226985475,
+  "patch_ready_sha256": "2cb0a8f055fc89cf703e1bb24507cab693cda6e66c7165d13556a9b036223584",
+  "cases_sha256": "4529ffb3c09c06c35acceb0bd7c3eac72823a6238b288d4c8e1ac7e8e11f9c79",
+  "evidence_sha256": "7adc8c82f273017484d0829ca74d835f7cead9fad99abfaf54c052eae80a9769",
+  "maximum_patch_refinement_relative_change": 0.07907978050860247,
+  "maximum_guard_to_patch_relative_change": 0.36155880313566374,
+  "guard_to_patch_cases_over_1percent": 44
+}

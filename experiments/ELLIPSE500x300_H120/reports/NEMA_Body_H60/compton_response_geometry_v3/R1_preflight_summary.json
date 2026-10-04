@@ -1,0 +1,173 @@
+{
+  "status": "PASSED",
+  "job": 1661583,
+  "phases": [
+    {
+      "phase": "regression",
+      "verification_sha256": "dccff848af071bc5e3bf5c092b6007d95161a4438c777cabb190740c89b5b9e5",
+      "run_manifest_sha256": "a657c1c27af6346ba55e066d8a06f7256dcd3a984ef1e871c5a94ccffc9f3528",
+      "accepted_events": 91231,
+      "outputs": [
+        {
+          "channel": "440_ComptonOnly",
+          "frames": 1,
+          "sha256": {
+            "active": "6b714a396378282205a87f31f31b16031e6e76b01684fbebc19db8507aea5d1c",
+            "full": "5854c9feac41b3df34cb7d2d8247bc75f388beaa62e482cc000fcc3001c2627f",
+            "history": "6b714a396378282205a87f31f31b16031e6e76b01684fbebc19db8507aea5d1c"
+          },
+          "baseline_frame50_relative_l2": 0.0
+        },
+        {
+          "channel": "440_SinglePlusCompton",
+          "frames": 1,
+          "sha256": {
+            "active": "31b6b8695e63d887f1fb4248cd2ef75f2b9581a32b01988b68937f34e0ee88e5",
+            "full": "592824b3a22a55fe4685bd20e0a87441372dd9f6f2e7c032245284ca767116d5",
+            "history": "31b6b8695e63d887f1fb4248cd2ef75f2b9581a32b01988b68937f34e0ee88e5"
+          },
+          "baseline_frame50_relative_l2": 0.0
+        }
+      ],
+      "resources": [
+        {
+          "rank": 0,
+          "device": "cuda:0",
+          "accepted_events": 22818,
+          "event_bytes_cpu": 7487954880,
+          "host_peak_rss_bytes": 15175229440,
+          "node": "wqd10nba06g3",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 204.31037633493543,
+          "peak_allocated_bytes": 8849381376,
+          "peak_reserved_bytes": 8908701696,
+          "total_device_bytes": 25250627584
+        },
+        {
+          "rank": 1,
+          "device": "cuda:0",
+          "accepted_events": 22767,
+          "event_bytes_cpu": 7471218720,
+          "host_peak_rss_bytes": 15143960576,
+          "node": "wqd10nba06g8",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 198.31158711202443,
+          "peak_allocated_bytes": 8842515456,
+          "peak_reserved_bytes": 8929673216,
+          "total_device_bytes": 25250627584
+        },
+        {
+          "rank": 2,
+          "device": "cuda:0",
+          "accepted_events": 22830,
+          "event_bytes_cpu": 7491892800,
+          "host_peak_rss_bytes": 15192174592,
+          "node": "wqd10nba07g3",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 198.16877786815166,
+          "peak_allocated_bytes": 8853606912,
+          "peak_reserved_bytes": 8908701696,
+          "total_device_bytes": 25250627584
+        },
+        {
+          "rank": 3,
+          "device": "cuda:0",
+          "accepted_events": 22816,
+          "event_bytes_cpu": 7487298560,
+          "host_peak_rss_bytes": 15178354688,
+          "node": "wqd10nba07g7",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 197.92384917661548,
+          "peak_allocated_bytes": 8977197056,
+          "peak_reserved_bytes": 9034530816,
+          "total_device_bytes": 25250627584
+        }
+      ]
+    },
+    {
+      "phase": "pilot",
+      "verification_sha256": "e6166e59250b6dc46921222bc467b878c94395f6f68c4de703deff40994f7813",
+      "run_manifest_sha256": "53a169709bceb5eb0aed09cfd83d24a017baa27694dd34e42ff782b9e039e1b0",
+      "accepted_events": 91225,
+      "outputs": [
+        {
+          "channel": "440_ComptonOnly",
+          "frames": 1,
+          "sha256": {
+            "active": "44d743e5c063211a6c9fd3d03e43d8a25a1cfbee2d4d3e859641c81c48d84279",
+            "full": "711b1329149ac4829c537b258a6a53abc71a89e74d7894d3a037c77b3e1843d6",
+            "history": "44d743e5c063211a6c9fd3d03e43d8a25a1cfbee2d4d3e859641c81c48d84279"
+          }
+        },
+        {
+          "channel": "440_SinglePlusCompton",
+          "frames": 1,
+          "sha256": {
+            "active": "5db5695e4e64246ae5d5ffc0082472f6aa4c0cf7d1048ef050ba31f4c01e9d16",
+            "full": "bfc33d16d9801bb1630c59a81955a31d7b3829ed1e1e358838b415dbe58d7b2b",
+            "history": "5db5695e4e64246ae5d5ffc0082472f6aa4c0cf7d1048ef050ba31f4c01e9d16"
+          }
+        }
+      ],
+      "resources": [
+        {
+          "rank": 0,
+          "device": "cuda:0",
+          "accepted_events": 22816,
+          "event_bytes_cpu": 7487298560,
+          "host_peak_rss_bytes": 15222992896,
+          "node": "wqd10nba06g3",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 62.61199523508549,
+          "peak_allocated_bytes": 10715904000,
+          "peak_reserved_bytes": 10984882176,
+          "total_device_bytes": 25250627584
+        },
+        {
+          "rank": 1,
+          "device": "cuda:0",
+          "accepted_events": 22765,
+          "event_bytes_cpu": 7470562400,
+          "host_peak_rss_bytes": 15182790656,
+          "node": "wqd10nba06g8",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 60.18721477827057,
+          "peak_allocated_bytes": 10709038080,
+          "peak_reserved_bytes": 10984882176,
+          "total_device_bytes": 25250627584
+        },
+        {
+          "rank": 2,
+          "device": "cuda:0",
+          "accepted_events": 22828,
+          "event_bytes_cpu": 7491236480,
+          "host_peak_rss_bytes": 15224700928,
+          "node": "wqd10nba07g3",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 60.12513928860426,
+          "peak_allocated_bytes": 10720129536,
+          "peak_reserved_bytes": 10984882176,
+          "total_device_bytes": 25250627584
+        },
+        {
+          "rank": 3,
+          "device": "cuda:0",
+          "accepted_events": 22816,
+          "event_bytes_cpu": 7487298560,
+          "host_peak_rss_bytes": 15193047040,
+          "node": "wqd10nba07g7",
+          "host_allocated_bytes": 62914560000,
+          "elapsed_seconds": 60.31543992832303,
+          "peak_allocated_bytes": 10984211456,
+          "peak_reserved_bytes": 11257511936,
+          "total_device_bytes": 25250627584
+        }
+      ]
+    }
+  ],
+  "slurm_accounting": "1661583|COMPLETED|0:0||240000M|billing=24,cpu=24,gres/gpu=4,mem=240000M,node=4\n1661583.batch|COMPLETED|0:0|8904K||cpu=6,gres/gpu=1,mem=60000M,node=1\n1661583.extern|COMPLETED|0:0|0||billing=24,cpu=24,gres/gpu=4,mem=240000M,node=4\n1661583.0|COMPLETED|0:0|622644K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1661583.1|COMPLETED|0:0|14870308K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1661583.2|COMPLETED|0:0|9464656K||cpu=24,gres/gpu=4,mem=240000M,node=4",
+  "slurm_peak_rss_bytes": 15227195392.0,
+  "minimum_granted_host_bytes": 62914560000,
+  "formal_submission_permitted": false,
+  "paired_imaging_completed": false
+}

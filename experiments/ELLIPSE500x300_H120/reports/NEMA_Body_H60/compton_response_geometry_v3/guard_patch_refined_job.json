@@ -1,0 +1,11 @@
+{
+  "pid": 2073074,
+  "physical_gpu": 5,
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/guard_patch_refined_releases/cb5c518bc53c0aa9",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_near_patch_refined",
+  "launcher_sha256": "63c68e6a2707edfcd01f9fc02ee4c0e5e30cb8570d142d652c4a144b7a4e646b",
+  "timeout_minutes": 45,
+  "diagnostic_only": true,
+  "new_transport_photons": 0,
+  "reconstruction_submitted": false
+}

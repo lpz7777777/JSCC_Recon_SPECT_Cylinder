@@ -1,0 +1,18 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/guard_integral_releases/9eae156010e2f8fd",
+  "code_sha256": {
+    "run_compton_patch_guard.py": "b08ebc03eb12251225bfd7c3b21f1f7bfe9e80b632753133228d168dd496fa77",
+    "validate_compton_integral_guard.py": "a5ba825b358651f175f4de7bdc517b562aca88cc7ce8f248daabc1192497b28b",
+    "compton_cartesian_patch.py": "638aa41308f22d98504b73f35d768e197ca4bf01357033ea0793b5a2a4aa8090",
+    "test_compton_cartesian_patch.py": "e7b7e55eb40cec8084255667c9db34c3a71a54c6bc14f08dbdd95c9bbd2fdd93",
+    "build_compton_a_guard_field.py": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+    "generate_compton_a_guard.py": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+    "compton_boundary_quadrature.py": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "57ccf2617cec009460aae04457fa61b8d793881cac2f82130ad31722ebed4d9a"
+}

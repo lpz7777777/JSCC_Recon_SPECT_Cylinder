@@ -300,6 +300,76 @@ def guard_weighted(device):
         launcher_sha256=digest(script),timeout_minutes=10,diagnostic_only=True,new_transport_photons=0,reconstruction_submitted=False))
     print('GUARD_WEIGHTED_PID',pid)
 
+def guard_integral(device, patch=False, refined=False, ultrafine=False):
+    """Bounded whole-cell convergence or independent local A refinement."""
+    tag='guard_patch_ultrafine' if ultrafine else ('guard_patch_refined' if refined else ('guard_patch' if patch else 'guard_integral'))
+    script_name='run_compton_patch_guard.py' if patch else 'validate_compton_integral_guard.py'
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('Integral diagnostic already registered')
+    if ssh(SERVER,'pgrep -af '+shlex.quote('['+script_name[0]+']'+script_name[1:])+' || true'):
+        raise ValueError('This integral diagnostic is already active')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Integral diagnostic GPU occupied')
+    names=('run_compton_patch_guard.py','validate_compton_integral_guard.py','compton_cartesian_patch.py',
+        'test_compton_cartesian_patch.py','build_compton_a_guard_field.py','generate_compton_a_guard.py',
+        'compton_boundary_quadrature.py','geometry.py','config.json')
+    paths={n:HERE/n for n in names};paths.update({n:ROOT/n for n in ('compton_event_response.py','detector_csv.py')})
+    paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz';hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;archive=DATA/(tag+'_code.tar.gz')
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+release);transfer(SERVER,archive,release+'/code.tar.gz')
+    tests=ssh(SERVER,'tar --no-same-owner -xzf '+release+'/code.tar.gz -C '+release+' && cd '+release+
+        ' && '+PYTHON+' -m unittest test_compton_cartesian_patch -v 2>&1')
+    if 'Ran 4 tests' not in tests or '\nOK' not in tests:raise ValueError('Independent patch tests failed')
+    (REPORT/(tag+'_tests.txt')).write_text(tests+'\n',encoding='utf-8')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    output=REMOTE+('/A440_near_patch_ultrafine' if ultrafine else ('/A440_near_patch_refined' if refined else ('/A440_near_patch' if patch else '/guard_integral_validation')))
+    command=PYTHON+' '+script_name+' --field '+REMOTE+'/A440_guard_field --geometry '+release+'/geometry.npz'+\
+        ' --config '+release+'/config.json --measure '+REMOTE+'/A440_guard_field_repair/precise_measure'+\
+        ' --inputs '+SERVER_STUDY+'/analysis_inputs --factors '+SERVER_BASE+'/generated/FactorsCalibrated --output '+output
+    if patch:command+=' --root '+SERVER_ROOT+' --guard '+REMOTE+'/A440_guard --cuda 0'
+    if refined:command+=' --previous-patches '+REMOTE+'/A440_near_patch'
+    if ultrafine:command+=' --intermediate-patches '+REMOTE+'/A440_near_patch_refined'
+    script=DATA/('run_'+tag+'.sh')
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 45m '+command+'\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_'+tag+'.sh > '+REMOTE+'/'+tag+'.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown integral diagnostic launch outcome')
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=45,diagnostic_only=True,
+        new_transport_photons=0,reconstruction_submitted=False))
+    print(tag.upper()+'_PID',pid)
+
+
+def fetch_integrals():
+    import csv
+    tags=['guard_integral','guard_patch']
+    if (REPORT/'guard_patch_refined_job.json').exists():tags.append('guard_patch_refined')
+    if (REPORT/'guard_patch_ultrafine_job.json').exists():tags.append('guard_patch_ultrafine')
+    for tag in tags:
+        job=json.loads((REPORT/(tag+'_job.json')).read_text())
+        source=job['output']+('/integrals' if tag.startswith('guard_patch') else '')
+        target=DATA/tag;target.mkdir(exist_ok=True)
+        for name in ('integral_gate.json','integral_cases.csv'):
+            path=source+'/'+name;expected=ssh(SERVER,'sha256sum '+path).split()[0]
+            subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+path,str(target/name)],check=True)
+            if digest(target/name)!=expected:raise ValueError('Integral diagnostic transfer differs')
+        gate=json.loads((target/'integral_gate.json').read_text())
+        if digest(target/'integral_cases.csv')!=gate['output_sha256']:raise ValueError('Case receipt differs')
+        rows=list(csv.DictReader((target/'integral_cases.csv').open()))
+        gate['cases_sha256']=digest(target/'integral_cases.csv')
+        gate['evidence_sha256']=digest(target/'integral_gate.json')
+        if tag.startswith('guard_patch'):
+            gate['maximum_patch_refinement_relative_change']=max(float(r['patch_refinement_relative_change']) for r in rows)
+            gate['maximum_guard_to_patch_relative_change']=max(abs(float(r['guard_to_patch_relative_change'])) for r in rows)
+            gate['guard_to_patch_cases_over_1percent']=sum(abs(float(r['guard_to_patch_relative_change']))>.01 for r in rows)
+        write(REPORT/(tag+'_summary.json'),gate)
+        print(json.dumps({k:v for k,v in gate.items() if k not in ('events','predefined_cells')},indent=2))
+
+
 def repair(device):
     old=json.loads((REPORT/'scan_job.json').read_text());new=json.loads((REPORT/'deployment.json').read_text())
     if old['release']==new['release']:raise ValueError('Repair requires a new frozen release')
@@ -443,7 +513,7 @@ def fetch_spatial():
     write(REPORT/'spatial_summary.json',value);print(json.dumps(value))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=('stage','launch','status','repair','boundary','fetch-boundary','fetch-scan','spatial','fetch-spatial','repair-spatial','guard','guard-field','guard-radial','fetch-guard','repair-guard-measure','guard-weighted'))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=('stage','launch','status','repair','boundary','fetch-boundary','fetch-scan','spatial','fetch-spatial','repair-spatial','guard','guard-field','guard-radial','fetch-guard','repair-guard-measure','guard-weighted','guard-integral','guard-patch','guard-patch-refined','guard-patch-ultrafine','fetch-integrals'))
     p.add_argument('--gpu',type=int,default=3);a=p.parse_args()
     if a.action=='stage':stage()
     elif a.action=='launch':launch(a.gpu)
@@ -460,4 +530,9 @@ if __name__=='__main__':
     elif a.action=='fetch-guard':fetch_guard()
     elif a.action=='repair-guard-measure':repair_guard_measure()
     elif a.action=='guard-weighted':guard_weighted(a.gpu)
+    elif a.action=='guard-integral':guard_integral(a.gpu)
+    elif a.action=='guard-patch':guard_integral(a.gpu,patch=True)
+    elif a.action=='guard-patch-refined':guard_integral(a.gpu,patch=True,refined=True)
+    elif a.action=='guard-patch-ultrafine':guard_integral(a.gpu,patch=True,refined=True,ultrafine=True)
+    elif a.action=='fetch-integrals':fetch_integrals()
     else:status()

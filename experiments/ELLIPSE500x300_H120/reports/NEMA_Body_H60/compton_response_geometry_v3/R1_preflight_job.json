@@ -1,0 +1,14 @@
+{
+  "job": 1661583,
+  "nodes": 4,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/preflight_releases/2acae02edc7b89db",
+  "submitted_utc": "2026-10-04T13:20:50.096677+00:00",
+  "phases": [
+    "R0 legacy geometry with q3:50",
+    "R1 stable geometry with q3:10"
+  ],
+  "formal_submission_permitted": false,
+  "nccl_interface": "bond0",
+  "walltime_minutes": 90
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "tests": 17,
+  "modules": [
+    "test_compton_geometry_run_contract",
+    "test_compton_cartesian_patch",
+    "test_compton_overlap_assembly",
+    "test_compton_a_guard",
+    "test_compton_guard_field"
+  ],
+  "local_cuda_claimed": false,
+  "actual_remote_R1_regression_verified": true
+}

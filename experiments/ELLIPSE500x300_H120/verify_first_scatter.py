@@ -24,6 +24,7 @@ def allocated_host_bytes(allocation,world):
 
 def verify(result,config,geometry,baseline,mode,allocation=None):
     cfg=json.loads(config.read_text());run=json.loads((result/"run_manifest.json").read_text())
+    geometry_study=cfg['study']=='compton_response_geometry_v3'
     gate_path=config.parent/"validation_gate.json"
     if digest(gate_path)!=cfg["validation_gate_sha256"] or json.loads(gate_path.read_text())["status"]!="PASSED":
         raise ValueError("Independent sensitivity gate is not passed/frozen")
@@ -36,19 +37,29 @@ def verify(result,config,geometry,baseline,mode,allocation=None):
     resources=run["resources"]
     if sorted(r["rank"] for r in resources)!=list(range(world)) or len({r["node"] for r in resources})!=world:
         raise ValueError("Distinct node per GPU/rank required")
-    info=run["response_mismatch"];filtered=mode!="regression"
+    info=run["response_mismatch"];filtered=mode!="regression" or geometry_study
     if info["filter_enabled"]!=filtered or info["config_sha256"]!=digest(config):raise ValueError("Filter/config differs")
     if info["event_policy"]!=cfg["group"] or info["validation_gate_sha256"]!=digest(gate_path):
         raise ValueError("Wrong event policy or validation gate")
+    if geometry_study:
+        from compton_geometry_run_contract import validate_run
+        expected_mode,_=validate_run(cfg,regression=mode=='regression',pilot=mode=='pilot',dry_run=False,
+            iterations=iterations,save_step=save,dataset=run['dataset'],level=run['count_level'],
+            channels=run['channels'],sensitivity=Path('explicit_matched_sensitivity'),
+            geometry_sha=digest(geometry),kernel_sha=run['code_sha256']['compton_event_response.py'],
+            digest=digest,config_directory=config.parent)
+        if info.get('geometry_mode')!=expected_mode or info.get('variant')!=cfg['variant']:
+            raise ValueError('Wrong stable geometry mode/variant')
     if (run["input_sha256"]!=cfg["baseline_input_sha256"] or
         run["factor_manifest_sha256"]!=cfg["baseline_factor_manifest_sha256"] or run["geometry_sha256"]!=digest(geometry)):
         raise ValueError("Frozen inputs/Factor/geometry differ")
-    count=cfg["kept_compton_events"] if filtered else 97299
+    count=(cfg['baseline_accepted_compton_events'] if geometry_study and mode=='regression' else
+           (cfg["kept_compton_events"] if filtered else 97299))
     if run["accepted_compton_events"]!=count or sum(r["accepted_events"] for r in resources)!=count:
         raise ValueError("Global/rank event closure differs")
-    if run["accepted_compton_events_per_view"]!=(cfg["kept_per_view"] if filtered else cfg["baseline_per_view"]):
+    if run["accepted_compton_events_per_view"]!=(cfg["baseline_per_view"] if mode=='regression' else cfg["kept_per_view"]):
         raise ValueError("Per-view closure differs")
-    if run["sensi_d_sha256"]!=(cfg["sensi_d_sha256"] if filtered else cfg["baseline_sensi_d_sha256"]):
+    if run["sensi_d_sha256"]!=(cfg["baseline_sensi_d_sha256"] if mode=='regression' else cfg["sensi_d_sha256"]):
         raise ValueError("Matched sensitivity differs")
     g=np.load(geometry);active=g["active_indices"];inactive=np.ones(132040,dtype=bool);inactive[active]=False
     outputs=[]
@@ -65,7 +76,8 @@ def verify(result,config,geometry,baseline,mode,allocation=None):
             raise ValueError("Last frame/active/full ellipse closure differs")
         output=dict(channel=channel,frames=iterations//save,sha256={k:digest(p) for k,p in paths.items()})
         if mode=="regression":
-            old=np.memmap(baseline/f"Image_{channel}_history.float32","<f4",mode="r",shape=(200,82040))[0]
+            baseline_frames=40 if geometry_study else 200
+            old=np.memmap(baseline/f"Image_{channel}_history.float32","<f4",mode="r",shape=(baseline_frames,82040))[0]
             error=float(np.linalg.norm(a.astype(np.float64)-old)/np.linalg.norm(old.astype(np.float64)))
             output["baseline_frame50_relative_l2"]=error
             if error>1e-5:raise ValueError("Legacy unfiltered baseline regression differs")
@@ -87,7 +99,7 @@ def verify(result,config,geometry,baseline,mode,allocation=None):
         if r["host_allocated_bytes"]<=0:raise ValueError("Actual host allocation not recorded")
         if (r["peak_reserved_bytes"]/r["total_device_bytes"]>.8 or
             r["host_peak_rss_bytes"]/r["host_allocated_bytes"]>.8):raise ValueError("20% resource margin fails")
-    report=dict(passed=True,study="compton_first_scatter_v2",group=cfg["group"],mode=mode,
+    report=dict(passed=True,study=cfg['study'],group=cfg["group"],mode=mode,
         outputs=outputs,resources=resources,accepted_events=count,iterations=iterations,save_step=save,
         config_sha256=digest(config),run_manifest_sha256=digest(result/"run_manifest.json"),
         allocation_sha256=digest(allocation) if allocation is not None else None)

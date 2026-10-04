@@ -1,0 +1,26 @@
+{
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/preflight_releases/2acae02edc7b89db",
+  "code_sha256": {
+    "run_reconstruction.py": "d4e89a83665e8e63782d0e9b3aa8c3dd6e7f189f3193efe2fa3904b6815b0aa6",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "validate_factors.py": "d529fe6c4ee27ce49e8e2a7b778c1abb1b8e818a6711d838533368978e4e7b91",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "verify_first_scatter.py": "5d8314a16b083db89aa5b346327e5160bed2e8bca27b827afdb0c884e442ba4f",
+    "compton_geometry_run_contract.py": "a0033ae9a38c523a744d4ce06c3805cca99f6d438c1902145e536a09fa65f532",
+    "test_compton_geometry_run_contract.py": "a0dda39f886f6aa95fa11ad500a403cda9689a261ea7df58d226d30c07b6361b",
+    "reconstruct_compton_geometry_preflight.sh": "278f408cb002ef80ff7164a01e1f54193bf23de667e0288665c74a790d34d628",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "compton_sparse_ops.py": "39c78522927f7396db1c58f760a636fda729c195dd4c2cc05ae98ca513ab3b9b",
+    "process_list_plane_sparse.py": "f79b03114882831e3418eb7f79b2b0dad7ee38455121ff00af5ce1cbeeeca579",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "R1.json": "e8f1767094c3225f399521ca694833abacfc7a2c886a203b2981996b0817cb38",
+    "validation_gate.json": "fca2725b72b16da1f02555558e6d8f630e446c24b61db4b2ecc7f02958abb54b",
+    "spatial_gate.json": "73a316f6e39b2ebde5f37ba392fce3c3a4e488c1fe17ea9a8a11f4437818cd94",
+    "Sensi_d": "31438caea393983e1c0e4502455f12e84743bf0ae0433a17be516966c6114e09",
+    "Sensi_d_provenance.json": "0ce23de5e85bbe720d4a8018569147b05863ba57de388f3580c473a0a3ddca78",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "reused_input_root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/recon_inputs/ideal",
+  "formal_submission_permitted": false
+}

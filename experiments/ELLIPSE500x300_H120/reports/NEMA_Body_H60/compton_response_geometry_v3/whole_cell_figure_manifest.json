@@ -1,0 +1,14 @@
+{
+  "figure_sha256": "c22a40dc65d58edb243140dc4e12b18d0043afc5a9baab17db20a4eb430895c1",
+  "plot_script_sha256": "9d03710a884845193dbc6e8a18c33bb315a9e8cfdac63d98a7daa2ccc0ef7367",
+  "physical_A_reference_spacing_mm": 0.375,
+  "relative_error_denominator_floor_over_common_Z": 1e-10,
+  "sources": {
+    "generated\\compton_response_geometry_v3\\guard_integral\\integral_cases.csv": "0ca6adfbcc6ebe24ae89795b5e74eee1c4ddc33875a1df2a31bb60d3ba164ae4",
+    "generated\\compton_response_geometry_v3\\guard_patch_refined\\integral_cases.csv": "f5aa2ab8c8447f00dd4c56cac1be492a108aad283da48a0791b4f2c1fd1d1315",
+    "generated\\compton_response_geometry_v3\\guard_patch_ultrafine\\integral_cases.csv": "94ddd441e2a098b30bcd9f564ef5b69a35b7cf902b024841d271d60411c7aa63"
+  },
+  "diagnostic_only": true,
+  "reconstructed_image": false,
+  "new_transport_photons": 0
+}

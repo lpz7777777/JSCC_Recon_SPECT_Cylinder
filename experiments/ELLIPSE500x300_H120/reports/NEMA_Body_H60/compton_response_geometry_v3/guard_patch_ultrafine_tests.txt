@@ -1,0 +1,9 @@
+test_affine_interpolation_on_nonuniform_axes_and_faces (test_compton_cartesian_patch.PatchTests.test_affine_interpolation_on_nonuniform_axes_and_faces) ... ok
+test_full_near_side_cell_integral_is_exact_for_affine_A (test_compton_cartesian_patch.PatchTests.test_full_near_side_cell_integral_is_exact_for_affine_A) ... ok
+test_held_out_points_detect_curvature_hidden_by_total_sum (test_compton_cartesian_patch.PatchTests.test_held_out_points_detect_curvature_hidden_by_total_sum) ... ok
+test_refined_boxes_cover_whole_cells_at_all_three_axial_positions (test_compton_cartesian_patch.PatchTests.test_refined_boxes_cover_whole_cells_at_all_three_axial_positions) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+OK

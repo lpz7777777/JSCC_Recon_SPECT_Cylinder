@@ -32,7 +32,7 @@
     "newly_removed_events.csv": "fbb90e07d109342fdf7ad2c34a425df6a3f22e0bb8781e9fcb31b6ea35bd6bb0"
   },
   "new_transport_photons": 0,
-  "new_reconstruction_jobs": 0,
+  "new_reconstruction_jobs": 1,
   "A440_guard_parts_completed": 9,
   "A440_guard_field_built": true,
   "precise_measure_server_gate": "PASSED",
@@ -40,7 +40,31 @@
   "A440_radial_midpoint_diagnostic": "HOLD",
   "weighted_point_sample_events": 114,
   "weighted_radial_relative_L2_max": 0.02626650331204864,
-  "local_contract_tests_passed": 14,
+  "local_contract_tests_passed": 17,
   "S2_generated": false,
-  "new_guard_jobs_all_exited": true
+  "new_guard_jobs_all_exited": true,
+  "new_formal_reconstruction_jobs": 0,
+  "R1_preflight_job": 1661583,
+  "R1_preflight_status": "PASSED",
+  "R1_regression_relative_L2": [
+    0.0,
+    0.0
+  ],
+  "R1_pilot_events": 91225,
+  "R2_guard_integral_cases": 2520,
+  "R2_guard_integral_passed": 2520,
+  "A_local_refinement_spacing_mm": [
+    3,
+    1.5,
+    0.75,
+    0.375
+  ],
+  "A_local_refinement_passed": [
+    60,
+    75,
+    84
+  ],
+  "A_local_refinement_cases": 84,
+  "A_local_refinement_final_max_relative_change": 0.00655326799123478,
+  "R2_global_A_field_gate": "HOLD_NOT_YET_INTEGRATED"
 }

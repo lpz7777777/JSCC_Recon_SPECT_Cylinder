@@ -1,0 +1,289 @@
+{
+  "status": "PASSED",
+  "checked_changed_blobs": 56,
+  "excludes_self": true,
+  "base_full_index_audit_sha256": "baa200004b97cc1f72508f37ed94b10d08bf1408afa26ed2835564d97f42bee1",
+  "findings": [],
+  "changes": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/.gitattributes",
+      "bytes": 2250,
+      "sha256": "485202b9e728b71f32a4a386f25e13cc63ec8820f0453a8c50de23faf8e650bc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/README.md",
+      "bytes": 17533,
+      "sha256": "106cdb408914346339e46fd6dbb960e0970a5882b098bfe85bf26b918efe5025"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/audit_compton_integral_sources.py",
+      "bytes": 2397,
+      "sha256": "3604444caba979619e642196dc558e291f7700b371e4df021cb7e615d4d6c9ea"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py",
+      "bytes": 2685,
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/compton_geometry_R1_preflight.py",
+      "bytes": 10885,
+      "sha256": "da8a543e99a5e33466b0d6812b0f00b51997910e2e6574cba7758a59f177a63d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/compton_geometry_run_contract.py",
+      "bytes": 1997,
+      "sha256": "a0033ae9a38c523a744d4ce06c3805cca99f6d438c1902145e536a09fa65f532"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/compton_geometry_v3_workflow.py",
+      "bytes": 41249,
+      "sha256": "53d0b797531189bb184c4124e3c6caedbe0e53007554f84aafea2abf42915fe1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/plot_compton_integral_guard.py",
+      "bytes": 4346,
+      "sha256": "9d03710a884845193dbc6e8a18c33bb315a9e8cfdac63d98a7daa2ccc0ef7367"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reconstruct_compton_geometry_preflight.sh",
+      "bytes": 3111,
+      "sha256": "278f408cb002ef80ff7164a01e1f54193bf23de667e0288665c74a790d34d628"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/PRODUCTION.md",
+      "bytes": 11664,
+      "sha256": "d4050a44eee49737acb66ba5a7f3966b692ca59576cd27ca92e23bb63b7f0a4f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/PRODUCTION.md",
+      "bytes": 6769,
+      "sha256": "01921f4fc9b870d046f63924734270cec4bf4ea0c5e29518044c03465584ddfa"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/R1_preflight_deployment.json",
+      "bytes": 2323,
+      "sha256": "729e6f8d2a94b1cb456adfbc1368c0e9f81484279bf8c140f7b1905d0efd89aa"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/R1_preflight_job.json",
+      "bytes": 515,
+      "sha256": "873f217a621cb13229f04b460cebec82b403bf33d4e5832dee6fb0a8cba57be6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/R1_preflight_summary.json",
+      "bytes": 6844,
+      "sha256": "fcdcb4ec5c725c74d55fac8e2e1d4a3adefc36ba426fb660e5d1002e2e816cf6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/R1_preflight_tests.txt",
+      "bytes": 216,
+      "sha256": "0b2d5ee482c66b7e32890170a81919e3056fafec9e9df4fe1f94e034749cda4b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/README.md",
+      "bytes": 5235,
+      "sha256": "b57ab49a24451cf1d9c9408f2d482d751b6a510a92d646adc6ca0b2c78fc146f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/WHOLE_CELL_VALIDATION.md",
+      "bytes": 7922,
+      "sha256": "750b4e529b1ceef6f7371aaf68e45870bc6d995c2426e8201d5af281c41dcf4f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/2acae02edc7b89db/test_compton_geometry_run_contract.py",
+      "bytes": 2351,
+      "sha256": "a0dda39f886f6aa95fa11ad500a403cda9689a261ea7df58d226d30c07b6361b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/7bab23fca85806b8/validate_compton_integral_guard.py",
+      "bytes": 16167,
+      "sha256": "72676409ac25a62d18e73d74f7abc4b7854150b4a8f569eb5bb4bb749eb7487d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9eae156010e2f8fd/compton_cartesian_patch.py",
+      "bytes": 2121,
+      "sha256": "638aa41308f22d98504b73f35d768e197ca4bf01357033ea0793b5a2a4aa8090"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9eae156010e2f8fd/run_compton_patch_guard.py",
+      "bytes": 2602,
+      "sha256": "b08ebc03eb12251225bfd7c3b21f1f7bfe9e80b632753133228d168dd496fa77"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9eae156010e2f8fd/test_compton_cartesian_patch.py",
+      "bytes": 2139,
+      "sha256": "e7b7e55eb40cec8084255667c9db34c3a71a54c6bc14f08dbdd95c9bbd2fdd93"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9eae156010e2f8fd/validate_compton_integral_guard.py",
+      "bytes": 11258,
+      "sha256": "a5ba825b358651f175f4de7bdc517b562aca88cc7ce8f248daabc1192497b28b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/cb5c518bc53c0aa9/compton_cartesian_patch.py",
+      "bytes": 2506,
+      "sha256": "4ec7d1719ea96cd48e0c6b79dcd075764d3cc5e4a056a0bb74caf9ffb75063e0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/cb5c518bc53c0aa9/run_compton_patch_guard.py",
+      "bytes": 5083,
+      "sha256": "a9b93b3f2f28739baeb1fdce5ff2a67b8361a89783ae3e38916e7888997fa983"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/cb5c518bc53c0aa9/validate_compton_integral_guard.py",
+      "bytes": 13667,
+      "sha256": "e825901df61ddc4df810b3905a63c8b01cc7cab28faa1c7aa7832405306e2052"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/git_integral_payload_audit.json",
+      "bytes": 974,
+      "sha256": "baa200004b97cc1f72508f37ed94b10d08bf1408afa26ed2835564d97f42bee1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_integral_deployment.json",
+      "bytes": 1485,
+      "sha256": "758546b15858919a08385952527bba515243603b4387cd99a029d8231a1992ed"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_integral_job.json",
+      "bytes": 571,
+      "sha256": "b0948a11320d507d3c58ace6d4f283fc57b65f92cfe57c151f7bd3eb85f478a8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_integral_summary.json",
+      "bytes": 6519,
+      "sha256": "462058f9c62486806d5528a2cc5515cb593494cf70e56fc179bf5909142bfef0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_integral_tests.txt",
+      "bytes": 591,
+      "sha256": "b804ec1007636c463c09f96aef862235a887d2265637bb3c18478a2f6c8e8a45"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_deployment.json",
+      "bytes": 1482,
+      "sha256": "6aac60051eb9819e72dcfd830dd8b2c626dbec1e459fb2676287b561d41bd45b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_job.json",
+      "bytes": 558,
+      "sha256": "af5319a3a6e821f8e644732683be9218916cdf4e59d229853103a833aa2ef82e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_refined_deployment.json",
+      "bytes": 1490,
+      "sha256": "b5957cf7a298bfa94314e566d17a46c8883d69a09c5b52ab9b7d93e7169015a6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_refined_job.json",
+      "bytes": 574,
+      "sha256": "2e8b400e010044bdf767d70f6fd20af7174cb6335990aa4e7bdbf5af8ed697e3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_refined_summary.json",
+      "bytes": 4460,
+      "sha256": "439fb5fafefb351da6017946aa6f9c473c4e0131f67a6fcf1f8d204e35f7cd68"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_refined_tests.txt",
+      "bytes": 773,
+      "sha256": "f652ec1c5f2753a9d6e1624b43299d6b49476c838997017813226064778cda21"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_summary.json",
+      "bytes": 4153,
+      "sha256": "8a782918671475b40bce9a7054f0bd3ec2f0f36bddc0c65d61fed64afa6f35da"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_tests.txt",
+      "bytes": 591,
+      "sha256": "b804ec1007636c463c09f96aef862235a887d2265637bb3c18478a2f6c8e8a45"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_ultrafine_deployment.json",
+      "bytes": 1492,
+      "sha256": "441cb9856fee2c866f0230719df2b6934170ae2fb156dac38b5df3a479741c64"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_ultrafine_job.json",
+      "bytes": 578,
+      "sha256": "593c6b8fe916ef3a7a8af6f01756e15a24a0509e9e8e151ff54e92becfb333af"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_ultrafine_summary.json",
+      "bytes": 4806,
+      "sha256": "987a4c0cf9bb578cbb813e3dc98d263f9ab8126fedcae68ac0674552532656e4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/guard_patch_ultrafine_tests.txt",
+      "bytes": 773,
+      "sha256": "f652ec1c5f2753a9d6e1624b43299d6b49476c838997017813226064778cda21"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/implementation_status.json",
+      "bytes": 2096,
+      "sha256": "b145b99656ca9021abf63552cc28234c7c088271a67dc0137d24a316806c55ca"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/integral_execution_source_audit.json",
+      "bytes": 18692,
+      "sha256": "40950bd881e4cb98a3d4a77ed2a067d2978da1419c1689f0d378499e443b802c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/local_integral_tests.json",
+      "bytes": 326,
+      "sha256": "93ff32bb474b83fd5f3d55e48a6430e320e8aab9e73d4a22b4df8de3e8567798"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/patch_common_grid_summary.json",
+      "bytes": 6940,
+      "sha256": "7f1f575c46ee20726e1e57030e1c60256df9db85c3a47be93a1930fa48dc1d29"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/staged_integral_source_audit.json",
+      "bytes": 17453,
+      "sha256": "b9afe42df0a8d4f71958d528df069c6bb0faa2bfc2f603dcff54ac795fdd7410"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/whole_cell_figure_manifest.json",
+      "bytes": 872,
+      "sha256": "4d03045ef86513ed2f43d739955d448a8c71adb7feacc834aed3a14ba232ca87"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/whole_cell_interpolation_diagnostics.png",
+      "bytes": 178658,
+      "sha256": "c22a40dc65d58edb243140dc4e12b18d0043afc5a9baab17db20a4eb430895c1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/run_compton_patch_guard.py",
+      "bytes": 5305,
+      "sha256": "dbf5d48688cf6414694c4ba0bac5adfc3c50f74fb4ffd27cd5bd37ed45f6ebd9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/run_reconstruction.py",
+      "bytes": 33057,
+      "sha256": "d4e89a83665e8e63782d0e9b3aa8c3dd6e7f189f3193efe2fa3904b6815b0aa6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_compton_cartesian_patch.py",
+      "bytes": 2515,
+      "sha256": "7355fc42e4594cb7403d493753b95146cb953b03b321193c27a8a7dfcb353293"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_compton_geometry_run_contract.py",
+      "bytes": 5487,
+      "sha256": "90cbeabec004de349c7f5edec97e40769205f6779d53dd63c2e9d2e1f6f3ff46"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/validate_compton_integral_guard.py",
+      "bytes": 16196,
+      "sha256": "dac19b001d6ce1acb5ec414046bc21e09144891e98f182f1dff6e325eecf12ef"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/verify_first_scatter.py",
+      "bytes": 8116,
+      "sha256": "5d8314a16b083db89aa5b346327e5160bed2e8bca27b827afdb0c884e442ba4f"
+    }
+  ]
+}

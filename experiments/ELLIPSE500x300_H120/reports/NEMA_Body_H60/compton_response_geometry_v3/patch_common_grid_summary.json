@@ -1,0 +1,214 @@
+{
+  "status": "PASSED",
+  "stages": [
+    {
+      "stage": "guard_patch",
+      "ready_sha256": "2cb0a8f055fc89cf703e1bb24507cab693cda6e66c7165d13556a9b036223584",
+      "parts": 3,
+      "points": 2295,
+      "elapsed_seconds": 175.299058959994,
+      "common_grid_gates": []
+    },
+    {
+      "stage": "guard_patch_refined",
+      "ready_sha256": "c5e6f60fb031cb7c4b7bdcb4c0a827af2f36aff146c7142be4d8603e7657354f",
+      "parts": 3,
+      "points": 2805,
+      "elapsed_seconds": 171.108341662999,
+      "common_grid_gates": [
+        {
+          "status": "PASSED",
+          "metrics": {
+            "pe.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 135,
+              "maximum_absolute_error": 0.0
+            },
+            "pe_windowed.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 135,
+              "maximum_absolute_error": 0.0
+            },
+            "Scatter_SysMat": {
+              "passed": true,
+              "relative_l2": 3.256206049239978e-10,
+              "points": 135,
+              "maximum_absolute_error": 2.842170943040401e-14
+            },
+            "SysMat_withScatter": {
+              "passed": true,
+              "relative_l2": 3.553321333539333e-11,
+              "points": 135,
+              "maximum_absolute_error": 1.1368683772161603e-13
+            }
+          },
+          "previous_complete_sha256": "b8eb6370e9db2fd9be8a52448067dc9fd169cf3c40bbbef077fb5c351953665c"
+        },
+        {
+          "status": "PASSED",
+          "metrics": {
+            "pe.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 135,
+              "maximum_absolute_error": 0.0
+            },
+            "pe_windowed.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 135,
+              "maximum_absolute_error": 0.0
+            },
+            "Scatter_SysMat": {
+              "passed": true,
+              "relative_l2": 3.499993662336714e-10,
+              "points": 135,
+              "maximum_absolute_error": 5.684341886080802e-14
+            },
+            "SysMat_withScatter": {
+              "passed": true,
+              "relative_l2": 3.285613061244301e-11,
+              "points": 135,
+              "maximum_absolute_error": 1.1368683772161603e-13
+            }
+          },
+          "previous_complete_sha256": "8bfc9d0e295bafc893e969c8c075b1f6d898f8db76ec4ed2d55a6196d889ee5d"
+        },
+        {
+          "status": "PASSED",
+          "metrics": {
+            "pe.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 135,
+              "maximum_absolute_error": 0.0
+            },
+            "pe_windowed.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 135,
+              "maximum_absolute_error": 0.0
+            },
+            "Scatter_SysMat": {
+              "passed": true,
+              "relative_l2": 3.3666580789750343e-10,
+              "points": 135,
+              "maximum_absolute_error": 2.842170943040401e-14
+            },
+            "SysMat_withScatter": {
+              "passed": true,
+              "relative_l2": 6.930648065427014e-11,
+              "points": 135,
+              "maximum_absolute_error": 4.547473508864641e-13
+            }
+          },
+          "previous_complete_sha256": "6f389de236d5d890e39d0babf5cb41599f3027c313fa5646141f363b20ff0f84"
+        }
+      ]
+    },
+    {
+      "stage": "guard_patch_ultrafine",
+      "ready_sha256": "688d86fc3ad133714dcef8de2a40e32729302bf7fe51ed437353d944b9889f92",
+      "parts": 3,
+      "points": 18711,
+      "elapsed_seconds": 367.6935024999839,
+      "common_grid_gates": [
+        {
+          "status": "PASSED",
+          "metrics": {
+            "pe.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "pe_windowed.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "Scatter_SysMat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "SysMat_withScatter": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            }
+          },
+          "previous_complete_sha256": "c18d81c26b9442a65040f5e7fceca7987ad08827da0169a5809d3ef207f307ad"
+        },
+        {
+          "status": "PASSED",
+          "metrics": {
+            "pe.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "pe_windowed.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "Scatter_SysMat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "SysMat_withScatter": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            }
+          },
+          "previous_complete_sha256": "bfc4273404caafca4643ed3cd3e53b23f56ff20a84bee00c2f091ffb0218561f"
+        },
+        {
+          "status": "PASSED",
+          "metrics": {
+            "pe.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "pe_windowed.sysmat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "Scatter_SysMat": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            },
+            "SysMat_withScatter": {
+              "passed": true,
+              "relative_l2": 0.0,
+              "points": 935,
+              "maximum_absolute_error": 0.0
+            }
+          },
+          "previous_complete_sha256": "83ed15e3c5e6ace597e50b42b00edbeece465fa292abdb0364d580277de88b46"
+        }
+      ]
+    }
+  ],
+  "all_parts_finite_nonnegative_and_hashed": true,
+  "new_transport_photons": 0,
+  "full_field_validated": false
+}
