@@ -37,24 +37,74 @@
   "checked_utc": "2026-10-04T01:16:29.099023+00:00",
   "scope": "Staged repository and outgoing history; 2000-iteration figures/curves and small evidence; arrays remain ignored.",
   "latest_incremental_audit": {
-    "checked_utc": "2026-10-04T02:36:31.500021+00:00",
-    "base_commit": "87793881a21ecf31528129bc4eabed854c68781e",
-    "scope": "Only staged status/document blobs changed; remaining Git blobs inherit the preceding full-index audit. Scientific inputs and numerical code unchanged.",
+    "checked_utc": "2026-10-04T02:50:28.962097+00:00",
+    "base_commit": "879f9f879e51705c6ab01e90a9420fd7e5774b9e",
+    "scope": "User stop evidence, response-contract diagnostic source, research docs and small JSON; unchanged blobs inherit preceding full-index audit. No production arrays or credentials.",
     "changed_blobs": [
       {
+        "path": "experiments/ELLIPSE500x300_H120/HISTORY.md",
+        "bytes": 28285,
+        "sha256": "3a8ddeca95d9388a8e28b55a383e08644b28fe532fa8eb84eac1b31332ad746e"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/README.md",
+        "bytes": 15609,
+        "sha256": "22a951de00d0a930ebfbfadf10b112ddae9a3c00907f7a89f63f9a2528a5c32b"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/diagnose_compton_event_contract.py",
+        "bytes": 8087,
+        "sha256": "14738ad64f14a79d670a8e195e4eee4ef1a87a7b0d0cc22993704b583da74cb5"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit/README.md",
+        "bytes": 24549,
+        "sha256": "6743d7db08fd348d48f43303a234a8e549dba8807bc70bbd6de9779b8bc90fb2"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit/RESPONSE_CORRECTION_STUDY.md",
+        "bytes": 14980,
+        "sha256": "723fcd6450488269ee804c75bd3e23aeacd3743b06326bc9cdb4e5cc2d470df9"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit/correction_study_validation.json",
+        "bytes": 557,
+        "sha256": "f7cac6110576d6b490a5cb8e39bb22f4021aedd4baacdd31f01874d81926a8df"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit/event_contract_cases.json",
+        "bytes": 11393,
+        "sha256": "5c3fa3a22952c9f996a891c47061416869a1b3bf52649d20b37b7752309412e4"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit/post_cut_sample_diagnostic.json",
+        "bytes": 1557,
+        "sha256": "561c7bd7804b7cf813ddbc04e34429fc664d14bb3119483b8f5f226b7bda2619"
+      },
+      {
         "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/PRODUCTION.md",
-        "bytes": 12485,
-        "sha256": "c8f9862beb7fed680ca58f8039ed509016f6f3277e94559b3e47b8fdb55c84e3"
+        "bytes": 13408,
+        "sha256": "79fc6a9bb6a5e4f4c7d0fa83ad4a2b993a85802fc4f372e13a5ac5d8fccc4382"
       },
       {
         "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/README.md",
-        "bytes": 11400,
-        "sha256": "944fa7607db996830d102c5b9d3bfce17f541ef46f14f58d721aeceb78f733f2"
+        "bytes": 10523,
+        "sha256": "14b7ec8dc4523c7c73d84b70bef34d274f74f09030444aa6860941ad0850c1ad"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/automation.json",
+        "bytes": 808,
+        "sha256": "0c047520e5c342933cc649c6597b941584ca4bb1703780bfa99a861075a78085"
       },
       {
         "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/job_status.json",
-        "bytes": 6864,
-        "sha256": "44480c5b75e8eeb9f93668952e4b32479cc5f41e88f41aa95f27431479f5a395"
+        "bytes": 6997,
+        "sha256": "3dfbedad39a37d834737d9be5a2c95c0feba12eae3ba17f1bb6242ba85dc1c4a"
+      },
+      {
+        "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/stop_requested_1657887.json",
+        "bytes": 2786,
+        "sha256": "922e0242c72175eb0babbc3cd3c307230189673736765bba01776ac00c2887f4"
       }
     ],
     "findings": []

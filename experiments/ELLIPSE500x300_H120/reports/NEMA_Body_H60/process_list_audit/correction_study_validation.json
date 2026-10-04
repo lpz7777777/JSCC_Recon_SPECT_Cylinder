@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-04T02:50:25.940460+00:00",
+  "diagnostic_script_sha256": "14738ad64f14a79d670a8e195e4eee4ef1a87a7b0d0cc22993704b583da74cb5",
+  "synthetic_cases": 6,
+  "all_contract_and_energy_conservation_assertions_passed": true,
+  "source_hashes_match_record": true,
+  "frozen_cut3_config_unchanged": true,
+  "production_sources_changed": false,
+  "new_transport_runs": 0,
+  "new_reconstruction_runs": 0,
+  "limitations": "Source-contract tests, not measured topology frequencies; new physical model not implemented or accepted"
+}

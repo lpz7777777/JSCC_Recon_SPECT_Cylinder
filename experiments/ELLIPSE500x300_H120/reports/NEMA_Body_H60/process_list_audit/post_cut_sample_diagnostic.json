@@ -1,0 +1,34 @@
+{
+  "purpose": "Existing stratified sample; no new reconstruction or transport",
+  "sample_valid": 10238,
+  "removed_sample_count": 24,
+  "retained_sample_count": 10214,
+  "weighted_removed_fraction": 0.0023387458706929203,
+  "z_slab_note": "source_z field checks |z|<=30 only, not complete NEMA truth mask",
+  "density_64_peak_gradient_per_event": {
+    "estimated_total": 672687.9619542923,
+    "removed_share": 0.9999871532984906,
+    "kept_share": 1.2846701509361402e-05,
+    "warning": "Stratified estimate sensitive to extreme samples; responsibility not causal attribution"
+  },
+  "density_64_peak_gradient_production_floor": {
+    "estimated_total": 17503.999694315095,
+    "removed_share": 0.9995062944694305,
+    "kept_share": 0.0004937055305694882,
+    "warning": "Stratified estimate sensitive to extreme samples; responsibility not causal attribution"
+  },
+  "final_tiny_responsibility": {
+    "estimated_total": 43336.017379909594,
+    "removed_share": 0.017685589365967876,
+    "kept_share": 0.9823144106340321,
+    "warning": "Stratified estimate sensitive to extreme samples; responsibility not causal attribution"
+  },
+  "final_peak_responsibility": {
+    "estimated_total": 2646.33660324906,
+    "removed_share": 0.008393906968880155,
+    "kept_share": 0.9916060930311198,
+    "warning": "Stratified estimate sensitive to extreme samples; responsibility not causal attribution"
+  },
+  "retained_still_fail_H60_z_slab_3sigma_sample_count": 34,
+  "retained_float32_truth_prediction_zero_sample_count": 0
+}

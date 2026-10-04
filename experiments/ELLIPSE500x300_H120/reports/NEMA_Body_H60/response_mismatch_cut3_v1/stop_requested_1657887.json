@@ -1,0 +1,16 @@
+{
+  "requested_action": "Stop further cut3 reconstruction; investigate corrections in process_list/Geant4/response/sensitivity; preserve existing results",
+  "job_id": "1657887",
+  "checked_utc": "2026-10-04T02:44:27.923192+00:00",
+  "queue_empty": true,
+  "accounting": "JobID|JobName|State|Elapsed|ExitCode|MaxRSS|AllocTRES\n1657887|NEMA_response_cut3|CANCELLED by 1721|04:51:14|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.batch|batch|CANCELLED|04:51:15|0:15|58568K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.extern|extern|COMPLETED|04:51:19|0:0|0|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.0|bash|COMPLETED|00:00:13|0:0|247192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.1|bash|COMPLETED|00:07:55|0:0|27858332K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.2|bash|COMPLETED|00:02:37|0:0|22572412K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.3|bash|FAILED|04:39:58|1:0|22084.50M|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.4|timeout|COMPLETED|00:00:00|0:0|888K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.5|timeout|COMPLETED|00:00:00|0:0|124K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.6|timeout|CANCELLED|00:00:01|0:15|2256K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.7|timeout|COMPLETED|00:00:00|0:0|576K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.8|timeout|COMPLETED|00:00:00|0:0|684K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.9|timeout|COMPLETED|00:00:01|0:0|1868K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.10|timeout|COMPLETED|00:00:01|0:0|800K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.11|timeout|COMPLETED|00:00:01|0:0|1392K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.12|timeout|COMPLETED|00:00:01|0:0|904K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.13|timeout|FAILED|00:00:00|1:0|1864K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.14|timeout|COMPLETED|00:00:00|0:0|96K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.15|timeout|COMPLETED|00:00:01|0:0|448K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.16|timeout|COMPLETED|00:00:02|0:0|992K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.17|timeout|COMPLETED|00:00:02|0:0|2016K|cpu=48,gres/gpu=8,mem=480000M,node=8\n",
+  "last_progress_log": "0: ELLIPSE_ITERATION 440_compton_and_jscc 2700/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2750/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2800/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2850/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2900/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2950/10000\n",
+  "last_logged_iteration": 2950,
+  "formal_acceptance_completed": false,
+  "verified_snapshot_iteration": 2000,
+  "automation_id": "nema-5e9-3",
+  "automation_status": "PAUSED",
+  "restart_authorized": false,
+  "removed_events_preserved": 1168,
+  "retained_events": 483768
+}

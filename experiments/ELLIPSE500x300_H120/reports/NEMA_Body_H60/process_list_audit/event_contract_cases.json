@@ -1,0 +1,400 @@
+{
+  "purpose": "Synthetic source-contract diagnostic; not MC frequency or reconstruction",
+  "smeared": false,
+  "geometry_ARM_not_evaluated": true,
+  "source_sha256": {
+    "Geant4Sim\\Geant4Code\\src\\SteppingAction.cc": "07c73228a23b9974a44fb4a42676e9289765692d1d1edef0037ce40d810a01c6",
+    "Geant4Sim\\Geant4Code\\src\\EventAction.cc": "e928bbd25345e09eb5b359bda86bca8227d228c1e0eea2239bb9bada8e76b8ae"
+  },
+  "cases": {
+    "clean_first_scatter_full_absorption": {
+      "legacy": {
+        "list_accepted": true,
+        "original_energy_candidate": true,
+        "first_crystal": 1,
+        "counted_compton": 1,
+        "counted_photoelectric": 0,
+        "e1_mev": 0.1,
+        "e2_mev": 0.34,
+        "aggregate_angle_degrees": 48.8203286919784
+      },
+      "first_scatter_contract": {
+        "compatible": true,
+        "reasons": [],
+        "actual_first_crystal": 1,
+        "first_transfer_mev": 0.09999999999999998,
+        "aggregate_first_deposit_mev": 0.1,
+        "transfer_angle_degrees": 48.8203286919784
+      },
+      "steps": [
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.34,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.099,
+          "track_id": 2
+        },
+        {
+          "crystal": 2,
+          "process": "phot",
+          "pre_gamma_mev": 0.34,
+          "post_gamma_mev": 0,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.339,
+          "track_id": 3
+        }
+      ]
+    },
+    "second_crystal_multiple_interactions": {
+      "legacy": {
+        "list_accepted": true,
+        "original_energy_candidate": true,
+        "first_crystal": 1,
+        "counted_compton": 1,
+        "counted_photoelectric": 0,
+        "e1_mev": 0.1,
+        "e2_mev": 0.34,
+        "aggregate_angle_degrees": 48.8203286919784
+      },
+      "first_scatter_contract": {
+        "compatible": true,
+        "reasons": [],
+        "actual_first_crystal": 1,
+        "first_transfer_mev": 0.09999999999999998,
+        "aggregate_first_deposit_mev": 0.1,
+        "transfer_angle_degrees": 48.8203286919784
+      },
+      "steps": [
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.34,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.099,
+          "track_id": 2
+        },
+        {
+          "crystal": 2,
+          "process": "compt",
+          "pre_gamma_mev": 0.34,
+          "post_gamma_mev": 0.2,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.139,
+          "track_id": 3
+        },
+        {
+          "crystal": 2,
+          "process": "phot",
+          "pre_gamma_mev": 0.2,
+          "post_gamma_mev": 0,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.199,
+          "track_id": 4
+        }
+      ]
+    },
+    "return_to_first_crystal_photoelectric": {
+      "legacy": {
+        "list_accepted": true,
+        "original_energy_candidate": true,
+        "first_crystal": 1,
+        "counted_compton": 1,
+        "counted_photoelectric": 0,
+        "e1_mev": 0.24587741393786733,
+        "e2_mev": 0.1941225860621327,
+        "aggregate_angle_degrees": 118.09881456062384
+      },
+      "first_scatter_contract": {
+        "compatible": false,
+        "reasons": [
+          "additional gamma interaction in first crystal",
+          "aggregate first-crystal deposit differs from first transfer"
+        ],
+        "actual_first_crystal": 1,
+        "first_transfer_mev": 0.09999999999999998,
+        "aggregate_first_deposit_mev": 0.24587741393786733,
+        "transfer_angle_degrees": 48.8203286919784
+      },
+      "steps": [
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.34,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.099,
+          "track_id": 2
+        },
+        {
+          "crystal": 2,
+          "process": "compt",
+          "pre_gamma_mev": 0.34,
+          "post_gamma_mev": 0.14587741393786732,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.1931225860621327,
+          "track_id": 3
+        },
+        {
+          "crystal": 1,
+          "process": "phot",
+          "pre_gamma_mev": 0.14587741393786732,
+          "post_gamma_mev": 0,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.14487741393786732,
+          "track_id": 4
+        }
+      ]
+    },
+    "prior_zero_deposit_rayleigh": {
+      "legacy": {
+        "list_accepted": true,
+        "original_energy_candidate": true,
+        "first_crystal": 1,
+        "counted_compton": 1,
+        "counted_photoelectric": 0,
+        "e1_mev": 0.1,
+        "e2_mev": 0.34,
+        "aggregate_angle_degrees": 48.8203286919784
+      },
+      "first_scatter_contract": {
+        "compatible": false,
+        "reasons": [
+          "interaction before first detector hit"
+        ],
+        "actual_first_crystal": 1,
+        "first_transfer_mev": 0.09999999999999998,
+        "aggregate_first_deposit_mev": 0.1,
+        "transfer_angle_degrees": 48.8203286919784
+      },
+      "steps": [
+        {
+          "crystal": null,
+          "process": "Rayl",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.44,
+          "deposit_mev": 0,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.34,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.099,
+          "track_id": 2
+        },
+        {
+          "crystal": 2,
+          "process": "phot",
+          "pre_gamma_mev": 0.34,
+          "post_gamma_mev": 0,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.339,
+          "track_id": 3
+        }
+      ]
+    },
+    "zero_local_first_compton_with_secondary_deposit": {
+      "legacy": {
+        "list_accepted": false,
+        "original_energy_candidate": false,
+        "first_crystal": 2,
+        "counted_compton": 0,
+        "counted_photoelectric": 0,
+        "e1_mev": 0.34,
+        "e2_mev": 0.1,
+        "aggregate_angle_degrees": null
+      },
+      "first_scatter_contract": {
+        "compatible": true,
+        "reasons": [],
+        "actual_first_crystal": 1,
+        "first_transfer_mev": 0.09999999999999998,
+        "aggregate_first_deposit_mev": 0.1,
+        "transfer_angle_degrees": 48.8203286919784
+      },
+      "steps": [
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.34,
+          "deposit_mev": 0,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.1,
+          "track_id": 2
+        },
+        {
+          "crystal": 2,
+          "process": "phot",
+          "pre_gamma_mev": 0.34,
+          "post_gamma_mev": 0,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.339,
+          "track_id": 3
+        }
+      ]
+    },
+    "hidden_first_compton_then_second_in_same_crystal": {
+      "legacy": {
+        "list_accepted": true,
+        "original_energy_candidate": true,
+        "first_crystal": 1,
+        "counted_compton": 1,
+        "counted_photoelectric": 0,
+        "e1_mev": 0.14,
+        "e2_mev": 0.3,
+        "aggregate_angle_degrees": 62.7399205842366
+      },
+      "first_scatter_contract": {
+        "compatible": false,
+        "reasons": [
+          "additional gamma interaction in first crystal",
+          "aggregate first-crystal deposit differs from first transfer"
+        ],
+        "actual_first_crystal": 1,
+        "first_transfer_mev": 0.09999999999999998,
+        "aggregate_first_deposit_mev": 0.14,
+        "transfer_angle_degrees": 48.8203286919784
+      },
+      "steps": [
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.44,
+          "post_gamma_mev": 0.34,
+          "deposit_mev": 0,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.1,
+          "track_id": 2
+        },
+        {
+          "crystal": 1,
+          "process": "compt",
+          "pre_gamma_mev": 0.34,
+          "post_gamma_mev": 0.3,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 1,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.039,
+          "track_id": 3
+        },
+        {
+          "crystal": 2,
+          "process": "phot",
+          "pre_gamma_mev": 0.3,
+          "post_gamma_mev": 0,
+          "deposit_mev": 0.001,
+          "track_id": 1
+        },
+        {
+          "crystal": 2,
+          "process": "electron",
+          "pre_gamma_mev": 0.0,
+          "post_gamma_mev": 0.0,
+          "deposit_mev": 0.299,
+          "track_id": 4
+        }
+      ]
+    }
+  },
+  "limitations": "Toy traces exercise code paths. No rate, actual event genealogy or post-kernel acceptance is inferred."
+}

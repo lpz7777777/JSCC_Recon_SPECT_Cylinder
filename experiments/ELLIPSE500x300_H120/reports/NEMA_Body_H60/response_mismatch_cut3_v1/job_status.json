@@ -1,8 +1,8 @@
 {
   "job_id": "1657887",
-  "checked_utc": "2026-10-04T02:35:34.221695+00:00",
-  "squeue": "1657887|NEMA_response_cut3|RUNNING|4:49:35|8|wqd10naf05g4,wqd10naf06g3,wqd10naf13g7,wqd10nba06g[1,4],wqd10nba07g[5,8],wqd10nba08g2",
-  "phase": "formal",
+  "checked_utc": "2026-10-04T02:44:27.923192+00:00",
+  "squeue": "",
+  "phase": "stopped_before_formal_delivery",
   "regression_passed": true,
   "regression_accepted": 484936,
   "regression_relative_l2": [
@@ -16,15 +16,15 @@
   "actual_granted_host_bytes_per_node": 62914560000,
   "numerical_verifier_rerun_locally": true,
   "formal_result_available": false,
-  "scientific_comparison_pending": true,
+  "scientific_comparison_pending": false,
   "nccl_interface": "bond0",
-  "log_progress_and_slurm_accounting": "JobID|JobName|State|Elapsed|ExitCode|MaxRSS|AllocTRES\n1657887|NEMA_response_cut3|RUNNING|04:49:36|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.batch|batch|RUNNING|04:49:36|0:0||cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.extern|extern|RUNNING|04:49:36|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.0|bash|COMPLETED|00:00:13|0:0|247192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.1|bash|COMPLETED|00:07:55|0:0|27858332K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.2|bash|COMPLETED|00:02:37|0:0|22572412K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.3|bash|RUNNING|04:38:15|0:0||cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.4|timeout|COMPLETED|00:00:00|0:0|888K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.5|timeout|COMPLETED|00:00:00|0:0|124K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.6|timeout|CANCELLED|00:00:01|0:15|2256K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.7|timeout|COMPLETED|00:00:00|0:0|576K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.8|timeout|COMPLETED|00:00:00|0:0|684K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.9|timeout|COMPLETED|00:00:01|0:0|1868K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.10|timeout|COMPLETED|00:00:01|0:0|800K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.11|timeout|COMPLETED|00:00:01|0:0|1392K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.12|timeout|COMPLETED|00:00:01|0:0|904K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.13|timeout|FAILED|00:00:00|1:0|1864K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.14|timeout|COMPLETED|00:00:00|0:0|96K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.15|timeout|COMPLETED|00:00:01|0:0|448K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.16|timeout|COMPLETED|00:00:02|0:0|992K|cpu=48,gres/gpu=8,mem=480000M,node=8\n",
+  "log_progress_and_slurm_accounting": "JobID|JobName|State|Elapsed|ExitCode|MaxRSS|AllocTRES\n1657887|NEMA_response_cut3|CANCELLED by 1721|04:51:14|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.batch|batch|CANCELLED|04:51:15|0:15|58568K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.extern|extern|COMPLETED|04:51:19|0:0|0|billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.0|bash|COMPLETED|00:00:13|0:0|247192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.1|bash|COMPLETED|00:07:55|0:0|27858332K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.2|bash|COMPLETED|00:02:37|0:0|22572412K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.3|bash|FAILED|04:39:58|1:0|22084.50M|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.4|timeout|COMPLETED|00:00:00|0:0|888K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.5|timeout|COMPLETED|00:00:00|0:0|124K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.6|timeout|CANCELLED|00:00:01|0:15|2256K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.7|timeout|COMPLETED|00:00:00|0:0|576K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.8|timeout|COMPLETED|00:00:00|0:0|684K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.9|timeout|COMPLETED|00:00:01|0:0|1868K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.10|timeout|COMPLETED|00:00:01|0:0|800K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.11|timeout|COMPLETED|00:00:01|0:0|1392K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.12|timeout|COMPLETED|00:00:01|0:0|904K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.13|timeout|FAILED|00:00:00|1:0|1864K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.14|timeout|COMPLETED|00:00:00|0:0|96K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.15|timeout|COMPLETED|00:00:01|0:0|448K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.16|timeout|COMPLETED|00:00:02|0:0|992K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.17|timeout|COMPLETED|00:00:02|0:0|2016K|cpu=48,gres/gpu=8,mem=480000M,node=8\n",
   "last_confirmed_formal_iteration": 2950,
   "last_progress_confirmed_utc": "2026-10-04T02:35:34.221695+00:00",
   "checkpoint_2000_available": true,
   "checkpoint_2000_transferred_and_validated": true,
   "interim_report": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\response_mismatch_cut3_v1\\comparison_interim_1657887\\README.md",
-  "last_progress_log": "0: ELLIPSE_ITERATION 440_compton_and_jscc 2650/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2700/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2750/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2800/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2850/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2900/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2950/10000\n",
+  "last_progress_log": "0: ELLIPSE_ITERATION 440_compton_and_jscc 2700/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2750/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2800/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2850/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2900/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2950/10000\n",
   "resource_snapshot": {
     "checked_utc": "2026-10-04T02:35:34.221695+00:00",
     "nodes": [
@@ -144,6 +144,11 @@
     "current_iteration": 2950,
     "formal_verification_available": false,
     "interim_already_delivered": true,
-    "action": "Continue same job; no submission or repeat interim gallery"
-  }
+    "action": "Superseded: user stopped this study"
+  },
+  "state": "CANCELLED_BY_USER",
+  "formal_acceptance_completed": false,
+  "automatic_restart_authorized": false,
+  "stop_record": "stop_requested_1657887.json",
+  "automation_status": "PAUSED"
 }
