@@ -15,3 +15,5 @@ plot_response_mismatch_diagnostics.py -text whitespace=cr-at-eol
 compare_response_mismatch.py -text whitespace=cr-at-eol
 test_response_mismatch.py -text whitespace=cr-at-eol
 test_compare_response_mismatch.py -text whitespace=cr-at-eol
+# Preserve figure/report/archive bytes named in comparison artifact manifests.
+reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_*/** -text whitespace=cr-at-eol

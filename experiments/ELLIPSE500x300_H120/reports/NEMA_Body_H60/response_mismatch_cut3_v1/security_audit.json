@@ -1,6 +1,6 @@
 {
-  "checked_blobs": 1272,
-  "total_blob_bytes": 50626141,
+  "checked_blobs": 1285,
+  "total_blob_bytes": 51747775,
   "largest_blobs": [
     [
       1323422,
@@ -34,6 +34,6 @@
     ]
   ],
   "findings": [],
-  "checked_utc": "2026-10-03T22:09:52.955435+00:00",
-  "scope": "Staged repository and outgoing history; regression/pilot evidence only; large result arrays remain ignored."
+  "checked_utc": "2026-10-04T01:16:29.099023+00:00",
+  "scope": "Staged repository and outgoing history; 2000-iteration figures/curves and small evidence; arrays remain ignored."
 }

@@ -1,0 +1,13 @@
+{
+  "job_id": "1657887",
+  "interim_only": true,
+  "iteration": 2000,
+  "channels": 2,
+  "history_frames_each": 40,
+  "finite_nonnegative": true,
+  "last_frame_exactly_equals_active": true,
+  "active_full_consistency": true,
+  "outside_ellipse_zero": true,
+  "source_input_geometry_config_sensitivity_and_output_hashes_match": true,
+  "formal_acceptance_pending": true
+}

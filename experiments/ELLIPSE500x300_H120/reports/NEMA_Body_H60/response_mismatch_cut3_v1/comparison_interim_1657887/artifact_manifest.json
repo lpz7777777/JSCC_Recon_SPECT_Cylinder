@@ -1,0 +1,72 @@
+{
+  "job_id": "1657887",
+  "interim_only": true,
+  "iteration": 2000,
+  "files": {
+    "comparison.json": {
+      "bytes": 6476,
+      "sha256": "ea347cc46f47e9d13ee53afb57fd6d35933a908fd03c69545c42a00f417b93ab"
+    },
+    "crc_cnr_curves.png": {
+      "bytes": 184904,
+      "sha256": "98e9873c97c4cf4c3dd42bf8bd7b67f37aa3c96d078014601880f74e0213c61d"
+    },
+    "final_multiplanar.png": {
+      "bytes": 151703,
+      "sha256": "9013a88f58ce89e1196da756acd1bf1230129fab8e4bcad4a2893921f2f21344"
+    },
+    "iterations_center.png": {
+      "bytes": 210023,
+      "sha256": "1b2a43257d22e39eff3ce4d97612fa5282220dc2cb0341ee97778902036da1da"
+    },
+    "iterations_mip72.png": {
+      "bytes": 245446,
+      "sha256": "4df686127308b6d973164f9204eb4e303efcc7d080b8a9985350d2fa8479ff08"
+    },
+    "native_iteration_metrics.csv": {
+      "bytes": 43321,
+      "sha256": "6d630b643eed0751991cd1520f63d00e1e7eebd7718b590812507441e1b1096b"
+    },
+    "README.md": {
+      "bytes": 4956,
+      "sha256": "ccec60dacf6e57226601e1119b0f122328a2c777e0411b003a0eb967d193c989"
+    },
+    "sphere_iteration_metrics.csv": {
+      "bytes": 53013,
+      "sha256": "69a7dfa1a96c470939288b5aac7bf1be890f576b3761762f7be33ef30f6516fa"
+    },
+    "spike_noise_leakage_curves.png": {
+      "bytes": 208901,
+      "sha256": "67ad4315ce583559ce1d26d61afbbaa51bb683f2d388b01aab8f18ae94936ef0"
+    },
+    "scripts/analyze_nema_result.py": {
+      "bytes": 9587,
+      "sha256": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874"
+    },
+    "scripts/compare_response_mismatch.py": {
+      "bytes": 15445,
+      "sha256": "8d8d4a54f21b65255419dafef37fd7657538b9d42cace44b14166c2135100351"
+    },
+    "scripts/mip_projection.py": {
+      "bytes": 1692,
+      "sha256": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594"
+    }
+  },
+  "all_figure_images_visually_checked": [
+    "iterations_center.png",
+    "iterations_mip72.png",
+    "final_multiplanar.png",
+    "spike_noise_leakage_curves.png",
+    "crc_cnr_curves.png"
+  ],
+  "full_metrics_rows": 160,
+  "sphere_metrics_rows": 480,
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "selected_iterations": [
+    100,
+    500,
+    1000,
+    2000
+  ],
+  "formal_acceptance_pending": true
+}

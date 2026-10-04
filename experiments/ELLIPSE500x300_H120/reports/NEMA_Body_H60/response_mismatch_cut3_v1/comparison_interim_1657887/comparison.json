@@ -1,0 +1,158 @@
+{
+  "study": "response_mismatch_cut3_v1",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "input_history_sha256": {
+    "baseline/440_ComptonOnly": "99b457a854116c3664e724686aac4c223071f34ac843d9a74c15032d4783c14a",
+    "cut3/440_ComptonOnly": "56a9c6eb5b12ddc57fa93696f8e7ad2aaf8132b8d0e75596a748891eb61d8e15",
+    "baseline/440_SinglePlusCompton": "542db5a24e476b1663e6d48199700adc85aac7a57f95650ab45c540b9bc70c5e",
+    "cut3/440_SinglePlusCompton": "3bffe88afecf9fe94e72acfb29111caff0e2d6eddef08c7f500ceba1955dd3e8"
+  },
+  "verification_sha256": "094b20f6ade4674eaec1acee8bc73feaaf1ec4a44f2756a9ad4adf64b2cfbf8d",
+  "common_display_normalizers": {
+    "440_ComptonOnly": 932.62060546875,
+    "440_SinglePlusCompton": 923.3751831054688
+  },
+  "selected_iterations": [
+    100,
+    500,
+    1000,
+    2000
+  ],
+  "interim_only": true,
+  "through_iteration": 2000,
+  "mip": "central 72 mm; 8 layers excluded per end; other metrics all 40 layers",
+  "roi": "same NEMA 3D fractional spheres/local backgrounds and global |z|<=25.5mm background as baseline",
+  "display": "full ellipse; gray_r; 0..10; no smoothing; one baseline final-background scale per channel for both groups/all frames",
+  "verdict": {
+    "440_ComptonOnly": {
+      "extreme_spike_improved": null,
+      "reductions": {
+        "max_density": 0.29200738295564954,
+        "peak_background_ratio": 0.2825895748386491
+      },
+      "crc_costs": [
+        {
+          "diameter_mm": 13,
+          "crc_change": 0.0009042034252241642,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 22,
+          "crc_change": 0.0003749975080036827,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 37,
+          "crc_change": 0.0013368575887751644,
+          "cost_over_5_percentage_points": false
+        }
+      ],
+      "baseline_final": {
+        "group": "baseline",
+        "channel": "440_ComptonOnly",
+        "iteration": 2000,
+        "max_density": 3678066.25,
+        "peak_background_ratio": 3998.14892578125,
+        "peak_x_mm": 102.27463389889029,
+        "peak_y_mm": -140.76895702124088,
+        "peak_z_mm": 58.5,
+        "p99_density": 2674.0283203125,
+        "p999_density": 28502.83203125,
+        "volume_weighted_p999_density": 6809.954783336631,
+        "background_mean": 919.9422607421875,
+        "background_cv": 1.5236283909313582,
+        "tiny_mass_fraction": 0.06802889873094847,
+        "source_z_leakage": 0.17172879446975534,
+        "total_integral": 3552058260.4543476,
+        "integral_recovery": 1.0059791318977744
+      },
+      "cut3_final": {
+        "group": "cut3",
+        "channel": "440_ComptonOnly",
+        "iteration": 2000,
+        "max_density": 2604043.75,
+        "peak_background_ratio": 2868.313720703125,
+        "peak_x_mm": 102.27463389889029,
+        "peak_y_mm": -140.76895702124088,
+        "peak_z_mm": 58.5,
+        "p99_density": 2822.7919921875,
+        "p999_density": 48697.16796875,
+        "volume_weighted_p999_density": 7305.978588761514,
+        "background_mean": 907.86572265625,
+        "background_cv": 1.53933800137578,
+        "tiny_mass_fraction": 0.04547290822738246,
+        "source_z_leakage": 0.17169844484016,
+        "total_integral": 3550641555.9536934,
+        "integral_recovery": 1.005577906732188
+      }
+    },
+    "440_SinglePlusCompton": {
+      "extreme_spike_improved": null,
+      "reductions": {
+        "max_density": 0.8081471768597059,
+        "peak_background_ratio": 0.8064714491923459
+      },
+      "crc_costs": [
+        {
+          "diameter_mm": 13,
+          "crc_change": 0.00023907100101060175,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 22,
+          "crc_change": 4.140939095217955e-05,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 37,
+          "crc_change": 0.001802279696029141,
+          "cost_over_5_percentage_points": false
+        }
+      ],
+      "baseline_final": {
+        "group": "baseline",
+        "channel": "440_SinglePlusCompton",
+        "iteration": 2000,
+        "max_density": 2613605.5,
+        "peak_background_ratio": 3075.5546875,
+        "peak_x_mm": -231.3510865670048,
+        "peak_y_mm": -63.84884293600199,
+        "peak_z_mm": 58.5,
+        "p99_density": 1936.68115234375,
+        "p999_density": 29853.96484375,
+        "volume_weighted_p999_density": 5419.469355169817,
+        "background_mean": 849.7996826171875,
+        "background_cv": 0.4983036845626102,
+        "tiny_mass_fraction": 0.021613087316613416,
+        "source_z_leakage": 0.18336591118122017,
+        "total_integral": 3473675571.1085496,
+        "integral_recovery": 0.9837803547375674
+      },
+      "cut3_final": {
+        "group": "cut3",
+        "channel": "440_SinglePlusCompton",
+        "iteration": 2000,
+        "max_density": 501427.59375,
+        "peak_background_ratio": 595.2076416015625,
+        "peak_x_mm": -231.3510865670048,
+        "peak_y_mm": -63.84884293600199,
+        "peak_z_mm": 58.5,
+        "p99_density": 2105.88330078125,
+        "p999_density": 19580.0078125,
+        "volume_weighted_p999_density": 5607.522870551585,
+        "background_mean": 842.4414672851562,
+        "background_cv": 0.5017226151001977,
+        "tiny_mass_fraction": 0.005354146556199411,
+        "source_z_leakage": 0.18236922656568583,
+        "total_integral": 3474790282.4709964,
+        "integral_recovery": 0.9840960523659524
+      }
+    }
+  },
+  "observations": [
+    "440_ComptonOnly\uff0c\u7b2c2000\u6b21\uff1a\u6700\u5927\u5bc6\u5ea6\u4e0b\u964d29.20%\uff0c\u5cf0/\u80cc\u666f\u6bd4\u4e0b\u964d28.26%\uff1b\u80cc\u666fCV 1.5236\u21921.5393\uff0c\u6e90\u5916\u8f74\u5411\u8d28\u91cf17.17%\u219217.17%\u3002",
+    "13/22/37mm\u7403CRC\u53d8\u5316\uff08\u767e\u5206\u70b9\uff09\uff1a13mm +0.09, 22mm +0.04, 37mm +0.13\u3002",
+    "440_SinglePlusCompton\uff0c\u7b2c2000\u6b21\uff1a\u6700\u5927\u5bc6\u5ea6\u4e0b\u964d80.81%\uff0c\u5cf0/\u80cc\u666f\u6bd4\u4e0b\u964d80.65%\uff1b\u80cc\u666fCV 0.4983\u21920.5017\uff0c\u6e90\u5916\u8f74\u5411\u8d28\u91cf18.34%\u219218.24%\u3002",
+    "13/22/37mm\u7403CRC\u53d8\u5316\uff08\u767e\u5206\u70b9\uff09\uff1a13mm +0.02, 22mm +0.00, 37mm +0.18\u3002"
+  ]
+}
