@@ -1,7 +1,7 @@
 {
   "job_id": "1657887",
-  "checked_utc": "2026-10-04T01:35:31.722928+00:00",
-  "squeue": "1657887|NEMA_response_cut3|RUNNING|3:49:36|8|wqd10naf05g4,wqd10naf06g3,wqd10naf13g7,wqd10nba06g[1,4],wqd10nba07g[5,8],wqd10nba08g2",
+  "checked_utc": "2026-10-04T02:05:39.544033+00:00",
+  "squeue": "1657887|NEMA_response_cut3|RUNNING|4:19:42|8|wqd10naf05g4,wqd10naf06g3,wqd10naf13g7,wqd10nba06g[1,4],wqd10nba07g[5,8],wqd10nba08g2",
   "phase": "formal",
   "regression_passed": true,
   "regression_accepted": 484936,
@@ -18,15 +18,15 @@
   "formal_result_available": false,
   "scientific_comparison_pending": true,
   "nccl_interface": "bond0",
-  "log_progress_and_slurm_accounting": "JobID|JobName|State|Elapsed|ExitCode|MaxRSS|AllocTRES\n1657887|NEMA_response_cut3|RUNNING|03:49:36|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.batch|batch|RUNNING|03:49:36|0:0||cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.extern|extern|RUNNING|03:49:36|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.0|bash|COMPLETED|00:00:13|0:0|247192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.1|bash|COMPLETED|00:07:55|0:0|27858332K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.2|bash|COMPLETED|00:02:37|0:0|22572412K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.3|bash|RUNNING|03:38:15|0:0||cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.4|timeout|COMPLETED|00:00:00|0:0|888K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.5|timeout|COMPLETED|00:00:00|0:0|124K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.6|timeout|CANCELLED|00:00:01|0:15|2256K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.7|timeout|COMPLETED|00:00:00|0:0|576K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.8|timeout|COMPLETED|00:00:00|0:0|684K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.9|timeout|COMPLETED|00:00:01|0:0|1868K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.10|timeout|COMPLETED|00:00:01|0:0|800K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.11|timeout|COMPLETED|00:00:01|0:0|1392K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.12|timeout|COMPLETED|00:00:01|0:0|904K|cpu=48,gres/gpu=8,mem=480000M,node=8\n",
-  "last_confirmed_formal_iteration": 2300,
-  "last_progress_confirmed_utc": "2026-10-04T01:35:31.722928+00:00",
+  "log_progress_and_slurm_accounting": "JobID|JobName|State|Elapsed|ExitCode|MaxRSS|AllocTRES\n1657887|NEMA_response_cut3|RUNNING|04:19:42|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.batch|batch|RUNNING|04:19:42|0:0||cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.extern|extern|RUNNING|04:19:42|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.0|bash|COMPLETED|00:00:13|0:0|247192K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.1|bash|COMPLETED|00:07:55|0:0|27858332K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.2|bash|COMPLETED|00:02:37|0:0|22572412K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.3|bash|RUNNING|04:08:21|0:0||cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.4|timeout|COMPLETED|00:00:00|0:0|888K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.5|timeout|COMPLETED|00:00:00|0:0|124K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.6|timeout|CANCELLED|00:00:01|0:15|2256K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.7|timeout|COMPLETED|00:00:00|0:0|576K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.8|timeout|COMPLETED|00:00:00|0:0|684K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.9|timeout|COMPLETED|00:00:01|0:0|1868K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.10|timeout|COMPLETED|00:00:01|0:0|800K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.11|timeout|COMPLETED|00:00:01|0:0|1392K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.12|timeout|COMPLETED|00:00:01|0:0|904K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.13|timeout|FAILED|00:00:00|1:0|1864K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1657887.14|timeout|COMPLETED|00:00:00|0:0|96K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1657887.15|timeout|COMPLETED|00:00:01|0:0|448K|cpu=48,gres/gpu=8,mem=480000M,node=8\n",
+  "last_confirmed_formal_iteration": 2600,
+  "last_progress_confirmed_utc": "2026-10-04T02:05:39.544033+00:00",
   "checkpoint_2000_available": true,
   "checkpoint_2000_transferred_and_validated": true,
   "interim_report": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\response_mismatch_cut3_v1\\comparison_interim_1657887\\README.md",
-  "last_progress_log": "0: ELLIPSE_ITERATION 440_compton_and_jscc 1500/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1550/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1600/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1650/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1700/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1750/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1800/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1850/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1900/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 1950/10000\n0: RESPONSE_CHECKPOINT_READY 2000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2000/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2050/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2100/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2150/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2200/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2250/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2300/10000\n",
+  "last_progress_log": "0: ELLIPSE_ITERATION 440_compton_and_jscc 2250/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2300/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2350/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2400/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2450/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2500/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2550/10000\n0: ELLIPSE_ITERATION 440_compton_and_jscc 2600/10000\n",
   "resource_snapshot": {
-    "checked_utc": "2026-10-04T01:36:54.709061+00:00",
+    "checked_utc": "2026-10-04T02:05:39.544033+00:00",
     "nodes": [
       {
         "node": "wqd10nba06g4",
@@ -38,7 +38,7 @@
             "hwm_kib": 27738236
           }
         ],
-        "gpu": "NVIDIA GeForce RTX 4090, 100, 2653, 24564",
+        "gpu": "NVIDIA GeForce RTX 4090, 48, 2653, 24564",
         "host_granted_bytes": 62914560000
       },
       {
@@ -51,7 +51,7 @@
             "hwm_kib": 22604676
           }
         ],
-        "gpu": "NVIDIA GeForce RTX 4090, 56, 2653, 24564",
+        "gpu": "NVIDIA GeForce RTX 4090, 23, 2653, 24564",
         "host_granted_bytes": 62914560000
       },
       {
@@ -60,11 +60,11 @@
         "workers": [
           {
             "pid": 707681,
-            "rss_kib": 22349912,
+            "rss_kib": 22349892,
             "hwm_kib": 27694364
           }
         ],
-        "gpu": "NVIDIA GeForce RTX 4090, 100, 2673, 23028",
+        "gpu": "NVIDIA GeForce RTX 4090, 84, 2673, 23028",
         "host_granted_bytes": 62914560000
       },
       {
@@ -77,20 +77,7 @@
             "hwm_kib": 27617508
           }
         ],
-        "gpu": "NVIDIA GeForce RTX 4090, 100, 2653, 24564",
-        "host_granted_bytes": 62914560000
-      },
-      {
-        "node": "wqd10naf13g7",
-        "rank": "2",
-        "workers": [
-          {
-            "pid": 977776,
-            "rss_kib": 22346416,
-            "hwm_kib": 27685100
-          }
-        ],
-        "gpu": "NVIDIA GeForce RTX 4090, 100, 2673, 24564",
+        "gpu": "NVIDIA GeForce RTX 4090, 53, 2653, 24564",
         "host_granted_bytes": 62914560000
       },
       {
@@ -99,11 +86,11 @@
         "workers": [
           {
             "pid": 1174280,
-            "rss_kib": 22248208,
+            "rss_kib": 22247704,
             "hwm_kib": 27605948
           }
         ],
-        "gpu": "NVIDIA GeForce RTX 4090, 64, 2673, 24564",
+        "gpu": "NVIDIA GeForce RTX 4090, 60, 2673, 24564",
         "host_granted_bytes": 62914560000
       },
       {
@@ -112,11 +99,11 @@
         "workers": [
           {
             "pid": 1444004,
-            "rss_kib": 22311280,
+            "rss_kib": 22311144,
             "hwm_kib": 27727724
           }
         ],
-        "gpu": "NVIDIA GeForce RTX 4090, 100, 2673, 24564",
+        "gpu": "NVIDIA GeForce RTX 4090, 49, 2673, 24564",
         "host_granted_bytes": 62914560000
       },
       {
@@ -131,12 +118,32 @@
         ],
         "gpu": "NVIDIA GeForce RTX 4090, 100, 2673, 24564",
         "host_granted_bytes": 62914560000
+      },
+      {
+        "node": "wqd10naf13g7",
+        "rank": "2",
+        "workers": [
+          {
+            "pid": 977776,
+            "rss_kib": 22346416,
+            "hwm_kib": 27685100
+          }
+        ],
+        "gpu": "NVIDIA GeForce RTX 4090, 46, 2673, 24564",
+        "host_granted_bytes": 62914560000
       }
     ],
     "max_worker_hwm_fraction": 0.45146868489583336,
     "snapshot_not_final_peak": true
   },
   "read_only_probe_note": "Step .13 cancelled only its monitor: wrapper timeout/srun argv falsely matched worker. .14 identified executable; .15 successful eight-rank probe. Production .3 unchanged.",
-  "remote_clock_utc": "2026-10-04T01:32:52Z",
-  "clock_note": "Local UTC checked_utc and remote date differ by about 159 seconds; log progress has no intrinsic UTC timestamp. Use explicit snapshot time, not an old saved log timestamp."
+  "remote_clock_utc": "2026-10-04T02:02:58Z",
+  "clock_note": "Local UTC checked_utc and remote date differ by about 159 seconds; log progress has no intrinsic UTC timestamp. Use explicit snapshot time, not an old saved log timestamp.",
+  "last_normal_poll": {
+    "previous_iteration": 2300,
+    "current_iteration": 2600,
+    "formal_verification_available": false,
+    "interim_already_delivered": true,
+    "action": "Continue same job; no submission or repeat interim gallery"
+  }
 }
