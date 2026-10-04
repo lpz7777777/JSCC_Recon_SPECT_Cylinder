@@ -37,24 +37,24 @@
   "checked_utc": "2026-10-04T01:16:29.099023+00:00",
   "scope": "Staged repository and outgoing history; 2000-iteration figures/curves and small evidence; arrays remain ignored.",
   "latest_incremental_audit": {
-    "checked_utc": "2026-10-04T02:06:50.107392+00:00",
-    "base_commit": "43403d961bb1f4dc63e75760f2fbc8f6c5206e83",
-    "scope": "Only three staged status/document blobs changed since the preceding full-index audit; response/model inputs and all other Git blobs unchanged.",
+    "checked_utc": "2026-10-04T02:36:31.500021+00:00",
+    "base_commit": "87793881a21ecf31528129bc4eabed854c68781e",
+    "scope": "Only staged status/document blobs changed; remaining Git blobs inherit the preceding full-index audit. Scientific inputs and numerical code unchanged.",
     "changed_blobs": [
       {
         "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/PRODUCTION.md",
-        "bytes": 11773,
-        "sha256": "f2d1f4b0a8459c508e68b0416344e4f6eadb2118cdc088183005a933a3409503"
+        "bytes": 12485,
+        "sha256": "c8f9862beb7fed680ca58f8039ed509016f6f3277e94559b3e47b8fdb55c84e3"
       },
       {
         "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/README.md",
         "bytes": 11400,
-        "sha256": "48f88a57a464fe877878302609aa8b62a865bef212057704d9d6084835974971"
+        "sha256": "944fa7607db996830d102c5b9d3bfce17f541ef46f14f58d721aeceb78f733f2"
       },
       {
         "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/job_status.json",
-        "bytes": 6833,
-        "sha256": "1b2b68d16c03940c8b6e14f7972f0173d89048b8c3d6ae6726e3575fc2852434"
+        "bytes": 6864,
+        "sha256": "44480c5b75e8eeb9f93668952e4b32479cc5f41e88f41aa95f27431479f5a395"
       }
     ],
     "findings": []
