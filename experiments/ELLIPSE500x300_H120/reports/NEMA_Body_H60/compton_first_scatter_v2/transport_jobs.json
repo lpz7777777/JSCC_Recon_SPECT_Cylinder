@@ -1,0 +1,88 @@
+{
+  "array_job": 15562324,
+  "gate": {
+    "status": "PASSED",
+    "smoke": [
+      {
+        "index": 0,
+        "seed": 30093001,
+        "identical_outputs": true
+      },
+      {
+        "index": 10,
+        "seed": 30093011,
+        "identical_outputs": true
+      },
+      {
+        "index": 20,
+        "seed": 30093021,
+        "identical_outputs": true
+      }
+    ],
+    "first_worker": {
+      "primary_counts": [
+        1470218,
+        3529782,
+        0
+      ],
+      "list_rows": {
+        "List.csv": 4998,
+        "ListIdeal.csv": 3126
+      },
+      "reasons": {
+        "not_440_primary": 3454,
+        "accepted": 3126,
+        "foreign_energy_in_first_crystal": 69,
+        "intermediate_or_same_crystal_interaction": 744,
+        "not_two_measured_crystals": 1277,
+        "first_not_crystal_compton": 1280,
+        "no_second_crystal_interaction": 105,
+        "first_energy_not_closed": 137,
+        "return_to_first_crystal": 55,
+        "measured_pair_differs_from_primary": 73
+      },
+      "intersections": {
+        "legacy_0_ideal_0": 5311,
+        "legacy_1_ideal_1": 3115,
+        "legacy_1_ideal_0": 1883,
+        "legacy_0_ideal_1": 11
+      },
+      "index": 0,
+      "dataset": "NEMA",
+      "view": 1,
+      "worker": 0,
+      "photons": 5000000,
+      "seed": 30093001,
+      "macro": "macros/NEMA_v01.mac",
+      "macro_sha256": "d66e13b6469c74aaa8f353b2933fdce2b67dd70841833b5e13d35d4fda358723",
+      "object_mm": null,
+      "status": "complete",
+      "simulated_photons": 5000000,
+      "elapsed_seconds": 220.16481749154627,
+      "executable_sha256": "431c18339f7c9f46e7636e80b8962100229039450520d1d77835c5c37c988e15",
+      "policy": "paired",
+      "output_sha256": {
+        "List.csv": "14ec26643c1424a09c4871024a5ce21a7d4b5678e90352bf61e9aabde72751da",
+        "ListIdeal.csv": "74f509e329650f520857fb02ba4f13563b5ed159d1532462c2fc8f7d8e96a201",
+        "EventContract.csv": "18eda2451f2116d27ee6bc1ff0a4324c86ed3a673925cba26a1a542712d6384a",
+        "PrimaryTrace.csv": "43196bc6f834afdbcf075507a50b4c57288146d02175c99411c8ae63be30f172",
+        "EmittedBins.csv": "f653ce5b6af7fb9e3e0abe54a1563dc4cb3bb42b7b68bfe052572cb94d47b056",
+        "CntStat_218.csv": "953bf5586f9ee5f69d583a89b824d5ff98bf964b6788ee7f8b22213ea842d33f",
+        "CntStat_440.csv": "85ee0d9da1512aad859d34bccbf7fa970db788626d67697430004167d16b77cd",
+        "PrimaryCount.csv": "aaeefce9aa08f4282f187ba4091d0a45f778332566e35af013c4110331164b35"
+      }
+    },
+    "legacy_full_worker_bitwise_replay": true,
+    "manifest_sha256": "3e5827b719b2b7ad7f968cb863aadcd7d9103e3763ddca0b6f6e30a0f9b0708c"
+  },
+  "total_workers": 760,
+  "maximum_concurrency": 64,
+  "total_primary_photons": 3170000000,
+  "throttle_adjustment": {
+    "from": 32,
+    "to": 64,
+    "checked_idle_cpu_cores": 600,
+    "physics_or_seed_changes": false,
+    "utc": "2026-10-04T04:49:20.077521+00:00"
+  }
+}

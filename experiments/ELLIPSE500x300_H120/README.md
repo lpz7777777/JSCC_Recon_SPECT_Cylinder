@@ -1,13 +1,13 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
-最新状态（2026-10-04）：用户已停止3σ删除组继续重建，1657887取消并退出队列，nema-5e9-3轮询PAUSED。最后日志2950；可验收交付仅至2000，两路40帧，原10000次最终判据未完成。1168删除集合和独立匹配S保留。转入[Compton响应修正研究](reports/NEMA_Body_H60/process_list_audit/RESPONSE_CORRECTION_STUDY.md)，目前完成源码复核及六组合成合同诊断，不启动新重建。
+最新状态（2026-10-04）：实施用户批准的独立 [compton_first_scatter_v2](reports/NEMA_Body_H60/compton_first_scatter_v2/README.md)。Geant4首散射分类器、次级能量归属旁路、配对输出和重建门控已实现。16项C++测试、三个1e4光子同种子旁路开关检查、首个完整5e6光子NEMA worker旧输出字节回归及5项数值测试通过。maty已完成760个worker、3.17e9有界输运，正在全量核验打包；新成像必须等待全部输入和独立空间灵敏度验收通过。本轮只允许两组各Compton/JSCC、2000次，不恢复旧10000次任务或正则化。旧1657887仍取消，nema-5e9-3仍PAUSED；其2000次两路40帧和1168删除清单保留。
 
 
 物理源及所有后续成像限定于物体坐标 `(x/250)^2+(y/150)^2≤1，|z|≤60 mm`，长轴沿 x。探测器保留四层、10496 晶体，准直器前表面距源中心 270 mm，20 个固定半径旋转视角；Geant4 的源中心为世界坐标 `(0,-345,0) mm`。本系列不加入人体材料衰减。**500×300×120 mm 是目标物理范围，不代表该范围的有效成像能力已经通过验收。**
 
 本页是当前入口和文件索引。早期操作、作业号、故障及逐次结果详见 [HISTORY.md](HISTORY.md)；历史中较早的“待运行”等状态可能已过时。远端连接方法见 [docs/REMOTE_COMPUTE_ACCESS.md](../../docs/REMOTE_COMPUTE_ACCESS.md)，不在本实验目录保存密码或私钥。
 
-**2026-10-04当前推进：NEMA 5e9仅删除3σ严重失配事件的唯一对照 `response_mismatch_cut3_v1`。** 全20视角复现原484936个接受事件，新增删除1168（0.241%）、保留483768；两个独立1e9均匀源的匹配灵敏度核验已完成，平均闭合1.00095、空间CV0.293%。两张响应诊断图和逐事件原行号清单已形成。scxi717原作业**1657745**启动1分45秒后失败，未进入重建；已修复绝对Python路径、/tmp启动及全节点有界预检，仅排除确认故障节点wqd10nba06g6，当前登记见运行簿。修复作业**1657887**已通过50次回归（两路与基线相对L2均0）及10次试跑（GPU/主存峰值均低于47%），2000次中期图集已完成，继续正式两路10000次，仍按8节点×1GPU执行：关闭筛选50次回归→开启筛选10次完整数据试跑→Compton/JSCC各10000次、每50次保存，另写2000次只读检查点。新组不重跑Geant4、218或单光子，不启用Huber/TV/边界绑定/平滑。**2000次仅作中期观察：JSCC极端峰下降80.81%，Compton29.20%，整体背景噪声与泄漏基本未改善；10000次最终结论待定。** 入口见[失配删除对照报告](reports/NEMA_Body_H60/response_mismatch_cut3_v1/README.md)、[运行簿](reports/NEMA_Body_H60/response_mismatch_cut3_v1/PRODUCTION.md)；原排队1657719因补齐检查点在启动前取消，零运行，不是第二个对照组。
+**已停止的历史对照：NEMA 5e9 `response_mismatch_cut3_v1`。** 全20视角复现484936事件，删除1168、保留483768；独立匹配灵敏度平均闭合1.00095。修复作业1657887通过50次回归（两路相对L2均0）及10次资源试跑，交付2000次图集后按用户要求取消，未完成10000次。2000次JSCC极端峰下降80.81%、Compton29.20%，整体背景噪声和泄漏基本未改善。这是转入事件定义研究的依据，不能当作10000次结论。[历史对照报告](reports/NEMA_Body_H60/response_mismatch_cut3_v1/README.md)及[运行簿](reports/NEMA_Body_H60/response_mismatch_cut3_v1/PRODUCTION.md)继续保留；1657719、1657745、1657887均不恢复。
 
 2026-10-04按用户要求更新显示约定：NEMA轴向MIP默认**仅取中央72mm，即z∈[−36,+36]mm**。40层、3mm间距的网格上下各去掉8层（各24mm），保留24层，层中心−34.5～+34.5mm。重建物理FOV仍500×300×120mm，原始图像及定量指标不改。已完成的MLEM、边界绑定、弱Huber均已重画[中央72mm六路对照和逐迭代MIP](reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/README.md)。`iterations_z20.png`仍是z=+1.5mm单层轴位图，不是MIP。`plot_nema_iterations.py`、`compare_spike_ablation.py`和后续取回流程共用此默认策略；`plot_nema_mip.py --trim-layers 8`可只重画MIP而不重算指标。此前上下各去掉3层的[102mm历史显示](reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/README.md)及原始全120mm图均保留。
 

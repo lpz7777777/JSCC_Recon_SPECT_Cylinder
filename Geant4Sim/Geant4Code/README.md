@@ -4,6 +4,14 @@
 
 文档对应 2026-07-10 的代码状态。当前工程主要面向 225Ac 成像方法开发，但还不是完整的 225Ac 放射性衰变链模拟。
 
+## 理想首散射配对旁路（2026-10-04）
+
+生产工程新增`FirstScatterContract.hh`和`FirstScatterRecorder`。默认环境策略`JSCC_COMPTON_POLICY=legacy`且诊断关闭，仍执行原事件判定、晶体累计沉积及一次展宽。`paired`使用同次输运/同次展宽输出原`List.csv`和理想`ListIdeal.csv`；`ideal_first_scatter_v2`使主List采用新合同。详细策略、诊断身份/行号、能量闭合与有界数据预算见[独立实验](../../experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/README.md)。
+
+独立primary交互记录不依赖`elocal>0`，使用pre-step逻辑体与copy号识别晶体、post-step记录交互位置；当前产生的次级传播来源标记。新接受要求首次物理交互为C1内440 Compton，无中间散射/返回C1/外来污染，C1首转移闭合；C2可多步及部分吸收。原物理表、沉积及随机展宽不变，不杀轨迹、不关闭Doppler。诊断旁路只使用确定性抽样，不抽新随机数。
+
+16项独立C++分类器测试通过；三个独立种子1e4旁路开关实验的旧四输出字节一致。NEMA H60原1e9的200worker隔离重放后，原List、两个CntStat及PrimaryCount全部字节一致。此次理想真轨迹选择属于模拟研究，不能直接解释为实际设备可测的事件筛选。独立S及图像验收尚以运行簿实际状态为准。
+
 ## FOV120 实际运行补充（2026-09-25）
 
 FOV120 在 maty 独立目录编译并运行的正是本 `Geant4Code`，

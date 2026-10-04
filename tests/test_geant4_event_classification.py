@@ -51,7 +51,9 @@ class Geant4EventClassificationSourceTests(unittest.TestCase):
             self.body.index("run->AddCnt218(i);"),
             self.body.index("run->AddCnt440(i);"),
         )
-        list_classification = self.body.index("if (Flag2 != -1")
+        # Locate the executed compatibility predicate, not the historical
+        # commented-out alternative at the end of EndOfEventAction.
+        list_classification = self.body.index("const bool legacyAccepted = Flag2 != -1")
         add_list = self.body.index("run->AddList(")
         self.assertLess(cntstat_end, list_classification)
         self.assertLess(list_classification, add_list)

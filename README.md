@@ -2,6 +2,13 @@
 
 [English](#english) | [中文](#中文)
 
+> **2026-10-04 当前研究：** 椭圆FOV矩阵及NEMA 1e9/5e9基线已形成，局部尖峰与源外泄漏尚未解决。
+> 用户已停止Huber/TV及旧10000次删除组，现实施独立
+> [Compton首散射事件定义修正与NEMA 1e9配对验证](experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/README.md)。
+> 默认Geant4旧策略保持兼容，新理想首散射策略通过同次输运产生配对事件；NEMA重放字节回归通过。
+> 独立校准/空间验证是成像硬门槛，预计两组各Compton/JSCC 2000次，本轮不自动延长或追加模拟。
+> 下方2026-09-25/28段落是历史交接，最新状态以实验入口及运行簿为准。
+
 > **2026-09-25 22:45 实验交接：** 60 mm 基线已完成；FOV120 的三套矩阵、
 > 独立校准/灵敏度、1e9 Uniform/Contrast Geant4 模拟和两套 10000 次六路重建均已完成。
 > 1e10 Uniform/Contrast 模拟在 maty 运行，收集与高计数重建尚待完成。

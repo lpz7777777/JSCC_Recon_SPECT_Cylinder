@@ -34,6 +34,7 @@
 #include "G4UserEventAction.hh"
 #include "G4ThreeVector.hh"
 #include "globals.hh"
+#include <memory>
 
 /// Event action class
 ///
@@ -44,6 +45,8 @@
 /// - AddAbs(), AddGap()
 
 class DetectorConstruction;
+class FirstScatterRecorder;
+class G4Step;
 
 class EventAction : public G4UserEventAction
 {
@@ -53,6 +56,7 @@ class EventAction : public G4UserEventAction
 
     virtual void BeginOfEventAction(const G4Event* event);
     virtual void EndOfEventAction(const G4Event* event);
+    void RecordFirstScatterStep(const G4Step* step);
 
     void ChangeFlagCompt(){Flag_Compt=1;};
     void ChangeFlagW(){Flag_W=1;};
@@ -83,6 +87,7 @@ class EventAction : public G4UserEventAction
     
   private:
     DetectorConstruction* fDetector;
+    std::unique_ptr<FirstScatterRecorder> fFirstScatterRecorder;
     G4double* TempEnergy;
     G4double* TempEnergy_Real;
     G4double* TempEnergy_CrystalTotal;

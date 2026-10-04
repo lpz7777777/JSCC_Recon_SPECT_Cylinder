@@ -30,6 +30,7 @@
 
 #include <math.h>
 #include "EventAction.hh"
+#include "FirstScatterRecorder.hh"
 #include "DetectorConstruction.hh"
 
 #include "G4RunManager.hh"
@@ -82,6 +83,11 @@ EventAction::EventAction(DetectorConstruction* det):
   NumCompt = 0;
   NumPhot = 0;
   Flag_Compt = 0;
+  const char* policy = std::getenv("JSCC_COMPTON_POLICY");
+  const char* diagnostic = std::getenv("JSCC_COMPTON_DIAGNOSTICS");
+  if ((policy && std::string(policy) != "legacy") ||
+      (diagnostic && std::string(diagnostic) == "1"))
+    fFirstScatterRecorder.reset(new FirstScatterRecorder(det));
   //Position1 = G4ThreeVector(0,0,0);
   //Position2 = G4ThreeVector(0,0,0);
 }
@@ -95,7 +101,7 @@ EventAction::~EventAction()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void EventAction::BeginOfEventAction(const G4Event*)
+void EventAction::BeginOfEventAction(const G4Event* event)
 {
   // initialisation per event
   for(int i=0; i<nScinNum; i++)
@@ -106,11 +112,17 @@ void EventAction::BeginOfEventAction(const G4Event*)
   NumCompt = 0;
   NumPhot = 0;
   Flag_Compt = 0;
+  if (fFirstScatterRecorder) fFirstScatterRecorder->Begin(event);
   //Position1 = G4ThreeVector(0,0,0);
   //Position2 = G4ThreeVector(0,0,0);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::RecordFirstScatterStep(const G4Step* step)
+{
+  if (fFirstScatterRecorder) fFirstScatterRecorder->Step(step);
+}
 
 void EventAction::EndOfEventAction(const G4Event* /*event*/)
 {
@@ -185,7 +197,8 @@ void EventAction::EndOfEventAction(const G4Event* /*event*/)
     }
   }
 
-  if (Flag2 != -1 && Flag3 == -1 && FirstScinCount==1 && NumCompt==1 && NumPhot==0 && Flag_Compt==1)
+  const bool legacyAccepted = Flag2 != -1 && Flag3 == -1 && FirstScinCount==1 && NumCompt==1 && NumPhot==0 && Flag_Compt==1;
+  if (legacyAccepted && (!fFirstScatterRecorder || !fFirstScatterRecorder->IdealOnly()))
   {
     if(Flag1 == Scin_CopyNum)
     {
@@ -195,6 +208,17 @@ void EventAction::EndOfEventAction(const G4Event* /*event*/)
     {
       run->AddList(TempEnergy[Flag2], TempEnergy[Flag1], Flag2, Flag1, 1);
     }
+  }
+
+  if (fFirstScatterRecorder)
+  {
+    const int legacyC2 = Flag1 == Scin_CopyNum ? Flag2 : Flag1;
+    const auto idealDecision = fFirstScatterRecorder->End(TempEnergy, nScinNum,
+        legacyAccepted, legacyAccepted ? Scin_CopyNum : -1,
+        legacyAccepted ? legacyC2 : -1);
+    if (fFirstScatterRecorder->IdealOnly() && idealDecision.accepted)
+      run->AddList(TempEnergy[idealDecision.c1], TempEnergy[idealDecision.c2],
+                   idealDecision.c1, idealDecision.c2, 1);
   }
 
   /*

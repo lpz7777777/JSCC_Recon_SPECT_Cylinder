@@ -76,6 +76,9 @@ class DetectorConstruction : public G4VUserDetectorConstruction
 		int GetnyCompton()const{return ny_Compton;}
 		int GetlayersCompton()const{return nlayer_Compton;}
 		int GetScinNum()const{return nScinNum;}
+		bool IsScintillator(const G4LogicalVolume* volume) const {
+			return volume && (volume == scinLV || volume == scinLV2);
+		}
 		int GetScinInfo(int numx,int numy){return putmethod[numx][numy];}
 		G4double GetSize() const {return ScinSize;}
 		G4double  GetLength() const {return ScinHeight;}

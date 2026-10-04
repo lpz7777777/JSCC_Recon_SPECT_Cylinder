@@ -164,23 +164,41 @@ def main():
     if args.baseline_regression and (args.iterations!=50 or args.save_step!=50 or
         args.channels!="compton-jscc" or args.response_filter_config is None):
         raise ValueError("Baseline regression requires response study, two channels and 50 iterations")
-    if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only or args.study_short or args.baseline_regression):
-        raise ValueError("Formal experiment requires 10000 iterations")
     response_study=None
+    first_scatter_study=False
     max_min_arm=None
     if args.response_filter_config is not None:
         response_study=json.loads(args.response_filter_config.read_text())
-        if (response_study["study"]!="response_mismatch_cut3_v1" or
+        first_scatter_study=response_study["study"]=="compton_first_scatter_v2"
+        if (response_study["study"] not in ("response_mismatch_cut3_v1","compton_first_scatter_v2") or
             response_study["max_min_standardized_arm"]!=3.0 or
             response_study["quality_domain"]!="full_circle_132040" or
             args.channels!="compton-jscc" or args.study_json is not None or
-            args.dataset!="NEMA_Body_H60" or args.level!="5e9"):
+            args.dataset!="NEMA_Body_H60" or args.level!=("1e9" if first_scatter_study else "5e9")):
             raise ValueError("Response mismatch study configuration mismatch")
+        if first_scatter_study and (response_study["iterations"]!=2000 or
+            response_study["save_step"]!=50 or
+            response_study["group"] not in ("legacy","ideal_first_scatter_v2") or
+            not response_study["validation_gate_passed"]):
+            raise ValueError("First-scatter paired study has not passed its frozen validation gate")
+        if first_scatter_study:
+            if not (args.baseline_regression or args.pilot_only or args.dry_run) and (
+                args.iterations!=2000 or args.save_step!=50):
+                raise ValueError("First-scatter formal imaging is bounded to 2000 iterations, save every 50")
+            gate_path=args.response_filter_config.parent/"validation_gate.json"
+            if (digest(gate_path)!=response_study["validation_gate_sha256"] or
+                json.loads(gate_path.read_text())["status"]!="PASSED"):
+                raise ValueError("First-scatter independent validation evidence differs or is on HOLD")
+            if digest(ROOT/"compton_event_response.py")!=response_study["kernel_sha256"]:
+                raise ValueError("First-scatter study must use the frozen, unchanged response kernel")
         max_min_arm=None if args.baseline_regression else 3.0
         if max_min_arm is not None and args.compton_sensitivity is None:
             raise ValueError("Filtered events require an explicit matched sensitivity")
     elif args.compton_sensitivity is not None or args.baseline_regression:
         raise ValueError("Sensitivity override requires a frozen response study")
+    if args.iterations!=cfg["iterations"] and not (args.dry_run or args.pilot_only or args.study_short or
+        args.baseline_regression or (first_scatter_study and args.iterations==2000 and args.save_step==50)):
+        raise ValueError("Formal experiment requires 10000 iterations, or the frozen 2000-iteration first-scatter study")
     if args.event_chunks<=0 or args.event_block<=0:
         raise ValueError("Invalid event chunk sizes")
     study=None
@@ -393,7 +411,8 @@ def main():
     if study is not None and int(accepted_tensor.item())!=study["baseline_accepted_compton_events"]:
         raise ValueError("Ablation accepted events differ from frozen baseline")
     if response_study is not None:
-        expected_events=(484936 if args.baseline_regression else response_study["kept_compton_events"])
+        expected_events=(response_study.get("baseline_accepted_compton_events",484936) if args.baseline_regression
+                         else response_study["kept_compton_events"])
         if int(accepted_tensor.item())!=expected_events:
             raise ValueError("Response-filter accepted event closure failed")
     if rank==0: print(f"ELLIPSE_STAGE compton_events_ready accepted={int(accepted_tensor.item())}",flush=True)
@@ -407,6 +426,22 @@ def main():
     checkpoint_callback=None
     if response_study is not None and not (args.baseline_regression or args.pilot_only) and rank==0:
         def checkpoint_callback(iteration, history_d, history_j):
+            if first_scatter_study:
+                folder=args.output/f"checkpoint_{iteration:06d}"
+                folder.mkdir(exist_ok=False)
+                outputs={}
+                for channel,history in (("440_ComptonOnly",history_d),("440_SinglePlusCompton",history_j)):
+                    frame=history[-1]
+                    if not torch.isfinite(frame).all() or bool((frame<0).any()):
+                        raise ValueError("Nonfinite or negative persistent checkpoint")
+                    collect_response(folder,channel,frame,None,geometry,0)
+                    outputs[channel]={kind:digest(folder/f"Image_{channel}_{kind}.float32")
+                                      for kind in ("active","full")}
+                (folder/"checkpoint_manifest.json").write_text(json.dumps({
+                    "study":response_study["study"],"group":response_study["group"],
+                    "iteration":iteration,"outputs":outputs,
+                    "config_sha256":digest(args.response_filter_config)},indent=2)+"\n")
+                return
             if iteration!=2000:
                 return
             folder=args.output/"checkpoint_2000"
@@ -471,8 +506,10 @@ def main():
               "config_sha256":digest(args.response_filter_config),
               "scan_manifest_sha256":response_study["scan_manifest_sha256"],
               "removed_compton_events":0 if args.baseline_regression else response_study["removed_compton_events"],
-              "baseline_accepted_compton_events":484936,
-              "baseline_result":"NEMA_Body_H60_5e9_1644876"},
+              "baseline_accepted_compton_events":response_study.get("baseline_accepted_compton_events",484936),
+              "baseline_result":response_study.get("baseline_result","NEMA_Body_H60_5e9_1644876"),
+              "event_policy":response_study.get("group","legacy"),
+              "validation_gate_sha256":response_study.get("validation_gate_sha256")},
           "code_sha256":{name:digest(HERE/name if (HERE/name).is_file() else ROOT/name) for name in
                          ("run_reconstruction.py","torch_active_operator.py",
                           "compton_sparse_ops.py","process_list_plane_sparse.py","compton_event_response.py")},

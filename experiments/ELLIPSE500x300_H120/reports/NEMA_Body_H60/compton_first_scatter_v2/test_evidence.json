@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-04T05:20:10.660385+00:00",
+  "cpp_contract": {
+    "passed": true,
+    "tests": 16,
+    "compiler": "GCC 12.2.0, C++17, Wall Wextra Werror",
+    "job": 15562315,
+    "source_sha256": "ef5ee338c18d0a8e3a2c260def3c01112afec87e7cc9cf5a21435dfcb797b6e4"
+  },
+  "numeric_contract": {
+    "passed": true,
+    "tests": 5,
+    "host": "65114",
+    "source_sha256": "1bd01522c6fb797207844c7422b96a4e08a615286ab28924ff68da15beb8db3e",
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/releases/bf4901bc033da72d"
+  },
+  "result_rejection_gates": {
+    "passed": true,
+    "tests": 5,
+    "source_sha256": "f8c998f7270110d29dd4270868ff35c2c30e5fda0742dbee5c7f83ffccb0e728"
+  },
+  "existing_geant4_interface_tests": {
+    "passed": true,
+    "tests": 11,
+    "source_sha256": "025714285201fe39f2a1bc239d6d1ba9b3ca37f6d7c7efde6b2b199e1ab38075"
+  },
+  "legacy_same_rng_replay": "three 1e4 toggles and all 200 NEMA production workers bitwise identical"
+}

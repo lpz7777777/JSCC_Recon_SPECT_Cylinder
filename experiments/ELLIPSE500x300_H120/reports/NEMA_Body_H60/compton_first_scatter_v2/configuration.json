@@ -1,0 +1,37 @@
+{
+  "study": "compton_first_scatter_v2",
+  "iterations": 2000,
+  "save_step": 50,
+  "groups": [
+    "legacy",
+    "ideal_first_scatter_v2"
+  ],
+  "max_min_standardized_arm": 3,
+  "quality_points": 132040,
+  "active_columns": 82040,
+  "first_energy_tolerance_MeV": [
+    1e-06,
+    1e-05
+  ],
+  "channels": [
+    "440_ComptonOnly",
+    "440_SinglePlusCompton"
+  ],
+  "mip_height_mm": 72,
+  "transport_budget": {
+    "NEMA": 1000000000,
+    "circle_train": 1000000000,
+    "circle_validation": 1000000000,
+    "ellipse_validation": 100000000,
+    "point_0": 10000000,
+    "point_1": 10000000,
+    "point_2": 10000000,
+    "point_3": 10000000,
+    "point_4": 10000000,
+    "point_5": 10000000,
+    "point_6": 10000000
+  },
+  "total_photons": 3170000000,
+  "old_jobs_remain_stopped": true,
+  "automatic_extensions": false
+}

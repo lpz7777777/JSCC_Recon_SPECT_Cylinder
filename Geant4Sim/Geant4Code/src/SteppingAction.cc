@@ -72,6 +72,9 @@ SteppingAction::~SteppingAction()
 
 void SteppingAction::UserSteppingAction(const G4Step* aStep)
 {
+  // Independent topology recorder includes zero-local-deposit interactions.
+  // Its disabled branch leaves the legacy deposit/counter path unchanged.
+  fEventAction->RecordFirstScatterStep(aStep);
   // A step's local energy deposit belongs to its pre-step volume. At a
   // geometry boundary the post-step touchable can already name the next
   // volume, which would assign the deposit to the wrong detector bin.

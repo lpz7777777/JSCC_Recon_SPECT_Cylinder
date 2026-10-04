@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "workers": 200,
+  "views": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "primary_counts": [
+    293821153,
+    706178847,
+    0
+  ],
+  "raw_legacy": 1093494,
+  "raw_ideal": 687890,
+  "raw_common": 685297,
+  "raw_only_legacy": 408197,
+  "raw_only_ideal": 2593,
+  "all_legacy_outputs_bitwise_identical": true
+}
