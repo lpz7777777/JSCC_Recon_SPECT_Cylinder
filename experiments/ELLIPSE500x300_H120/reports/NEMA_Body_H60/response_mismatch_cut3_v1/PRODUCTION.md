@@ -1,5 +1,11 @@
 # response_mismatch_cut3_v1 运行簿
 
+## 2026-10-04 09:35：正式迭代正常推进至2300次
+
+1657887与生产step .3均为RUNNING，两路共同更新到2300/10000；没有正式verification或最终数组，继续等待。8个唯一节点/rank各有一个实际Python重建worker，实时GPU利用率56–100%、用量2653–2673MiB，进程峰值RSS/每节点实际60000MiB授予主存最高45.1469%，满足余量要求。这是运行快照，最终仍需run_manifest与Slurm记账验收。详见[job_status.json](job_status.json)。2000次交付登记已存在，本轮不重复生成或通知中期图集。
+
+只读资源探针step .13误将rank0的timeout/srun启动器算作worker，因此该探针退出；确认实际Python可执行程序后step .15在8节点全部成功。生产step .3持续运行、没有重提或取消。状态中的CANCELLED探针不能作为重建失败证据。记录本地UTC核查时间及远端UTC（约相差159秒），不为无时间戳迭代日志附上旧日期。
+
 ## 2026-10-04 09:07：2000次中期快照完成并取回
 
 1657887仍正常运行，阈值与模型冻结。checkpoint_2000的两路各40帧已取回，6个数组及快照manifest逐文件SHA核对通过；另外核验完整/活动形状、有限非负值、椭圆外零、末帧完全一致、483768接受数及输入/几何/筛选/Sensi哈希。见[快照核验](interim_snapshot_validation_1657887.json)、[传输证据](interim_1657887_verification.json)。这不是10000次正式验收，不对中期快照应用formal模式。
@@ -18,7 +24,7 @@
 
 回归GPU预留/物理显存最高44.2315%、进程峰值RSS/实际授予主存最高45.2177%；试跑分别46.7144%、45.1289%，均满足至少20%余量。实际主存授予每节点60000MiB（62914560000bytes），不是用节点物理总内存代替。Slurm回归步骤MaxRSS27858332K、7分55秒；试跑步骤MaxRSS22572412K、2分37秒。包含响应准备与核验，不能直接将阶段总时间除以迭代数作为正式迭代速度。
 
-链内正式Compton/JSCC已启动，仍从全1初值开始，复用同一483768事件响应；06:06快照保存至50/10000，随后日志确认推进至100/10000。实时8节点GPU利用率53–100%，各卡瞬时使用2653–2673MiB；这是运行快照，不代替完整运行峰值验收。后续在2000次只读快照就绪后按共同尺度形成中期图集，不因早期迭代改阈值或提前判定改善。当前没有2000快照或正式verification，不通知科学结果。
+链内正式Compton/JSCC已启动，仍从全1初值开始，复用同一483768事件响应；06:06快照保存至50/10000，随后日志确认推进至100/10000。实时8节点GPU利用率53–100%，各卡瞬时使用2653–2673MiB；这是运行快照，不代替完整运行峰值验收。后续在2000次只读快照就绪后按共同尺度形成中期图集，不因早期迭代改阈值或提前判定改善。这是06:06时的历史快照；2000次检查点随后已交付，正式verification仍待完成。
 
 
 ## 2026-10-04 05:04–05:12：启动故障定位及修复
@@ -55,24 +61,24 @@ scxi717所有执行及输出在本工程 `experiments/ELLIPSE500x300_H120` 下�
 
 ```text
 /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/
-  code_releases/response_mismatch_cut3_v1_749de269c15ebe99/
+  code_releases/response_mismatch_cut3_v1_a527ffaad51223a9/
   generated/response_mismatch_cut3_v1/scan/Sensi_d
-  generated/response_mismatch_cut3_v1/regression_1657745/
-  generated/response_mismatch_cut3_v1/pilot_1657745/
-  generated/response_mismatch_cut3_v1/formal_1657745/
+  generated/response_mismatch_cut3_v1/regression_1657887/
+  generated/response_mismatch_cut3_v1/pilot_1657887/
+  generated/response_mismatch_cut3_v1/formal_1657887/
     checkpoint_2000/
-  logs/response_cut3.1657745.out
-  logs/response_cut3.1657745.err
+  logs/response_cut3.1657887.out
+  logs/response_cut3.1657887.err
 ```
 
 每阶段的verification.json是真实验收依据；不能仅凭COMPLETED或输出目录存在判断成功。formal的checkpoint_2000只是中期观察，禁止用它证明10000次已完成。资源来自run_manifest及Slurm实际分配，另保存allocation/accounting文本。
 
-## 尚待执行
+## 验收进度
 
-- 50次关闭筛选，484936个事件、两路与基线第50帧相对L2≤1e−5。
-- 10次完整数据，483768个事件，逐视角/rank闭合、有限非负值、GPU与主存至少20%余量。
+- 已通过50次关闭筛选，484936个事件、两路与基线第50帧相对L2均为0。
+- 已通过10次完整数据，483768个事件，逐视角/rank闭合、有限非负值、GPU与主存至少20%余量。
 - 唯一正式组10000次、每50次保存，两路各200帧及末帧一致。
-- 第2000次只读图像观察，以及正式全部曲线、固定共同尺度图集、完整120mm尖峰/积分/泄漏与球CRC代价。
+- 第2000次只读图像观察已交付；正式全部曲线、固定共同尺度图集、完整120mm尖峰/积分/泄漏与球CRC代价待完成。
 - 正式报告、取回哈希和安全Git更新；完成后结束本轮验证，无阈值扫描或新增光子量。
 
 若作业失败：先读取日志和实际分配，定位失配/资源/通信原因；旧作业确认退出后才使用新的冻结发布和后续修复编号。不得将已失败目录原地改成“通过”。
