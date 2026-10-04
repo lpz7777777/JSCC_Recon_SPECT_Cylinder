@@ -1,0 +1,16 @@
+{
+  "job": 1660254,
+  "nodes": 4,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/compton_first_scatter_v2_21a134ae812fdf32",
+  "submitted_utc": "2026-10-04T06:31:21.370493+00:00",
+  "nccl_interface": "bond0",
+  "walltime_hours": 6,
+  "phases": [
+    "legacy regression 50",
+    "legacy full-data pilot 10",
+    "ideal full-data pilot 10",
+    "legacy 2000",
+    "ideal 2000"
+  ]
+}

@@ -7,7 +7,7 @@
 > [Compton首散射事件定义修正与NEMA 1e9配对验证](experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/README.md)。
 > 默认Geant4旧策略保持兼容，新理想首散射策略通过同次输运产生配对事件；NEMA重放字节回归通过。
 > 3.17e9输运、200个NEMA旧输出字节复现和两组独立灵敏度验收已通过；[阶段诊断报告](experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/PRELIMINARY_REPORT.md)已形成。
-> 配对作业（4节点×1GPU）等待账号空位，24h有界单次提交器已启动，链内须先过50次回归和两组10次试跑，再各做Compton/JSCC 2000次；尚无配对图像改善结论。
+> 配对作业1660254（4节点×1GPU）运行中，A两路2000次已验收，B继续2000次，50次基线回归及两组10次试跑通过；完整配对图集仍待完成；尚无配对图像改善结论。
 > 下方2026-09-25/28段落是历史交接，最新状态以实验入口及运行簿为准。
 
 > **2026-09-25 22:45 实验交接：** 60 mm 基线已完成；FOV120 的三套矩阵、

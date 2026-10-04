@@ -1,9 +1,8 @@
 {
   "pid": 21884,
-  "status": "waiting_for_account_slot",
-  "started_utc": "2026-10-04T06:25:09.098551+00:00",
+  "status": "submitted",
+  "checked_utc": "2026-10-04T06:31:21.370493+00:00",
   "deadline_hours": 24,
-  "poll_seconds": 60,
   "one_submission_only": true,
   "other_project_jobs_untouched": true,
   "old_automations_resumed": false

@@ -1,0 +1,67 @@
+{
+  "checked_utc": "2026-10-04T08:54:36.239000+00:00",
+  "job": 1660254,
+  "status": "RUNNING",
+  "verified_stages": [
+    {
+      "phase": "regression_legacy",
+      "passed": true,
+      "events": 97299,
+      "iterations": 50,
+      "max_gpu_reserved_fraction": 0.35447216930447917,
+      "max_host_fraction": 0.24870670572916667,
+      "regression_relative_l2": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "phase": "pilot_legacy",
+      "passed": true,
+      "events": 97078,
+      "iterations": 10,
+      "max_gpu_reserved_fraction": 0.3627775153519131,
+      "max_host_fraction": 0.24871692708333334,
+      "regression_relative_l2": null
+    },
+    {
+      "phase": "pilot_ideal",
+      "passed": true,
+      "events": 91231,
+      "iterations": 10,
+      "max_gpu_reserved_fraction": 0.3577943077234527,
+      "max_host_fraction": 0.24143111979166668,
+      "regression_relative_l2": null
+    },
+    {
+      "phase": "formal_legacy",
+      "passed": true,
+      "events": 97078,
+      "iterations": 2000,
+      "max_gpu_reserved_fraction": 0.3627775153519131,
+      "max_host_fraction": 0.24890696614583332,
+      "regression_relative_l2": null
+    }
+  ],
+  "paired_images_not_yet_complete": true,
+  "ideal_latest_observed_iteration": 700,
+  "ideal_target_iteration": 2000,
+  "observed_seconds_per_50_iterations": 120,
+  "estimated_reconstruction_remaining_minutes": [
+    50,
+    55
+  ],
+  "instantaneous_gpu_utilization_percent_by_rank": {
+    "0": 75,
+    "1": 44,
+    "2": 48,
+    "3": 89
+  },
+  "remaining_image_comparison_not_yet_done": true,
+  "verification_files_sha256": {
+    "regression_legacy_verification_1660254.json": "caaaa6fed7013ca7ba67421d4142816ef24e033bde048f6b22766a4bf01e985b",
+    "pilot_legacy_verification_1660254.json": "d215518e4317e86b3a0c8c4d50919566d1ece544a5eb7cb3a89322e87f37934d",
+    "pilot_ideal_verification_1660254.json": "92fa3e6c3ded6a556698b14e004948e26aa84101213d5fefeea471f6cd220758",
+    "formal_legacy_verification_1660254.json": "19f455977718cf53a2b0780519673bdcd2d6225a09e2bce5686eac93fe2b5c0b"
+  }
+}

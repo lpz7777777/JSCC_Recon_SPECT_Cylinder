@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "study": "compton_first_scatter_v2",
+  "group": "legacy",
+  "mode": "regression",
+  "outputs": [
+    {
+      "channel": "440_ComptonOnly",
+      "frames": 1,
+      "sha256": {
+        "active": "271220be9a37f81cc68416589e9667b98373e4d393e01c9a7372c93246e5c47d",
+        "full": "7d57c96c8e59929edb6a9b1cc38a21246418f3b8f9e4b40ca479993c8b13395d",
+        "history": "271220be9a37f81cc68416589e9667b98373e4d393e01c9a7372c93246e5c47d"
+      },
+      "baseline_frame50_relative_l2": 0.0
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "frames": 1,
+      "sha256": {
+        "active": "1533a6dbfb3be664814f02a00eece6cdeb87b286f3fc28e0928e62c7b8efed15",
+        "full": "2444325f581d94bd534d230825655940ecf469f01b784ebe417689a4a9f62f2b",
+        "history": "1533a6dbfb3be664814f02a00eece6cdeb87b286f3fc28e0928e62c7b8efed15"
+      },
+      "baseline_frame50_relative_l2": 0.0
+    }
+  ],
+  "resources": [
+    {
+      "rank": 0,
+      "device": "cuda:0",
+      "accepted_events": 24268,
+      "event_bytes_cpu": 7963786880,
+      "host_peak_rss_bytes": 15636045824,
+      "node": "wqd10nba06g3",
+      "host_allocated_bytes": 62914560000,
+      "elapsed_seconds": 415.642832595855,
+      "peak_allocated_bytes": 8785476096,
+      "peak_reserved_bytes": 8824815616,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 1,
+      "device": "cuda:0",
+      "accepted_events": 24354,
+      "event_bytes_cpu": 7992008640,
+      "host_peak_rss_bytes": 15647272960,
+      "node": "wqd10nba06g4",
+      "host_allocated_bytes": 62914560000,
+      "elapsed_seconds": 413.07348223403096,
+      "peak_allocated_bytes": 8749036032,
+      "peak_reserved_bytes": 8824815616,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 2,
+      "device": "cuda:0",
+      "accepted_events": 24314,
+      "event_bytes_cpu": 7978882240,
+      "host_peak_rss_bytes": 15624142848,
+      "node": "wqd10nba07g6",
+      "host_allocated_bytes": 62914560000,
+      "elapsed_seconds": 413.2917058803141,
+      "peak_allocated_bytes": 8857839616,
+      "peak_reserved_bytes": 8950644736,
+      "total_device_bytes": 25250627584
+    },
+    {
+      "rank": 3,
+      "device": "cuda:0",
+      "accepted_events": 24363,
+      "event_bytes_cpu": 7994962080,
+      "host_peak_rss_bytes": 13421297664,
+      "node": "wqd10nba07g7",
+      "host_allocated_bytes": 62914560000,
+      "elapsed_seconds": 414.0496733337641,
+      "peak_allocated_bytes": 8798153216,
+      "peak_reserved_bytes": 8845787136,
+      "total_device_bytes": 25250627584
+    }
+  ],
+  "accepted_events": 97299,
+  "iterations": 50,
+  "save_step": 50,
+  "config_sha256": "097183d3a55316960439e83530328ca47b85e944e99e2564db8dd8f6b29de3df",
+  "run_manifest_sha256": "2be30b2da51d95a489c8a9c7f714d182968aade7ee6f748dd56ecf75140a8e40",
+  "allocation_sha256": "f0bcca4ee64188e24dcf855692332a981d92eea00956a116298736e4b7a339d5"
+}
