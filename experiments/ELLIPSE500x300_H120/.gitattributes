@@ -9,6 +9,8 @@ prepare_compton_overlap_measure.py -text whitespace=cr-at-eol
 verify_compton_legacy_compatibility.py -text whitespace=cr-at-eol
 compton_response_geometry_v3.json -text whitespace=cr-at-eol
 reports/NEMA_Body_H60/compton_response_geometry_v3/** -text whitespace=cr-at-eol
+# Verbatim failure evidence: preserve original bytes, including traceback spacing.
+reports/NEMA_Body_H60/compton_response_geometry_v3/guard_field_failure_*.txt -text whitespace=-blank-at-eol,cr-at-eol
 audit_compton_response.py -text
 prepare_response_audit_truth.py -text
 plot_response_audit.py -text
