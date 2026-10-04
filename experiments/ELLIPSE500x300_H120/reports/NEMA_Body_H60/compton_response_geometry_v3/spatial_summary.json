@@ -1,0 +1,122 @@
+{
+  "status": "PASSED",
+  "gates": [
+    {
+      "domain": "interior",
+      "axial_bin": 0,
+      "rotation_averaged_accepted_mass": 39107.599999996746,
+      "expected_emissions": 273333992.4204616,
+      "observed": 0.00014307624036690865,
+      "predicted": 0.000140584963829553,
+      "relative_error": -0.017412230926441397,
+      "relative_standard_error": 0.005110248362673117,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "interior",
+      "axial_bin": 1,
+      "rotation_averaged_accepted_mass": 19427.70000000038,
+      "expected_emissions": 136666996.2102497,
+      "observed": 0.00014215355966492918,
+      "predicted": 0.0001390928243363266,
+      "relative_error": -0.021531190184875038,
+      "relative_standard_error": 0.0065354995991424945,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "interior",
+      "axial_bin": 2,
+      "rotation_averaged_accepted_mass": 19035.600000000475,
+      "expected_emissions": 136666996.2102497,
+      "observed": 0.00013928454219273205,
+      "predicted": 0.0001375511316943904,
+      "relative_error": -0.012445103175505956,
+      "relative_standard_error": 0.006923749263455101,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "partial_boundary",
+      "axial_bin": 0,
+      "rotation_averaged_accepted_mass": 4701.699999998875,
+      "expected_emissions": 27304003.954523068,
+      "observed": 0.00017219818777604632,
+      "predicted": 0.00017240512204394858,
+      "relative_error": 0.0012017215196908904,
+      "relative_standard_error": 0.006023794592108737,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "partial_boundary",
+      "axial_bin": 1,
+      "rotation_averaged_accepted_mass": 2316.199999999477,
+      "expected_emissions": 13652001.977261528,
+      "observed": 0.00016966009848645556,
+      "predicted": 0.0001694429789397594,
+      "relative_error": -0.0012797325277604799,
+      "relative_standard_error": 0.008589110598938693,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "partial_boundary",
+      "axial_bin": 2,
+      "rotation_averaged_accepted_mass": 2250.4999999995475,
+      "expected_emissions": 13652001.977261528,
+      "observed": 0.00016484761749580246,
+      "predicted": 0.00016682286874482045,
+      "relative_error": 0.011982285695262052,
+      "relative_standard_error": 0.00819131601801848,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "outside_ellipse",
+      "axial_bin": 0,
+      "rotation_averaged_accepted_mass": 37338.700000000055,
+      "expected_emissions": 199362003.6249856,
+      "observed": 0.00018729095475102098,
+      "predicted": 0.0001892348800051406,
+      "relative_error": 0.010379173178458156,
+      "relative_standard_error": 0.005573143987378396,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "outside_ellipse",
+      "axial_bin": 1,
+      "rotation_averaged_accepted_mass": 18201.099999999664,
+      "expected_emissions": 99681001.81249556,
+      "observed": 0.00018259346985934944,
+      "predicted": 0.00018546430089113716,
+      "relative_error": 0.015722528489102494,
+      "relative_standard_error": 0.007217197937175253,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "outside_ellipse",
+      "axial_bin": 2,
+      "rotation_averaged_accepted_mass": 17543.899999999692,
+      "expected_emissions": 99681001.81249556,
+      "observed": 0.00017600043820787992,
+      "predicted": 0.00018230844022506702,
+      "relative_error": 0.03584083131507043,
+      "relative_standard_error": 0.006892827357098629,
+      "statistically_adequate": true,
+      "passed": true
+    }
+  ],
+  "sensitivity_sha256": "31438caea393983e1c0e4502455f12e84743bf0ae0433a17be516966c6114e09",
+  "R1_gate_sha256": "fca2725b72b16da1f02555558e6d8f630e446c24b61db4b2ecc7f02958abb54b",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "source_normalization": "actual primary totals times analytical uniform bin volume fraction",
+  "training_uncertainty": "200 independent workers; response and true-source rotations combined within each worker",
+  "validation_uncertainty": "200 independent workers; correlated source labels across 20 views are not separate samples",
+  "true_source_rotation_average": true,
+  "new_transport_photons": 0,
+  "evidence_sha256": "73a316f6e39b2ebde5f37ba392fce3c3a4e488c1fe17ea9a8a11f4437818cd94"
+}

@@ -1,0 +1,248 @@
+{
+  "status": "PASSED",
+  "scans": {
+    "NEMA_ideal": {
+      "uncut": 91385,
+      "kept": 91225,
+      "primary_counts": [
+        293821153,
+        706178847,
+        0
+      ]
+    },
+    "circle_train_ideal": {
+      "uncut": 160265,
+      "kept": 159919,
+      "primary_counts": [
+        0,
+        1000000000,
+        0
+      ]
+    },
+    "circle_validation_ideal": {
+      "uncut": 160292,
+      "kept": 159923,
+      "primary_counts": [
+        0,
+        1000000000,
+        0
+      ]
+    },
+    "ellipse_validation_ideal": {
+      "uncut": 14309,
+      "kept": 14283,
+      "primary_counts": [
+        0,
+        100000000,
+        0
+      ]
+    },
+    "point_0_ideal": {
+      "uncut": 1193,
+      "kept": 1190,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    },
+    "point_1_ideal": {
+      "uncut": 1955,
+      "kept": 1952,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    },
+    "point_2_ideal": {
+      "uncut": 1968,
+      "kept": 1963,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    },
+    "point_3_ideal": {
+      "uncut": 1409,
+      "kept": 1406,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    },
+    "point_4_ideal": {
+      "uncut": 1366,
+      "kept": 1366,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    },
+    "point_5_ideal": {
+      "uncut": 1192,
+      "kept": 1189,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    },
+    "point_6_ideal": {
+      "uncut": 1186,
+      "kept": 1186,
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ]
+    }
+  },
+  "gates": [
+    {
+      "group": "ideal",
+      "test": "independent_circle_closure",
+      "value": 1.0000689194789902,
+      "limit": 0.02,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "independent_ellipse_efficiency",
+      "observed": 0.00014283,
+      "predicted": 0.00014087764433364435,
+      "relative_error": -0.01366908679097989,
+      "limit": 0.05,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 0,
+      "emitted": 124990099,
+      "accepted": 15853,
+      "observed": 0.00012683404627113705,
+      "predicted": 0.0001244484069357526,
+      "relative_error": -0.018809140018166692,
+      "relative_standard_error": 0.008458468768280845,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 1,
+      "emitted": 62508156,
+      "accepted": 8023,
+      "observed": 0.00012835125067519189,
+      "predicted": 0.00012367117035532878,
+      "relative_error": -0.036463067521691817,
+      "relative_standard_error": 0.011515579360956851,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 2,
+      "emitted": 62492815,
+      "accepted": 7796,
+      "observed": 0.00012475034129923575,
+      "predicted": 0.00012269206960229922,
+      "relative_error": -0.016499126779937257,
+      "relative_standard_error": 0.011692810275309272,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 3,
+      "emitted": 236230878,
+      "accepted": 37035,
+      "observed": 0.00015677459404777726,
+      "predicted": 0.00015606495328753892,
+      "relative_error": -0.004526503573800245,
+      "relative_standard_error": 0.005834676698643694,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 4,
+      "emitted": 118125505,
+      "accepted": 18233,
+      "observed": 0.00015435277927489073,
+      "predicted": 0.0001539059930562138,
+      "relative_error": -0.0028945783857977636,
+      "relative_standard_error": 0.007861707745042903,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 5,
+      "emitted": 118124428,
+      "accepted": 18019,
+      "observed": 0.00015254253760280643,
+      "predicted": 0.00015181931591972327,
+      "relative_error": -0.0047411148027857175,
+      "relative_standard_error": 0.00792732902057646,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 6,
+      "emitted": 138764216,
+      "accepted": 28260,
+      "observed": 0.00020365480968090506,
+      "predicted": 0.00020844904514850528,
+      "relative_error": 0.02354098818050021,
+      "relative_standard_error": 0.0066330887263589,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 7,
+      "emitted": 69386382,
+      "accepted": 13689,
+      "observed": 0.00019728655112756852,
+      "predicted": 0.0002037158798277204,
+      "relative_error": 0.0325887834898313,
+      "relative_standard_error": 0.009058989269018826,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "group": "ideal",
+      "test": "direct_source_bin_efficiency",
+      "bin": 8,
+      "emitted": 69377521,
+      "accepted": 13015,
+      "observed": 0.0001875967865729881,
+      "predicted": 0.00019994885370349378,
+      "relative_error": 0.06584370316865673,
+      "relative_standard_error": 0.009398134506819585,
+      "statistically_adequate": true,
+      "passed": true
+    }
+  ],
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "archive_sha256": "a8842b81638f03c01103532567c48000af01bc46ccccec44cc30d0b0d9e4e82d",
+  "validation_gate_sha256": "fca2725b72b16da1f02555558e6d8f630e446c24b61db4b2ecc7f02958abb54b",
+  "sensitivity_sha256": "31438caea393983e1c0e4502455f12e84743bf0ae0433a17be516966c6114e09",
+  "sensitivity_provenance_sha256": "0ce23de5e85bbe720d4a8018569147b05863ba57de388f3580c473a0a3ddca78",
+  "added_events": 0,
+  "removed_events": 6,
+  "new_transport_photons": 0
+}

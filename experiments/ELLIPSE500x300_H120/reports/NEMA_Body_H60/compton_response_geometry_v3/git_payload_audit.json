@@ -1,0 +1,37 @@
+{
+  "checked_blobs": 1424,
+  "total_blob_bytes": 57418372,
+  "largest_blobs": [
+    [
+      1323422,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/iteration_metrics.csv"
+      ]
+    ],
+    [
+      1317665,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/iteration_metrics.csv"
+      ]
+    ],
+    [
+      1313253,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iteration_metrics.csv"
+      ]
+    ],
+    [
+      1312207,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/iteration_metrics.csv"
+      ]
+    ],
+    [
+      718667,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/event_manifests/paired_only_events.csv"
+      ]
+    ]
+  ],
+  "findings": []
+}

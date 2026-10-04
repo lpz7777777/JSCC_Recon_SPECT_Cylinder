@@ -1,0 +1,121 @@
+{
+  "status": "HOLD",
+  "gates": [
+    {
+      "domain": "interior",
+      "axial_bin": 0,
+      "accepted": 33192,
+      "expected_emissions": 273333992.4204616,
+      "observed": 0.00012143385352869587,
+      "predicted": 0.000140584963829553,
+      "relative_error": 0.15770816575734847,
+      "relative_standard_error": 0.006319194802938864,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "interior",
+      "axial_bin": 1,
+      "accepted": 16620,
+      "expected_emissions": 136666996.2102497,
+      "observed": 0.00012160946286133083,
+      "predicted": 0.0001390928243363266,
+      "relative_error": 0.14376645586315728,
+      "relative_standard_error": 0.008341554513255219,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "interior",
+      "axial_bin": 2,
+      "accepted": 16380,
+      "expected_emissions": 136666996.2102497,
+      "observed": 0.0001198533695348134,
+      "predicted": 0.0001375511316943904,
+      "relative_error": 0.14766178229504323,
+      "relative_standard_error": 0.008418440359396994,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "partial_boundary",
+      "axial_bin": 0,
+      "accepted": 3558,
+      "expected_emissions": 27304003.954523068,
+      "observed": 0.00013031055833152253,
+      "predicted": 0.00017240512204394858,
+      "relative_error": 0.32303264026644296,
+      "relative_standard_error": 0.017130880966071987,
+      "statistically_adequate": true,
+      "passed": false
+    },
+    {
+      "domain": "partial_boundary",
+      "axial_bin": 1,
+      "accepted": 1779,
+      "expected_emissions": 13652001.977261528,
+      "observed": 0.00013031055833152258,
+      "predicted": 0.0001694429789397594,
+      "relative_error": 0.3003012273854293,
+      "relative_standard_error": 0.023960117356367674,
+      "statistically_adequate": true,
+      "passed": false
+    },
+    {
+      "domain": "partial_boundary",
+      "axial_bin": 2,
+      "accepted": 1712,
+      "expected_emissions": 13652001.977261528,
+      "observed": 0.00012540285321167323,
+      "predicted": 0.00016682286874482045,
+      "relative_error": 0.3302956389934164,
+      "relative_standard_error": 0.024452573573005842,
+      "statistically_adequate": true,
+      "passed": false
+    },
+    {
+      "domain": "outside_ellipse",
+      "axial_bin": 0,
+      "accepted": 44398,
+      "expected_emissions": 199362003.6249856,
+      "observed": 0.00022270041027233986,
+      "predicted": 0.0001892348800051406,
+      "relative_error": -0.15027152498854546,
+      "relative_standard_error": 0.005286643290956941,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "outside_ellipse",
+      "axial_bin": 1,
+      "accepted": 21546,
+      "expected_emissions": 99681001.81249556,
+      "observed": 0.00021614951302886175,
+      "predicted": 0.00018546430089113716,
+      "relative_error": -0.14196290201045836,
+      "relative_standard_error": 0.007211906555597262,
+      "statistically_adequate": true,
+      "passed": true
+    },
+    {
+      "domain": "outside_ellipse",
+      "axial_bin": 2,
+      "accepted": 20738,
+      "expected_emissions": 99681001.81249556,
+      "observed": 0.00020804365549023182,
+      "predicted": 0.00018230844022506702,
+      "relative_error": -0.12370103382639874,
+      "relative_standard_error": 0.0074103195022047486,
+      "statistically_adequate": true,
+      "passed": true
+    }
+  ],
+  "sensitivity_sha256": "31438caea393983e1c0e4502455f12e84743bf0ae0433a17be516966c6114e09",
+  "R1_gate_sha256": "fca2725b72b16da1f02555558e6d8f630e446c24b61db4b2ecc7f02958abb54b",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "source_normalization": "actual primary totals times analytical uniform bin volume fraction",
+  "training_uncertainty": "200 independent workers; 20 rotations combined within each worker",
+  "new_transport_photons": 0,
+  "evidence_sha256": "c94b3624b9ae969fff7a542d32ba9d3b4242346f553fea866349cb17fe9cdbaa",
+  "superseded_reason": "Direct-source labels omitted the 20-view rotation average used by S; invalid spatial comparison, not scientific gate evidence"
+}

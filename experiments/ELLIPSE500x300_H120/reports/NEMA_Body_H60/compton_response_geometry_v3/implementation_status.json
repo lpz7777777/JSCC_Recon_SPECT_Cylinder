@@ -1,0 +1,36 @@
+{
+  "R1_original_gates": "PASSED",
+  "R1_additional_spatial_gates": "PASSED",
+  "R1_spatial_gate_rotation_correct": true,
+  "R2_boundary_gate": "HOLD",
+  "imaging_allowed": false,
+  "historical_events": 91231,
+  "stable_events": 91225,
+  "added_events": 0,
+  "removed_events": 6,
+  "sensitivity_ratio_full_percentiles": {
+    "min": 0.9194865822792053,
+    "p1": 0.9999698996543884,
+    "median": 1.0,
+    "p99": 1.000000238418579,
+    "max": 1.0000003576278687
+  },
+  "sensitivity_ratio_active_percentiles": {
+    "min": 0.9194865822792053,
+    "p1": 0.9999816417694092,
+    "median": 1.0000001192092896,
+    "p99": 1.000000238418579,
+    "max": 1.0000003576278687
+  },
+  "sensitivity_min_position_mm": [
+    41.482910304995784,
+    6.570247531689697,
+    13.5
+  ],
+  "artifacts_sha256": {
+    "geometry_and_boundary_diagnostics.png": "faa893ee3006c8a3af36990af939ddc604d88495eafe56bfbde9868e1990927e",
+    "newly_removed_events.csv": "fbb90e07d109342fdf7ad2c34a425df6a3f22e0bb8781e9fcb31b6ea35bd6bb0"
+  },
+  "new_transport_photons": 0,
+  "new_reconstruction_jobs": 0
+}

@@ -1,0 +1,13 @@
+test_cpu_cuda_agreement_near_collinearity (test_compton_geometry_v3.ProductionGeometryTests.test_cpu_cuda_agreement_near_collinearity) ... ok
+test_default_mode_is_explicit_legacy (test_compton_geometry_v3.ProductionGeometryTests.test_default_mode_is_explicit_legacy) ... ok
+test_frozen_real_event_quality_after_stable_mode_selection (test_compton_geometry_v3.ProductionGeometryTests.test_frozen_real_event_quality_after_stable_mode_selection) ... ok
+test_invalid_mode_and_coincident_positions_fail_explicitly (test_compton_geometry_v3.ProductionGeometryTests.test_invalid_mode_and_coincident_positions_fail_explicitly) ... ok
+test_near_parallel_and_antiparallel_obey_finite_bound (test_compton_geometry_v3.ProductionGeometryTests.test_near_parallel_and_antiparallel_obey_finite_bound) ... ok
+test_stable_kernel_and_quality_are_finite_across_collinearity (test_compton_geometry_v3.ProductionGeometryTests.test_stable_kernel_and_quality_are_finite_across_collinearity) ... ok
+test_translation_invariance (test_compton_geometry_v3.ProductionGeometryTests.test_translation_invariance) ... ok
+test_variance_matches_finite_difference_of_geometric_angle (test_compton_geometry_v3.ProductionGeometryTests.test_variance_matches_finite_difference_of_geometric_angle) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.346s
+
+OK

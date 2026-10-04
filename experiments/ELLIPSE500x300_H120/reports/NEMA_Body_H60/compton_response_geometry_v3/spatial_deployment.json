@@ -1,0 +1,14 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/spatial_releases/1a6f2fa8416daaaf",
+  "code_sha256": {
+    "validate_compton_spatial_v3.py": "b92c87b48e38042c7c3da02cfe35bc8a4c62048a1c4d769665bf5f42e9f76cd4",
+    "analyze_first_scatter.py": "8b43d50f42c7b9baee6fa0ea933463e25db3a4fb1f7728f4154945d7a74774ee",
+    "validate_factors.py": "d529fe6c4ee27ce49e8e2a7b778c1abb1b8e818a6711d838533368978e4e7b91",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "9c162f0be0078fd53df38898d63d3018fb1c5fc1315df7000078122330cf71c5"
+}

@@ -32,6 +32,11 @@ class ComptonEventSettings:
     include_first_hit_source_leg_uncertainty: bool = True
     require_different_layers: bool = True
     max_min_standardized_arm: float | None = None
+    geometry_mode: str = "legacy"
+
+    def __post_init__(self):
+        if self.geometry_mode not in ("legacy", "stable_float64"):
+            raise ValueError("Unknown Compton geometry mode")
 
 
 @dataclass
@@ -273,11 +278,74 @@ def _position_angle_sigma(
     return torch.sqrt(torch.clamp(variance, min=1e-12))
 
 
+def stable_compton_geometry(vector01, vector12, variance1, variance2,
+                            include_first_hit_source_leg_uncertainty=True):
+    """Stable double-precision angle and position covariance propagation.
+
+    Callers must cast positions before subtraction. Exactly collinear scalar
+    angle derivatives have no unique direction; the explicit conservative
+    finite bound is used only for sine <= 1e-12.
+    """
+    a, b, v1, v2 = (x.double() for x in
+                    (vector01, vector12, variance1, variance2))
+    da = a.norm(dim=2, keepdim=True)
+    db = b.norm(dim=2, keepdim=True)
+    if bool((da <= 0).any() or (db <= 0).any()):
+        raise ValueError("Coincident Compton geometry positions")
+    u, v = a / da, b / db
+    cross = torch.linalg.cross(u, v.expand_as(u), dim=2)
+    sine = cross.norm(dim=2, keepdim=True)
+    cosine = (u * v).sum(2, keepdim=True)
+    beta = torch.atan2(sine, cosine).squeeze(2)
+    normal = cross / sine.clamp_min(1e-12)
+    source_tangent = torch.linalg.cross(normal, u, dim=2) / da
+    inter_tangent = torch.linalg.cross(v.expand_as(u), normal, dim=2) / db
+    grad1 = inter_tangent
+    if include_first_hit_source_leg_uncertainty:
+        grad1 = grad1 - source_tangent
+    grad2 = -inter_tangent
+    variance = (grad1.square() * v1[:, None]).sum(2)
+    variance += (grad2.square() * v2[:, None]).sum(2)
+    first_bound = 1 / db.squeeze(2)
+    if include_first_hit_source_leg_uncertainty:
+        first_bound = first_bound + 1 / da.squeeze(2)
+    upper = v1.amax(1)[:, None] * first_bound.square()
+    upper += v2.amax(1)[:, None] / db.squeeze(2).square()
+    variance = torch.where(sine.squeeze(2) <= 1e-12, upper, variance)
+    if not bool(torch.isfinite(beta).all() and torch.isfinite(variance).all()):
+        raise ValueError("Nonfinite stable Compton geometry")
+    if bool((variance > upper * (1 + 1e-10)).any()):
+        raise ValueError("Compton position derivative bound exceeded")
+    return beta, variance.clamp_min(1e-12).sqrt(), upper.sqrt()
+
+
+def _stable_event_angles(prepared, coordinates, settings):
+    vector01 = prepared.pos1.double()[:, None] - coordinates.double()[None]
+    vector12 = (prepared.pos2.double() - prepared.pos1.double())[:, None]
+    beta, sigma_position, _ = stable_compton_geometry(
+        vector01, vector12, prepared.sigma_pos1_sq, prepared.sigma_pos2_sq,
+        settings.include_first_hit_source_leg_uncertainty)
+    theta = compton_theta_from_e1(prepared.e1.double(), settings.energy_mev)
+    sigma_energy = _energy_angle_sigma(prepared.e1.double(), settings, beta, theta)
+    sigma = (sigma_energy.square() + sigma_position.square()).clamp_min(1e-12).sqrt()
+    return beta, theta, sigma
+
+
 def build_compton_cone_weights(
     prepared: PreparedComptonEvents,
     voxel_coordinates: torch.Tensor,
     settings: ComptonEventSettings,
 ) -> torch.Tensor:
+    if settings.geometry_mode == "stable_float64":
+        beta, theta, sigma = _stable_event_angles(prepared, voxel_coordinates, settings)
+        e1 = prepared.e1.double()
+        kn = settings.energy_mev / (settings.energy_mev - e1)
+        kn += (settings.energy_mev - e1) / settings.energy_mev
+        weights = torch.exp(-0.5 * ((beta - theta[:, None]) / sigma).square())
+        weights *= kn[:, None] - beta.sin().square()
+        if not bool(torch.isfinite(weights).all() and (weights >= 0).all()):
+            raise ValueError("Invalid stable Compton cone")
+        return weights.to(prepared.e1.dtype)
     vector01 = prepared.pos1.unsqueeze(1) - voxel_coordinates.unsqueeze(0)
     vector12 = (prepared.pos2 - prepared.pos1).unsqueeze(1)
     distance01 = torch.norm(vector01, dim=2)
@@ -339,6 +407,12 @@ def min_standardized_compton_arm(prepared, voxel_coordinates, settings):
     Uses exactly the production angle/uncertainty expressions. No phantom,
     activity, sensitivity or reconstruction enters this quality criterion.
     """
+    if settings.geometry_mode == "stable_float64":
+        beta, theta, sigma = _stable_event_angles(prepared, voxel_coordinates, settings)
+        score = ((beta - theta[:, None]).abs() / sigma).amin(dim=1)
+        if not bool(torch.isfinite(score).all()):
+            raise ValueError("Nonfinite stable complete-grid Compton ARM score")
+        return score
     vector01 = prepared.pos1.unsqueeze(1) - voxel_coordinates.unsqueeze(0)
     vector12 = (prepared.pos2 - prepared.pos1).unsqueeze(1)
     distance01 = torch.norm(vector01, dim=2)

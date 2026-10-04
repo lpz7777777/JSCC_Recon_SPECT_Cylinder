@@ -1,4 +1,10 @@
 # Keep audited execution-source bytes reproducible across Windows/Linux.
+analyze_first_scatter.py -text whitespace=cr-at-eol
+*compton*v3*.py -text whitespace=cr-at-eol
+compton_boundary_quadrature.py -text whitespace=cr-at-eol
+verify_compton_legacy_compatibility.py -text whitespace=cr-at-eol
+compton_response_geometry_v3.json -text whitespace=cr-at-eol
+reports/NEMA_Body_H60/compton_response_geometry_v3/** -text whitespace=cr-at-eol
 audit_compton_response.py -text
 prepare_response_audit_truth.py -text
 plot_response_audit.py -text

@@ -39,7 +39,18 @@ class ActiveGeometry:
             return cls(geometry["active_indices"], geometry["ellipse_fraction"],
                        geometry["inverse_rotation"], device)
 
-    def compact(self, rows, view):
+    def compact(self, rows, view, layout="full_circle_density"):
+        if layout == "object_active_integrated":
+            if rows.ndim != 2 or rows.size(1) != self.active_count:
+                raise ValueError("Integrated response must have object-frame active columns")
+            if rows.device != self.fraction.device:
+                raise ValueError("Response and geometry must be on the same device")
+            if not 0 <= view < self.views:
+                raise ValueError("View out of range")
+            # Rotation and overlap volume were included by the integral builder.
+            return rows
+        if layout != "full_circle_density":
+            raise ValueError("Unknown Compton response layout")
         if rows.ndim != 2 or rows.size(1) != self.full_count:
             raise ValueError("Response rows require the complete circular grid")
         if rows.device != self.fraction.device:
@@ -61,8 +72,17 @@ class ActiveGeometry:
             result += self.compact(rows, view).sum(dim=0)[:, None]
         return result / self.views
 
-    def compton_sensitivity(self, full_sensitivity):
+    def compton_sensitivity(self, full_sensitivity, layout="full_circle_density"):
         """Apply object-frame overlap to a complete-grid K*B sensitivity."""
+        if layout == "object_active_integrated":
+            if full_sensitivity.numel() != self.active_count:
+                raise ValueError("Integrated sensitivity must have object-frame active columns")
+            result=torch.as_tensor(full_sensitivity,device=self.fraction.device).reshape(-1,1)
+            if not bool(torch.isfinite(result).all()) or bool((result < 0).any()):
+                raise ValueError("Invalid integrated sensitivity")
+            return result
+        if layout != "full_circle_density":
+            raise ValueError("Unknown Compton sensitivity layout")
         if full_sensitivity.numel() != self.full_count:
             raise ValueError("Compton sensitivity has the wrong full grid")
         full = torch.as_tensor(full_sensitivity, device=self.fraction.device).reshape(-1)

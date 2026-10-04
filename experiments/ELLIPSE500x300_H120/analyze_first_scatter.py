@@ -55,14 +55,16 @@ def analyze(args):
     coords=torch.tensor(coordinates,device=device)
     detector=torch.tensor(load_detector_coordinates(factor/"Detector.csv",10496),device=device)
     var=build_detector_position_variance(detector,0)
-    settings=ComptonEventSettings(.440,.13*np.sqrt(511/440),2*.440**2/(.511+2*.440)-.001,.05,.35)
+    mode=getattr(args,"geometry_mode","legacy")
+    settings=ComptonEventSettings(.440,.13*np.sqrt(511/440),2*.440**2/(.511+2*.440)-.001,.05,.35,
+                                 geometry_mode=mode)
     memory=np.memmap(factor/"SysMat_polar",dtype="<f4",mode="r",shape=(132040,10496))
     b=torch.tensor(np.array(memory.T,copy=True),device=device);del memory
     radius=np.hypot(coordinates[:,0],coordinates[:,1])/255;z=np.abs(coordinates[:,2])
     bins=(np.where(radius<=.5,0,np.where(radius<=.85,1,2))*3+np.where(z<=30,0,np.where(z<=45,1,2)))
     masks=torch.tensor(np.eye(9,dtype=np.float32)[bins],device=device)
     binvol=np.bincount(bins,weights=volumes,minlength=9)
-    groups=("legacy","ideal");scans={};sums={};accepted_meta={};gates=[]
+    groups=getattr(args,"groups",("legacy","ideal"));scans={};sums={};accepted_meta={};gates=[]
     all_records=[];offline=[];start=time.monotonic()
     seen_seeds=set()
     for folder in sorted(p for p in inputs.iterdir() if p.is_dir()):
@@ -138,7 +140,8 @@ def analyze(args):
                 worker_response_bins={str(k):v.tolist() for k,v in per_worker_bin.items()})
             all_records.append(dict(dataset=dataset,group=group,uncut=uncut,kept=total))
             write(out/"scan_progress.json",all_records)
-    if scans["NEMA_legacy"]["uncut"]!=97299:raise ValueError("Original 1e9 accepts must reproduce 97299")
+    if "legacy" in groups and scans["NEMA_legacy"]["uncut"]!=97299:
+        raise ValueError("Original 1e9 accepts must reproduce 97299")
     circle_volume=float(volumes.sum());ellipse_volume=float(np.dot(volumes,frac))
     for group in groups:
         target=out/group;target.mkdir()
@@ -180,10 +183,12 @@ def analyze(args):
             event_policy="legacy" if group=="legacy" else "ideal_first_scatter_v2",
             resolution_fwhm=.13,reference_keV=511,sum_threshold_MeV=.350,input_already_smeared=True,
             max_min_standardized_arm=3,source_photons=n,independent_validation_photons=nv,
-            geometry_sha256=digest(args.geometry),input_manifest_sha256=digest(inputs/"input_manifest.json"))
+            geometry_sha256=digest(args.geometry),input_manifest_sha256=digest(inputs/"input_manifest.json"),
+            geometry_mode=mode,layout="full_circle_density")
         write(target/"Sensi_d_provenance.json",sensitivity_provenance)
         np.save(target/"independent_circle_ratio.npy",sv/s)
-    gate=dict(study="compton_first_scatter_v2",status="PASSED" if all(x["passed"] for x in gates) else "HOLD",
+    gate=dict(study=getattr(args,"study_name","compton_first_scatter_v2"),
+        geometry_mode=mode,status="PASSED" if all(x["passed"] for x in gates) else "HOLD",
         gates=gates,scans=scans,input_manifest_sha256=digest(inputs/"input_manifest.json"),
         geometry_sha256=digest(args.geometry),factor_manifest_sha256={p.name:digest(p/"factor_manifest.json")
             for p in args.factors.iterdir() if p.is_dir() and (p/"factor_manifest.json").exists()},

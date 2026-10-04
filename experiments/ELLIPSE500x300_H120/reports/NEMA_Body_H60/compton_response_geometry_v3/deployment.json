@@ -1,0 +1,19 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/releases/2d0a6388f0a8fa77",
+  "code_sha256": {
+    "analyze_first_scatter.py": "8b43d50f42c7b9baee6fa0ea933463e25db3a4fb1f7728f4154945d7a74774ee",
+    "analyze_compton_geometry_v3.py": "e88c4dba6a6f2c878489ac585b058f146004949a645a6757c138b7f2a2a2cdfd",
+    "validate_factors.py": "d529fe6c4ee27ce49e8e2a7b778c1abb1b8e818a6711d838533368978e4e7b91",
+    "test_compton_geometry_v3.py": "54abbeea89c5f9c05d563c31aed003cd876a592d0efbef314b2720a60884bfe2",
+    "test_compton_geometry_stability.py": "128037b409219588a8f0c8a90a2c7a217a8807a6d096c02dd8adfa4dc6afc82d",
+    "diagnose_compton_geometry_stability.py": "05d511f7156c5c9ec47f40118d4f7164d81398736dd5ad31c13af4da98c81559",
+    "compton_response_geometry_v3.json": "dc702117ccccb0517c9ff5184ce95561492217db22fd4f1004c25dff3c7dad06",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "verify_compton_legacy_compatibility.py": "807228bf640918a98816d47f67b18290de5192650007274e03aecfdc458325ff",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "de6ee966386ca48f2af3ab179a152474745cde9c1c96cb2981a61378865e6f77"
+}

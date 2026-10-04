@@ -1,0 +1,39 @@
+{
+  "study": "compton_response_geometry_v3",
+  "status": "HOLD",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "study_config_sha256": "dc702117ccccb0517c9ff5184ce95561492217db22fd4f1004c25dff3c7dad06",
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "partial_cells_per_layer": 172,
+  "volume_passed": false,
+  "transverse_reference_supported": false,
+  "predefined_cells": [
+    1221,
+    1261,
+    1350,
+    1463,
+    1618,
+    1693,
+    1769,
+    1843,
+    1954,
+    2072,
+    2488,
+    2609,
+    3015,
+    3161,
+    3231
+  ],
+  "response_cases": 1260,
+  "converged": 1260,
+  "endpoint_passed": 1166,
+  "explanation": "HOLD forbids R2 imaging. Any transverse gap requires original Cartesian response interpolation or matrix support extension and a new validation, not silent radial extrapolation.",
+  "elapsed_seconds": 17.778973159001907,
+  "new_transport_photons": 0,
+  "volume_max_relative_error": 0.001028114279987724,
+  "full_reference_unsupported_cells_per_layer": 6,
+  "evidence_sha256": {
+    "boundary_gate.json": "235d2ef523915a77226c7d9be0e55109ff466adc7f7fcf313fcb603cb5268b56",
+    "response_cases.csv": "eadb35d720f8069eb118558fcd24486e0671b45d37e78270b00e65a523aacdc0"
+  }
+}

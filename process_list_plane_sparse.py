@@ -29,6 +29,7 @@ def get_compton_backproj_list_single_sparse(
     model_compton_generator=None,
     input_energies_already_smeared=False,
     max_min_standardized_arm=None,
+    geometry_mode="legacy",
 ):
     """Filter events and store their cone component on the selected sparse grid.
 
@@ -49,6 +50,7 @@ def get_compton_backproj_list_single_sparse(
         delta_r1_mm=delta_r1,
         delta_r2_mm=delta_r2,
         max_min_standardized_arm=max_min_standardized_arm,
+        geometry_mode=geometry_mode,
     )
     detector_sigma_r1_sq = build_detector_position_variance(detector, delta_r1)
     detector_sigma_r2_sq = build_detector_position_variance(detector, delta_r2)
@@ -106,6 +108,7 @@ def get_compton_backproj_list_mp_sparse(
     start_time,
     flag_save_t,
     model_compton_generator=None,
+    geometry_mode="legacy",
 ):
     del world_size, start_time, flag_save_t
     with torch.no_grad():
@@ -123,6 +126,7 @@ def get_compton_backproj_list_mp_sparse(
                 delta_r1, delta_r2, e0, ene_resolution, ene_threshold_max,
                 ene_threshold_min, ene_threshold_sum, device,
                 model_compton_generator=model_compton_generator,
+                geometry_mode=geometry_mode,
             )
             if rows.numel() > 0:
                 parts.append(rows)

@@ -1,0 +1,16 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/boundary_releases/48fe2c15e2f1d3e8",
+  "code_sha256": {
+    "validate_compton_boundary_v3.py": "dd609a3c9ea84a111e2a0eb4135db60eac827bb4c6a63006880432f8abb642b4",
+    "compton_boundary_quadrature.py": "7b19368aa9bb483995d64ef0aa95aca671378d128683536082f983243bf00df7",
+    "test_compton_boundary_v3.py": "553812a8faa22bbfd4f3ab8a8dfc68a93ae3e4479888b36614554e7608b45bf8",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_response_geometry_v3.json": "dc702117ccccb0517c9ff5184ce95561492217db22fd4f1004c25dff3c7dad06",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "23e1ac360fc2ef6e330c1aef29833f9a3ba76e998452e648f37f6827ff3514f2"
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASSED",
+  "device": "cuda:0",
+  "full_points": 132040,
+  "checks": [
+    {
+      "view": 1,
+      "quantity": "K",
+      "events": 5,
+      "bitwise_equal": true
+    },
+    {
+      "view": 1,
+      "quantity": "q",
+      "events": 5,
+      "bitwise_equal": true
+    },
+    {
+      "view": 4,
+      "quantity": "K",
+      "events": 4,
+      "bitwise_equal": true
+    },
+    {
+      "view": 4,
+      "quantity": "q",
+      "events": 4,
+      "bitwise_equal": true
+    },
+    {
+      "view": 10,
+      "quantity": "K",
+      "events": 2,
+      "bitwise_equal": true
+    },
+    {
+      "view": 10,
+      "quantity": "q",
+      "events": 2,
+      "bitwise_equal": true
+    },
+    {
+      "view": 20,
+      "quantity": "K",
+      "events": 6,
+      "bitwise_equal": true
+    },
+    {
+      "view": 20,
+      "quantity": "q",
+      "events": 6,
+      "bitwise_equal": true
+    }
+  ],
+  "historical_kernel_sha256": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225",
+  "note": "Response compatibility; does not replace 50-iteration image regression"
+}
