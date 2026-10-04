@@ -1,0 +1,21 @@
+{
+  "status": "PASSED",
+  "tests_run": 14,
+  "command": "python -m unittest test_compton_overlap_assembly test_compton_a_guard test_compton_guard_field test_compton_boundary_v3 -v",
+  "synthetic_mathematical_tests_not_transport_evidence": true,
+  "coverage": [
+    "mixed full-circle reference",
+    "no duplicate overlap weighting",
+    "rotation and adjoint",
+    "emission denominator",
+    "zero active response HOLD",
+    "common-point rejection",
+    "complete halo coverage",
+    "precise overlap volume",
+    "original A interpolation compatibility",
+    "all-view complete reference support",
+    "sampled nonuniform axial interpolation",
+    "cross-platform coordinate roundoff versus real drift"
+  ],
+  "new_reconstruction_validation": false
+}

@@ -1,0 +1,11 @@
+test_anchor_reproduces_original_grid_points_and_fails_changed_bin (test_compton_a_guard.GuardTests.test_anchor_reproduces_original_grid_points_and_fails_changed_bin) ... ok
+test_halo_exactly_covers_new_cartesian_domain (test_compton_a_guard.GuardTests.test_halo_exactly_covers_new_cartesian_domain) ... ok
+test_precise_volume_matches_independent_gauss_intersection (test_compton_a_guard.GuardTests.test_precise_volume_matches_independent_gauss_intersection) ... ok
+test_full_circle_partial_reference_is_covered_for_all_views (test_compton_guard_field.GuardFieldTests.test_full_circle_partial_reference_is_covered_for_all_views) ... ok
+test_nonuniform_z_and_cartesian_halo_preserve_affine_functions (test_compton_guard_field.GuardFieldTests.test_nonuniform_z_and_cartesian_halo_preserve_affine_functions) ... ok
+test_original_interior_field_is_unchanged (test_compton_guard_field.GuardFieldTests.test_original_interior_field_is_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.507s
+
+OK

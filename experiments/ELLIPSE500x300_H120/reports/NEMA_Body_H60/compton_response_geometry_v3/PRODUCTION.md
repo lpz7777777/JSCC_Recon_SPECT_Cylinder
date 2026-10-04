@@ -22,6 +22,12 @@ R1事件与S检查PASSED；R2边界门控HOLD，未生成S2，未提交scxi717�
 
 ## 可复现入口
 
+2026-10-04续作：补点PID1985661，GPU4，发布6da50ddf254f8a47；18点公共PE逐值一致，Scatter相对L2=1.81355e-9、总响应2.21633e-10，通过后才生成六面。CPU接续PID2003014，发布0b857a3803d4ba3a；径向检查PID2015061，发布367e397822159312。均有时间上限和防重锁，等待不占卡，不触碰其他项目进程。精确体积本地通过，SHA=bf29705fe1798c5b8000dedf1d8a00e43321a5df32f747d270db9bb7a177a1d3；活动身份不变。详情见SUPPORT_EXTENSION.md和guard_summary.json。
+
+新增guard、guard-field、guard-radial、fetch-guard入口，取回小证据逐项验SHA。13项数学/支持测试通过；混合参考装配已实现，但完整真实事件积分、S2及配对成像未完成。辅助A场诊断完成也不自动放行成像。
+
+补点九部分与A场全部完成。CPU体积接续因跨平台坐标约2.84e-14mm差异失败，原日志保留；旧PID退出后，独立db8cc160e98677f1发布/PID2039093以原A只读完成修复，几何SHA不变，1e-10mm物理坐标容差及1e-6mm漂移拒绝测试通过。服务器精确体积PASSED，轴向/径向逐项插值检查HOLD。径向y255的L2约3.8%，均值效率差约0.1%。新增有界K加权诊断PID2047834已完成：114个独立点源样本、径向加权L2最大2.627%。全部新PID退出、GPU4为0MiB/0%，14项本地测试通过。未生成S2或新重建；下一步先用真实交叠/完整单元积分检查并细化近探测器径向插值。guard-weighted、repair-guard-measure入口和小型证据已冻结。
+
 `compton_geometry_v3_workflow.py`提供stage/launch/status/fetch-scan、boundary/fetch-boundary和spatial/fetch-spatial。已有job.json时拒绝重复启动；失败只在旧进程退出、发布变化、输出没有被覆盖的条件下修复。所有服务器任务有flock和1–4小时上限，输入只读，传输逐项或归档验SHA。已经完成的登记不得当作新作业反复执行。
 
 `summarize_compton_geometry_v3.py`生成数值诊断、事件差异和门控状态，不把它们标成重建图。完整数据在generated/compton_response_geometry_v3，Git仅保留代码、计划、小型证据及图。此次默认legacy不变，已经冻结的旧发布保持原字节和哈希。

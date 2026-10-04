@@ -1,0 +1,26 @@
+{
+  "anchor_gate": "PASSED",
+  "completed_parts": 9,
+  "total_parts": 9,
+  "guard_ready": true,
+  "field_built": true,
+  "midpoint_gate": "HOLD",
+  "radial_midpoint_gate": "HOLD",
+  "precise_measure_gate": "PASSED",
+  "evidence_sha256": {
+    "anchor_gate.json": "2b053304bf6dc4676060fa49df5787b906c4bc4bd046ba97474fc1b8b72ad00e",
+    "guard_progress.json": "ec56d654d66c6b43deb836912f5ae0a96685bd2383ce64a5c23a6a380da0ab38",
+    "guard_ready.json": "a92e2f5daeebb6e3b3f3ca9a62191c84fe52fcfbee8ab9136906e0aa5ddf1a9b",
+    "field_manifest.json": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+    "midpoint_gate.json": "3e83e25038d6add1d2e73d89a1e25e5028ceda6f2566f7029c090dfcf114b361",
+    "field_stage_complete.json": "a3b2f6dc3f35cffc90fe2d3101b0c614c19f73de3a0ed868ea1f384ceea57420",
+    "measure_manifest.json": "ccbbc417d5aa49f2be8982d8d11920119ebd4ef57ae365e5d84c5bb45a689abb",
+    "radial_midpoint_gate.json": "735405e74aea66938b4cebf038565514cc09a4e2a7bdf724266809164e9cd878",
+    "weighted_interpolation.json": "200027a4c14ba840b8caab42e44f34bf4de80d8c358dc9af5e5c85d07abb1f0a"
+  },
+  "live_snapshot": "2026-10-04T12:43:05Z\n    PID     ELAPSED STAT COMMAND\n4, 0, 0",
+  "R2_boundary_gate": "HOLD_PENDING_FULL_VALIDATION",
+  "S2_generated": false,
+  "reconstruction_submitted": false,
+  "new_transport_photons": 0
+}

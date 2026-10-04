@@ -1,0 +1,14 @@
+{
+  "pid": 2039093,
+  "physical_gpu": null,
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/guard_measure_releases/db8cc160e98677f1",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field_repair",
+  "reused_field": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field",
+  "failed_cpu_pid": 2003014,
+  "launcher_sha256": "1778dec2abf8dc7113db1141370cc344c79109d4b77578145d44bd096961379c",
+  "timeout_minutes": 30,
+  "reason": "Cross-platform libm coordinate differences up to 2.84e-14 mm; physical tolerance 1e-10 mm, input SHA unchanged",
+  "original_A_read_only": true,
+  "new_transport_photons": 0,
+  "reconstruction_submitted": false
+}

@@ -77,3 +77,54 @@ class PolarResponseField:
         if not np.isfinite(result).all():raise ValueError('Nonfinite interpolated A')
         # Linear endpoint extension may cross zero; explicitly track this rule.
         return np.maximum(result,0)
+
+
+class GuardedPolarResponseField:
+    """Sampled radial/axial halo with unchanged interior interpolation stencils.
+
+    All original polar vertices precede the additional r=258 vertices. The
+    original convex-hull edges must remain edges of the extended mesh, so the
+    inside/outside interpolation joins continuously. Axial extrapolation and
+    clamping are both prohibited in this explicitly sampled field.
+    """
+    def __init__(self, xy, original_count, z_centres):
+        self.original_count = original_count
+        self.inner = Delaunay(xy[:original_count]); self.outer = Delaunay(xy)
+        edges = {tuple(sorted(e)) for t in self.outer.simplices
+                 for e in ((t[0],t[1]),(t[1],t[2]),(t[2],t[0]))}
+        if any(tuple(sorted(e)) not in edges for e in self.inner.convex_hull):
+            raise ValueError('Halo triangulation breaks original hull; cannot join A continuously')
+        self.z = np.asarray(z_centres,dtype=float)
+        if not np.all(np.diff(self.z)>0) or self.z[0]>-60 or self.z[-1]<60:
+            raise ValueError('Sampled axial field does not cover full cells')
+
+    def cache(self, points):
+        if not np.isfinite(points).all():raise ValueError('Nonfinite integration coordinates')
+        points=np.asarray(points);vertices=np.empty((len(points),3),dtype=int)
+        bary=np.empty((len(points),3),dtype=float)
+        inside=self.inner.find_simplex(points[:,:2])>=0
+        for mask,tri in ((inside,self.inner),(~inside,self.outer)):
+            if not mask.any():continue
+            xy=points[mask,:2];simplex=tri.find_simplex(xy)
+            if np.any(simplex<0):raise ValueError('Outside sampled radial halo')
+            delta=xy-tri.transform[simplex,2,:]
+            first=np.einsum('nij,nj->ni',tri.transform[simplex,:2,:],delta)
+            vertices[mask]=tri.simplices[simplex]
+            bary[mask]=np.column_stack((first,1-first.sum(1)))
+        z=points[:,2]
+        if np.any(z<self.z[0]-1e-10) or np.any(z>self.z[-1]+1e-10):
+            raise ValueError('Outside sampled axial halo')
+        lower=np.clip(np.searchsorted(self.z,z,side='right')-1,0,len(self.z)-2)
+        t=(z-self.z[lower])/(self.z[lower+1]-self.z[lower])
+        if np.any(t < -1e-10) or np.any(t > 1+1e-10):raise ValueError('Axial extrapolation forbidden')
+        return vertices,bary,lower,np.clip(t,0,1)
+
+    @staticmethod
+    def evaluate(field,cache):
+        vertices,bary,lower,t=cache
+        left=np.sum(field[lower[:,None],vertices]*bary,axis=1)
+        right=np.sum(field[(lower+1)[:,None],vertices]*bary,axis=1)
+        result=left*(1-t)+right*t
+        if not np.isfinite(result).all() or np.any(result < -1e-20):
+            raise ValueError('Invalid sampled A interpolation')
+        return np.maximum(result,0)

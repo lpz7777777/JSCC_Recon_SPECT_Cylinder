@@ -1,0 +1,9 @@
+{
+  "classification": "response diagnostics, not reconstruction",
+  "artifacts_sha256": {
+    "midpoint_gate.json": "da22362963fa04be30953d0326cd3a858530bc0dcd5f0ddf14b992dc823167be",
+    "radial_midpoint_gate.json": "eea3699ca484ac489358b4bee009ace005f246389e5273ca0574b45f6fc6ae83",
+    "A440_interpolation_diagnostics.png": "1fff9965f4b7f9fbbd0a4945c5bf3e8f0a1de3a1f149a9f08ea68a4424d4d777"
+  },
+  "no_smoothing": true
+}

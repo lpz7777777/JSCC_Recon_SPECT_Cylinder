@@ -1,0 +1,236 @@
+{
+  "status": "HOLD",
+  "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+  "field_sha256": "d6cef8c70db3dd8cdf911b67be13ce31a3ff45bbfe29eadfb667dfafb63509d7",
+  "cases": [
+    {
+      "part": "mid_minus",
+      "xyz_mm": [
+        0.0,
+        -150.0,
+        -59.25
+      ],
+      "relative_l2": 0.0017956756435660232,
+      "total_response_relative_error": -9.997791785232302e-06,
+      "elementwise_passed": false,
+      "max_abs_error": 1.6652110259995702e-09,
+      "absolute_floor": 1.4756511204517051e-15,
+      "bins_exceeding_tolerance": 189,
+      "passed": false
+    },
+    {
+      "part": "mid_minus",
+      "xyz_mm": [
+        -252.0,
+        0.0,
+        -59.25
+      ],
+      "relative_l2": 0.0025401717432561974,
+      "total_response_relative_error": 7.88065781869296e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 3.6043857818560026e-09,
+      "absolute_floor": 2.8605548370197117e-15,
+      "bins_exceeding_tolerance": 449,
+      "passed": false
+    },
+    {
+      "part": "mid_minus",
+      "xyz_mm": [
+        0.0,
+        0.0,
+        -59.25
+      ],
+      "relative_l2": 0.0024710698664701398,
+      "total_response_relative_error": 7.36444089279864e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 4.442174146162275e-09,
+      "absolute_floor": 3.3209614173940082e-15,
+      "bins_exceeding_tolerance": 384,
+      "passed": false
+    },
+    {
+      "part": "mid_minus",
+      "xyz_mm": [
+        252.0,
+        0.0,
+        -59.25
+      ],
+      "relative_l2": 0.0025411215928284126,
+      "total_response_relative_error": 8.133114132879982e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 2.7746187266048144e-09,
+      "absolute_floor": 2.8465930784602546e-15,
+      "bins_exceeding_tolerance": 432,
+      "passed": false
+    },
+    {
+      "part": "mid_minus",
+      "xyz_mm": [
+        0.0,
+        150.0,
+        -59.25
+      ],
+      "relative_l2": 0.005971261094598061,
+      "total_response_relative_error": 4.6712736323950566e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 3.589543484992689e-08,
+      "absolute_floor": 1.3257937542221054e-14,
+      "bins_exceeding_tolerance": 1582,
+      "passed": false
+    },
+    {
+      "part": "mid_plus",
+      "xyz_mm": [
+        0.0,
+        -150.0,
+        59.25
+      ],
+      "relative_l2": 0.0016295421567919437,
+      "total_response_relative_error": 1.2485202308232246e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 1.65082047162614e-09,
+      "absolute_floor": 1.4756302316716843e-15,
+      "bins_exceeding_tolerance": 149,
+      "passed": false
+    },
+    {
+      "part": "mid_plus",
+      "xyz_mm": [
+        -252.0,
+        0.0,
+        59.25
+      ],
+      "relative_l2": 0.002444011057483079,
+      "total_response_relative_error": 6.248979610590233e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 3.577057222169987e-09,
+      "absolute_floor": 2.850378226068846e-15,
+      "bins_exceeding_tolerance": 393,
+      "passed": false
+    },
+    {
+      "part": "mid_plus",
+      "xyz_mm": [
+        0.0,
+        0.0,
+        59.25
+      ],
+      "relative_l2": 0.002455137591406417,
+      "total_response_relative_error": 5.9075838168887174e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 4.302220023699438e-09,
+      "absolute_floor": 3.3209614173940082e-15,
+      "bins_exceeding_tolerance": 366,
+      "passed": false
+    },
+    {
+      "part": "mid_plus",
+      "xyz_mm": [
+        252.0,
+        0.0,
+        59.25
+      ],
+      "relative_l2": 0.002369106319792566,
+      "total_response_relative_error": 6.622745048634471e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 3.2886577816273696e-09,
+      "absolute_floor": 2.860650975742217e-15,
+      "bins_exceeding_tolerance": 384,
+      "passed": false
+    },
+    {
+      "part": "mid_plus",
+      "xyz_mm": [
+        0.0,
+        150.0,
+        59.25
+      ],
+      "relative_l2": 0.005904591178628166,
+      "total_response_relative_error": 2.7709241165574383e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 3.466191936364389e-08,
+      "absolute_floor": 1.3265317573369617e-14,
+      "bins_exceeding_tolerance": 1611,
+      "passed": false
+    }
+  ],
+  "omitted_outside_support": [
+    {
+      "part": "mid_minus",
+      "xyz": [
+        -252.0,
+        -150.0,
+        -59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_minus",
+      "xyz": [
+        252.0,
+        -150.0,
+        -59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_minus",
+      "xyz": [
+        -252.0,
+        150.0,
+        -59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_minus",
+      "xyz": [
+        252.0,
+        150.0,
+        -59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_plus",
+      "xyz": [
+        -252.0,
+        -150.0,
+        59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_plus",
+      "xyz": [
+        252.0,
+        -150.0,
+        59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_plus",
+      "xyz": [
+        -252.0,
+        150.0,
+        59.25
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "mid_plus",
+      "xyz": [
+        252.0,
+        150.0,
+        59.25
+      ],
+      "reason": "Outside full circle support"
+    }
+  ],
+  "interpolation_relative_tolerance": 0.01,
+  "new_transport_photons": 0,
+  "covers": "Independent midpoint samples: mid_minus, mid_plus",
+  "limitation": "Radial refinement and boundary event integrals remain separately gated; this is not S2 validation.",
+  "reconstruction_permitted": false
+}

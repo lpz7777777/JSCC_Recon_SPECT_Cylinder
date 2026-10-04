@@ -1,0 +1,10 @@
+{
+  "checked_blobs": 1466,
+  "total_blob_bytes": 57880870,
+  "max_blob_bytes": 1323422,
+  "maximum_permitted_blob_bytes": 5242880,
+  "findings": [],
+  "scanner": "tools/security/audit_git_payload.py",
+  "basis": "staged payload before adding these small audit receipts",
+  "large_matrix_and_sensitive_inputs_excluded": true
+}

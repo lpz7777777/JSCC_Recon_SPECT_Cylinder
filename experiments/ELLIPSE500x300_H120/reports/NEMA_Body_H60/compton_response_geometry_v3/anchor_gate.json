@@ -1,0 +1,41 @@
+{
+  "status": "PASSED",
+  "voxels": 18,
+  "detectors": 11520,
+  "metrics": {
+    "PE_SysMat": {
+      "relative_l2": 0.0,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "numerical_floor": 2.6363100005255547e-14,
+      "elementwise_passed": true,
+      "passed": true
+    },
+    "PE_Windowed_SysMat": {
+      "relative_l2": 0.0,
+      "bitwise_equal": true,
+      "max_abs_error": 0.0,
+      "numerical_floor": 2.0061477243871197e-14,
+      "elementwise_passed": true,
+      "passed": true
+    },
+    "Scatter_SysMat": {
+      "relative_l2": 1.8135481264336566e-09,
+      "bitwise_equal": false,
+      "max_abs_error": 7.105427357601002e-15,
+      "numerical_floor": 8.458997058369277e-16,
+      "elementwise_passed": true,
+      "passed": true
+    },
+    "SysMat_withScatter": {
+      "relative_l2": 2.216331616477515e-10,
+      "bitwise_equal": false,
+      "max_abs_error": 1.4210854715202004e-14,
+      "numerical_floor": 2.0061477243871197e-14,
+      "elementwise_passed": true,
+      "passed": true
+    }
+  },
+  "original_inputs_read_only": true,
+  "calibration_refitted": false
+}

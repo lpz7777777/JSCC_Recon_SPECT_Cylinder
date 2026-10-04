@@ -1,0 +1,236 @@
+{
+  "status": "HOLD",
+  "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+  "field_sha256": "d6cef8c70db3dd8cdf911b67be13ce31a3ff45bbfe29eadfb667dfafb63509d7",
+  "cases": [
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        0.0,
+        -255.0,
+        -1.5
+      ],
+      "relative_l2": 0.0002783119213170313,
+      "total_response_relative_error": 7.361911199033067e-05,
+      "elementwise_passed": true,
+      "max_abs_error": 9.489915005374553e-11,
+      "absolute_floor": 9.696139438921108e-16,
+      "bins_exceeding_tolerance": 0,
+      "passed": true
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        -255.0,
+        0.0,
+        -1.5
+      ],
+      "relative_l2": 0.010254167731614314,
+      "total_response_relative_error": 2.0829289051338407e-06,
+      "elementwise_passed": false,
+      "max_abs_error": 7.602528688682917e-09,
+      "absolute_floor": 2.8402084102632886e-15,
+      "bins_exceeding_tolerance": 2848,
+      "passed": false
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        0.0,
+        0.0,
+        -1.5
+      ],
+      "relative_l2": 3.402266647860846e-08,
+      "total_response_relative_error": -8.678324725508446e-11,
+      "elementwise_passed": true,
+      "max_abs_error": 2.7260673799245572e-14,
+      "absolute_floor": 3.3207120103940004e-15,
+      "bins_exceeding_tolerance": 0,
+      "passed": true
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        255.0,
+        0.0,
+        -1.5
+      ],
+      "relative_l2": 0.010552518805092516,
+      "total_response_relative_error": -3.997687061740862e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 7.463769686843984e-09,
+      "absolute_floor": 2.8453397516590055e-15,
+      "bins_exceeding_tolerance": 2837,
+      "passed": false
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        0.0,
+        255.0,
+        -1.5
+      ],
+      "relative_l2": 0.03800104004866446,
+      "total_response_relative_error": 0.0012348804022261906,
+      "elementwise_passed": false,
+      "max_abs_error": 3.8181888313218276e-07,
+      "absolute_floor": 1.472956045019978e-13,
+      "bins_exceeding_tolerance": 7274,
+      "passed": false
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        0.0,
+        -255.0,
+        1.5
+      ],
+      "relative_l2": 0.00027697634949257167,
+      "total_response_relative_error": 7.499571204361288e-05,
+      "elementwise_passed": true,
+      "max_abs_error": 8.862989863606965e-11,
+      "absolute_floor": 9.696139438921108e-16,
+      "bins_exceeding_tolerance": 0,
+      "passed": true
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        -255.0,
+        0.0,
+        1.5
+      ],
+      "relative_l2": 0.01022782883315879,
+      "total_response_relative_error": 3.0168019591325645e-06,
+      "elementwise_passed": false,
+      "max_abs_error": 7.617641573520037e-09,
+      "absolute_floor": 2.8383520772339686e-15,
+      "bins_exceeding_tolerance": 2877,
+      "passed": false
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "relative_l2": 3.388922656732545e-08,
+      "total_response_relative_error": -4.6116999108392065e-10,
+      "elementwise_passed": true,
+      "max_abs_error": 2.6583848575791557e-14,
+      "absolute_floor": 3.3207120103940004e-15,
+      "bins_exceeding_tolerance": 0,
+      "passed": true
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        255.0,
+        0.0,
+        1.5
+      ],
+      "relative_l2": 0.01050139503066077,
+      "total_response_relative_error": -3.8911703243771356e-05,
+      "elementwise_passed": false,
+      "max_abs_error": 7.580142707991038e-09,
+      "absolute_floor": 2.8453397516590055e-15,
+      "bins_exceeding_tolerance": 2854,
+      "passed": false
+    },
+    {
+      "part": "radial_mid",
+      "xyz_mm": [
+        0.0,
+        255.0,
+        1.5
+      ],
+      "relative_l2": 0.038466740540239394,
+      "total_response_relative_error": 0.0010093285788692619,
+      "elementwise_passed": false,
+      "max_abs_error": 3.5589865253705365e-07,
+      "absolute_floor": 1.4729558839498672e-13,
+      "bins_exceeding_tolerance": 7255,
+      "passed": false
+    }
+  ],
+  "omitted_outside_support": [
+    {
+      "part": "radial_mid",
+      "xyz": [
+        -255.0,
+        -255.0,
+        -1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        255.0,
+        -255.0,
+        -1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        -255.0,
+        255.0,
+        -1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        255.0,
+        255.0,
+        -1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        -255.0,
+        -255.0,
+        1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        255.0,
+        -255.0,
+        1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        -255.0,
+        255.0,
+        1.5
+      ],
+      "reason": "Outside full circle support"
+    },
+    {
+      "part": "radial_mid",
+      "xyz": [
+        255.0,
+        255.0,
+        1.5
+      ],
+      "reason": "Outside full circle support"
+    }
+  ],
+  "interpolation_relative_tolerance": 0.01,
+  "new_transport_photons": 0,
+  "covers": "Independent midpoint samples: radial_mid",
+  "limitation": "Radial refinement and boundary event integrals remain separately gated; this is not S2 validation.",
+  "reconstruction_permitted": false
+}

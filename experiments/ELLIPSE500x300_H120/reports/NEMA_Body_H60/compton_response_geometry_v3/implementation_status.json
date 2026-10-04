@@ -32,5 +32,15 @@
     "newly_removed_events.csv": "fbb90e07d109342fdf7ad2c34a425df6a3f22e0bb8781e9fcb31b6ea35bd6bb0"
   },
   "new_transport_photons": 0,
-  "new_reconstruction_jobs": 0
+  "new_reconstruction_jobs": 0,
+  "A440_guard_parts_completed": 9,
+  "A440_guard_field_built": true,
+  "precise_measure_server_gate": "PASSED",
+  "A440_axial_midpoint_diagnostic": "HOLD",
+  "A440_radial_midpoint_diagnostic": "HOLD",
+  "weighted_point_sample_events": 114,
+  "weighted_radial_relative_L2_max": 0.02626650331204864,
+  "local_contract_tests_passed": 14,
+  "S2_generated": false,
+  "new_guard_jobs_all_exited": true
 }

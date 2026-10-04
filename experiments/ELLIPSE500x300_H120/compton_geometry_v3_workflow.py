@@ -82,6 +82,224 @@ def status():
     print(ssh(SERVER,'ps -p '+str(job['pid'])+' -o pid,etime,stat,args; tail -n 8 '+REMOTE+'/scan.log; '+
         'nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader,nounits -i '+str(job['physical_gpu'])))
 
+def guard(device):
+    """One bounded original-binary halo, common-point gate first."""
+    if (REPORT/'guard_job.json').exists():raise ValueError('Guard generation already registered')
+    if ssh(SERVER,"pgrep -af '[g]enerate_compton_a_guard.py' || true"):
+        raise ValueError('Guard producer already active')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Guard GPU is occupied')
+    names=('generate_compton_a_guard.py','prepare_compton_overlap_measure.py','test_compton_a_guard.py',
+        'compton_boundary_quadrature.py','geometry.py','config.json','compton_response_geometry_v3.json')
+    paths={n:HERE/n for n in names};paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz'
+    hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/guard_releases/'+key;archive=DATA/'guard_code.tar.gz'
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+release);transfer(SERVER,archive,release+'/code.tar.gz')
+    tests=ssh(SERVER,'tar --no-same-owner -xzf '+release+'/code.tar.gz -C '+release+' && cd '+release+
+        ' && '+PYTHON+' -m unittest test_compton_a_guard -v 2>&1')
+    if 'Ran 4 tests' not in tests or '\nOK' not in tests:raise ValueError('Guard tests not passed')
+    (REPORT/'guard_tests.txt').write_text(tests+'\n',encoding='utf-8')
+    write(REPORT/'guard_deployment.json',dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    script=DATA/'run_guard.sh';output=REMOTE+'/A440_guard'
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/guard.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 4h '+PYTHON+' generate_compton_a_guard.py --root '+SERVER_ROOT+
+        ' --output '+output+' --cuda 0\n'+
+        'echo GUARD_GENERATION_FINISHED > '+REMOTE+'/guard_finished.txt\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_guard.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_guard.sh > '+REMOTE+'/guard.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown guard launch outcome; inspect before retry')
+    write(REPORT/'guard_job.json',dict(pid=int(pid),physical_gpu=device,release=release,
+        output=output,launcher_sha256=digest(script),timeout_hours=4,new_transport_photons=0,
+        anchor_gate_required=True,production_imaging_permitted=False))
+    print('GUARD_PID',pid)
+
+def guard_field():
+    """Wait on the registered producer using CPU only; no second GPU reservation."""
+    if (REPORT/'guard_field_job.json').exists():raise ValueError('Guard field continuation already registered')
+    job=json.loads((REPORT/'guard_job.json').read_text())
+    names=('run_compton_guard_field_stage.py','build_compton_a_guard_field.py',
+        'validate_compton_guard_field.py','generate_compton_a_guard.py','prepare_compton_overlap_measure.py',
+        'test_compton_guard_field.py','test_compton_a_guard.py','compton_boundary_quadrature.py',
+        'geometry.py','config.json')
+    paths={n:HERE/n for n in names};paths['generated/Geometry/geometry.npz']=HERE/'generated/Geometry/geometry.npz'
+    hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/guard_field_releases/'+key;archive=DATA/'guard_field_code.tar.gz'
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+release);transfer(SERVER,archive,release+'/code.tar.gz')
+    tests=ssh(SERVER,'tar --no-same-owner -xzf '+release+'/code.tar.gz -C '+release+' && cd '+release+
+        ' && '+PYTHON+' -m unittest test_compton_a_guard test_compton_guard_field -v 2>&1')
+    if 'Ran 7 tests' not in tests or '\nOK' not in tests:raise ValueError('Guard field tests failed')
+    (REPORT/'guard_field_tests.txt').write_text(tests+'\n',encoding='utf-8')
+    write(REPORT/'guard_field_deployment.json',dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    script=DATA/'run_guard_field.sh';output=REMOTE+'/A440_guard_field'
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/guard_field.lock\nflock -n 9\n'+
+        'export PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 2h '+PYTHON+' run_compton_guard_field_stage.py --root '+SERVER_ROOT+
+        ' --guard '+job['output']+' --factors '+SERVER_BASE+'/generated/FactorsCalibrated/440keV_RotateNum20'+
+        ' --geometry '+release+'/generated/Geometry/geometry.npz --config '+release+'/config.json'+
+        ' --output '+output+' --producer-pid '+str(job['pid'])+' --wait-seconds 2400\n'+
+        'echo GUARD_FIELD_DIAGNOSTICS_FINISHED > '+REMOTE+'/guard_field_finished.txt\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_guard_field.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_guard_field.sh > '+REMOTE+'/guard_field.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown field launch outcome')
+    write(REPORT/'guard_field_job.json',dict(pid=int(pid),physical_gpu=None,release=release,
+        output=output,depends_on_pid=job['pid'],launcher_sha256=digest(script),timeout_hours=2,
+        new_transport_photons=0,diagnostic_only=True,reconstruction_submitted=False))
+    print('GUARD_FIELD_PID',pid)
+
+def guard_radial(device):
+    if (REPORT/'guard_radial_job.json').exists():raise ValueError('Radial check already registered')
+    job=json.loads((REPORT/'guard_job.json').read_text())
+    field=json.loads((REPORT/'guard_field_job.json').read_text())
+    names=('run_compton_radial_guard_stage.py','validate_compton_guard_field.py',
+        'build_compton_a_guard_field.py','generate_compton_a_guard.py','compton_boundary_quadrature.py','geometry.py')
+    paths={n:HERE/n for n in names};hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/guard_radial_releases/'+key;archive=DATA/'guard_radial_code.tar.gz'
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+release);transfer(SERVER,archive,release+'/code.tar.gz')
+    ssh(SERVER,'tar --no-same-owner -xzf '+release+'/code.tar.gz -C '+release+
+        ' && cd '+release+' && '+PYTHON+' -m py_compile '+' '.join(names))
+    write(REPORT/'guard_radial_deployment.json',dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    script=DATA/'run_guard_radial.sh';output=REMOTE+'/A440_radial_check'
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/guard_radial.lock\nflock -n 9\n'+
+        'export PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 2h '+PYTHON+' run_compton_radial_guard_stage.py --root '+SERVER_ROOT+
+        ' --field '+field['output']+' --guard '+job['output']+' --output '+output+
+        ' --producer-pid '+str(job['pid'])+' --gpu '+str(device)+'\n'+
+        'echo RADIAL_INTERPOLATION_DIAGNOSTICS_FINISHED > '+REMOTE+'/guard_radial_finished.txt\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_guard_radial.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_guard_radial.sh > '+REMOTE+'/guard_radial.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown radial launch outcome')
+    write(REPORT/'guard_radial_job.json',dict(pid=int(pid),physical_gpu=device,release=release,
+        output=output,depends_on_guard_pid=job['pid'],depends_on_field_pid=field['pid'],
+        launcher_sha256=digest(script),timeout_hours=2,new_transport_photons=0,
+        waiting_device_reserved=False,diagnostic_only=True,reconstruction_submitted=False))
+    print('GUARD_RADIAL_PID',pid)
+
+def fetch_guard():
+    """Small, hash-checked evidence only; never download multi-GB A fields."""
+    jobs={n:json.loads((REPORT/('guard'+n+'_job.json')).read_text())
+          for n in ('','_field','_radial') if (REPORT/('guard'+n+'_job.json')).exists()}
+    if '' not in jobs:raise ValueError('No registered guard producer')
+    files={'anchor_gate.json':jobs['']['output']+'/anchor/anchor_gate.json',
+        'guard_progress.json':jobs['']['output']+'/progress.json',
+        'guard_ready.json':jobs['']['output']+'/guard_ready.json'}
+    if '_field' in jobs:
+        base=jobs['_field']['output'];files.update({'field_manifest.json':base+'/field_manifest.json',
+            'midpoint_gate.json':base+'/midpoint_gate.json','field_stage_complete.json':base+'/stage_complete.json',
+            'measure_manifest.json':base+'/precise_measure/measure_manifest.json'})
+    if '_radial' in jobs:files['radial_midpoint_gate.json']=jobs['_radial']['output']+'/radial_midpoint_gate.json'
+    repaired=REPORT/'guard_measure_job.json'
+    if repaired.exists():
+        job=json.loads(repaired.read_text());jobs['_measure']=job;base=job['output']
+        files.update({'midpoint_gate.json':base+'/midpoint_gate.json',
+            'field_stage_complete.json':base+'/stage_complete.json',
+            'measure_manifest.json':base+'/precise_measure/measure_manifest.json'})
+    weighted=REPORT/'guard_weighted_job.json'
+    if weighted.exists():
+        job=json.loads(weighted.read_text());jobs['_weighted']=job
+        files['weighted_interpolation.json']=job['output']+'/weighted_interpolation.json'
+    target=DATA/'guard_evidence';target.mkdir(exist_ok=True);found={}
+    for name,path in files.items():
+        checksum=ssh(SERVER,'if test -f '+shlex.quote(path)+'; then sha256sum -- '+shlex.quote(path)+'; fi')
+        if not checksum:continue
+        expected=checksum.split()[0]
+        subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+path,str(target/name)],check=True)
+        if digest(target/name)!=expected:raise ValueError('Guard evidence transfer hash differs')
+        found[name]=dict(sha256=expected,value=json.loads((target/name).read_text()))
+    anchor=found.get('anchor_gate.json',{}).get('value',{})
+    for name in ('anchor_gate.json','measure_manifest.json','midpoint_gate.json','radial_midpoint_gate.json','weighted_interpolation.json'):
+        if name in found:write(REPORT/name,found[name]['value'])
+    snapshot=ssh(SERVER,'date -u +%FT%TZ; ps -p '+','.join(str(j['pid']) for j in jobs.values())+
+        ' -o pid,etime,stat,args; nvidia-smi --query-gpu=index,memory.used,utilization.gpu --format=csv,noheader,nounits -i '+
+        str(jobs['']['physical_gpu']))
+    progress=found.get('guard_progress.json',{}).get('value',{})
+    summary=dict(anchor_gate=anchor.get('status','PENDING'),
+        completed_parts=progress.get('completed_parts',0),total_parts=9,
+        guard_ready='guard_ready.json' in found,field_built='field_manifest.json' in found,
+        midpoint_gate=found.get('midpoint_gate.json',{}).get('value',{}).get('status','PENDING'),
+        radial_midpoint_gate=found.get('radial_midpoint_gate.json',{}).get('value',{}).get('status','PENDING'),
+        precise_measure_gate=found.get('measure_manifest.json',{}).get('value',{}).get('status','PENDING'),
+        evidence_sha256={n:v['sha256'] for n,v in found.items()},live_snapshot=snapshot,
+        R2_boundary_gate='HOLD_PENDING_FULL_VALIDATION',S2_generated=False,reconstruction_submitted=False,
+        new_transport_photons=0)
+    write(REPORT/'guard_summary.json',summary);print(json.dumps(summary,indent=2))
+
+def repair_guard_measure():
+    if (REPORT/'guard_measure_job.json').exists():raise ValueError('CPU diagnostic repair already registered')
+    old=json.loads((REPORT/'guard_field_job.json').read_text())
+    if ssh(SERVER,'ps -p '+str(old['pid'])+' -o args= || true'):raise ValueError('Original CPU stage still active')
+    guard=json.loads((REPORT/'guard_job.json').read_text())
+    if ssh(SERVER,'test -f '+old['output']+'/field_manifest.json && echo READY')!='READY':
+        raise ValueError('Immutable A field has not completed')
+    names=('repair_compton_guard_measure.py','prepare_compton_overlap_measure.py','validate_compton_guard_field.py',
+        'build_compton_a_guard_field.py','generate_compton_a_guard.py','compton_boundary_quadrature.py',
+        'test_compton_a_guard.py','geometry.py','config.json')
+    paths={n:HERE/n for n in names};paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz'
+    hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/guard_measure_releases/'+key;archive=DATA/'guard_measure_code.tar.gz'
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+release);transfer(SERVER,archive,release+'/code.tar.gz')
+    tests=ssh(SERVER,'tar --no-same-owner -xzf '+release+'/code.tar.gz -C '+release+' && cd '+release+
+        ' && '+PYTHON+' -m unittest test_compton_a_guard -v 2>&1')
+    if 'Ran 4 tests' not in tests or '\nOK' not in tests:raise ValueError('Roundoff repair tests failed')
+    (REPORT/'guard_measure_tests.txt').write_text(tests+'\n',encoding='utf-8')
+    write(REPORT/'guard_measure_deployment.json',dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    script=DATA/'run_guard_measure_repair.sh';output=REMOTE+'/A440_guard_field_repair'
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/guard_measure.lock\nflock -n 9\n'+
+        'export PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 30m '+PYTHON+' repair_compton_guard_measure.py --field '+old['output']+
+        ' --guard '+guard['output']+' --geometry '+release+'/geometry.npz --config '+release+'/config.json --output '+output+'\n',
+        encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_guard_measure_repair.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_guard_measure_repair.sh > '+REMOTE+'/guard_measure.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown CPU repair launch outcome')
+    write(REPORT/'guard_measure_job.json',dict(pid=int(pid),physical_gpu=None,release=release,output=output,
+        reused_field=old['output'],failed_cpu_pid=old['pid'],launcher_sha256=digest(script),timeout_minutes=30,
+        reason='Cross-platform libm coordinate differences up to 2.84e-14 mm; physical tolerance 1e-10 mm, input SHA unchanged',
+        original_A_read_only=True,new_transport_photons=0,reconstruction_submitted=False))
+    print('GUARD_MEASURE_REPAIR_PID',pid)
+
+def guard_weighted(device):
+    if (REPORT/'guard_weighted_job.json').exists():raise ValueError('Weighted diagnostic already registered')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Weighted diagnostic GPU occupied')
+    names=('diagnose_compton_guard_weighting.py','build_compton_a_guard_field.py',
+           'generate_compton_a_guard.py','compton_boundary_quadrature.py','geometry.py')
+    paths={n:HERE/n for n in names};paths.update({n:ROOT/n for n in ('compton_event_response.py','detector_csv.py')})
+    paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz';hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/guard_weighted_releases/'+key;archive=DATA/'guard_weighted_code.tar.gz'
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+release);transfer(SERVER,archive,release+'/code.tar.gz')
+    ssh(SERVER,'tar --no-same-owner -xzf '+release+'/code.tar.gz -C '+release+' && cd '+release+
+        ' && '+PYTHON+' -m py_compile diagnose_compton_guard_weighting.py')
+    write(REPORT/'guard_weighted_deployment.json',dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    script=DATA/'run_guard_weighted.sh';output=REMOTE+'/guard_weighted'
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/guard_weighted.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 10m '+PYTHON+' diagnose_compton_guard_weighting.py --field '+REMOTE+'/A440_guard_field'+
+        ' --guard '+REMOTE+'/A440_guard --radial '+REMOTE+'/A440_radial_check --inputs '+SERVER_STUDY+'/analysis_inputs'+
+        ' --factors '+SERVER_BASE+'/generated/FactorsCalibrated --geometry '+release+'/geometry.npz --output '+output+'\n',
+        encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_guard_weighted.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_guard_weighted.sh > '+REMOTE+'/guard_weighted.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown weighted diagnostic launch outcome')
+    write(REPORT/'guard_weighted_job.json',dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=10,diagnostic_only=True,new_transport_photons=0,reconstruction_submitted=False))
+    print('GUARD_WEIGHTED_PID',pid)
+
 def repair(device):
     old=json.loads((REPORT/'scan_job.json').read_text());new=json.loads((REPORT/'deployment.json').read_text())
     if old['release']==new['release']:raise ValueError('Repair requires a new frozen release')
@@ -225,7 +443,7 @@ def fetch_spatial():
     write(REPORT/'spatial_summary.json',value);print(json.dumps(value))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=('stage','launch','status','repair','boundary','fetch-boundary','fetch-scan','spatial','fetch-spatial','repair-spatial'))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=('stage','launch','status','repair','boundary','fetch-boundary','fetch-scan','spatial','fetch-spatial','repair-spatial','guard','guard-field','guard-radial','fetch-guard','repair-guard-measure','guard-weighted'))
     p.add_argument('--gpu',type=int,default=3);a=p.parse_args()
     if a.action=='stage':stage()
     elif a.action=='launch':launch(a.gpu)
@@ -236,4 +454,10 @@ if __name__=='__main__':
     elif a.action=='spatial':spatial(a.gpu)
     elif a.action=='repair-spatial':spatial(a.gpu,repair=True)
     elif a.action=='fetch-spatial':fetch_spatial()
+    elif a.action=='guard':guard(a.gpu)
+    elif a.action=='guard-field':guard_field()
+    elif a.action=='guard-radial':guard_radial(a.gpu)
+    elif a.action=='fetch-guard':fetch_guard()
+    elif a.action=='repair-guard-measure':repair_guard_measure()
+    elif a.action=='guard-weighted':guard_weighted(a.gpu)
     else:status()

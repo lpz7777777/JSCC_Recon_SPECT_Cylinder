@@ -1,0 +1,12 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/guard_radial_releases/367e397822159312",
+  "code_sha256": {
+    "run_compton_radial_guard_stage.py": "51b64efb91253e218b527892e055dac9dae225c33fe31c6ef8911b8f302f60e7",
+    "validate_compton_guard_field.py": "d9fe8a795a79cf43c344d1e9275bca65a231bb1656eff468cd3b475b4b1c274e",
+    "build_compton_a_guard_field.py": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+    "generate_compton_a_guard.py": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+    "compton_boundary_quadrature.py": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c"
+  },
+  "archive_sha256": "a36f35457c9912b981b4567b924506502e8ea632ad9a8c78b58aa7fb2056e377"
+}

@@ -1,0 +1,8 @@
+test_anchor_reproduces_original_grid_points_and_fails_changed_bin (test_compton_a_guard.GuardTests.test_anchor_reproduces_original_grid_points_and_fails_changed_bin) ... ok
+test_halo_exactly_covers_new_cartesian_domain (test_compton_a_guard.GuardTests.test_halo_exactly_covers_new_cartesian_domain) ... ok
+test_precise_volume_matches_independent_gauss_intersection (test_compton_a_guard.GuardTests.test_precise_volume_matches_independent_gauss_intersection) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.158s
+
+OK
