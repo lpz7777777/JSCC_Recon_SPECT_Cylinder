@@ -78,9 +78,24 @@ def launch(device):
     print('SCAN_PID',pid)
 
 def status():
-    job=json.loads((REPORT/'scan_job.json').read_text())
-    print(ssh(SERVER,'ps -p '+str(job['pid'])+' -o pid,etime,stat,args; tail -n 8 '+REMOTE+'/scan.log; '+
-        'nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader,nounits -i '+str(job['physical_gpu'])))
+    tags=('regional_validation','regional_a_g0','regional_a_g1','regional_a_g2','tile_pilot','column_operator_cuda','column_operator_cpu','guard_column','overlap_benchmark_cuda','overlap_benchmark_batched',
+          'guard_components','guard_sampling','overlap_benchmark_cached','overlap_benchmark','scan')
+    jobs=[dict(tag=tag,**json.loads((REPORT/(tag+'_job.json')).read_text()))
+          for tag in tags if (REPORT/(tag+'_job.json')).exists()]
+    program='''import json,subprocess
+jobs=json.loads(%r)
+for j in jobs:
+    p=subprocess.run(['ps','-p',str(j['pid']),'-o','pid,etime,stat,args'],capture_output=True,text=True)
+    active=p.returncode==0
+    result=dict(tag=j['tag'],pid=j['pid'],active=active,gpu=j['physical_gpu'])
+    if active:
+        result['process']=p.stdout.strip()
+        q=subprocess.run(['tail','-n','4',%r+'/'+j['tag']+'.log'],capture_output=True,text=True)
+        result['log_tail']=q.stdout.strip()
+    print(json.dumps(result))
+print(subprocess.run(['nvidia-smi','--query-gpu=index,memory.used,utilization.gpu','--format=csv,noheader'],capture_output=True,text=True).stdout)
+'''%(json.dumps(jobs),REMOTE)
+    print(ssh(SERVER,PYTHON+' -c '+shlex.quote(program)))
 
 def guard(device):
     """One bounded original-binary halo, common-point gate first."""
@@ -512,9 +527,369 @@ def fetch_spatial():
     value=json.loads((target/'spatial_gate.json').read_text());value['evidence_sha256']=expected
     write(REPORT/'spatial_summary.json',value);print(json.dumps(value))
 
+def overlap_benchmark(device,cached=False,batched=False,cuda=False,column=False):
+    tag=('column_operator_cuda' if cuda else 'column_operator_cpu') if column else ('overlap_benchmark_cuda' if cuda else ('overlap_benchmark_batched' if batched else ('overlap_benchmark_cached' if cached else 'overlap_benchmark')))
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('Full-cell benchmark already registered')
+    active=ssh(SERVER,"pgrep -af '[b]enchmark_compton_overlap_v3.py' || true")
+    if active and not (cuda and all('overlap_benchmark_batched_releases/' in line for line in active.splitlines())):
+        raise ValueError('A full-cell benchmark is already active')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Benchmark GPU is occupied')
+    names=('benchmark_compton_overlap_v3.py','compton_overlap_integrator.py','compton_cell_response_field.py','compton_overlap_cuda.py','test_compton_overlap_cuda.py',
+        'compton_overlap_assembly.py','test_compton_overlap_integrator.py','test_compton_overlap_assembly.py',
+        'prepare_compton_overlap_measure.py','build_compton_a_guard_field.py','generate_compton_a_guard.py',
+        'compton_cartesian_patch.py','compton_boundary_quadrature.py','geometry.py','config.json')
+    paths={n:HERE/n for n in names}
+    paths.update({n:ROOT/n for n in ('compton_event_response.py','detector_csv.py')})
+    paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz';hashes={n:digest(p) for n,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;archive=DATA/(tag+'_code.tar.gz')
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+shlex.quote(release));transfer(SERVER,archive,release+'/code.tar.gz')
+    tests=ssh(SERVER,'tar --no-same-owner -xzf '+shlex.quote(release+'/code.tar.gz')+' -C '+shlex.quote(release)+
+        ' && cd '+shlex.quote(release)+' && CUDA_VISIBLE_DEVICES='+str(device)+' '+PYTHON+' -m unittest test_compton_overlap_integrator test_compton_overlap_assembly test_compton_overlap_cuda -v 2>&1')
+    if 'Ran 12 tests' not in tests or '\nOK' not in tests:raise ValueError('Full-cell integration tests failed')
+    (REPORT/(tag+'_tests.txt')).write_text(tests+'\n',encoding='utf-8')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    output=REMOTE+'/'+tag
+    command=PYTHON+' benchmark_compton_overlap_v3.py --field '+REMOTE+'/A440_guard_field'+\
+        ' --patches '+REMOTE+'/A440_near_patch_ultrafine --geometry '+release+'/geometry.npz --config '+release+'/config.json'+\
+        ' --measure '+REMOTE+'/A440_guard_field_repair/precise_measure --inputs '+SERVER_STUDY+'/analysis_inputs'+\
+        ' --factors '+SERVER_BASE+'/generated/FactorsCalibrated --scan '+REMOTE+'/R1_analysis --output '+output
+    if column:
+        command+=' --column '+REMOTE+'/A440_near_column --views 6 16'
+        if cuda:command+=' --device-integrate --event-count 8 --reference-benchmark '+REMOTE+'/column_operator_cpu'
+        else:command+=' --event-count 2'
+    elif cuda:command+=' --device-integrate --event-count 64 --views 1 6 --reference-benchmark '+REMOTE+'/overlap_benchmark_cached'
+    elif batched:command+=' --event-count 64 --views 1 6 --reference-benchmark '+REMOTE+'/overlap_benchmark_cached'
+    elif cached:command+=' --event-count 8 --views 1 6 11 16 --reference-benchmark '+REMOTE+'/overlap_benchmark'
+    script=DATA/('run_'+tag+'.sh')
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 45m '+command+'\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+shlex.quote(release+'/run_'+tag+'.sh')+' > '+shlex.quote(REMOTE+'/'+tag+'.log')+' 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown complete-cell benchmark launch outcome')
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=45,diagnostic_events=(16 if cuda else 4) if column else (128 if (batched or cuda) else (32 if cached else 4)),partial_cells=6880,
+        diagnostic_only=True,new_transport_photons=0,reconstruction_submitted=False,S2_generated=False))
+    print('OVERLAP_BENCHMARK_PID',pid)
+
+
+def fetch_overlap_benchmark(cached=False,batched=False,cuda=False,column=False):
+    tag=('column_operator_cuda' if cuda else 'column_operator_cpu') if column else ('overlap_benchmark_cuda' if cuda else ('overlap_benchmark_batched' if batched else ('overlap_benchmark_cached' if cached else 'overlap_benchmark')))
+    job=json.loads((REPORT/(tag+'_job.json')).read_text());target=DATA/tag
+    target.mkdir(exist_ok=True);source=job['output']+'/benchmark_gate.json'
+    expected=ssh(SERVER,'sha256sum '+shlex.quote(source)).split()[0]
+    subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+source,str(target/'benchmark_gate.json')],check=True)
+    if digest(target/'benchmark_gate.json')!=expected:raise ValueError('Complete-cell evidence transfer differs')
+    value=json.loads((target/'benchmark_gate.json').read_text())
+    deployment=json.loads((REPORT/(tag+'_deployment.json')).read_text())
+    if any(deployment['code_sha256'][n]!=s for n,s in value['source_sha256'].items()):
+        raise ValueError('Executed complete-cell code differs')
+    summary=dict(value,evidence_sha256=expected,job=job)
+    write(REPORT/(tag+'_summary.json'),summary)
+    print(json.dumps({k:v for k,v in summary.items() if k not in ('cases','source_sha256')},indent=2))
+
+
+def guard_components(device,sampling=False):
+    tag='guard_sampling' if sampling else 'guard_components'
+    entry='diagnose_compton_a_sampling_v3.py' if sampling else 'diagnose_compton_a_components_v3.py'
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('Component diagnostic already registered')
+    if ssh(SERVER,"pgrep -af "+shlex.quote('[d]'+entry[1:])+' || true'):
+        raise ValueError('Component diagnostic is already running')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<30000 or util>5:raise ValueError('Diagnostic GPU is occupied')
+    names=(entry,'build_compton_a_guard_field.py','generate_compton_a_guard.py',
+        'compton_cartesian_patch.py','compton_boundary_quadrature.py','geometry.py','config.json')
+    paths={n:HERE/n for n in names};paths.update({n:ROOT/n for n in ('compton_event_response.py','detector_csv.py')})
+    paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz'
+    hashes={n:digest(p) for n,p in paths.items()};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;archive=DATA/(tag+'_code.tar.gz')
+    with tarfile.open(archive,'w:gz') as f:
+        for n,path in paths.items():f.add(path,arcname=n)
+    ssh(SERVER,'mkdir -p -- '+shlex.quote(release));transfer(SERVER,archive,release+'/code.tar.gz')
+    ssh(SERVER,'tar --no-same-owner -xzf '+shlex.quote(release+'/code.tar.gz')+' -C '+shlex.quote(release)+
+        ' && cd '+shlex.quote(release)+' && '+PYTHON+' -m py_compile '+entry)
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes,archive_sha256=digest(archive)))
+    output=REMOTE+('/A440_sampling_diagnosis' if sampling else '/A440_component_diagnosis')
+    command=PYTHON+' '+entry
+    if not sampling:command+=' --root '+SERVER_ROOT+' --guard '+REMOTE+'/A440_guard'
+    command+=' --field '+REMOTE+'/A440_guard_field --patches '+REMOTE+'/A440_near_patch_ultrafine'+\
+        ' --cases '+REMOTE+'/A440_near_patch_ultrafine/integrals/integral_cases.csv'+\
+        ' --geometry '+release+'/geometry.npz --config '+release+'/config.json'+\
+        ' --inputs '+SERVER_STUDY+'/analysis_inputs --factors '+SERVER_BASE+'/generated/FactorsCalibrated --output '+output
+    script=DATA/('run_'+tag+'.sh')
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 30m '+command+'\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+shlex.quote(release+'/run_'+tag+'.sh')+' > '+shlex.quote(REMOTE+'/'+tag+'.log')+' 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown component diagnostic launch outcome')
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=30,diagnostic_cases=84,new_transport_photons=0,
+        new_matrix_points=0,reconstruction_submitted=False,S2_generated=False))
+    print('COMPONENT_DIAGNOSTIC_PID',pid)
+
+
+def fetch_guard_components(sampling=False):
+    tag='guard_sampling' if sampling else 'guard_components';job=json.loads((REPORT/(tag+'_job.json')).read_text())
+    kind='sampling' if sampling else 'component'
+    target=DATA/tag;target.mkdir(exist_ok=True);hashes={}
+    for name in (kind+'_gate.json',kind+'_cases.csv'):
+        source=job['output']+'/'+name;expected=ssh(SERVER,'sha256sum '+shlex.quote(source)).split()[0]
+        subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+source,str(target/name)],check=True)
+        if digest(target/name)!=expected:raise ValueError('Component evidence transfer differs')
+        hashes[name]=expected
+    value=json.loads((target/(kind+'_gate.json')).read_text())
+    deployment=json.loads((REPORT/(tag+'_deployment.json')).read_text())
+    entry='diagnose_compton_a_sampling_v3.py' if sampling else 'diagnose_compton_a_components_v3.py'
+    if value['code_sha256']!=deployment['code_sha256'][entry]:
+        raise ValueError('Executed component code differs')
+    if hashes[kind+'_cases.csv']!=value['output_sha256']:raise ValueError('Diagnostic CSV differs')
+    write(REPORT/(tag+'_summary.json'),dict(value,evidence_sha256=hashes,job=job))
+    print(json.dumps({k:v for k,v in value.items() if k!='inputs_sha256'},indent=2))
+
+
+def verify_overlap_backends():
+    tag='overlap_backend_validation'
+    if (REPORT/(tag+'.json')).exists():raise ValueError('Backend verification already registered')
+    paths={n:HERE/n for n in ('verify_compton_overlap_backends_v3.py','generate_compton_a_guard.py')}
+    hashes={n:digest(p) for n,p in paths.items()};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;ssh(SERVER,'mkdir -p -- '+shlex.quote(release))
+    for n,path in paths.items():transfer(SERVER,path,release+'/'+n)
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes))
+    output=REMOTE+'/'+tag+'.json'
+    print(ssh(SERVER,'cd '+shlex.quote(release)+' && timeout 5m '+PYTHON+' verify_compton_overlap_backends_v3.py'+
+        ' --cpu '+REMOTE+'/overlap_benchmark_batched --device '+REMOTE+'/overlap_benchmark_cuda --output '+output))
+    expected=ssh(SERVER,'sha256sum '+output).split()[0];target=DATA/(tag+'.json')
+    subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+output,str(target)],check=True)
+    if digest(target)!=expected:raise ValueError('Backend verification evidence differs')
+    value=json.loads(target.read_text());write(REPORT/(tag+'.json'),dict(value,evidence_sha256=expected))
+
+
+def guard_column(device):
+    tag='guard_column'
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('Column matrix already registered')
+    if ssh(SERVER,"pgrep -af '[g]enerate_compton_a_column_v3.py' || true"):raise ValueError('Column is already active')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Column GPU is occupied')
+    paths={n:HERE/n for n in ('generate_compton_a_column_v3.py','generate_compton_a_guard.py')}
+    hashes={n:digest(p) for n,p in paths.items()};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;ssh(SERVER,'mkdir -p -- '+shlex.quote(release))
+    for n,path in paths.items():transfer(SERVER,path,release+'/'+n)
+    ssh(SERVER,'cd '+shlex.quote(release)+' && '+PYTHON+' -m py_compile generate_compton_a_column_v3.py')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes))
+    output=REMOTE+'/A440_near_column'
+    script=DATA/('run_'+tag+'.sh')
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 45m '+PYTHON+' generate_compton_a_column_v3.py --root '+SERVER_ROOT+
+        ' --patches '+REMOTE+'/A440_near_patch_ultrafine --output '+output+' --cuda 0\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_'+tag+'.sh > '+REMOTE+'/'+tag+'.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown column launch outcome')
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=45,new_matrix_points=30107,new_transport_photons=0,
+        physical_models_unchanged=True,computational_detector_rows=11520,
+        reconstruction_submitted=False,S2_generated=False))
+    print('COLUMN_PID',pid)
+
+
+def fetch_guard_column():
+    tag='guard_column';job=json.loads((REPORT/(tag+'_job.json')).read_text());path=job['output']+'/column_gate.json'
+    target=DATA/(tag+'.json');expected=ssh(SERVER,'sha256sum '+path).split()[0]
+    subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+path,str(target)],check=True)
+    if digest(target)!=expected:raise ValueError('Column evidence transfer differs')
+    value=json.loads(target.read_text());write(REPORT/(tag+'_summary.json'),dict(value,evidence_sha256=expected,job=job))
+    print(json.dumps({k:v for k,v in value.items() if k not in ('part','common_point_regression')},indent=2))
+
+
+def tile_pilot(device):
+    tag='tile_pilot'
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('A tile pilot is already registered')
+    if ssh(SERVER,"pgrep -af '[g]enerate_compton_a_tile_pilot_v3.py' || true"):
+        raise ValueError('Tile pilot already active')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Requested pilot GPU is occupied')
+    names=('generate_compton_a_tile_pilot_v3.py','generate_compton_a_column_v3.py','generate_compton_a_guard.py',
+        'plan_compton_a_tiles_v3.py','test_compton_a_tiles_v3.py','geometry.py',
+        'compton_overlap_integrator.py','compton_boundary_quadrature.py')
+    paths={n:HERE/n for n in names};paths['compton_event_response.py']=ROOT/'compton_event_response.py'
+    paths['A_tile_plan.json']=REPORT/'A_tile_plan.json'
+    hashes={n:digest(path) for n,path in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;ssh(SERVER,'mkdir -p -- '+shlex.quote(release))
+    for n,path in paths.items():transfer(SERVER,path,release+'/'+n)
+    tests=ssh(SERVER,'cd '+shlex.quote(release)+' && '+PYTHON+' -m unittest test_compton_a_tiles_v3 -v 2>&1')
+    if 'Ran 5 tests' not in tests or '\nOK' not in tests:raise ValueError('Pilot tests did not pass')
+    (REPORT/(tag+'_tests.txt')).write_text(tests,encoding='utf-8')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes))
+    output=REMOTE+'/A440_tile_pilot';script=DATA/('run_'+tag+'.sh')
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 45m '+PYTHON+' generate_compton_a_tile_pilot_v3.py --root '+SERVER_ROOT+
+        ' --plan '+release+'/A_tile_plan.json --field '+REMOTE+'/A440_guard_field --output '+output+' --cuda 0\n',
+        encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_'+tag+'.sh > '+REMOTE+'/'+tag+'.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown tile pilot launch outcome; inspect before retry')
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=45,new_matrix_points=9826,new_transport_photons=0,
+        physical_models_unchanged=True,computational_detector_rows=11520,
+        reconstruction_submitted=False,S2_generated=False))
+    print('TILE_PILOT_PID',pid)
+
+
+def fetch_tile_pilot():
+    tag='tile_pilot';job=json.loads((REPORT/(tag+'_job.json')).read_text());path=job['output']+'/tile_pilot_gate.json'
+    target=DATA/(tag+'.json');expected=ssh(SERVER,'sha256sum '+path).split()[0]
+    subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+path,str(target)],check=True)
+    if digest(target)!=expected:raise ValueError('Tile pilot evidence transfer differs')
+    value=json.loads(target.read_text());write(REPORT/(tag+'_summary.json'),dict(value,evidence_sha256=expected,job=job))
+    print(json.dumps({k:v for k,v in value.items() if k not in ('receipts','original_common_points','shared_physical_face')},indent=2))
+
+
+def verify_tile_reader():
+    tag='tile_reader';pilot=json.loads((REPORT/'tile_pilot_summary.json').read_text())
+    if pilot['status']!='TILE_INTERFACE_AND_COMPACTION_PASSED_ACCURACY_HOLD':raise ValueError('Tile pilot not validated')
+    names=('compton_tiled_a_field.py','verify_compton_a_tile_reader_v3.py','test_compton_tiled_a_field_v3.py',
+        'plan_compton_a_tiles_v3.py','generate_compton_a_guard.py','geometry.py',
+        'compton_overlap_integrator.py','compton_boundary_quadrature.py')
+    paths={n:HERE/n for n in names};paths['compton_event_response.py']=ROOT/'compton_event_response.py'
+    hashes={n:digest(path) for n,path in paths.items()};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;ssh(SERVER,'mkdir -p -- '+shlex.quote(release))
+    for n,path in paths.items():transfer(SERVER,path,release+'/'+n)
+    tests=ssh(SERVER,'cd '+shlex.quote(release)+' && '+PYTHON+' -m unittest test_compton_tiled_a_field_v3 -v 2>&1')
+    if 'Ran 3 tests' not in tests or '\nOK' not in tests:raise ValueError('Compact reader tests failed')
+    (REPORT/(tag+'_tests.txt')).write_text(tests,encoding='utf-8')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes))
+    output=REMOTE+'/tile_reader_gate.json'
+    ssh(SERVER,'cd '+shlex.quote(release)+' && timeout --signal=TERM --kill-after=10s 2m '+PYTHON+
+        ' verify_compton_a_tile_reader_v3.py --pilot '+pilot['job']['output']+' --field '+REMOTE+'/A440_guard_field --output '+output)
+    expected=ssh(SERVER,'sha256sum '+output).split()[0];target=DATA/'tile_reader_gate.json'
+    subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+output,str(target)],check=True)
+    if digest(target)!=expected:raise ValueError('Compact reader evidence transfer differs')
+    value=json.loads(target.read_text());write(REPORT/(tag+'_summary.json'),dict(value,evidence_sha256=expected))
+    print(json.dumps({k:v for k,v in value.items() if k!='records'},indent=2))
+
+
+def regional_a(device,group):
+    tag='regional_a_g'+str(group)
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('Regional group already registered')
+    plan=json.loads((REPORT/'regional_a_plan.json').read_text())
+    if plan['source_sha256']!=digest(HERE/'plan_compton_regional_a_v3.py'):
+        raise ValueError('Frozen regional plan generator differs')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<40000 or util>5:raise ValueError('Regional diagnostic GPU is occupied')
+    if ssh(SERVER,"pgrep -af '[g]enerate_compton_regional_a_v3.py.*--group "+str(group)+" ' || true"):
+        raise ValueError('Regional group is already active')
+    names=('generate_compton_regional_a_v3.py','generate_compton_a_column_v3.py',
+        'generate_compton_a_guard.py','plan_compton_regional_a_v3.py')
+    paths={n:HERE/n for n in names};paths['regional_a_plan.json']=REPORT/'regional_a_plan.json'
+    hashes={n:digest(path) for n,path in paths.items()};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;ssh(SERVER,'mkdir -p -- '+shlex.quote(release))
+    for n,path in paths.items():transfer(SERVER,path,release+'/'+n)
+    ssh(SERVER,'cd '+shlex.quote(release)+' && '+PYTHON+' -m py_compile generate_compton_regional_a_v3.py')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes))
+    output=REMOTE+'/regional_a_g'+str(group);script=DATA/('run_'+tag+'.sh')
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 45m '+PYTHON+' generate_compton_regional_a_v3.py --root '+SERVER_ROOT+
+        ' --plan '+release+'/regional_a_plan.json --group '+str(group)+' --output '+output+' --cuda 0\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_'+tag+'.sh > '+REMOTE+'/'+tag+'.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown regional group launch outcome; inspect before retry')
+    points=sum(__import__('math').prod(s['shape']) for c in plan['cases'] if c['group']==group for s in c['parts'])
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,group=group,
+        launcher_sha256=digest(script),timeout_minutes=45,new_matrix_points=points,new_transport_photons=0,
+        physical_models_unchanged=True,computational_detector_rows=11520,
+        reconstruction_submitted=False,S2_generated=False))
+    print('REGIONAL_A_PID',pid,'GROUP',group)
+
+
+def fetch_regional_a(group):
+    tag='regional_a_g'+str(group);job=json.loads((REPORT/(tag+'_job.json')).read_text());path=job['output']+'/regional_ready.json'
+    expected=ssh(SERVER,'sha256sum '+path).split()[0];target=DATA/(tag+'.json')
+    subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+path,str(target)],check=True)
+    if digest(target)!=expected:raise ValueError('Regional evidence transfer differs')
+    value=json.loads(target.read_text());write(REPORT/(tag+'_summary.json'),dict(value,evidence_sha256=expected,job=job))
+    print(json.dumps({k:v for k,v in value.items() if k!='results'},indent=2))
+
+
+def regional_validation(device, frozen_measure=False):
+    tag='regional_validation_frozen_measure' if frozen_measure else 'regional_validation'
+    if frozen_measure:
+        previous=json.loads((REPORT/'regional_validation_job.json').read_text())
+        if ssh(SERVER,'if ps -p '+str(previous['pid'])+' -o args= | grep -q run_regional_validation; then echo ACTIVE; fi'):
+            raise ValueError('Previous regional diagnostic still running')
+        log=ssh(SERVER,'cat '+REMOTE+'/regional_validation.log')
+        if 'Frozen regional response/measure/kernel identity differs' not in log:
+            raise ValueError('This repair is restricted to the identified measure reference failure')
+        (REPORT/'regional_validation_identity_failure.txt').write_text(log,encoding='utf-8')
+    if (REPORT/(tag+'_job.json')).exists():raise ValueError('Regional precision diagnostic already registered')
+    for group in range(3):
+        job=json.loads((REPORT/('regional_a_g'+str(group)+'_job.json')).read_text())
+        ready=json.loads(ssh(SERVER,'cat '+job['output']+'/regional_ready.json'))
+        if ready['status']!='REGIONAL_PHYSICAL_COMMON_POINTS_PASSED_ACCURACY_PENDING':
+            raise ValueError('Regional physical production has not passed')
+    free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
+    if free<30000 or util>5:raise ValueError('Diagnostic GPU is occupied')
+    names=('validate_compton_regional_a_v3.py','geometry.py','compton_cartesian_patch.py',
+        'test_compton_cartesian_patch.py','compton_boundary_quadrature.py','generate_compton_a_guard.py')
+    paths={n:HERE/n for n in names};paths.update({n:ROOT/n for n in ('compton_event_response.py','detector_csv.py')})
+    paths['geometry.npz']=HERE/'generated/Geometry/geometry.npz';paths['config.json']=HERE/'config.json'
+    paths['regional_a_plan.json']=REPORT/'regional_a_plan.json'
+    if frozen_measure:
+        paths['measure.npz']=DATA/'precise_measure/measure.npz'
+        paths['measure_manifest.json']=DATA/'precise_measure/measure_manifest.json'
+        plan=json.loads((REPORT/'regional_a_plan.json').read_text())
+        if digest(paths['measure.npz'])!=plan['measure_npz_sha256']:
+            raise ValueError('Exact frozen plan measure differs')
+    hashes={n:digest(path) for n,path in paths.items()};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=REMOTE+'/'+tag+'_releases/'+key;ssh(SERVER,'mkdir -p -- '+shlex.quote(release))
+    for n,path in paths.items():transfer(SERVER,path,release+'/'+n)
+    tests=ssh(SERVER,'cd '+shlex.quote(release)+' && '+PYTHON+' -m unittest test_compton_cartesian_patch -v 2>&1')
+    if '\nOK' not in tests or 'skipped' in tests:raise ValueError('Physical patch interpolation tests failed')
+    (REPORT/(tag+'_tests.txt')).write_text(tests,encoding='utf-8')
+    write(REPORT/(tag+'_deployment.json'),dict(release=release,code_sha256=hashes))
+    output=REMOTE+'/'+tag;script=DATA/('run_'+tag+'.sh')
+    measure_path=release if frozen_measure else REMOTE+'/A440_guard_field_repair/precise_measure'
+    command=(PYTHON+' validate_compton_regional_a_v3.py --plan '+release+'/regional_a_plan.json --samples '+REMOTE+
+        ' --field '+REMOTE+'/A440_guard_field --geometry '+release+'/geometry.npz --config '+release+'/config.json'+
+        ' --measure '+measure_path+' --inputs '+SERVER_STUDY+'/analysis_inputs'+
+        ' --factors '+SERVER_BASE+'/generated/FactorsCalibrated --scan '+REMOTE+'/R1_analysis --output '+output)
+    script.write_text('#!/usr/bin/env bash\nset -euo pipefail\nexec 9>'+REMOTE+'/'+tag+'.lock\nflock -n 9\n'+
+        'export CUDA_VISIBLE_DEVICES='+str(device)+' PYTHONUNBUFFERED=1 OMP_NUM_THREADS=8\ncd '+release+'\n'+
+        'timeout --signal=TERM --kill-after=30s 10m '+command+'\n',encoding='ascii',newline='\n')
+    transfer(SERVER,script,release+'/run_'+tag+'.sh')
+    pid=ssh(SERVER,'nohup bash '+release+'/run_'+tag+'.sh > '+REMOTE+'/'+tag+'.log 2>&1 < /dev/null & echo $!')
+    if not pid.isdigit():raise ValueError('Unknown regional precision diagnostic launch outcome')
+    write(REPORT/(tag+'_job.json'),dict(pid=int(pid),physical_gpu=device,release=release,output=output,
+        launcher_sha256=digest(script),timeout_minutes=10,control_cells=12,new_transport_photons=0,
+        reconstruction_submitted=False,S2_generated=False))
+    print('REGIONAL_VALIDATION_PID',pid)
+
+
+def fetch_regional_validation():
+    tag='regional_validation_frozen_measure' if (REPORT/'regional_validation_frozen_measure_job.json').exists() else 'regional_validation'
+    job=json.loads((REPORT/(tag+'_job.json')).read_text())
+    for remote,local in (('regional_validation.json',DATA/'regional_validation.json'),
+            ('regional_cases.csv',REPORT/'regional_validation_cases.csv')):
+        path=job['output']+'/'+remote;expected=ssh(SERVER,'sha256sum '+path).split()[0]
+        subprocess.run(['scp','-o','BatchMode=yes',SERVER+':'+path,str(local)],check=True)
+        if digest(local)!=expected:raise ValueError('Regional diagnostic evidence transfer differs')
+    value=json.loads((DATA/'regional_validation.json').read_text())
+    expected=digest(DATA/'regional_validation.json')
+    if digest(REPORT/'regional_validation_cases.csv')!=value['csv_sha256']:raise ValueError('Regional case manifest differs')
+    write(REPORT/(tag+'_summary.json'),dict(value,evidence_sha256=expected,job=job))
+    print(json.dumps({k:v for k,v in value.items() if k not in ('events','by_control')},indent=2))
+
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=('stage','launch','status','repair','boundary','fetch-boundary','fetch-scan','spatial','fetch-spatial','repair-spatial','guard','guard-field','guard-radial','fetch-guard','repair-guard-measure','guard-weighted','guard-integral','guard-patch','guard-patch-refined','guard-patch-ultrafine','fetch-integrals'))
-    p.add_argument('--gpu',type=int,default=3);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=('stage','launch','status','repair','boundary','fetch-boundary','fetch-scan','spatial','fetch-spatial','repair-spatial','guard','guard-field','guard-radial','fetch-guard','repair-guard-measure','guard-weighted','guard-integral','guard-patch','guard-patch-refined','guard-patch-ultrafine','fetch-integrals','overlap-benchmark','fetch-overlap-benchmark','overlap-benchmark-cached','fetch-overlap-benchmark-cached','guard-components','fetch-guard-components','guard-sampling','fetch-guard-sampling','overlap-benchmark-batched','fetch-overlap-benchmark-batched','overlap-benchmark-cuda','fetch-overlap-benchmark-cuda','verify-overlap-backends','guard-column','fetch-guard-column','column-operator-cpu','fetch-column-operator-cpu','column-operator-cuda','fetch-column-operator-cuda','tile-pilot','fetch-tile-pilot','verify-tile-reader','regional-a','fetch-regional-a','regional-validation','regional-validation-repair','fetch-regional-validation'))
+    p.add_argument('--gpu',type=int,default=3);p.add_argument('--group',type=int,choices=(0,1,2),default=0);a=p.parse_args()
     if a.action=='stage':stage()
     elif a.action=='launch':launch(a.gpu)
     elif a.action=='repair':repair(a.gpu)
@@ -535,4 +910,31 @@ if __name__=='__main__':
     elif a.action=='guard-patch-refined':guard_integral(a.gpu,patch=True,refined=True)
     elif a.action=='guard-patch-ultrafine':guard_integral(a.gpu,patch=True,refined=True,ultrafine=True)
     elif a.action=='fetch-integrals':fetch_integrals()
+    elif a.action=='overlap-benchmark':overlap_benchmark(a.gpu)
+    elif a.action=='fetch-overlap-benchmark':fetch_overlap_benchmark()
+    elif a.action=='overlap-benchmark-cached':overlap_benchmark(a.gpu,cached=True)
+    elif a.action=='fetch-overlap-benchmark-cached':fetch_overlap_benchmark(cached=True)
+    elif a.action=='overlap-benchmark-batched':overlap_benchmark(a.gpu,batched=True)
+    elif a.action=='fetch-overlap-benchmark-batched':fetch_overlap_benchmark(batched=True)
+    elif a.action=='overlap-benchmark-cuda':overlap_benchmark(a.gpu,cuda=True)
+    elif a.action=='fetch-overlap-benchmark-cuda':fetch_overlap_benchmark(cuda=True)
+    elif a.action=='verify-overlap-backends':verify_overlap_backends()
+    elif a.action=='guard-column':guard_column(a.gpu)
+    elif a.action=='fetch-guard-column':fetch_guard_column()
+    elif a.action=='column-operator-cpu':overlap_benchmark(a.gpu,column=True)
+    elif a.action=='fetch-column-operator-cpu':fetch_overlap_benchmark(column=True)
+    elif a.action=='column-operator-cuda':overlap_benchmark(a.gpu,column=True,cuda=True)
+    elif a.action=='fetch-column-operator-cuda':fetch_overlap_benchmark(column=True,cuda=True)
+    elif a.action=='tile-pilot':tile_pilot(a.gpu)
+    elif a.action=='fetch-tile-pilot':fetch_tile_pilot()
+    elif a.action=='verify-tile-reader':verify_tile_reader()
+    elif a.action=='regional-a':regional_a(a.gpu,a.group)
+    elif a.action=='fetch-regional-a':fetch_regional_a(a.group)
+    elif a.action=='regional-validation':regional_validation(a.gpu)
+    elif a.action=='regional-validation-repair':regional_validation(a.gpu,frozen_measure=True)
+    elif a.action=='fetch-regional-validation':fetch_regional_validation()
+    elif a.action=='guard-components':guard_components(a.gpu)
+    elif a.action=='fetch-guard-components':fetch_guard_components()
+    elif a.action=='guard-sampling':guard_components(a.gpu,sampling=True)
+    elif a.action=='fetch-guard-sampling':fetch_guard_components(sampling=True)
     else:status()

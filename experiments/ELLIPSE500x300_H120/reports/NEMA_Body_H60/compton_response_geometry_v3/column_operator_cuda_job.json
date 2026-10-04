@@ -1,0 +1,14 @@
+{
+  "pid": 2316013,
+  "physical_gpu": 4,
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/column_operator_cuda_releases/95ef040319eae631",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/column_operator_cuda",
+  "launcher_sha256": "d78106310c4c8343a6089661e6f61ea595fa0016bff2c6d274f0bd5a0fa29390",
+  "timeout_minutes": 45,
+  "diagnostic_events": 16,
+  "partial_cells": 6880,
+  "diagnostic_only": true,
+  "new_transport_photons": 0,
+  "reconstruction_submitted": false,
+  "S2_generated": false
+}

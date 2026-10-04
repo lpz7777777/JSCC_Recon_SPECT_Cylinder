@@ -1,0 +1,387 @@
+{
+  "status": "INTEGRATOR_BENCHMARK_COMPLETE_A_ACCURACY_HOLD",
+  "cases": [
+    {
+      "view": 1,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 2,
+      "input_sha256": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+      "kept_rows_sha256": "a5cdf4f4137beb60373ec6b887e2e1e4528b5c8099c70e23e34a62904848cb90",
+      "raw_rows": [
+        0,
+        8
+      ],
+      "q": [
+        0.00010473908306447881,
+        2.6771034089842103e-05
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 6.785360540106922e-08,
+      "mixed_reference": [
+        3.173131345564514,
+        3.0454851084128283
+      ],
+      "common_R1_reference": [
+        3.173002870091661,
+        3.0453489018271385
+      ],
+      "statistics": {
+        "events": 2,
+        "partial_cells": 6880,
+        "view_zero_based": 0,
+        "order": [
+          8,
+          4,
+          4
+        ],
+        "quadrature_nodes": 2109440,
+        "maximum_point_chunk": 2560,
+        "cache_bytes": 134078976,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 2109440
+        },
+        "elapsed_seconds": 9.319548428000417,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "integral_file_sha256": "a7f91d71a978ce08cc1e9ab21be2b8dd3ea0f443f992b022d3565784959e34e9"
+    },
+    {
+      "view": 1,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 2,
+      "input_sha256": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+      "kept_rows_sha256": "a5cdf4f4137beb60373ec6b887e2e1e4528b5c8099c70e23e34a62904848cb90",
+      "raw_rows": [
+        0,
+        8
+      ],
+      "q": [
+        0.00010473908306447881,
+        2.6771034089842103e-05
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 6.78535911902145e-08,
+      "mixed_reference": [
+        3.1731313523169153,
+        3.045483284124594
+      ],
+      "common_R1_reference": [
+        3.173002870091661,
+        3.0453489018271385
+      ],
+      "statistics": {
+        "events": 2,
+        "partial_cells": 6880,
+        "view_zero_based": 0,
+        "order": [
+          16,
+          8,
+          8
+        ],
+        "quadrature_nodes": 16875520,
+        "maximum_point_chunk": 20480,
+        "cache_bytes": 133705728,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 16875520
+        },
+        "elapsed_seconds": 18.162629890983226,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 27520,
+      "quadrature_entries_passed": 27520,
+      "maximum_integral_relative_change": 0.004601261313256101,
+      "active_row_relative_l2": [
+        0.00010522043885430321,
+        5.1576051191659644e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 1.1880730329575838e-07,
+      "integral_file_sha256": "6703d7a52a5c1543131fb2839b1d3a657b36361f5976d2e12252ed6ca1ef751a"
+    },
+    {
+      "view": 1,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 2,
+      "input_sha256": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+      "kept_rows_sha256": "a5cdf4f4137beb60373ec6b887e2e1e4528b5c8099c70e23e34a62904848cb90",
+      "raw_rows": [
+        0,
+        8
+      ],
+      "q": [
+        0.00010473908306447881,
+        2.6771034089842103e-05
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 6.78535911902145e-08,
+      "mixed_reference": [
+        3.173131393815077,
+        3.0454828220014387
+      ],
+      "common_R1_reference": [
+        3.173002870091661,
+        3.0453489018271385
+      ],
+      "statistics": {
+        "events": 2,
+        "partial_cells": 6880,
+        "view_zero_based": 0,
+        "order": [
+          32,
+          12,
+          12
+        ],
+        "quadrature_nodes": 75939840,
+        "maximum_point_chunk": 32768,
+        "cache_bytes": 125908992,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 75939840
+        },
+        "elapsed_seconds": 49.79714137798874,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 27520,
+      "quadrature_entries_passed": 27520,
+      "maximum_integral_relative_change": 0.0010174203557876049,
+      "active_row_relative_l2": [
+        2.1019399355282076e-05,
+        1.079793946701102e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 2.5348025376718215e-08,
+      "integral_file_sha256": "61328027f996606ec66307328874b2668d0546e49feb2d549dcd89d267686f42"
+    },
+    {
+      "view": 11,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 2,
+      "input_sha256": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+      "kept_rows_sha256": "60a3301d4041b31a61102523cd446290d4d883013d9b77725f676ff216837a3d",
+      "raw_rows": [
+        0,
+        10
+      ],
+      "q": [
+        4.537823957975514e-06,
+        2.556353198009766e-05
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        4.928190443783866,
+        3.243358689992574
+      ],
+      "common_R1_reference": [
+        4.928182799708755,
+        3.2433350029221515
+      ],
+      "statistics": {
+        "events": 2,
+        "partial_cells": 6880,
+        "view_zero_based": 10,
+        "order": [
+          8,
+          4,
+          4
+        ],
+        "quadrature_nodes": 2109440,
+        "maximum_point_chunk": 2560,
+        "cache_bytes": 134078976,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 2109440
+        },
+        "elapsed_seconds": 9.280984593991889,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "integral_file_sha256": "71d6a96795989ebce16bb986f4d215e0b580aebf96d78e8cd2c7d66d7c73ce58"
+    },
+    {
+      "view": 11,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 2,
+      "input_sha256": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+      "kept_rows_sha256": "60a3301d4041b31a61102523cd446290d4d883013d9b77725f676ff216837a3d",
+      "raw_rows": [
+        0,
+        10
+      ],
+      "q": [
+        4.537823957975514e-06,
+        2.556353198009766e-05
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 7.767179255324663e-08,
+      "mixed_reference": [
+        4.928191073641324,
+        3.2433545305754024
+      ],
+      "common_R1_reference": [
+        4.928182799708755,
+        3.2433350029221515
+      ],
+      "statistics": {
+        "events": 2,
+        "partial_cells": 6880,
+        "view_zero_based": 10,
+        "order": [
+          16,
+          8,
+          8
+        ],
+        "quadrature_nodes": 16875520,
+        "maximum_point_chunk": 20480,
+        "cache_bytes": 133705728,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 16875520
+        },
+        "elapsed_seconds": 18.447929026995553,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 27520,
+      "quadrature_entries_passed": 27520,
+      "maximum_integral_relative_change": 0.007595901964195167,
+      "active_row_relative_l2": [
+        2.9607936085085385e-05,
+        0.00016566972772125155
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 7.824074652963333e-08,
+      "integral_file_sha256": "14a1b2771ee1dc1aca7646cf7f1e8da598c89c0d93fe63aca3f9844cb9e17b34"
+    },
+    {
+      "view": 11,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 2,
+      "input_sha256": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+      "kept_rows_sha256": "60a3301d4041b31a61102523cd446290d4d883013d9b77725f676ff216837a3d",
+      "raw_rows": [
+        0,
+        10
+      ],
+      "q": [
+        4.537823957975514e-06,
+        2.556353198009766e-05
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        4.9281911348832335,
+        3.2433535145591907
+      ],
+      "common_R1_reference": [
+        4.928182799708755,
+        3.2433350029221515
+      ],
+      "statistics": {
+        "events": 2,
+        "partial_cells": 6880,
+        "view_zero_based": 10,
+        "order": [
+          32,
+          12,
+          12
+        ],
+        "quadrature_nodes": 75939840,
+        "maximum_point_chunk": 32768,
+        "cache_bytes": 125908992,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 75939840
+        },
+        "elapsed_seconds": 49.244068118016,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 27520,
+      "quadrature_entries_passed": 27520,
+      "maximum_integral_relative_change": 0.0015579281297288423,
+      "active_row_relative_l2": [
+        5.835024694533786e-06,
+        3.250560985179618e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 1.721377264382299e-08,
+      "integral_file_sha256": "11af760ec515e1105480763eb70569dfa4bb9fec8e95dd67370fab00b17b57ce"
+    }
+  ],
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "config_sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+  "measure_manifest_sha256": "ccbbc417d5aa49f2be8982d8d11920119ebd4ef57ae365e5d84c5bb45a689abb",
+  "R1_scan_gate_sha256": "fca2725b72b16da1f02555558e6d8f630e446c24b61db4b2ecc7f02958abb54b",
+  "field_provenance": {
+    "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+    "baseline_geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "baseline_B_sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38",
+    "patch_ready_sha256": "688d86fc3ad133714dcef8de2a40e32729302bf7fe51ed437353d944b9889f92",
+    "policy": "finest complete reference-cell box; fallback guarded A",
+    "calibration_refitted": false,
+    "original_data_read_only": true,
+    "production_gate": "HOLD_UNCERTIFIED_GLOBAL_A_ACCURACY"
+  },
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "source_sha256": {
+    "benchmark_compton_overlap_v3.py": "975ca205648a81dd19b394745d76042a228b9d1fc75e10985fe317f0d2f2d375",
+    "compton_overlap_integrator.py": "b88b62ffc5358f3b5cb911c926b3ea8c4bf51b63949d4333839b370865dc81e7",
+    "compton_cell_response_field.py": "3031664399bad4828f8926bf5be9032bb39dab774ccb88b0d78c6d4e274237c7",
+    "compton_overlap_assembly.py": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80"
+  },
+  "peak_host_rss_bytes": 7139237888,
+  "peak_gpu_reserved_bytes": 121634816,
+  "total_gpu_bytes": 50897289216,
+  "elapsed_seconds": 171.17573241397622,
+  "new_transport_photons": 0,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "All 6880 partial cells, object and full reference, same frozen R1 identities. Local fine A coverage and cell interfaces do not certify global A accuracy; no formal imaging.",
+  "evidence_sha256": "1ba42e8b87ce39606f181f689cc31f71844b65066c73a8b45f08d308aec2e0e3",
+  "job": {
+    "pid": 2160606,
+    "physical_gpu": 5,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/overlap_benchmark_releases/aea9678f955ec768",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/overlap_benchmark",
+    "launcher_sha256": "ea2649afe0e5d1341bd57591b18aa226623ef9549534fcb85a3e955b9b16c1f5",
+    "timeout_minutes": 45,
+    "diagnostic_events": 4,
+    "partial_cells": 6880,
+    "diagnostic_only": true,
+    "new_transport_photons": 0,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

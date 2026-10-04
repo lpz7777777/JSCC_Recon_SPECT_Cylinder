@@ -1,6 +1,6 @@
 {
   "status": "PASSED",
-  "entries": 67,
+  "entries": 358,
   "sources": [
     {
       "deployment": "guard_integral",
@@ -403,6 +403,1752 @@
       "name": "geometry.npz",
       "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
       "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "benchmark_compton_overlap_v3.py",
+      "sha256": "975ca205648a81dd19b394745d76042a228b9d1fc75e10985fe317f0d2f2d375",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/aea9678f955ec768/benchmark_compton_overlap_v3.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "b88b62ffc5358f3b5cb911c926b3ea8c4bf51b63949d4333839b370865dc81e7",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/aea9678f955ec768/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "compton_cell_response_field.py",
+      "sha256": "3031664399bad4828f8926bf5be9032bb39dab774ccb88b0d78c6d4e274237c7",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/aea9678f955ec768/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "compton_overlap_assembly.py",
+      "sha256": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "test_compton_overlap_integrator.py",
+      "sha256": "b73d987128b6e58621b63d7f4ad66ce9fa8ea4a9724f332e1b6fe867894fe7e0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/aea9678f955ec768/test_compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "test_compton_overlap_assembly.py",
+      "sha256": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "prepare_compton_overlap_measure.py",
+      "sha256": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+      "local_path": "experiments/ELLIPSE500x300_H120/prepare_compton_overlap_measure.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "overlap_benchmark",
+      "name": "run_overlap_benchmark.sh",
+      "sha256": "ea2649afe0e5d1341bd57591b18aa226623ef9549534fcb85a3e955b9b16c1f5",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/aea9678f955ec768/run_overlap_benchmark.sh"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "benchmark_compton_overlap_v3.py",
+      "sha256": "87ebfb24e8728bcef14187db5c1e2fdead77660427e1477b8cca84c5e9ef6756",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/792340bc34b3aa3c/benchmark_compton_overlap_v3.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "compton_cell_response_field.py",
+      "sha256": "e84f34a7c6e20f71b40bf11ee9b5df31f58e2be41e638a7946404ae2078dad5f",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/792340bc34b3aa3c/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "compton_overlap_assembly.py",
+      "sha256": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "test_compton_overlap_integrator.py",
+      "sha256": "fb57b6e2ba8f5f17af5241d1850a251ef98513822ebdc06fc0d40e784bbe436a",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "test_compton_overlap_assembly.py",
+      "sha256": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "prepare_compton_overlap_measure.py",
+      "sha256": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+      "local_path": "experiments/ELLIPSE500x300_H120/prepare_compton_overlap_measure.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "overlap_benchmark_cached",
+      "name": "run_overlap_benchmark_cached.sh",
+      "sha256": "09b73ef2b33f2ef41a28e6f8a73b36ddeb30ed33e53bf2a3f1ffbb2bf407163d",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/792340bc34b3aa3c/run_overlap_benchmark_cached.sh"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "diagnose_compton_a_components_v3.py",
+      "sha256": "3001cdb16946729bf029202746872e0522511b6c45ce895ed2fdedb3f8078f67",
+      "local_path": "experiments/ELLIPSE500x300_H120/diagnose_compton_a_components_v3.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "guard_components",
+      "name": "run_guard_components.sh",
+      "sha256": "ad040de5ef82eb1b84459dbc863aa75cec4e72728e67b9c97891b0d2a50aaacf",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/8070ede6ba38ef2f/run_guard_components.sh"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "diagnose_compton_a_sampling_v3.py",
+      "sha256": "abe47d5548503ab5cdbe11cb6e0450cb378e8507c1f7d04976410ccec0266c63",
+      "local_path": "experiments/ELLIPSE500x300_H120/diagnose_compton_a_sampling_v3.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "guard_sampling",
+      "name": "run_guard_sampling.sh",
+      "sha256": "c7fdaad8b624c464524d57275e02d30f10170390e23a0c82e68ec0c056718858",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9add69e87e1a9229/run_guard_sampling.sh"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "benchmark_compton_overlap_v3.py",
+      "sha256": "a22d650506c195ee5d92ee7a3f3c37b1898844f6c6ad77b9d481bb98f52ee240",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/7c448245a9569df4/benchmark_compton_overlap_v3.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "compton_cell_response_field.py",
+      "sha256": "e84f34a7c6e20f71b40bf11ee9b5df31f58e2be41e638a7946404ae2078dad5f",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/7c448245a9569df4/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "compton_overlap_assembly.py",
+      "sha256": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "test_compton_overlap_integrator.py",
+      "sha256": "fb57b6e2ba8f5f17af5241d1850a251ef98513822ebdc06fc0d40e784bbe436a",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "test_compton_overlap_assembly.py",
+      "sha256": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "prepare_compton_overlap_measure.py",
+      "sha256": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+      "local_path": "experiments/ELLIPSE500x300_H120/prepare_compton_overlap_measure.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "overlap_benchmark_batched",
+      "name": "run_overlap_benchmark_batched.sh",
+      "sha256": "30edeac74d0f4b641b63d60b93f4798bda39b37fc705d61d5f24a542541e018f",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/7c448245a9569df4/run_overlap_benchmark_batched.sh"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "benchmark_compton_overlap_v3.py",
+      "sha256": "32d3fb062babf4e7879bf0a10531baee544d64d7c12aed1f369acd2cbaf13ace",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bebe6050681e11ee/benchmark_compton_overlap_v3.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_cell_response_field.py",
+      "sha256": "e84f34a7c6e20f71b40bf11ee9b5df31f58e2be41e638a7946404ae2078dad5f",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bebe6050681e11ee/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_overlap_cuda.py",
+      "sha256": "1d9ebb53bc7022c9ef1c414bee63d171e19832bb94aa9731580fa582a177c859",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_cuda.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "test_compton_overlap_cuda.py",
+      "sha256": "09779b131c33dc38d3a2402c7e7ee40b3dba6a1f32e7c858e92e31a121a79603",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_cuda.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_overlap_assembly.py",
+      "sha256": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "test_compton_overlap_integrator.py",
+      "sha256": "fb57b6e2ba8f5f17af5241d1850a251ef98513822ebdc06fc0d40e784bbe436a",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "test_compton_overlap_assembly.py",
+      "sha256": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "prepare_compton_overlap_measure.py",
+      "sha256": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+      "local_path": "experiments/ELLIPSE500x300_H120/prepare_compton_overlap_measure.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "overlap_benchmark_cuda",
+      "name": "run_overlap_benchmark_cuda.sh",
+      "sha256": "e15d5e381f88ade3a4d469956fda17fe6656bfebfdcc34df9bbeb65d9a05db9b",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bebe6050681e11ee/run_overlap_benchmark_cuda.sh"
+    },
+    {
+      "deployment": "overlap_backend_validation",
+      "name": "verify_compton_overlap_backends_v3.py",
+      "sha256": "1a1a1300b8ce35e516ebe76ee5791f46cd79d71b11e5a32cc5e1231aa6a08abc",
+      "local_path": "experiments/ELLIPSE500x300_H120/verify_compton_overlap_backends_v3.py"
+    },
+    {
+      "deployment": "overlap_backend_validation",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "guard_column",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "guard_column",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "guard_column",
+      "name": "run_guard_column.sh",
+      "sha256": "dd476ee18a66a0008b14ef555c1c461877d773e07f35c6ab150f602a97ca8092",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/6e7adfc3ead95a5d/run_guard_column.sh"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "benchmark_compton_overlap_v3.py",
+      "sha256": "bcd8f2a0872eb983b33acd3336700387b678c03a3c4d131b6fc1d00e9cbc5bc8",
+      "local_path": "experiments/ELLIPSE500x300_H120/benchmark_compton_overlap_v3.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_overlap_cuda.py",
+      "sha256": "1d9ebb53bc7022c9ef1c414bee63d171e19832bb94aa9731580fa582a177c859",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_cuda.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "test_compton_overlap_cuda.py",
+      "sha256": "09779b131c33dc38d3a2402c7e7ee40b3dba6a1f32e7c858e92e31a121a79603",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_cuda.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_overlap_assembly.py",
+      "sha256": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "test_compton_overlap_integrator.py",
+      "sha256": "fb57b6e2ba8f5f17af5241d1850a251ef98513822ebdc06fc0d40e784bbe436a",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "test_compton_overlap_assembly.py",
+      "sha256": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "prepare_compton_overlap_measure.py",
+      "sha256": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+      "local_path": "experiments/ELLIPSE500x300_H120/prepare_compton_overlap_measure.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "column_operator_cpu",
+      "name": "run_column_operator_cpu.sh",
+      "sha256": "0c1601fdd363a145ac0f16589044bfe45bd58aa09fb44cf2b25cd572e8616722",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/95ef040319eae631/run_column_operator_cpu.sh"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "benchmark_compton_overlap_v3.py",
+      "sha256": "bcd8f2a0872eb983b33acd3336700387b678c03a3c4d131b6fc1d00e9cbc5bc8",
+      "local_path": "experiments/ELLIPSE500x300_H120/benchmark_compton_overlap_v3.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_overlap_cuda.py",
+      "sha256": "1d9ebb53bc7022c9ef1c414bee63d171e19832bb94aa9731580fa582a177c859",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_cuda.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "test_compton_overlap_cuda.py",
+      "sha256": "09779b131c33dc38d3a2402c7e7ee40b3dba6a1f32e7c858e92e31a121a79603",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_cuda.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_overlap_assembly.py",
+      "sha256": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "test_compton_overlap_integrator.py",
+      "sha256": "fb57b6e2ba8f5f17af5241d1850a251ef98513822ebdc06fc0d40e784bbe436a",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "test_compton_overlap_assembly.py",
+      "sha256": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_overlap_assembly.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "prepare_compton_overlap_measure.py",
+      "sha256": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+      "local_path": "experiments/ELLIPSE500x300_H120/prepare_compton_overlap_measure.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "build_compton_a_guard_field.py",
+      "sha256": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+      "local_path": "experiments/ELLIPSE500x300_H120/build_compton_a_guard_field.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "column_operator_cuda",
+      "name": "run_column_operator_cuda.sh",
+      "sha256": "d78106310c4c8343a6089661e6f61ea595fa0016bff2c6d274f0bd5a0fa29390",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/95ef040319eae631/run_column_operator_cuda.sh"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "generate_compton_a_tile_pilot_v3.py",
+      "sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_tile_pilot_v3.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "test_compton_a_tiles_v3.py",
+      "sha256": "cc4a45dd700ac52a1fa17e436af2b133c3169605ec1f7540c96a8ac296c62cb5",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "A_tile_plan.json",
+      "sha256": "633961fff981f13bfbd1a23976839bacd53f2dd633971a573b5e7056cbf6bb75",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/A_tile_plan.json"
+    },
+    {
+      "deployment": "tile_pilot",
+      "name": "run_tile_pilot.sh",
+      "sha256": "da437d03268bebd32ba28cc3f6015f44f7283b60609637af6b3c311fdf82b714",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/f7980c4c5ea40eaa/run_tile_pilot.sh"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "compton_tiled_a_field.py",
+      "sha256": "bbbcff11edc1599cabc95024e179766b1998a087d4d2fc75af5d47bd9c4700eb",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9214a54fd8f44b67/compton_tiled_a_field.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "verify_compton_a_tile_reader_v3.py",
+      "sha256": "c36897825c24a3c83578c64a00509c1e0cb792a72bd89183bc8d4f2cca0e1270",
+      "local_path": "experiments/ELLIPSE500x300_H120/verify_compton_a_tile_reader_v3.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "test_compton_tiled_a_field_v3.py",
+      "sha256": "1b0b390f38fe6bfe8bb1042e271b3c1cce572f0f1fdbca7c536129c6eede8645",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/9214a54fd8f44b67/test_compton_tiled_a_field_v3.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tile_reader",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "regional_a_g0",
+      "name": "generate_compton_regional_a_v3.py",
+      "sha256": "a6a0fd2c1d6864a3ce3860262ed77130ea5ab65f33687bb918a4ae6e0b4c847e",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_a_g0",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "regional_a_g0",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "regional_a_g0",
+      "name": "plan_compton_regional_a_v3.py",
+      "sha256": "f49d8f28a43b33bbf2ebf044b59536e05d219883210d95167cf397407291fabd",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_a_g0",
+      "name": "regional_a_plan.json",
+      "sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/regional_a_plan.json"
+    },
+    {
+      "deployment": "regional_a_g0",
+      "name": "run_regional_a_g0.sh",
+      "sha256": "c6edbbf3989c7713ef66b0adb816c1cbe3531240226242adfe92daf2424d1e59",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/63d405cde5eef50a/run_regional_a_g0.sh"
+    },
+    {
+      "deployment": "regional_a_g1",
+      "name": "generate_compton_regional_a_v3.py",
+      "sha256": "a6a0fd2c1d6864a3ce3860262ed77130ea5ab65f33687bb918a4ae6e0b4c847e",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_a_g1",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "regional_a_g1",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "regional_a_g1",
+      "name": "plan_compton_regional_a_v3.py",
+      "sha256": "f49d8f28a43b33bbf2ebf044b59536e05d219883210d95167cf397407291fabd",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_a_g1",
+      "name": "regional_a_plan.json",
+      "sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/regional_a_plan.json"
+    },
+    {
+      "deployment": "regional_a_g1",
+      "name": "run_regional_a_g1.sh",
+      "sha256": "d4c3e92f4275c89dbcf651a24d1cf2a148e277731ce4a97711aee2e2cb976892",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/63d405cde5eef50a/run_regional_a_g1.sh"
+    },
+    {
+      "deployment": "regional_a_g2",
+      "name": "generate_compton_regional_a_v3.py",
+      "sha256": "a6a0fd2c1d6864a3ce3860262ed77130ea5ab65f33687bb918a4ae6e0b4c847e",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_a_g2",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "regional_a_g2",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "regional_a_g2",
+      "name": "plan_compton_regional_a_v3.py",
+      "sha256": "f49d8f28a43b33bbf2ebf044b59536e05d219883210d95167cf397407291fabd",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_a_g2",
+      "name": "regional_a_plan.json",
+      "sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/regional_a_plan.json"
+    },
+    {
+      "deployment": "regional_a_g2",
+      "name": "run_regional_a_g2.sh",
+      "sha256": "4b0a4bf61707c965b889da0ab14aa41cfff68436c8936307e315f427fe0dd34a",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/63d405cde5eef50a/run_regional_a_g2.sh"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "validate_compton_regional_a_v3.py",
+      "sha256": "e5bd6655a46f103b7f6298de2c324ede207d73ec342fd7aa9a7cbfef359d26f7",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bf9d1f8f3d9b2abd/validate_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "test_compton_cartesian_patch.py",
+      "sha256": "7355fc42e4594cb7403d493753b95146cb953b03b321193c27a8a7dfcb353293",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "regional_a_plan.json",
+      "sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/regional_a_plan.json"
+    },
+    {
+      "deployment": "regional_validation",
+      "name": "run_regional_validation.sh",
+      "sha256": "6d6ef60e6d0421c8979af51997139aabb64037946a240753d4370d1008bd0e13",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bf9d1f8f3d9b2abd/run_regional_validation.sh"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "validate_compton_regional_a_v3.py",
+      "sha256": "e5bd6655a46f103b7f6298de2c324ede207d73ec342fd7aa9a7cbfef359d26f7",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/4eddb1bc22ad467e/validate_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "test_compton_cartesian_patch.py",
+      "sha256": "7355fc42e4594cb7403d493753b95146cb953b03b321193c27a8a7dfcb353293",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "regional_a_plan.json",
+      "sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/regional_a_plan.json"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "measure.npz",
+      "sha256": "bf29705fe1798c5b8000dedf1d8a00e43321a5df32f747d270db9bb7a177a1d3",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/precise_measure/measure.npz"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "measure_manifest.json",
+      "sha256": "6962199066d369de0edf74756626b5cd568f92b53b5bccd27d2b44d31e8163cf",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/precise_measure/measure_manifest.json"
+    },
+    {
+      "deployment": "regional_validation_frozen_measure",
+      "name": "run_regional_validation_frozen_measure.sh",
+      "sha256": "e6008787187b6531b16bdbfe4da3971b33915c5147483288094b7a466fbd3eb0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/4eddb1bc22ad467e/run_regional_validation_frozen_measure.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "generate_compton_tiled_field_v3.py",
+      "sha256": "82aae1c49788e03788ae12807192037c0e9b17d2e4952ddcf2eb44b48c841f60",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/e50c7528db9171af/generate_compton_tiled_field_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "generate_compton_a_tile_pilot_v3.py",
+      "sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_tile_pilot_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "test_compton_tiled_production_v3.py",
+      "sha256": "25f946dd627578f4bff67b057adc2f42bc1e0c515f84e1b5ff81d57ddecf1a40",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_tiled_production_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "tiled_production_plan.json",
+      "sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/tiled_production_plan.json"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "run_tiled_field_pilot_s0.sh",
+      "sha256": "6a9dbab679b27fff7978b90efeb4831e4c7ee9aac3629fb5c36c20dcd9bd36b9",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/e50c7528db9171af/run_tiled_field_pilot_s0.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "run_tiled_field_pilot_s1.sh",
+      "sha256": "c1fb6988cd30685157cd4fa5bc565dde8119af851d52e26c069ef62bd204de15",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/e50c7528db9171af/run_tiled_field_pilot_s1.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "run_tiled_field_pilot_s2.sh",
+      "sha256": "17afa22faeb7346b62b84f573183af8ecc248789a2e373e496e8f2e53b8f1f5a",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/e50c7528db9171af/run_tiled_field_pilot_s2.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot",
+      "name": "run_tiled_field_pilot_s3.sh",
+      "sha256": "9ab8c592e0b5729c15583623badf4772c6d7739e2985dc18721aaed77d39a542",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/e50c7528db9171af/run_tiled_field_pilot_s3.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "generate_compton_tiled_field_v3.py",
+      "sha256": "e189a4c2d01dbfa78243cb92ab2cebe1bb165b1ae190fed3973809e0e204ff93",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/05b0c1187275f2e0/generate_compton_tiled_field_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "generate_compton_a_tile_pilot_v3.py",
+      "sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_tile_pilot_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "test_compton_tiled_production_v3.py",
+      "sha256": "25f946dd627578f4bff67b057adc2f42bc1e0c515f84e1b5ff81d57ddecf1a40",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_tiled_production_v3.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "tiled_production_plan.json",
+      "sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/tiled_production_plan.json"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "run_tiled_field_pilot_repaired_s0.sh",
+      "sha256": "b01e1cc1713aa3fd9cde31afaa4ed7630b52563431062d6b06626348b0937a4d",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/05b0c1187275f2e0/run_tiled_field_pilot_repaired_s0.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "run_tiled_field_pilot_repaired_s1.sh",
+      "sha256": "43f6117c66b0a92887764ec9da78b7ee9fc2a259d67367355734b75a698c32b8",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/05b0c1187275f2e0/run_tiled_field_pilot_repaired_s1.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "run_tiled_field_pilot_repaired_s2.sh",
+      "sha256": "5a71725e6fbaec0b124439a1a588d6edbf28886c37ed6c7606d9a15dbda8863b",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/05b0c1187275f2e0/run_tiled_field_pilot_repaired_s2.sh"
+    },
+    {
+      "deployment": "tiled_field_pilot_repaired",
+      "name": "run_tiled_field_pilot_repaired_s3.sh",
+      "sha256": "ec665569975642d4a369c0c9b9d9e561b343344813bc05bb8dba624422df01e5",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/05b0c1187275f2e0/run_tiled_field_pilot_repaired_s3.sh"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "validate_compton_regional_a_v3.py",
+      "sha256": "2cc41e6cb06bf34e20b25bcff51414d0f659e18c61cba7ba4d4ad4009bf01e08",
+      "local_path": "experiments/ELLIPSE500x300_H120/validate_compton_regional_a_v3.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "compton_tiled_a_field.py",
+      "sha256": "44f2d029e1e112083d1776454d72f4ca39eb56ca246ef67e37be51baf6fa7490",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_tiled_a_field.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "test_compton_tiled_a_field_v3.py",
+      "sha256": "e736c8a1cc6b17b6e8b36c88685b60e93a961ff65a519d8d0785d287baec1ab8",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_tiled_a_field_v3.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "generate_compton_a_tile_pilot_v3.py",
+      "sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_tile_pilot_v3.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "geometry.npz",
+      "sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "local_path": "experiments/ELLIPSE500x300_H120/config.json"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "regional_a_plan.json",
+      "sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/regional_a_plan.json"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "measure.npz",
+      "sha256": "bf29705fe1798c5b8000dedf1d8a00e43321a5df32f747d270db9bb7a177a1d3",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/precise_measure/measure.npz"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "measure_manifest.json",
+      "sha256": "6962199066d369de0edf74756626b5cd568f92b53b5bccd27d2b44d31e8163cf",
+      "local_path": "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/precise_measure/measure_manifest.json"
+    },
+    {
+      "deployment": "tiled_field_validation",
+      "name": "run_tiled_field_validation.sh",
+      "sha256": "a95f1978173960e63885da10bec2c83466868a91dee37c993a8b71d09d83f46d",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/23352027dcb26a7b/run_tiled_field_validation.sh"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "generate_compton_tiled_field_v3.py",
+      "sha256": "244febd2929573ecda609d8c9367ccde49d16845bcf965f6d38c00ec76cdbedb",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_tiled_field_v3.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "generate_compton_a_tile_pilot_v3.py",
+      "sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_tile_pilot_v3.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "test_compton_tiled_production_v3.py",
+      "sha256": "25f946dd627578f4bff67b057adc2f42bc1e0c515f84e1b5ff81d57ddecf1a40",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_tiled_production_v3.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "tiled_production_plan.json",
+      "sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/tiled_production_plan.json"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "run_tiled_field_probe_s0.sh",
+      "sha256": "fc2ce7551ca4390d5d1b1e55ac57d048edf87dbeb08a11f1fbd85adde327a38b",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_probe_s0.sh"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "run_tiled_field_probe_s1.sh",
+      "sha256": "bb6c5651fa58bc0f3c32ff70d98dae88b9dc9e03ced9fe81bb9eb4004939db8a",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_probe_s1.sh"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "run_tiled_field_probe_s2.sh",
+      "sha256": "ee95adf411ee2f63726d0ab53cacc1ef339f16b9da4539a79a776c9ca84df9c8",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_probe_s2.sh"
+    },
+    {
+      "deployment": "tiled_field_probe",
+      "name": "run_tiled_field_probe_s3.sh",
+      "sha256": "4cc716223a4b8894130b8c97da1ab50bd9df0899fae6cf9a3824940ae795316b",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_probe_s3.sh"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "generate_compton_tiled_field_v3.py",
+      "sha256": "244febd2929573ecda609d8c9367ccde49d16845bcf965f6d38c00ec76cdbedb",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_tiled_field_v3.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "generate_compton_a_tile_pilot_v3.py",
+      "sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_tile_pilot_v3.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "generate_compton_a_column_v3.py",
+      "sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_column_v3.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "generate_compton_a_guard.py",
+      "sha256": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+      "local_path": "experiments/ELLIPSE500x300_H120/generate_compton_a_guard.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "plan_compton_a_tiles_v3.py",
+      "sha256": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+      "local_path": "experiments/ELLIPSE500x300_H120/plan_compton_a_tiles_v3.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "compton_overlap_integrator.py",
+      "sha256": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_overlap_integrator.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "compton_cell_response_field.py",
+      "sha256": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cell_response_field.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "compton_boundary_quadrature.py",
+      "sha256": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_boundary_quadrature.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "geometry.py",
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "local_path": "experiments/ELLIPSE500x300_H120/geometry.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "compton_cartesian_patch.py",
+      "sha256": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+      "local_path": "experiments/ELLIPSE500x300_H120/compton_cartesian_patch.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "test_compton_tiled_production_v3.py",
+      "sha256": "25f946dd627578f4bff67b057adc2f42bc1e0c515f84e1b5ff81d57ddecf1a40",
+      "local_path": "experiments/ELLIPSE500x300_H120/test_compton_tiled_production_v3.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "tiled_production_plan.json",
+      "sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/tiled_production_plan.json"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "compton_event_response.py",
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "local_path": "compton_event_response.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "detector_csv.py",
+      "sha256": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+      "local_path": "detector_csv.py"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "run_tiled_field_full_s0.sh",
+      "sha256": "42c77c8db40220e8855d96642263d2d4c71bab05c25708d56464cfdf4439cc60",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_full_s0.sh"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "run_tiled_field_full_s1.sh",
+      "sha256": "4ce89a27c9c982393d445b6ca9a57547588c2c07b46979b99df76183c576509a",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_full_s1.sh"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "run_tiled_field_full_s2.sh",
+      "sha256": "778912de3e1d326d183267233fe19252c05dcf1102cf47198576439d110c2bd0",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_full_s2.sh"
+    },
+    {
+      "deployment": "tiled_field_full",
+      "name": "run_tiled_field_full_s3.sh",
+      "sha256": "f2090c598fdec0b1f211ea4cd0a2958ede7ac61b96836592b79925f9b3932fa5",
+      "local_path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/1ba17805b62678eb/run_tiled_field_full_s3.sh"
     }
   ],
   "note": "Current or exact frozen historical source bytes; large immutable inputs remain generated and are excluded from Git"

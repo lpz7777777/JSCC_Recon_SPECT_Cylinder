@@ -1,0 +1,216 @@
+{
+  "status": "COLUMN_COMMON_POINTS_PASSED_GLOBAL_ACCURACY_HOLD",
+  "part": {
+    "spec": {
+      "name": "near_column",
+      "shape": [
+        17,
+        11,
+        161
+      ],
+      "spacing": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "shift": [
+        0,
+        252,
+        0
+      ]
+    },
+    "status": "COMPLETE",
+    "matrices": {
+      "pe.sysmat": {
+        "bytes": 1387330560,
+        "sha256": "9527d27b979c5d9c6214dff40e20bb313eac09f957490233027269f33c234c20"
+      },
+      "pe_windowed.sysmat": {
+        "bytes": 1387330560,
+        "sha256": "c823ac769d1f449dc0b4bef8a3eae28b7264d42992a9243e8b8ef9739c718ab2"
+      },
+      "Scatter_SysMat_shift_0.000000_252.000000_0.000000.sysmat": {
+        "bytes": 1387330560,
+        "sha256": "616f002de259ea11baea428a05c3cb8044149ff3a5ad642a5375a115de07cefa"
+      },
+      "SysMat_withScatter_shift_0.000000_252.000000_0.000000.sysmat": {
+        "bytes": 1387330560,
+        "sha256": "a6339e2ab84df280c3d96c55eb494336bc372cb4517c084d98d9b81d26ac9c32"
+      }
+    },
+    "pe_seconds": 95.40227326998138,
+    "elapsed_seconds": 562.0529804969847,
+    "calibration_refitted": false
+  },
+  "common_point_regression": {
+    "pe.sysmat": {
+      "original_40_axial_anchor": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 9.923293691826984e-13,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "independent_fine_common_points": {
+        "near_minus": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.1775927850976587e-12,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_middle": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.1775928578572348e-12,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_plus": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.1775928578572348e-12,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    },
+    "pe_windowed.sysmat": {
+      "original_40_axial_anchor": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 7.551309681730345e-13,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "independent_fine_common_points": {
+        "near_minus": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.961105049820617e-13,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_middle": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.961105777416379e-13,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_plus": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.961105777416379e-13,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    },
+    "Scatter_SysMat": {
+      "original_40_axial_anchor": {
+        "relative_l2": 3.092299599670201e-11,
+        "bitwise_equal": false,
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numerical_floor": 3.154301339236554e-14,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "independent_fine_common_points": {
+        "near_minus": {
+          "relative_l2": 4.0572459324672143e-10,
+          "bitwise_equal": false,
+          "maximum_absolute_error": 5.684341886080802e-14,
+          "numerical_floor": 3.76631965082197e-14,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_middle": {
+          "relative_l2": 2.862108483212235e-10,
+          "bitwise_equal": false,
+          "maximum_absolute_error": 5.684341886080802e-14,
+          "numerical_floor": 3.770881676246063e-14,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_plus": {
+          "relative_l2": 3.7609947963245624e-10,
+          "bitwise_equal": false,
+          "maximum_absolute_error": 5.684341886080802e-14,
+          "numerical_floor": 3.764050461541046e-14,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    },
+    "SysMat_withScatter": {
+      "original_40_axial_anchor": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 7.551309681730345e-13,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "independent_fine_common_points": {
+        "near_minus": {
+          "relative_l2": 1.1100348506872208e-10,
+          "bitwise_equal": false,
+          "maximum_absolute_error": 1.8189894035458565e-12,
+          "numerical_floor": 8.961105049820617e-13,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_middle": {
+          "relative_l2": 2.8250288733988475e-11,
+          "bitwise_equal": false,
+          "maximum_absolute_error": 2.2737367544323206e-13,
+          "numerical_floor": 8.961105777416379e-13,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "near_plus": {
+          "relative_l2": 6.404283870780868e-11,
+          "bitwise_equal": false,
+          "maximum_absolute_error": 9.094947017729282e-13,
+          "numerical_floor": 8.961105777416379e-13,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    }
+  },
+  "code_sha256": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+  "pe_binary_sha256": "58f1fbc62b7c24f572a0a57818cded6d2278a7c988097ed9832d0bbe57af9c94",
+  "scatter_binary_sha256": "717ce146cd56a00717cf0a8d440e464578fa80490a075ab867b3cce832596c2c",
+  "reference_ready_sha256": "688d86fc3ad133714dcef8de2a40e32729302bf7fe51ed437353d944b9889f92",
+  "new_transport_photons": 0,
+  "imaging_grid_unchanged": true,
+  "calibration_refitted": false,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "A .75 mm near-side column spanning -60..60 mm; all source/target detector rows. Common physical samples checked; global interpolation and column interfaces are not yet certified.",
+  "evidence_sha256": "2a984dddd9d3ab4bf5cd73f77fedbb9e86a6e07070e6c99acb21f40eff8b422e",
+  "job": {
+    "pid": 2269731,
+    "physical_gpu": 4,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/guard_column_releases/6e7adfc3ead95a5d",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_near_column",
+    "launcher_sha256": "dd476ee18a66a0008b14ef555c1c461877d773e07f35c6ab150f602a97ca8092",
+    "timeout_minutes": 45,
+    "new_matrix_points": 30107,
+    "new_transport_photons": 0,
+    "physical_models_unchanged": true,
+    "computational_detector_rows": 11520,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

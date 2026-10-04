@@ -1,0 +1,794 @@
+{
+  "status": "REGIONAL_PHYSICAL_COMMON_POINTS_PASSED_ACCURACY_PENDING",
+  "group": 2,
+  "plan_sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+  "source_sha256": "a6a0fd2c1d6864a3ce3860262ed77130ea5ab65f33687bb918a4ae6e0b4c847e",
+  "results": [
+    {
+      "case": {
+        "name": "inner_near_z39",
+        "group": 2,
+        "desired_detector_xy_mm": [
+          9.552245033349356e-15,
+          156.0
+        ],
+        "actual_detector_xy_mm": [
+          9.552245033349356e-15,
+          156.0
+        ],
+        "detector_xy_index": 1306,
+        "object_xy_index": 1311,
+        "view": 2,
+        "layer": 39,
+        "z_mm": 58.5,
+        "full_reference_bounds_mm": [
+          [
+            -4.994310693422361,
+            152.92450373595693,
+            57.0
+          ],
+          [
+            4.994310693422451,
+            159.0,
+            60.0
+          ]
+        ],
+        "parts": [
+          {
+            "name": "inner_near_z39_coarse",
+            "shape": [
+              15,
+              10,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              0.0,
+              155.625,
+              58.5
+            ]
+          },
+          {
+            "name": "inner_near_z39_fine",
+            "shape": [
+              29,
+              19,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              0.0,
+              155.625,
+              58.5
+            ]
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "spec": {
+            "name": "inner_near_z39_coarse",
+            "shape": [
+              15,
+              10,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              0.0,
+              155.625,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 34560000,
+              "sha256": "bc033ab560955e2acdc9b75fbb4934800e2756aec331e3f4cce78e7f5ca76754"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 34560000,
+              "sha256": "80880b6e987a170803c05aadc495bb7c5319d96787e935e62a4faaba67614b2a"
+            },
+            "Scatter_SysMat_shift_0.000000_155.625000_58.500000.sysmat": {
+              "bytes": 34560000,
+              "sha256": "752c67ea80477fbfa4d62b10565d64ffb9cfdb0a3d110fa93867f09bdf546680"
+            },
+            "SysMat_withScatter_shift_0.000000_155.625000_58.500000.sysmat": {
+              "bytes": 34560000,
+              "sha256": "4e393a8dec76b32a66586a77fa7cf68342e92d0d326cbde28026b303e88d1e48"
+            }
+          },
+          "pe_seconds": 28.28494376098388,
+          "elapsed_seconds": 46.90675245897728,
+          "calibration_refitted": false
+        },
+        {
+          "spec": {
+            "name": "inner_near_z39_fine",
+            "shape": [
+              29,
+              19,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              0.0,
+              155.625,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 228510720,
+              "sha256": "3049528dd79ea4402ae54c887d10a039e54bc20f658f5e869e28e0d890bccb23"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 228510720,
+              "sha256": "db9651901b039d89dafb009a0f1a95439475985390566f8b9b4594457efa3751"
+            },
+            "Scatter_SysMat_shift_0.000000_155.625000_58.500000.sysmat": {
+              "bytes": 228510720,
+              "sha256": "f320f76f4765e04a4023d7f8b2c18d8045e244787ed13df8ea47d150696f4ccc"
+            },
+            "SysMat_withScatter_shift_0.000000_155.625000_58.500000.sysmat": {
+              "bytes": 228510720,
+              "sha256": "b69ad6aab96c685191e63093890c27b0107a00464898e4a5bf0d558e7857fe22"
+            }
+          },
+          "pe_seconds": 29.83952286298154,
+          "elapsed_seconds": 96.56610948397429,
+          "calibration_refitted": false
+        }
+      ],
+      "common_points": {
+        "pe.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.149480522144586e-13,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "pe_windowed.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.747179890633561e-14,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "Scatter_SysMat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 3.69715650094804e-15,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "SysMat_withScatter": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.747179890633561e-14,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": {
+        "name": "middle_oblique_z39",
+        "group": 2,
+        "desired_detector_xy_mm": [
+          144.2497833620557,
+          144.2497833620557
+        ],
+        "actual_detector_xy_mm": [
+          148.492424049175,
+          148.49242404917496
+        ],
+        "detector_xy_index": 2256,
+        "object_xy_index": 2292,
+        "view": 7,
+        "layer": 39,
+        "z_mm": 58.5,
+        "full_reference_bounds_mm": [
+          [
+            142.48939716860707,
+            142.48939716860704,
+            57.0
+          ],
+          [
+            154.50474102561728,
+            154.50474102561728,
+            60.0
+          ]
+        ],
+        "parts": [
+          {
+            "name": "middle_oblique_z39_coarse",
+            "shape": [
+              19,
+              19,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              148.5,
+              148.5,
+              58.5
+            ]
+          },
+          {
+            "name": "middle_oblique_z39_fine",
+            "shape": [
+              37,
+              37,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              148.5,
+              148.5,
+              58.5
+            ]
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "spec": {
+            "name": "middle_oblique_z39_coarse",
+            "shape": [
+              19,
+              19,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              148.5,
+              148.5,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 83174400,
+              "sha256": "cd2d056351deec346ff6ca624e395b5f3cc5cdaa8c3ac6b71903d9271475d81a"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 83174400,
+              "sha256": "d35cbedccfdc683b61baccb7aa59d6d5f2bb446d12d9f186c8201974378807d4"
+            },
+            "Scatter_SysMat_shift_148.500000_148.500000_58.500000.sysmat": {
+              "bytes": 83174400,
+              "sha256": "f5192ff4b23ad99381eaa79ea74c9a94a13da942729cf5c1d16de0f12c9a5c13"
+            },
+            "SysMat_withScatter_shift_148.500000_148.500000_58.500000.sysmat": {
+              "bytes": 83174400,
+              "sha256": "533afaf09293638e382c65f8de387e62bbca7c650d74f64b148cad1c5f7cc95b"
+            }
+          },
+          "pe_seconds": 32.69676505099051,
+          "elapsed_seconds": 69.42242916699615,
+          "calibration_refitted": false
+        },
+        {
+          "spec": {
+            "name": "middle_oblique_z39_fine",
+            "shape": [
+              37,
+              37,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              148.5,
+              148.5,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 567751680,
+              "sha256": "4c22dba8d1ca533914adde68e2389c65bcee053785f9cb6df78febd19203d342"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 567751680,
+              "sha256": "b059038baae334c231b066a48c5dfa8604de8b700389f91ca8052e141157b5f0"
+            },
+            "Scatter_SysMat_shift_148.500000_148.500000_58.500000.sysmat": {
+              "bytes": 567751680,
+              "sha256": "f502d9aa96dade5ed6fbadcb135d12bd8360819fd7f8b3185e4b2bd9b3d917bf"
+            },
+            "SysMat_withScatter_shift_148.500000_148.500000_58.500000.sysmat": {
+              "bytes": 567751680,
+              "sha256": "1c1d7b794d65c27114acff9a7ab479792c704aa08001f45d0aa1ca94897dbdf7"
+            }
+          },
+          "pe_seconds": 40.51632549401256,
+          "elapsed_seconds": 230.9011020619946,
+          "calibration_refitted": false
+        }
+      ],
+      "common_points": {
+        "pe.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.0849063073692378e-13,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "pe_windowed.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.255790817202069e-14,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "Scatter_SysMat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 3.4459336006875673e-15,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "SysMat_withScatter": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 8.255790817202069e-14,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": {
+        "name": "outer_side_z39",
+        "group": 2,
+        "desired_detector_xy_mm": [
+          252.0,
+          0.0
+        ],
+        "actual_detector_xy_mm": [
+          252.0,
+          0.0
+        ],
+        "detector_xy_index": 3161,
+        "object_xy_index": 3161,
+        "view": 1,
+        "layer": 39,
+        "z_mm": 58.5,
+        "full_reference_bounds_mm": [
+          [
+            248.93731050068413,
+            -5.7217063954302585,
+            57.0
+          ],
+          [
+            255.0,
+            5.7217063954302585,
+            60.0
+          ]
+        ],
+        "parts": [
+          {
+            "name": "outer_side_z39_coarse",
+            "shape": [
+              10,
+              17,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              251.625,
+              0.0,
+              58.5
+            ]
+          },
+          {
+            "name": "outer_side_z39_fine",
+            "shape": [
+              19,
+              33,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              251.625,
+              0.0,
+              58.5
+            ]
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "spec": {
+            "name": "outer_side_z39_coarse",
+            "shape": [
+              10,
+              17,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              251.625,
+              0.0,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 39168000,
+              "sha256": "9571e106fb91b0c9f58bd4e0e99b991e82ba5596a01ae5b49bb4fae9bbb1622c"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 39168000,
+              "sha256": "2a04e76924e2c6047c4c844c6095516e2e2196cc260cc668f1d4bb38583710c0"
+            },
+            "Scatter_SysMat_shift_251.625000_0.000000_58.500000.sysmat": {
+              "bytes": 39168000,
+              "sha256": "dee0298373ac3e69fe10a4605793c0df14d0b851326b8f7a1cdf2b0405ecd93b"
+            },
+            "SysMat_withScatter_shift_251.625000_0.000000_58.500000.sysmat": {
+              "bytes": 39168000,
+              "sha256": "83f4b32bb05e3226800e2e7deb9d5e922d19273094e04cdc77440d87d5bab625"
+            }
+          },
+          "pe_seconds": 28.987195663998136,
+          "elapsed_seconds": 53.918492703000084,
+          "calibration_refitted": false
+        },
+        {
+          "spec": {
+            "name": "outer_side_z39_fine",
+            "shape": [
+              19,
+              33,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              251.625,
+              0.0,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 260029440,
+              "sha256": "cdf7bf65d6aefbe7cf395737c6b949b11ddf48a849a0436cc8d71b70e793f01d"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 260029440,
+              "sha256": "dcb2867d74e24b1cffbfe45675028d65b09f1efcdf0cd1f5ee283e5eb469e604"
+            },
+            "Scatter_SysMat_shift_251.625000_0.000000_58.500000.sysmat": {
+              "bytes": 260029440,
+              "sha256": "0d2ecb6ef2df5d70ebd594fc327fc406bf9d9d3a6e7aa37fa5fe430b12dd394e"
+            },
+            "SysMat_withScatter_shift_251.625000_0.000000_58.500000.sysmat": {
+              "bytes": 260029440,
+              "sha256": "7c2a6b9c527199d9bb6d75a08dbf195ec0bfec780793861d08a367f016b91e93"
+            }
+          },
+          "pe_seconds": 31.291726566996658,
+          "elapsed_seconds": 129.0764357879816,
+          "calibration_refitted": false
+        }
+      ],
+      "common_points": {
+        "pe.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 2.3385778149531688e-14,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "pe_windowed.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.7795830444811146e-14,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "Scatter_SysMat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 7.204648966308014e-16,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "SysMat_withScatter": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 1.7795830444811146e-14,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": {
+        "name": "outer_far_z39",
+        "group": 2,
+        "desired_detector_xy_mm": [
+          1.543054966925665e-14,
+          -252.0
+        ],
+        "actual_detector_xy_mm": [
+          -4.629164900776995e-14,
+          -252.0
+        ],
+        "detector_xy_index": 3266,
+        "object_xy_index": 3161,
+        "view": 6,
+        "layer": 39,
+        "z_mm": 58.5,
+        "full_reference_bounds_mm": [
+          [
+            -5.7217063954302425,
+            -255.0,
+            57.0
+          ],
+          [
+            5.7217063954302745,
+            -248.93731050068413,
+            60.0
+          ]
+        ],
+        "parts": [
+          {
+            "name": "outer_far_z39_coarse",
+            "shape": [
+              17,
+              10,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              0.0,
+              -251.625,
+              58.5
+            ]
+          },
+          {
+            "name": "outer_far_z39_fine",
+            "shape": [
+              33,
+              19,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              0.0,
+              -251.625,
+              58.5
+            ]
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "spec": {
+            "name": "outer_far_z39_coarse",
+            "shape": [
+              17,
+              10,
+              5
+            ],
+            "spacing": [
+              0.75,
+              0.75,
+              0.75
+            ],
+            "shift": [
+              0.0,
+              -251.625,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 39168000,
+              "sha256": "719d1abe1cdbccedeb1cce5df65ad2a486c6ce6c5c51565716cb5e81471b3ee4"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 39168000,
+              "sha256": "ad3769583297b01b8cb3b8b5685fc343d5ac50f41e66da6c0bd13c8fcb914bbf"
+            },
+            "Scatter_SysMat_shift_0.000000_-251.625000_58.500000.sysmat": {
+              "bytes": 39168000,
+              "sha256": "b4f7d87ab78554ae5607349a6873cef5eefd7cc3300a416e5a5b4b14810784ac"
+            },
+            "SysMat_withScatter_shift_0.000000_-251.625000_58.500000.sysmat": {
+              "bytes": 39168000,
+              "sha256": "58e5d97e4866c3697ae180f7947a1f9afd980a0d5c659e97e3929ab49352b649"
+            }
+          },
+          "pe_seconds": 25.127222823997727,
+          "elapsed_seconds": 44.68963229301153,
+          "calibration_refitted": false
+        },
+        {
+          "spec": {
+            "name": "outer_far_z39_fine",
+            "shape": [
+              33,
+              19,
+              9
+            ],
+            "spacing": [
+              0.375,
+              0.375,
+              0.375
+            ],
+            "shift": [
+              0.0,
+              -251.625,
+              58.5
+            ]
+          },
+          "status": "COMPLETE",
+          "matrices": {
+            "pe.sysmat": {
+              "bytes": 260029440,
+              "sha256": "b9424b466b9fd99fc7e89996b99d5268feb3f2fa147b960b2cd472e090a8145f"
+            },
+            "pe_windowed.sysmat": {
+              "bytes": 260029440,
+              "sha256": "e09eddbba9fcc9367eb2c42a7582d3053122c707bfbad1c91c3e1a1921ea9559"
+            },
+            "Scatter_SysMat_shift_0.000000_-251.625000_58.500000.sysmat": {
+              "bytes": 260029440,
+              "sha256": "02cc7549bdebe056a721b7a4ceaafa805a8171ca22d10e95022151b11ee4ad86"
+            },
+            "SysMat_withScatter_shift_0.000000_-251.625000_58.500000.sysmat": {
+              "bytes": 260029440,
+              "sha256": "6636a491987a56b01d767d282cb2ff17e288818f812c849309b7126b8ee7ff38"
+            }
+          },
+          "pe_seconds": 26.930817841988755,
+          "elapsed_seconds": 98.91015149699524,
+          "calibration_refitted": false
+        }
+      ],
+      "common_points": {
+        "pe.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 7.581433010273031e-15,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "pe_windowed.sysmat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 5.7692284372024006e-15,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "Scatter_SysMat": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 2.4269136034149597e-16,
+          "elementwise_passed": true,
+          "passed": true
+        },
+        "SysMat_withScatter": {
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "maximum_absolute_error": 0.0,
+          "numerical_floor": 5.7692284372024006e-15,
+          "elementwise_passed": true,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "pe_binary_sha256": "58f1fbc62b7c24f572a0a57818cded6d2278a7c988097ed9832d0bbe57af9c94",
+  "scatter_binary_sha256": "717ce146cd56a00717cf0a8d440e464578fa80490a075ab867b3cce832596c2c",
+  "original_params_sha256": {
+    "Params_Collimator.dat": "b94a53dcb6dd3dc9d7b98263ed70604f8d33e5f0df7f5fdfd6a5138117073830",
+    "Params_Detector.dat": "297ccf177f479502d6fa85d349aff8d7602621a0e8ccc825fa4e713643555ab3",
+    "Params_Image.dat": "0fab428fc84526614a191848e7f491037d78b9288bfc9b42c3db7d547fbbcd2c",
+    "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3"
+  },
+  "new_transport_photons": 0,
+  "original_data_read_only": true,
+  "calibration_refitted": false,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Independent physical grid production/public-node consistency only. K-weighted full-reference/object-intersection accuracy and independent regional error gates remain required.",
+  "evidence_sha256": "522c23f86bfad2b93b7c47f803ecfa50fdee930f3cc1178d30d35bc3ab52a8ad",
+  "job": {
+    "pid": 2369219,
+    "physical_gpu": 3,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g2_releases/63d405cde5eef50a",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g2",
+    "group": 2,
+    "launcher_sha256": "4b0a4bf61707c965b889da0ab14aa41cfff68436c8936307e315f427fe0dd34a",
+    "timeout_minutes": 45,
+    "new_matrix_points": 32821,
+    "new_transport_photons": 0,
+    "physical_models_unchanged": true,
+    "computational_detector_rows": 11520,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

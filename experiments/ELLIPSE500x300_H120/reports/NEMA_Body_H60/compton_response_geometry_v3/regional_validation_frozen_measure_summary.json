@@ -1,0 +1,281 @@
+{
+  "status": "REGIONAL_REFINEMENT_PASSED_LOCAL_ONLY",
+  "entries": 168,
+  "A_entries_passed": 168,
+  "quadrature_entries_passed": 168,
+  "informative_entries": 141,
+  "maximum_A_relative_change": 0.005040283774349625,
+  "maximum_A_absolute_change_over_Z": 8.736575891418476e-08,
+  "maximum_quadrature_relative_change": 0.00029879423372086836,
+  "maximum_volume_relative_error": 4.218847493575595e-15,
+  "missing_events": [],
+  "events": {
+    "2": [
+      {
+        "dataset": "point_0",
+        "view": 2,
+        "input_row": 8,
+        "input_sha256": "a979a4cc271cc1e1925dcc2d934df50f48c1faa97d7c48b84fdd85210b700407"
+      },
+      {
+        "dataset": "point_1",
+        "view": 2,
+        "input_row": 8,
+        "input_sha256": "fb38f1cedcabcb1384134935c05dec41a0ba80eb5d72201b7cce0efaf3646971"
+      },
+      {
+        "dataset": "point_2",
+        "view": 2,
+        "input_row": 6,
+        "input_sha256": "3c52967559aec0ae75821582cbcf0853387bd0d7ef44720346e128e0d8133237"
+      },
+      {
+        "dataset": "point_3",
+        "view": 2,
+        "input_row": 16,
+        "input_sha256": "531489794e7069a86d249d76e1356da4df90a0832b8290fa35d4cd6e99ffa9c5"
+      },
+      {
+        "dataset": "point_4",
+        "view": 2,
+        "input_row": 1,
+        "input_sha256": "3bc707a1ff91d70b2533a47cc3c7a9ff63984d5e54426de49950bca8b05c9d69"
+      },
+      {
+        "dataset": "point_5",
+        "view": 2,
+        "input_row": 4,
+        "input_sha256": "757ff635fad1cacc6130b13ee26680ab9cacc4600152031deac2e8fa920910f3"
+      },
+      {
+        "dataset": "point_6",
+        "view": 2,
+        "input_row": 9,
+        "input_sha256": "39afe2d59e3e0251d2c3e1c9cedf602d4b684e893786431db4ce89ef8c6a4b5b"
+      }
+    ],
+    "7": [
+      {
+        "dataset": "point_0",
+        "view": 7,
+        "input_row": 16,
+        "input_sha256": "66ff41202b70343711b96858e291ae1ff3857a5614f60cd08241e3ccc00b7e25"
+      },
+      {
+        "dataset": "point_1",
+        "view": 7,
+        "input_row": 1,
+        "input_sha256": "0df7ad19a413c12cbc7ea76667a4be9df1db6bb35c4ea6e4ae149f03c37c225b"
+      },
+      {
+        "dataset": "point_2",
+        "view": 7,
+        "input_row": 0,
+        "input_sha256": "807b7afa3679b00bb244c8e5bd30c1c9ffff1b9f7e973652a43b2c5cf85934c1"
+      },
+      {
+        "dataset": "point_3",
+        "view": 7,
+        "input_row": 7,
+        "input_sha256": "b0030bcdb79e29a71b98a6661fbd12d3509ee559f77cf6c7ff6f208ccd39c9aa"
+      },
+      {
+        "dataset": "point_4",
+        "view": 7,
+        "input_row": 2,
+        "input_sha256": "e53855b03761bcdbeaee42f5739e1a9442651be20891f683db47fc65acb3b8f4"
+      },
+      {
+        "dataset": "point_5",
+        "view": 7,
+        "input_row": 2,
+        "input_sha256": "d89e69f3dbb9a7b7cfc3385811fb2c10b434e6053c7b9596ced0a13dda0b2e89"
+      },
+      {
+        "dataset": "point_6",
+        "view": 7,
+        "input_row": 0,
+        "input_sha256": "36ee7f117cd1b035537450ab326c075af03828865b898455cab8a56246bc4dfa"
+      }
+    ],
+    "1": [
+      {
+        "dataset": "point_0",
+        "view": 1,
+        "input_row": 8,
+        "input_sha256": "370f077f35f696d74517e2e39b328b461748034f9663f73401a16533fe69e7b3"
+      },
+      {
+        "dataset": "point_1",
+        "view": 1,
+        "input_row": 11,
+        "input_sha256": "9299d324b4517a47161248d06514d20b0b95b39e7cf283965f62277ec3f9b280"
+      },
+      {
+        "dataset": "point_2",
+        "view": 1,
+        "input_row": 2,
+        "input_sha256": "0a19d1c7bd98a9ec4c4acb429eb4470b2406faf29946f29cf3a17bd59ae236c6"
+      },
+      {
+        "dataset": "point_3",
+        "view": 1,
+        "input_row": 1,
+        "input_sha256": "44b41dbe4c7d39f5d98fe60c22bd61fe0213c5fec111e098c07c84b4af2a6164"
+      },
+      {
+        "dataset": "point_4",
+        "view": 1,
+        "input_row": 6,
+        "input_sha256": "c2f8d0bf707c075bc3979a3708b012c3746b2def20dae51226f9cd3a45d15418"
+      },
+      {
+        "dataset": "point_5",
+        "view": 1,
+        "input_row": 12,
+        "input_sha256": "b6e682fcbb7c041ad5f08a0d054da8657dd7f0bb68c8249a465c2ef895e804d4"
+      },
+      {
+        "dataset": "point_6",
+        "view": 1,
+        "input_row": 0,
+        "input_sha256": "d785592cd6b0e1531791af2774a4b1e1ee3603c93473f0e50fb0ca5cb4163a32"
+      }
+    ],
+    "6": [
+      {
+        "dataset": "point_0",
+        "view": 6,
+        "input_row": 3,
+        "input_sha256": "ddc08699b327026393dd1de2345dc887de2b713b54f624a202b4e66b81646c4d"
+      },
+      {
+        "dataset": "point_1",
+        "view": 6,
+        "input_row": 10,
+        "input_sha256": "3a7f28346776c6b6f1b9f78854630374e6bee391b68b13cc85047b67636471a4"
+      },
+      {
+        "dataset": "point_2",
+        "view": 6,
+        "input_row": 6,
+        "input_sha256": "f7b70f358e59d2b7716c20bc95aa3cf8831259319d4291cc12501f5ff1715373"
+      },
+      {
+        "dataset": "point_3",
+        "view": 6,
+        "input_row": 18,
+        "input_sha256": "0bb89cb33342da5b838be5f8d1a35e6b175880c28009d6506c2b686e6c62ee91"
+      },
+      {
+        "dataset": "point_4",
+        "view": 6,
+        "input_row": 6,
+        "input_sha256": "1f8d01be608bf5939b6b276e4ba4e673a9b0e7a3c7da4705f5fe9dc141b23609"
+      },
+      {
+        "dataset": "point_5",
+        "view": 6,
+        "input_row": 7,
+        "input_sha256": "7a6859eca149ec0c07dc8bf69fe4db65fb5930e6a3c42135ec35023b7f081067"
+      },
+      {
+        "dataset": "point_6",
+        "view": 6,
+        "input_row": 1,
+        "input_sha256": "bb985db7d5445a1ae8f5b493cac1792ed0e54a27209d02d54669633f624bba6e"
+      }
+    ]
+  },
+  "by_control": {
+    "inner_near_z00": {
+      "entries": 14,
+      "informative": 12,
+      "passed": 14
+    },
+    "inner_near_z20": {
+      "entries": 14,
+      "informative": 12,
+      "passed": 14
+    },
+    "inner_near_z39": {
+      "entries": 14,
+      "informative": 14,
+      "passed": 14
+    },
+    "middle_oblique_z00": {
+      "entries": 14,
+      "informative": 10,
+      "passed": 14
+    },
+    "middle_oblique_z20": {
+      "entries": 14,
+      "informative": 12,
+      "passed": 14
+    },
+    "middle_oblique_z39": {
+      "entries": 14,
+      "informative": 12,
+      "passed": 14
+    },
+    "outer_side_z00": {
+      "entries": 14,
+      "informative": 8,
+      "passed": 14
+    },
+    "outer_side_z20": {
+      "entries": 14,
+      "informative": 9,
+      "passed": 14
+    },
+    "outer_side_z39": {
+      "entries": 14,
+      "informative": 10,
+      "passed": 14
+    },
+    "outer_far_z00": {
+      "entries": 14,
+      "informative": 14,
+      "passed": 14
+    },
+    "outer_far_z20": {
+      "entries": 14,
+      "informative": 14,
+      "passed": 14
+    },
+    "outer_far_z39": {
+      "entries": 14,
+      "informative": 14,
+      "passed": 14
+    }
+  },
+  "plan_sha256": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+  "production_gates_sha256": {
+    "0": "e1a4ebf19b35227a078fbade2879c831e59f063c42851838378dffcfef67c1c9",
+    "1": "c79649f0978a91e12a126cb5365979fee2868eb3eec903f7a4de8a13df554001",
+    "2": "522c23f86bfad2b93b7c47f803ecfa50fdee930f3cc1178d30d35bc3ab52a8ad"
+  },
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+  "csv_sha256": "1ae6461152d6b8e027c9b9b5c134309e2535105d115768835cbfa0430fa9ea93",
+  "source_sha256": "e5bd6655a46f103b7f6298de2c324ede207d73ec342fd7aa9a7cbfef359d26f7",
+  "elapsed_seconds": 10.95455766300438,
+  "new_transport_photons": 0,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Same predefined independent point events, stable K and common Z; full-reference and true object dV. Near-zero entries are explicitly marked. Local convergence is not global physical A validation or spike reduction.",
+  "evidence_sha256": "4c0e4f50f6e7b841a0586c131a09b6ef62789575920dcb1b47c7afd06bf02b10",
+  "job": {
+    "pid": 2402343,
+    "physical_gpu": 4,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_validation_frozen_measure_releases/4eddb1bc22ad467e",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_validation_frozen_measure",
+    "launcher_sha256": "e6008787187b6531b16bdbfe4da3971b33915c5147483288094b7a466fbd3eb0",
+    "timeout_minutes": 10,
+    "control_cells": 12,
+    "new_transport_photons": 0,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

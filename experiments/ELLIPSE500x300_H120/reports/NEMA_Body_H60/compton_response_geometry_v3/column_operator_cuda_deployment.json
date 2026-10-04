@@ -1,0 +1,24 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/column_operator_cuda_releases/95ef040319eae631",
+  "code_sha256": {
+    "benchmark_compton_overlap_v3.py": "bcd8f2a0872eb983b33acd3336700387b678c03a3c4d131b6fc1d00e9cbc5bc8",
+    "compton_overlap_integrator.py": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+    "compton_cell_response_field.py": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+    "compton_overlap_cuda.py": "1d9ebb53bc7022c9ef1c414bee63d171e19832bb94aa9731580fa582a177c859",
+    "test_compton_overlap_cuda.py": "09779b131c33dc38d3a2402c7e7ee40b3dba6a1f32e7c858e92e31a121a79603",
+    "compton_overlap_assembly.py": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80",
+    "test_compton_overlap_integrator.py": "fb57b6e2ba8f5f17af5241d1850a251ef98513822ebdc06fc0d40e784bbe436a",
+    "test_compton_overlap_assembly.py": "4fd3e884577562970d69f8ae447a18110763185d2d1181c8ddc141c3324a074f",
+    "prepare_compton_overlap_measure.py": "2ce3f34a4bf6404bc6b1af63e7ba5f8c8634db0ce75e29e10c442d68daf0f7bb",
+    "build_compton_a_guard_field.py": "0aea6feb5dae617c816277a107b4dd1d841ec5870c3a5d27686c56e24f9a4b3d",
+    "generate_compton_a_guard.py": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+    "compton_cartesian_patch.py": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+    "compton_boundary_quadrature.py": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "0e1fff10193b94f5be85d03650046ed8530108c9c7711900b0bc776bb60cd97f"
+}

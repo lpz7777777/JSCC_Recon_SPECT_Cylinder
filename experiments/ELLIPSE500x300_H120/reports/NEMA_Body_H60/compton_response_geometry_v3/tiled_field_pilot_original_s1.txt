@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/e50c7528db9171af/generate_compton_tiled_field_v3.py", line 182, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/e50c7528db9171af/generate_compton_tiled_field_v3.py", line 130, in main
+    if digest(stored)!=plan_sha:raise ValueError('Different production plan already registered')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Different production plan already registered

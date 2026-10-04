@@ -1,0 +1,821 @@
+{
+  "status": "FROZEN_REGIONAL_GEOMETRY_DIAGNOSTIC_ONLY",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "config_sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+  "measure_npz_sha256": "bf29705fe1798c5b8000dedf1d8a00e43321a5df32f747d270db9bb7a177a1d3",
+  "source_sha256": "f49d8f28a43b33bbf2ebf044b59536e05d219883210d95167cf397407291fabd",
+  "cases": [
+    {
+      "name": "inner_near_z00",
+      "group": 0,
+      "desired_detector_xy_mm": [
+        9.552245033349356e-15,
+        156.0
+      ],
+      "actual_detector_xy_mm": [
+        9.552245033349356e-15,
+        156.0
+      ],
+      "detector_xy_index": 1306,
+      "object_xy_index": 1311,
+      "view": 2,
+      "layer": 0,
+      "z_mm": -58.5,
+      "full_reference_bounds_mm": [
+        [
+          -4.994310693422361,
+          152.92450373595693,
+          -60.0
+        ],
+        [
+          4.994310693422451,
+          159.0,
+          -57.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "inner_near_z00_coarse",
+          "shape": [
+            15,
+            10,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            0.0,
+            155.625,
+            -58.5
+          ]
+        },
+        {
+          "name": "inner_near_z00_fine",
+          "shape": [
+            29,
+            19,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            0.0,
+            155.625,
+            -58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "inner_near_z20",
+      "group": 1,
+      "desired_detector_xy_mm": [
+        9.552245033349356e-15,
+        156.0
+      ],
+      "actual_detector_xy_mm": [
+        9.552245033349356e-15,
+        156.0
+      ],
+      "detector_xy_index": 1306,
+      "object_xy_index": 1311,
+      "view": 2,
+      "layer": 20,
+      "z_mm": 1.5,
+      "full_reference_bounds_mm": [
+        [
+          -4.994310693422361,
+          152.92450373595693,
+          0.0
+        ],
+        [
+          4.994310693422451,
+          159.0,
+          3.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "inner_near_z20_coarse",
+          "shape": [
+            15,
+            10,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            0.0,
+            155.625,
+            1.5
+          ]
+        },
+        {
+          "name": "inner_near_z20_fine",
+          "shape": [
+            29,
+            19,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            0.0,
+            155.625,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "inner_near_z39",
+      "group": 2,
+      "desired_detector_xy_mm": [
+        9.552245033349356e-15,
+        156.0
+      ],
+      "actual_detector_xy_mm": [
+        9.552245033349356e-15,
+        156.0
+      ],
+      "detector_xy_index": 1306,
+      "object_xy_index": 1311,
+      "view": 2,
+      "layer": 39,
+      "z_mm": 58.5,
+      "full_reference_bounds_mm": [
+        [
+          -4.994310693422361,
+          152.92450373595693,
+          57.0
+        ],
+        [
+          4.994310693422451,
+          159.0,
+          60.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "inner_near_z39_coarse",
+          "shape": [
+            15,
+            10,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            0.0,
+            155.625,
+            58.5
+          ]
+        },
+        {
+          "name": "inner_near_z39_fine",
+          "shape": [
+            29,
+            19,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            0.0,
+            155.625,
+            58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "middle_oblique_z00",
+      "group": 0,
+      "desired_detector_xy_mm": [
+        144.2497833620557,
+        144.2497833620557
+      ],
+      "actual_detector_xy_mm": [
+        148.492424049175,
+        148.49242404917496
+      ],
+      "detector_xy_index": 2256,
+      "object_xy_index": 2292,
+      "view": 7,
+      "layer": 0,
+      "z_mm": -58.5,
+      "full_reference_bounds_mm": [
+        [
+          142.48939716860707,
+          142.48939716860704,
+          -60.0
+        ],
+        [
+          154.50474102561728,
+          154.50474102561728,
+          -57.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "middle_oblique_z00_coarse",
+          "shape": [
+            19,
+            19,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            148.5,
+            148.5,
+            -58.5
+          ]
+        },
+        {
+          "name": "middle_oblique_z00_fine",
+          "shape": [
+            37,
+            37,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            148.5,
+            148.5,
+            -58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "middle_oblique_z20",
+      "group": 1,
+      "desired_detector_xy_mm": [
+        144.2497833620557,
+        144.2497833620557
+      ],
+      "actual_detector_xy_mm": [
+        148.492424049175,
+        148.49242404917496
+      ],
+      "detector_xy_index": 2256,
+      "object_xy_index": 2292,
+      "view": 7,
+      "layer": 20,
+      "z_mm": 1.5,
+      "full_reference_bounds_mm": [
+        [
+          142.48939716860707,
+          142.48939716860704,
+          0.0
+        ],
+        [
+          154.50474102561728,
+          154.50474102561728,
+          3.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "middle_oblique_z20_coarse",
+          "shape": [
+            19,
+            19,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            148.5,
+            148.5,
+            1.5
+          ]
+        },
+        {
+          "name": "middle_oblique_z20_fine",
+          "shape": [
+            37,
+            37,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            148.5,
+            148.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "middle_oblique_z39",
+      "group": 2,
+      "desired_detector_xy_mm": [
+        144.2497833620557,
+        144.2497833620557
+      ],
+      "actual_detector_xy_mm": [
+        148.492424049175,
+        148.49242404917496
+      ],
+      "detector_xy_index": 2256,
+      "object_xy_index": 2292,
+      "view": 7,
+      "layer": 39,
+      "z_mm": 58.5,
+      "full_reference_bounds_mm": [
+        [
+          142.48939716860707,
+          142.48939716860704,
+          57.0
+        ],
+        [
+          154.50474102561728,
+          154.50474102561728,
+          60.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "middle_oblique_z39_coarse",
+          "shape": [
+            19,
+            19,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            148.5,
+            148.5,
+            58.5
+          ]
+        },
+        {
+          "name": "middle_oblique_z39_fine",
+          "shape": [
+            37,
+            37,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            148.5,
+            148.5,
+            58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outer_side_z00",
+      "group": 0,
+      "desired_detector_xy_mm": [
+        252.0,
+        0.0
+      ],
+      "actual_detector_xy_mm": [
+        252.0,
+        0.0
+      ],
+      "detector_xy_index": 3161,
+      "object_xy_index": 3161,
+      "view": 1,
+      "layer": 0,
+      "z_mm": -58.5,
+      "full_reference_bounds_mm": [
+        [
+          248.93731050068413,
+          -5.7217063954302585,
+          -60.0
+        ],
+        [
+          255.0,
+          5.7217063954302585,
+          -57.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "outer_side_z00_coarse",
+          "shape": [
+            10,
+            17,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            251.625,
+            0.0,
+            -58.5
+          ]
+        },
+        {
+          "name": "outer_side_z00_fine",
+          "shape": [
+            19,
+            33,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            251.625,
+            0.0,
+            -58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outer_side_z20",
+      "group": 1,
+      "desired_detector_xy_mm": [
+        252.0,
+        0.0
+      ],
+      "actual_detector_xy_mm": [
+        252.0,
+        0.0
+      ],
+      "detector_xy_index": 3161,
+      "object_xy_index": 3161,
+      "view": 1,
+      "layer": 20,
+      "z_mm": 1.5,
+      "full_reference_bounds_mm": [
+        [
+          248.93731050068413,
+          -5.7217063954302585,
+          0.0
+        ],
+        [
+          255.0,
+          5.7217063954302585,
+          3.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "outer_side_z20_coarse",
+          "shape": [
+            10,
+            17,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            251.625,
+            0.0,
+            1.5
+          ]
+        },
+        {
+          "name": "outer_side_z20_fine",
+          "shape": [
+            19,
+            33,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            251.625,
+            0.0,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outer_side_z39",
+      "group": 2,
+      "desired_detector_xy_mm": [
+        252.0,
+        0.0
+      ],
+      "actual_detector_xy_mm": [
+        252.0,
+        0.0
+      ],
+      "detector_xy_index": 3161,
+      "object_xy_index": 3161,
+      "view": 1,
+      "layer": 39,
+      "z_mm": 58.5,
+      "full_reference_bounds_mm": [
+        [
+          248.93731050068413,
+          -5.7217063954302585,
+          57.0
+        ],
+        [
+          255.0,
+          5.7217063954302585,
+          60.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "outer_side_z39_coarse",
+          "shape": [
+            10,
+            17,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            251.625,
+            0.0,
+            58.5
+          ]
+        },
+        {
+          "name": "outer_side_z39_fine",
+          "shape": [
+            19,
+            33,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            251.625,
+            0.0,
+            58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outer_far_z00",
+      "group": 0,
+      "desired_detector_xy_mm": [
+        1.543054966925665e-14,
+        -252.0
+      ],
+      "actual_detector_xy_mm": [
+        -4.629164900776995e-14,
+        -252.0
+      ],
+      "detector_xy_index": 3266,
+      "object_xy_index": 3161,
+      "view": 6,
+      "layer": 0,
+      "z_mm": -58.5,
+      "full_reference_bounds_mm": [
+        [
+          -5.7217063954302425,
+          -255.0,
+          -60.0
+        ],
+        [
+          5.7217063954302745,
+          -248.93731050068413,
+          -57.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "outer_far_z00_coarse",
+          "shape": [
+            17,
+            10,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            0.0,
+            -251.625,
+            -58.5
+          ]
+        },
+        {
+          "name": "outer_far_z00_fine",
+          "shape": [
+            33,
+            19,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            0.0,
+            -251.625,
+            -58.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outer_far_z20",
+      "group": 1,
+      "desired_detector_xy_mm": [
+        1.543054966925665e-14,
+        -252.0
+      ],
+      "actual_detector_xy_mm": [
+        -4.629164900776995e-14,
+        -252.0
+      ],
+      "detector_xy_index": 3266,
+      "object_xy_index": 3161,
+      "view": 6,
+      "layer": 20,
+      "z_mm": 1.5,
+      "full_reference_bounds_mm": [
+        [
+          -5.7217063954302425,
+          -255.0,
+          0.0
+        ],
+        [
+          5.7217063954302745,
+          -248.93731050068413,
+          3.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "outer_far_z20_coarse",
+          "shape": [
+            17,
+            10,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            0.0,
+            -251.625,
+            1.5
+          ]
+        },
+        {
+          "name": "outer_far_z20_fine",
+          "shape": [
+            33,
+            19,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            0.0,
+            -251.625,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outer_far_z39",
+      "group": 2,
+      "desired_detector_xy_mm": [
+        1.543054966925665e-14,
+        -252.0
+      ],
+      "actual_detector_xy_mm": [
+        -4.629164900776995e-14,
+        -252.0
+      ],
+      "detector_xy_index": 3266,
+      "object_xy_index": 3161,
+      "view": 6,
+      "layer": 39,
+      "z_mm": 58.5,
+      "full_reference_bounds_mm": [
+        [
+          -5.7217063954302425,
+          -255.0,
+          57.0
+        ],
+        [
+          5.7217063954302745,
+          -248.93731050068413,
+          60.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "outer_far_z39_coarse",
+          "shape": [
+            17,
+            10,
+            5
+          ],
+          "spacing": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "shift": [
+            0.0,
+            -251.625,
+            58.5
+          ]
+        },
+        {
+          "name": "outer_far_z39_fine",
+          "shape": [
+            33,
+            19,
+            9
+          ],
+          "spacing": [
+            0.375,
+            0.375,
+            0.375
+          ],
+          "shift": [
+            0.0,
+            -251.625,
+            58.5
+          ]
+        }
+      ]
+    }
+  ],
+  "matrix_points": 98463,
+  "raw_response_bytes": 18148700160,
+  "physical_detector_rows": 11520,
+  "new_transport_photons": 0,
+  "imaging_grid_unchanged": true,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Control selection uses only frozen full-reference geometry. Nearest eligible detector-frame cells are recorded when a desired radius/angle has no exact eligible cell. Original object cell and acquisition view are explicit for later intersection/K analysis. Common-point production gates alone do not certify interpolation precision."
+}

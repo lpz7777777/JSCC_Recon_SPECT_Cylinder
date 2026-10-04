@@ -1,0 +1,8 @@
+test_incomplete_tile_is_preserved_and_requires_explicit_repair (test_compton_tiled_production_v3.ResumableTileTests.test_incomplete_tile_is_preserved_and_requires_explicit_repair) ... ok
+test_resume_checks_every_stored_value_without_recomputing (test_compton_tiled_production_v3.ResumableTileTests.test_resume_checks_every_stored_value_without_recomputing) ... ok
+test_shards_are_disjoint_complete_and_keep_exact_specs (test_compton_tiled_production_v3.ResumableTileTests.test_shards_are_disjoint_complete_and_keep_exact_specs) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

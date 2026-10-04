@@ -1,0 +1,10 @@
+test_affine_response_calibration_once_and_order_independent (test_compton_tiled_a_field_v3.TiledFieldTests.test_affine_response_calibration_once_and_order_independent) ... ok
+test_exact_outer_tile_nodes_need_no_zero_weight_missing_neighbour (test_compton_tiled_a_field_v3.TiledFieldTests.test_exact_outer_tile_nodes_need_no_zero_weight_missing_neighbour) ... ok
+test_missing_support_and_production_fail_closed (test_compton_tiled_a_field_v3.TiledFieldTests.test_missing_support_and_production_fail_closed) ... ok
+test_production_reader_checks_plan_row_mapping_and_all_values (test_compton_tiled_a_field_v3.TiledFieldTests.test_production_reader_checks_plan_row_mapping_and_all_values) ... ok
+test_shared_vertex_has_one_owner_despite_raw_roundoff (test_compton_tiled_a_field_v3.TiledFieldTests.test_shared_vertex_has_one_owner_despite_raw_roundoff) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK

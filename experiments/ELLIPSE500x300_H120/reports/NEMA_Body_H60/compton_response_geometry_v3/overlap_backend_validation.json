@@ -1,0 +1,170 @@
+{
+  "status": "PASSED_NUMERICAL_EQUIVALENCE_ONLY",
+  "cases": [
+    {
+      "view": 1,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 64,
+      "fields": {
+        "object_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 1.930772567636562e-09,
+          "maximum_absolute_error_over_common_Z": 2.7421552604740256e-19
+        },
+        "reference_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 1.0080046424656662e-09,
+          "maximum_absolute_error_over_common_Z": 2.718125852809348e-19
+        }
+      },
+      "mixed_normalization_passed": true,
+      "cpu_sha256": "83ccb07d6c8007f5491cbea6d825b05f7e66fec115216e3428140ec383f15af2",
+      "device_sha256": "a9443fd257eef96ed56a9c85e1cad0474bb227d278ce6d2cffa70caffd54b366"
+    },
+    {
+      "view": 1,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 64,
+      "fields": {
+        "object_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 1.7770793655460695e-09,
+          "maximum_absolute_error_over_common_Z": 4.7249144191321e-19
+        },
+        "reference_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 1.944836052831996e-09,
+          "maximum_absolute_error_over_common_Z": 4.569564290812088e-19
+        }
+      },
+      "mixed_normalization_passed": true,
+      "cpu_sha256": "11c6a4f124c68e3a63082fecc2e7bd0ba8ff2e7441ceb0958712a89d91ee384b",
+      "device_sha256": "93e4660a5653f16248c52c6368ae838cc6716b9eaa162d954ce5b07b641a9aa9"
+    },
+    {
+      "view": 1,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 64,
+      "fields": {
+        "object_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 2.3771807321395167e-09,
+          "maximum_absolute_error_over_common_Z": 8.582758501527834e-19
+        },
+        "reference_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 2.3872323426329816e-09,
+          "maximum_absolute_error_over_common_Z": 8.642246301239979e-19
+        }
+      },
+      "mixed_normalization_passed": true,
+      "cpu_sha256": "e45eff647a3d5d735845e1559f2ddbf1dd72779a13342297b66f6f92f4d56c27",
+      "device_sha256": "20db6615b1358f012d071987c9de312b15e57b99a1d11815f9ea91fe5cb8c02e"
+    },
+    {
+      "view": 6,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 64,
+      "fields": {
+        "object_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 3.0269847736936635e-09,
+          "maximum_absolute_error_over_common_Z": 6.984103036970982e-19
+        },
+        "reference_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 6.304776672422075e-09,
+          "maximum_absolute_error_over_common_Z": 8.852421891011155e-19
+        }
+      },
+      "mixed_normalization_passed": true,
+      "cpu_sha256": "402b65883c3ba10a07859e50741f87b9317da57a766402d09fb986875626ee50",
+      "device_sha256": "a147ff62e13ad1c6239288eadd9669c55a5ebfd0f69523a1ebd59119d4864531"
+    },
+    {
+      "view": 6,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 64,
+      "fields": {
+        "object_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 6.549819257617604e-09,
+          "maximum_absolute_error_over_common_Z": 2.044726862223066e-18
+        },
+        "reference_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 4.9267970646844625e-09,
+          "maximum_absolute_error_over_common_Z": 1.9475328160224543e-18
+        }
+      },
+      "mixed_normalization_passed": true,
+      "cpu_sha256": "49b088ecabc0cc3581e8c894e4e7afd1e04e73c89086c65d481960005242c2c4",
+      "device_sha256": "07a87dde9a60f6e2883a493f774578143a4860282b286fa7986a9c01095060a8"
+    },
+    {
+      "view": 6,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 64,
+      "fields": {
+        "object_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 9.353790030287223e-09,
+          "maximum_absolute_error_over_common_Z": 4.1462516928412166e-18
+        },
+        "reference_integrals": {
+          "entries": 440320,
+          "passed": 440320,
+          "maximum_relative_error": 2.2163166326623773e-09,
+          "maximum_absolute_error_over_common_Z": 5.134404696786471e-18
+        }
+      },
+      "mixed_normalization_passed": true,
+      "cpu_sha256": "d6d3ba934edbff478b413d891ced69e193a1b40877b95b2bd20ebd36527a27a1",
+      "device_sha256": "6924238f8cd0a2db1715c25f9385122cbfd6901870df49b5084090eb1d9d725e"
+    }
+  ],
+  "total_integral_entries": 5283840,
+  "passed_integral_entries": 5283840,
+  "cpu_gate_sha256": "fd260cb131b672d32b2487f7fc1c6134027ba43f59edf086e12c6e76ba574cca",
+  "device_gate_sha256": "df03ba3345250c87c586669b214bdac9b81b50d10fb95fb81616a48ef850c49b",
+  "code_sha256": "1a1a1300b8ce35e516ebe76ee5791f46cd79d71b11e5a32cc5e1231aa6a08abc",
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Numerical CPU/device equivalence on 128 fixed events, all 6880 cells and three orders; does not validate global A interpolation or constitute reconstruction.",
+  "evidence_sha256": "b6793b1d62c27810398e28e7f8f097effa1d7d7deef2232758f17cb17c2b84ce"
+}

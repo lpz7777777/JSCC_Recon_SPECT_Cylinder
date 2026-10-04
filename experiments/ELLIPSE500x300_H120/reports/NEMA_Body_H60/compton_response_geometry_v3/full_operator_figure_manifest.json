@@ -1,0 +1,13 @@
+{
+  "artifact": "full_operator_diagnostics.png",
+  "sha256": "6b0908fb110ca91a053745e182ded5a24e11793a7490f47a4585e06a99b71020",
+  "type": "response_diagnostic_not_reconstruction",
+  "inputs_sha256": {
+    "overlap_benchmark_cached_summary.json": "17f763f6941aa15890a3297d7bf3f892bd11fc9291be1535d3dbe79754b2777a",
+    "guard_components_summary.json": "8ae6bfb12fa78a73de033cf81ed3164ee6beb1886c770a184a258ccc043b91ec",
+    "guard_sampling_summary.json": "93a984130f53453b6a55068797ee7beadb9ab57ab1c04820681c9003ed8eff67",
+    "A_coverage_plan.json": "39d4a24f8a300ca20f022ffed42ea792b0660acef78ca7ffbdbd7b12ca887ea9",
+    "guard_column_summary.json": "d46541a593951c4a5043ea3234ec48186527a759ce71de27cbd49723a871fca5"
+  },
+  "source_sha256": "b067263067571692457569e71207aa570055751c65d404193f76bf5558c2a4c2"
+}

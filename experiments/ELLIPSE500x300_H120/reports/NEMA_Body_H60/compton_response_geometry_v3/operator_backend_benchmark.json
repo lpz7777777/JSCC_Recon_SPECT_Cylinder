@@ -1,0 +1,44 @@
+{
+  "timings": [
+    {
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events_per_batch": 64,
+      "cpu_seconds": 20.960347469503176,
+      "device_seconds": 10.125058898483985,
+      "speedup": 2.0701457324501638
+    },
+    {
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events_per_batch": 64,
+      "cpu_seconds": 101.97706816499704,
+      "device_seconds": 17.56120947499585,
+      "speedup": 5.80695015967977
+    },
+    {
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events_per_batch": 64,
+      "cpu_seconds": 413.89633471300476,
+      "device_seconds": 44.694871279993095,
+      "speedup": 9.260488348207382
+    }
+  ],
+  "figure_sha256": "566f327c3f3a51d314d9fba096d825b2d3b5c6f106090c9fbc45e84295ef7af0",
+  "backend_gate_sha256": "5f96f962eff005d9606d31de4a8a5890d2f15192055fd091626d632965e1d0b4",
+  "cpu_gate_sha256": "fd260cb131b672d32b2487f7fc1c6134027ba43f59edf086e12c6e76ba574cca",
+  "device_gate_sha256": "df03ba3345250c87c586669b214bdac9b81b50d10fb95fb81616a48ef850c49b",
+  "peak_device_reserved_percent": 5.265821220116116,
+  "measurements_include_parallel_diagnostics": true,
+  "interpretation": "Measured bounded diagnostics, not an S2 or reconstruction ETA."
+}

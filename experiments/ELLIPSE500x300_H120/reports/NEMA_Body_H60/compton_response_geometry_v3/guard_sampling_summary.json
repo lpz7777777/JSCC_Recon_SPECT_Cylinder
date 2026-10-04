@@ -1,0 +1,132 @@
+{
+  "status": "SAMPLING_DIAGNOSTIC_COMPLETE_GLOBAL_ACCURACY_HOLD",
+  "candidates": {
+    "xy0375_z075": {
+      "spacing_mm": [
+        0.375,
+        0.375,
+        0.75
+      ],
+      "cases": 84,
+      "passed": 84,
+      "maximum_relative_change": 0.0028638415910779195,
+      "maximum_absolute_change_over_common_Z": 2.748547383260788e-07,
+      "cases_over_one_percent": 0
+    },
+    "xy0375_z150": {
+      "spacing_mm": [
+        0.375,
+        0.375,
+        1.5
+      ],
+      "cases": 84,
+      "passed": 82,
+      "maximum_relative_change": 0.019238426370791446,
+      "maximum_absolute_change_over_common_Z": 1.390278502234449e-06,
+      "cases_over_one_percent": 2
+    },
+    "xy0375_z300": {
+      "spacing_mm": [
+        0.375,
+        0.375,
+        3.0
+      ],
+      "cases": 84,
+      "passed": 60,
+      "maximum_relative_change": 0.09936222266862044,
+      "maximum_absolute_change_over_common_Z": 7.743972892699325e-06,
+      "cases_over_one_percent": 24
+    },
+    "x075_y0375_z0375": {
+      "spacing_mm": [
+        0.75,
+        0.375,
+        0.375
+      ],
+      "cases": 84,
+      "passed": 84,
+      "maximum_relative_change": 0.004181892529519354,
+      "maximum_absolute_change_over_common_Z": 9.92542604231602e-08,
+      "cases_over_one_percent": 0
+    },
+    "x0375_y075_z0375": {
+      "spacing_mm": [
+        0.375,
+        0.75,
+        0.375
+      ],
+      "cases": 84,
+      "passed": 84,
+      "maximum_relative_change": 0.0017467482818647679,
+      "maximum_absolute_change_over_common_Z": 8.27721417743481e-08,
+      "cases_over_one_percent": 0
+    },
+    "xy075_z0375": {
+      "spacing_mm": [
+        0.75,
+        0.75,
+        0.375
+      ],
+      "cases": 84,
+      "passed": 84,
+      "maximum_relative_change": 0.004381126106604534,
+      "maximum_absolute_change_over_common_Z": 1.6769055707920396e-07,
+      "cases_over_one_percent": 0
+    },
+    "xy075_z150": {
+      "spacing_mm": [
+        0.75,
+        0.75,
+        1.5
+      ],
+      "cases": 84,
+      "passed": 82,
+      "maximum_relative_change": 0.01987279842431744,
+      "maximum_absolute_change_over_common_Z": 1.4657187916066745e-06,
+      "cases_over_one_percent": 2
+    },
+    "xy150_z0375": {
+      "spacing_mm": [
+        1.5,
+        1.5,
+        0.375
+      ],
+      "cases": 84,
+      "passed": 80,
+      "maximum_relative_change": 0.029461978639475216,
+      "maximum_absolute_change_over_common_Z": 1.1670886321875056e-06,
+      "cases_over_one_percent": 4
+    }
+  },
+  "baseline_cases": 84,
+  "output_sha256": "0e913b5314a7d2dd16fec3bc4a53eb583e72e396f6dbc5c34329f127a915e679",
+  "cases_sha256": "94ddd441e2a098b30bcd9f564ef5b69a35b7cf902b024841d271d60411c7aa63",
+  "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+  "patch_ready_sha256": "688d86fc3ad133714dcef8de2a40e32729302bf7fe51ed437353d944b9889f92",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "code_sha256": "abe47d5548503ab5cdbe11cb6e0450cb378e8507c1f7d04976410ccec0266c63",
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "elapsed_seconds": 1.8333474849932827,
+  "new_transport_photons": 0,
+  "new_matrix_points": 0,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Anisotropic A subsampling on the same local 84 point cases; preserved PE plus full physical scatter, all box faces and frozen calibration. Not a global accuracy certificate.",
+  "evidence_sha256": {
+    "sampling_gate.json": "92642c860b4bc92113f9c52ce1c261d01a8a2a33cbc9effc6823b796c6801116",
+    "sampling_cases.csv": "0e913b5314a7d2dd16fec3bc4a53eb583e72e396f6dbc5c34329f127a915e679"
+  },
+  "job": {
+    "pid": 2219716,
+    "physical_gpu": 4,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/guard_sampling_releases/9add69e87e1a9229",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_sampling_diagnosis",
+    "launcher_sha256": "c7fdaad8b624c464524d57275e02d30f10170390e23a0c82e68ec0c056718858",
+    "timeout_minutes": 30,
+    "diagnostic_cases": 84,
+    "new_transport_photons": 0,
+    "new_matrix_points": 0,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

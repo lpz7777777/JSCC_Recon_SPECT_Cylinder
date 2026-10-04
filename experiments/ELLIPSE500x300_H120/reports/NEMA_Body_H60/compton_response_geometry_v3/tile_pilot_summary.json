@@ -1,0 +1,276 @@
+{
+  "status": "TILE_INTERFACE_AND_COMPACTION_PASSED_ACCURACY_HOLD",
+  "plan_sha256": "633961fff981f13bfbd1a23976839bacd53f2dd633971a573b5e7056cbf6bb75",
+  "field_geometry_sha256": "993e6595231d0fe03d0c26fcadd66cc86ddbad191a849ddbba1de163ad6a8753",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "source_sha256": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+  "pe_binary_sha256": "58f1fbc62b7c24f572a0a57818cded6d2278a7c988097ed9832d0bbe57af9c94",
+  "scatter_binary_sha256": "717ce146cd56a00717cf0a8d440e464578fa80490a075ab867b3cce832596c2c",
+  "original_params_sha256": {
+    "Params_Collimator.dat": "b94a53dcb6dd3dc9d7b98263ed70604f8d33e5f0df7f5fdfd6a5138117073830",
+    "Params_Detector.dat": "297ccf177f479502d6fa85d349aff8d7602621a0e8ccc825fa4e713643555ab3",
+    "Params_Image.dat": "0fab428fc84526614a191848e7f491037d78b9288bfc9b42c3db7d547fbbcd2c",
+    "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3"
+  },
+  "receipts": [
+    {
+      "spec": {
+        "name": "tile_x21_y41_z05",
+        "shape": [
+          17,
+          17,
+          17
+        ],
+        "spacing": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "shift": [
+          0.0,
+          240.0,
+          6.0
+        ],
+        "grid_index_xyz": [
+          21,
+          41,
+          5
+        ]
+      },
+      "status": "COMPLETE",
+      "matrices": {
+        "pe.sysmat": {
+          "bytes": 226391040,
+          "sha256": "5aff06dae76cc1e51ca1f68e286b2d93245ccda9b562993e85ea6ad512129347"
+        },
+        "pe_windowed.sysmat": {
+          "bytes": 226391040,
+          "sha256": "6c64f26a2e5f98a6d9d28e6388b8efd0a29ad36f03d0af6ae334f3a0368b7dc0"
+        },
+        "Scatter_SysMat_shift_0.000000_240.000000_6.000000.sysmat": {
+          "bytes": 226391040,
+          "sha256": "07cba0caad77b8fbfdc8f8001664a0e0d462bedcf3a2fc5bba7844df0c7b5cf0"
+        },
+        "SysMat_withScatter_shift_0.000000_240.000000_6.000000.sysmat": {
+          "bytes": 226391040,
+          "sha256": "19e71d927cd104523ef88c48ba14eb0de978dd6a537dfaff5a223d81284729e1"
+        }
+      },
+      "pe_seconds": 36.054864195990376,
+      "elapsed_seconds": 102.0951144489809,
+      "calibration_refitted": false
+    },
+    {
+      "spec": {
+        "name": "tile_x21_y42_z05",
+        "shape": [
+          17,
+          17,
+          17
+        ],
+        "spacing": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "shift": [
+          0.0,
+          252.0,
+          6.0
+        ],
+        "grid_index_xyz": [
+          21,
+          42,
+          5
+        ]
+      },
+      "status": "COMPLETE",
+      "matrices": {
+        "pe.sysmat": {
+          "bytes": 226391040,
+          "sha256": "dbaf13c28187ce452b73e22eab339f751ad9f2a30161e692e0470c5353849a0f"
+        },
+        "pe_windowed.sysmat": {
+          "bytes": 226391040,
+          "sha256": "cf64ae6d17b3d8d1038575398d79158fa2484b49d7b3ecc25465b25cf5ed6130"
+        },
+        "Scatter_SysMat_shift_0.000000_252.000000_6.000000.sysmat": {
+          "bytes": 226391040,
+          "sha256": "7b2f34532e6466675d7bef93e8d6b41f665987287abd1f75058bc30bbd838d6b"
+        },
+        "SysMat_withScatter_shift_0.000000_252.000000_6.000000.sysmat": {
+          "bytes": 226391040,
+          "sha256": "1233c4bcbb237d8e2134ea8a36034a8495bc42efcb9b183674b3c6aa2e6297e2"
+        }
+      },
+      "pe_seconds": 37.70856112599722,
+      "elapsed_seconds": 104.36587088200031,
+      "calibration_refitted": false
+    }
+  ],
+  "compact_extraction": [
+    {
+      "bytes": 206267392,
+      "sha256": "329733b24d44369d0cf9dd41eb7387e090016530b2e5c5f8863f69460dd3fc80",
+      "shape_selected_zyx": [
+        10496,
+        17,
+        17,
+        17
+      ],
+      "finite_nonnegative": true,
+      "all_selected_rows_bitwise_verified": true,
+      "calibration_applied": false,
+      "raw_selected_mapping_sha256": "3899caeafe1e8ee9a4a72ea3eff53370e07be8448b8886dd8db818899d34ae4f"
+    },
+    {
+      "bytes": 206267392,
+      "sha256": "ad1dc146f7c9f23ca8dad915392751a7f7965889a44582984cc19563c98c0123",
+      "shape_selected_zyx": [
+        10496,
+        17,
+        17,
+        17
+      ],
+      "finite_nonnegative": true,
+      "all_selected_rows_bitwise_verified": true,
+      "calibration_applied": false,
+      "raw_selected_mapping_sha256": "3899caeafe1e8ee9a4a72ea3eff53370e07be8448b8886dd8db818899d34ae4f"
+    }
+  ],
+  "shared_physical_face": {
+    "pe.sysmat": {
+      "relative_l2": 0.0,
+      "bitwise_equal": true,
+      "maximum_absolute_error": 0.0,
+      "numerical_floor": 7.899353659013286e-13,
+      "elementwise_passed": true,
+      "passed": true
+    },
+    "pe_windowed.sysmat": {
+      "relative_l2": 0.0,
+      "bitwise_equal": true,
+      "maximum_absolute_error": 0.0,
+      "numerical_floor": 6.011156074237079e-13,
+      "elementwise_passed": true,
+      "passed": true
+    },
+    "Scatter_SysMat": {
+      "relative_l2": 3.486360837860021e-10,
+      "bitwise_equal": false,
+      "maximum_absolute_error": 5.684341886080802e-14,
+      "numerical_floor": 2.533600309106987e-14,
+      "elementwise_passed": true,
+      "passed": true
+    },
+    "SysMat_withScatter": {
+      "relative_l2": 4.4118105753163745e-11,
+      "bitwise_equal": false,
+      "maximum_absolute_error": 2.2737367544323206e-13,
+      "numerical_floor": 6.011156074237079e-13,
+      "elementwise_passed": true,
+      "passed": true
+    }
+  },
+  "original_common_points": {
+    "pe.sysmat": {
+      "tile_x21_y41_z05": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 7.89383047958836e-13,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "tile_x21_y42_z05": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 1.0002205090131611e-12,
+        "elementwise_passed": true,
+        "passed": true
+      }
+    },
+    "pe_windowed.sysmat": {
+      "tile_x21_y41_z05": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 6.006953117321245e-13,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "tile_x21_y42_z05": {
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "maximum_absolute_error": 0.0,
+        "numerical_floor": 7.611358887515962e-13,
+        "elementwise_passed": true,
+        "passed": true
+      }
+    },
+    "Scatter_SysMat": {
+      "tile_x21_y41_z05": {
+        "relative_l2": 2.8627022337231897e-10,
+        "bitwise_equal": false,
+        "maximum_absolute_error": 2.842170943040401e-14,
+        "numerical_floor": 2.4907606075430523e-14,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "tile_x21_y42_z05": {
+        "relative_l2": 2.5005054852130924e-10,
+        "bitwise_equal": false,
+        "maximum_absolute_error": 2.842170943040401e-14,
+        "numerical_floor": 3.146672725051758e-14,
+        "elementwise_passed": true,
+        "passed": true
+      }
+    },
+    "SysMat_withScatter": {
+      "tile_x21_y41_z05": {
+        "relative_l2": 1.2911701941199815e-10,
+        "bitwise_equal": false,
+        "maximum_absolute_error": 4.547473508864641e-13,
+        "numerical_floor": 6.006953117321245e-13,
+        "elementwise_passed": true,
+        "passed": true
+      },
+      "tile_x21_y42_z05": {
+        "relative_l2": 3.2669427401833156e-11,
+        "bitwise_equal": false,
+        "maximum_absolute_error": 1.1368683772161603e-13,
+        "numerical_floor": 7.611358887515962e-13,
+        "elementwise_passed": true,
+        "passed": true
+      }
+    }
+  },
+  "physical_matrix_points": 9826,
+  "physical_detector_rows": 11520,
+  "retained_selected_rows": 10496,
+  "raw_production_bytes": 1811128320,
+  "retained_response_bytes": 412534784,
+  "elapsed_seconds": 211.90381855898886,
+  "original_data_read_only": true,
+  "calibration_refitted": false,
+  "new_transport_photons": 0,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Two adjacent .75 mm response tiles only. All physical couplings calculated; compact selected combined rows are bitwise identical to raw rows. Shared PE faces are bitwise identical; Scatter/combined faces use the recorded numerical tolerance. A future tiled reader must choose one deterministic shared-vertex owner. Global interpolation accuracy and regional independent .375 mm checks remain required before production.",
+  "evidence_sha256": "1129e66e8dbcab59c17e5b28962297f8f55246a0edc1aec1ef87e2a6a4881072",
+  "job": {
+    "pid": 2333389,
+    "physical_gpu": 4,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tile_pilot_releases/f7980c4c5ea40eaa",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tile_pilot",
+    "launcher_sha256": "da437d03268bebd32ba28cc3f6015f44f7283b60609637af6b3c311fdf82b714",
+    "timeout_minutes": 45,
+    "new_matrix_points": 9826,
+    "new_transport_photons": 0,
+    "physical_models_unchanged": true,
+    "computational_detector_rows": 11520,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "local_sha256": "bf29705fe1798c5b8000dedf1d8a00e43321a5df32f747d270db9bb7a177a1d3",
+  "remote_sha256": "a21010b6ae89bb5eb864f017ebc6b0fdff8ab95142b4f12d6a89036170cea71a",
+  "arrays": [
+    {
+      "key": "effective_volume_mm3",
+      "shape": [
+        132040
+      ],
+      "dtype": "float64",
+      "exact": false,
+      "max_absolute_difference": 1.7053025658242404e-13,
+      "relative_l2": 5.1125042144047986e-17
+    },
+    {
+      "key": "ellipse_fraction",
+      "shape": [
+        132040
+      ],
+      "dtype": "float64",
+      "exact": false,
+      "max_absolute_difference": 8.326672684688674e-16,
+      "relative_l2": 4.8682696034191635e-17
+    },
+    {
+      "key": "active_indices",
+      "shape": [
+        82040
+      ],
+      "dtype": "int32",
+      "exact": true,
+      "max_absolute_difference": 0.0,
+      "relative_l2": 0.0
+    },
+    {
+      "key": "partial_indices",
+      "shape": [
+        6880
+      ],
+      "dtype": "int64",
+      "exact": true,
+      "max_absolute_difference": 0.0,
+      "relative_l2": 0.0
+    }
+  ]
+}

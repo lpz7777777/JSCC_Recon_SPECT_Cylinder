@@ -1,0 +1,14 @@
+{
+  "pid": 2230603,
+  "physical_gpu": 5,
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/overlap_benchmark_batched_releases/7c448245a9569df4",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/overlap_benchmark_batched",
+  "launcher_sha256": "30edeac74d0f4b641b63d60b93f4798bda39b37fc705d61d5f24a542541e018f",
+  "timeout_minutes": 45,
+  "diagnostic_events": 128,
+  "partial_cells": 6880,
+  "diagnostic_only": true,
+  "new_transport_photons": 0,
+  "reconstruction_submitted": false,
+  "S2_generated": false
+}

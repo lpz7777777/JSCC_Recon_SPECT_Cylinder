@@ -1,0 +1,10 @@
+test_adjacent_physical_nodes_are_identical (test_compton_a_tiles_v3.TileCoverageTests.test_adjacent_physical_nodes_are_identical) ... ok
+test_cleanup_cannot_escape_new_tile_or_start_with_unverified_files (test_compton_a_tiles_v3.TileCoverageTests.test_cleanup_cannot_escape_new_tile_or_start_with_unverified_files) ... ok
+test_compaction_preserves_detector_identity_and_block_size (test_compton_a_tiles_v3.TileCoverageTests.test_compaction_preserves_detector_identity_and_block_size) ... ok
+test_interface_requires_both_interpolation_tiles (test_compton_a_tiles_v3.TileCoverageTests.test_interface_requires_both_interpolation_tiles) ... ok
+test_no_extrapolation_or_unknown_tile (test_compton_a_tiles_v3.TileCoverageTests.test_no_extrapolation_or_unknown_tile) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.050s
+
+OK

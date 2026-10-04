@@ -1,0 +1,147 @@
+{
+  "status": "COMPACT_READER_CONTINUITY_PASSED_ACCURACY_HOLD",
+  "pilot_gate_sha256": "1129e66e8dbcab59c17e5b28962297f8f55246a0edc1aec1ef87e2a6a4881072",
+  "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+  "reader_sha256": "bbbcff11edc1599cabc95024e179766b1998a087d4d2fc75af5d47bd9c4700eb",
+  "source_sha256": "c36897825c24a3c83578c64a00509c1e0cb792a72bd89183bc8d4f2cca0e1270",
+  "rows": 32,
+  "interface_locations": 9,
+  "epsilon_mm": 1e-09,
+  "records": [
+    {
+      "crystal_selected_index": 0,
+      "maximum_interface_jump_over_sample_peak": 3.3245283368059555e-12
+    },
+    {
+      "crystal_selected_index": 338,
+      "maximum_interface_jump_over_sample_peak": 1.8117832383942628e-11
+    },
+    {
+      "crystal_selected_index": 677,
+      "maximum_interface_jump_over_sample_peak": 2.4806921401575963e-11
+    },
+    {
+      "crystal_selected_index": 1015,
+      "maximum_interface_jump_over_sample_peak": 7.493176224373287e-11
+    },
+    {
+      "crystal_selected_index": 1354,
+      "maximum_interface_jump_over_sample_peak": 5.66891597495024e-11
+    },
+    {
+      "crystal_selected_index": 1692,
+      "maximum_interface_jump_over_sample_peak": 6.030310155026129e-11
+    },
+    {
+      "crystal_selected_index": 2031,
+      "maximum_interface_jump_over_sample_peak": 1.1027940334940968e-10
+    },
+    {
+      "crystal_selected_index": 2369,
+      "maximum_interface_jump_over_sample_peak": 1.144028053054757e-10
+    },
+    {
+      "crystal_selected_index": 2708,
+      "maximum_interface_jump_over_sample_peak": 1.2382012276793e-10
+    },
+    {
+      "crystal_selected_index": 3046,
+      "maximum_interface_jump_over_sample_peak": 1.2614006341225302e-10
+    },
+    {
+      "crystal_selected_index": 3385,
+      "maximum_interface_jump_over_sample_peak": 1.0748201129208322e-10
+    },
+    {
+      "crystal_selected_index": 3724,
+      "maximum_interface_jump_over_sample_peak": 1.170776586020561e-10
+    },
+    {
+      "crystal_selected_index": 4062,
+      "maximum_interface_jump_over_sample_peak": 5.4728419863321297e-11
+    },
+    {
+      "crystal_selected_index": 4401,
+      "maximum_interface_jump_over_sample_peak": 1.4441423200906082e-10
+    },
+    {
+      "crystal_selected_index": 4739,
+      "maximum_interface_jump_over_sample_peak": 1.4804816267958926e-10
+    },
+    {
+      "crystal_selected_index": 5078,
+      "maximum_interface_jump_over_sample_peak": 6.185284574298034e-11
+    },
+    {
+      "crystal_selected_index": 5416,
+      "maximum_interface_jump_over_sample_peak": 7.454690180783543e-11
+    },
+    {
+      "crystal_selected_index": 5755,
+      "maximum_interface_jump_over_sample_peak": 1.1560505885488583e-10
+    },
+    {
+      "crystal_selected_index": 6093,
+      "maximum_interface_jump_over_sample_peak": 7.519120820605691e-11
+    },
+    {
+      "crystal_selected_index": 6432,
+      "maximum_interface_jump_over_sample_peak": 1.6965767525507332e-11
+    },
+    {
+      "crystal_selected_index": 6770,
+      "maximum_interface_jump_over_sample_peak": 6.22303019201985e-11
+    },
+    {
+      "crystal_selected_index": 7109,
+      "maximum_interface_jump_over_sample_peak": 5.872088411374519e-11
+    },
+    {
+      "crystal_selected_index": 7448,
+      "maximum_interface_jump_over_sample_peak": 6.593292265316283e-11
+    },
+    {
+      "crystal_selected_index": 7786,
+      "maximum_interface_jump_over_sample_peak": 3.08456173480044e-11
+    },
+    {
+      "crystal_selected_index": 8125,
+      "maximum_interface_jump_over_sample_peak": 1.031513197052343e-10
+    },
+    {
+      "crystal_selected_index": 8463,
+      "maximum_interface_jump_over_sample_peak": 1.389839094834864e-10
+    },
+    {
+      "crystal_selected_index": 8802,
+      "maximum_interface_jump_over_sample_peak": 6.807196303366026e-11
+    },
+    {
+      "crystal_selected_index": 9140,
+      "maximum_interface_jump_over_sample_peak": 4.685033982522178e-11
+    },
+    {
+      "crystal_selected_index": 9479,
+      "maximum_interface_jump_over_sample_peak": 1.1751554968597955e-10
+    },
+    {
+      "crystal_selected_index": 9817,
+      "maximum_interface_jump_over_sample_peak": 9.116888572388752e-11
+    },
+    {
+      "crystal_selected_index": 10156,
+      "maximum_interface_jump_over_sample_peak": 1.3824724653156734e-10
+    },
+    {
+      "crystal_selected_index": 10495,
+      "maximum_interface_jump_over_sample_peak": 1.5905477493533974e-10
+    }
+  ],
+  "maximum_jump_over_sample_peak": 1.5905477493533974e-10,
+  "shared_vertex_owner": "lexicographically first available tile index, independent of file/load order",
+  "calibration_applied_once": true,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "Interface continuity and bitwise compact extraction only; no claim of full A accuracy or spike reduction.",
+  "evidence_sha256": "bc5101a145cf545fe763154c0e543afcade30a116d52df018188d7215f38cb13"
+}

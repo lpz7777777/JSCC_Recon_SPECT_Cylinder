@@ -1,0 +1,193 @@
+{
+  "status": "BOUNDED_FULL_LATTICE_THROUGHPUT_AND_RESOURCES_PASSED",
+  "workers": [
+    {
+      "evidence_sha256": "88652dc125f88c49ab1a1e5b9adaddf3d5aeb5bab67673bcc4376ef9f0323d09",
+      "worker": {
+        "shard": 0,
+        "physical_gpu": 0,
+        "pid": 2528851,
+        "launcher_name": "run_tiled_field_probe_s0.sh",
+        "launcher_sha256": "fc2ce7551ca4390d5d1b1e55ac57d048edf87dbeb08a11f1fbd85adde327a38b"
+      },
+      "result": {
+        "status": "BOUNDED_SHARD_COMPLETE_ACCURACY_HOLD",
+        "phase": "full",
+        "shard": 0,
+        "shards": 4,
+        "assigned_tiles": 2680,
+        "new_tiles": 2,
+        "resumed_tiles": 0,
+        "completed_tiles": 2,
+        "tiles": [
+          {
+            "name": "tile_x15_y00_z00",
+            "compact_sha256": "00dc8d7739ecd3f14be5ab8dc7879e281e0246d75c6a3a0c28121b7d9e78771c",
+            "elapsed_physical_seconds": 90.2370510409819
+          },
+          {
+            "name": "tile_x15_y00_z04",
+            "compact_sha256": "0fcb3699715443bf92769b7e4e43f88376b75c826f854e28beed8c785e83f5a2",
+            "elapsed_physical_seconds": 89.80427618397516
+          }
+        ],
+        "elapsed_seconds": 184.03799367600004,
+        "plan_sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+        "source_sha256": "244febd2929573ecda609d8c9367ccde49d16845bcf965f6d38c00ec76cdbedb",
+        "new_transport_photons": 0,
+        "actual_resources": {
+          "samples": 88,
+          "maximum_gpu_used_fraction": 0.019027269027269027,
+          "maximum_process_tree_rss_fraction": 0.0008216903705020873,
+          "maximum_process_tree_rss_bytes": 1333555200,
+          "ram_basis": "65114 physical server RAM; not a Slurm grant",
+          "passed": true
+        },
+        "reconstruction_permitted": false,
+        "S2_generated": false
+      }
+    },
+    {
+      "evidence_sha256": "f71bba155b10e5f1937cf7b39f3906bed34f5cd8acf1d3aeef83326c85522f1a",
+      "worker": {
+        "shard": 1,
+        "physical_gpu": 1,
+        "pid": 2529117,
+        "launcher_name": "run_tiled_field_probe_s1.sh",
+        "launcher_sha256": "bb6c5651fa58bc0f3c32ff70d98dae88b9dc9e03ced9fe81bb9eb4004939db8a"
+      },
+      "result": {
+        "status": "BOUNDED_SHARD_COMPLETE_ACCURACY_HOLD",
+        "phase": "full",
+        "shard": 1,
+        "shards": 4,
+        "assigned_tiles": 2680,
+        "new_tiles": 2,
+        "resumed_tiles": 0,
+        "completed_tiles": 2,
+        "tiles": [
+          {
+            "name": "tile_x15_y00_z01",
+            "compact_sha256": "8379de13a6428485216fed5dd40cb334688edc90bc42b94f4ac3f410666fe489",
+            "elapsed_physical_seconds": 91.65655168500962
+          },
+          {
+            "name": "tile_x15_y00_z05",
+            "compact_sha256": "ac20bc135a044fc63463687a88f14eec03d0728c024788da6dda486666ebfb2e",
+            "elapsed_physical_seconds": 90.68701891301316
+          }
+        ],
+        "elapsed_seconds": 186.63420995799243,
+        "plan_sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+        "source_sha256": "244febd2929573ecda609d8c9367ccde49d16845bcf965f6d38c00ec76cdbedb",
+        "new_transport_photons": 0,
+        "actual_resources": {
+          "samples": 89,
+          "maximum_gpu_used_fraction": 0.019027269027269027,
+          "maximum_process_tree_rss_fraction": 0.0008216096084907041,
+          "maximum_process_tree_rss_bytes": 1333424128,
+          "ram_basis": "65114 physical server RAM; not a Slurm grant",
+          "passed": true
+        },
+        "reconstruction_permitted": false,
+        "S2_generated": false
+      }
+    },
+    {
+      "evidence_sha256": "595e048b76990f5c1a07f341fbd6916166b7b6608ce815f05d1dbaad7a5556b0",
+      "worker": {
+        "shard": 2,
+        "physical_gpu": 3,
+        "pid": 2529343,
+        "launcher_name": "run_tiled_field_probe_s2.sh",
+        "launcher_sha256": "ee95adf411ee2f63726d0ab53cacc1ef339f16b9da4539a79a776c9ca84df9c8"
+      },
+      "result": {
+        "status": "BOUNDED_SHARD_COMPLETE_ACCURACY_HOLD",
+        "phase": "full",
+        "shard": 2,
+        "shards": 4,
+        "assigned_tiles": 2680,
+        "new_tiles": 2,
+        "resumed_tiles": 0,
+        "completed_tiles": 2,
+        "tiles": [
+          {
+            "name": "tile_x15_y00_z02",
+            "compact_sha256": "f8b1b779ec842f77a912a140a7a93addf9b9d2d70af7b589e534e4efcdeedf8f",
+            "elapsed_physical_seconds": 91.91484597200179
+          },
+          {
+            "name": "tile_x15_y00_z06",
+            "compact_sha256": "e78a3b6e593e223c23d46c95f29f65ca75d0f677b0e9c671e1b7a0cbfedce9e8",
+            "elapsed_physical_seconds": 91.97966250000172
+          }
+        ],
+        "elapsed_seconds": 187.86358215799555,
+        "plan_sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+        "source_sha256": "244febd2929573ecda609d8c9367ccde49d16845bcf965f6d38c00ec76cdbedb",
+        "new_transport_photons": 0,
+        "actual_resources": {
+          "samples": 90,
+          "maximum_gpu_used_fraction": 0.019027269027269027,
+          "maximum_process_tree_rss_fraction": 0.0008216777514378086,
+          "maximum_process_tree_rss_bytes": 1333534720,
+          "ram_basis": "65114 physical server RAM; not a Slurm grant",
+          "passed": true
+        },
+        "reconstruction_permitted": false,
+        "S2_generated": false
+      }
+    },
+    {
+      "evidence_sha256": "00600e0bb0febf64c929435b0d37c623fd901ae6f347a42906c22e91dd0e41aa",
+      "worker": {
+        "shard": 3,
+        "physical_gpu": 4,
+        "pid": 2529495,
+        "launcher_name": "run_tiled_field_probe_s3.sh",
+        "launcher_sha256": "4cc716223a4b8894130b8c97da1ab50bd9df0899fae6cf9a3824940ae795316b"
+      },
+      "result": {
+        "status": "BOUNDED_SHARD_COMPLETE_ACCURACY_HOLD",
+        "phase": "full",
+        "shard": 3,
+        "shards": 4,
+        "assigned_tiles": 2680,
+        "new_tiles": 2,
+        "resumed_tiles": 0,
+        "completed_tiles": 2,
+        "tiles": [
+          {
+            "name": "tile_x15_y00_z03",
+            "compact_sha256": "8f6792a20d41bc1878f284feb13fa6f28e3ba0ec17ba1bbd96ce5851511113a0",
+            "elapsed_physical_seconds": 90.92372988400166
+          },
+          {
+            "name": "tile_x15_y00_z07",
+            "compact_sha256": "36c00857b104c799794b454687da2f075e92840c2098e9f06162cf5205f5552b",
+            "elapsed_physical_seconds": 92.45304668598692
+          }
+        ],
+        "elapsed_seconds": 187.69043648298248,
+        "plan_sha256": "89c98d670124921cb245482687ac717d0198ddfab1d6ab2bd69a5a1bd23ccdc0",
+        "source_sha256": "244febd2929573ecda609d8c9367ccde49d16845bcf965f6d38c00ec76cdbedb",
+        "new_transport_photons": 0,
+        "actual_resources": {
+          "samples": 90,
+          "maximum_gpu_used_fraction": 0.019027269027269027,
+          "maximum_process_tree_rss_fraction": 0.0008218039420805948,
+          "maximum_process_tree_rss_bytes": 1333739520,
+          "ram_basis": "65114 physical server RAM; not a Slurm grant",
+          "passed": true
+        },
+        "reconstruction_permitted": false,
+        "S2_generated": false
+      }
+    }
+  ],
+  "new_tiles": 8,
+  "new_transport_photons": 0,
+  "reconstruction_permitted": false,
+  "S2_generated": false
+}

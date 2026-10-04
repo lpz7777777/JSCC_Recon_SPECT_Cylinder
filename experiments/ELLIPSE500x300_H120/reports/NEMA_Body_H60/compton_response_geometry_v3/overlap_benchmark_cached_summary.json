@@ -1,0 +1,1117 @@
+{
+  "status": "INTEGRATOR_BENCHMARK_COMPLETE_A_ACCURACY_HOLD",
+  "cases": [
+    {
+      "view": 1,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 8,
+      "input_sha256": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+      "kept_rows_sha256": "a5cdf4f4137beb60373ec6b887e2e1e4528b5c8099c70e23e34a62904848cb90",
+      "raw_rows": [
+        0,
+        8,
+        13,
+        27,
+        28,
+        31,
+        43,
+        56
+      ],
+      "q": [
+        0.00010473908306447881,
+        2.6771034089842103e-05,
+        4.189419511408854e-05,
+        5.779689260874831e-06,
+        0.00011067846702185467,
+        3.560495545170016e-06,
+        1.940556943667194e-06,
+        0.0010934372587180444
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 9.33660970758865e-08,
+      "mixed_reference": [
+        3.173131345564514,
+        3.0454851084128283,
+        1.813101419397899,
+        6.277924736383529,
+        3.9721401814214605,
+        15.832645050976687,
+        3.7873337085046073,
+        0.8010873768229358
+      ],
+      "common_R1_reference": [
+        3.173002870091661,
+        3.0453489018271385,
+        1.8132242951728983,
+        6.2773176991991875,
+        3.9722054472491095,
+        15.832495203031613,
+        3.7873663773357578,
+        0.8010469368181428
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 0,
+        "order": [
+          8,
+          4,
+          4
+        ],
+        "quadrature_nodes": 2109440,
+        "maximum_point_chunk": 2560,
+        "cache_bytes": 134078976,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 2109440
+        },
+        "elapsed_seconds": 10.800366286013741,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "uncached_reference_regression": {
+        "passed": true,
+        "maximum_relative_error": 0.0,
+        "reference_file_sha256": "a7f91d71a978ce08cc1e9ab21be2b8dd3ea0f443f992b022d3565784959e34e9",
+        "events": 2
+      },
+      "integral_file_sha256": "c106e42c1fc4111615aea78c75a5d71a88768d8ce7cee4ff2477190599f8cafb"
+    },
+    {
+      "view": 1,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 8,
+      "input_sha256": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+      "kept_rows_sha256": "a5cdf4f4137beb60373ec6b887e2e1e4528b5c8099c70e23e34a62904848cb90",
+      "raw_rows": [
+        0,
+        8,
+        13,
+        27,
+        28,
+        31,
+        43,
+        56
+      ],
+      "q": [
+        0.00010473908306447881,
+        2.6771034089842103e-05,
+        4.189419511408854e-05,
+        5.779689260874831e-06,
+        0.00011067846702185467,
+        3.560495545170016e-06,
+        1.940556943667194e-06,
+        0.0010934372587180444
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        3.1731313523169153,
+        3.045483284124594,
+        1.8131036888949235,
+        6.277916595533024,
+        3.9721407935528656,
+        15.832650618255622,
+        3.787334328226664,
+        0.8010878877267441
+      ],
+      "common_R1_reference": [
+        3.173002870091661,
+        3.0453489018271385,
+        1.8132242951728983,
+        6.2773176991991875,
+        3.9722054472491095,
+        15.832495203031613,
+        3.7873663773357578,
+        0.8010469368181428
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 0,
+        "order": [
+          16,
+          8,
+          8
+        ],
+        "quadrature_nodes": 16875520,
+        "maximum_point_chunk": 20480,
+        "cache_bytes": 133705728,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 16875520
+        },
+        "elapsed_seconds": 24.747276946000056,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.006944227683295136,
+      "active_row_relative_l2": [
+        0.00010522043885430321,
+        5.1576051191659644e-05,
+        5.4391115554608405e-05,
+        0.00015508197247982025,
+        0.00011709575483109802,
+        3.869764259434305e-05,
+        9.74090798990801e-05,
+        0.00023186417820397764
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 1.4827683326681924e-07,
+      "uncached_reference_regression": {
+        "passed": true,
+        "maximum_relative_error": 0.0,
+        "reference_file_sha256": "6703d7a52a5c1543131fb2839b1d3a657b36361f5976d2e12252ed6ca1ef751a",
+        "events": 2
+      },
+      "integral_file_sha256": "006d889ce2e0de2b663c5784bb86a8a771db26b26ca879bddb06fdff60a14d4d"
+    },
+    {
+      "view": 1,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 8,
+      "input_sha256": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+      "kept_rows_sha256": "a5cdf4f4137beb60373ec6b887e2e1e4528b5c8099c70e23e34a62904848cb90",
+      "raw_rows": [
+        0,
+        8,
+        13,
+        27,
+        28,
+        31,
+        43,
+        56
+      ],
+      "q": [
+        0.00010473908306447881,
+        2.6771034089842103e-05,
+        4.189419511408854e-05,
+        5.779689260874831e-06,
+        0.00011067846702185467,
+        3.560495545170016e-06,
+        1.940556943667194e-06,
+        0.0010934372587180444
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        3.173131393815077,
+        3.0454828220014387,
+        1.8131041628808906,
+        6.27791482336131,
+        3.9721408479041167,
+        15.832651921051795,
+        3.7873344947336447,
+        0.801087971740126
+      ],
+      "common_R1_reference": [
+        3.173002870091661,
+        3.0453489018271385,
+        1.8132242951728983,
+        6.2773176991991875,
+        3.9722054472491095,
+        15.832495203031613,
+        3.7873663773357578,
+        0.8010469368181428
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 0,
+        "order": [
+          32,
+          12,
+          12
+        ],
+        "quadrature_nodes": 75939840,
+        "maximum_point_chunk": 32768,
+        "cache_bytes": 125908992,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 75939840
+        },
+        "elapsed_seconds": 75.12915935600176,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.0015126479195712995,
+      "active_row_relative_l2": [
+        2.1019399355282076e-05,
+        1.079793946701102e-05,
+        1.14462463898235e-05,
+        2.911277442763094e-05,
+        2.2135600374895148e-05,
+        8.209543921111617e-06,
+        2.085368032567203e-05,
+        4.71639032184612e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 3.117554474177463e-08,
+      "uncached_reference_regression": {
+        "passed": true,
+        "maximum_relative_error": 0.0,
+        "reference_file_sha256": "61328027f996606ec66307328874b2668d0546e49feb2d549dcd89d267686f42",
+        "events": 2
+      },
+      "integral_file_sha256": "6624b929f721aaa9bff8502c0fccf53eae66438b7e879e6b031ef1374299056d"
+    },
+    {
+      "view": 6,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 8,
+      "input_sha256": "a772f758c1eb3dfacfa97f01c659af6bd228025081f85e6165113e9477618f2e",
+      "kept_rows_sha256": "997d1445d901fd08da3856226661b637777142323a32e68f6603b1b12878abf6",
+      "raw_rows": [
+        20,
+        22,
+        43,
+        47,
+        58,
+        63,
+        71,
+        78
+      ],
+      "q": [
+        8.991496779063578e-05,
+        3.0670415029652975e-07,
+        0.012236323140524294,
+        7.975534046436117e-05,
+        2.216331439647911e-05,
+        7.79457230969176e-06,
+        0.00011672917505517347,
+        5.278409292066175e-06
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        4.571674017646631,
+        3.2800942392425187,
+        4.282640814079393,
+        1.4926925882941446,
+        2.5057771546763967,
+        3.4309512043057615,
+        3.7235784763604074,
+        2.958182355356411
+      ],
+      "common_R1_reference": [
+        4.571203098666339,
+        3.280267042660434,
+        4.281712834406676,
+        1.4922188731938781,
+        2.5064680034821123,
+        3.432060840093243,
+        3.7233000920881265,
+        2.9582618996605228
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 5,
+        "order": [
+          8,
+          4,
+          4
+        ],
+        "quadrature_nodes": 2109440,
+        "maximum_point_chunk": 2560,
+        "cache_bytes": 134070784,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 2108672,
+          "near_minus": 256,
+          "near_middle": 256,
+          "near_plus": 256
+        },
+        "elapsed_seconds": 10.812439414003165,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "integral_file_sha256": "b8ec5de2fc8ff3097742d52cfffd25a766a13e22ae9b940b7a3c7543a6f36770"
+    },
+    {
+      "view": 6,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 8,
+      "input_sha256": "a772f758c1eb3dfacfa97f01c659af6bd228025081f85e6165113e9477618f2e",
+      "kept_rows_sha256": "997d1445d901fd08da3856226661b637777142323a32e68f6603b1b12878abf6",
+      "raw_rows": [
+        20,
+        22,
+        43,
+        47,
+        58,
+        63,
+        71,
+        78
+      ],
+      "q": [
+        8.991496779063578e-05,
+        3.0670415029652975e-07,
+        0.012236323140524294,
+        7.975534046436117e-05,
+        2.216331439647911e-05,
+        7.79457230969176e-06,
+        0.00011672917505517347,
+        5.278409292066175e-06
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 1.1242337905059685e-07,
+      "mixed_reference": [
+        4.571653423188691,
+        3.280096611053799,
+        4.2826202506726965,
+        1.4926759522183795,
+        2.505791970220994,
+        3.430981279109215,
+        3.723570441711092,
+        2.9581790768128684
+      ],
+      "common_R1_reference": [
+        4.571203098666339,
+        3.280267042660434,
+        4.281712834406676,
+        1.4922188731938781,
+        2.5064680034821123,
+        3.432060840093243,
+        3.7233000920881265,
+        2.9582618996605228
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 5,
+        "order": [
+          16,
+          8,
+          8
+        ],
+        "quadrature_nodes": 16875520,
+        "maximum_point_chunk": 20480,
+        "cache_bytes": 133672960,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 16869376,
+          "near_minus": 2048,
+          "near_middle": 2048,
+          "near_plus": 2048
+        },
+        "elapsed_seconds": 24.513217588013504,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.009537125493812583,
+      "active_row_relative_l2": [
+        1.4344909686769824e-05,
+        0.0001024053999572061,
+        0.00029574433574452996,
+        0.00018974789418280125,
+        0.00025209723389707506,
+        0.00024906991166062653,
+        2.6073941626236774e-05,
+        0.0001738670252962038
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 8.256180942099501e-07,
+      "integral_file_sha256": "303a353aafc540460359759600eb8bbf3e8c41431b158116d45d47be59d7650d"
+    },
+    {
+      "view": 6,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 8,
+      "input_sha256": "a772f758c1eb3dfacfa97f01c659af6bd228025081f85e6165113e9477618f2e",
+      "kept_rows_sha256": "997d1445d901fd08da3856226661b637777142323a32e68f6603b1b12878abf6",
+      "raw_rows": [
+        20,
+        22,
+        43,
+        47,
+        58,
+        63,
+        71,
+        78
+      ],
+      "q": [
+        8.991496779063578e-05,
+        3.0670415029652975e-07,
+        0.012236323140524294,
+        7.975534046436117e-05,
+        2.216331439647911e-05,
+        7.79457230969176e-06,
+        0.00011672917505517347,
+        5.278409292066175e-06
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 1.1242334352346006e-07,
+      "mixed_reference": [
+        4.571649245579348,
+        3.280097175822173,
+        4.282616212055573,
+        1.4926728214878116,
+        2.50579499008078,
+        3.4309876173331206,
+        3.7235688982476596,
+        2.9581786464819992
+      ],
+      "common_R1_reference": [
+        4.571203098666339,
+        3.280267042660434,
+        4.281712834406676,
+        1.4922188731938781,
+        2.5064680034821123,
+        3.432060840093243,
+        3.7233000920881265,
+        2.9582618996605228
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 5,
+        "order": [
+          32,
+          12,
+          12
+        ],
+        "quadrature_nodes": 75939840,
+        "maximum_point_chunk": 32768,
+        "cache_bytes": 125761536,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 75912192,
+          "near_minus": 9216,
+          "near_middle": 9216,
+          "near_plus": 9216
+        },
+        "elapsed_seconds": 75.14801510801772,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.0019972762693042895,
+      "active_row_relative_l2": [
+        3.240244723201613e-06,
+        2.2049445760785602e-05,
+        5.9464382502483204e-05,
+        4.247237666277215e-05,
+        5.2652714657597244e-05,
+        5.1269380492158234e-05,
+        3.5773509807768278e-06,
+        3.616981484810822e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 1.795590132230807e-07,
+      "integral_file_sha256": "f9a48b3f40bf93db61d10b70aeac42ba11d593e030d73f523e3707b1ec5f0128"
+    },
+    {
+      "view": 11,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 8,
+      "input_sha256": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+      "kept_rows_sha256": "60a3301d4041b31a61102523cd446290d4d883013d9b77725f676ff216837a3d",
+      "raw_rows": [
+        0,
+        10,
+        17,
+        18,
+        45,
+        55,
+        58,
+        60
+      ],
+      "q": [
+        4.537823957975514e-06,
+        2.556353198009766e-05,
+        8.443815001181285e-05,
+        3.4672554525129e-05,
+        3.2130939966460354e-06,
+        2.618996905418531e-05,
+        1.2708262240119326e-06,
+        9.31029778825638e-07
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        4.928190443783866,
+        3.243358689992574,
+        2.656670015493136,
+        17.376305170589074,
+        1.5264848761062801,
+        1.8745510424499754,
+        8.436595189644372,
+        4.953058226426758
+      ],
+      "common_R1_reference": [
+        4.928182799708755,
+        3.2433350029221515,
+        2.656545175892835,
+        17.37582766331616,
+        1.5264156452750035,
+        1.8746450606830187,
+        8.436395641625495,
+        4.952785134047872
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 10,
+        "order": [
+          8,
+          4,
+          4
+        ],
+        "quadrature_nodes": 2109440,
+        "maximum_point_chunk": 2560,
+        "cache_bytes": 134078976,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 2109440
+        },
+        "elapsed_seconds": 10.766232790017966,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "uncached_reference_regression": {
+        "passed": true,
+        "maximum_relative_error": 0.0,
+        "reference_file_sha256": "71d6a96795989ebce16bb986f4d215e0b580aebf96d78e8cd2c7d66d7c73ce58",
+        "events": 2
+      },
+      "integral_file_sha256": "ab829226b56b251c8ad9199829f5b9fee7b887d7f9012477ba6d3fd4e1160a22"
+    },
+    {
+      "view": 11,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 8,
+      "input_sha256": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+      "kept_rows_sha256": "60a3301d4041b31a61102523cd446290d4d883013d9b77725f676ff216837a3d",
+      "raw_rows": [
+        0,
+        10,
+        17,
+        18,
+        45,
+        55,
+        58,
+        60
+      ],
+      "q": [
+        4.537823957975514e-06,
+        2.556353198009766e-05,
+        8.443815001181285e-05,
+        3.4672554525129e-05,
+        3.2130939966460354e-06,
+        2.618996905418531e-05,
+        1.2708262240119326e-06,
+        9.31029778825638e-07
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 8.403102214060709e-08,
+      "mixed_reference": [
+        4.928191073641324,
+        3.2433545305754024,
+        2.656669083513104,
+        17.37629539512009,
+        1.5264826147627852,
+        1.8745530717962198,
+        8.436601090521194,
+        4.9530471189181755
+      ],
+      "common_R1_reference": [
+        4.928182799708755,
+        3.2433350029221515,
+        2.656545175892835,
+        17.37582766331616,
+        1.5264156452750035,
+        1.8746450606830187,
+        8.436395641625495,
+        4.952785134047872
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 10,
+        "order": [
+          16,
+          8,
+          8
+        ],
+        "quadrature_nodes": 16875520,
+        "maximum_point_chunk": 20480,
+        "cache_bytes": 133705728,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 16875520
+        },
+        "elapsed_seconds": 24.506624301022384,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.007595901964195167,
+      "active_row_relative_l2": [
+        2.9607936085085385e-05,
+        0.00016566972772125155,
+        4.075210017617792e-05,
+        3.872328670695424e-05,
+        8.381644875044003e-05,
+        7.517023186665028e-05,
+        0.00016341199807357043,
+        0.00017038441728800535
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 2.32461832840806e-07,
+      "uncached_reference_regression": {
+        "passed": true,
+        "maximum_relative_error": 0.0,
+        "reference_file_sha256": "14a1b2771ee1dc1aca7646cf7f1e8da598c89c0d93fe63aca3f9844cb9e17b34",
+        "events": 2
+      },
+      "integral_file_sha256": "6de80e6958ba2cf76521abefd6006be94388fbb4224512d91da558841b5f64fa"
+    },
+    {
+      "view": 11,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 8,
+      "input_sha256": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+      "kept_rows_sha256": "60a3301d4041b31a61102523cd446290d4d883013d9b77725f676ff216837a3d",
+      "raw_rows": [
+        0,
+        10,
+        17,
+        18,
+        45,
+        55,
+        58,
+        60
+      ],
+      "q": [
+        4.537823957975514e-06,
+        2.556353198009766e-05,
+        8.443815001181285e-05,
+        3.4672554525129e-05,
+        3.2130939966460354e-06,
+        2.618996905418531e-05,
+        1.2708262240119326e-06,
+        9.31029778825638e-07
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        4.9281911348832335,
+        3.2433535145591907,
+        2.6566688270354595,
+        17.376293129664113,
+        1.5264821811666525,
+        1.874553489033756,
+        8.436601982413727,
+        4.953044925914154
+      ],
+      "common_R1_reference": [
+        4.928182799708755,
+        3.2433350029221515,
+        2.656545175892835,
+        17.37582766331616,
+        1.5264156452750035,
+        1.8746450606830187,
+        8.436395641625495,
+        4.952785134047872
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 10,
+        "order": [
+          32,
+          12,
+          12
+        ],
+        "quadrature_nodes": 75939840,
+        "maximum_point_chunk": 32768,
+        "cache_bytes": 125908992,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 75939840
+        },
+        "elapsed_seconds": 75.35072983699501,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.0015579281297288423,
+      "active_row_relative_l2": [
+        5.835024694533786e-06,
+        3.250560985179618e-05,
+        8.073969183897134e-06,
+        8.592218364356086e-06,
+        2.297852552146651e-05,
+        1.6548678104300052e-05,
+        3.173806544509716e-05,
+        3.703050606418401e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 5.2851080606915856e-08,
+      "uncached_reference_regression": {
+        "passed": true,
+        "maximum_relative_error": 0.0,
+        "reference_file_sha256": "11af760ec515e1105480763eb70569dfa4bb9fec8e95dd67370fab00b17b57ce",
+        "events": 2
+      },
+      "integral_file_sha256": "a9434368fd90f05bc8a3648833fae617db843a3f6e86d7c6d07e960a9fecccec"
+    },
+    {
+      "view": 16,
+      "order": [
+        8,
+        4,
+        4
+      ],
+      "events": 8,
+      "input_sha256": "c3a9774796193baceaffc59763390c1f50c2da0960372545c063cb362a22c230",
+      "kept_rows_sha256": "a39bb569387a5bf149abe2b2c9e66648cc7ac0251dc44b8945a4d0abf378c1ce",
+      "raw_rows": [
+        20,
+        25,
+        39,
+        44,
+        57,
+        60,
+        66,
+        76
+      ],
+      "q": [
+        4.790570209302783e-06,
+        1.508998038378341e-05,
+        2.2939395074302014e-05,
+        9.236133838830614e-06,
+        3.763698688372904e-05,
+        2.913338398172866e-07,
+        4.001172778480934e-06,
+        7.208060997100846e-07
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 6.184106382534083e-08,
+      "mixed_reference": [
+        2.8106071267363713,
+        7.557614978082926,
+        2.5712881109613717,
+        2.2970793960545937,
+        3.6330106094837373,
+        4.336649104460367,
+        3.718625911900125,
+        8.401210950985353
+      ],
+      "common_R1_reference": [
+        2.8105670678035044,
+        7.560255512256845,
+        2.571197030195943,
+        2.296993733583906,
+        3.633570044417501,
+        4.336535089453813,
+        3.7182739571126495,
+        8.402099144640488
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 15,
+        "order": [
+          8,
+          4,
+          4
+        ],
+        "quadrature_nodes": 2109440,
+        "maximum_point_chunk": 2560,
+        "cache_bytes": 134070784,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 2108672,
+          "near_minus": 256,
+          "near_middle": 256,
+          "near_plus": 256
+        },
+        "elapsed_seconds": 10.838919439003803,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "integral_file_sha256": "408ae47eaa2ea0a838cf1cbe1804f9f3dad0eb79b426f2f673b3f4e8b040847e"
+    },
+    {
+      "view": 16,
+      "order": [
+        16,
+        8,
+        8
+      ],
+      "events": 8,
+      "input_sha256": "c3a9774796193baceaffc59763390c1f50c2da0960372545c063cb362a22c230",
+      "kept_rows_sha256": "a39bb569387a5bf149abe2b2c9e66648cc7ac0251dc44b8945a4d0abf378c1ce",
+      "raw_rows": [
+        20,
+        25,
+        39,
+        44,
+        57,
+        60,
+        66,
+        76
+      ],
+      "q": [
+        4.790570209302783e-06,
+        1.508998038378341e-05,
+        2.2939395074302014e-05,
+        9.236133838830614e-06,
+        3.763698688372904e-05,
+        2.913338398172866e-07,
+        4.001172778480934e-06,
+        7.208060997100846e-07
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 6.184109935247761e-08,
+      "mixed_reference": [
+        2.8106059682745363,
+        7.557674118760407,
+        2.5712868161335276,
+        2.2970722999713704,
+        3.6330012113819268,
+        4.3366521822189235,
+        3.718616672043369,
+        8.401239707720787
+      ],
+      "common_R1_reference": [
+        2.8105670678035044,
+        7.560255512256845,
+        2.571197030195943,
+        2.296993733583906,
+        3.633570044417501,
+        4.336535089453813,
+        3.7182739571126495,
+        8.402099144640488
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 15,
+        "order": [
+          16,
+          8,
+          8
+        ],
+        "quadrature_nodes": 16875520,
+        "maximum_point_chunk": 20480,
+        "cache_bytes": 133672960,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 16869376,
+          "near_minus": 2048,
+          "near_middle": 2048,
+          "near_plus": 2048
+        },
+        "elapsed_seconds": 24.674401727999793,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.008550533950271368,
+      "active_row_relative_l2": [
+        8.899543900042772e-05,
+        0.0002529015182517469,
+        0.00015006860485300422,
+        0.0001001093551167287,
+        1.6706528185750358e-05,
+        0.0001458073384128511,
+        0.00011218628787901253,
+        0.0002480746479704976
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 7.298662910982628e-07,
+      "integral_file_sha256": "d7262388e5ccf802e0f92e37eceb480f600330ee0bc13f505910e704dea785e6"
+    },
+    {
+      "view": 16,
+      "order": [
+        32,
+        12,
+        12
+      ],
+      "events": 8,
+      "input_sha256": "c3a9774796193baceaffc59763390c1f50c2da0960372545c063cb362a22c230",
+      "kept_rows_sha256": "a39bb569387a5bf149abe2b2c9e66648cc7ac0251dc44b8945a4d0abf378c1ce",
+      "raw_rows": [
+        20,
+        25,
+        39,
+        44,
+        57,
+        60,
+        66,
+        76
+      ],
+      "q": [
+        4.790570209302783e-06,
+        1.508998038378341e-05,
+        2.2939395074302014e-05,
+        9.236133838830614e-06,
+        3.763698688372904e-05,
+        2.913338398172866e-07,
+        4.001172778480934e-06,
+        7.208060997100846e-07
+      ],
+      "active_points": 82040,
+      "inner_product_relative_error": 0.0,
+      "mixed_reference": [
+        2.810605592295336,
+        7.557686579781537,
+        2.5712865611121423,
+        2.2970707365455594,
+        3.632999467421863,
+        4.336653256880005,
+        3.7186147962094975,
+        8.4012447542728
+      ],
+      "common_R1_reference": [
+        2.8105670678035044,
+        7.560255512256845,
+        2.571197030195943,
+        2.296993733583906,
+        3.633570044417501,
+        4.336535089453813,
+        3.7182739571126495,
+        8.402099144640488
+      ],
+      "statistics": {
+        "events": 8,
+        "partial_cells": 6880,
+        "view_zero_based": 15,
+        "order": [
+          32,
+          12,
+          12
+        ],
+        "quadrature_nodes": 75939840,
+        "maximum_point_chunk": 32768,
+        "cache_bytes": 125761536,
+        "cache_limit_bytes": 134217728,
+        "provider_node_counts": {
+          "guarded": 75912192,
+          "near_minus": 9216,
+          "near_middle": 9216,
+          "near_plus": 9216
+        },
+        "elapsed_seconds": 76.51281256199582,
+        "diagnostic_only": true,
+        "event_filter_applied": false,
+        "density_volume_applied_once": true
+      },
+      "quadrature_entries": 110080,
+      "quadrature_entries_passed": 110080,
+      "maximum_integral_relative_change": 0.001815846602254456,
+      "active_row_relative_l2": [
+        1.7938415112439543e-05,
+        5.106726894155145e-05,
+        3.045204903173726e-05,
+        1.8423832443659194e-05,
+        2.769441380223725e-06,
+        3.0361055905814283e-05,
+        2.3066075300448574e-05,
+        5.140915891388431e-05
+      ],
+      "maximum_absolute_integral_change_over_common_Z": 1.602233745365762e-07,
+      "integral_file_sha256": "9dd7ac7d2302be3a550b9524ed6e4beb9e5b63eeb47d72a02e94f0b8735ee66a"
+    }
+  ],
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "config_sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+  "measure_manifest_sha256": "ccbbc417d5aa49f2be8982d8d11920119ebd4ef57ae365e5d84c5bb45a689abb",
+  "R1_scan_gate_sha256": "fca2725b72b16da1f02555558e6d8f630e446c24b61db4b2ecc7f02958abb54b",
+  "field_provenance": {
+    "field_manifest_sha256": "7da70fe5ab415975644c877e46ad749a6cae148634950037c02f4453c9ffe88a",
+    "baseline_geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "baseline_B_sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38",
+    "patch_ready_sha256": "688d86fc3ad133714dcef8de2a40e32729302bf7fe51ed437353d944b9889f92",
+    "policy": "finest complete reference-cell box; fallback guarded A",
+    "calibration_refitted": false,
+    "original_data_read_only": true,
+    "production_gate": "HOLD_UNCERTIFIED_GLOBAL_A_ACCURACY"
+  },
+  "kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "source_sha256": {
+    "benchmark_compton_overlap_v3.py": "87ebfb24e8728bcef14187db5c1e2fdead77660427e1477b8cca84c5e9ef6756",
+    "compton_overlap_integrator.py": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+    "compton_cell_response_field.py": "e84f34a7c6e20f71b40bf11ee9b5df31f58e2be41e638a7946404ae2078dad5f",
+    "compton_overlap_assembly.py": "d87ce35a974aff8a34ac71839ea1b53b207a97d59129f3cb45caaf63518f3a80"
+  },
+  "peak_host_rss_bytes": 7333728256,
+  "peak_gpu_reserved_bytes": 381681664,
+  "total_gpu_bytes": 50897289216,
+  "provider_xy_cache_bytes": 43032576,
+  "provider_xy_cache_limit_bytes": 67108864,
+  "elapsed_seconds": 461.16571495498647,
+  "new_transport_photons": 0,
+  "reconstruction_permitted": false,
+  "S2_generated": false,
+  "interpretation": "All 6880 partial cells, object and full reference, same frozen R1 identities. Local fine A coverage and cell interfaces do not certify global A accuracy; no formal imaging.",
+  "evidence_sha256": "dc93f95e47876c5fe0956c3bf63db57b11780b6883a7e7e24b0a8778eae1f62a",
+  "job": {
+    "pid": 2180026,
+    "physical_gpu": 5,
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/overlap_benchmark_cached_releases/792340bc34b3aa3c",
+    "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/overlap_benchmark_cached",
+    "launcher_sha256": "09b73ef2b33f2ef41a28e6f8a73b36ddeb30ed33e53bf2a3f1ffbb2bf407163d",
+    "timeout_minutes": 45,
+    "diagnostic_events": 32,
+    "partial_cells": 6880,
+    "diagnostic_only": true,
+    "new_transport_photons": 0,
+    "reconstruction_submitted": false,
+    "S2_generated": false
+  }
+}

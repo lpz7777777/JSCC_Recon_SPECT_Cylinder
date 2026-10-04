@@ -1,0 +1,17 @@
+{
+  "status": "PASSED",
+  "execution_entries": 358,
+  "unique_staged_sources": 102,
+  "generated_input_paths_excluded": [
+    "experiments/ELLIPSE500x300_H120/generated/Geometry/geometry.npz",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/R1_preflight/R1.json",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/R1_preflight/Sensi_d",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/R1_preflight/Sensi_d_provenance.json",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/R1_preflight/spatial_gate.json",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/R1_preflight/validation_gate.json",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/precise_measure/measure.npz",
+    "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/precise_measure/measure_manifest.json"
+  ],
+  "mismatches": [],
+  "interpretation": "Executed source bytes match Git index; immutable large generated inputs excluded."
+}

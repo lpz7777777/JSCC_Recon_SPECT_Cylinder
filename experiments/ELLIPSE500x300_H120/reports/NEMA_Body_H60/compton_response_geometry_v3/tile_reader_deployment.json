@@ -1,0 +1,14 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tile_reader_releases/9214a54fd8f44b67",
+  "code_sha256": {
+    "compton_tiled_a_field.py": "bbbcff11edc1599cabc95024e179766b1998a087d4d2fc75af5d47bd9c4700eb",
+    "verify_compton_a_tile_reader_v3.py": "c36897825c24a3c83578c64a00509c1e0cb792a72bd89183bc8d4f2cca0e1270",
+    "test_compton_tiled_a_field_v3.py": "1b0b390f38fe6bfe8bb1042e271b3c1cce572f0f1fdbca7c536129c6eede8645",
+    "plan_compton_a_tiles_v3.py": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+    "generate_compton_a_guard.py": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "compton_overlap_integrator.py": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+    "compton_boundary_quadrature.py": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328"
+  }
+}

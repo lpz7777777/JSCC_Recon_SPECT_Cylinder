@@ -1,0 +1,14 @@
+test_invalid_A_holds_without_silently_removing_an_event (test_compton_overlap_integrator.IntegratorTests.test_invalid_A_holds_without_silently_removing_an_event) ... ok
+test_node_and_cell_blocking_preserve_every_contribution (test_compton_overlap_integrator.IntegratorTests.test_node_and_cell_blocking_preserve_every_contribution) ... ok
+test_object_volume_independent_integral_and_full_reference (test_compton_overlap_integrator.IntegratorTests.test_object_volume_independent_integral_and_full_reference) ... ok
+test_rotated_bounds_cover_the_entire_sector_not_just_representative_point (test_compton_overlap_integrator.IntegratorTests.test_rotated_bounds_cover_the_entire_sector_not_just_representative_point) ... ok
+test_uncertified_field_cannot_enter_production (test_compton_overlap_integrator.IntegratorTests.test_uncertified_field_cannot_enter_production) ... ok
+test_matching_sensitivity_keeps_emission_denominator (test_compton_overlap_assembly.AssemblyTests.test_matching_sensitivity_keeps_emission_denominator) ... ok
+test_reference_keeps_outside_ellipse_and_integrals_do_not_get_f_again (test_compton_overlap_assembly.AssemblyTests.test_reference_keeps_outside_ellipse_and_integrals_do_not_get_f_again) ... ok
+test_rotation_and_exact_transpose (test_compton_overlap_assembly.AssemblyTests.test_rotation_and_exact_transpose) ... ok
+test_zero_active_and_invalid_layout_hold_without_dropping_events (test_compton_overlap_assembly.AssemblyTests.test_zero_active_and_invalid_layout_hold_without_dropping_events) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.039s
+
+OK

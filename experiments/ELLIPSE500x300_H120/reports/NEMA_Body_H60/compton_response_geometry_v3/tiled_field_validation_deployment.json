@@ -1,0 +1,24 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_validation_releases/23352027dcb26a7b",
+  "code_sha256": {
+    "validate_compton_regional_a_v3.py": "2cc41e6cb06bf34e20b25bcff51414d0f659e18c61cba7ba4d4ad4009bf01e08",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "compton_cartesian_patch.py": "de90764c3f31930218d07def6a7a526abfc43d9111a8eb184e14642117ad04df",
+    "compton_tiled_a_field.py": "44f2d029e1e112083d1776454d72f4ca39eb56ca246ef67e37be51baf6fa7490",
+    "test_compton_tiled_a_field_v3.py": "e736c8a1cc6b17b6e8b36c88685b60e93a961ff65a519d8d0785d287baec1ab8",
+    "plan_compton_a_tiles_v3.py": "b7c04709a3c1e067a44ca4b3f60216af07ebfeaaff7315142f189bfddd038797",
+    "compton_overlap_integrator.py": "01a69ef172f01fb3a094203890bfea30207c0546ccc7d852f699533137482edd",
+    "compton_cell_response_field.py": "629edae317134a275d2ce4e4c56a370992f8f749a62d63893479dfa45bba7c14",
+    "compton_boundary_quadrature.py": "e3e8ccf275be8f23c8ee543d6737d9a1c6bc4a90f63b6fb4857fff3ea57c0d41",
+    "generate_compton_a_guard.py": "faa2942d0f2380a0af16e625e49c3edda925ed7d33b610bb298ab4d1b9582fcd",
+    "generate_compton_a_column_v3.py": "4e3d9d1da65672e5b9eb38849c0feee2979a6c7ec4283f38bcb3cab4731a3f4b",
+    "generate_compton_a_tile_pilot_v3.py": "735560a066162d41ec8240cdfd806575f024ebfaf49794172d2d9824e901e312",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "regional_a_plan.json": "a25f134b9952c5eb0ee8bf76f46e15ec38e1f2788292711590eba40648e5769c",
+    "measure.npz": "bf29705fe1798c5b8000dedf1d8a00e43321a5df32f747d270db9bb7a177a1d3",
+    "measure_manifest.json": "6962199066d369de0edf74756626b5cd568f92b53b5bccd27d2b44d31e8163cf"
+  }
+}

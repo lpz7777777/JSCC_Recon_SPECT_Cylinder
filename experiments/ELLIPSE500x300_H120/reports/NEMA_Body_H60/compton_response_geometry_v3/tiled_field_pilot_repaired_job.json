@@ -1,0 +1,40 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/05b0c1187275f2e0",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field",
+  "workers": [
+    {
+      "shard": 0,
+      "physical_gpu": 0,
+      "pid": 2442796,
+      "launcher_name": "run_tiled_field_pilot_repaired_s0.sh",
+      "launcher_sha256": "b01e1cc1713aa3fd9cde31afaa4ed7630b52563431062d6b06626348b0937a4d"
+    },
+    {
+      "shard": 1,
+      "physical_gpu": 1,
+      "pid": 2442926,
+      "launcher_name": "run_tiled_field_pilot_repaired_s1.sh",
+      "launcher_sha256": "43f6117c66b0a92887764ec9da78b7ee9fc2a259d67367355734b75a698c32b8"
+    },
+    {
+      "shard": 2,
+      "physical_gpu": 3,
+      "pid": 2443065,
+      "launcher_name": "run_tiled_field_pilot_repaired_s2.sh",
+      "launcher_sha256": "5a71725e6fbaec0b124439a1a588d6edbf28886c37ed6c7606d9a15dbda8863b"
+    },
+    {
+      "shard": 3,
+      "physical_gpu": 4,
+      "pid": 2443209,
+      "launcher_name": "run_tiled_field_pilot_repaired_s3.sh",
+      "launcher_sha256": "ec665569975642d4a369c0c9b9d9e561b343344813bc05bb8dba624422df01e5"
+    }
+  ],
+  "total_expected_workers": 4,
+  "total_pilot_tiles": 21,
+  "timeout_minutes": 45,
+  "full_field_started": false,
+  "S2_generated": false,
+  "reconstruction_submitted": false
+}
