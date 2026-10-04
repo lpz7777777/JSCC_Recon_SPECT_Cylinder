@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import numpy as np
-from verify_first_scatter import digest,verify
+from verify_first_scatter import digest,verify,allocated_host_bytes
 
 class VerificationGates(unittest.TestCase):
     def setUp(self):
@@ -35,6 +35,18 @@ class VerificationGates(unittest.TestCase):
     def save_manifest(self):(self.result/"run_manifest.json").write_text(json.dumps(self.run))
     def run_verify(self):verify(self.result,self.config,self.geometry,self.root,"pilot")
     def test_valid_full_shape_pilot_is_accepted(self):self.run_verify()
+    def test_actual_slurm_memory_overrides_conflicting_per_cpu_memory(self):
+        allocation=self.root/"allocation.txt"
+        allocation.write_text("NumNodes=4 NumCPUs=24 MinMemoryCPU=15750M AllocTRES=cpu=24,mem=240000M,node=4,gres/gpu=4")
+        actual=60000*1024**2
+        self.assertEqual(allocated_host_bytes(allocation,4),actual)
+        for r in self.run["resources"]:r["host_allocated_bytes"]=actual;r["host_peak_rss_bytes"]=int(.5*actual)
+        self.save_manifest();verify(self.result,self.config,self.geometry,self.root,"pilot",allocation)
+        self.run["resources"][0]["host_allocated_bytes"]=94500*1024**2;self.save_manifest()
+        with self.assertRaisesRegex(ValueError,"actual Slurm allocation"):
+            verify(self.result,self.config,self.geometry,self.root,"pilot",allocation)
+        allocation.write_text("NumNodes=4 AllocTRES=(null)")
+        with self.assertRaisesRegex(ValueError,"memory missing"):allocated_host_bytes(allocation,4)
     def test_independent_hold_never_accepts_images(self):
         (self.root/"validation_gate.json").write_text('{"status":"HOLD"}')
         self.cfg["validation_gate_sha256"]=digest(self.root/"validation_gate.json")

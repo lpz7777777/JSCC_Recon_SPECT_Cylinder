@@ -1,6 +1,6 @@
 # Compton首散射事件定义修正与NEMA 1e9配对验证
 
-本实验按用户2026-10-04批准计划实施，标识`compton_first_scatter_v2`。截至本次实施，Geant4编译、分类器测试、三个独立种子的1e4旁路开关检查及首个完整NEMA worker旧输出回归通过；3.17e9有界输运已启动。**尚无本轮配对重建结果，不能宣称尖峰已改善。** 当前作业和完整验收进度见[PRODUCTION.md](PRODUCTION.md)。
+本实验按用户2026-10-04批准计划实施，标识`compton_first_scatter_v2`。760个worker、3.17e9有界输运、全部200个NEMA旧分支字节回归及两组独立灵敏度验收已通过。事件、能量与边界诊断已形成[阶段报告](PRELIMINARY_REPORT.md)。配对重建已冻结部署；账号50作业名额占满，24小时有界单次提交器等待空位；链内仍须实际通过50次回归及两组10次试跑，才能运行两组2000次。**尚无本轮配对重建结果，不能宣称尖峰已改善。** 当前作业和完整验收进度见[PRODUCTION.md](PRODUCTION.md)。
 
 ## 固定问题与对照
 
@@ -46,6 +46,8 @@
 
 ## 离线研究与输出
 
+`diagnose_first_scatter_points.py`额外用七个独立点源实际保留的List晶体对及能量，在真实发射位置计算同一个非对称ARM的覆盖率。它记录dataset/seed/view/event/原始行号和输入哈希，不重新筛选；比较全圆q≤3但真实位置q>3的事件。该诊断和高斯原型互补，不能把物理首晶体的测量残差当作错误legacy晶体对的实际响应残差。
+
 `first_scatter_offline.py`分解真实交互/转移→晶体中心→真实累计→展宽测量；`analyze_first_scatter.py`给出预测沉积尺度的13% FWHM@511高斯残差和1/2/3σ覆盖率。生产Geant4 11.1.0 option4/LowEP的Doppler与原子效应保留，参见[11.1.0模型源码](https://github.com/Geant4/geant4/blob/v11.1.0/source/processes/electromagnetic/lowenergy/src/G4LowEPComptonModel.cc)。自由电子公式的残差不应全归咎于代码错误。
 
 边界诊断在物体坐标真实椭圆交集中积分，先B/完整单元体积得到A，再与K乘积积分，随后按视角旋转查询。选取小重叠单元，比较原代表点、交叠质心和逐级加密r²/角度/z积分，相邻级变化≤1%标为收敛；不收敛如实报告。A使用现有离散场的XY三角插值和z线性插值，端层最多1.5mm显式外推，是诊断近似，不能当作新生产矩阵已验收。
@@ -68,11 +70,14 @@ python experiments/ELLIPSE500x300_H120/first_scatter_pipeline.py stage-analysis
 # collection_ready后
 python experiments/ELLIPSE500x300_H120/first_scatter_pipeline.py launch-analysis
 python experiments/ELLIPSE500x300_H120/first_scatter_pipeline.py status-analysis
+python experiments/ELLIPSE500x300_H120/first_scatter_pipeline.py point-diagnostics
 python experiments/ELLIPSE500x300_H120/first_scatter_pipeline.py fetch-analysis
 # 必须PASSED；HOLD不执行以下阶段
 python experiments/ELLIPSE500x300_H120/first_scatter_imaging.py freeze
 python experiments/ELLIPSE500x300_H120/first_scatter_imaging.py deploy
 python experiments/ELLIPSE500x300_H120/first_scatter_imaging.py submit --nodes 4
+# 若账号50作业上限，单次有界等待；不与已有提交器重复启动
+python experiments/ELLIPSE500x300_H120/first_scatter_imaging.py wait-submit --nodes 4
 ```
 
 大数据只在`generated/compton_first_scatter_v2`及远端对应子目录；小证据在本报告目录。凭证沿用既有SSH agent/DPAPI方法，不打印或保存密码/私钥。旧1657887与旧自动任务保持停止，账号50作业上限时不取消其他工程任务。

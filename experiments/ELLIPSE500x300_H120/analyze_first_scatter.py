@@ -120,7 +120,7 @@ def analyze(args):
                     per_worker_bin.setdefault(worker,np.zeros(9));per_worker_bin[worker]+=bc
                 if dataset.startswith("point_"):
                     # Deterministic diagnostic sample from held-out point sources only.
-                    for row in kept[:256]:offline.append(dict(group=group,view=view,**selected_metadata[row]))
+                    for row in kept[:256]:offline.append(dict(selected_metadata[row],group=group))
                 records.append(dict(view=view,raw_rows=len(raw),uncut=uncut_view,kept=len(kept),removed=uncut_view-len(kept)))
                 total+=len(kept);uncut+=uncut_view
                 np.save(out/f"{dataset}_{group}_v{view:02d}_kept_rows.npy",np.asarray(kept,dtype=np.int64))

@@ -7,7 +7,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=6
 #SBATCH --qos=gpugpu
-#SBATCH --time=12:00:00
+#SBATCH --time=06:00:00
 set -euo pipefail
 : "${FIRST_SCATTER_RELEASE:?Frozen release is required}"
 release="$FIRST_SCATTER_RELEASE"
@@ -24,12 +24,6 @@ module load miniforge3/25.11.0-1
 export JSCC_PROJECT_ROOT="$release" PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS="$SLURM_CPUS_PER_TASK" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export NCCL_SOCKET_IFNAME=bond0 TORCH_ELASTIC_WORKER_IDENTICAL=1
-if [[ -n ${SLURM_MEM_PER_NODE:-} ]]; then
-  export ABLATION_HOST_ALLOCATED_BYTES=$((SLURM_MEM_PER_NODE*1024*1024))
-else
-  : "${SLURM_MEM_PER_CPU:?Actual memory allocation is required}"
-  export ABLATION_HOST_ALLOCATED_BYTES=$((SLURM_MEM_PER_CPU*SLURM_CPUS_PER_TASK*1024*1024))
-fi
 export ELLIPSE_MASTER_ADDR=$(scontrol show hostname "$SLURM_JOB_NODELIST" | head -n1)
 export ELLIPSE_MASTER_PORT=$((50000+SLURM_JOB_ID%10000)) ELLIPSE_GPUS_PER_NODE=1
 scontrol show job "$SLURM_JOB_ID" > "$study/allocation_${SLURM_JOB_ID}.txt"
@@ -48,6 +42,8 @@ srun --chdir=/tmp --label --kill-on-bad-exit=1 bash -c '
   [[ $ready == 1 ]]
   timeout --signal=TERM --kill-after=10s 60s "$RESPONSE_PYTHON" -c "import socket,torch; assert torch.cuda.is_available() and torch.cuda.device_count()==1; print(socket.gethostname(),torch.__version__,flush=True)"
 '
+export ABLATION_HOST_ALLOCATED_BYTES=$("$RESPONSE_PYTHON" "$release/verify_first_scatter.py" \
+  --allocation-only "$study/allocation_${SLURM_JOB_ID}.txt" --nodes "$SLURM_NNODES")
 # Both full-data pilots precede both formal runs. A failed pilot holds imaging.
 for step in regression_legacy pilot_legacy pilot_ideal formal_legacy formal_ideal; do
   phase=${step%%_*}; group=${step##*_}
@@ -69,6 +65,7 @@ for step in regression_legacy pilot_legacy pilot_ideal formal_legacy formal_idea
     --channels compton-jscc --response-filter-config "$config" --iterations "$iterations" \
     --save-step "$save" --output "$output" "${mode[@]}"
   "$RESPONSE_PYTHON" "$release/verify_first_scatter.py" --result "$output" --config "$config" \
-    --geometry "$release/geometry.npz" --baseline "$baseline" --mode "$phase"
+    --geometry "$release/geometry.npz" --baseline "$baseline" --mode "$phase" \
+    --allocation "$study/allocation_${SLURM_JOB_ID}.txt"
 done
 echo FIRST_SCATTER_PAIRED_COMPLETE

@@ -1,0 +1,23 @@
+{
+  "stage": "post_energy_layer_support_and_q3",
+  "legacy": 97078,
+  "ideal": 91231,
+  "common": 90778,
+  "legacy_only": 6300,
+  "ideal_only": 453,
+  "relative_net_loss": 0.06022991821009904,
+  "scans": [
+    {
+      "dataset": "NEMA",
+      "group": "legacy",
+      "uncut": 97299,
+      "kept": 97078
+    },
+    {
+      "dataset": "NEMA",
+      "group": "ideal",
+      "uncut": 91385,
+      "kept": 91231
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "pid": 1424289,
+  "server_study": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2",
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/releases/345b1974b85d06dd",
+  "inputs_archive_sha256": "6f1ec5ab83d352fadb4f02566e56a9bd57496ddbf48aac20c10acc0d711cc3d6",
+  "launcher_sha256": "fe2ac10665438b8ac4eb6b4c515a597f276fdced43c8088a17dd6e09c0c337a1",
+  "previous_runs": [
+    {
+      "pid": 1419811,
+      "server_study": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2",
+      "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/releases/bf4901bc033da72d",
+      "inputs_archive_sha256": "6f1ec5ab83d352fadb4f02566e56a9bd57496ddbf48aac20c10acc0d711cc3d6",
+      "launcher_sha256": "98961646d750f5e1a3aa290e75a25d698c33543a13dac4d13f300a420542b145"
+    }
+  ],
+  "transport_replayed": false,
+  "failed_evidence_suffix": "_failed_1419811"
+}

@@ -10,6 +10,8 @@ import shutil
 import sys
 import tarfile
 import re
+import os
+import time
 import numpy as np
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
@@ -31,7 +33,20 @@ def command(client,text):
 def freeze():
     gatepath=DATA/"analysis/validation_gate.json";gate=json.loads(gatepath.read_text())
     if gate["status"]!="PASSED":raise ValueError("Independent sensitivity validation is on HOLD; imaging remains stopped")
-    inputs=DATA/"analysis_inputs/NEMA";collection=json.loads((inputs/"collection.json").read_text())
+    inputs=DATA/"analysis_inputs/NEMA"
+    if not inputs.exists():
+        archive=DATA/"analysis_inputs.tar.gz"
+        expected=json.loads((REPORT/"analysis_job.json").read_text())["inputs_archive_sha256"]
+        if digest(archive)!=expected:raise ValueError("Local transport archive differs from validated inputs")
+        with tarfile.open(archive) as tar:
+            members=[m for m in tar.getmembers() if m.name=="analysis_inputs/NEMA" or
+                     m.name.startswith("analysis_inputs/NEMA/") or m.name=="analysis_inputs/input_manifest.json"]
+            tar.extractall(DATA,members=members,filter="data")
+    input_manifest=json.loads((DATA/"analysis_inputs/input_manifest.json").read_text())
+    for path in inputs.rglob("*"):
+        if path.is_file() and digest(path)!=input_manifest["files"][path.relative_to(DATA/"analysis_inputs").as_posix()]:
+            raise ValueError("Local NEMA input differs from validated transport")
+    collection=json.loads((inputs/"collection.json").read_text())
     baseline=json.loads((HERE/"generated/RemoteResults/NEMA_Body_H60_1e9_1643142/run_manifest.json").read_text())
     if gate["geometry_sha256"]!=baseline["geometry_sha256"]:raise ValueError("Paired geometry differs from baseline")
     if digest(ROOT/"compton_event_response.py")!=gate["kernel_sha256"]:raise ValueError("Response kernel changed")
@@ -100,8 +115,10 @@ def deploy():
             sftp.put(str(archive),STUDY+"/imaging_payload.tar.gz")
         if command(client,"sha256sum "+shlex.quote(STUDY+"/imaging_payload.tar.gz")).split()[0]!=digest(archive):
             raise ValueError("Imaging payload transfer differs")
-        command(client,"test ! -e "+shlex.quote(STUDY+"/recon_inputs")+" && tar --no-same-owner -xzf "+
-                shlex.quote(STUDY+"/imaging_payload.tar.gz")+" -C "+shlex.quote(STUDY))
+        # A code-only repair reuses the already frozen data, with every file
+        # verified below. Never overwrite an existing scientific input tree.
+        command(client,"if test ! -e "+shlex.quote(STUDY+"/recon_inputs")+"; then tar --no-same-owner -xzf "+
+                shlex.quote(STUDY+"/imaging_payload.tar.gz")+" -C "+shlex.quote(STUDY)+"; fi")
         command(client,"bash -n "+shlex.quote(release+"/reconstruct_first_scatter.sh"))
         for group in ("legacy","ideal"):
             cfg=json.loads((configs/f"{group}.json").read_text())
@@ -127,7 +144,7 @@ def submit(nodes,exclude):
             write(REPORT/"imaging_submission_wait.json",dict(status="account_50_job_limit",other_project_jobs_untouched=True))
             print("ACCOUNT_LIMIT_WAIT");return
         cmd=(f"sbatch --parsable -N {nodes} --gres=gpu:1 --ntasks-per-node=1 --cpus-per-task=6 "
-            "-p gpu_4090,gpu_5090 --qos=gpugpu --time=12:00:00 --chdir=/tmp "
+            "-p gpu_4090,gpu_5090 --qos=gpugpu --time=06:00:00 --chdir=/tmp "
             "--job-name=NEMA_first_scatter_v2 --exclude="+shlex.quote(exclude)+" --export="+
             shlex.quote("ALL,FIRST_SCATTER_RELEASE="+release)+
             " --output="+shlex.quote(REMOTE+"/logs/first_scatter.%j.out")+
@@ -135,25 +152,53 @@ def submit(nodes,exclude):
         job=command(client,cmd).split(";")[0]
         if not job.isdigit():raise ValueError("Ambiguous submission result; inspect before retry")
     write(REPORT/"imaging_job.json",dict(job=int(job),nodes=nodes,gpus_per_node=1,release=release,
-        submitted_utc=datetime.now(timezone.utc).isoformat(),nccl_interface="bond0",
+        submitted_utc=datetime.now(timezone.utc).isoformat(),nccl_interface="bond0",walltime_hours=6,
         phases=["legacy regression 50","legacy full-data pilot 10","ideal full-data pilot 10","legacy 2000","ideal 2000"]))
     print("PAIRED_IMAGING_JOB",job)
 
 def status():
+    if not (REPORT/"imaging_job.json").exists():
+        path=REPORT/"imaging_submission_wait.json"
+        print(path.read_text() if path.exists() else "NO_REGISTERED_PAIRED_JOB")
+        return
     registration=json.loads((REPORT/"imaging_job.json").read_text());job=str(registration["job"])
     with connect() as client:
-        print(command(client,f"squeue -j {job} -h -o '%i %T %M %N'; sacct -X -j {job} -n -P --format=JobIDRaw,State,ExitCode"))
-        print(command(client,"tail -n 6 "+shlex.quote(REMOTE+f"/logs/first_scatter.{job}.out")+
-                      "; tail -n 3 "+shlex.quote(REMOTE+f"/logs/first_scatter.{job}.err")))
+        print(command(client,f"squeue -j {job} -h -o '%i %T %M %D %R'; sacct -X -j {job} -n -P --format=JobIDRaw,State,ExitCode"))
+        for suffix in ("out","err"):
+            path=shlex.quote(REMOTE+f"/logs/first_scatter.{job}."+suffix)
+            print(command(client,"if test -f "+path+"; then tail -n 6 "+path+"; else echo LOG_NOT_CREATED_YET; fi"))
+
+def wait_submit(nodes,exclude):
+    """One bounded local dispatcher, not a recurring reconstruction monitor."""
+    lock=DATA/"imaging_submission.lock"
+    fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
+    os.write(fd,str(os.getpid()).encode());os.close(fd)
+    deadline=time.monotonic()+24*3600
+    write(REPORT/"imaging_dispatcher.json",dict(pid=os.getpid(),status="waiting_for_account_slot",
+        started_utc=datetime.now(timezone.utc).isoformat(),deadline_hours=24,poll_seconds=60,
+        one_submission_only=True,other_project_jobs_untouched=True,old_automations_resumed=False))
+    try:
+        while time.monotonic()<deadline:
+            if (REPORT/"imaging_job.json").exists():break
+            submit(nodes,exclude)
+            if (REPORT/"imaging_job.json").exists():break
+            time.sleep(60)
+        write(REPORT/"imaging_dispatcher.json",dict(pid=os.getpid(),
+            status="submitted" if (REPORT/"imaging_job.json").exists() else "deadline_expired",
+            checked_utc=datetime.now(timezone.utc).isoformat(),deadline_hours=24,one_submission_only=True,
+            other_project_jobs_untouched=True,old_automations_resumed=False))
+    finally:
+        lock.unlink()
 
 def fetch():
     registration=json.loads((REPORT/"imaging_job.json").read_text());job=str(registration["job"])
-    target=DATA/"RemoteResults";target.mkdir(exist_ok=False)
+    target=DATA/"RemoteResults"
     with connect() as client:
         accounting=command(client,f"sacct -j {job} -n -P --format=JobIDRaw,State,ExitCode,MaxRSS,ReqMem,AllocTRES")
         overall=[r.split("|") for r in accounting.splitlines() if r.split("|")[0]==job]
         if len(overall)!=1 or overall[0][1]!="COMPLETED" or overall[0][2]!="0:0":
             raise ValueError("Paired job did not finish successfully")
+        target.mkdir(exist_ok=False)
         resource=[];minimum_host=None
         for group in ("legacy","ideal"):
             result=STUDY+f"/formal_{group}_{job}"
@@ -182,12 +227,13 @@ def fetch():
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("mode",choices=("freeze","deploy","submit","status","fetch"));p.add_argument("--nodes",type=int,default=4)
+    p.add_argument("mode",choices=("freeze","deploy","submit","wait-submit","status","fetch"));p.add_argument("--nodes",type=int,default=4)
     p.add_argument("--exclude",default="wqd10nba06g6")
     a=p.parse_args()
     if a.mode=="freeze":freeze()
     elif a.mode=="deploy":deploy()
     elif a.mode=="status":status()
     elif a.mode=="fetch":fetch()
+    elif a.mode=="wait-submit":wait_submit(a.nodes,a.exclude)
     else:submit(a.nodes,a.exclude)
 if __name__=="__main__":main()

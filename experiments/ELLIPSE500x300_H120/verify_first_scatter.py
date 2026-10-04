@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import numpy as np
 
@@ -11,7 +12,17 @@ def digest(path):
         for b in iter(lambda:f.read(8<<20),b""):h.update(b)
     return h.hexdigest()
 
-def verify(result,config,geometry,baseline,mode):
+def allocated_host_bytes(allocation,world):
+    text=Path(allocation).read_text()
+    nodes=re.search(r"\bNumNodes=(\d+)",text)
+    tres=re.search(r"\bAllocTRES=([^\s]+)",text)
+    if not nodes or int(nodes[1])!=world or not tres:
+        raise ValueError("Actual Slurm node allocation missing or differs")
+    memory=re.search(r"(?:^|,)mem=([0-9.]+)([KMGT])(?:,|$)",tres[1])
+    if not memory:raise ValueError("Actual Slurm allocated memory missing")
+    return int(float(memory[1])*1024**("KMGT".index(memory[2])+1)/world)
+
+def verify(result,config,geometry,baseline,mode,allocation=None):
     cfg=json.loads(config.read_text());run=json.loads((result/"run_manifest.json").read_text())
     gate_path=config.parent/"validation_gate.json"
     if digest(gate_path)!=cfg["validation_gate_sha256"] or json.loads(gate_path.read_text())["status"]!="PASSED":
@@ -71,18 +82,28 @@ def verify(result,config,geometry,baseline,mode):
                     raise ValueError("Persistent checkpoint/history differ")
         outputs.append(output)
     for r in resources:
+        if allocation is not None and r["host_allocated_bytes"]!=allocated_host_bytes(allocation,world):
+            raise ValueError("Host memory denominator differs from actual Slurm allocation")
         if r["host_allocated_bytes"]<=0:raise ValueError("Actual host allocation not recorded")
         if (r["peak_reserved_bytes"]/r["total_device_bytes"]>.8 or
             r["host_peak_rss_bytes"]/r["host_allocated_bytes"]>.8):raise ValueError("20% resource margin fails")
     report=dict(passed=True,study="compton_first_scatter_v2",group=cfg["group"],mode=mode,
         outputs=outputs,resources=resources,accepted_events=count,iterations=iterations,save_step=save,
-        config_sha256=digest(config),run_manifest_sha256=digest(result/"run_manifest.json"))
+        config_sha256=digest(config),run_manifest_sha256=digest(result/"run_manifest.json"),
+        allocation_sha256=digest(allocation) if allocation is not None else None)
     (result/"verification.json").write_text(json.dumps(report,indent=2)+"\n")
     print("FIRST_SCATTER_VERIFIED",cfg["group"],mode,count)
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--allocation-only",type=Path);p.add_argument("--nodes",type=int)
+    import sys
+    if "--allocation-only" in sys.argv:
+        a=p.parse_args()
+        if a.nodes not in (4,8):raise ValueError("Actual 4/8-node allocation required")
+        print(allocated_host_bytes(a.allocation_only,a.nodes));return
     for name in ("result","config","geometry","baseline"):p.add_argument("--"+name,type=Path,required=True)
+    p.add_argument("--allocation",type=Path,required=True)
     p.add_argument("--mode",choices=("regression","pilot","formal"),required=True)
-    a=p.parse_args();verify(a.result,a.config,a.geometry,a.baseline,a.mode)
+    a=p.parse_args();verify(a.result,a.config,a.geometry,a.baseline,a.mode,a.allocation)
 if __name__=="__main__":main()

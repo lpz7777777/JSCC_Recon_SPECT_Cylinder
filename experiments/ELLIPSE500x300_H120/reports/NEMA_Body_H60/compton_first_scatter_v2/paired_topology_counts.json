@@ -1,0 +1,15 @@
+{
+  "post_q_legacy_only": {
+    "intermediate_or_same_crystal_interaction": 2100,
+    "first_not_crystal_compton": 1409,
+    "measured_pair_differs_from_primary": 2558,
+    "first_energy_not_closed": 229,
+    "foreign_energy_in_first_crystal": 1,
+    "return_to_first_crystal": 3
+  },
+  "post_q_ideal_only": {
+    "legacy_list_missing": 453
+  },
+  "mapped": 6753,
+  "note": "Only post-energy/layer/support/q3 accepted identities; truth contract failures do not themselves establish image improvement"
+}

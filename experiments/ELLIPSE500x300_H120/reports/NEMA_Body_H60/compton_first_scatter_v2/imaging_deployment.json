@@ -1,0 +1,22 @@
+{
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/compton_first_scatter_v2_21a134ae812fdf32",
+  "code_sha256": {
+    "run_reconstruction.py": "1594e9d3bfb347b17a370548270f919e62d9b038a87795d69c8b1befb8649974",
+    "torch_active_operator.py": "0908e5b2aa98b86f4ff0eceac5db2bc9b6414af8ad3f6dea9850153e54824236",
+    "validate_factors.py": "d529fe6c4ee27ce49e8e2a7b778c1abb1b8e818a6711d838533368978e4e7b91",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "verify_first_scatter.py": "725f9c0756cd2bd737242be5bafd06e6eeafc6bd24bcde7819bf82b251f88872",
+    "reconstruct_first_scatter.sh": "5b3f88c305b75a66e9036f7caa0179bc71e5a38888b39ee26567bc38ccdb653f",
+    "compton_event_response.py": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225",
+    "compton_sparse_ops.py": "39c78522927f7396db1c58f760a636fda729c195dd4c2cc05ae98ca513ab3b9b",
+    "process_list_plane_sparse.py": "e489ddeb4506f3daf43904bdae6d30da1aef2845dd076fe9365c554bc0d9708c",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "legacy.json": "097183d3a55316960439e83530328ca47b85e944e99e2564db8dd8f6b29de3df",
+    "ideal.json": "5832dbe3ccffc02a3d1bb6b8ffe4dd57d332d1cb3bf895538e72f2c30ed1b66a",
+    "validation_gate.json": "581421905dd774d4dfe6878736ace3255baff4b6a0771b67103d544ef4427830",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "payload_sha256": "9a9ed611690cc29788f085c448ca32816dd337241fff4e782e4fea6d0309b61b",
+  "gated": true
+}

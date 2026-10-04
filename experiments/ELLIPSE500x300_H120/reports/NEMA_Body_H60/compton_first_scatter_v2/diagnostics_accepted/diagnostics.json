@@ -1,0 +1,156 @@
+{
+  "study": "compton_first_scatter_v2",
+  "gate_status": "PASSED",
+  "measurement_layers": [
+    {
+      "group": "legacy",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "doppler_and_atomic_residual",
+      "samples": 17587,
+      "mean_keV": 0.20143729220101023,
+      "rms_keV": 12.798284407354066,
+      "p95_abs_keV": 24.50156419902862
+    },
+    {
+      "group": "ideal",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "doppler_and_atomic_residual",
+      "samples": 16378,
+      "mean_keV": 0.1925992457890126,
+      "rms_keV": 12.764778388304789,
+      "p95_abs_keV": 24.4355623190833
+    },
+    {
+      "group": "legacy",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "crystal_center_residual",
+      "samples": 17371,
+      "mean_keV": 14.101127842949609,
+      "rms_keV": 54.00145041452621,
+      "p95_abs_keV": 128.9261104079717
+    },
+    {
+      "group": "ideal",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "crystal_center_residual",
+      "samples": 16378,
+      "mean_keV": 14.682846108382101,
+      "rms_keV": 53.466835101860774,
+      "p95_abs_keV": 127.64921698244514
+    },
+    {
+      "group": "legacy",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "accumulated_energy_residual",
+      "samples": 17587,
+      "mean_keV": 0.7934544893085822,
+      "rms_keV": 23.361473841827895,
+      "p95_abs_keV": 5.551115123125783e-14
+    },
+    {
+      "group": "ideal",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "accumulated_energy_residual",
+      "samples": 16378,
+      "mean_keV": 2.8065597328547713e-16,
+      "rms_keV": 2.1792910487079535e-14,
+      "p95_abs_keV": 5.551115123125783e-14
+    },
+    {
+      "group": "legacy",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "measurement_residual",
+      "samples": 17587,
+      "mean_keV": -0.05637699692579623,
+      "rms_keV": 16.419249914509766,
+      "p95_abs_keV": 33.16686122679644
+    },
+    {
+      "group": "ideal",
+      "scope": "raw_candidate_sample_including_same_layer",
+      "residual": "measurement_residual",
+      "samples": 16378,
+      "mean_keV": -0.0775153729783692,
+      "rms_keV": 16.313254678546354,
+      "p95_abs_keV": 32.95297661444252
+    },
+    {
+      "group": "legacy",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "doppler_and_atomic_residual",
+      "samples": 2234,
+      "mean_keV": 0.579188003270101,
+      "rms_keV": 11.84323089794755,
+      "p95_abs_keV": 24.450618899040446
+    },
+    {
+      "group": "ideal",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "doppler_and_atomic_residual",
+      "samples": 2243,
+      "mean_keV": 0.5760267874567522,
+      "rms_keV": 11.824501831942003,
+      "p95_abs_keV": 24.421288471504038
+    },
+    {
+      "group": "legacy",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "crystal_center_residual",
+      "samples": 2234,
+      "mean_keV": -0.1434264233325812,
+      "rms_keV": 3.3514943670397175,
+      "p95_abs_keV": 7.306955083942632
+    },
+    {
+      "group": "ideal",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "crystal_center_residual",
+      "samples": 2243,
+      "mean_keV": -0.14222514688771196,
+      "rms_keV": 3.346819575408262,
+      "p95_abs_keV": 7.28445856263792
+    },
+    {
+      "group": "legacy",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "accumulated_energy_residual",
+      "samples": 2234,
+      "mean_keV": -0.04423818454497132,
+      "rms_keV": 1.5082826138306415,
+      "p95_abs_keV": 5.551115123125783e-14
+    },
+    {
+      "group": "ideal",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "accumulated_energy_residual",
+      "samples": 2243,
+      "mean_keV": 1.7324032929951173e-16,
+      "rms_keV": 2.322863523534131e-14,
+      "p95_abs_keV": 5.551115123125783e-14
+    },
+    {
+      "group": "legacy",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "measurement_residual",
+      "samples": 2234,
+      "mean_keV": -2.8536099112892233,
+      "rms_keV": 15.909184756129065,
+      "p95_abs_keV": 31.163170838007332
+    },
+    {
+      "group": "ideal",
+      "scope": "accepted_point_sample_matching_physical_first_pair",
+      "residual": "measurement_residual",
+      "samples": 2243,
+      "mean_keV": -2.8772403334873338,
+      "rms_keV": 15.964396026754292,
+      "p95_abs_keV": 31.3014325836996
+    }
+  ],
+  "boundary_cases": 1440,
+  "boundary_converged": 1440,
+  "boundary_nonzero_cases": 1435,
+  "boundary_nonzero_converged": 1435,
+  "production_kernel_changed": false,
+  "production_boundary_changed": false
+}

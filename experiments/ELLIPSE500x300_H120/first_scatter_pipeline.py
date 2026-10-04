@@ -119,12 +119,67 @@ def analysis_status():
         "for r in x['gates'] if not r['passed']])")+"; fi")
     print(text)
 
+def repair_analysis():
+    """Restart a stopped analyzer on exactly the existing immutable transport."""
+    old=json.loads((REPORT/"analysis_job.json").read_text())
+    deployment=json.loads((REPORT/"analysis_deployment.json").read_text())
+    if deployment["release"]==old["release"]:raise ValueError("A new frozen repair release is required")
+    active=ssh(SERVER,"pgrep -af "+shlex.quote("[a]nalyze_first_scatter.py.*"+SERVER_STUDY)+
+        " || pgrep -af "+shlex.quote("[f]irst_scatter_offline.py.*"+SERVER_STUDY)+" || true")
+    if active:raise ValueError("The previous analysis has not exited; never duplicate it")
+    if ssh(SERVER,"sha256sum "+shlex.quote(SERVER_STUDY+"/analysis_inputs.tar.gz")).split()[0]!=old["inputs_archive_sha256"]:
+        raise ValueError("Repair must use the same frozen transport archive")
+    memory=ssh(SERVER,"nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i 0")
+    free,util=map(int,memory.split(","))
+    if free<30000 or util>5:raise ValueError("GPU 0 is busy; leave repair pending")
+    suffix="_failed_"+str(old["pid"])
+    ssh(SERVER,"set -e; test ! -f "+shlex.quote(SERVER_STUDY+"/analysis_finished.txt")+
+        " && test ! -e "+shlex.quote(SERVER_STUDY+"/analysis"+suffix)+
+        " && mv -- "+shlex.quote(SERVER_STUDY+"/analysis")+" "+shlex.quote(SERVER_STUDY+"/analysis"+suffix)+
+        " && mv -- "+shlex.quote(SERVER_STUDY+"/analysis.log")+" "+shlex.quote(SERVER_STUDY+"/analysis"+suffix+".log")+
+        "; if test -d "+shlex.quote(SERVER_STUDY+"/offline")+"; then test ! -e "+
+        shlex.quote(SERVER_STUDY+"/offline"+suffix)+" && mv -- "+shlex.quote(SERVER_STUDY+"/offline")+" "+
+        shlex.quote(SERVER_STUDY+"/offline"+suffix)+"; fi")
+    script=DATA/"run_analysis.sh"
+    body=script.read_text().replace(old["release"],deployment["release"])
+    script.write_text(body,encoding="ascii",newline="\n")
+    transfer(SERVER,script,deployment["release"]+"/run_analysis.sh")
+    pid=ssh(SERVER,"nohup bash "+shlex.quote(deployment["release"]+"/run_analysis.sh")+
+            " > "+shlex.quote(SERVER_STUDY+"/analysis.log")+" 2>&1 < /dev/null & echo $!")
+    if not pid.isdigit():raise ValueError("Invalid repair PID; inspect before retry")
+    history=old.pop("previous_runs",[]);history.append(old)
+    write(REPORT/"analysis_job.json",dict(pid=int(pid),server_study=SERVER_STUDY,release=deployment["release"],
+        inputs_archive_sha256=old["inputs_archive_sha256"],launcher_sha256=digest(script),previous_runs=history,
+        transport_replayed=False,failed_evidence_suffix=suffix))
+    print("REPAIRED_ANALYSIS_PID",pid)
+
+def point_diagnostics():
+    """Observe the current kernel at held-out true points without changing cuts."""
+    ssh(SERVER,"test -f "+shlex.quote(SERVER_STUDY+"/analysis/validation_gate.json"))
+    if (REPORT/"point_deployment.json").exists():raise ValueError("Point diagnostic already registered")
+    paths={"diagnose_first_scatter_points.py":HERE/"diagnose_first_scatter_points.py",
+        "compton_event_response.py":ROOT/"compton_event_response.py","detector_csv.py":ROOT/"detector_csv.py"}
+    hashes={name:digest(p) for name,p in paths.items()}
+    key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
+    release=SERVER_STUDY+"/point_releases/"+key
+    ssh(SERVER,"mkdir -p -- "+shlex.quote(release))
+    for name,p in paths.items():transfer(SERVER,p,release+"/"+name)
+    write(REPORT/"point_deployment.json",dict(release=release,code_sha256=hashes,diagnostic_only=True))
+    print(ssh(SERVER,"timeout --signal=TERM --kill-after=20s 10m "+SERVER_ROOT+"/.venv/bin/python "+
+        shlex.quote(release+"/diagnose_first_scatter_points.py")+" --inputs "+shlex.quote(SERVER_STUDY+"/analysis_inputs")+
+        " --analysis "+shlex.quote(SERVER_STUDY+"/analysis")+" --factors "+shlex.quote(SERVER_BASE+"/generated/FactorsCalibrated")+
+        " --output "+shlex.quote(SERVER_STUDY+"/point_diagnostics")))
+
 def fetch_analysis():
     if "FINISHED" not in ssh(SERVER,"cat "+shlex.quote(SERVER_STUDY+"/analysis_finished.txt")):
         raise ValueError("Analysis/offline have not both finished")
     target=DATA/"analysis_evidence.tar.gz"
+    extra=""
+    if (REPORT/"point_deployment.json").exists():
+        ssh(SERVER,"test -f "+shlex.quote(SERVER_STUDY+"/point_diagnostics/point_consistency.json"))
+        extra=" point_diagnostics"
     ssh(SERVER,"tar -czf "+shlex.quote(SERVER_STUDY+"/analysis_evidence.tar.gz")+" -C "+shlex.quote(SERVER_STUDY)+
-        " analysis offline")
+        " analysis offline"+extra)
     sha=ssh(SERVER,"sha256sum "+shlex.quote(SERVER_STUDY+"/analysis_evidence.tar.gz")).split()[0]
     subprocess.run(["scp","-o","BatchMode=yes",SERVER+":"+SERVER_STUDY+"/analysis_evidence.tar.gz",str(target)],check=True)
     if digest(target)!=sha:raise ValueError("Analysis evidence transfer hash differs")
@@ -133,14 +188,16 @@ def fetch_analysis():
     gate=json.loads((DATA/"analysis/validation_gate.json").read_text())
     write(REPORT/"validation_gate.json",gate)
     write(REPORT/"offline_summary.json",json.loads((DATA/"offline/offline_summary.json").read_text()))
+    if extra:write(REPORT/"point_consistency.json",json.loads((DATA/"point_diagnostics/point_consistency.json").read_text()))
     write(REPORT/"analysis_collection.json",dict(archive_sha256=sha,gate_status=gate["status"],
           validation_gate_sha256=digest(DATA/"analysis/validation_gate.json")))
     print("FETCHED_VALIDATION",gate["status"])
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("mode",choices=("queue-collection","stage-analysis","launch-analysis","status-analysis","fetch-analysis"))
+    p.add_argument("mode",choices=("queue-collection","stage-analysis","launch-analysis","repair-analysis","status-analysis","point-diagnostics","fetch-analysis"))
     a=p.parse_args()
     {"queue-collection":queue_collection,"stage-analysis":stage_analysis,"launch-analysis":launch_analysis,
-     "status-analysis":analysis_status,"fetch-analysis":fetch_analysis}[a.mode]()
+     "repair-analysis":repair_analysis,"status-analysis":analysis_status,
+     "point-diagnostics":point_diagnostics,"fetch-analysis":fetch_analysis}[a.mode]()
 if __name__=="__main__":main()

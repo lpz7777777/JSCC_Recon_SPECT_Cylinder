@@ -12,12 +12,15 @@
     "tests": 5,
     "host": "65114",
     "source_sha256": "1bd01522c6fb797207844c7422b96a4e08a615286ab28924ff68da15beb8db3e",
-    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/releases/bf4901bc033da72d"
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/releases/345b1974b85d06dd",
+    "previous_release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/releases/bf4901bc033da72d",
+    "repair_release_tests_passed": true
   },
   "result_rejection_gates": {
     "passed": true,
-    "tests": 5,
-    "source_sha256": "f8c998f7270110d29dd4270868ff35c2c30e5fda0742dbee5c7f83ffccb0e728"
+    "tests": 6,
+    "source_sha256": "dd189f7ea93087a53eda831aed7a1c98ef653d3bc484756e32c8f7e9f04ff760",
+    "actual_alloctres_conflicting_memory_test_passed": true
   },
   "existing_geant4_interface_tests": {
     "passed": true,

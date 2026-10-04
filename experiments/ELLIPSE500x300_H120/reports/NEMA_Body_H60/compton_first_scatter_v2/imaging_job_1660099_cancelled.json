@@ -1,0 +1,32 @@
+{
+  "job": 1660099,
+  "nodes": 4,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/code_releases/compton_first_scatter_v2_1413f843acac2129",
+  "submitted_utc": "2026-10-04T06:05:39.439900+00:00",
+  "nccl_interface": "bond0",
+  "phases": [
+    "legacy regression 50",
+    "legacy full-data pilot 10",
+    "ideal full-data pilot 10",
+    "legacy 2000",
+    "ideal 2000"
+  ],
+  "scheduler_walltime_hours": 6,
+  "scheduler_state_at_check": "PENDING",
+  "scheduler_start_estimate_local": "2026-10-05T12:54:35+08:00",
+  "scheduler_estimate_not_guaranteed": true,
+  "allocation_adjustments": [
+    {
+      "checked_utc": "2026-10-04T06:17:14.668576+00:00",
+      "change": "scontrol update JobId=1660099 TimeLimit=06:00:00",
+      "previous_hours": 12,
+      "current_hours": 6,
+      "baseline_1643142_elapsed": "05:41:33",
+      "full_data_pilot_1643079_elapsed": "00:04:32",
+      "events_and_iterations_unchanged": true
+    }
+  ],
+  "terminal_accounting": "1660099|CANCELLED by 1721|0:0",
+  "replacement_reason": "Use actual Slurm AllocTRES memory for all five phase resource gates; no event or algorithm change"
+}
