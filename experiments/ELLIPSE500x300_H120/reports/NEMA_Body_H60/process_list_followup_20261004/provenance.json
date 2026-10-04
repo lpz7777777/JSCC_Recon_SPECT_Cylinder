@@ -1,0 +1,30 @@
+{
+  "diagnostic_only": true,
+  "remote_sha256": {
+    "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/FactorsCalibrated/440keV_RotateNum20/SysMat_polar": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38",
+    "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/geometry_stability_20261004/images.npz": "d0aa56e229bbd00880a549859acc6c4c812b1be888b54a658e177a4fba7db8a8",
+    "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/geometry_stability_20261004/diagnose_compton_geometry_stability_full.py": "05d511f7156c5c9ec47f40118d4f7164d81398736dd5ad31c13af4da98c81559"
+  },
+  "frozen_image_sources": {
+    "compton": {
+      "source": "generated\\compton_first_scatter_v2\\RemoteResults\\ideal\\Image_440_ComptonOnly_history.float32",
+      "sha256": "925cc8ddb9348fb22c991cbadc33b1e6de7c155291c97039dc83bc45ab8f225c",
+      "frame": 40,
+      "iteration": 2000,
+      "shape": [
+        82040
+      ]
+    },
+    "jscc": {
+      "source": "generated\\compton_first_scatter_v2\\RemoteResults\\ideal\\Image_440_SinglePlusCompton_history.float32",
+      "sha256": "7b09e5fa2b3b236614eb0b4b0809976a0759e7abf22427a4548e5c5a14c48319",
+      "frame": 40,
+      "iteration": 2000,
+      "shape": [
+        82040
+      ]
+    }
+  },
+  "image_pack_sha256": "d0aa56e229bbd00880a549859acc6c4c812b1be888b54a658e177a4fba7db8a8",
+  "local_kernel_sha256": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225"
+}

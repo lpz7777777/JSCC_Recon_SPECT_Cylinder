@@ -1,0 +1,170 @@
+{
+  "diagnostic_only": true,
+  "reconstruction_changed": false,
+  "score_mode": "stable_float64_cross_product_prototype",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "production_kernel_sha256": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225",
+  "detector_sha256": "e73400af991a0cfac8254fe7371aa6bad34ab934c1c09c2e8c1d8641b67003e3",
+  "input_sha256": {
+    "ideal_v01.csv": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+    "ideal_v02.csv": "be10995baf5910e7769e2ddcea94854afd624afc7d751261a1af745e2873362d",
+    "ideal_v03.csv": "c13e8d36b7791ab8bd720efda0646fad9e75c5cbf9e65560c7e2c6ccc819a22b",
+    "ideal_v04.csv": "e2392dfc3a969e16f1b4d7a549774d48527ba4a3429f0057b8f9212eacfac73a",
+    "ideal_v05.csv": "5d71170fe95fb61d1f3cec1b0d5c84bfad41ee7ec2ad8dc3077ff316f45b229a",
+    "ideal_v06.csv": "a772f758c1eb3dfacfa97f01c659af6bd228025081f85e6165113e9477618f2e",
+    "ideal_v07.csv": "27d1b31f4682e8ba3489a309b7874fb5057fb59f38e16d012081a7c3776a0289",
+    "ideal_v08.csv": "f3d90f0eeaa19abf2d2a5d92bfcf775708870b85dace06d8759eada23a5b68c6",
+    "ideal_v09.csv": "5692297b75bc07e1875303d035518d51ff106138b9a678028f4e4a3c4c2e021e",
+    "ideal_v10.csv": "44fe7df357c1e930557ba28788a9cdd2219ef29b8b3ec40823ec3fcd2ecb4da9",
+    "ideal_v11.csv": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+    "ideal_v12.csv": "9e440fabc61361b3f0121b00d7ae38eaa285c33baafb24225dfbdad10fc283a0",
+    "ideal_v13.csv": "ead55261a74e530b621f2f1994e365490623b048bc9111d4fd7f7057b19920cb",
+    "ideal_v14.csv": "c9dcee664279024cf5d86b7ba52beb2448bbafb0e98ee8680a354af0eb90d805",
+    "ideal_v15.csv": "61e7d2655eaadfe936031c25ecd39670fb3b5fbe952743a7314f11a8ad4b0921",
+    "ideal_v16.csv": "c3a9774796193baceaffc59763390c1f50c2da0960372545c063cb362a22c230",
+    "ideal_v17.csv": "140dc0847f6b1a52a55cba3c6177e9557b3f524469f0236fbabe5f4b0226e6d9",
+    "ideal_v18.csv": "093f5e10fdd7f0400f548cbc20f80ed70b6dd4849df29491cf5945ba37d4e91b",
+    "ideal_v19.csv": "5d74b116515019b11d5d9181c1659975f1049fecd8bc11d4d27e70294137800b",
+    "ideal_v20.csv": "b6f5adc23253bb35e912a902eafd96a45441118698e76f0a265803d6c67b4584"
+  },
+  "active_cells": 82040,
+  "active_representatives_outside_ellipse": 3120,
+  "tiny_fraction_cells": 800,
+  "peaks": [
+    {
+      "group": "legacy",
+      "channel": "440_ComptonOnly",
+      "index": 1616,
+      "coordinates_mm": [
+        -102.2746338988903,
+        140.76895702124085,
+        -58.5
+      ],
+      "fraction": 0.023076657293092075,
+      "volume_mm3": 4.5412407078196795,
+      "density": 752132.8125,
+      "source_integral": 3415616.145811906,
+      "representative_inside": false,
+      "compton_rho_times_sensitivity": 534.5512029397757,
+      "note": "rho*S is expected detector count term, not measured event responsibility; JSCC also has single sensitivity"
+    },
+    {
+      "group": "legacy",
+      "channel": "440_SinglePlusCompton",
+      "index": 131696,
+      "coordinates_mm": [
+        -231.3510865670048,
+        -63.84884293600199,
+        58.5
+      ],
+      "fraction": 0.00996895082253595,
+      "volume_mm3": 1.9327916160870293,
+      "density": 115008.296875,
+      "source_integral": 222287.0719804481,
+      "representative_inside": false,
+      "compton_rho_times_sensitivity": 48.10168882470402,
+      "note": "rho*S is expected detector count term, not measured event responsibility; JSCC also has single sensitivity"
+    },
+    {
+      "group": "ideal",
+      "channel": "440_ComptonOnly",
+      "index": 1596,
+      "coordinates_mm": [
+        102.27463389889034,
+        140.76895702124085,
+        -58.5
+      ],
+      "fraction": 0.02307665729309297,
+      "volume_mm3": 4.541240707819889,
+      "density": 697330.9375,
+      "source_integral": 3166747.6401972068,
+      "representative_inside": false,
+      "compton_rho_times_sensitivity": 465.3431706889306,
+      "note": "rho*S is expected detector count term, not measured event responsibility; JSCC also has single sensitivity"
+    },
+    {
+      "group": "ideal",
+      "channel": "440_SinglePlusCompton",
+      "index": 131696,
+      "coordinates_mm": [
+        -231.3510865670048,
+        -63.84884293600199,
+        58.5
+      ],
+      "fraction": 0.00996895082253595,
+      "volume_mm3": 1.9327916160870293,
+      "density": 67207.5234375,
+      "source_integral": 129898.13783797252,
+      "representative_inside": false,
+      "compton_rho_times_sensitivity": 26.09389793018604,
+      "note": "rho*S is expected detector count term, not measured event responsibility; JSCC also has single sensitivity"
+    }
+  ],
+  "row_rescaling_relative_l2": 6.416429042051353e-17,
+  "energy_angle_width_comparison": [
+    {
+      "measured_keV": 60.0,
+      "theta_deg": 35.25146535425288,
+      "current_minus_deg": 3.461343139480394,
+      "current_plus_deg": 3.347767766530066,
+      "old_minus_deg": 3.4515729038728487,
+      "old_plus_deg": 3.3395885352437635
+    },
+    {
+      "measured_keV": 100.0,
+      "theta_deg": 48.8203286919784,
+      "current_minus_deg": 4.1880109649256685,
+      "current_plus_deg": 4.226603003474877,
+      "old_minus_deg": 4.1795964128808825,
+      "old_plus_deg": 4.218606166199682
+    },
+    {
+      "measured_keV": 150.0,
+      "theta_deg": 66.46590764928288,
+      "current_minus_deg": 5.6427564212352825,
+      "current_plus_deg": 6.000336378361979,
+      "old_minus_deg": 5.625407938636747,
+      "old_plus_deg": 5.981077219266636
+    },
+    {
+      "measured_keV": 200.0,
+      "theta_deg": 88.15493064929649,
+      "current_minus_deg": 8.410083328738846,
+      "current_plus_deg": 9.707026539462635,
+      "old_minus_deg": 8.337511023257289,
+      "old_plus_deg": 9.61206334851543
+    },
+    {
+      "measured_keV": 250.0,
+      "theta_deg": 121.8778470942208,
+      "current_minus_deg": 15.909919404750086,
+      "current_plus_deg": 25.23660968492409,
+      "old_minus_deg": 14.959955392651521,
+      "old_plus_deg": 22.72791006243095
+    },
+    {
+      "measured_keV": 270.0,
+      "theta_deg": 147.6204069526762,
+      "current_minus_deg": 26.221682389773676,
+      "current_plus_deg": 32.35396959555399,
+      "old_minus_deg": 13.404644284545386,
+      "old_plus_deg": 64.17358574045114
+    },
+    {
+      "measured_keV": 277.0,
+      "theta_deg": 166.8067225666166,
+      "current_minus_deg": 38.54092229256261,
+      "current_plus_deg": 13.167653981613602,
+      "old_minus_deg": 286.79998822578483,
+      "old_plus_deg": 487.3467870911553
+    }
+  ],
+  "domain_probe": {
+    "events": 1280,
+    "stable_full_circle_q_over_3": 1,
+    "events_with_full_best_outside": 525,
+    "inside_centres_q_over_3": 2,
+    "inside_plus_centroids_q_over_3": 2,
+    "interpretation": "Discrete probes only. A score >3 here is an upper bound on continuous-domain best score; not proof for deletion. No B or image enters these scores."
+  }
+}

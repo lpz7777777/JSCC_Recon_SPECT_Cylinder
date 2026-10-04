@@ -1,0 +1,71 @@
+{
+  "diagnostic_only": true,
+  "view": 4,
+  "zero_based_merged_row": 11822,
+  "raw": [
+    [
+      9554.0,
+      0.204926997423172,
+      1091.0,
+      0.17993299663066864
+    ]
+  ],
+  "source_sha256": "e2392dfc3a969e16f1b4d7a549774d48527ba4a3429f0057b8f9212eacfac73a",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "detector_sha256": "e73400af991a0cfac8254fe7371aa6bad34ab934c1c09c2e8c1d8641b67003e3",
+  "kernel_sha256": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225",
+  "code_sha256": "f23a3de89023d6b1c26c7ce2ff131f9203e00db276b09ca349674e6450bb91ac",
+  "prototype_sha256": "9e32422d916666ff7486c39c04f51e9239a20a3d9c25253e2cc0557cc04147a1",
+  "torch_version": "2.8.0+cu128",
+  "cuda_version": "12.8",
+  "results": [
+    {
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "old_q_min": 3.3546810150146484,
+      "old_best_index": 131910,
+      "old_best_position_sigma_deg": 1.1219607591629028,
+      "old_position_sigma_max_deg": 1.1599345207214355,
+      "old_best_cosine": -0.580784261226654,
+      "old_best_cross_product_sine": 0.8140575885772705,
+      "stable_q_min": 3.3546813716779824,
+      "stable_position_sigma_max_deg": 1.1599344256658184
+    },
+    {
+      "device": "cpu",
+      "dtype": "torch.float64",
+      "old_q_min": 3.3546813717291073,
+      "old_best_index": 131910,
+      "old_best_position_sigma_deg": 1.1219607361253798,
+      "old_position_sigma_max_deg": 1.1599344245778496,
+      "old_best_cosine": -0.5807842191300704,
+      "old_best_cross_product_sine": 0.8140575476030391,
+      "stable_q_min": 3.3546813717291073,
+      "stable_position_sigma_max_deg": 1.1599344245778496
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "old_q_min": 0.9725423455238342,
+      "old_best_index": 61729,
+      "old_best_position_sigma_deg": 91.19892883300781,
+      "old_position_sigma_max_deg": 91.19892883300781,
+      "old_best_cosine": -1.0,
+      "old_best_cross_product_sine": 9.557511657476425e-05,
+      "stable_q_min": 3.3546813716779824,
+      "stable_position_sigma_max_deg": 1.1599344256658184
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float64",
+      "old_q_min": 3.3546813717291073,
+      "old_best_index": 131910,
+      "old_best_position_sigma_deg": 1.1219607361253798,
+      "old_position_sigma_max_deg": 1.1599344245778496,
+      "old_best_cosine": -0.5807842191300705,
+      "old_best_cross_product_sine": 0.8140575476030391,
+      "stable_q_min": 3.3546813717291073,
+      "stable_position_sigma_max_deg": 1.1599344245778491
+    }
+  ]
+}

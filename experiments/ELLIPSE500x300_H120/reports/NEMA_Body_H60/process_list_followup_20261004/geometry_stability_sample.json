@@ -1,0 +1,70 @@
+{
+  "diagnostic_only": true,
+  "production_changed": false,
+  "sample_per_view": 64,
+  "seed": 20261004,
+  "sample_stats": {
+    "events": 1280,
+    "events_exceeding_derivative_bound": 35,
+    "old_kept_but_stable_q_over_3": 0,
+    "max_old_sigma_deg": 866.3850708007812,
+    "full_row_TV_quantiles": [
+      3.2837307777054017e-07,
+      9.749824261837329e-07,
+      6.216498501388867e-06,
+      2.255589298873513e-05
+    ],
+    "ellipse_row_TV_quantiles": [
+      3.1007950918970775e-07,
+      7.873068241017737e-07,
+      6.401081129082688e-06,
+      4.4066576090567944e-05
+    ],
+    "ellipse_row_TV_above_01": 0
+  },
+  "witness": [
+    {
+      "view": 4,
+      "input_row": 11822,
+      "witness": true,
+      "q_current_gpu": 0.9725423455238342,
+      "q_reference_float64": 3.3546813716779824,
+      "q_stable": 3.3546813716779824,
+      "max_old_sigma_deg": 91.19892883300781,
+      "max_stable_sigma_deg": 1.1599344256658184,
+      "columns_exceeding_derivative_bound": 1,
+      "old_q_min_grid_index": 61729,
+      "old_q_min_sigma_deg": 91.19892883300781,
+      "full_row_total_variation": 0.03722164032033424,
+      "ellipse_conditional_total_variation": 1.1962935444044461e-06
+    }
+  ],
+  "production_kernel_sha256": "ac7757c1793b86d36f5a6b787d9c91460250c7f48e1ec04ba66f7141a5afb225",
+  "prototype_sha256": "9e32422d916666ff7486c39c04f51e9239a20a3d9c25253e2cc0557cc04147a1",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "input_sha256": {
+    "ideal_v01.csv": "db21acc33d921fac8ee139130b653d335754682cdd0b1fb0e4478fd396931ecc",
+    "ideal_v02.csv": "be10995baf5910e7769e2ddcea94854afd624afc7d751261a1af745e2873362d",
+    "ideal_v03.csv": "c13e8d36b7791ab8bd720efda0646fad9e75c5cbf9e65560c7e2c6ccc819a22b",
+    "ideal_v04.csv": "e2392dfc3a969e16f1b4d7a549774d48527ba4a3429f0057b8f9212eacfac73a",
+    "ideal_v05.csv": "5d71170fe95fb61d1f3cec1b0d5c84bfad41ee7ec2ad8dc3077ff316f45b229a",
+    "ideal_v06.csv": "a772f758c1eb3dfacfa97f01c659af6bd228025081f85e6165113e9477618f2e",
+    "ideal_v07.csv": "27d1b31f4682e8ba3489a309b7874fb5057fb59f38e16d012081a7c3776a0289",
+    "ideal_v08.csv": "f3d90f0eeaa19abf2d2a5d92bfcf775708870b85dace06d8759eada23a5b68c6",
+    "ideal_v09.csv": "5692297b75bc07e1875303d035518d51ff106138b9a678028f4e4a3c4c2e021e",
+    "ideal_v10.csv": "44fe7df357c1e930557ba28788a9cdd2219ef29b8b3ec40823ec3fcd2ecb4da9",
+    "ideal_v11.csv": "50313eb8b8946fb0860786aef315cc3f1c62794e20e5e9a78a3c5f0db1025941",
+    "ideal_v12.csv": "9e440fabc61361b3f0121b00d7ae38eaa285c33baafb24225dfbdad10fc283a0",
+    "ideal_v13.csv": "ead55261a74e530b621f2f1994e365490623b048bc9111d4fd7f7057b19920cb",
+    "ideal_v14.csv": "c9dcee664279024cf5d86b7ba52beb2448bbafb0e98ee8680a354af0eb90d805",
+    "ideal_v15.csv": "61e7d2655eaadfe936031c25ecd39670fb3b5fbe952743a7314f11a8ad4b0921",
+    "ideal_v16.csv": "c3a9774796193baceaffc59763390c1f50c2da0960372545c063cb362a22c230",
+    "ideal_v17.csv": "140dc0847f6b1a52a55cba3c6177e9557b3f524469f0236fbabe5f4b0226e6d9",
+    "ideal_v18.csv": "093f5e10fdd7f0400f548cbc20f80ed70b6dd4849df29491cf5945ba37d4e91b",
+    "ideal_v19.csv": "5d74b116515019b11d5d9181c1659975f1049fecd8bc11d4d27e70294137800b",
+    "ideal_v20.csv": "b6f5adc23253bb35e912a902eafd96a45441118698e76f0a265803d6c67b4584"
+  },
+  "runtime_seconds": 4.964428270002827,
+  "gpu_max_allocated_bytes": 5991990272,
+  "interpretation": "Random frozen ideal accepted events plus one separately flagged witness; row TV includes original B and ellipse overlap. No image updates or sensitivity changes."
+}

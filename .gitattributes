@@ -13,3 +13,11 @@ experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/f
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/local_paired_verification.json -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/paired_collection.json -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/final_delivery_1660254.json -text whitespace=cr-at-eol
+
+# Preserve executed numerical-audit sources and downloaded evidence hashes.
+experiments/ELLIPSE500x300_H120/diagnose_compton_geometry_stability.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reproduce_compton_geometry_witness.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/research_process_list_followup.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/test_compton_geometry_stability.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/summarize_process_list_followup.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_followup_20261004/** -text whitespace=cr-at-eol

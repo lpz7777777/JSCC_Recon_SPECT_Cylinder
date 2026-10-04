@@ -1,0 +1,14 @@
+{
+  "geometry_stability_full.json": {
+    "sha256": "07c9ae5ecbb997932e9cc50eef023f72e5738b71cf1c7a550217f2638cc49ea9",
+    "bytes": 4742,
+    "remote": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/geometry_stability_20261004/full/summary.json",
+    "local": "reports\\NEMA_Body_H60\\process_list_followup_20261004\\geometry_stability_full.json"
+  },
+  "events.csv": {
+    "sha256": "739995d96ab8ce019b3da1942369dcae96e6dbc2f5a0253f375166706ec862df",
+    "bytes": 25391072,
+    "remote": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/geometry_stability_20261004/full/events.csv",
+    "local": "generated\\compton_first_scatter_v2\\geometry_stability_full\\events.csv"
+  }
+}

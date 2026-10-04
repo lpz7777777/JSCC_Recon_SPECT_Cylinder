@@ -1,0 +1,50 @@
+{
+  "diagnostic_only": true,
+  "production_changed": false,
+  "population": "Frozen ideal-first-scatter B accepted NEMA 1e9 events; excludes previously rejected candidates",
+  "number_of_events": 91231,
+  "new_q_rejects": 6,
+  "ellipse_TV_gt_01": 4,
+  "peak_responsibilities": {
+    "compton": {
+      "total": 465.3368133143534,
+      "max_single_event": 0.859273577605089,
+      "events_to_50_percent": 4853,
+      "events_to_90_percent": 32436,
+      "effective_event_count": 7307.030917764349,
+      "fraction_from_new_q_rejects": 0.00064230776430555,
+      "fraction_from_TV_over_01": 4.120909636350789e-12
+    },
+    "jscc": {
+      "total": 27.523098272347994,
+      "max_single_event": 0.12697747781146995,
+      "events_to_50_percent": 1663,
+      "events_to_90_percent": 20558,
+      "effective_event_count": 2165.6245040031804,
+      "fraction_from_new_q_rejects": 0.0001364306197857249,
+      "fraction_from_TV_over_01": 3.7246478307299816e-08
+    }
+  },
+  "boundary": {
+    "cases": 1440,
+    "valid_cases": 1316,
+    "converged": 1440,
+    "representative_over_10x": 1,
+    "representative_ratio_quantiles": [
+      0.06952862481789213,
+      0.615936397705598,
+      0.979893276504987,
+      1.2055700818540585,
+      12.589636812409084
+    ],
+    "centroid_ratio_quantiles": [
+      0.5505455351572396,
+      0.9757518764350732,
+      0.9995214576619332,
+      1.006475949140694,
+      1.0730571439082839
+    ],
+    "note": "Previously acquired independent point-source cases, not the two image peak response integrals"
+  },
+  "interpretation": "Responsibility is R_ej*x_j/(R_e*x) at the frozen B iteration-2000 image. JSCC values cover its Compton numerator only. This is not a new reconstruction, new matched sensitivity, or a bound on eventual image changes."
+}

@@ -1,0 +1,9 @@
+test_cpu_cuda_agreement_near_collinearity (test_compton_geometry_stability.StableGeometryTests.test_cpu_cuda_agreement_near_collinearity) ... ok
+test_near_parallel_and_antiparallel_obey_finite_bound (test_compton_geometry_stability.StableGeometryTests.test_near_parallel_and_antiparallel_obey_finite_bound) ... ok
+test_translation_invariance (test_compton_geometry_stability.StableGeometryTests.test_translation_invariance) ... ok
+test_variance_matches_finite_difference_of_geometric_angle (test_compton_geometry_stability.StableGeometryTests.test_variance_matches_finite_difference_of_geometric_angle) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.348s
+
+OK
