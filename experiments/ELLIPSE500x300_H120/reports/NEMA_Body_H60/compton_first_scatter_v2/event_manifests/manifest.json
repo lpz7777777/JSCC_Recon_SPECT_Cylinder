@@ -1,0 +1,47 @@
+{
+  "study": "compton_first_scatter_v2",
+  "post_q_counts": {
+    "A": 97078,
+    "B": 91231,
+    "common": 90778,
+    "A_only": 6300,
+    "B_only": 453
+  },
+  "q_rejected": {
+    "legacy": 221,
+    "ideal": 154
+  },
+  "row_convention": "Zero based local List rows and per-view merged global List rows; (seed,event_id) is shared paired identity",
+  "sources": {
+    "generated\\compton_first_scatter_v2\\analysis\\NEMA_legacy_q_rejected.csv": "99aace0f983dd0bbc96a4bb74ad554de5cbf6ee798e1da57930e856b595beafa",
+    "generated\\compton_first_scatter_v2\\analysis\\NEMA_legacy_event_identities.npy": "ae26e03b557de5b763521c953f8ae70965e8813c01f0b0d1edfee2482df0461d",
+    "generated\\compton_first_scatter_v2\\analysis\\NEMA_ideal_q_rejected.csv": "14b4c402301c777fc340fc628169bce39c0f9ef71e4292d9a24ebcfa530cf785",
+    "generated\\compton_first_scatter_v2\\analysis\\NEMA_ideal_event_identities.npy": "fb402ea452c3703ec763ec49933b5a0e4617921af8aa003a07287f0044f11d7b",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v01.csv": "4e7c99f21fd59deb15dfa8649bef9aba274a6ff82b07c71083ead8546b7625fd",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v02.csv": "500a690cd7e91ca2b1060804ce09a5fb774beaee3036a017a2dd8530a17295e1",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v03.csv": "fce31c2f6e1afcf34868700a403555e0fed512c29a22f259d4895041c4941783",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v04.csv": "bd6e4a7638a3664795c27fab71b0a0759db2d30dd3d53cc4a8b994f6e80163ad",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v05.csv": "f58e8cbcf540a980928ee5cd63b440a9c2303c831f4d681df08fc75353fe16f1",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v06.csv": "546331ca2660fdb838dd9375776d39dde4fb67e70610be51e054c6d2d38db315",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v07.csv": "979633e7dc59bf42964e2962f2d73a376c1b3b9b808e9bf90b86d72e02ccc022",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v08.csv": "7838c84dd3b2869ae5124495a563250a97d7842611d14a65593aecf081b73178",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v09.csv": "df5479447080fb6a509d595f42fc653e9213045c7acf3882a3589034dc914c14",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v10.csv": "9242852f019071e7d6e5fa2610a8df4c9742b16677f2dd4b009cc030c0f44f92",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v11.csv": "1675b02fcb74543a1feb5fd0b2f2853d5af3d6c0d7d10487ec7d2ae8cdf3da7d",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v12.csv": "96aa9fdb56edfebf7834f938234ecbb820b8401edc018473869986ec3a2b79ce",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v13.csv": "edec33f362e472b381d92a351aeb754e94c7565ddc1b31991491ff915e0bd753",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v14.csv": "72c716d022635aa337c8b42a607dde9688059d64709c19a332dfa58b6b226300",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v15.csv": "7050353a1b4f6f81a73d13403ac29b8a3d87c08f5ff5ecab0f3a531386ce91ec",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v16.csv": "d750f711311138bdb3741fb32c3888a2a3b328bcbc89cc8946d03bb37a344687",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v17.csv": "c6e2e44ba95e1abcdafc35c509261a1fc4167540325057f4d3a1e0084fab2d88",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v18.csv": "82915ccf0ae768bc284be908379f4eaec6eb1941989328a374ba11b26a0c1900",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v19.csv": "c216c30cb6518f80a25466a41af7d88d026ba685be60695dc367ab85d411dfbd",
+    "generated\\compton_first_scatter_v2\\analysis_inputs\\NEMA\\events_v20.csv": "78f514cb0984a8a3c9531d56c8e32d4a19cb05642033c6eb93d7f14499822734"
+  },
+  "files": {
+    "ideal_q_rejected_events.csv": "5e2cd464d41eb60e5aa0e0100038ac6dd1c40abe6bba0a5617b5df61f9bc1a10",
+    "legacy_q_rejected_events.csv": "42c8a056ce2a4785ccf4bfd46f5e81068d41238e6133843e8b87d7fe9464f3b1",
+    "paired_only_events.csv": "d1f2510cbbc8dcb5ac20b1c029d988408f630391067079bebd30284ea2c13920"
+  },
+  "export_script_sha256": "78edae71a1372aba6c251b5fa7d616f2ec46b12ab6080d02e44de36885c21cc0"
+}

@@ -1,0 +1,20 @@
+{
+  "job": 1660254,
+  "groups": [
+    {
+      "group": "legacy",
+      "archive_sha256": "421a575e54cc42cbc83cd9ff85cc8ee2adcdd02774c8d774792209197bfb0f89",
+      "verification_sha256": "19f455977718cf53a2b0780519673bdcd2d6225a09e2bce5686eac93fe2b5c0b"
+    },
+    {
+      "group": "ideal",
+      "archive_sha256": "c7529df46fad5f5313d8d00c22c17aa6b69f61529488f4d23682f94ae283c231",
+      "verification_sha256": "2980dfc0335ab4cb3d34603f5c1c3da171c1c2e019aca6c77ade6e30482465d7"
+    }
+  ],
+  "accounting": "1660254|COMPLETED|0:0||240000M|billing=24,cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.batch|COMPLETED|0:0|93288K||cpu=6,gres/gpu=1,mem=60000M,node=1\n1660254.extern|COMPLETED|0:0|0||billing=24,cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.0|COMPLETED|0:0|233956K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.1|COMPLETED|0:0|15435608K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.2|COMPLETED|0:0|15217532K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.3|COMPLETED|0:0|9339512K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.4|COMPLETED|0:0|9881956K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.5|COMPLETED|0:0|14998876K||cpu=24,gres/gpu=4,mem=240000M,node=4\n1660254.6|COMPLETED|0:0|284K||cpu=4,gres/gpu=4,mem=240000M,node=4",
+  "slurm_max_rss_bytes": 15806062592.0,
+  "minimum_actual_host_bytes": 62914560000,
+  "passed": true,
+  "result_root": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\compton_first_scatter_v2\\RemoteResults"
+}

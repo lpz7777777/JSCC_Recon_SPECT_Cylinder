@@ -1,0 +1,19 @@
+{
+  "job": 1660254,
+  "passed": true,
+  "groups": [
+    {
+      "group": "legacy",
+      "passed": true,
+      "local_verification_sha256": "1fc723b204126d41649096a1232d471a986a062792e463723a02a561eab2b4ba",
+      "original_remote_verification_sha256": "19f455977718cf53a2b0780519673bdcd2d6225a09e2bce5686eac93fe2b5c0b"
+    },
+    {
+      "group": "ideal",
+      "passed": true,
+      "local_verification_sha256": "736c8ac6034918aeb8fb9c17b359e8ba2e4298c2941ae051b49abf6edaa24265",
+      "original_remote_verification_sha256": "2980dfc0335ab4cb3d34603f5c1c3da171c1c2e019aca6c77ade6e30482465d7"
+    }
+  ],
+  "all_four_histories_frames": 40
+}

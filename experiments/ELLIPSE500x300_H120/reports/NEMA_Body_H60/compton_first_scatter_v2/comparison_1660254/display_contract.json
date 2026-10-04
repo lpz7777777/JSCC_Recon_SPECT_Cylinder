@@ -1,0 +1,29 @@
+{
+  "mip": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "common_normalizers": {
+    "440_ComptonOnly": 182.38365173339844,
+    "440_SinglePlusCompton": 172.2260284423828
+  },
+  "smoothing": false,
+  "per_panel_rescaling": false,
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af"
+}

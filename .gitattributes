@@ -1,3 +1,15 @@
 # Preserve execution-source bytes referenced by response-study SHA256 manifests.
 compton_event_response.py -text whitespace=cr-at-eol
 process_list_plane_sparse.py -text whitespace=cr-at-eol
+
+# Preserve reviewed first-scatter delivery bytes and their SHA256 manifests.
+experiments/ELLIPSE500x300_H120/export_first_scatter_events.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/plot_first_scatter_supplement.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/comparison_1660254/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/event_manifests/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/ACCEPTANCE.md -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/allocation_1660254.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/formal_ideal_verification_1660254.json -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/local_paired_verification.json -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/paired_collection.json -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/final_delivery_1660254.json -text whitespace=cr-at-eol
