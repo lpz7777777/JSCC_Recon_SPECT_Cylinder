@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-05T19:09:13.212001+00:00",
+  "job": 1666430,
+  "angular_passed": true,
+  "angular_events": 91225,
+  "angular_max_reserved_fraction": 0.357274881188256,
+  "angular_max_process_rss_fraction": 0.22780201822916665,
+  "angular_granted_bytes_per_node": 62914560000,
+  "continuous_energy_passed": false,
+  "formal_submitted": false,
+  "notes": "Energy response progressing; actual live GPU utilization observed 82-99%; final peak requires phase completion",
+  "sha256": {
+    "allocation_1666430.txt": "4d5b253dc9c3cd00b0ae71fc3e682396378f501de4169915d8fd8699328c5e21",
+    "regression_reuse_1666430.json": "6d0c77897329cd99cb2508b00f607545b3d07a7f67898b20d0a0da9ba138a907",
+    "angular\\run_manifest.json": "5a020cdffd15b6595768ac5402fc66917efd5f7b9657645b09b93959b2f83eac",
+    "angular\\verification.json": "049aafe1e7db9eb2fac4f4a4dc9c5f29af3e6c47e26f1e132481a6bdc41da3e4"
+  }
+}
