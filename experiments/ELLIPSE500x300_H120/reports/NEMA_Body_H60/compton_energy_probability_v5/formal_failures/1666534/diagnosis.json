@@ -1,0 +1,23 @@
+{
+  "job": 1666534,
+  "status": "FAILED",
+  "completely_exited": true,
+  "accounting": "1666534|FAILED|15:0||billing=24,cpu=24,gres/gpu=4,mem=240000M,node=4\n1666534.batch|FAILED|15:0|25744K|cpu=6,gres/gpu=1,mem=60000M,node=1\n1666534.extern|COMPLETED|0:0|128K|billing=24,cpu=24,gres/gpu=4,mem=240000M,node=4\n1666534.0|COMPLETED|0:0|557676K|cpu=24,gres/gpu=4,mem=240000M,node=4\n1666534.1|FAILED|1:0|68952K|cpu=24,gres/gpu=4,mem=240000M,node=4",
+  "error": "Transport validator interpreted primary_counts energy-category aggregate as per-worker counts",
+  "actual_primary_by_energy": [
+    293821153,
+    706178847,
+    0
+  ],
+  "actual_primary_gamma": 1000000000,
+  "actual_seeds": 200,
+  "workers": 200,
+  "input_unchanged": true,
+  "response_mlem_unchanged": true,
+  "angular_started": false,
+  "continuous_energy_started": false,
+  "log_sha256": {
+    "validation.1666534.out": "bce933fd0504127b91325db56ae2de7f1a7cd611876e4483ebc6d3e163ae6160",
+    "validation.1666534.err": "2ad5c86a6f28a58dc890d821e6e03507ca3cee48370deb0733927a20b736adca"
+  }
+}

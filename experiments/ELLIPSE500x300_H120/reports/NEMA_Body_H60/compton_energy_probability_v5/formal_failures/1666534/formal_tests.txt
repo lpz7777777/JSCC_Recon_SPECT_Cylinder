@@ -1,0 +1,12 @@
+test_all_forty_snapshots_required_and_hash_corruption_rejected (test_energy_formal_v5.FormalSafeguards) ... ok
+test_bounded_entry_refuses_arbitrary_iterations_and_changed_validated_operator (test_energy_formal_v5.FormalSafeguards) ... ok
+test_checkpoint_callback_does_not_change_original_mlem_images_or_histories (test_energy_formal_v5.FormalSafeguards) ... ok
+test_formal_cannot_start_without_pinned_actual_validation_authority (test_energy_formal_v5.FormalSafeguards) ... ok
+test_invalid_checkpoint_is_unpublished_and_existing_frame_cannot_be_overwritten (test_energy_formal_v5.FormalSafeguards) ... ok
+test_strict_verifier_with_actual_pilot_fixture_is_not_new_imaging_evidence (test_energy_formal_v5.FormalSafeguards) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.573s
+
+OK
+ENERGY_V5_FORMAL_VERIFIED validation angular 91225

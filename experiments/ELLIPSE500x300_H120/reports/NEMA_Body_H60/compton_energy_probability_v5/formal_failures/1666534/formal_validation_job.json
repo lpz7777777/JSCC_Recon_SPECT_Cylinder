@@ -1,0 +1,20 @@
+{
+  "job": 1666534,
+  "mode": "validation",
+  "nodes": 4,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/formal_releases/dfdd537e95dd12bd",
+  "contract_sha256": "b1f20ceba97c7b524fda5c9d5237d90bc68be47bfd9f1294c3d407a2932e97b8",
+  "authority": null,
+  "iterations": 10,
+  "save_step": 10,
+  "models": [
+    "angular",
+    "continuous_energy"
+  ],
+  "nccl_interface": "bond0",
+  "walltime_minutes": 90,
+  "phase_timeout_seconds": 1500,
+  "submitted_utc": "2026-10-05T19:27:05.071354+00:00",
+  "formal_submitted": false
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Staged index and origin branch..HEAD",
+  "checked_blobs": 1904,
+  "total_blob_bytes": 62620341,
+  "audited_tree": "374e308b7b1966228bfbde34b4122da711384966",
+  "findings": [],
+  "supplemental_document_corrections_sha256": {
+    "experiments/ELLIPSE500x300_H120/README.md": "31b28fb8f91536743aa318dc427023dc2755a3db8d1f4bec2e8b1ccefa0173f4",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL.md": "d61a817a04ad737e5114b071480d1828fc841a812d0f4a23741c2d859e9e5ab2",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/README.md": "bd9557045ee3233c2f2eb801ef323e9c342f90a20f6c23e03402c2972e480f57"
+  },
+  "release_key": "2a62bcf35f00e1d4",
+  "validation_job": 1666592,
+  "large_generated_files_excluded": true,
+  "note": "Receipt created after full scan; its own content separately size/pattern checked"
+}
