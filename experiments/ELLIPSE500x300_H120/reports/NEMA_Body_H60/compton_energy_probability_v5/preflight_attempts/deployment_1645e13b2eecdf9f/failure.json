@@ -1,0 +1,5 @@
+{
+  "reason": "Legacy verifier persists JSON and returns None; reuse adapter corrected to read its persisted receipt",
+  "slurm_submitted": false,
+  "new_gpu_work": false
+}

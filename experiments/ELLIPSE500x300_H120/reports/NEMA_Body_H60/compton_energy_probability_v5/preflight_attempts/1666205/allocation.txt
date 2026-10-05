@@ -1,0 +1,30 @@
+JobId=1666205 JobName=Energy_v5_preflight
+   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A
+   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:01 TimeLimit=01:30:00 TimeMin=N/A
+   SubmitTime=2026-10-05T23:49:10 EligibleTime=2026-10-05T23:49:10
+   AccrueTime=2026-10-05T23:49:10
+   StartTime=2026-10-06T00:23:56 EndTime=2026-10-06T01:53:56 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T00:23:56 Scheduler=Backfill
+   Partition=gpu_5090 AllocNode:Sid=wqd10nbf05c05:1904407
+   ReqNodeList=(null) ExcNodeList=wqd10nba06g6
+   NodeList=wqd10naf02g[1,3],wqd10nbj04g[1,4]
+   BatchHost=wqd10naf02g1
+   NumNodes=4 NumCPUs=24 NumTasks=4 CPUs/Task=6 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=240000M,node=4,billing=24,gres/gpu=4
+   AllocTRES=cpu=24,mem=378000M,node=4,billing=24,gres/gpu=4
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   MinCPUsNode=6 MinMemoryCPU=15750M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/preflight_releases/a75a6a990f6b0be0/reconstruct_energy_preflight_v5.sh
+   WorkDir=/tmp
+   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/logs/preflight.1666205.err
+   StdIn=/dev/null
+   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/logs/preflight.1666205.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=6
+   
+

@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-05T16:59:17.566610+00:00",
+  "checked_blobs": 1864,
+  "total_blob_bytes": 62290485,
+  "findings": [],
+  "base": "origin/codex/ellipse500x300-h120",
+  "scope": "Staged index and outgoing history before removal of temporary duplicate receipts; supplemental final attribute/allocation/readme audit below",
+  "supplemental_files": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/.gitattributes",
+      "bytes": 3262,
+      "sha256": "d8a7d7c8f742bd8538439d0b04e0388cdeba36db306f82cd0e4e3a4a1769e2b1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/preflight_attempts/1666205/accounting_with_elapsed.txt",
+      "bytes": 474,
+      "sha256": "66880b9104504c0b9eeb2b20cfae8bb34eb725045f49459c8c0a1e7c6ecf3329"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/README.md",
+      "bytes": 21555,
+      "sha256": "611dd4b42f4d6a370361de2317033828602399a15bea2922c5a58db04d26e4fe"
+    }
+  ],
+  "large_generated_and_sensitive_files_excluded": true
+}

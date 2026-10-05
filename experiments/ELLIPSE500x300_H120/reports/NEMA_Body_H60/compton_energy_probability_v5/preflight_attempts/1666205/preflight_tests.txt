@@ -13,14 +13,11 @@ test_torch_density_matches_scalar_probability (test_compton_energy_probability_v
 test_angular_path_retains_existing_kernel_and_normalization (test_energy_preflight_v5.PilotSafeguards) ... ok
 test_continuous_candidate_order_and_chunk_do_not_change_identity (test_energy_preflight_v5.PilotSafeguards) ... ok
 test_invalid_frozen_events_are_rejected_not_silently_dropped (test_energy_preflight_v5.PilotSafeguards) ... ok
-test_original_projector_moves_coordinates_to_cpu_before_construction (test_energy_preflight_v5.PilotSafeguards) ... ok
 test_ragged_rank_partitions_preserve_every_identity_once (test_energy_preflight_v5.PilotSafeguards) ... ok
-test_reuse_accepts_file_receipt_from_legacy_verifier_with_no_return_value (test_energy_preflight_v5.PilotSafeguards) ... ok
 test_whole_cell_geometry_is_frozen_and_has_no_fractional_columns (test_energy_preflight_v5.PilotSafeguards) ... ok
 
 ----------------------------------------------------------------------
-Ran 19 tests in 3.798s
+Ran 17 tests in 1.087s
 
 OK
 FIRST_SCATTER_VERIFIED ideal_first_scatter_v2 regression 91231
-ENERGY_V5_REUSED_REGRESSION_VERIFIED 1666205

@@ -1,6 +1,6 @@
 # v5完整事件重建预检
 
-2026-10-05 23:54：作业 **1666205** 已提交，4节点×1 GPU、NCCL `bond0`，当前 `PENDING (Priority)`。冻结发布 `a75a6a990f6b0be0`。没有提交2000次正式配对；`validation_gate.json`仍只表示独立响应诊断通过，预检状态单独记录，不能据此声称尖峰减轻。
+2026-10-06 00:53：1666205已完全退出（FAILED）。**阶段1历史50次通过，阶段2角度核在算子构造时失败，阶段3连续能量核未启动。** 故障是新预检接口的CPU/CUDA设备混用，不是核的物理验收失败或显存不足。新发布 `60c12fd7c790c0b2`已完成75项SHA及19项远端测试；1666205回归再次验收通过，补跑作业 **1666264**（4节点×1GPU）已提交，Priority排队，只执行两个缺失阶段。正式配对尚未提交。作业号以 `preflight_job.json`为准，不能再以1666205排队状态或Slurm COMPLETED替代验收。
 
 | 顺序 | 数据和基底 | 计算 | 验收 |
 |---|---|---|---|
@@ -16,7 +16,7 @@
 
 - 新入口为 `run_energy_preflight_v5.py`，原 `run_reconstruction.py`、共享生产核、MLEM更新不改。
 - 连续核、训练规律、两张几何SHA与已通过诊断的发布一致；两组各使用本次训练生成的S。20份事件索引逐文件与已验收R1原压缩包比对。
-- 集群部署复核75个文件SHA，包含23个原NEMA输入、三套Factors manifest、原S、全部发布文件；17项远端测试通过。证据见 `preflight_freeze.json`、`preflight_deployment.json`、`preflight_tests.txt`。
+- 集群部署复核75个文件SHA，包含23个原NEMA输入、三套Factors manifest、原S、全部发布文件；初版17项、当前修复版19项远端测试通过。证据见 `preflight_freeze.json`、`preflight_deployment.json`、`preflight_tests.txt`。
 - 单光子计数及440矩阵共用原数据；不重跑218、串窗、Geant4，不产生精细A场。不加正则化、平滑、阈值扫描或额外事件删除。
 
 ## 执行界限与资源
@@ -34,3 +34,14 @@ python experiments/ELLIPSE500x300_H120/energy_preflight_v5_workflow.py fetch
 ```
 
 完成验收仍只意味着可以准备唯一2000次配对的下一份冻结合同；当前入口不能提交正式重建。未来图像沿用中央72mm MIP和完整120mm指标，本轮试跑不作为尖峰改善结论。
+
+
+## 2026-10-06失败与修复收据
+
+1666205实际运行3分57秒：全节点预检16秒成功；历史回归2分52秒成功；角度核44秒后在32事件数值检查中失败，没有完整响应输出。历史Compton/JSCC第50帧相对L2分别为3.98515e−7、2.28519e−6，原91231事件及82040列闭合。最大GPU预留占用约26.84%，主存RSS约15.63GB/99.09GB（实际授予每节点94500MiB），Slurm MaxRSS约15.90GB；均满足20%余量。
+
+根因：旧 `build_compton_sparse_projector`内部创建CPU角度张量，新调用却给了CUDA坐标。修复仅在新适配器中先构造CPU算子，再整体转移到GPU，与原生产入口的调用约定相同；旧算子本身不修改。新试跑会真正执行CUDA比较，本地19项测试不能替代这个GPU验证。
+
+恢复流程先要求旧作业已不在活动队列、回归步骤实际成功，再执行旧严格验收器、核对两路文件SHA和实际内存分母；旧合同、脚本、输出和收据归档保留。新合同冻结 `regression_reuse`，部署和作业启动时都重新验收原50次结果，未验证的任意跳过选项不存在。部署过程中还修正了续跑接口对旧验收函数返回值的假定：旧函数只写verification.json，应读取并核验该文件；这次部署保护失败没有提交Slurm或占用GPU。
+
+当前科学冻结：NEMA91225固定stable_float64事件、78920完整柱单元、原23输入/三套Factors manifest、材料规律、角度/能量核各自匹配S均未改变。旧1666205证据在 `preflight_attempts/1666205`；未提交的中间发布收据在 `preflight_attempts/deployment_1645e13b2eecdf9f`。诊断门控仍单独保留 `DIAGNOSTIC_GATES_PASSED`。

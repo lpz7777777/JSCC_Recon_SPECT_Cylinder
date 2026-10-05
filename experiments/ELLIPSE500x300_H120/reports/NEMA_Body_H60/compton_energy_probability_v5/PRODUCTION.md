@@ -8,7 +8,7 @@
 
 本地报告：`experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5`。大CSV、灵敏度数组及临时文件：同工程`generated/compton_energy_probability_v5`，不进入Git。
 
-65114使用仓库既有SSH agent连接，未读取、输出或保存私钥/密码。远端所有运行位于本工程`experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5`。每个发布由代码、原几何、独立完整单元几何、配置和训练分布的SHA决定路径；发布不可覆盖。`deployment.json`记录逐文件校验，`job.json`记录唯一当前PID/日志/输出。不存在Slurm重建提交。
+65114使用仓库既有SSH agent连接，未读取、输出或保存私钥/密码。远端所有运行位于本工程`experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5`。每个发布由代码、原几何、独立完整单元几何、配置和训练分布的SHA决定路径；发布不可覆盖。`deployment.json`记录逐文件校验，`job.json`记录唯一当前PID/日志/输出。这里记录65114诊断阶段；后续scxi717预检提交及修复见第6、7节。
 
 当前完整圆网格132040点，原生产82040相交活动列保持不变；未来完整柱单元配对使用独立78920活动列，双方必须同基底。原矩阵、List、R1 stable_float64筛选行和旧S保持只读。
 
@@ -75,3 +75,14 @@ python experiments/ELLIPSE500x300_H120/plot_energy_candidate_v5.py
 作业1666205已提交，冻结发布a75a6a990f6b0be0，4节点×1GPU；当前Priority排队。17项远端测试通过、75项部署/原输入SHA通过。详见[PREFLIGHT.md](PREFLIGHT.md)。历史50次使用原82040列与91231事件；两种核短程使用共同78920完整柱单元、91225固定事件及各自匹配S。不能混淆这两种基底/筛选。
 
 初次提交被Slurm策略明确拒绝（账户按GPU自动分配内存，禁止--mem），没有产生作业；移除显式内存请求后提交成功。实际分配必须由scontrol提取并验收20%余量。此入口只执行三项有界数值预检，不能提交正式2000次。原任务继续停止，精细场和Geant4均未重启。
+
+
+## 7. 2026-10-06预检故障恢复
+
+1666205于00:23:56开始、00:27:53结束，FAILED 1:0。历史回归步骤COMPLETED，原91231事件，两路第50帧相对L2=3.98515e−7/2.28519e−6；通过原严格验收器重新复核。实际授予4节点378000MiB，按每节点94500MiB核对资源。角度核步骤在CPU/CUDA张量混用异常后退出；连续能量核未运行，没有可用于正式配对的试跑结论。
+
+修复新预检适配器的算子构造顺序，不修改共享sparse算子、原MLEM、模型或冻结数据。终止确认、严格回归重验、文件SHA及Slurm资源检查后归档1666205；新冻结发布60c12fd7c790c0b2只补角度核/连续能量核10次，19项本地测试通过，含设备构造约定、旧验收无返回值和不静默丢事件等检查。续跑必须使用独立冻结的原回归证据，不能任意跳过门控。
+
+部署的首次恢复版本1645e13b2eecdf9f在登录节点验收接口检查中失败（旧函数返回None），没有提交计算作业；其收据保留，修复后再次冻结。当前部署/作业状态分别以preflight_deployment.json、preflight_job.json为准。所有阶段必须实际通过并fetch验收后，才继续独立2000次正式入口。旧精细场、Huber/TV、10000次任务继续停止；没有重跑Geant4或训练。
+
+1666264已提交，4节点×1GPU，NCCL bond0，当前Priority排队。冻结60c12fd7c790c0b2部署75项SHA及19项远端测试通过；没有同名重复活动作业，未取消其他工程作业。自动任务compton-v5保持每30分钟ACTIVE，已更新为当前补跑作业及冻结回归复用证明；仍要求三阶段实际验收后独立实施正式2000次入口。

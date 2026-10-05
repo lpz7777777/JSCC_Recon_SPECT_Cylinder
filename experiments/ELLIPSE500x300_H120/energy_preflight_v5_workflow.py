@@ -24,7 +24,94 @@ OLD=BASE+'/generated/compton_first_scatter_v2'
 PYTHON='/data/home/scxi717/.conda/envs/torch/bin/python'
 
 
-def write(path,value):Path(path).write_text(json.dumps(value,indent=2,allow_nan=False)+'\n')
+def write(path,value):Path(path).write_bytes((json.dumps(value,indent=2,allow_nan=False)+'\n').encode())
+
+
+def accounting_for(c,job):
+    return command(c,f'sacct -j {job} -n -P --format=JobIDRaw,State,ExitCode,MaxRSS,AllocTRES')
+
+
+def peak_rss(accounting):
+    values=[]
+    for line in accounting.splitlines():
+        m=re.fullmatch(r'([0-9.]+)([KMGT])',line.split('|')[3])
+        if m:values.append(float(m[1])*1024**('KMGT'.index(m[2])+1))
+    if not values:raise ValueError('Actual Slurm MaxRSS missing')
+    return max(values)
+
+
+def fetch_phase(c,phase,job,target):
+    remote=REMOTE+'/preflight_'+phase+'_'+str(job);folder=target/phase;folder.mkdir(parents=True,exist_ok=True)
+    with c.open_sftp() as s:
+        for name in ('verification.json','run_manifest.json'):
+            sha=command(c,'sha256sum -- '+shlex.quote(remote+'/'+name)).split()[0]
+            s.get(remote+'/'+name,str(folder/name))
+            if digest(folder/name)!=sha:raise ValueError('Evidence transfer differs')
+    v=json.loads((folder/'verification.json').read_text())
+    if not v['passed'] or v.get('model',v.get('mode'))!=phase:raise ValueError('Phase not actually verified')
+    if v['run_manifest_sha256']!=digest(folder/'run_manifest.json'):
+        raise ValueError('Verified run manifest changed')
+    for item in v['outputs']:
+        for kind,sha in item['sha256'].items():
+            path=remote+'/Image_'+item['channel']+'_'+kind+'.float32'
+            if command(c,'sha256sum -- '+shlex.quote(path)).split()[0]!=sha:
+                raise ValueError('Previously verified image changed')
+    return dict(phase=phase,job=int(job),verification_sha256=digest(folder/'verification.json'),
+        run_manifest_sha256=digest(folder/'run_manifest.json'),accepted_events=v['accepted_events'],
+        outputs=v['outputs'],resources=v['resources'])
+
+
+def repair():
+    """Archive a failed attempt only after exit, reusing its reverified regression."""
+    current=json.loads((REPORT/'preflight_job.json').read_text());job=str(current['job']);release=current['release']
+    target=REPORT/'preflight_attempts'/job
+    if target.exists():raise ValueError('Repair already archived; inspect before retry')
+    with connect() as c:
+        queue=command(c,"squeue -u scxi717 -h -o '%i %j %T'")
+        if any(x.split()[0]==job or 'Energy_v5_preflight' in x for x in queue.splitlines()):
+            raise ValueError('Previous/duplicate pilot is still active')
+        accounting=accounting_for(c,job);rows=[x.split('|') for x in accounting.splitlines()]
+        overall=[x for x in rows if x[0]==job];regression=[x for x in rows if x[0]==job+'.1']
+        if (len(overall)!=1 or overall[0][1] not in ('FAILED','TIMEOUT','CANCELLED','OUT_OF_MEMORY') or
+            len(regression)!=1 or regression[0][1:3]!=['COMPLETED','0:0']):
+            raise ValueError('Only a terminal failed attempt with a completed regression can resume')
+        command(c,PYTHON+' '+shlex.quote(release+'/verify_first_scatter.py')+
+            ' --result '+shlex.quote(REMOTE+'/preflight_regression_'+job)+
+            ' --config '+shlex.quote(release+'/legacy_regression/R1.json')+
+            ' --geometry '+shlex.quote(release+'/geometry.npz')+
+            ' --baseline '+shlex.quote(OLD+'/formal_ideal_1660254')+' --mode regression'+
+            ' --allocation '+shlex.quote(REMOTE+'/allocation_'+job+'.txt'))
+        proof=fetch_phase(c,'regression',job,target)
+        with c.open_sftp() as s:s.get(REMOTE+'/allocation_'+job+'.txt',str(target/'allocation.txt'))
+        v=json.loads((target/'regression/verification.json').read_text())
+        if (v['accepted_events']!=91231 or v['iterations']!=50 or v['save_step']!=50 or
+            digest(target/'allocation.txt')!=v['allocation_sha256']):
+            raise ValueError('Passed historical regression identity differs')
+        if peak_rss(accounting)>.8*min(r['host_allocated_bytes'] for r in v['resources']):
+            raise ValueError('Historical Slurm resource margin fails')
+    (target/'accounting.txt').write_bytes(accounting.encode())
+    payload=DATA/'preflight_payload';archived=DATA/('preflight_payload_'+job)
+    if payload.resolve().parent!=DATA.resolve() or archived.resolve().parent!=DATA.resolve() or archived.exists():
+        raise ValueError('Unsafe/repeated payload archive')
+    prior=json.loads((REPORT/'preflight_freeze.json').read_text())
+    for name,sha in prior['sha256'].items():
+        if digest(payload/name)!=sha:raise ValueError('Previous frozen local payload changed')
+    if v['config_sha256']!=digest(payload/'legacy_regression/R1.json'):
+        raise ValueError('Reused original regression configuration differs')
+    for name in ('preflight_freeze.json','preflight_deployment.json','preflight_tests.txt','preflight_job.json'):
+        shutil.copy2(REPORT/name,target/name)
+    write(target/'failure.json',dict(job=int(job),terminal_state=overall[0][1],
+        reason='Pilot adapter passed CUDA coordinates into CPU-only legacy sparse projector construction',
+        original_regression_passed=True,regression=proof,missing_phases=['angular','continuous_energy'],
+        shared_kernel_changed=False,scientific_event_set_changed=False))
+    payload.rename(archived)
+    (REPORT/'preflight_job.json').rename(target/'registered_job.json')
+    reuse=dict(job=int(job),result=REMOTE+'/preflight_regression_'+job,
+        allocation=REMOTE+'/allocation_'+job+'.txt',baseline=OLD+'/formal_ideal_1660254',
+        verification_sha256=proof['verification_sha256'],run_manifest_sha256=proof['run_manifest_sha256'],
+        allocation_sha256=v['allocation_sha256'],previous_contract_sha256=prior['contract_sha256'])
+    write(REPORT/'preflight_resume.json',reuse)
+    print('ENERGY_V5_REPAIR_PREPARED_ONLY_MISSING_PHASES',job)
 
 
 def freeze():
@@ -71,6 +158,11 @@ def freeze():
         events_per_view=counts,accepted_events=91225,selection='frozen stable_float64 q<=3 on full 132040 grid',
         diagnostic_collection_sha256=digest(REPORT/'collection.json'),
         formal_submission_permitted=False,new_photons=0,paired_iterations_not_authorized_by_this_entry=True)
+    if (REPORT/'preflight_resume.json').exists():
+        reuse=json.loads((REPORT/'preflight_resume.json').read_text())
+        old=REPORT/'preflight_attempts'/str(reuse['job'])/'regression/verification.json'
+        if digest(old)!=reuse['verification_sha256']:raise ValueError('Reused regression receipt changed')
+        contract['regression_reuse']=reuse
     write(output/'contract.json',contract)
     hashes['contract.json']=digest(output/'contract.json')
     key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()[:16]
@@ -115,12 +207,16 @@ def deploy():
         print(command(c,PYTHON+' -c '+shlex.quote(script)))
         tests=command(c,'cd '+shlex.quote(release)+' && JSCC_PROJECT_ROOT='+shlex.quote(release)+' '+PYTHON+
             ' -m unittest test_compton_geometry_run_contract test_compton_energy_probability_v5 test_energy_preflight_v5 -v 2>&1')
-        if 'Ran 17 tests' not in tests or '\nOK' not in tests:raise ValueError('Frozen remote tests failed: '+tests)
+        if 'Ran 19 tests' not in tests or '\nOK' not in tests:raise ValueError('Frozen remote tests failed: '+tests)
         (REPORT/'preflight_tests.txt').write_text(tests+'\n')
         command(c,'bash -n '+shlex.quote(release+'/reconstruct_energy_preflight_v5.sh'))
         command(c,'test -r '+shlex.quote(OLD+'/formal_ideal_1660254/run_manifest.json'))
+        if cfg.get('regression_reuse'):
+            print(command(c,PYTHON+' '+shlex.quote(release+'/verify_energy_preflight_v5.py')+
+                ' --contract '+shlex.quote(release+'/contract.json')+' --reuse-regression-only'))
     write(REPORT/'preflight_deployment.json',dict(release=release,sha256=record['sha256'],
-        tests_passed=17,tests_sha256=digest(REPORT/'preflight_tests.txt'),reused_input_root=OLD+'/recon_inputs/ideal',
+        tests_passed=19,tests_sha256=digest(REPORT/'preflight_tests.txt'),reused_input_root=OLD+'/recon_inputs/ideal',
+        regression_reuse=cfg.get('regression_reuse'),
         formal_submission_permitted=False))
     print('ENERGY_V5_PREFLIGHT_DEPLOYED',release)
 
@@ -129,6 +225,7 @@ def submit(nodes):
     if nodes not in (4,8):raise ValueError('Four/eight distinct one-GPU nodes only')
     if (REPORT/'preflight_job.json').exists():raise ValueError('Preflight already registered; inspect before any repair')
     record=json.loads((REPORT/'preflight_deployment.json').read_text());release=record['release']
+    cfg=json.loads((DATA/'preflight_payload/contract.json').read_text())
     with connect() as c:
         queue=command(c,"squeue -u scxi717 -h -o '%i %j %T'")
         if 'Energy_v5_preflight' in queue:raise ValueError('Duplicate active pilot refused')
@@ -142,7 +239,9 @@ def submit(nodes):
         job=command(c,text).split(';')[0]
         if not job.isdigit():raise ValueError('Ambiguous submission; inspect queue before retry')
     write(REPORT/'preflight_job.json',dict(job=int(job),nodes=nodes,gpus_per_node=1,release=release,
-        submitted_utc=datetime.now(timezone.utc).isoformat(),phases=['legacy regression 50','angular whole-cell 10','continuous_energy whole-cell 10'],
+        submitted_utc=datetime.now(timezone.utc).isoformat(),
+        phases=([] if cfg.get('regression_reuse') else ['legacy regression 50'])+['angular whole-cell 10','continuous_energy whole-cell 10'],
+        regression_reuse=cfg.get('regression_reuse'),
         nccl_interface='bond0',host_memory_policy='Slurm GPU-count default; no explicit mem option permitted',walltime_minutes=90,
         phase_hard_timeout_minutes=25,formal_submission_permitted=False))
     print('ENERGY_V5_PREFLIGHT_JOB',job)
@@ -151,47 +250,46 @@ def submit(nodes):
 def status():
     job=str(json.loads((REPORT/'preflight_job.json').read_text())['job'])
     with connect() as c:
-        print(command(c,f"squeue -j {job} -h -o '%i %T %M %D %R'"))
-        print(command(c,f'sacct -j {job} -n -P --format=JobIDRaw,State,ExitCode,MaxRSS,AllocTRES'))
+        queue=command(c,"squeue -u scxi717 -h -o '%i %T %M %D %R'")
+        print('\n'.join(x for x in queue.splitlines() if x.split()[0]==job) or 'Not in active queue')
+        print(accounting_for(c,job))
         for suffix in ('out','err'):
             path=shlex.quote(REMOTE+'/logs/preflight.'+job+'.'+suffix)
             print(command(c,'if test -f '+path+'; then tail -n 12 '+path+'; fi'))
 
 
 def fetch():
-    job=str(json.loads((REPORT/'preflight_job.json').read_text())['job'])
+    registration=json.loads((REPORT/'preflight_job.json').read_text());job=str(registration['job'])
     target=DATA/'preflight_results'/job;target.mkdir(parents=True,exist_ok=True)
     with connect() as c:
-        accounting=command(c,f'sacct -j {job} -n -P --format=JobIDRaw,State,ExitCode,MaxRSS,AllocTRES')
+        accounting=accounting_for(c,job)
         overall=[r.split('|') for r in accounting.splitlines() if r.split('|')[0]==job]
         if len(overall)!=1 or overall[0][1:3]!=['COMPLETED','0:0']:raise ValueError('Preflight running or failed')
         phases=[]
         for phase in ('regression','angular','continuous_energy'):
-            remote=REMOTE+'/preflight_'+phase+'_'+job;folder=target/phase;folder.mkdir(exist_ok=True)
-            with c.open_sftp() as s:
-                for name in ('verification.json','run_manifest.json'):
-                    sha=command(c,'sha256sum -- '+shlex.quote(remote+'/'+name)).split()[0]
-                    s.get(remote+'/'+name,str(folder/name))
-                    if digest(folder/name)!=sha:raise ValueError('Evidence transfer differs')
-            v=json.loads((folder/'verification.json').read_text())
-            if not v['passed'] or (v.get('model',v.get('mode'))!=phase):raise ValueError('Phase not actually verified')
-            phases.append(dict(phase=phase,verification_sha256=digest(folder/'verification.json'),
-                run_manifest_sha256=digest(folder/'run_manifest.json'),accepted_events=v['accepted_events'],
-                outputs=v['outputs'],resources=v['resources']))
-        rss=[]
-        for line in accounting.splitlines():
-            m=re.fullmatch(r'([0-9.]+)([KMGT])',line.split('|')[3])
-            if m:rss.append(float(m[1])*1024**('KMGT'.index(m[2])+1))
+            source=registration.get('regression_reuse') if phase=='regression' else None
+            phase_job=source['job'] if source else job
+            proof=fetch_phase(c,phase,phase_job,target)
+            if source and (proof['verification_sha256']!=source['verification_sha256'] or
+                proof['run_manifest_sha256']!=source['run_manifest_sha256']):
+                raise ValueError('Reused passed regression changed')
+            phases.append(proof)
+        rss=[peak_rss(accounting)]
+        reused_accounting=None
+        if registration.get('regression_reuse'):
+            reused_accounting=accounting_for(c,registration['regression_reuse']['job'])
+            rss.append(peak_rss(reused_accounting))
         minimum=min(r['host_allocated_bytes'] for p in phases for r in p['resources'])
-        if not rss or max(rss)>.8*minimum:raise ValueError('Actual Slurm MaxRSS missing or margin fails')
+        if max(rss)>.8*minimum:raise ValueError('Actual Slurm resource margin fails')
     write(REPORT/'preflight_summary.json',dict(status='PASSED',job=int(job),phases=phases,
-        slurm_accounting=accounting,slurm_peak_rss_bytes=max(rss),minimum_granted_host_bytes=minimum,
+        slurm_accounting=accounting,reused_regression_accounting=reused_accounting,
+        slurm_peak_rss_bytes=max(rss),minimum_granted_host_bytes=minimum,
         formal_submission_permitted=False,paired_imaging_completed=False))
     print('ENERGY_V5_PREFLIGHT_VERIFIED',job)
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=('freeze','deploy','submit','status','fetch'))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=('repair','freeze','deploy','submit','status','fetch'))
     p.add_argument('--nodes',type=int,default=4);a=p.parse_args()
     if a.mode=='submit':submit(a.nodes)
     else:globals()[a.mode]()

@@ -4,9 +4,27 @@ import hashlib
 import json
 from pathlib import Path
 import numpy as np
-from verify_first_scatter import digest,allocated_host_bytes
+from verify_first_scatter import digest,allocated_host_bytes,verify as verify_first_scatter
 
 CHANNELS=('440_ComptonOnly','440_SinglePlusCompton')
+
+
+def verify_reused_regression(contract):
+    root=contract.parent;cfg=json.loads(contract.read_text());reuse=cfg['regression_reuse']
+    for name,sha in cfg['files'].items():
+        if digest(root/name)!=sha:raise ValueError('Frozen resumed release differs: '+name)
+    result=Path(reuse['result']);allocation=Path(reuse['allocation'])
+    if digest(result/'run_manifest.json')!=reuse['run_manifest_sha256'] or digest(allocation)!=reuse['allocation_sha256']:
+        raise ValueError('Previously passed regression evidence changed')
+    verify_first_scatter(result,root/'legacy_regression/R1.json',root/'geometry.npz',
+        Path(reuse['baseline']),'regression',allocation)
+    receipt=json.loads((result/'verification.json').read_text())
+    if digest(result/'verification.json')!=reuse['verification_sha256']:
+        raise ValueError('Reverified historical regression differs from frozen receipt')
+    if not receipt['passed'] or receipt['accepted_events']!=91231 or receipt['iterations']!=50:
+        raise ValueError('Historical regression incomplete')
+    print('ENERGY_V5_REUSED_REGRESSION_VERIFIED',reuse['job'])
+    return receipt
 
 
 def verify(result,contract,allocation):
@@ -85,5 +103,11 @@ def verify(result,contract,allocation):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    for name in ('result','contract','allocation'):p.add_argument('--'+name,type=Path,required=True)
-    a=p.parse_args();verify(a.result,a.contract,a.allocation)
+    p.add_argument('--contract',type=Path,required=True)
+    p.add_argument('--result',type=Path);p.add_argument('--allocation',type=Path)
+    p.add_argument('--reuse-regression-only',action='store_true')
+    a=p.parse_args()
+    if a.reuse_regression_only:verify_reused_regression(a.contract)
+    else:
+        if a.result is None or a.allocation is None:p.error('result and allocation are required for a pilot')
+        verify(a.result,a.contract,a.allocation)

@@ -85,6 +85,13 @@ def relative_error(a,b):
     return float(torch.linalg.vector_norm(a.double()-b.double())/torch.linalg.vector_norm(b.double()).clamp_min(1e-300))
 
 
+def original_sparse_projector(coords,device):
+    # The unchanged legacy builder creates its ring angles on CPU. Match the
+    # production route: construct on CPU, then move the completed operator.
+    return build_compton_sparse_projector(coords.detach().cpu(),theta_stride=1,
+        z_stride=1,rotate_num=20,dtype=torch.float32).to(device)
+
+
 def numerical_checks(raw,detector,variance,coords,B,law,geometry,model,rank,world):
     """Actual rows, full grid: chunk/rank, transpose and event-constant tests."""
     raw=raw[:32]
@@ -108,7 +115,7 @@ def numerical_checks(raw,detector,variance,coords,B,law,geometry,model,rank,worl
     scale_error=relative_error(scaled.T@(1/(scaled@image)),base)
     sparse_error=None
     if model=='angular':
-        projector=build_compton_sparse_projector(coords,theta_stride=1,z_stride=1,rotate_num=20,dtype=torch.float32).to(B.device)
+        projector=original_sparse_projector(coords,B.device)
         packed,_,_=get_compton_backproj_list_single_sparse(B,detector,projector,
             torch.tensor(raw,device=B.device),0.,0.,.440,settings().energy_resolution,
             settings().energy_threshold_max_mev,.05,.350,B.device,

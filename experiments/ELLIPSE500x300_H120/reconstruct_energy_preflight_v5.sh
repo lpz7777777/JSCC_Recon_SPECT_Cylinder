@@ -24,7 +24,12 @@ srun --chdir=/tmp --label --kill-on-bad-exit=1 bash -c '
 '
 export ABLATION_HOST_ALLOCATED_BYTES=$("$RESPONSE_PYTHON" "$release/verify_first_scatter.py" \
   --allocation-only "$study/allocation_${SLURM_JOB_ID}.txt" --nodes "$SLURM_NNODES")
-for phase in regression angular continuous_energy; do
+phases=(regression angular continuous_energy)
+if "$RESPONSE_PYTHON" -c 'import json,sys; sys.exit(0 if json.load(open(sys.argv[1])).get("regression_reuse") else 1)' "$release/contract.json"; then
+  "$RESPONSE_PYTHON" "$release/verify_energy_preflight_v5.py" --contract "$release/contract.json" --reuse-regression-only
+  phases=(angular continuous_energy)
+fi
+for phase in "${phases[@]}"; do
   output="$study/preflight_${phase}_${SLURM_JOB_ID}"
   echo "ENERGY_V5_PREFLIGHT_PHASE $phase"
   if [[ "$phase" == regression ]]; then
