@@ -47,3 +47,7 @@ reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_*/** -text whitespace
 # Frozen global process_list diagnostic payloads.
 *v4*.py -text whitespace=cr-at-eol
 reports/NEMA_Body_H60/process_list_global_audit_v4/** -text whitespace=cr-at-eol
+
+# Frozen continuous energy-response candidate and small evidence.
+*v5*.py -text whitespace=cr-at-eol
+reports/NEMA_Body_H60/compton_energy_probability_v5/** -text whitespace=cr-at-eol

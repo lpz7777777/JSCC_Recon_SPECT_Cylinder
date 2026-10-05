@@ -1,0 +1,64 @@
+{
+  "pid": 752181,
+  "running": true,
+  "phases": {
+    "points": {
+      "point_gate.json": {
+        "bytes": 6823,
+        "sha256": "3eef26497f96e6be7e6a0e3b80e9a94f77bec9021718f770f58066ac2d0e9873"
+      },
+      "execution.json": {
+        "bytes": 705,
+        "sha256": "0f827e2845b2d8770f35094693b3ec3ccfe2f2fdbea4997699b84030f2326105"
+      },
+      "consumed_inputs.json": {
+        "bytes": 85486,
+        "sha256": "2af8a6b2543647256a6a69a73970992c93bb4c7221df8e5491405acf27e4c814"
+      },
+      "point_probability.csv": {
+        "bytes": 4437390,
+        "sha256": "c261f1d28808c89a31e4ed3d660afbe964bbf23d5bae80bbada2fe57cf2cd9d2"
+      }
+    },
+    "probe": {
+      "resource_probe.json": {
+        "bytes": 215,
+        "sha256": "e939a0ee4e66cb40d4519831737b4305374239eb0b28f4a347bb7bdba71f9b84"
+      },
+      "execution.json": {
+        "bytes": 731,
+        "sha256": "09fe1f9c9b45cd739a59993ae26a5149212d578c6ffdb2e91b732a212d114b39"
+      },
+      "consumed_inputs.json": {
+        "bytes": 100507,
+        "sha256": "0f6808af58b6f123e6230077bdd17322ba9de0499c4e10658ffc3b8f39c6abd3"
+      },
+      "fusion_gate.json": {
+        "bytes": 311,
+        "sha256": "61a4653f0b96abade0d18323ef322680f182abe000455f68cac48a70e15fc499"
+      }
+    },
+    "q": {
+      "execution.json": {
+        "bytes": 721,
+        "sha256": "e44d6eeb64af4e06a790f2e6194ca5f6bdc804f9c2f1c5d2555924c4c6d37510"
+      },
+      "consumed_inputs.json": {
+        "bytes": 85486,
+        "sha256": "2af8a6b2543647256a6a69a73970992c93bb4c7221df8e5491405acf27e4c814"
+      },
+      "q_selected_probability.json": {
+        "bytes": 196176,
+        "sha256": "cbb03313800100189a4512468d237772be2519dea366959c7c105b699657a7cc"
+      }
+    }
+  },
+  "last_log_lines": [
+    "ENERGY_CANDIDATE_PHASE_FINISHED q 12.84",
+    "CANDIDATE_TRAIN_EVENTS 0 159919 seconds 1.27",
+    "CANDIDATE_TRAIN_EVENTS 512 159919 seconds 20.16",
+    "CANDIDATE_TRAIN_EVENTS 1024 159919 seconds 39.09",
+    "CANDIDATE_TRAIN_EVENTS 1536 159919 seconds 58.06"
+  ],
+  "native_host_or_cgroup_limit_bytes": 1622941253632
+}

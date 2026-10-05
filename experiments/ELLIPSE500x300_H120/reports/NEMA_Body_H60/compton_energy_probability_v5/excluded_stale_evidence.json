@@ -1,0 +1,46 @@
+{
+  "excluded": [
+    {
+      "path": "superseded_497ff889dd4fca8c\\evidence\\probe_execution.json",
+      "sha256": "8065c546655d1acedfba67835347cee385301e08cd3479df2d0d1b3e7eb403d8",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_497ff889dd4fca8c\\evidence\\probe_resource_probe.json",
+      "sha256": "6aae2311781f5d0d0ee85914c95244cb154db3ecc2febc01d5c74d93f10dc047",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_497ff889dd4fca8c\\evidence\\q_execution.json",
+      "sha256": "a057c1c549ee0b080ec78ed1d1a6803882e73300e10834b8134798531299e17c",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_497ff889dd4fca8c\\evidence\\q_q_selected_probability.json",
+      "sha256": "68d83d577c1d489be6ef88b2c0b816b5803d453cbc6ef66af93108bee1bc947e",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_834b15146747d1a5\\evidence\\q_execution.json",
+      "sha256": "a057c1c549ee0b080ec78ed1d1a6803882e73300e10834b8134798531299e17c",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_834b15146747d1a5\\evidence\\q_q_selected_probability.json",
+      "sha256": "68d83d577c1d489be6ef88b2c0b816b5803d453cbc6ef66af93108bee1bc947e",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_f630bb842e5ab0b5\\evidence\\q_execution.json",
+      "sha256": "a057c1c549ee0b080ec78ed1d1a6803882e73300e10834b8134798531299e17c",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    },
+    {
+      "path": "superseded_f630bb842e5ab0b5\\evidence\\q_q_selected_probability.json",
+      "sha256": "68d83d577c1d489be6ef88b2c0b816b5803d453cbc6ef66af93108bee1bc947e",
+      "reason": "Earlier collector copied a prior local phase that was absent from this release collection"
+    }
+  ],
+  "current_collector_checks_release": true,
+  "remote_original_outputs_untouched": true
+}

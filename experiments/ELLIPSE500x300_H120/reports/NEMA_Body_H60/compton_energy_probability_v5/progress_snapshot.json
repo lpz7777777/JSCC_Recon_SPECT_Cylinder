@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-05T12:45:49.211249+00:00",
+  "pid": 811220,
+  "running": true,
+  "progress": {
+    "completed_lower_bound": 27680,
+    "total": 159919,
+    "elapsed_seconds": 636.07,
+    "remaining_estimate_seconds": 3038.7738703034684
+  },
+  "gpu": "13769 MiB, 49140 MiB, 99 %",
+  "last_log_lines": [
+    "CANDIDATE_TRAIN_EVENTS 22016 159919 seconds 506.58",
+    "CANDIDATE_TRAIN_EVENTS 22528 159919 seconds 518.36",
+    "CANDIDATE_TRAIN_EVENTS 23040 159919 seconds 530.14",
+    "CANDIDATE_TRAIN_EVENTS 23552 159919 seconds 541.92",
+    "CANDIDATE_TRAIN_EVENTS 24064 159919 seconds 553.68",
+    "CANDIDATE_TRAIN_EVENTS 24576 159919 seconds 565.45",
+    "CANDIDATE_TRAIN_EVENTS 25088 159919 seconds 577.22",
+    "CANDIDATE_TRAIN_EVENTS 25600 159919 seconds 588.99",
+    "CANDIDATE_TRAIN_EVENTS 26112 159919 seconds 600.75",
+    "CANDIDATE_TRAIN_EVENTS 26624 159919 seconds 612.52",
+    "CANDIDATE_TRAIN_EVENTS 27136 159919 seconds 624.29",
+    "CANDIDATE_TRAIN_EVENTS 27648 159919 seconds 636.07"
+  ]
+}

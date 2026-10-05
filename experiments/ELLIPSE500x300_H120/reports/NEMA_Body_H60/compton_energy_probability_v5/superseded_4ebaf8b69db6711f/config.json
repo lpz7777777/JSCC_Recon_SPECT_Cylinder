@@ -1,0 +1,60 @@
+{
+  "study": "compton_energy_probability_v5",
+  "code_sha256": {
+    "compton_energy_probability_v5.py": "6bc3b563db5ac3029ec4837920026d3582ec1215521848bf835a6649f573308b",
+    "test_compton_energy_probability_v5.py": "2e2a699febacc515aeef2c3299dd15f2f35cb9179c8f71f41e4b2343be168921",
+    "validate_energy_candidate_v5.py": "0a976676a33ba7a4a838113aaa4f2fa0396672c3979527ac379262280b8c22f0",
+    "process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "transfer_training_summary.json": "9b752ae4a8568646c2225b53736662410f5acceb4dbcb4d542a2167fe0ac784d"
+  },
+  "candidate": "continuous layer-specific 128-quantile material-transfer convolution in measured E1",
+  "fixed_selection": "R1 stable_float64 kept rows; no candidate rescreening",
+  "position_model": "original uniform-crystal variance, unchanged; Gaussian first-order energy propagation",
+  "preserved_proxy": "B first-crystal and original measured-energy KN factor",
+  "sparse_angles": "continuous quantile interpolation; nearest endpoint outside trained anchor range; explicitly flagged",
+  "normalization": "unconditioned energy density in forward proxy; selected-domain density only in diagnostic scoring",
+  "sensitivity_contract": "accepted uniform-transport reference measure; full-circle normalized posterior rows integrated using actual N",
+  "probe_events": 128,
+  "batch": 16,
+  "node_chunk": 16,
+  "probe_seconds": 600,
+  "phase_gpu_seconds": 7200,
+  "memory_fraction_limit": 0.8,
+  "output_limit_bytes": 5000000000,
+  "q_domain_sample_per_source": 32,
+  "q_scan_nodes": [
+    256,
+    512
+  ],
+  "q_refinement_mass_target": 0.001,
+  "spatial_bins": 192,
+  "spatial_adequacy": 400,
+  "spatial_hold_bias": 0.2,
+  "spatial_hold_standard_errors": 3,
+  "joint_categories": {
+    "layer_pairs": 12,
+    "E1_edges_MeV": [
+      0.05,
+      0.125,
+      0.2,
+      "ComptonEdge-1keV"
+    ],
+    "E2_edges_MeV": [
+      0.05,
+      0.25,
+      "infinity"
+    ],
+    "adequacy": 50,
+    "hold_bias": 0.3,
+    "hold_standard_errors": 3
+  },
+  "new_transport_photons": 0,
+  "new_fine_A_matrices": 0,
+  "new_reconstruction": false
+}

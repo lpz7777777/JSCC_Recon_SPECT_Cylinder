@@ -1,0 +1,50 @@
+{
+  "pid": 734569,
+  "running": false,
+  "phases": {
+    "points": {
+      "point_gate.json": {
+        "bytes": 6631,
+        "sha256": "8a0ea4248fa368dc6767e58839a3baaaa1e4c69be145f3c2909039dfa2163514"
+      },
+      "execution.json": {
+        "bytes": 664,
+        "sha256": "39977d77bb962c3302a488f0617367ddb409a4079f1727ac9b0da6b99866c177"
+      },
+      "consumed_inputs.json": {
+        "bytes": 85486,
+        "sha256": "2af8a6b2543647256a6a69a73970992c93bb4c7221df8e5491405acf27e4c814"
+      },
+      "point_probability.csv": {
+        "bytes": 4437390,
+        "sha256": "c261f1d28808c89a31e4ed3d660afbe964bbf23d5bae80bbada2fe57cf2cd9d2"
+      }
+    },
+    "probe": {
+      "resource_probe.json": {
+        "bytes": 216,
+        "sha256": "a1626cff0d3cd684c9ea86ad6b52c212be9ec7c9b80c6455fb1742afeb0ae544"
+      },
+      "execution.json": {
+        "bytes": 686,
+        "sha256": "70a55a047c887efcce87386d76cd4eb13c19c3db70dde8a6672dcbdda2844116"
+      },
+      "consumed_inputs.json": {
+        "bytes": 100507,
+        "sha256": "0f6808af58b6f123e6230077bdd17322ba9de0499c4e10658ffc3b8f39c6abd3"
+      },
+      "fusion_gate.json": {
+        "bytes": 193,
+        "sha256": "cd1dd2d26c0d3615e305c61a57ec426b2b0600f384e24b7ba74d0a5d0812f69f"
+      }
+    }
+  },
+  "last_log_lines": [
+    "CANDIDATE_TRAIN_EVENTS 0 128 seconds 11.89",
+    "ENERGY_CANDIDATE_PHASE_FINISHED spatial 95.68",
+    "Traceback (most recent call last):",
+    "  File \"<string>\", line 1, in <module>",
+    "AssertionError"
+  ],
+  "native_host_or_cgroup_limit_bytes": 1622941253632
+}

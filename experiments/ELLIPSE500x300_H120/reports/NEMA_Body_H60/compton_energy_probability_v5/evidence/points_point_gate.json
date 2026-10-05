@@ -1,0 +1,197 @@
+{
+  "scored_events": 10270,
+  "dropped_events": 0,
+  "quadrature": {
+    "density_method": "analytic vs GL16",
+    "selection_mass_orders": [
+      8,
+      16
+    ],
+    "contexts": 448,
+    "fixed_relative_target": 0.01,
+    "max_density_relative_change": 2.473576898864543e-13,
+    "max_mass_relative_change": 2.4780177909636564e-13,
+    "max_pit_absolute_change": 1.6225909504896663e-13,
+    "passed": true,
+    "hybrid": {
+      "backend": "tail16_mid2",
+      "contexts": 20540,
+      "max_density_relative_change": 0.0017991844335762486,
+      "relative_target": 0.01,
+      "passed": true
+    }
+  },
+  "reports": [
+    {
+      "dataset": "point_0",
+      "position": "true",
+      "events": 1193,
+      "mean_gain_nats": 0.20970057392967745,
+      "median_gain_nats": -0.057227205315237395,
+      "seed_mean_gain_nats": 0.20136325938760563,
+      "seed_standard_error": 0.06439697141636506,
+      "free_tail_fraction": 0.05280804694048617,
+      "material_tail_fraction": 0.019279128248113998,
+      "endpoint_extrapolated_events": 24
+    },
+    {
+      "dataset": "point_0",
+      "position": "centre",
+      "events": 1193,
+      "mean_gain_nats": 0.17698436167142295,
+      "median_gain_nats": -0.055058837994337306,
+      "seed_mean_gain_nats": 0.17145443599384497,
+      "seed_standard_error": 0.05794153965553435,
+      "free_tail_fraction": 0.05280804694048617,
+      "material_tail_fraction": 0.018440905280804692,
+      "endpoint_extrapolated_events": 23
+    },
+    {
+      "dataset": "point_1",
+      "position": "true",
+      "events": 1955,
+      "mean_gain_nats": 0.11001747378131929,
+      "median_gain_nats": -0.05685719320067051,
+      "seed_mean_gain_nats": 0.10144880994612648,
+      "seed_standard_error": 0.02117034403068596,
+      "free_tail_fraction": 0.056265984654731455,
+      "material_tail_fraction": 0.011764705882352941,
+      "endpoint_extrapolated_events": 40
+    },
+    {
+      "dataset": "point_1",
+      "position": "centre",
+      "events": 1955,
+      "mean_gain_nats": 0.10002823138933575,
+      "median_gain_nats": -0.05673504000470464,
+      "seed_mean_gain_nats": 0.09181559045208838,
+      "seed_standard_error": 0.02118355818759658,
+      "free_tail_fraction": 0.058312020460358056,
+      "material_tail_fraction": 0.01278772378516624,
+      "endpoint_extrapolated_events": 40
+    },
+    {
+      "dataset": "point_2",
+      "position": "true",
+      "events": 1968,
+      "mean_gain_nats": 0.10926323527308036,
+      "median_gain_nats": -0.057738428927888386,
+      "seed_mean_gain_nats": 0.09489480653431132,
+      "seed_standard_error": 0.036696738157988296,
+      "free_tail_fraction": 0.056910569105691054,
+      "material_tail_fraction": 0.016260162601626018,
+      "endpoint_extrapolated_events": 38
+    },
+    {
+      "dataset": "point_2",
+      "position": "centre",
+      "events": 1968,
+      "mean_gain_nats": 0.09326862356396051,
+      "median_gain_nats": -0.055142332500115465,
+      "seed_mean_gain_nats": 0.08439791174361648,
+      "seed_standard_error": 0.03496910104091406,
+      "free_tail_fraction": 0.056910569105691054,
+      "material_tail_fraction": 0.015752032520325202,
+      "endpoint_extrapolated_events": 39
+    },
+    {
+      "dataset": "point_3",
+      "position": "true",
+      "events": 1410,
+      "mean_gain_nats": 0.11811483044280559,
+      "median_gain_nats": -0.05707288065408456,
+      "seed_mean_gain_nats": 0.1246658739342719,
+      "seed_standard_error": 0.036100560449234355,
+      "free_tail_fraction": 0.05177304964539007,
+      "material_tail_fraction": 0.015602836879432624,
+      "endpoint_extrapolated_events": 25
+    },
+    {
+      "dataset": "point_3",
+      "position": "centre",
+      "events": 1410,
+      "mean_gain_nats": 0.10274300628676146,
+      "median_gain_nats": -0.055909393211530656,
+      "seed_mean_gain_nats": 0.11361934802511897,
+      "seed_standard_error": 0.032398530658655826,
+      "free_tail_fraction": 0.05319148936170213,
+      "material_tail_fraction": 0.015602836879432624,
+      "endpoint_extrapolated_events": 30
+    },
+    {
+      "dataset": "point_4",
+      "position": "true",
+      "events": 1366,
+      "mean_gain_nats": 0.12060555882819997,
+      "median_gain_nats": -0.055180622280252,
+      "seed_mean_gain_nats": 0.10407715957766708,
+      "seed_standard_error": 0.023545773690799236,
+      "free_tail_fraction": 0.050512445095168376,
+      "material_tail_fraction": 0.019765739385065886,
+      "endpoint_extrapolated_events": 21
+    },
+    {
+      "dataset": "point_4",
+      "position": "centre",
+      "events": 1366,
+      "mean_gain_nats": 0.1068402703080098,
+      "median_gain_nats": -0.0517095818070652,
+      "seed_mean_gain_nats": 0.09430228494950983,
+      "seed_standard_error": 0.02227343511620043,
+      "free_tail_fraction": 0.048316251830161056,
+      "material_tail_fraction": 0.01903367496339678,
+      "endpoint_extrapolated_events": 22
+    },
+    {
+      "dataset": "point_5",
+      "position": "true",
+      "events": 1192,
+      "mean_gain_nats": 0.23931156839677425,
+      "median_gain_nats": -0.0541966867580177,
+      "seed_mean_gain_nats": 0.2406602109700986,
+      "seed_standard_error": 0.06872167372715506,
+      "free_tail_fraction": 0.07046979865771812,
+      "material_tail_fraction": 0.02348993288590604,
+      "endpoint_extrapolated_events": 22
+    },
+    {
+      "dataset": "point_5",
+      "position": "centre",
+      "events": 1192,
+      "mean_gain_nats": 0.22251116756681785,
+      "median_gain_nats": -0.05193661373570002,
+      "seed_mean_gain_nats": 0.22342121045144614,
+      "seed_standard_error": 0.07107722281296562,
+      "free_tail_fraction": 0.06879194630872483,
+      "material_tail_fraction": 0.022651006711409395,
+      "endpoint_extrapolated_events": 24
+    },
+    {
+      "dataset": "point_6",
+      "position": "true",
+      "events": 1186,
+      "mean_gain_nats": 0.10212133289614371,
+      "median_gain_nats": -0.050778969867408374,
+      "seed_mean_gain_nats": 0.09679955718182653,
+      "seed_standard_error": 0.020144568543823897,
+      "free_tail_fraction": 0.06323777403035413,
+      "material_tail_fraction": 0.016863406408094434,
+      "endpoint_extrapolated_events": 27
+    },
+    {
+      "dataset": "point_6",
+      "position": "centre",
+      "events": 1186,
+      "mean_gain_nats": 0.09390054724949666,
+      "median_gain_nats": -0.05044178492024187,
+      "seed_mean_gain_nats": 0.08874413093929379,
+      "seed_standard_error": 0.019986947932249335,
+      "free_tail_fraction": 0.06070826306913996,
+      "material_tail_fraction": 0.01770657672849916,
+      "endpoint_extrapolated_events": 27
+    }
+  ],
+  "position_variance": "original uniform-crystal propagation, zero bias, unchanged sizes",
+  "q_in_this_score": false,
+  "interpretation": "Energy-window conditional diagnostic; complete q handled separately"
+}

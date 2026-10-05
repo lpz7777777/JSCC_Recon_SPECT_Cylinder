@@ -1,0 +1,34 @@
+{
+  "local_unit_tests": 10,
+  "frozen_remote_unit_tests": 10,
+  "backend_invariance": [
+    {
+      "backend": "analytic",
+      "gaussian_float32": false,
+      "max_node_chunk_difference": 3.1086244689504383e-15,
+      "max_event_partition_difference": 3.1086244689504383e-15,
+      "threshold": 1e-10,
+      "passed": true
+    },
+    {
+      "backend": "tail16_mid2",
+      "gaussian_float32": false,
+      "max_node_chunk_difference": 1.3322676295501878e-15,
+      "max_event_partition_difference": 1.3322676295501878e-15,
+      "threshold": 1e-10,
+      "passed": true
+    },
+    {
+      "backend": "tail16_mid2",
+      "gaussian_float32": true,
+      "max_node_chunk_difference": 2.3641620394698748e-07,
+      "max_event_partition_difference": 2.3641620394698748e-07,
+      "threshold": 1e-05,
+      "passed": true
+    }
+  ],
+  "original_production_kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "candidate_sha256": "b8308b077fc318c0205fad8e3354735ed3afb3532030ac13c6d7a1dd6f852a97",
+  "limits": "Small CPU algebra fixtures; does not replace full-grid GPU, distributed or imaging gates",
+  "production_kernel_changed": false
+}

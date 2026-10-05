@@ -1,0 +1,19 @@
+{
+  "kind": "response probability diagnostics, not reconstruction",
+  "input_sha256": {
+    "point_gate.json": "3eef26497f96e6be7e6a0e3b80e9a94f77bec9021718f770f58066ac2d0e9873",
+    "point_probability.csv": "c261f1d28808c89a31e4ed3d660afbe964bbf23d5bae80bbada2fe57cf2cd9d2"
+  },
+  "figures": {
+    "conditional_pit.png": {
+      "bytes": 41829,
+      "sha256": "7567543818b1ed50d2c1cea8aadbcb5db26edddd3f17ed6e4abb5c3e816d717a"
+    },
+    "independent_point_probability.png": {
+      "bytes": 116841,
+      "sha256": "d8cf734b15e3cb57732d84e81b750bef4f59f77437af7f870e5e22595afc2bdd"
+    }
+  },
+  "no_smoothing": true,
+  "new_reconstruction": false
+}

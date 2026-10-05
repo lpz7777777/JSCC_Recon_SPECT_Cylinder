@@ -1,0 +1,19 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/releases/f630bb842e5ab0b5",
+  "code_sha256": {
+    "compton_energy_probability_v5.py": "2b9934536eb50857c39ba4676d7144960c980a9c250a6c36b4409bbd746cbdd3",
+    "test_compton_energy_probability_v5.py": "83361c76b546c8dac78f2f270415f6b91939c4a781a2d29d8469135819b5d4ed",
+    "validate_energy_candidate_v5.py": "789c600e073d2c1a069a7bc65b33f82f709186757a4755284b3ef047ed58b46a",
+    "process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "transfer_training_summary.json": "9b752ae4a8568646c2225b53736662410f5acceb4dbcb4d542a2167fe0ac784d"
+  },
+  "archive_sha256": "98acb969a330e0ccddfa1e8ed58c417032872b87a7d550dc9fed1fa6190c63af",
+  "launcher_sha256": "8294f8ca8684786af2c43eb3e52663001aa44dcb1b8a6fd7f405cdc8facfbbd7",
+  "execution_config_sha256": "0c063a3c1c9328491460fc6099ad58c599798f675619306b3bbc62c38979a1cb"
+}

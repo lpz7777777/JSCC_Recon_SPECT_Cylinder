@@ -1,0 +1,17 @@
+{
+  "action": "q",
+  "elapsed_seconds": 12.833835391968023,
+  "host_peak_rss_bytes": 1279918080,
+  "gpu_peak_reserved_bytes": 325058560,
+  "gpu_total_bytes": 50897289216,
+  "source_sha256": "1d9574902fb27f32afa17f6363f398ea8fb01498f4a1b0248ae0bcb776815161",
+  "candidate_sha256": "7d4709ab774bfd4950cbc264d1bc2365628d416ece327a2e1fe652409d0485b6",
+  "original_kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "compiled_float64_bins": false,
+  "numerical_energy_backend": "analytic",
+  "new_photons": 0,
+  "new_fine_A_matrices": 0,
+  "new_reconstruction": false,
+  "full_response_saved": false
+}

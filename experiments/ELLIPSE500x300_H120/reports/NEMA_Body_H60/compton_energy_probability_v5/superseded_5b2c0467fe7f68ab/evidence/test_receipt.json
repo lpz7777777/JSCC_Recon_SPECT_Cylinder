@@ -1,0 +1,22 @@
+{
+  "local_unit_tests": 10,
+  "frozen_remote_unit_tests": 10,
+  "backend_invariance": [
+    {
+      "backend": "analytic",
+      "max_node_chunk_difference": 3.1086244689504383e-15,
+      "max_event_partition_difference": 3.1086244689504383e-15,
+      "passed": true
+    },
+    {
+      "backend": "tail16_mid2",
+      "max_node_chunk_difference": 1.3322676295501878e-15,
+      "max_event_partition_difference": 1.3322676295501878e-15,
+      "passed": true
+    }
+  ],
+  "original_production_kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "candidate_sha256": "7d4709ab774bfd4950cbc264d1bc2365628d416ece327a2e1fe652409d0485b6",
+  "limits": "Small CPU algebra fixtures; does not replace full-grid GPU, distributed or imaging gates",
+  "production_kernel_changed": false
+}

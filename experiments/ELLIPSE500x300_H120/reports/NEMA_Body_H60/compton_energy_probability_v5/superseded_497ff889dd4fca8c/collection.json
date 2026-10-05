@@ -1,0 +1,32 @@
+{
+  "pid": 704836,
+  "running": false,
+  "phases": {
+    "points": {
+      "point_gate.json": {
+        "bytes": 6565,
+        "sha256": "2dc814f27cc05ae95cfc73f11f9c44e92bedb5ae394766ca9a8b0f1d72e09726"
+      },
+      "execution.json": {
+        "bytes": 630,
+        "sha256": "9d06911b51d87431ba4352404482f18cd0413dfbf27f5e88be6c20ffd1432cf6"
+      },
+      "consumed_inputs.json": {
+        "bytes": 85486,
+        "sha256": "2af8a6b2543647256a6a69a73970992c93bb4c7221df8e5491405acf27e4c814"
+      },
+      "point_probability.csv": {
+        "bytes": 4437030,
+        "sha256": "fce13cd0c2808e27c6af1503ac0be985ccd9ed87df635bb40049824d5ae19c58"
+      }
+    }
+  },
+  "last_log_lines": [
+    "ALL_POINT_SCORES_FINISHED 10270",
+    "ENERGY_CANDIDATE_PHASE_FINISHED points 42.16",
+    "Traceback (most recent call last):",
+    "  File \"<string>\", line 1, in <module>",
+    "AssertionError: {'orders': [2, 4], 'contexts': 448, 'fixed_relative_target': 0.01, 'max_density_relative_change': 0.3674753810174573, 'max_mass_relative_change': 3.3169689185402995e-05, 'max_pit_absolute_change': 2.1952506480182876e-05, 'passed': False}"
+  ],
+  "native_host_or_cgroup_limit_bytes": 1622941253632
+}

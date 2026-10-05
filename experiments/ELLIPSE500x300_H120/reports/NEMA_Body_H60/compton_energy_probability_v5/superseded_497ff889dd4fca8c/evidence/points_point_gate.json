@@ -1,0 +1,189 @@
+{
+  "scored_events": 10270,
+  "dropped_events": 0,
+  "quadrature": {
+    "orders": [
+      2,
+      4
+    ],
+    "contexts": 448,
+    "fixed_relative_target": 0.01,
+    "max_density_relative_change": 0.3674753810174573,
+    "max_mass_relative_change": 3.3169689185402995e-05,
+    "max_pit_absolute_change": 2.1952506480182876e-05,
+    "passed": false
+  },
+  "reports": [
+    {
+      "dataset": "point_0",
+      "position": "true",
+      "events": 1193,
+      "mean_gain_nats": 0.20915175480409923,
+      "median_gain_nats": -0.057228473819197045,
+      "seed_mean_gain_nats": 0.2009000954542663,
+      "seed_standard_error": 0.06406022173423052,
+      "free_tail_fraction": 0.05280804694048617,
+      "material_tail_fraction": 0.019279128248113998,
+      "endpoint_extrapolated_events": 24
+    },
+    {
+      "dataset": "point_0",
+      "position": "centre",
+      "events": 1193,
+      "mean_gain_nats": 0.17652423104353368,
+      "median_gain_nats": -0.05505953681405007,
+      "seed_mean_gain_nats": 0.17107214141491606,
+      "seed_standard_error": 0.05764593095355481,
+      "free_tail_fraction": 0.05280804694048617,
+      "material_tail_fraction": 0.018440905280804692,
+      "endpoint_extrapolated_events": 23
+    },
+    {
+      "dataset": "point_1",
+      "position": "true",
+      "events": 1955,
+      "mean_gain_nats": 0.10995052871190164,
+      "median_gain_nats": -0.05686125500122685,
+      "seed_mean_gain_nats": 0.10137955219959194,
+      "seed_standard_error": 0.02114286902377858,
+      "free_tail_fraction": 0.056265984654731455,
+      "material_tail_fraction": 0.011764705882352941,
+      "endpoint_extrapolated_events": 40
+    },
+    {
+      "dataset": "point_1",
+      "position": "centre",
+      "events": 1955,
+      "mean_gain_nats": 0.09995998082225202,
+      "median_gain_nats": -0.056727761844709956,
+      "seed_mean_gain_nats": 0.0917081937941577,
+      "seed_standard_error": 0.021117559137609487,
+      "free_tail_fraction": 0.058312020460358056,
+      "material_tail_fraction": 0.01278772378516624,
+      "endpoint_extrapolated_events": 40
+    },
+    {
+      "dataset": "point_2",
+      "position": "true",
+      "events": 1968,
+      "mean_gain_nats": 0.10922907153095308,
+      "median_gain_nats": -0.05773047212430904,
+      "seed_mean_gain_nats": 0.09476427150327475,
+      "seed_standard_error": 0.036569394115182875,
+      "free_tail_fraction": 0.056910569105691054,
+      "material_tail_fraction": 0.016260162601626018,
+      "endpoint_extrapolated_events": 38
+    },
+    {
+      "dataset": "point_2",
+      "position": "centre",
+      "events": 1968,
+      "mean_gain_nats": 0.09323453926889745,
+      "median_gain_nats": -0.055143727800232245,
+      "seed_mean_gain_nats": 0.0842761755916973,
+      "seed_standard_error": 0.03484680146699106,
+      "free_tail_fraction": 0.056910569105691054,
+      "material_tail_fraction": 0.015752032520325202,
+      "endpoint_extrapolated_events": 39
+    },
+    {
+      "dataset": "point_3",
+      "position": "true",
+      "events": 1410,
+      "mean_gain_nats": 0.11786017316836883,
+      "median_gain_nats": -0.05707147591947681,
+      "seed_mean_gain_nats": 0.12432733748766141,
+      "seed_standard_error": 0.03591398647298342,
+      "free_tail_fraction": 0.05177304964539007,
+      "material_tail_fraction": 0.015602836879432624,
+      "endpoint_extrapolated_events": 25
+    },
+    {
+      "dataset": "point_3",
+      "position": "centre",
+      "events": 1410,
+      "mean_gain_nats": 0.10252721204155,
+      "median_gain_nats": -0.05591495360597332,
+      "seed_mean_gain_nats": 0.11331981790743514,
+      "seed_standard_error": 0.03219196766407346,
+      "free_tail_fraction": 0.05319148936170213,
+      "material_tail_fraction": 0.015602836879432624,
+      "endpoint_extrapolated_events": 30
+    },
+    {
+      "dataset": "point_4",
+      "position": "true",
+      "events": 1366,
+      "mean_gain_nats": 0.12053470910182047,
+      "median_gain_nats": -0.05518862746252973,
+      "seed_mean_gain_nats": 0.10404451182081106,
+      "seed_standard_error": 0.02352118283584039,
+      "free_tail_fraction": 0.050512445095168376,
+      "material_tail_fraction": 0.019765739385065886,
+      "endpoint_extrapolated_events": 21
+    },
+    {
+      "dataset": "point_4",
+      "position": "centre",
+      "events": 1366,
+      "mean_gain_nats": 0.10678051341779769,
+      "median_gain_nats": -0.05170853582048229,
+      "seed_mean_gain_nats": 0.09427809474402245,
+      "seed_standard_error": 0.02225369213737802,
+      "free_tail_fraction": 0.048316251830161056,
+      "material_tail_fraction": 0.01903367496339678,
+      "endpoint_extrapolated_events": 22
+    },
+    {
+      "dataset": "point_5",
+      "position": "true",
+      "events": 1192,
+      "mean_gain_nats": 0.2392282611333001,
+      "median_gain_nats": -0.054198009974344874,
+      "seed_mean_gain_nats": 0.2405774227532671,
+      "seed_standard_error": 0.06865094231845205,
+      "free_tail_fraction": 0.07046979865771812,
+      "material_tail_fraction": 0.02348993288590604,
+      "endpoint_extrapolated_events": 22
+    },
+    {
+      "dataset": "point_5",
+      "position": "centre",
+      "events": 1192,
+      "mean_gain_nats": 0.22239091172470038,
+      "median_gain_nats": -0.051940405550081836,
+      "seed_mean_gain_nats": 0.2233019439497584,
+      "seed_standard_error": 0.0709676146845359,
+      "free_tail_fraction": 0.06879194630872483,
+      "material_tail_fraction": 0.022651006711409395,
+      "endpoint_extrapolated_events": 24
+    },
+    {
+      "dataset": "point_6",
+      "position": "true",
+      "events": 1186,
+      "mean_gain_nats": 0.10212281388836567,
+      "median_gain_nats": -0.050782411842342556,
+      "seed_mean_gain_nats": 0.09680195836171898,
+      "seed_standard_error": 0.02014355345423174,
+      "free_tail_fraction": 0.06323777403035413,
+      "material_tail_fraction": 0.016863406408094434,
+      "endpoint_extrapolated_events": 27
+    },
+    {
+      "dataset": "point_6",
+      "position": "centre",
+      "events": 1186,
+      "mean_gain_nats": 0.09389517584647795,
+      "median_gain_nats": -0.05043771406307518,
+      "seed_mean_gain_nats": 0.08873817347411236,
+      "seed_standard_error": 0.019984033736830848,
+      "free_tail_fraction": 0.06070826306913996,
+      "material_tail_fraction": 0.01770657672849916,
+      "endpoint_extrapolated_events": 27
+    }
+  ],
+  "position_variance": "original uniform-crystal propagation, zero bias, unchanged sizes",
+  "q_in_this_score": false,
+  "interpretation": "Energy-window conditional diagnostic; complete q handled separately"
+}

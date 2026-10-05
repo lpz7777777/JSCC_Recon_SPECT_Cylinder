@@ -1,0 +1,12 @@
+{
+  "response_relative_L2": 3.6847406590823084e-05,
+  "max_total_variation": 0.00010918378393398598,
+  "threshold": 0.001,
+  "backend": "tail16_mid2",
+  "passed": true,
+  "events": 32,
+  "full_grid_points": 132040,
+  "warmup_seconds": 3.8268167470232584,
+  "dtype": "float64",
+  "new_model_parameters": false
+}

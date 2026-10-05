@@ -1,0 +1,27 @@
+{
+  "job": {
+    "pid": 752181,
+    "server": "65114_lipeize",
+    "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/releases/5b2c0467fe7f68ab",
+    "log": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/candidate_5b2c0467fe7f68ab.log",
+    "outputs": {
+      "points": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/points_5b2c0467fe7f68ab",
+      "probe": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/probe_5b2c0467fe7f68ab",
+      "q": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/q_5b2c0467fe7f68ab",
+      "spatial": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/spatial_5b2c0467fe7f68ab"
+    },
+    "new_photons": 0,
+    "new_fine_A_matrices": 0,
+    "new_reconstruction": false
+  },
+  "stop": {
+    "stopped_pids": [
+      752181,
+      757617,
+      757618
+    ],
+    "all_exited": true,
+    "reason": "Observed full-loop GPU usage exceeds 80%; reject partial sensitivity",
+    "original_data_untouched": true
+  }
+}

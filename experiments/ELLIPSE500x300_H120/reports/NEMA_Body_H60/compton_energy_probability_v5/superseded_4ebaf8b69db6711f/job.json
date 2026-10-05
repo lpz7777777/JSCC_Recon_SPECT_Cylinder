@@ -1,0 +1,20 @@
+{
+  "pid": 652867,
+  "server": "65114_lipeize",
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/releases/4ebaf8b69db6711f",
+  "log": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/resume_be82bb85c77c20eb.log",
+  "outputs": {
+    "points": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/points_4ebaf8b69db6711f",
+    "probe": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/probe_4ebaf8b69db6711f",
+    "q": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/q_4ebaf8b69db6711f",
+    "spatial": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/spatial_4ebaf8b69db6711f"
+  },
+  "new_photons": 0,
+  "new_fine_A_matrices": 0,
+  "new_reconstruction": false,
+  "launcher_sha256": "be82bb85c77c20eb552a2138ab467c977670140a98a0cd1d7b9743466d6adc4d",
+  "reused_completed_phases": [
+    "points",
+    "probe"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "pid": 652867,
+  "running": true,
+  "phases": {
+    "points": {
+      "point_gate.json": {
+        "bytes": 6259,
+        "sha256": "6320044c602579e22b91a106cde71fb7d923d96350579317c954eca1f4056885"
+      },
+      "execution.json": {
+        "bytes": 630,
+        "sha256": "a06a93c0e9644f135184da101f23d18492b493312f2c3de9e238ef813dfaadbb"
+      },
+      "consumed_inputs.json": {
+        "bytes": 85486,
+        "sha256": "2af8a6b2543647256a6a69a73970992c93bb4c7221df8e5491405acf27e4c814"
+      },
+      "point_probability.csv": {
+        "bytes": 4438010,
+        "sha256": "2b80dae461eca0c7cb173da79b913f6085b5ce34aa301bcdba140336d6d791be"
+      }
+    },
+    "probe": {
+      "resource_probe.json": {
+        "bytes": 168,
+        "sha256": "6aae2311781f5d0d0ee85914c95244cb154db3ecc2febc01d5c74d93f10dc047"
+      },
+      "execution.json": {
+        "bytes": 652,
+        "sha256": "8065c546655d1acedfba67835347cee385301e08cd3479df2d0d1b3e7eb403d8"
+      },
+      "consumed_inputs.json": {
+        "bytes": 100507,
+        "sha256": "0f6808af58b6f123e6230077bdd17322ba9de0499c4e10658ffc3b8f39c6abd3"
+      }
+    },
+    "q": {
+      "execution.json": {
+        "bytes": 645,
+        "sha256": "a057c1c549ee0b080ec78ed1d1a6803882e73300e10834b8134798531299e17c"
+      },
+      "consumed_inputs.json": {
+        "bytes": 85486,
+        "sha256": "2af8a6b2543647256a6a69a73970992c93bb4c7221df8e5491405acf27e4c814"
+      },
+      "q_selected_probability.json": {
+        "bytes": 196143,
+        "sha256": "68d83d577c1d489be6ef88b2c0b816b5803d453cbc6ef66af93108bee1bc947e"
+      }
+    }
+  },
+  "last_log_lines": [
+    "CANDIDATE_TRAIN_EVENTS 12288 159919 seconds 193.19",
+    "CANDIDATE_TRAIN_EVENTS 12800 159919 seconds 201.24",
+    "CANDIDATE_TRAIN_EVENTS 13312 159919 seconds 209.32",
+    "CANDIDATE_TRAIN_EVENTS 13824 159919 seconds 217.37",
+    "CANDIDATE_TRAIN_EVENTS 14336 159919 seconds 225.42"
+  ],
+  "native_host_or_cgroup_limit_bytes": 1622941253632
+}

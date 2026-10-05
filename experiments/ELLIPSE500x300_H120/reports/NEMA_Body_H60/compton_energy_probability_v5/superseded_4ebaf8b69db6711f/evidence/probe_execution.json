@@ -1,0 +1,15 @@
+{
+  "action": "spatial",
+  "elapsed_seconds": 25.95304421300534,
+  "host_peak_rss_bytes": 12290424832,
+  "gpu_peak_reserved_bytes": 7375683584,
+  "gpu_total_bytes": 50897289216,
+  "source_sha256": "0a976676a33ba7a4a838113aaa4f2fa0396672c3979527ac379262280b8c22f0",
+  "candidate_sha256": "6bc3b563db5ac3029ec4837920026d3582ec1215521848bf835a6649f573308b",
+  "original_kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+  "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "new_photons": 0,
+  "new_fine_A_matrices": 0,
+  "new_reconstruction": false,
+  "full_response_saved": false
+}

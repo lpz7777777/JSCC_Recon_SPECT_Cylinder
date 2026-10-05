@@ -1,0 +1,46 @@
+{
+  "budget_seconds": 7200,
+  "charged_phases": [
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/probe_4ebaf8b69db6711f/execution.json",
+      "seconds": 25.95304421300534,
+      "kind": "completed phase wall time"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/q_4ebaf8b69db6711f/execution.json",
+      "seconds": 12.520721794979181,
+      "kind": "completed phase wall time"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/resume_be82bb85c77c20eb.log",
+      "seconds": 1138.63,
+      "kind": "stopped full loop, last checkpoint plus 60s conservative allowance"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/probe_834b15146747d1a5/execution.json",
+      "seconds": 95.67934578901622,
+      "kind": "completed phase wall time"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/probe_f630bb842e5ab0b5/execution.json",
+      "seconds": 34.96838418301195,
+      "kind": "completed phase wall time"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/probe_5b2c0467fe7f68ab/execution.json",
+      "seconds": 32.3830374419922,
+      "kind": "completed phase wall time"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/q_5b2c0467fe7f68ab/execution.json",
+      "seconds": 12.833835391968023,
+      "kind": "completed phase wall time"
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/candidate_5b2c0467fe7f68ab.log",
+      "seconds": 931.13,
+      "kind": "stopped full loop, last checkpoint plus 60s conservative allowance"
+    }
+  ],
+  "conservative_spent_seconds": 2284.098368813973
+}
