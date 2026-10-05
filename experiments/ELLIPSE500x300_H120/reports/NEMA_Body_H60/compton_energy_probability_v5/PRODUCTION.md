@@ -2,6 +2,8 @@
 
 2026-10-05，承接用户“继续”和v4五项调查计划。仅复用既有输运与原Factors；新增初级光子、精细A场和成像作业均为0。科学定义和门槛见[CONTRACT.md](CONTRACT.md)。
 
+**21:41验收更新：当前811220链已完成退出，GPU0已释放；159919事件匹配S及全部独立诊断通过，DIAGNOSTIC_GATES_PASSED。** 原核S回归2.585e−8；144充分空间区RMS2.852%→1.124%；独立椭圆效率偏差−1.3669%→+0.00223%。联合类别仅57/504充分，447未判定，没有声称联合模型整体改善。实际全量3722.39秒、GPU预留峰值29.01%、主存峰值12.30GB；计入全部先前尝试的保守GPU计费6234.36秒。详见[诊断验收](DIAGNOSTIC_ACCEPTANCE.md)。下文表格及“当前运行”描述保留其启动时历史；没有新重建，下一步是新入口的数值/资源试跑。
+
 ## 1. 目录和冻结发布
 
 本地报告：`experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5`。大CSV、灵敏度数组及临时文件：同工程`generated/compton_energy_probability_v5`，不进入Git。

@@ -1,12 +1,10 @@
 {
-  "status": "RUNNING",
-  "paired_reconstruction_submitted": false,
+  "status": "DIAGNOSTIC_GATES_PASSED",
   "failures": [],
-  "completed_phases": [
-    "points",
-    "probe",
-    "q"
-  ],
-  "new_photons": 0,
-  "new_fine_A_matrices": 0
+  "paired_reconstruction_submitted": false,
+  "production_pilot_completed": false,
+  "calibrated_surrogate_not_unconditional_physical_certificate": true,
+  "next_step": "Whole-cell basis regression and complete-event pilot before pairing",
+  "source_config_sha256": "7c44cf28f8796024aa6a665cc41271df99b3617cb9130a9cedc99e0841237d9a",
+  "collection_sha256": "890b0739ac744c9de6e0b71ea51ecb236faddac65495b6ad95596c9113ed7b5a"
 }

@@ -1,6 +1,6 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
-**2026-10-05 最新执行：已推进[连续能量响应候选及匹配S验证](reports/NEMA_Body_H60/compton_energy_probability_v5/README.md)。** 全10270点源评分、固定q域、完整网格数值和资源探针通过；159919个固定训练事件的S正在65114 GPU0累计，独立空间/联合类别门槛尚未完成。候选材料尾部评分改善，但不能称尖峰已经解决；原生产核与基底未覆盖，没有新增重建。新增Geant4和精细A矩阵均为0，原自动任务保持停止。
+**2026-10-05 21:41最新执行：[连续能量响应诊断验收](reports/NEMA_Body_H60/compton_energy_probability_v5/DIAGNOSTIC_ACCEPTANCE.md)完成，DIAGNOSTIC_GATES_PASSED。** 全159919固定训练事件的匹配S、独立空间/联合类别门槛通过，65114候选链已退出释放GPU。144个充分空间区偏差RMS由2.852%降至1.124%；联合类别仅57/504充分，447未判定，不能称整体联合物理已认证。下一步为独立入口的新基底回归与完整事件10次试跑；未提交配对成像，尚不能称尖峰已经解决。原生产核与基底未覆盖，新增Geant4和精细A矩阵均为0，原自动任务保持停止。
 
 上一阶段[科学总报告](reports/NEMA_Body_H60/process_list_global_audit_v4/REPORT.md)量化了144个充分空间区、内部多事件峰责任、材料尾部、厚层位置偏移和78920完整柱单元算子。精细场继续停止，约536GB清理及[停止证据](reports/NEMA_Body_H60/compton_response_geometry_v3/STOP_AND_CLEANUP_20261005.md)保留。以下精细场生产和续跑条目是停止前历史，不再执行。
 

@@ -1,8 +1,8 @@
 {
-  "checked_blobs": 1828,
-  "total_blob_bytes": 61870958,
+  "checked_blobs": 1838,
+  "total_blob_bytes": 62172949,
   "findings": [],
-  "scope": "staged payload plus unpushed history",
+  "scope": "staged acceptance payload plus unpushed history",
   "result": "PASS",
   "excluded": "generated large matrices, response arrays, credentials and private keys"
 }

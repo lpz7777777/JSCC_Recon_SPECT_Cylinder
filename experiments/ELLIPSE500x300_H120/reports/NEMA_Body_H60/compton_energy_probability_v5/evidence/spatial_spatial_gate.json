@@ -1,0 +1,26 @@
+{
+  "candidate_hold_bins": 0,
+  "legacy_hold_bins": 0,
+  "adequate_bins": 144,
+  "original_S_relative_L2": 2.5851641929500075e-08,
+  "train_events": 159919,
+  "validation_events": 159923,
+  "actual_training_photons": 1000000000,
+  "actual_validation_photons": 1000000000,
+  "ellipse": {
+    "legacy": {
+      "observed_efficiency": 0.00014283,
+      "predicted_efficiency": 0.00014087764433379018,
+      "relative_bias": -0.013669086789958929
+    },
+    "candidate": {
+      "observed_efficiency": 0.00014283,
+      "predicted_efficiency": 0.00014283318310061437,
+      "relative_bias": 2.228593862896311e-05
+    }
+  },
+  "normalization": "actual photons, full cell volume, same frozen events; no accepted-fraction rescaling",
+  "candidate_max_cell_detection_probability": 0.0002279970671556282,
+  "candidate_min_cell_detection_probability": 0.00011669880431327721,
+  "active_indices_from": "separate whole-polar-cell geometry; full S is not yet deployed"
+}

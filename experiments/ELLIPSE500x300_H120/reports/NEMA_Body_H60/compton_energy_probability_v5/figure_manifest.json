@@ -2,7 +2,12 @@
   "kind": "response probability diagnostics, not reconstruction",
   "input_sha256": {
     "point_gate.json": "3eef26497f96e6be7e6a0e3b80e9a94f77bec9021718f770f58066ac2d0e9873",
-    "point_probability.csv": "c261f1d28808c89a31e4ed3d660afbe964bbf23d5bae80bbada2fe57cf2cd9d2"
+    "point_probability.csv": "c261f1d28808c89a31e4ed3d660afbe964bbf23d5bae80bbada2fe57cf2cd9d2",
+    "spatial_efficiency.csv": "31c6012739e5284e2e991a277974a693f7e606eafa7d7c745d3f2e4ad95a9750",
+    "independent_joint_categories.csv": "5f8b5102bdef562c357ab14482330c8eafdbcdf53f3907e1753e9aeba01112da",
+    "spatial_gate.json": "49703cb1a19d5a1808a0b81a300fd80b2a3117ad60d57d01bdccfe12dbfafa35",
+    "joint_gate.json": "1ad422fc8e75f3724ed4680485aa2f0e30974e51cf3ed7d303a90b7e0ea75069",
+    "execution.json": "0fdd7849aa64b936787d25d29a9e7c69fba506456435891fb4fe1a6981435c26"
   },
   "figures": {
     "conditional_pit.png": {
@@ -12,6 +17,10 @@
     "independent_point_probability.png": {
       "bytes": 116841,
       "sha256": "d8cf734b15e3cb57732d84e81b750bef4f59f77437af7f870e5e22595afc2bdd"
+    },
+    "independent_spatial_joint_validation.png": {
+      "bytes": 158634,
+      "sha256": "21a464a8edff634f93a4e3ad8d9e51d4150d68883896034e53949a5bd555fb43"
     }
   },
   "no_smoothing": true,

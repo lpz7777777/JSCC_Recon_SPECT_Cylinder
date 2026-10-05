@@ -1,0 +1,49 @@
+{
+  "spatial_efficiency.csv_legacy": {
+    "adequate": 144,
+    "unresolved": 48,
+    "max_absolute_relative_bias": 0.07393673580977378,
+    "RMS_relative_bias": 0.02851736825704991,
+    "hold": 0
+  },
+  "spatial_efficiency.csv_candidate": {
+    "adequate": 144,
+    "unresolved": 48,
+    "max_absolute_relative_bias": 0.030118004039041635,
+    "RMS_relative_bias": 0.011240120488698708,
+    "hold": 0
+  },
+  "independent_joint_categories.csv_legacy": {
+    "adequate": 57,
+    "unresolved": 447,
+    "max_absolute_relative_bias": 0.3322075043118953,
+    "RMS_relative_bias": 0.10924197898577692,
+    "hold": 0
+  },
+  "independent_joint_categories.csv_candidate": {
+    "adequate": 57,
+    "unresolved": 447,
+    "max_absolute_relative_bias": 0.32392261620970575,
+    "RMS_relative_bias": 0.11376438566694604,
+    "hold": 0
+  },
+  "gate": "DIAGNOSTIC_GATES_PASSED",
+  "full_calculation_seconds": 3722.3904935570317,
+  "full_gpu_reserved_fraction": 0.2901146104134396,
+  "conservatively_charged_gpu_seconds": 6234.361361326,
+  "circle_total_relative_bias": 2.5012662660417462e-05,
+  "ellipse": {
+    "legacy": {
+      "observed_efficiency": 0.00014283,
+      "predicted_efficiency": 0.00014087764433379018,
+      "relative_bias": -0.013669086789958929
+    },
+    "candidate": {
+      "observed_efficiency": 0.00014283,
+      "predicted_efficiency": 0.00014283318310061437,
+      "relative_bias": 2.228593862896311e-05
+    }
+  },
+  "original_S_relative_L2": 2.5851641929500075e-08,
+  "no_reconstruction_result": true
+}

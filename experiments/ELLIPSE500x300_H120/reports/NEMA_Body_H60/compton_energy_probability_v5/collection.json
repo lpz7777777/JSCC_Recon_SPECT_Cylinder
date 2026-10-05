@@ -1,6 +1,6 @@
 {
   "pid": 811220,
-  "running": true,
+  "running": false,
   "phases": {
     "points": {
       "point_gate.json": {
@@ -51,14 +51,64 @@
         "bytes": 196176,
         "sha256": "cbb03313800100189a4512468d237772be2519dea366959c7c105b699657a7cc"
       }
+    },
+    "spatial": {
+      "calibration_worker_evidence.npz": {
+        "bytes": 459414,
+        "sha256": "73a90a373841cb65ce654d89b1163694529e847a30cd07eb817750b9144a574c"
+      },
+      "execution.json": {
+        "bytes": 806,
+        "sha256": "0fdd7849aa64b936787d25d29a9e7c69fba506456435891fb4fe1a6981435c26"
+      },
+      "candidate_Sensi_full": {
+        "bytes": 528160,
+        "sha256": "8b32ae667a5c8c5fbcfb32449e805aa2857ac7717002bd62c9664d232fa89e59"
+      },
+      "spatial_gate.json": {
+        "bytes": 958,
+        "sha256": "49703cb1a19d5a1808a0b81a300fd80b2a3117ad60d57d01bdccfe12dbfafa35"
+      },
+      "consumed_inputs.json": {
+        "bytes": 100507,
+        "sha256": "0f6808af58b6f123e6230077bdd17322ba9de0499c4e10658ffc3b8f39c6abd3"
+      },
+      "spatial_efficiency.csv": {
+        "bytes": 54568,
+        "sha256": "31c6012739e5284e2e991a277974a693f7e606eafa7d7c745d3f2e4ad95a9750"
+      },
+      "independent_joint_categories.csv": {
+        "bytes": 72118,
+        "sha256": "5f8b5102bdef562c357ab14482330c8eafdbcdf53f3907e1753e9aeba01112da"
+      },
+      "fusion_gate.json": {
+        "bytes": 358,
+        "sha256": "cf42c030d0b48b02d628812fb6ea0cd322ecfc266cae2ab0f803dd290458ec65"
+      },
+      "legacy_Sensi_detector": {
+        "bytes": 528160,
+        "sha256": "e154d9e0541c8e9fc7cddb1601d6bfd654df95bf0d93fdad4acc9783ae6b5e37"
+      },
+      "legacy_Sensi_full": {
+        "bytes": 528160,
+        "sha256": "31438caea393983e1c0e4502455f12e84743bf0ae0433a17be516966c6114e09"
+      },
+      "joint_gate.json": {
+        "bytes": 567,
+        "sha256": "1ad422fc8e75f3724ed4680485aa2f0e30974e51cf3ed7d303a90b7e0ea75069"
+      },
+      "candidate_Sensi_detector": {
+        "bytes": 528160,
+        "sha256": "51a1d1e0f65e527bf66b8b85643af0ac407cffe9c84014f12a9aa1a7e7d4846f"
+      }
     }
   },
   "last_log_lines": [
-    "FIXED_Q_CONTEXT 6 29 32",
-    "FIXED_Q_CONTEXT 6 30 32",
-    "FIXED_Q_CONTEXT 6 31 32",
-    "FIXED_Q_CONTEXT 6 32 32",
-    "ENERGY_CANDIDATE_PHASE_FINISHED q 12.55"
+    "CANDIDATE_TRAIN_EVENTS 159232 159919 seconds 3662.1",
+    "CANDIDATE_TRAIN_EVENTS 159744 159919 seconds 3673.87",
+    "ENERGY_CANDIDATE_PHASE_FINISHED spatial 3722.39",
+    "87405759\t/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5",
+    "ENERGY_CANDIDATE_CHAIN_FINISHED"
   ],
   "native_host_or_cgroup_limit_bytes": 1622941253632
 }
