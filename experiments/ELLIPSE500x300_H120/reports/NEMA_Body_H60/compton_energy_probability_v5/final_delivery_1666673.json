@@ -1,0 +1,63 @@
+{
+  "study": "compton_energy_probability_v5",
+  "job": 1666673,
+  "status": "DELIVERED_AUTOMATION_PAUSED",
+  "delivered_at": "2026-10-06T07:09:16+08:00",
+  "delivery_commit": "5b1d91e35e0e9cb6a8afad4c21f3fa994e6cfe81",
+  "branch": "codex/ellipse500x300-h120",
+  "delivery_commit_pushed": true,
+  "automation": {
+    "id": "compton-v5",
+    "name": "Compton v5正式配对重建推进",
+    "kind": "heartbeat",
+    "status": "PAUSED",
+    "target_thread_id": "01a0d253-7edd-7f50-9efb-fc5225acbe46",
+    "prompt_sha256": "3c689c4920f67cddee6bcc85703dd0d75da2a9b1bc7bef2d0b6921cea79e96a6",
+    "native_update_result": "Updated automation in the app; automationId compton-v5; mode update; status PAUSED"
+  },
+  "artifacts": {
+    "ACCEPTANCE.md": "64469c83a11cced58d8010c30278e32f625dcdbe8fe2f1cafcbcdfd6f38419eb",
+    "formal_summary.json": "8415fd63cd25f5f6fa6d6f591cee2ffdcde6cb5fc82c85cbf83a1a847cc5d471",
+    "final_analysis_qa_1666673.json": "a140fdf7d2555e56a01f6da1cf1a842be295c15c231d6878ae4a78e2d4ac4f5d",
+    "comparison_1666673/README.md": "6f67e2fcf16916757793a2813b554fa35bf50f4fbe6dbd9701530b57fcd2f28f",
+    "comparison_1666673/artifact_manifest.json": "33d984b16e2114092a1089204509ece9284a133fdd83b52a97a0acdf0f5a9ba5",
+    "comparison_1666673/comparison.json": "bd89b324d092cb97a4545f4384b64678af198b38897a4868ed01f568f07a8e85",
+    "final_delivery_git_audit_1666673.json": "f6b23c536128b668a85c6d968da30709f64a5ddc1db91c2653880c0144ea620a"
+  },
+  "completion": {
+    "verified_models": [
+      "angular",
+      "continuous_energy"
+    ],
+    "actual_primary_gamma": 1000000000,
+    "accepted_events_per_model": 91225,
+    "active_cells": 78920,
+    "history_frames": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "checkpoints": 80,
+    "actual_runtime_seconds": 6930,
+    "figures_visually_reviewed": 8,
+    "all_40_frame_crc_costs_over_5pp": 0
+  },
+  "final_2000_reductions": {
+    "compton": {
+      "maximum_density": 0.7375948112189894,
+      "peak_background": 0.7613752310521558
+    },
+    "jscc": {
+      "maximum_density": 0.6610979054702346,
+      "peak_background": 0.6953380087822647
+    }
+  },
+  "limits": [
+    "Residual internal Compton background peak",
+    "Small noise improvement and poor 13mm sphere recovery",
+    "447 joint categories unresolved",
+    "No extrapolation beyond 2000 iterations"
+  ],
+  "no_followup_simulation_or_reconstruction": true
+}
