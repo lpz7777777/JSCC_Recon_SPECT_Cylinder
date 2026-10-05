@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-05T18:23:18.835989+00:00",
+  "release": "0f02e65446a2dc2f",
+  "job": 1666430,
+  "command": "python -X utf8 tools/security/audit_git_payload.py --base origin/codex/ellipse500x300-h120",
+  "checked_blobs": 1877,
+  "total_blob_bytes": 62333621,
+  "findings": [],
+  "audited_index_sha256": "0bfbda3a0ee049e118ee25bdac9c6ff813097a4a53461368c80d085c2ba3dfeb",
+  "scope": "Staged repository and outgoing history; this small receipt is checked separately before staging",
+  "paired_imaging_completed": false
+}

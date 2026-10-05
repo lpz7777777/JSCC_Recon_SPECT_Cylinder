@@ -1,6 +1,6 @@
 # v5完整事件重建预检
 
-2026-10-06 00:53：1666205已完全退出（FAILED）。**阶段1历史50次通过，阶段2角度核在算子构造时失败，阶段3连续能量核未启动。** 故障是新预检接口的CPU/CUDA设备混用，不是核的物理验收失败或显存不足。新发布 `60c12fd7c790c0b2`已完成75项SHA及19项远端测试；1666205回归再次验收通过，补跑作业 **1666264**（4节点×1GPU）已提交，Priority排队，只执行两个缺失阶段。正式配对尚未提交。作业号以 `preflight_job.json`为准，不能再以1666205排队状态或Slurm COMPLETED替代验收。
+2026-10-06 02:17：最新补跑 **1666430**，4节点×1GPU、NCCL bond0，发布 `0f02e65446a2dc2f`，Priority排队。1666264在两种核启动前因派生L2舍入改变复验JSON字节而退出；原图像和运行清单SHA完全一致。新发布不再覆盖冻结证明，20项远端测试、75项SHA和1/6线程独立复验通过。原50次回归保持通过，只补角度核与连续能量核各10次。详见[PREFLIGHT_REUSE_REPAIR.md](PREFLIGHT_REUSE_REPAIR.md)。
 
 | 顺序 | 数据和基底 | 计算 | 验收 |
 |---|---|---|---|
@@ -16,7 +16,7 @@
 
 - 新入口为 `run_energy_preflight_v5.py`，原 `run_reconstruction.py`、共享生产核、MLEM更新不改。
 - 连续核、训练规律、两张几何SHA与已通过诊断的发布一致；两组各使用本次训练生成的S。20份事件索引逐文件与已验收R1原压缩包比对。
-- 集群部署复核75个文件SHA，包含23个原NEMA输入、三套Factors manifest、原S、全部发布文件；初版17项、当前修复版19项远端测试通过。证据见 `preflight_freeze.json`、`preflight_deployment.json`、`preflight_tests.txt`。
+- 集群部署复核75个文件SHA，包含23个原NEMA输入、三套Factors manifest、原S、全部发布文件；初版17项、设备修复版19项、当前复验修复版20项远端测试通过。证据见 `preflight_freeze.json`、`preflight_deployment.json`、`preflight_tests.txt`。
 - 单光子计数及440矩阵共用原数据；不重跑218、串窗、Geant4，不产生精细A场。不加正则化、平滑、阈值扫描或额外事件删除。
 
 ## 执行界限与资源

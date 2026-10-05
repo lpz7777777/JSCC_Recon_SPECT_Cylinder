@@ -1,6 +1,6 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
-2026-10-06 00:59：v5历史50次回归已通过（Compton/JSCC相对L2=3.985e−7/2.285e−6）。1666205在角度核CPU/CUDA接口处失败且已退出，修复只改新适配器；新作业 **1666264**以4节点×1GPU补跑两种核各10次，冻结发布60c12fd7c790c0b2，75项SHA/19项远端测试通过，目前Priority排队。事件、模型、匹配S和MLEM未改，2000次正式配对尚未提交；compton-v5每30分钟继续推进。[当前预检及故障证据](reports/NEMA_Body_H60/compton_energy_probability_v5/PREFLIGHT.md)。
+2026-10-06 02:17：历史50次回归仍通过；1666264在两核启动前因复验器覆盖旧JSON及派生L2末位舍入差异而失败，原图像/清单SHA未变。已修复为独立复验视图，20项远端测试、75项SHA及1/6线程真实复验通过。新作业 **1666430**（4节点×1GPU、bond0），冻结0f02e65446a2dc2f，当前Priority排队，只补角度/能量核各10次。正式配对尚未提交。[当前预检与修复](reports/NEMA_Body_H60/compton_energy_probability_v5/PREFLIGHT.md)。
 
 **2026-10-05 21:41最新执行：[连续能量响应诊断验收](reports/NEMA_Body_H60/compton_energy_probability_v5/DIAGNOSTIC_ACCEPTANCE.md)完成，DIAGNOSTIC_GATES_PASSED。** 全159919固定训练事件的匹配S、独立空间/联合类别门槛通过，65114候选链已退出释放GPU。144个充分空间区偏差RMS由2.852%降至1.124%；联合类别仅57/504充分，447未判定，不能称整体联合物理已认证。下一步为独立入口的新基底回归与完整事件10次试跑；未提交配对成像，尚不能称尖峰已经解决。原生产核与基底未覆盖，新增Geant4和精细A矩阵均为0，原自动任务保持停止。
 

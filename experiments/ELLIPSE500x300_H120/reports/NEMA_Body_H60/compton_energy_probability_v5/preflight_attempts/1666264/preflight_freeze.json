@@ -1,5 +1,5 @@
 {
-  "release_key": "0f02e65446a2dc2f",
+  "release_key": "60c12fd7c790c0b2",
   "sha256": {
     "run_reconstruction.py": "d4e89a83665e8e63782d0e9b3aa8c3dd6e7f189f3193efe2fa3904b6815b0aa6",
     "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
@@ -10,11 +10,11 @@
     "compton_geometry_run_contract.py": "a0033ae9a38c523a744d4ce06c3805cca99f6d438c1902145e536a09fa65f532",
     "test_compton_geometry_run_contract.py": "90cbeabec004de349c7f5edec97e40769205f6779d53dd63c2e9d2e1f6f3ff46",
     "run_energy_preflight_v5.py": "63c6daad8d4db94f03ddfc9e4e6f2450de368d915b3a8121465938813f478d38",
-    "verify_energy_preflight_v5.py": "e24b2f1ee8fff9b138351e86cef825850b5f9045ffd3ca9926d9a94e6e24bac3",
-    "test_energy_preflight_v5.py": "e42c9d4725e2835346de2782797167d1db266b39777bcec713f268ecc7cd7c2d",
+    "verify_energy_preflight_v5.py": "8ae58999af1a20777e0b203f75a6bc86f71e944c23bfad54cfc3c3a184729e49",
+    "test_energy_preflight_v5.py": "55128135d9000b41fb0375960cd1389960b529db9ff5be05d4a02d83999b0aad",
     "compton_energy_probability_v5.py": "b8308b077fc318c0205fad8e3354735ed3afb3532030ac13c6d7a1dd6f852a97",
     "test_compton_energy_probability_v5.py": "efe18cb7390ec7f8b2a9454602924e3248a608121ac233a17fce6a5ddebdf2a6",
-    "reconstruct_energy_preflight_v5.sh": "f5a89a1bc3c67364b60ecf87a35d40b604b235f1467de800bed41ac6c8533ed2",
+    "reconstruct_energy_preflight_v5.sh": "b110a00f09de13ba2baa630a0347c423309cb090faf0ad42209237fca3cb04cd",
     "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
     "compton_sparse_ops.py": "39c78522927f7396db1c58f760a636fda729c195dd4c2cc05ae98ca513ab3b9b",
     "process_list_plane_sparse.py": "f79b03114882831e3418eb7f79b2b0dad7ee38455121ff00af5ce1cbeeeca579",
@@ -48,8 +48,8 @@
     "selections/18.npy": "4a5b9eb2ff5b5f7fe63244a98eb3e79fac3fddd574039aab876fd0ff7b950fe2",
     "selections/19.npy": "76fd7a644f40e7ba925b373ff398d546794ec17c28caeac71a58c7c39c8de4b9",
     "selections/20.npy": "365262e697396d5b92e5ad2212b3b0844ed167da725d5c468b390606546dbbaa",
-    "contract.json": "9ef79463b81c8f66eb2cab9d9b88de22823fd2bdfb892d5b393fe54229241989"
+    "contract.json": "ddab52eba9148ac25183ab9b8fb41040748f139dc5476dfc5ca6bbe3f2a7cda9"
   },
-  "contract_sha256": "9ef79463b81c8f66eb2cab9d9b88de22823fd2bdfb892d5b393fe54229241989",
+  "contract_sha256": "ddab52eba9148ac25183ab9b8fb41040748f139dc5476dfc5ca6bbe3f2a7cda9",
   "formal_submission_permitted": false
 }

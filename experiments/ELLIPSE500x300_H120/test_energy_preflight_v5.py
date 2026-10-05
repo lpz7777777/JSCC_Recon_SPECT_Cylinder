@@ -80,17 +80,40 @@ class PilotSafeguards(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);result=root/'passed';result.mkdir()
             (result/'run_manifest.json').write_text('{}');allocation=root/'allocation.txt';allocation.write_text('allocation')
-            receipt=dict(passed=True,accepted_events=91231,iterations=50)
+            outputs=[]
+            for channel in ('440_ComptonOnly','440_SinglePlusCompton'):
+                hashes={}
+                for kind in ('active','full','history'):
+                    path=result/f'Image_{channel}_{kind}.float32';path.write_bytes(b'original image')
+                    hashes[kind]=digest(path)
+                outputs.append(dict(channel=channel,frames=1,sha256=hashes,baseline_frame50_relative_l2=4e-7))
+            receipt=dict(passed=True,accepted_events=91231,iterations=50,outputs=outputs)
             (result/'verification.json').write_text(json.dumps(receipt))
             reuse=dict(job=1666205,result=str(result),allocation=str(allocation),baseline=str(root/'baseline'),
                 run_manifest_sha256=digest(result/'run_manifest.json'),allocation_sha256=digest(allocation),
                 verification_sha256=digest(result/'verification.json'))
             contract=root/'contract.json';contract.write_text(json.dumps(dict(files={},regression_reuse=reuse)))
-            with patch('verify_energy_preflight_v5.verify_first_scatter',return_value=None) as verifier:
+            def reverify(proxy,*args):
+                computed=json.loads(json.dumps(receipt));computed['outputs'][0]['baseline_frame50_relative_l2']*=1+5e-16
+                (proxy/'verification.json').write_text(json.dumps(computed))
+            with patch('verify_energy_preflight_v5.verify_first_scatter',side_effect=reverify) as verifier:
                 self.assertEqual(verify_reused_regression(contract),receipt)
                 verifier.assert_called_once()
+                self.assertNotEqual(verifier.call_args.args[0],result)
+                self.assertEqual(digest(result/'verification.json'),reuse['verification_sha256'])
             (result/'run_manifest.json').write_text('{"changed":true}')
             with self.assertRaises(ValueError):verify_reused_regression(contract)
+
+    def test_receipt_roundoff_does_not_relax_artifact_hash_or_L2_gate(self):
+        from verify_energy_preflight_v5 import compare_regression_receipts
+        frozen=dict(passed=True,outputs=[dict(sha256=dict(active='frozen'),baseline_frame50_relative_l2=4e-7)])
+        current=json.loads(json.dumps(frozen));current['outputs'][0]['baseline_frame50_relative_l2']*=1+5e-16
+        compare_regression_receipts(frozen,current)
+        current['outputs'][0]['sha256']['active']='changed'
+        with self.assertRaises(ValueError):compare_regression_receipts(frozen,current)
+        for bad in (2e-5,5e-7,float('nan')):
+            current=json.loads(json.dumps(frozen));current['outputs'][0]['baseline_frame50_relative_l2']=bad
+            with self.assertRaises(ValueError):compare_regression_receipts(frozen,current)
 
 
 if __name__=='__main__':unittest.main()

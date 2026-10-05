@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "study": "compton_response_geometry_v3",
+  "group": "ideal_first_scatter_v2",
+  "mode": "regression",
+  "outputs": [
+    {
+      "channel": "440_ComptonOnly",
+      "frames": 1,
+      "sha256": {
+        "active": "006971c73278fcc84159624722129e15f21c0860d2cc232b629ca067a7990363",
+        "full": "6ff7d33f59671b4a3d7bba5eaed824ae9dc2c5fee380a552fa2a4b8962bd5cf1",
+        "history": "006971c73278fcc84159624722129e15f21c0860d2cc232b629ca067a7990363"
+      },
+      "baseline_frame50_relative_l2": 3.985147370542875e-07
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "frames": 1,
+      "sha256": {
+        "active": "0d5dfb63f364ec2b9bc155bffc33715e6202cd492339c4ee0bf96784c7fa5634",
+        "full": "15b8329cfdff7bdfc971db25af30b5de385c9ea18eed00fccd0a406cab8ce30b",
+        "history": "0d5dfb63f364ec2b9bc155bffc33715e6202cd492339c4ee0bf96784c7fa5634"
+      },
+      "baseline_frame50_relative_l2": 2.2851869610836278e-06
+    }
+  ],
+  "resources": [
+    {
+      "rank": 0,
+      "device": "cuda:0",
+      "accepted_events": 22818,
+      "event_bytes_cpu": 7487954880,
+      "host_peak_rss_bytes": 15626240000,
+      "node": "wqd10naf02g1",
+      "host_allocated_bytes": 99090432000,
+      "elapsed_seconds": 158.4371426254511,
+      "peak_allocated_bytes": 8849381376,
+      "peak_reserved_bytes": 8908701696,
+      "total_device_bytes": 33668988928
+    },
+    {
+      "rank": 1,
+      "device": "cuda:0",
+      "accepted_events": 22767,
+      "event_bytes_cpu": 7471218720,
+      "host_peak_rss_bytes": 15595859968,
+      "node": "wqd10naf02g3",
+      "host_allocated_bytes": 99090432000,
+      "elapsed_seconds": 156.85726829618216,
+      "peak_allocated_bytes": 8842515456,
+      "peak_reserved_bytes": 8929673216,
+      "total_device_bytes": 33668988928
+    },
+    {
+      "rank": 2,
+      "device": "cuda:0",
+      "accepted_events": 22830,
+      "event_bytes_cpu": 7491892800,
+      "host_peak_rss_bytes": 15597355008,
+      "node": "wqd10nbj04g1",
+      "host_allocated_bytes": 99090432000,
+      "elapsed_seconds": 158.12340616434813,
+      "peak_allocated_bytes": 8853606912,
+      "peak_reserved_bytes": 8908701696,
+      "total_device_bytes": 33668988928
+    },
+    {
+      "rank": 3,
+      "device": "cuda:0",
+      "accepted_events": 22816,
+      "event_bytes_cpu": 7487298560,
+      "host_peak_rss_bytes": 15623991296,
+      "node": "wqd10nbj04g4",
+      "host_allocated_bytes": 99090432000,
+      "elapsed_seconds": 159.1441426789388,
+      "peak_allocated_bytes": 8977197056,
+      "peak_reserved_bytes": 9034530816,
+      "total_device_bytes": 33668988928
+    }
+  ],
+  "accepted_events": 91231,
+  "iterations": 50,
+  "save_step": 50,
+  "config_sha256": "e8f1767094c3225f399521ca694833abacfc7a2c886a203b2981996b0817cb38",
+  "run_manifest_sha256": "b4be8987db0f2c03df6bb6ceb32bb44ff18d5513fa051d7c6aa461d858744a01",
+  "allocation_sha256": "8a72740799ef372fd26eaeb8985b83300c3fe9b89559bfa5fb079b158d6a957e"
+}

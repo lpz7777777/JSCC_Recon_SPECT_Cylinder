@@ -71,25 +71,35 @@ def repair():
         if any(x.split()[0]==job or 'Energy_v5_preflight' in x for x in queue.splitlines()):
             raise ValueError('Previous/duplicate pilot is still active')
         accounting=accounting_for(c,job);rows=[x.split('|') for x in accounting.splitlines()]
-        overall=[x for x in rows if x[0]==job];regression=[x for x in rows if x[0]==job+'.1']
+        overall=[x for x in rows if x[0]==job]
+        source=current.get('regression_reuse');source_job=str(source['job']) if source else job
+        source_accounting=accounting_for(c,source_job)
+        regression=[x.split('|') for x in source_accounting.splitlines() if x.split('|')[0]==source_job+'.1']
         if (len(overall)!=1 or overall[0][1] not in ('FAILED','TIMEOUT','CANCELLED','OUT_OF_MEMORY') or
             len(regression)!=1 or regression[0][1:3]!=['COMPLETED','0:0']):
-            raise ValueError('Only a terminal failed attempt with a completed regression can resume')
-        command(c,PYTHON+' '+shlex.quote(release+'/verify_first_scatter.py')+
-            ' --result '+shlex.quote(REMOTE+'/preflight_regression_'+job)+
+            raise ValueError('Only a terminal failed attempt with a completed source regression can resume')
+        if not source:command(c,PYTHON+' '+shlex.quote(release+'/verify_first_scatter.py')+
+            ' --result '+shlex.quote(REMOTE+'/preflight_regression_'+source_job)+
             ' --config '+shlex.quote(release+'/legacy_regression/R1.json')+
             ' --geometry '+shlex.quote(release+'/geometry.npz')+
             ' --baseline '+shlex.quote(OLD+'/formal_ideal_1660254')+' --mode regression'+
-            ' --allocation '+shlex.quote(REMOTE+'/allocation_'+job+'.txt'))
-        proof=fetch_phase(c,'regression',job,target)
-        with c.open_sftp() as s:s.get(REMOTE+'/allocation_'+job+'.txt',str(target/'allocation.txt'))
+            ' --allocation '+shlex.quote(REMOTE+'/allocation_'+source_job+'.txt'))
+        proof=fetch_phase(c,'regression',source_job,target)
+        with c.open_sftp() as s:s.get(REMOTE+'/allocation_'+source_job+'.txt',str(target/'allocation.txt'))
         v=json.loads((target/'regression/verification.json').read_text())
         if (v['accepted_events']!=91231 or v['iterations']!=50 or v['save_step']!=50 or
             digest(target/'allocation.txt')!=v['allocation_sha256']):
             raise ValueError('Passed historical regression identity differs')
-        if peak_rss(accounting)>.8*min(r['host_allocated_bytes'] for r in v['resources']):
+        if source and (proof['verification_sha256']!=source['verification_sha256'] or
+            proof['run_manifest_sha256']!=source['run_manifest_sha256']):
+            raise ValueError('Frozen source regression receipt changed')
+        if peak_rss(source_accounting)>.8*min(r['host_allocated_bytes'] for r in v['resources']):
             raise ValueError('Historical Slurm resource margin fails')
     (target/'accounting.txt').write_bytes(accounting.encode())
+    if source:
+        (target/'source_regression_accounting.txt').write_bytes(source_accounting.encode())
+        with connect() as c:
+            with c.open_sftp() as s:s.get(REMOTE+'/allocation_'+job+'.txt',str(target/'failed_job_allocation.txt'))
     payload=DATA/'preflight_payload';archived=DATA/('preflight_payload_'+job)
     if payload.resolve().parent!=DATA.resolve() or archived.resolve().parent!=DATA.resolve() or archived.exists():
         raise ValueError('Unsafe/repeated payload archive')
@@ -101,15 +111,17 @@ def repair():
     for name in ('preflight_freeze.json','preflight_deployment.json','preflight_tests.txt','preflight_job.json'):
         shutil.copy2(REPORT/name,target/name)
     write(target/'failure.json',dict(job=int(job),terminal_state=overall[0][1],
-        reason='Pilot adapter passed CUDA coordinates into CPU-only legacy sparse projector construction',
+        reason=('Reverification overwrote frozen JSON; derived norm roundoff differed under compute-node BLAS threads'
+            if source else 'Pilot adapter passed CUDA coordinates into CPU-only legacy sparse projector construction'),
         original_regression_passed=True,regression=proof,missing_phases=['angular','continuous_energy'],
         shared_kernel_changed=False,scientific_event_set_changed=False))
     payload.rename(archived)
     (REPORT/'preflight_job.json').rename(target/'registered_job.json')
-    reuse=dict(job=int(job),result=REMOTE+'/preflight_regression_'+job,
-        allocation=REMOTE+'/allocation_'+job+'.txt',baseline=OLD+'/formal_ideal_1660254',
+    reuse=dict(job=int(source_job),result=REMOTE+'/preflight_regression_'+source_job,
+        allocation=REMOTE+'/allocation_'+source_job+'.txt',baseline=OLD+'/formal_ideal_1660254',
         verification_sha256=proof['verification_sha256'],run_manifest_sha256=proof['run_manifest_sha256'],
-        allocation_sha256=v['allocation_sha256'],previous_contract_sha256=prior['contract_sha256'])
+        allocation_sha256=v['allocation_sha256'],
+        previous_contract_sha256=source['previous_contract_sha256'] if source else prior['contract_sha256'])
     write(REPORT/'preflight_resume.json',reuse)
     print('ENERGY_V5_REPAIR_PREPARED_ONLY_MISSING_PHASES',job)
 
@@ -207,16 +219,26 @@ def deploy():
         print(command(c,PYTHON+' -c '+shlex.quote(script)))
         tests=command(c,'cd '+shlex.quote(release)+' && JSCC_PROJECT_ROOT='+shlex.quote(release)+' '+PYTHON+
             ' -m unittest test_compton_geometry_run_contract test_compton_energy_probability_v5 test_energy_preflight_v5 -v 2>&1')
-        if 'Ran 19 tests' not in tests or '\nOK' not in tests:raise ValueError('Frozen remote tests failed: '+tests)
+        if 'Ran 20 tests' not in tests or '\nOK' not in tests:raise ValueError('Frozen remote tests failed: '+tests)
         (REPORT/'preflight_tests.txt').write_text(tests+'\n')
         command(c,'bash -n '+shlex.quote(release+'/reconstruct_energy_preflight_v5.sh'))
         command(c,'test -r '+shlex.quote(OLD+'/formal_ideal_1660254/run_manifest.json'))
         if cfg.get('regression_reuse'):
-            print(command(c,PYTHON+' '+shlex.quote(release+'/verify_energy_preflight_v5.py')+
-                ' --contract '+shlex.quote(release+'/contract.json')+' --reuse-regression-only'))
+            checks=REMOTE+'/deployment_checks/'+record['release_key']
+            command(c,'mkdir -p -- '+shlex.quote(checks))
+            for threads in (1,6):
+                receipt=checks+f'/reuse_threads{threads}.json'
+                print(command(c,f'OMP_NUM_THREADS={threads} OPENBLAS_NUM_THREADS={threads} MKL_NUM_THREADS={threads} '+
+                    PYTHON+' '+shlex.quote(release+'/verify_energy_preflight_v5.py')+
+                    ' --contract '+shlex.quote(release+'/contract.json')+' --reuse-regression-only --reuse-receipt '+shlex.quote(receipt)))
+                local=REPORT/f'preflight_reuse_threads{threads}.json'
+                sha=command(c,'sha256sum -- '+shlex.quote(receipt)).split()[0]
+                with c.open_sftp() as s:s.get(receipt,str(local))
+                if digest(local)!=sha:raise ValueError('Thread-dependent reverification receipt transfer differs')
     write(REPORT/'preflight_deployment.json',dict(release=release,sha256=record['sha256'],
-        tests_passed=19,tests_sha256=digest(REPORT/'preflight_tests.txt'),reused_input_root=OLD+'/recon_inputs/ideal',
+        tests_passed=20,tests_sha256=digest(REPORT/'preflight_tests.txt'),reused_input_root=OLD+'/recon_inputs/ideal',
         regression_reuse=cfg.get('regression_reuse'),
+        reuse_thread_check_sha256={str(t):digest(REPORT/f'preflight_reuse_threads{t}.json') for t in (1,6)} if cfg.get('regression_reuse') else {},
         formal_submission_permitted=False))
     print('ENERGY_V5_PREFLIGHT_DEPLOYED',release)
 
@@ -266,6 +288,20 @@ def fetch():
         overall=[r.split('|') for r in accounting.splitlines() if r.split('|')[0]==job]
         if len(overall)!=1 or overall[0][1:3]!=['COMPLETED','0:0']:raise ValueError('Preflight running or failed')
         phases=[]
+        startup_receipt_sha=None
+        if registration.get('regression_reuse'):
+            reuse=registration['regression_reuse'];remote=REMOTE+'/regression_reuse_'+job+'.json'
+            local=target/'regression_reuse.json';sha=command(c,'sha256sum -- '+shlex.quote(remote)).split()[0]
+            with c.open_sftp() as s:s.get(remote,str(local))
+            if digest(local)!=sha:raise ValueError('Startup regression receipt transfer differs')
+            record=json.loads(local.read_text())
+            if (not record['passed'] or not record['artifact_hashes_identical'] or record['source_job']!=reuse['job'] or
+                record['source_verification_sha256']!=reuse['verification_sha256'] or
+                record['source_run_manifest_sha256']!=reuse['run_manifest_sha256'] or
+                record['source_allocation_sha256']!=reuse['allocation_sha256'] or
+                record['regression_L2_threshold']!=1e-5 or record['norm_roundoff_relative_tolerance']!=1e-12):
+                raise ValueError('Startup regression reverification differs')
+            startup_receipt_sha=sha
         for phase in ('regression','angular','continuous_energy'):
             source=registration.get('regression_reuse') if phase=='regression' else None
             phase_job=source['job'] if source else job
@@ -283,6 +319,7 @@ def fetch():
         if max(rss)>.8*minimum:raise ValueError('Actual Slurm resource margin fails')
     write(REPORT/'preflight_summary.json',dict(status='PASSED',job=int(job),phases=phases,
         slurm_accounting=accounting,reused_regression_accounting=reused_accounting,
+        startup_regression_receipt_sha256=startup_receipt_sha,
         slurm_peak_rss_bytes=max(rss),minimum_granted_host_bytes=minimum,
         formal_submission_permitted=False,paired_imaging_completed=False))
     print('ENERGY_V5_PREFLIGHT_VERIFIED',job)

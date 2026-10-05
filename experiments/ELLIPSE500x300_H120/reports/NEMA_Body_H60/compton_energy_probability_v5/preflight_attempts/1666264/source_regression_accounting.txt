@@ -1,0 +1,6 @@
+1666205|FAILED|1:0||billing=24,cpu=24,gres/gpu=4,mem=378000M,node=4
+1666205.batch|FAILED|1:0|13568K|cpu=6,gres/gpu=1,mem=94500M,node=1
+1666205.extern|COMPLETED|0:0|0|billing=24,cpu=24,gres/gpu=4,mem=378000M,node=4
+1666205.0|COMPLETED|0:0|487384K|cpu=24,gres/gpu=4,mem=378000M,node=4
+1666205.1|COMPLETED|0:0|15528660K|cpu=24,gres/gpu=4,mem=378000M,node=4
+1666205.2|FAILED|1:0|5667084K|cpu=24,gres/gpu=4,mem=378000M,node=4

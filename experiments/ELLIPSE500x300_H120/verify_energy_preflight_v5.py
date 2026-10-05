@@ -2,27 +2,62 @@
 import argparse
 import hashlib
 import json
+import math
+import os
 from pathlib import Path
+import tempfile
 import numpy as np
 from verify_first_scatter import digest,allocated_host_bytes,verify as verify_first_scatter
 
 CHANNELS=('440_ComptonOnly','440_SinglePlusCompton')
 
 
-def verify_reused_regression(contract):
+def compare_regression_receipts(frozen,current):
+    """Artifact identity stays exact; only recomputed norm roundoff is tolerated."""
+    original=json.loads(json.dumps(frozen));rechecked=json.loads(json.dumps(current))
+    for a,b in zip(original['outputs'],rechecked['outputs']):
+        x=a.pop('baseline_frame50_relative_l2');y=b.pop('baseline_frame50_relative_l2')
+        if (not math.isfinite(x) or not math.isfinite(y) or not 0<=x<=1e-5 or
+            not 0<=y<=1e-5 or not math.isclose(x,y,rel_tol=1e-12,abs_tol=0.)):
+            raise ValueError('Historical regression norm changed beyond calculation roundoff')
+    if original!=rechecked:raise ValueError('Historical regression artifact identity changed')
+
+
+def verify_reused_regression(contract,receipt_path=None):
     root=contract.parent;cfg=json.loads(contract.read_text());reuse=cfg['regression_reuse']
     for name,sha in cfg['files'].items():
         if digest(root/name)!=sha:raise ValueError('Frozen resumed release differs: '+name)
     result=Path(reuse['result']);allocation=Path(reuse['allocation'])
     if digest(result/'run_manifest.json')!=reuse['run_manifest_sha256'] or digest(allocation)!=reuse['allocation_sha256']:
         raise ValueError('Previously passed regression evidence changed')
-    verify_first_scatter(result,root/'legacy_regression/R1.json',root/'geometry.npz',
-        Path(reuse['baseline']),'regression',allocation)
-    receipt=json.loads((result/'verification.json').read_text())
     if digest(result/'verification.json')!=reuse['verification_sha256']:
-        raise ValueError('Reverified historical regression differs from frozen receipt')
+        raise ValueError('Frozen historical regression receipt changed')
+    receipt=json.loads((result/'verification.json').read_text())
+    paths=[result/'run_manifest.json']
+    for item in receipt['outputs']:
+        for kind,sha in item['sha256'].items():
+            path=result/f"Image_{item['channel']}_{kind}.float32"
+            if digest(path)!=sha:raise ValueError('Frozen historical regression image changed')
+            paths.append(path)
+    # The legacy verifier writes verification.json. Give it a temporary view of
+    # the immutable artifacts, so it never overwrites the original receipt.
+    with tempfile.TemporaryDirectory(dir=result.parent,prefix='regression_recheck_') as temp:
+        proxy=Path(temp)
+        for path in paths:os.link(path,proxy/path.name)
+        verify_first_scatter(proxy,root/'legacy_regression/R1.json',root/'geometry.npz',
+            Path(reuse['baseline']),'regression',allocation)
+        recomputed=json.loads((proxy/'verification.json').read_text())
+        compare_regression_receipts(receipt,recomputed)
+    if digest(result/'verification.json')!=reuse['verification_sha256']:
+        raise ValueError('Original receipt was modified by reverification')
     if not receipt['passed'] or receipt['accepted_events']!=91231 or receipt['iterations']!=50:
         raise ValueError('Historical regression incomplete')
+    if receipt_path is not None:
+        evidence=dict(passed=True,source_job=reuse['job'],source_verification_sha256=reuse['verification_sha256'],
+            source_run_manifest_sha256=reuse['run_manifest_sha256'],source_allocation_sha256=reuse['allocation_sha256'],
+            contract_sha256=digest(contract),recomputed_outputs=recomputed['outputs'],
+            artifact_hashes_identical=True,norm_roundoff_relative_tolerance=1e-12,regression_L2_threshold=1e-5)
+        receipt_path.write_text(json.dumps(evidence,indent=2,allow_nan=False)+'\n')
     print('ENERGY_V5_REUSED_REGRESSION_VERIFIED',reuse['job'])
     return receipt
 
@@ -106,8 +141,9 @@ if __name__=='__main__':
     p.add_argument('--contract',type=Path,required=True)
     p.add_argument('--result',type=Path);p.add_argument('--allocation',type=Path)
     p.add_argument('--reuse-regression-only',action='store_true')
+    p.add_argument('--reuse-receipt',type=Path)
     a=p.parse_args()
-    if a.reuse_regression_only:verify_reused_regression(a.contract)
+    if a.reuse_regression_only:verify_reused_regression(a.contract,a.reuse_receipt)
     else:
         if a.result is None or a.allocation is None:p.error('result and allocation are required for a pilot')
         verify(a.result,a.contract,a.allocation)

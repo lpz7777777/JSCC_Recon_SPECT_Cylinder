@@ -26,7 +26,8 @@ export ABLATION_HOST_ALLOCATED_BYTES=$("$RESPONSE_PYTHON" "$release/verify_first
   --allocation-only "$study/allocation_${SLURM_JOB_ID}.txt" --nodes "$SLURM_NNODES")
 phases=(regression angular continuous_energy)
 if "$RESPONSE_PYTHON" -c 'import json,sys; sys.exit(0 if json.load(open(sys.argv[1])).get("regression_reuse") else 1)' "$release/contract.json"; then
-  "$RESPONSE_PYTHON" "$release/verify_energy_preflight_v5.py" --contract "$release/contract.json" --reuse-regression-only
+  "$RESPONSE_PYTHON" "$release/verify_energy_preflight_v5.py" --contract "$release/contract.json" \
+    --reuse-regression-only --reuse-receipt "$study/regression_reuse_${SLURM_JOB_ID}.json"
   phases=(angular continuous_energy)
 fi
 for phase in "${phases[@]}"; do

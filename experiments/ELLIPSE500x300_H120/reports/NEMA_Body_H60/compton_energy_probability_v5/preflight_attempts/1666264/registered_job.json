@@ -1,9 +1,9 @@
 {
-  "job": 1666430,
+  "job": 1666264,
   "nodes": 4,
   "gpus_per_node": 1,
-  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/preflight_releases/0f02e65446a2dc2f",
-  "submitted_utc": "2026-10-05T18:14:24.492174+00:00",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/preflight_releases/60c12fd7c790c0b2",
+  "submitted_utc": "2026-10-05T16:52:57.049727+00:00",
   "phases": [
     "angular whole-cell 10",
     "continuous_energy whole-cell 10"
