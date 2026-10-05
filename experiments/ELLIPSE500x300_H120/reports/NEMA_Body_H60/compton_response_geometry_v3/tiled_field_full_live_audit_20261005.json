@@ -1,57 +1,57 @@
 {
-  "timestamp_utc": "2026-10-05T03:21:52.889740+00:00",
+  "timestamp_utc": "2026-10-05T06:26:04.480419+00:00",
   "status": "LIVE_RECEIPT_STAT_AUDIT_ACCURACY_HOLD",
-  "completed_receipts": 1562,
+  "completed_receipts": 2018,
   "required_tiles": 10720,
   "receipt_stat_issues": [],
   "receipt_stat_issue_count": 0,
   "pending_tile_directories": [
-    "tile_x29_y06_z00",
-    "tile_x30_y06_z07",
-    "tile_x30_y06_z09",
-    "tile_x31_y06_z06"
+    "tile_x06_y08_z02",
+    "tile_x07_y08_z09",
+    "tile_x08_y08_z09",
+    "tile_x09_y08_z06"
   ],
-  "retained_compact_bytes": 322189666304,
+  "retained_compact_bytes": 416247597056,
   "workers": [
     {
       "shard": 0,
       "physical_gpu": 0,
       "pid": 2542514,
       "active": true,
-      "process_tree_rss_bytes": 1339150336,
+      "process_tree_rss_bytes": 1339805696,
       "process_tree": [
         {
           "pid": 2542514,
           "rss_bytes": 3915776,
-          "elapsed_seconds": 36020,
+          "elapsed_seconds": 47072,
           "command": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s0.sh"
         },
         {
           "pid": 2542516,
           "rss_bytes": 2240512,
-          "elapsed_seconds": 36020,
+          "elapsed_seconds": 47072,
           "command": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 0 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 0 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
           "pid": 2542517,
-          "rss_bytes": 544305152,
-          "elapsed_seconds": 36020,
+          "rss_bytes": 544915456,
+          "elapsed_seconds": 47072,
           "command": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 0 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 0 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
-          "pid": 3769560,
-          "rss_bytes": 788688896,
-          "elapsed_seconds": 61,
-          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x31_y06_z06/pe.sysmat -cuda 0"
+          "pid": 4183712,
+          "rss_bytes": 788733952,
+          "elapsed_seconds": 45,
+          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x09_y08_z06/pe.sysmat -cuda 0"
         }
       ],
       "progress": {
-        "new_tiles": 387,
+        "new_tiles": 502,
         "resumed_tiles": 2,
         "assigned_tiles": 2680,
-        "completed_tiles": 389,
-        "elapsed_seconds": 35932.229013694974,
-        "latest": "tile_x31_y06_z02",
+        "completed_tiles": 504,
+        "elapsed_seconds": 46997.59073333198,
+        "latest": "tile_x09_y08_z02",
         "phase": "full",
         "shard": 0,
         "shards": 4,
@@ -61,51 +61,57 @@
         "S2_generated": false
       },
       "log_tail": [
-        "{\"part\": \"tile_x30_y06_z00\", \"phase\": \"COMPLETE\", \"seconds\": 91.93999746500049}",
-        "{\"part\": \"tile_x30_y06_z04\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.27921058004722}",
-        "{\"part\": \"tile_x30_y06_z04\", \"phase\": \"COMPLETE\", \"seconds\": 91.08695012005046}",
-        "{\"part\": \"tile_x30_y06_z08\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.22861665399978}",
-        "{\"part\": \"tile_x30_y06_z08\", \"phase\": \"COMPLETE\", \"seconds\": 91.29970123700332}",
-        "{\"part\": \"tile_x31_y06_z02\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.727882387989666}",
-        "{\"part\": \"tile_x31_y06_z02\", \"phase\": \"COMPLETE\", \"seconds\": 92.56125831202371}",
-        "{\"part\": \"tile_x31_y06_z06\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.283587770012673}"
+        "{\"part\": \"tile_x08_y08_z00\", \"phase\": \"COMPLETE\", \"seconds\": 98.47171667200746}",
+        "{\"part\": \"tile_x08_y08_z04\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.106691711000167}",
+        "{\"part\": \"tile_x08_y08_z04\", \"phase\": \"COMPLETE\", \"seconds\": 96.7247492930037}",
+        "{\"part\": \"tile_x08_y08_z08\", \"phase\": \"PE_COMPLETED\", \"seconds\": 27.883032597019337}",
+        "{\"part\": \"tile_x08_y08_z08\", \"phase\": \"COMPLETE\", \"seconds\": 96.95826149196364}",
+        "{\"part\": \"tile_x09_y08_z02\", \"phase\": \"PE_COMPLETED\", \"seconds\": 27.936556681001093}",
+        "{\"part\": \"tile_x09_y08_z02\", \"phase\": \"COMPLETE\", \"seconds\": 96.59981221402995}",
+        "{\"part\": \"tile_x09_y08_z06\", \"phase\": \"PE_COMPLETED\", \"seconds\": 27.699753190972842}"
       ],
       "failure_lines": [],
-      "progress_age_seconds": 87.10614705085754
+      "progress_age_seconds": 73.32552170753479
     },
     {
       "shard": 1,
       "physical_gpu": 1,
       "pid": 2542646,
       "active": true,
-      "process_tree_rss_bytes": 790302720,
+      "process_tree_rss_bytes": 1339895808,
       "process_tree": [
         {
           "pid": 2542646,
           "rss_bytes": 3829760,
-          "elapsed_seconds": 36019,
+          "elapsed_seconds": 47071,
           "command": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s1.sh"
         },
         {
           "pid": 2542648,
           "rss_bytes": 2240512,
-          "elapsed_seconds": 36019,
+          "elapsed_seconds": 47071,
           "command": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 1 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 1 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
           "pid": 2542649,
-          "rss_bytes": 784232448,
-          "elapsed_seconds": 36019,
+          "rss_bytes": 545296384,
+          "elapsed_seconds": 47071,
           "command": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 1 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 1 --run-id full_batch1 --stop-after-seconds 72000"
+        },
+        {
+          "pid": 4183467,
+          "rss_bytes": 788529152,
+          "elapsed_seconds": 54,
+          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x08_y08_z09/pe.sysmat -cuda 0"
         }
       ],
       "progress": {
-        "new_tiles": 385,
+        "new_tiles": 500,
         "resumed_tiles": 2,
         "assigned_tiles": 2680,
-        "completed_tiles": 387,
-        "elapsed_seconds": 35926.875438602,
-        "latest": "tile_x30_y06_z05",
+        "completed_tiles": 502,
+        "elapsed_seconds": 46986.93379151198,
+        "latest": "tile_x08_y08_z05",
         "phase": "full",
         "shard": 1,
         "shards": 4,
@@ -115,57 +121,57 @@
         "S2_generated": false
       },
       "log_tail": [
-        "{\"part\": \"tile_x29_y06_z03\", \"phase\": \"COMPLETE\", \"seconds\": 90.88155108003411}",
-        "{\"part\": \"tile_x29_y06_z07\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.376275671995245}",
-        "{\"part\": \"tile_x29_y06_z07\", \"phase\": \"COMPLETE\", \"seconds\": 90.784902659012}",
-        "{\"part\": \"tile_x30_y06_z01\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.88560557604069}",
-        "{\"part\": \"tile_x30_y06_z01\", \"phase\": \"COMPLETE\", \"seconds\": 93.18955995503347}",
-        "{\"part\": \"tile_x30_y06_z05\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.430842036032118}",
-        "{\"part\": \"tile_x30_y06_z05\", \"phase\": \"COMPLETE\", \"seconds\": 91.15207863604883}",
-        "{\"part\": \"tile_x30_y06_z09\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.48531791899586}"
+        "{\"part\": \"tile_x07_y08_z03\", \"phase\": \"COMPLETE\", \"seconds\": 98.18635550502222}",
+        "{\"part\": \"tile_x07_y08_z07\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.538280516979285}",
+        "{\"part\": \"tile_x07_y08_z07\", \"phase\": \"COMPLETE\", \"seconds\": 98.10811280598864}",
+        "{\"part\": \"tile_x08_y08_z01\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.53935013897717}",
+        "{\"part\": \"tile_x08_y08_z01\", \"phase\": \"COMPLETE\", \"seconds\": 97.42709917697357}",
+        "{\"part\": \"tile_x08_y08_z05\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.3907210000325}",
+        "{\"part\": \"tile_x08_y08_z05\", \"phase\": \"COMPLETE\", \"seconds\": 97.22050470800605}",
+        "{\"part\": \"tile_x08_y08_z09\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.28835720900679}"
       ],
       "failure_lines": [],
-      "progress_age_seconds": 91.33716607093811
+      "progress_age_seconds": 82.86021661758423
     },
     {
       "shard": 2,
       "physical_gpu": 3,
       "pid": 2542872,
       "active": true,
-      "process_tree_rss_bytes": 653656064,
+      "process_tree_rss_bytes": 656392192,
       "process_tree": [
         {
           "pid": 2542872,
           "rss_bytes": 3878912,
-          "elapsed_seconds": 36018,
+          "elapsed_seconds": 47070,
           "command": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s2.sh"
         },
         {
           "pid": 2542877,
           "rss_bytes": 2240512,
-          "elapsed_seconds": 36018,
+          "elapsed_seconds": 47070,
           "command": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 2 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 3 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
           "pid": 2542880,
-          "rss_bytes": 543428608,
-          "elapsed_seconds": 36018,
+          "rss_bytes": 546156544,
+          "elapsed_seconds": 47070,
           "command": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 2 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 3 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
-          "pid": 3771602,
-          "rss_bytes": 104108032,
-          "elapsed_seconds": 9,
-          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/PEGen_RayTracing_CircularHole/PEGen_V4_Production --cuda 0 --face-subdiv 16 --rows-per-chunk 4 --samples-per-launch 32 --output-unwindowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x29_y06_z00/pe.sysmat --output-windowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x29_y06_z00/pe_windowed.sysmat --manifest /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x29_y06_z00/pe_manifest.json --progress /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x29_y06_z00/pe_progress.json --log /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x29_y06_z00/pe_progress.tsv"
+          "pid": 4185246,
+          "rss_bytes": 104116224,
+          "elapsed_seconds": 4,
+          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/PEGen_RayTracing_CircularHole/PEGen_V4_Production --cuda 0 --face-subdiv 16 --rows-per-chunk 4 --samples-per-launch 32 --output-unwindowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y08_z02/pe.sysmat --output-windowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y08_z02/pe_windowed.sysmat --manifest /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y08_z02/pe_manifest.json --progress /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y08_z02/pe_progress.json --log /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y08_z02/pe_progress.tsv"
         }
       ],
       "progress": {
-        "new_tiles": 379,
+        "new_tiles": 492,
         "resumed_tiles": 3,
         "assigned_tiles": 2680,
-        "completed_tiles": 382,
-        "elapsed_seconds": 36007.95587647203,
-        "latest": "tile_x28_y06_z06",
+        "completed_tiles": 495,
+        "elapsed_seconds": 47064.24364338498,
+        "latest": "tile_x05_y08_z08",
         "phase": "full",
         "shard": 2,
         "shards": 4,
@@ -175,57 +181,57 @@
         "S2_generated": false
       },
       "log_tail": [
-        "{\"part\": \"tile_x27_y06_z04\", \"phase\": \"PE_COMPLETED\", \"seconds\": 26.030466244963463}",
-        "{\"part\": \"tile_x27_y06_z04\", \"phase\": \"COMPLETE\", \"seconds\": 91.94486823299667}",
-        "{\"part\": \"tile_x27_y06_z08\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.880682035000063}",
-        "{\"part\": \"tile_x27_y06_z08\", \"phase\": \"COMPLETE\", \"seconds\": 91.947191897023}",
-        "{\"part\": \"tile_x28_y06_z02\", \"phase\": \"PE_COMPLETED\", \"seconds\": 26.13186179997865}",
-        "{\"part\": \"tile_x28_y06_z02\", \"phase\": \"COMPLETE\", \"seconds\": 92.55918041197583}",
-        "{\"part\": \"tile_x28_y06_z06\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.789499631966464}",
-        "{\"part\": \"tile_x28_y06_z06\", \"phase\": \"COMPLETE\", \"seconds\": 92.10473305900814}"
+        "{\"part\": \"tile_x04_y08_z06\", \"phase\": \"PE_COMPLETED\", \"seconds\": 29.297054007998668}",
+        "{\"part\": \"tile_x04_y08_z06\", \"phase\": \"COMPLETE\", \"seconds\": 102.96677176200319}",
+        "{\"part\": \"tile_x05_y08_z00\", \"phase\": \"PE_COMPLETED\", \"seconds\": 29.64435496798251}",
+        "{\"part\": \"tile_x05_y08_z00\", \"phase\": \"COMPLETE\", \"seconds\": 102.92895752197364}",
+        "{\"part\": \"tile_x05_y08_z04\", \"phase\": \"PE_COMPLETED\", \"seconds\": 29.239556700980756}",
+        "{\"part\": \"tile_x05_y08_z04\", \"phase\": \"COMPLETE\", \"seconds\": 102.32092121097958}",
+        "{\"part\": \"tile_x05_y08_z08\", \"phase\": \"PE_COMPLETED\", \"seconds\": 29.138177843997255}",
+        "{\"part\": \"tile_x05_y08_z08\", \"phase\": \"COMPLETE\", \"seconds\": 101.95352364197606}"
       ],
       "failure_lines": [],
-      "progress_age_seconds": 9.399720668792725
+      "progress_age_seconds": 4.692553281784058
     },
     {
       "shard": 3,
       "physical_gpu": 4,
       "pid": 2543046,
       "active": true,
-      "process_tree_rss_bytes": 654761984,
+      "process_tree_rss_bytes": 1339957248,
       "process_tree": [
         {
           "pid": 2543046,
           "rss_bytes": 3825664,
-          "elapsed_seconds": 36017,
+          "elapsed_seconds": 47069,
           "command": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s3.sh"
         },
         {
           "pid": 2543048,
           "rss_bytes": 2244608,
-          "elapsed_seconds": 36017,
+          "elapsed_seconds": 47069,
           "command": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 3 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 4 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
           "pid": 2543049,
-          "rss_bytes": 544522240,
-          "elapsed_seconds": 36017,
+          "rss_bytes": 545226752,
+          "elapsed_seconds": 47069,
           "command": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 3 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 4 --run-id full_batch1 --stop-after-seconds 72000"
         },
         {
-          "pid": 3771600,
-          "rss_bytes": 104169472,
-          "elapsed_seconds": 9,
-          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/PEGen_RayTracing_CircularHole/PEGen_V4_Production --cuda 0 --face-subdiv 16 --rows-per-chunk 4 --samples-per-launch 32 --output-unwindowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x30_y06_z07/pe.sysmat --output-windowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x30_y06_z07/pe_windowed.sysmat --manifest /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x30_y06_z07/pe_manifest.json --progress /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x30_y06_z07/pe_progress.json --log /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x30_y06_z07/pe_progress.tsv"
+          "pid": 4184519,
+          "rss_bytes": 788660224,
+          "elapsed_seconds": 33,
+          "command": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x07_y08_z09/pe.sysmat -cuda 0"
         }
       ],
       "progress": {
-        "new_tiles": 382,
+        "new_tiles": 495,
         "resumed_tiles": 4,
         "assigned_tiles": 2680,
-        "completed_tiles": 386,
-        "elapsed_seconds": 36006.804617696005,
-        "latest": "tile_x30_y06_z03",
+        "completed_tiles": 499,
+        "elapsed_seconds": 47005.86395562402,
+        "latest": "tile_x07_y08_z05",
         "phase": "full",
         "shard": 3,
         "shards": 4,
@@ -235,34 +241,34 @@
         "S2_generated": false
       },
       "log_tail": [
-        "{\"part\": \"tile_x29_y06_z01\", \"phase\": \"PE_COMPLETED\", \"seconds\": 26.036642286984716}",
-        "{\"part\": \"tile_x29_y06_z01\", \"phase\": \"COMPLETE\", \"seconds\": 93.01725575100863}",
-        "{\"part\": \"tile_x29_y06_z05\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.879291802993976}",
-        "{\"part\": \"tile_x29_y06_z05\", \"phase\": \"COMPLETE\", \"seconds\": 92.13848363497527}",
-        "{\"part\": \"tile_x29_y06_z09\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.82414158800384}",
-        "{\"part\": \"tile_x29_y06_z09\", \"phase\": \"COMPLETE\", \"seconds\": 92.63856119097909}",
-        "{\"part\": \"tile_x30_y06_z03\", \"phase\": \"PE_COMPLETED\", \"seconds\": 25.930476570967585}",
-        "{\"part\": \"tile_x30_y06_z03\", \"phase\": \"COMPLETE\", \"seconds\": 92.86353394994512}"
+        "{\"part\": \"tile_x06_y08_z03\", \"phase\": \"COMPLETE\", \"seconds\": 100.5429596590111}",
+        "{\"part\": \"tile_x06_y08_z07\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.8414697140106}",
+        "{\"part\": \"tile_x06_y08_z07\", \"phase\": \"COMPLETE\", \"seconds\": 100.27629496605368}",
+        "{\"part\": \"tile_x07_y08_z01\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.880608356033918}",
+        "{\"part\": \"tile_x07_y08_z01\", \"phase\": \"COMPLETE\", \"seconds\": 100.14191333699273}",
+        "{\"part\": \"tile_x07_y08_z05\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.685717267973814}",
+        "{\"part\": \"tile_x07_y08_z05\", \"phase\": \"COMPLETE\", \"seconds\": 99.00259431195445}",
+        "{\"part\": \"tile_x07_y08_z09\", \"phase\": \"PE_COMPLETED\", \"seconds\": 28.845717032963876}"
       ],
       "failure_lines": [],
-      "progress_age_seconds": 9.445799112319946
+      "progress_age_seconds": 61.96827721595764
     }
   ],
   "gpu_samples": [
     "0, 935, 49140, 100",
-    "1, 0, 49140, 0",
+    "1, 935, 49140, 100",
     "3, 275, 49140, 98",
-    "4, 275, 49140, 98"
+    "4, 935, 49140, 100"
   ],
   "memory": {
     "MemTotal": 1622941253632,
-    "MemAvailable": 1580606611456
+    "MemAvailable": 1579930042368
   },
   "disk": {
     "total_bytes": 7618652209152,
-    "free_bytes": 5428221779968,
-    "remaining_compact_bytes": 1888996775936,
-    "reserve_required_bytes": 3416349474406.4004,
+    "free_bytes": 5333805469696,
+    "remaining_compact_bytes": 1794938845184,
+    "reserve_required_bytes": 3322291543654.4004,
     "reserve_sufficient": true
   },
   "full_compact_sha_rechecked": false,
