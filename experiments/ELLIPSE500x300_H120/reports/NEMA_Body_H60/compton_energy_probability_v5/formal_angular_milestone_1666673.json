@@ -1,0 +1,44 @@
+{
+  "job": 1666673,
+  "utc": "2026-10-05T21:48:36.404901+00:00",
+  "completed_model": "angular",
+  "paired_imaging_completed": false,
+  "readonly_reverification_passed": true,
+  "proof_sha256": {
+    "verification_sha256": "32ce8bc8e26872e34d76a1101ffa62cbea39a073e25d26a6777c7e277446b487",
+    "run_manifest_sha256": "f9b4545d1c76137b7c840e8210dfc9110a63c2d9721e6035db5fa56635d1bb21"
+  },
+  "iterations": 2000,
+  "save_step": 50,
+  "channels": 2,
+  "frames_per_channel": 40,
+  "checkpoints": 40,
+  "accepted_events": 91225,
+  "views": 20,
+  "workers": 200,
+  "actual_primary_gamma": 1000000000,
+  "pixels_active": 78920,
+  "pixels_full": 132040,
+  "contract_sha256": "95d507f907f5670855502ee23ab11fbdaa7ae2e77e7ed9cc3dcf6f968a9a61fd",
+  "authority_sha256": "d33a11bcd6081a471fd662dd050d7fb10d2f45ac767cf591db97133a20ba2843",
+  "gpu_peak_fraction": 0.3346223922511121,
+  "rss_peak_fraction": 0.22777610677083332,
+  "slurm_stage_maxrss_bytes": 14497357824,
+  "host_allocated_bytes_per_node": 62914560000,
+  "slurm_stage_maxrss_fraction": 0.230429296875,
+  "next_model": "continuous_energy",
+  "next_state": "iterating",
+  "scientific_comparison_available": false,
+  "next_model_progress": {
+    "utc": "2026-10-05T21:47:14.437586+00:00",
+    "state": "iterating",
+    "progress": {
+      "model": "continuous_energy",
+      "iteration": 100,
+      "elapsed_seconds": 553.7965643620118,
+      "contract_sha256": "95d507f907f5670855502ee23ab11fbdaa7ae2e77e7ed9cc3dcf6f968a9a61fd",
+      "peak_reserved_bytes": 15286140928
+    },
+    "checkpoints": 2
+  }
+}

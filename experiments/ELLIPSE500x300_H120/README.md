@@ -1,6 +1,6 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
-2026-10-06 04:24：独立正式入口完整事件验证1666592已实际通过；四张第10帧与预检逐值一致（L2全部0），GPU峰值35.73%/64.98%，RSS22.78%/22.75%，Slurm实际主存占比22.98%。唯一正式配对 **1666673** 已提交（4节点×1GPU、bond0、发布2a62bcf35f00e1d4），A角度核/B连续材料能量核顺序各2000/save50，目前Priority排队；科学尖峰结果尚未完成。按实测纯计算约2小时10分钟，排队另计。[新入口验收](reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL_ENTRY_ACCEPTANCE.md)、[正式合同](reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL.md)。
+2026-10-06 05:49：唯一正式配对1666673的A角度核已完成2000/save50，91225事件/20视角/78920列及两路各40帧、40检查点通过阶段严格验收和独立只读复验；GPU峰值33.46%、进程RSS22.78%、Slurm阶段MaxRSS23.04%（实际60000MiB/节点）。B连续能量核已进入迭代，最新持久化100/2000，4节点×1GPU、bond0及冻结发布不变。完整A/B科学对照尚未完成，继续等待B结束及整体验收。[新入口验收](reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL_ENTRY_ACCEPTANCE.md)、[正式合同](reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL.md)。
 
 **2026-10-05 21:41最新执行：[连续能量响应诊断验收](reports/NEMA_Body_H60/compton_energy_probability_v5/DIAGNOSTIC_ACCEPTANCE.md)完成，DIAGNOSTIC_GATES_PASSED。** 全159919固定训练事件的匹配S、独立空间/联合类别门槛通过，65114候选链已退出释放GPU。144个充分空间区偏差RMS由2.852%降至1.124%；联合类别仅57/504充分，447未判定，不能称整体联合物理已认证。下一步为独立入口的新基底回归与完整事件10次试跑；未提交配对成像，尚不能称尖峰已经解决。原生产核与基底未覆盖，新增Geant4和精细A矩阵均为0，原自动任务保持停止。
 

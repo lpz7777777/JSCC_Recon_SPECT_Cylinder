@@ -1,0 +1,42 @@
+{
+  "scope": "All new staged blobs relative to already fully audited and pushed ae59e58; no unpushed preceding commits",
+  "parent_commit": "ae59e58301600519bc3929fa07838eecfdefcf2f",
+  "parent_full_audit": "formal_submission_git_audit.json",
+  "audited_tree": "0eba208cab671c1ab98c0aee88b68baff70eaf4d",
+  "checked_new_blobs": 7,
+  "total_new_blob_bytes": 118143,
+  "files": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 21647,
+      "sha256": "346c14a04e09cd551a2b7116950afde77ff9e5c64ce2f566ce84d61175997070"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL.md": {
+      "bytes": 4929,
+      "sha256": "25684d2a1c23270f19cd28c7c29db16fba5100ef62037cdd7fa4e74cdff0c6fe"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/PRODUCTION.md": {
+      "bytes": 18971,
+      "sha256": "236f747dd08bd82b342a9a7cfe794bf655cf274dc8ccfd2028e7ee47d8322a8f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/README.md": {
+      "bytes": 3833,
+      "sha256": "1b4f7aa6f6194c68bffd58e8088016a8a1b35dac4718fd01f3efcef0c398de0f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/formal_angular_milestone_1666673.json": {
+      "bytes": 1597,
+      "sha256": "a2272fb12f16ff45309f09424f2ed594b88afca11eb2f105be660fc575ada406"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/formal_evidence/1666673/angular/run_manifest.json": {
+      "bytes": 35651,
+      "sha256": "f9b4545d1c76137b7c840e8210dfc9110a63c2d9721e6035db5fa56635d1bb21"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/formal_evidence/1666673/angular/verification.json": {
+      "bytes": 31515,
+      "sha256": "32ce8bc8e26872e34d76a1101ffa62cbea39a073e25d26a6777c7e277446b487"
+    }
+  },
+  "findings": [],
+  "job": 1666673,
+  "stage": "angular2000 completed; paired result not complete",
+  "note": "Receipt created after delta scan; receipt itself separately size/pattern checked. Large arrays stay in ignored generated directories."
+}
