@@ -1,0 +1,8 @@
+{
+  "status": "RETIRED_BY_USER",
+  "date": "2026-10-05",
+  "scope": "All auxiliary fine A440 field, guard, patch, column, tile and regional production in compton_response_geometry_v3",
+  "resume_authorized": false,
+  "preserved": ["original Factors", "Geant4 inputs and outputs", "reconstruction histories", "stable geometry repair", "frozen source releases", "diagnostic summaries and metadata archive"],
+  "new_plan": "../process_list_global_audit_v4/PLAN.md"
+}

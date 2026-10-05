@@ -1,0 +1,429 @@
+{
+  "utc": "2026-10-05T08:47:35.918473+00:00",
+  "base": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3",
+  "directories": [
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_component_diagnosis",
+      "bytes": 28695,
+      "files": 2,
+      "symlinks": [],
+      "large_examples": []
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard",
+      "bytes": 5344456408,
+      "files": 139,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "x_plus/pe_windowed.sysmat",
+          "bytes": 160358400
+        },
+        {
+          "relative": "x_plus/pe.sysmat",
+          "bytes": 160358400
+        },
+        {
+          "relative": "x_plus/Scatter_SysMat_shift_258.000000_0.000000_0.000000.sysmat",
+          "bytes": 160358400
+        },
+        {
+          "relative": "x_plus/SysMat_withScatter_shift_258.000000_0.000000_0.000000.sysmat",
+          "bytes": 160358400
+        },
+        {
+          "relative": "y_plus/pe_windowed.sysmat",
+          "bytes": 156672000
+        },
+        {
+          "relative": "y_plus/pe.sysmat",
+          "bytes": 156672000
+        },
+        {
+          "relative": "y_plus/Scatter_SysMat_shift_0.000000_258.000000_0.000000.sysmat",
+          "bytes": 156672000
+        },
+        {
+          "relative": "y_plus/SysMat_withScatter_shift_0.000000_258.000000_0.000000.sysmat",
+          "bytes": 156672000
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field",
+      "bytes": 12135514235,
+      "files": 3,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "A_field.float64",
+          "bytes": 12135223296
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field_repair",
+      "bytes": 212261,
+      "files": 4,
+      "symlinks": [],
+      "large_examples": []
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_near_column",
+      "bytes": 5550591875,
+      "files": 17,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "near_column/pe_windowed.sysmat",
+          "bytes": 1387330560
+        },
+        {
+          "relative": "near_column/pe.sysmat",
+          "bytes": 1387330560
+        },
+        {
+          "relative": "near_column/Scatter_SysMat_shift_0.000000_252.000000_0.000000.sysmat",
+          "bytes": 1387330560
+        },
+        {
+          "relative": "near_column/SysMat_withScatter_shift_0.000000_252.000000_0.000000.sysmat",
+          "bytes": 1387330560
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_near_patch",
+      "bytes": 426806808,
+      "files": 49,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "near_plus/pe_windowed.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_plus/pe.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_plus/SysMat_withScatter_shift_0.000000_252.000000_57.000000.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_plus/Scatter_SysMat_shift_0.000000_252.000000_57.000000.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_minus/pe_windowed.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_minus/pe.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_minus/SysMat_withScatter_shift_0.000000_252.000000_-57.000000.sysmat",
+          "bytes": 35251200
+        },
+        {
+          "relative": "near_minus/Scatter_SysMat_shift_0.000000_252.000000_-57.000000.sysmat",
+          "bytes": 35251200
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_near_patch_refined",
+      "bytes": 520822873,
+      "files": 52,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "near_plus/pe_windowed.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_plus/SysMat_withScatter_shift_0.000000_252.000000_58.500000.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_plus/pe.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_plus/Scatter_SysMat_shift_0.000000_252.000000_58.500000.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_minus/pe_windowed.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_minus/Scatter_SysMat_shift_0.000000_252.000000_-58.500000.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_minus/pe.sysmat",
+          "bytes": 43084800
+        },
+        {
+          "relative": "near_minus/SysMat_withScatter_shift_0.000000_252.000000_-58.500000.sysmat",
+          "bytes": 43084800
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_near_patch_ultrafine",
+      "bytes": 3452633432,
+      "files": 52,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "near_plus/pe_windowed.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_plus/SysMat_withScatter_shift_0.000000_252.000000_58.500000.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_plus/pe.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_plus/Scatter_SysMat_shift_0.000000_252.000000_58.500000.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_minus/pe_windowed.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_minus/Scatter_SysMat_shift_0.000000_252.000000_-58.500000.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_minus/pe.sysmat",
+          "bytes": 287400960
+        },
+        {
+          "relative": "near_minus/SysMat_withScatter_shift_0.000000_252.000000_-58.500000.sysmat",
+          "bytes": 287400960
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_radial_check",
+      "bytes": 4582317,
+      "files": 16,
+      "symlinks": [],
+      "large_examples": []
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_sampling_diagnosis",
+      "bytes": 106559,
+      "files": 2,
+      "symlinks": [],
+      "large_examples": []
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tile_pilot",
+      "bytes": 415061194,
+      "files": 28,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "tile_x21_y41_z05/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x21_y42_z05/A_selected.float32",
+          "bytes": 206267392
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field",
+      "bytes": 493016986961,
+      "files": 33211,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "tile_x29_y01_z08/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x19_y03_z01/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x19_y06_z03/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x07_y06_z04/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x09_y05_z01/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x22_y00_z03/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x23_y01_z08/A_selected.float32",
+          "bytes": 206267392
+        },
+        {
+          "relative": "tile_x33_y04_z01/A_selected.float32",
+          "bytes": 206267392
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g0",
+      "bytes": 6059640094,
+      "files": 122,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "inner_near_z00_fine/pe_windowed.sysmat",
+          "bytes": 228510720
+        },
+        {
+          "relative": "inner_near_z00_fine/pe.sysmat",
+          "bytes": 228510720
+        },
+        {
+          "relative": "inner_near_z00_fine/SysMat_withScatter_shift_0.000000_155.625000_-58.500000.sysmat",
+          "bytes": 228510720
+        },
+        {
+          "relative": "inner_near_z00_fine/Scatter_SysMat_shift_0.000000_155.625000_-58.500000.sysmat",
+          "bytes": 228510720
+        },
+        {
+          "relative": "middle_oblique_z00_fine/pe_windowed.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "middle_oblique_z00_fine/Scatter_SysMat_shift_148.500000_148.500000_-58.500000.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "middle_oblique_z00_fine/pe.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "middle_oblique_z00_fine/SysMat_withScatter_shift_148.500000_148.500000_-58.500000.sysmat",
+          "bytes": 567751680
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g0_releases",
+      "bytes": 74328,
+      "files": 9,
+      "symlinks": [],
+      "large_examples": []
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g1",
+      "bytes": 6059639772,
+      "files": 122,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "middle_oblique_z20_fine/pe_windowed.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "middle_oblique_z20_fine/Scatter_SysMat_shift_148.500000_148.500000_1.500000.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "middle_oblique_z20_fine/pe.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "middle_oblique_z20_fine/SysMat_withScatter_shift_148.500000_148.500000_1.500000.sysmat",
+          "bytes": 567751680
+        },
+        {
+          "relative": "inner_near_z20_coarse/pe_windowed.sysmat",
+          "bytes": 34560000
+        },
+        {
+          "relative": "inner_near_z20_coarse/pe.sysmat",
+          "bytes": 34560000
+        },
+        {
+          "relative": "inner_near_z20_coarse/Scatter_SysMat_shift_0.000000_155.625000_1.500000.sysmat",
+          "bytes": 34560000
+        },
+        {
+          "relative": "inner_near_z20_coarse/SysMat_withScatter_shift_0.000000_155.625000_1.500000.sysmat",
+          "bytes": 34560000
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g1_releases",
+      "bytes": 74328,
+      "files": 9,
+      "symlinks": [],
+      "large_examples": []
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g2",
+      "bytes": 6059638797,
+      "files": 122,
+      "symlinks": [],
+      "large_examples": [
+        {
+          "relative": "outer_far_z39_fine/pe_windowed.sysmat",
+          "bytes": 260029440
+        },
+        {
+          "relative": "outer_far_z39_fine/pe.sysmat",
+          "bytes": 260029440
+        },
+        {
+          "relative": "outer_far_z39_fine/Scatter_SysMat_shift_0.000000_-251.625000_58.500000.sysmat",
+          "bytes": 260029440
+        },
+        {
+          "relative": "outer_far_z39_fine/SysMat_withScatter_shift_0.000000_-251.625000_58.500000.sysmat",
+          "bytes": 260029440
+        },
+        {
+          "relative": "outer_far_z39_coarse/pe_windowed.sysmat",
+          "bytes": 39168000
+        },
+        {
+          "relative": "outer_far_z39_coarse/pe.sysmat",
+          "bytes": 39168000
+        },
+        {
+          "relative": "outer_far_z39_coarse/Scatter_SysMat_shift_0.000000_-251.625000_58.500000.sysmat",
+          "bytes": 39168000
+        },
+        {
+          "relative": "outer_far_z39_coarse/SysMat_withScatter_shift_0.000000_-251.625000_58.500000.sysmat",
+          "bytes": 39168000
+        }
+      ]
+    },
+    {
+      "path": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/regional_a_g2_releases",
+      "bytes": 74328,
+      "files": 9,
+      "symlinks": [],
+      "large_examples": []
+    }
+  ],
+  "disk_free": 5261059051520,
+  "disk_total": 7618652209152
+}

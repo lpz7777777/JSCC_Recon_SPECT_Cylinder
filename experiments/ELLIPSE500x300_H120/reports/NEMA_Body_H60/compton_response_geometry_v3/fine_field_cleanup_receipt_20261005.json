@@ -1,0 +1,77 @@
+{
+  "status": "BINARY_RESULTS_REMOVED_BY_USER_REQUEST",
+  "utc": "2026-10-05T08:49:42.304861+00:00",
+  "deleted_binary_files": 2552,
+  "deleted_binary_bytes": 535564319744,
+  "manifest_sha256": "dd6dca6a80a79cbf12c47277b2f35fa4a52b9f7a39eff3c4b34191e3f6dd8800",
+  "disk_free_before": 5261058461696,
+  "disk_free_after": 5796632412160,
+  "remaining_by_suffix": {
+    ".json": [
+      12085,
+      19592204
+    ],
+    ".log": [
+      4833,
+      660618639
+    ],
+    ".dat": [
+      9668,
+      1337712820
+    ],
+    ".tsv": [
+      2417,
+      1029142919
+    ],
+    ".npz": [
+      1,
+      37880
+    ],
+    ".csv": [
+      3,
+      91104
+    ],
+    ".lock": [
+      2372,
+      0
+    ],
+    ".partial": [
+      2,
+      434859456
+    ]
+  },
+  "largest_remaining": [
+    [
+      217429728,
+      "A440_tiled_field/tile_x06_y09_z07/pe_windowed.sysmat.partial"
+    ],
+    [
+      217429728,
+      "A440_tiled_field/tile_x06_y09_z07/pe.sysmat.partial"
+    ],
+    [
+      552964,
+      "regional_a_g2/outer_side_z39_fine/Params_Detector.dat"
+    ],
+    [
+      552964,
+      "regional_a_g2/outer_side_z39_coarse/Params_Detector.dat"
+    ],
+    [
+      552964,
+      "regional_a_g2/outer_far_z39_fine/Params_Detector.dat"
+    ],
+    [
+      552964,
+      "regional_a_g2/outer_far_z39_coarse/Params_Detector.dat"
+    ],
+    [
+      552964,
+      "regional_a_g2/middle_oblique_z39_fine/Params_Detector.dat"
+    ],
+    [
+      552964,
+      "regional_a_g2/middle_oblique_z39_coarse/Params_Detector.dat"
+    ]
+  ]
+}

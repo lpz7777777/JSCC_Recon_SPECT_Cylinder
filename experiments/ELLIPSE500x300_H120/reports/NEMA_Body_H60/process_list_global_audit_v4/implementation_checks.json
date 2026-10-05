@@ -1,0 +1,33 @@
+{
+  "status": "PASSED",
+  "blocked_launch_entry_points": [
+    "compton_geometry_v3_workflow.guard",
+    "compton_geometry_v3_workflow.guard_field",
+    "compton_geometry_v3_workflow.guard_radial",
+    "compton_geometry_v3_workflow.repair_guard_measure",
+    "compton_geometry_v3_workflow.guard_weighted",
+    "compton_geometry_v3_workflow.guard_integral",
+    "compton_geometry_v3_workflow.overlap_benchmark",
+    "compton_geometry_v3_workflow.guard_components",
+    "compton_geometry_v3_workflow.guard_column",
+    "compton_geometry_v3_workflow.tile_pilot",
+    "compton_geometry_v3_workflow.regional_a",
+    "compton_geometry_v3_workflow.regional_validation",
+    "compton_tiled_production_v3_workflow.launch_pilot",
+    "compton_tiled_production_v3_workflow.validate_pilot",
+    "compton_tiled_production_v3_workflow.launch_full"
+  ],
+  "remote_calls_during_blocked_launches": 0,
+  "missing_marker_allows_unretired_code": true,
+  "invalid_marker_blocks": true,
+  "python_syntax_passed": true,
+  "scientific_kernel_modified": false,
+  "new_scientific_jobs_submitted": false,
+  "local_fine_matrix_binary_files_found": 0,
+  "file_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\fine_field_retirement.py": "16eafc83d058223e1977d220df4f80882a946cf538815a214114492134c0ad09",
+    "experiments\\ELLIPSE500x300_H120\\compton_geometry_v3_workflow.py": "a44cb03beec48e899ef7c7f3f30cc4a2acb78392f15d7789ad80be7678f171aa",
+    "experiments\\ELLIPSE500x300_H120\\compton_tiled_production_v3_workflow.py": "2a097425f6054d0655e372d4838f7eece19bd3c381db050455f63d00328331e7",
+    "experiments\\ELLIPSE500x300_H120\\audit_polar_whole_cell_plan.py": "da01d8908df1882a9b62f12a3ad25eee6ad5243d8733751d99b7a2e7227e1625"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "status": "STOPPED",
+  "utc": "2026-10-05T08:46:54.229033+00:00",
+  "reason": "User stopped fine A-field production and requested removal of related response data; retain cylindrical-grid investigation.",
+  "base": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3",
+  "processes_before": [
+    {
+      "pid": 314396,
+      "ppid": 2543049,
+      "pgid": 2543048,
+      "state": "R",
+      "start": "30921447",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/PEGen_RayTracing_CircularHole/PEGen_V4_Production --cuda 0 --face-subdiv 16 --rows-per-chunk 4 --samples-per-launch 32 --output-unwindowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y09_z07/pe.sysmat --output-windowed /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y09_z07/pe_windowed.sysmat --manifest /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y09_z07/pe_manifest.json --progress /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y09_z07/pe_progress.json --log /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x06_y09_z07/pe_progress.tsv"
+    },
+    {
+      "pid": 314427,
+      "ppid": 2542517,
+      "pgid": 2542516,
+      "state": "R",
+      "start": "30921694",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x08_y09_z08/pe.sysmat -cuda 0"
+    },
+    {
+      "pid": 314623,
+      "ppid": 2542649,
+      "pgid": 2542648,
+      "state": "R",
+      "start": "30922729",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x08_y09_z01/pe.sysmat -cuda 0"
+    },
+    {
+      "pid": 314786,
+      "ppid": 2542880,
+      "pgid": 2542877,
+      "state": "R",
+      "start": "30923897",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole_detector_local -PE /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field/tile_x04_y09_z06/pe.sysmat -cuda 0"
+    },
+    {
+      "pid": 2542514,
+      "ppid": 1,
+      "pgid": 2542513,
+      "state": "S",
+      "start": "25371968",
+      "args": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s0.sh"
+    },
+    {
+      "pid": 2542516,
+      "ppid": 2542514,
+      "pgid": 2542516,
+      "state": "S",
+      "start": "25371968",
+      "args": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 0 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 0 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2542517,
+      "ppid": 2542516,
+      "pgid": 2542516,
+      "state": "S",
+      "start": "25371968",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 0 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 0 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2542646,
+      "ppid": 1,
+      "pgid": 2542645,
+      "state": "S",
+      "start": "25372066",
+      "args": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s1.sh"
+    },
+    {
+      "pid": 2542648,
+      "ppid": 2542646,
+      "pgid": 2542648,
+      "state": "S",
+      "start": "25372066",
+      "args": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 1 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 1 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2542649,
+      "ppid": 2542648,
+      "pgid": 2542648,
+      "state": "S",
+      "start": "25372066",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 1 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 1 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2542872,
+      "ppid": 1,
+      "pgid": 2542870,
+      "state": "S",
+      "start": "25372166",
+      "args": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s2.sh"
+    },
+    {
+      "pid": 2542877,
+      "ppid": 2542872,
+      "pgid": 2542877,
+      "state": "S",
+      "start": "25372167",
+      "args": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 2 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 3 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2542880,
+      "ppid": 2542877,
+      "pgid": 2542877,
+      "state": "S",
+      "start": "25372167",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 2 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 3 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2543046,
+      "ppid": 1,
+      "pgid": 2543045,
+      "state": "S",
+      "start": "25372268",
+      "args": "bash /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/run_tiled_field_full_s3.sh"
+    },
+    {
+      "pid": 2543048,
+      "ppid": 2543046,
+      "pgid": 2543048,
+      "state": "S",
+      "start": "25372269",
+      "args": "timeout --signal=TERM --kill-after=30s 24h /home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 3 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 4 --run-id full_batch1 --stop-after-seconds 72000"
+    },
+    {
+      "pid": 2543049,
+      "ppid": 2543048,
+      "pgid": 2543048,
+      "state": "S",
+      "start": "25372269",
+      "args": "/home/lipeize/JSCC_FOV120_20260924/.venv/bin/python generate_compton_tiled_field_v3.py --root /home/lipeize/JSCC_FOV120_20260924 --plan /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/tiled_field_releases/1ba17805b62678eb/tiled_production_plan.json --field /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_guard_field --output /home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/A440_tiled_field --phase full --shard 3 --shards 4 --max-new-tiles 10720 --cuda 0 --physical-gpu 4 --run-id full_batch1 --stop-after-seconds 72000"
+    }
+  ],
+  "groups": [
+    2542516,
+    2542648,
+    2542877,
+    2543048
+  ],
+  "forced_pids": [],
+  "remaining_processes": [],
+  "ended_utc": "2026-10-05T08:46:54.731318+00:00"
+}

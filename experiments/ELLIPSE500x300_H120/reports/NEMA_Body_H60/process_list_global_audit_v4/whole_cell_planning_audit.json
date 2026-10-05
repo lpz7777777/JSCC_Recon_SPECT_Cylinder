@@ -1,0 +1,29 @@
+{
+  "status": "PLANNING_AUDIT_ONLY_NOT_DEPLOYED",
+  "rule": "Keep full polar sector iff its representative centre has normalized ellipse radius squared <= 1 + 1e-12",
+  "tolerance": 1e-12,
+  "points_full": 132040,
+  "old_active_cells": 82040,
+  "proposed_active_cells": 78920,
+  "z_layers": 40,
+  "views": 20,
+  "nominal_ellipse_volume_mm3": 14137166.941154068,
+  "proposed_union_volume_mm3": 14135997.191569462,
+  "volume_relative_error": -8.274285714204854e-05,
+  "old_min_effective_volume_mm3": 1.9327916160868042,
+  "proposed_min_cell_volume_mm3": 33.929200658769766,
+  "proposed_max_cell_volume_mm3": 212.05750411731225,
+  "old_positive_fraction_below_0_1": 800,
+  "selected_cells_crossing_nominal_ellipse": 3760,
+  "rotation_inverse_passed": true,
+  "rotation_volume_conservation_passed": true,
+  "config_sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+  "generator_sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+  "arrays_sha256": {
+    "coordinates": "b42de78565d40f01422d70e4a8d01b5975968d3b41b200faa59ebd7dc7086803",
+    "full_cell_volume": "135f0da5aebf0a48aef37e1d3df1d8ebf1ff63270cc43969e5866cdf39248ff9",
+    "proposed_active_indices": "787387ef78b387c8b70aa92898f5f3d9015078433f86a7aba1d8cb788b0ebe9e",
+    "rotation": "291cb6509255f4185036ece601169379e908a127aadf7b75822a2b52dd5baa6f"
+  },
+  "warning": "Small total volume error is not a local boundary accuracy or imaging performance certificate. Polar cell volumes remain unequal."
+}

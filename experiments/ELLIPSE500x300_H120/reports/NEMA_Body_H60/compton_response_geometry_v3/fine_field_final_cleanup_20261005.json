@@ -1,0 +1,38 @@
+{
+  "status": "FINE_A_RESULTS_REMOVED_METADATA_ARCHIVED",
+  "utc": "2026-10-05T08:55:52.363818+00:00",
+  "extra_partial_files": [
+    {
+      "path": "A440_tiled_field/tile_x06_y09_z07/pe_windowed.sysmat.partial",
+      "bytes": 217429728
+    },
+    {
+      "path": "A440_tiled_field/tile_x06_y09_z07/pe.sysmat.partial",
+      "bytes": 217429728
+    }
+  ],
+  "extra_partial_bytes": 434859456,
+  "metadata_files": 31379,
+  "metadata_source_bytes": 3047195566,
+  "metadata_archive": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/retired_fine_field_metadata_20261005.tar.gz",
+  "metadata_archive_bytes": 559782141,
+  "metadata_archive_sha256": "b36c9674a2e05500db8a66e5629d0f2c29f3028c0d300b044e900d9e4de151a6",
+  "metadata_manifest": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3/retired_fine_field_metadata_manifest_20261005.json",
+  "metadata_manifest_sha256": "d55b38df8e2ed0662897f53bf5c8af28ad9f11cb827b93f69641f2d4b0fd7a30",
+  "removed_directories": [
+    "A440_guard",
+    "A440_guard_field",
+    "A440_near_column",
+    "A440_near_patch",
+    "A440_near_patch_refined",
+    "A440_near_patch_ultrafine",
+    "A440_radial_check",
+    "A440_tile_pilot",
+    "A440_tiled_field",
+    "regional_a_g0",
+    "regional_a_g1",
+    "regional_a_g2"
+  ],
+  "all_allowlist_directories_absent": true,
+  "disk_free_after": 5799645933568
+}

@@ -1,5 +1,7 @@
 # Compton稳定几何与椭圆边界积分实施计划
 
+> **2026-10-05 当前状态：精细 A 场按用户要求停止，相关辅助矩阵已清理，不再续跑或生成 S2。** 见[停止与清理收据](STOP_AND_CLEANUP_20261005.md)和[保留柱坐标的新调查计划](../process_list_global_audit_v4/PLAN.md)。下文生产进度、预计完成时间和旧计划属于停止前历史，不再执行。
+
 2026-10-04，用户授权落地并开始实施。实验标识`compton_response_geometry_v3`，配置位于实验根目录`compton_response_geometry_v3.json`。本计划依据[完整响应审计](../process_list_followup_20261004/README.md)：确定的GPU近共线算术错误需修复，但6个新增失配事件对当前主峰责任占比很低；边界代表点和真实相交体积之间的响应差异仍待验证。
 
 ## 目标和冻结条件

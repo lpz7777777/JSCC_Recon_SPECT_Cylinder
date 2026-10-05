@@ -7,6 +7,7 @@ import shlex
 import tarfile
 import subprocess
 from first_scatter_pipeline import ssh,transfer,SERVER,SERVER_ROOT,SERVER_BASE,SERVER_STUDY
+from fine_field_retirement import require_fine_field_active
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
@@ -99,6 +100,7 @@ print(subprocess.run(['nvidia-smi','--query-gpu=index,memory.used,utilization.gp
 
 def guard(device):
     """One bounded original-binary halo, common-point gate first."""
+    require_fine_field_active()
     if (REPORT/'guard_job.json').exists():raise ValueError('Guard generation already registered')
     if ssh(SERVER,"pgrep -af '[g]enerate_compton_a_guard.py' || true"):
         raise ValueError('Guard producer already active')
@@ -134,6 +136,7 @@ def guard(device):
 
 def guard_field():
     """Wait on the registered producer using CPU only; no second GPU reservation."""
+    require_fine_field_active()
     if (REPORT/'guard_field_job.json').exists():raise ValueError('Guard field continuation already registered')
     job=json.loads((REPORT/'guard_job.json').read_text())
     names=('run_compton_guard_field_stage.py','build_compton_a_guard_field.py',
@@ -169,6 +172,7 @@ def guard_field():
     print('GUARD_FIELD_PID',pid)
 
 def guard_radial(device):
+    require_fine_field_active()
     if (REPORT/'guard_radial_job.json').exists():raise ValueError('Radial check already registered')
     job=json.loads((REPORT/'guard_job.json').read_text())
     field=json.loads((REPORT/'guard_field_job.json').read_text())
@@ -249,6 +253,7 @@ def fetch_guard():
     write(REPORT/'guard_summary.json',summary);print(json.dumps(summary,indent=2))
 
 def repair_guard_measure():
+    require_fine_field_active()
     if (REPORT/'guard_measure_job.json').exists():raise ValueError('CPU diagnostic repair already registered')
     old=json.loads((REPORT/'guard_field_job.json').read_text())
     if ssh(SERVER,'ps -p '+str(old['pid'])+' -o args= || true'):raise ValueError('Original CPU stage still active')
@@ -286,6 +291,7 @@ def repair_guard_measure():
     print('GUARD_MEASURE_REPAIR_PID',pid)
 
 def guard_weighted(device):
+    require_fine_field_active()
     if (REPORT/'guard_weighted_job.json').exists():raise ValueError('Weighted diagnostic already registered')
     free,util=map(int,ssh(SERVER,f'nvidia-smi --query-gpu=memory.free,utilization.gpu --format=csv,noheader,nounits -i {device}').split(','))
     if free<40000 or util>5:raise ValueError('Weighted diagnostic GPU occupied')
@@ -317,6 +323,7 @@ def guard_weighted(device):
 
 def guard_integral(device, patch=False, refined=False, ultrafine=False):
     """Bounded whole-cell convergence or independent local A refinement."""
+    require_fine_field_active()
     tag='guard_patch_ultrafine' if ultrafine else ('guard_patch_refined' if refined else ('guard_patch' if patch else 'guard_integral'))
     script_name='run_compton_patch_guard.py' if patch else 'validate_compton_integral_guard.py'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Integral diagnostic already registered')
@@ -528,6 +535,7 @@ def fetch_spatial():
     write(REPORT/'spatial_summary.json',value);print(json.dumps(value))
 
 def overlap_benchmark(device,cached=False,batched=False,cuda=False,column=False):
+    require_fine_field_active()
     tag=('column_operator_cuda' if cuda else 'column_operator_cpu') if column else ('overlap_benchmark_cuda' if cuda else ('overlap_benchmark_batched' if batched else ('overlap_benchmark_cached' if cached else 'overlap_benchmark')))
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Full-cell benchmark already registered')
     active=ssh(SERVER,"pgrep -af '[b]enchmark_compton_overlap_v3.py' || true")
@@ -594,6 +602,7 @@ def fetch_overlap_benchmark(cached=False,batched=False,cuda=False,column=False):
 
 
 def guard_components(device,sampling=False):
+    require_fine_field_active()
     tag='guard_sampling' if sampling else 'guard_components'
     entry='diagnose_compton_a_sampling_v3.py' if sampling else 'diagnose_compton_a_components_v3.py'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Component diagnostic already registered')
@@ -670,6 +679,7 @@ def verify_overlap_backends():
 
 
 def guard_column(device):
+    require_fine_field_active()
     tag='guard_column'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Column matrix already registered')
     if ssh(SERVER,"pgrep -af '[g]enerate_compton_a_column_v3.py' || true"):raise ValueError('Column is already active')
@@ -707,6 +717,7 @@ def fetch_guard_column():
 
 
 def tile_pilot(device):
+    require_fine_field_active()
     tag='tile_pilot'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('A tile pilot is already registered')
     if ssh(SERVER,"pgrep -af '[g]enerate_compton_a_tile_pilot_v3.py' || true"):
@@ -776,6 +787,7 @@ def verify_tile_reader():
 
 
 def regional_a(device,group):
+    require_fine_field_active()
     tag='regional_a_g'+str(group)
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Regional group already registered')
     plan=json.loads((REPORT/'regional_a_plan.json').read_text())
@@ -819,6 +831,7 @@ def fetch_regional_a(group):
 
 
 def regional_validation(device, frozen_measure=False):
+    require_fine_field_active()
     tag='regional_validation_frozen_measure' if frozen_measure else 'regional_validation'
     if frozen_measure:
         previous=json.loads((REPORT/'regional_validation_job.json').read_text())

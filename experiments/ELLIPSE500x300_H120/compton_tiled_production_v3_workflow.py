@@ -8,6 +8,7 @@ import subprocess
 import numpy as np
 from compton_geometry_v3_workflow import HERE,ROOT,DATA,REPORT,REMOTE,SERVER,SERVER_ROOT,PYTHON,ssh,transfer,digest,write
 from plan_compton_a_tiles_v3 import tile_spec
+from fine_field_retirement import require_fine_field_active
 
 
 def make_plan():
@@ -47,6 +48,7 @@ def make_plan():
 
 
 def launch_pilot(repair=False):
+    require_fine_field_active()
     tag='tiled_field_pilot_repaired' if repair else 'tiled_field_pilot'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Pilot already registered; do not repeat')
     previous=None
@@ -156,6 +158,7 @@ def fetch():
 
 
 def validate_pilot():
+    require_fine_field_active()
     tag='tiled_field_validation'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Tiled diagnostic already registered')
     summary=json.loads((REPORT/'tiled_field_pilot_summary.json').read_text())
@@ -208,6 +211,7 @@ def fetch_validation():
 
 
 def launch_full(probe=True):
+    require_fine_field_active()
     tag='tiled_field_probe' if probe else 'tiled_field_full'
     if (REPORT/(tag+'_job.json')).exists():raise ValueError('Full-field invocation already registered')
     gate=json.loads((REPORT/'tiled_field_validation_summary.json').read_text())

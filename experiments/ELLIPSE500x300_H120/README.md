@@ -1,5 +1,7 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
+**2026-10-05 当前方向：精细A场已按用户要求停止并清理，4个worker全部退出，删除约536GB辅助矩阵，日志和收据压缩保留。** [清理证据](reports/NEMA_Body_H60/compton_response_geometry_v3/STOP_AND_CLEANUP_20261005.md)。继续使用柱坐标，允许完整单元近似椭圆，重点调查内部尖峰的概率核、K×A及局部灵敏度；[新调查计划](reports/NEMA_Body_H60/process_list_global_audit_v4/PLAN.md)已形成。78920完整单元的方案只做了规划核算，尚未部署；原Factors、几何、S和图像不变，本次无新输运/重建。以下精细场进度及续跑安排均为停止前历史，不再执行。
+
 2026-10-05最新生产：[完整可续跑A候选场](reports/NEMA_Body_H60/compton_response_geometry_v3/TILED_FULL_PRODUCTION.md)已在65114 GPU0/1/3/4启动，PID2542514/2542646/2542872/2543046。区域168/168精度、21块读取/12公共面及四卡完整索引8块资源试跑均通过，复用29块，目标10720块/2.211TB。20小时tile边界停止、24小时外部上限；全场科学精度仍HOLD，S2和正式2000次未运行，尚无尖峰改善结论。
 
 
