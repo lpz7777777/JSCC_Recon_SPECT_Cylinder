@@ -1,0 +1,50 @@
+{
+  "source_sha256": "919fac50af28b928cfd2df1ad608129de71b14a65d47ef81a520f18bf24dc121",
+  "columns": 64,
+  "measurement_bins": 512,
+  "all_zero_count_bins_retained": true,
+  "seed": 51005002,
+  "likelihood": "Poisson in discrete C1,C2,E1 bins",
+  "S": "Exact column sum of the generating matrix",
+  "off_diagonal_column_cosines_p05_p50_p95": [
+    0.6552069456693019,
+    0.9405565604246898,
+    0.9946834571748844
+  ],
+  "results": [
+    {
+      "expected_events": 120,
+      "observed_events": 120.0,
+      "mode": "noiseless",
+      "max_over_uniform_truth": 1.0000000000031186,
+      "uniform_truth_nrmse": 1.3436793577040494e-12,
+      "Poisson_deviance": -4.1146068448681685e-16
+    },
+    {
+      "expected_events": 120,
+      "observed_events": 119.0,
+      "mode": "poisson",
+      "max_over_uniform_truth": 12.995228705303651,
+      "uniform_truth_nrmse": 2.308831821193954,
+      "Poisson_deviance": 169.15128244235956
+    },
+    {
+      "expected_events": 1200,
+      "observed_events": 1200.0,
+      "mode": "noiseless",
+      "max_over_uniform_truth": 1.0000000000032374,
+      "uniform_truth_nrmse": 1.3739882190630897e-12,
+      "Poisson_deviance": -9.256917896728909e-15
+    },
+    {
+      "expected_events": 1200,
+      "observed_events": 1202.0,
+      "mode": "poisson",
+      "max_over_uniform_truth": 6.876459448182854,
+      "uniform_truth_nrmse": 1.3817110081384585,
+      "Poisson_deviance": 215.35412978165243
+    }
+  ],
+  "limitations": "Explicit toy transport and geometry probabilities; not a validation of actual Geant4 K*A, NEMA, or historical FOV120",
+  "interpretation": "Demonstrates possible finite-count ML concentration on correlated columns; cannot attribute actual peaks quantitatively"
+}

@@ -1,0 +1,153 @@
+{
+  "study": "process_list_global_audit_v4",
+  "status": "OFFLINE_INVESTIGATION_COMPLETED_PRODUCTION_HOLD",
+  "stages": {
+    "offline_evidence": "completed with explicit limits",
+    "whole_cell_implementation": "isolated and tested",
+    "low_cost_energy_prototype": "independent diagnostic positive",
+    "production_candidate": "not certified",
+    "new_physical_S_and_paired_reconstruction": "not launched because production probability contract is incomplete"
+  },
+  "point_energy_selected_events": 10270,
+  "point_arm_source_outside_3_range": [
+    0.029282576866764276,
+    0.040268456375838924
+  ],
+  "point_atomic_rms_keV_range": [
+    11.308710801190117,
+    13.108581976542652
+  ],
+  "spatial": {
+    "status": "PASSED_AT_THIS_RESOLUTION",
+    "adequate_bins": 144,
+    "unresolved_bins": 48,
+    "sufficient_bin_error_range": [
+      -0.03803185611839588,
+      0.07393672387811834
+    ],
+    "caveat": "Rotationally averaged 192-bin validation, not every voxel or every individual view"
+  },
+  "K_sampling": {
+    "events": 320,
+    "control_cells": 43,
+    "cases": 13760,
+    "adequate_cases": 13032,
+    "converged_cases": 13032,
+    "centre_error_rms": 0.023579637436438372,
+    "mean_absolute_K_difference": 0.0005322196696958254
+  },
+  "energy_diagnostic": {
+    "training_events": 275468,
+    "scored_point_events": 10265,
+    "unsupported_point_events": 5,
+    "independent_locations": 7,
+    "positive_mean_gain_locations": 7,
+    "centre_log_density_gain_range": [
+      0.11921839941567137,
+      0.2619002283554337
+    ],
+    "free_PIT_tail_range": [
+      0.05490483162518302,
+      0.08053691275167785
+    ],
+    "empirical_PIT_tail_range": [
+      0.016401845207585853,
+      0.026845637583892617
+    ],
+    "production_eligible": false,
+    "remaining_requirements": [
+      "Empirical transfer law is conditioned on ideal multihit recording and E2>50keV; not unconditional material physics",
+      "No crystal-position integral, joint C1/C2 measurement probability or q-selection normalizer certified",
+      "Stepwise angle-bin empirical law is a diagnostic prototype, not a production response"
+    ]
+  },
+  "interior_peak": [
+    {
+      "channel": "440_ComptonOnly",
+      "full_cell_index": "57231",
+      "x_mm": "117.66434268086468",
+      "y_mm": "-72.10480193080103",
+      "z_mm": "-7.5",
+      "density": "12747.0986328125",
+      "fraction": "1.0",
+      "effective_volume_mm3": "195.09290378792724",
+      "assigned_event_mass": "338.8766302064282",
+      "effective_contributing_events": "32223.57457119886",
+      "events_for_50_percent": "12628",
+      "events_for_90_percent": "45862",
+      "top_one_mass_fraction": "0.0002453865682631139",
+      "top_ten_mass_fraction": "0.001922379460749561",
+      "participating_views": "20",
+      "participating_workers": "200",
+      "source_distance_weighted_mean_mm": "118.69038439344611",
+      "q_at_cell_above_3_mass_fraction": "0.005949122065209518",
+      "K_only_assigned_mass": "319.4449099331762",
+      "full_circle_stable_S": "0.02666473016142845",
+      "matched_S_times_historical_density": "339.89794538505885"
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "full_cell_index": "57231",
+      "x_mm": "117.66434268086468",
+      "y_mm": "-72.10480193080103",
+      "z_mm": "-7.5",
+      "density": "6489.44970703125",
+      "fraction": "1.0",
+      "effective_volume_mm3": "195.09290378792724",
+      "assigned_event_mass": "177.56542670181062",
+      "effective_contributing_events": "31976.668114153177",
+      "events_for_50_percent": "12547",
+      "events_for_90_percent": "45803",
+      "top_one_mass_fraction": "0.00024000033037526058",
+      "top_ten_mass_fraction": "0.0018966744971241727",
+      "participating_views": "20",
+      "participating_workers": "200",
+      "source_distance_weighted_mean_mm": "118.55976574709499",
+      "q_at_cell_above_3_mass_fraction": "0.006231673017292899",
+      "K_only_assigned_mass": "167.058442435764",
+      "full_circle_stable_S": "0.02666473016142845",
+      "matched_S_times_historical_density": "173.0394253341492"
+    }
+  ],
+  "whole_cell_geometry": {
+    "study": "process_list_global_audit_v4",
+    "geometry_basis": "union_of_complete_polar_cells",
+    "full_points": 132040,
+    "active_points": 78920,
+    "layers": 40,
+    "views": 20,
+    "source_geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "nominal_ellipse_volume_mm3": 14137166.941154068,
+    "actual_whole_cell_volume_mm3": 14135997.191569462,
+    "relative_volume_difference": -8.274285714204854e-05,
+    "minimum_active_volume_mm3": 33.929200658769766,
+    "partial_overlap_applied": false,
+    "B_basis": "A times full cell volume; volume multiplied exactly once",
+    "existing_production_geometry_changed": false,
+    "existing_production_kernel_changed": false,
+    "max_forward_adjoint_relative_error": 2.7428436904272256e-16,
+    "event_constant_scaling_relative_error": 1.9715229027138505e-16,
+    "exact_event_chunking_relative_error": 1.1032671136230261e-16,
+    "limitations": "Synthetic operator tests only; not the 50-iteration production regression or independent physical validation"
+  },
+  "crystal_positions": {
+    "hits_outside_declared_crystal": 0,
+    "statistically_adequate_moment_rows": 126,
+    "variance_ratio_to_uniform_range": [
+      0.5877414719018235,
+      1.1143150364979448
+    ],
+    "depth_bias_mm_range": [
+      -1.4232880581152467,
+      0.18511746927827002
+    ],
+    "interpretation": "Selected-hit depth distribution is not centred uniform; cannot use these conditional moments as unconditional correction"
+  },
+  "new_transport_photons": 0,
+  "new_fine_A_matrices": 0,
+  "new_project_reconstruction": false,
+  "toy_is_not_project_reconstruction": true,
+  "priority": "A normalized energy-domain response with material transfer tails, same fixed events, and independently validated matching S",
+  "source_sha256": "c0705f5a72c00736671919053bdb3efc23e529da5428fbf924095af46ed9dbee"
+}

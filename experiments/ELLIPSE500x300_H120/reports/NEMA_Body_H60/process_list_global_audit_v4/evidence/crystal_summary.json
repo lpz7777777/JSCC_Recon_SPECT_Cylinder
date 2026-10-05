@@ -1,0 +1,21 @@
+{
+  "source_sha256": "b1b5a89d81eaafcacde8c9b85916f5d7cd72264d38816dcbecccfee4c5f07014",
+  "point_residual_sha256": "a7b757ca92e3e74f857120a97ed1af4f08b0c6ca1fcd38920a181f5df23ea4f6",
+  "input_manifest_sha256": "b9d5e7b73b6938ae1a907b8c064ca239ffd081abc39b9ab52a466186bbdbd533",
+  "hits_outside_declared_crystal": 0,
+  "crystal_sizes_mm": {
+    "front": [
+      3.0,
+      3.0,
+      3.0
+    ],
+    "rear": [
+      2.0,
+      6.0,
+      2.0
+    ]
+  },
+  "comparison": "Actual interaction offsets for recorded ideal events, not an unconditional uniform-in-crystal sample",
+  "new_transport_photons": 0,
+  "new_reconstruction": false
+}

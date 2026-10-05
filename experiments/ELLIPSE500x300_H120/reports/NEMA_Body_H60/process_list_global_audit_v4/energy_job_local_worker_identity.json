@@ -1,0 +1,10 @@
+{
+  "pid": 438877,
+  "source_sha256": "273cd25e1e302d2a6e6a414a77216c2fb7bf3f94f5625e78a7b5466229a4c2f6",
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/energy_273cd25e1e302d2a",
+  "log": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/energy_273cd25e1e302d2a.log",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/energy_273cd25e1e302d2a",
+  "budget_seconds": 600,
+  "status": "SUPERSEDED_BY_GLOBAL_SEED_IDENTITY_FIX",
+  "note": "Local worker index repeats across views. Use independent seed for worker errors/counts. Scientific data and kernel unchanged."
+}

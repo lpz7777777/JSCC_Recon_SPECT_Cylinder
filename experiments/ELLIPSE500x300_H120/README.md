@@ -1,11 +1,11 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
-**2026-10-05 当前方向：精细A场已按用户要求停止并清理，4个worker全部退出，删除约536GB辅助矩阵，日志和收据压缩保留。** [清理证据](reports/NEMA_Body_H60/compton_response_geometry_v3/STOP_AND_CLEANUP_20261005.md)。继续使用柱坐标，允许完整单元近似椭圆，重点调查内部尖峰的概率核、K×A及局部灵敏度；[新调查计划](reports/NEMA_Body_H60/process_list_global_audit_v4/PLAN.md)已形成。78920完整单元的方案只做了规划核算，尚未部署；原Factors、几何、S和图像不变，本次无新输运/重建。以下精细场进度及续跑安排均为停止前历史，不再执行。
+**2026-10-05 最新执行：柱坐标process_list首轮离线调查已完成，详见[科学总报告](reports/NEMA_Body_H60/process_list_global_audit_v4/REPORT.md)。** 144个统计充分的空间区S通过预设门槛；一个内部完整单元峰需约1.26万事件贡献一半责任；材料转移尾部能量原型在七个独立点源均改善；厚层首交互偏移也已量化。78920完整柱单元在独立目录实现并通过算子测试，原生产基底未覆盖。正式核和独立S尚未通过进入成像的门槛，没有新增配对；新增Geant4和精细A矩阵均为0。精细场继续停止，约536GB清理及[停止证据](reports/NEMA_Body_H60/compton_response_geometry_v3/STOP_AND_CLEANUP_20261005.md)保留。以下精细场生产和续跑条目是停止前历史，不再执行。
 
-2026-10-05最新生产：[完整可续跑A候选场](reports/NEMA_Body_H60/compton_response_geometry_v3/TILED_FULL_PRODUCTION.md)已在65114 GPU0/1/3/4启动，PID2542514/2542646/2542872/2543046。区域168/168精度、21块读取/12公共面及四卡完整索引8块资源试跑均通过，复用29块，目标10720块/2.211TB。20小时tile边界停止、24小时外部上限；全场科学精度仍HOLD，S2和正式2000次未运行，尚无尖峰改善结论。
+停止前生产记录（已终止）：[完整可续跑A候选场](reports/NEMA_Body_H60/compton_response_geometry_v3/TILED_FULL_PRODUCTION.md)已在65114 GPU0/1/3/4启动，PID2542514/2542646/2542872/2543046。区域168/168精度、21块读取/12公共面及四卡完整索引8块资源试跑均通过，复用29块，目标10720块/2.211TB。20小时tile边界停止、24小时外部上限；全场科学精度仍HOLD，S2和正式2000次未运行，尚无尖峰改善结论。
 
 
-2026-10-05最新续作：[完整边界响应算子与GPU验证](reports/NEMA_Body_H60/compton_response_geometry_v3/FULL_OPERATOR_PREFLIGHT.md)。全部6880部分单元已接入诊断，CPU/GPU全5283840项积分及归一化一致；128固定事件的16→32阶加密全部通过，最大变化0.2137%，GPU细级积分实测约快9.26倍。全轴向0.75mm补点及CPU/CUDA检查完成，细场完整覆盖由6增至80/137600单元—视角对。[分块场试生产](reports/NEMA_Body_H60/compton_response_geometry_v3/TILED_FIELD_PREFLIGHT.md)完成两相邻块，保留完整11520行物理计算，10496晶体合并数据逐值提取和公共面读取通过；完整分块场预计持久化2.21TB，现已作为待验收候选启动。当前关键门槛是全场物理A插值精度；S2和正式2000次配对未完成，未新增输运、正则化或旧任务。这些是响应诊断，尚无尖峰改善结论。
+2026-10-05停止前续作记录（已终止）：[完整边界响应算子与GPU验证](reports/NEMA_Body_H60/compton_response_geometry_v3/FULL_OPERATOR_PREFLIGHT.md)。全部6880部分单元已接入诊断，CPU/GPU全5283840项积分及归一化一致；128固定事件的16→32阶加密全部通过，最大变化0.2137%，GPU细级积分实测约快9.26倍。全轴向0.75mm补点及CPU/CUDA检查完成，细场完整覆盖由6增至80/137600单元—视角对。[分块场试生产](reports/NEMA_Body_H60/compton_response_geometry_v3/TILED_FIELD_PREFLIGHT.md)完成两相邻块，保留完整11520行物理计算，10496晶体合并数据逐值提取和公共面读取通过；完整分块场预计持久化2.21TB，现已作为待验收候选启动。当前关键门槛是全场物理A插值精度；S2和正式2000次配对未完成，未新增输运、正则化或旧任务。这些是响应诊断，尚无尖峰改善结论。
 
 [独立区域精度验证](reports/NEMA_Body_H60/compton_response_geometry_v3/REGIONAL_A_VALIDATION.md)已完成：四横向位置×三轴向层，0.75/0.375mm两个独立物理场共98463点；168项K加权交集/完整参考全部通过，141项有可判别响应，最大采样变化0.5040%、积分变化0.02988%。目前推进可续跑分块场多worker小批，完整场和S2仍未完成，未提交新图像。这些是响应诊断，尚无尖峰改善结论。
 

@@ -1,0 +1,234 @@
+{
+  "created_at": "2026-10-05T10:18:55.692348+00:00",
+  "status": "OFFLINE_INVESTIGATION_COMPLETED_PRODUCTION_HOLD",
+  "new_primary_photons": 0,
+  "new_fine_A_matrices": 0,
+  "new_production_reconstructions": 0,
+  "remote_jobs_exited": true,
+  "code_sha256": {
+    "experiments/ELLIPSE500x300_H120/build_whole_cell_geometry_v4.py": "1690594c3e70e948e0e85ccd92acf5fa2b5f60c9a030bee57ec5f252e350778a",
+    "experiments/ELLIPSE500x300_H120/catalog_native_spikes_v4.py": "646d268d7cedf984781a67e51b0b7b06f304aaba157c557319bd3b4452e3b3d7",
+    "experiments/ELLIPSE500x300_H120/compton_identifiability_toy_v4.py": "919fac50af28b928cfd2df1ad608129de71b14a65d47ef81a520f18bf24dc121",
+    "experiments/ELLIPSE500x300_H120/crystal_position_audit_v4.py": "b1b5a89d81eaafcacde8c9b85916f5d7cd72264d38816dcbecccfee4c5f07014",
+    "experiments/ELLIPSE500x300_H120/energy_probability_probe_v4.py": "30f3e6fbd5fae2b3f3faabe3efbd0dcacc0aca50bf592c6a6d22afc1d2fedf08",
+    "experiments/ELLIPSE500x300_H120/native_peak_responsibility_v4.py": "b5ab267f9830fa60e31e2e6f8d76d25e365334234e5481df857f6f003051cbbf",
+    "experiments/ELLIPSE500x300_H120/process_list_audit_v4_workflow.py": "8a1a9a6207246a513067d0f5217a69ba3e1f07aeff15022c25f16ce9c4d8eb96",
+    "experiments/ELLIPSE500x300_H120/process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "experiments/ELLIPSE500x300_H120/summarize_process_list_audit_v4.py": "c0705f5a72c00736671919053bdb3efc23e529da5428fbf924095af46ed9dbee",
+    "experiments/ELLIPSE500x300_H120/test_process_list_global_audit_v4.py": "4e9c51db5c995413e5d75489dfadf7ce4b9d4b1a706520d983a39d65816e2263"
+  },
+  "report_artifacts": {
+    "crystal_collection.json": {
+      "bytes": 460,
+      "sha256": "89d037e4809d9db44d459f97a3b9b3810455afde3d460f98d511d1fb5558de61"
+    },
+    "crystal_job.json": {
+      "bytes": 589,
+      "sha256": "d8e082d28573bce281132dd8fa571d28b9709da2ef4269ffb913b1c5b8adc914"
+    },
+    "deployment.json": {
+      "bytes": 1070,
+      "sha256": "56721d3b909434502606f830890a74e6548eac83863aa57e1731984dfc8100d8"
+    },
+    "diagnostic_collection.json": {
+      "bytes": 1954,
+      "sha256": "b678ae30371e73d302d2da5e8df13f952b9f7edc5c586074d81b5dcabbf3180d"
+    },
+    "diagnostic_job.json": {
+      "bytes": 1153,
+      "sha256": "0ae27e2d27eda166384e9f67c73662d4ce2429b5d6574fbd3eefb104715a5118"
+    },
+    "diagnostic_job_failed_395589.json": {
+      "bytes": 1393,
+      "sha256": "a1182afaf015cc388bb8e1da2cc2017dba1873cd4821e9ec8324262617edbf84"
+    },
+    "energy_collection.json": {
+      "bytes": 485,
+      "sha256": "818b9b25caf879a89c497430b1e66b97c20c6c48bcfd75b35dd464a5e3539698"
+    },
+    "energy_job.json": {
+      "bytes": 649,
+      "sha256": "c8d80c309c436e6efc15c13ab8b2b30a7f10294c5624061f0bbfbaec81386b0b"
+    },
+    "energy_job_failed_missing_optional_pandas.json": {
+      "bytes": 639,
+      "sha256": "03aed22cb3402d6fefacb8282aedccabc594150acee1fe3de77492343339dced"
+    },
+    "energy_job_failed_probability_tail_precision.json": {
+      "bytes": 586,
+      "sha256": "399e00a58c19cb0493ebe6eba0d403dd28772345416765b612e839611af5c8c2"
+    },
+    "energy_job_local_worker_identity.json": {
+      "bytes": 781,
+      "sha256": "ad3e5bd1444c2ee33c834eedc879593bf3c8fe8e45819744187af878f4f02753"
+    },
+    "evidence/crystal_crystal_offset_moments.csv": {
+      "bytes": 55231,
+      "sha256": "7b85c158319e62ea653e7159a197ee3ff75612cf023e468e5083409beee49460"
+    },
+    "evidence/crystal_summary.json": {
+      "bytes": 634,
+      "sha256": "3a1a001ed433b846860df192ff928dc4d26f7333effaeefc1f771ef2803a8103"
+    },
+    "evidence/energy_energy_probability_summary.json": {
+      "bytes": 108601,
+      "sha256": "9b752ae4a8568646c2225b53736662410f5acceb4dbcb4d542a2167fe0ac784d"
+    },
+    "evidence/manifest.json": {
+      "bytes": 1387,
+      "sha256": "9a4dbc6100cf7bbf068e45841b63e81c609fccabeaa46c1357b4726e55703360"
+    },
+    "evidence/points_execution.json": {
+      "bytes": 703,
+      "sha256": "9d1b1868faddacf95917bf8f6c97794fd43f006a88f5b66678eed56686816d84"
+    },
+    "evidence/points_point_residual_summary.json": {
+      "bytes": 94685,
+      "sha256": "9215f8460cd90625a1bfa43b20b5b79fe8076eb6623e7ee3e2fcad156af81a98"
+    },
+    "evidence/responsibility_execution.json": {
+      "bytes": 3382,
+      "sha256": "94ec2ee8d8cbb831b810547fc42056ee0b5b1d0bd8315d2377aaaf19436ab9b7"
+    },
+    "evidence/responsibility_native_peak_responsibility.csv": {
+      "bytes": 9510,
+      "sha256": "f952151443aa65baae09c82843cabd29f4394640b953632ed1a74f25b4f8a162"
+    },
+    "evidence/sampling_execution.json": {
+      "bytes": 819,
+      "sha256": "2487a1ae0117572e4c1ca79b1226c49fd05c6d86d22dbee83fad60036f9ef011"
+    },
+    "evidence/sampling_whole_cell_K_sampling_summary.json": {
+      "bytes": 1015,
+      "sha256": "bdafd2393ae97ddeb2b48025a6d95029213fae5744ce2bddeb75ab64a2e81a99"
+    },
+    "evidence/spatial_execution.json": {
+      "bytes": 824,
+      "sha256": "133c540f8323532d1feee4db9b5cb3bed37ba8b7caf45bc29a30af3c751ce552"
+    },
+    "evidence/spatial_fine_spatial_efficiency.csv": {
+      "bytes": 28297,
+      "sha256": "855868ad517238590f5cc3b5c95981acc987d07a84e80c225979bc8ffc8f6f1b"
+    },
+    "evidence/spatial_fine_spatial_gate.json": {
+      "bytes": 90005,
+      "sha256": "1428de44afc732c6ab90ed739eb301b8e090e87a8fbd1b52fe47d242f5d0c49b"
+    },
+    "execution_config.json": {
+      "bytes": 1945,
+      "sha256": "b7ddd28f6c885a63b0a1041b5ce263cf6f1a9d94945ca500ee5f234d890c9fc8"
+    },
+    "figures/fine_spatial_efficiency.png": {
+      "bytes": 50507,
+      "sha256": "be20c2970c50f0cffcba2e6f6e65db7010c36964a74e18a719cdb460791d91b0"
+    },
+    "figures/independent_energy_probability.png": {
+      "bytes": 91459,
+      "sha256": "0d744d87f0452b6aa79ab10aa12837ffe703e29605c06d49e7c9cdb2fba7ad2e"
+    },
+    "figures/point_residual_components.png": {
+      "bytes": 45974,
+      "sha256": "9a4d55844b5729d1cdf9fbed89d44dbb797d8280ec0a74a61d9f7e539035bd43"
+    },
+    "final_code_deployment.json": {
+      "bytes": 1286,
+      "sha256": "7746da40411d84b6ee9e4e55cd10c3b297b3c00496e8c9404a10f1e29b700a0e"
+    },
+    "identifiability_toy/manifest.json": {
+      "bytes": 1778,
+      "sha256": "e0e8d0117ef2adb7575541a8fcd0865f1255ff19313d8941560036c1ef586ecd"
+    },
+    "identifiability_toy/statistical_concentration.png": {
+      "bytes": 71690,
+      "sha256": "9941af1fb3787f593646c039290caca02ffae208e06b7b88c7d2182907989539"
+    },
+    "identifiability_toy/toy_iteration_metrics.csv": {
+      "bytes": 1983,
+      "sha256": "4f4ddcefd42ee06ce2bfad961de9a3de33acc4fdfeaab3c4d21b1af74b7e75e4"
+    },
+    "implementation_checks.json": {
+      "bytes": 1744,
+      "sha256": "5af7b6aeb4e5d6ab58e0ec06c85498c50b4f1c70f12a7bf968faafdb4bb2fd76"
+    },
+    "native_responsibility_probes.json": {
+      "bytes": 361,
+      "sha256": "e86032021becb1be5e0083182c610ee48b268d049190511e6353c37aaba09586"
+    },
+    "native_spikes/native_local_peaks.csv": {
+      "bytes": 15083,
+      "sha256": "b417c0e1328c5f73b367bfb43d82ed5c559e7f7e904cb538402730a657990125"
+    },
+    "native_spikes/native_region_iterations.csv": {
+      "bytes": 169913,
+      "sha256": "ea11ea10e1f92775602ab74d8849194854fe9dcd61ad966bf3ffa5247aad6636"
+    },
+    "native_spikes/native_spike_curves.png": {
+      "bytes": 222682,
+      "sha256": "587f6d9668e19f2d60f8e10eb408d1030f424ee2a1897bf34a5b55bf7394ba3a"
+    },
+    "native_spikes/provenance.json": {
+      "bytes": 1968,
+      "sha256": "37ad887283b65363c16cd67536b22966b0be22b99f0548ede2d4aa1fa0799a85"
+    },
+    "PLAN.md": {
+      "bytes": 20626,
+      "sha256": "67eb4f83009e701bda21e86a0dcc0865bc8607ccb4a45af0e87ceedd30a15f20"
+    },
+    "PRODUCTION.md": {
+      "bytes": 4732,
+      "sha256": "2bfb213cae97fee9661bb6afa653cc6c80efcabd5eaf709e2a3f90c2e5839832"
+    },
+    "README.md": {
+      "bytes": 2213,
+      "sha256": "976d34784078e06fbcd5fd1abbd0cef5b9fb47ddd93f9a0807c7e8bf63902c82"
+    },
+    "REPORT.md": {
+      "bytes": 17079,
+      "sha256": "b48ab333acbc8469e2cd9b454c49a667d6002cd374784aee88d18be14948c839"
+    },
+    "resource_and_factor_receipt.json": {
+      "bytes": 5073,
+      "sha256": "97edc24e51dadb2e745623e9c9443002edd556bb667c056e4a2caa9505415efc"
+    },
+    "responsibility_collection.json": {
+      "bytes": 804,
+      "sha256": "599812bc1bf9b980a73158f989ca765f6fd34ec3f46b027836427cd3949c21a6"
+    },
+    "responsibility_collection_before_seed_identity_fix.json": {
+      "bytes": 826,
+      "sha256": "79b89da740fb708f054213e02653736204c351f6407043631739ca1c0307aabd"
+    },
+    "responsibility_job.json": {
+      "bytes": 673,
+      "sha256": "135b5984bb6a6258c8cc22a01e70e9acf2fea55d05923b1ada09671634d363d0"
+    },
+    "responsibility_job_local_worker_identity.json": {
+      "bytes": 1151,
+      "sha256": "dda9045652e0ffc3e50f182c96bfac47805601852c8f6afa9cec11a340acfeb3"
+    },
+    "scientific_summary.json": {
+      "bytes": 6249,
+      "sha256": "be1f1316d94d8eceaaaabf3784063b134372b1fac98616654b25959a46fdd320"
+    },
+    "test_checks.json": {
+      "bytes": 1804,
+      "sha256": "3fb50c25b97b2a8d62e84eb118b8dfa9e26a4a901340e5edecf96e5ea53d46c6"
+    },
+    "whole_cell_implementation_checks.json": {
+      "bytes": 1131,
+      "sha256": "d7bbd3582bacc257b7dbd9ea2852de845d60b6db2dcdde660c942f90ab9a38d9"
+    },
+    "whole_cell_planning_audit.json": {
+      "bytes": 1540,
+      "sha256": "4e06f5c1fd036474279ecfdd7b5b0ac4f5512a6fc75f87a2bb90fa4352d53afb"
+    }
+  },
+  "exclusions": [
+    "generated data",
+    "full histories and response arrays",
+    "archives",
+    "credentials",
+    "identifiability_toy/measurement_space_model.npz"
+  ],
+  "scientific_limit": "Conditional energy diagnostic is not a certified joint production response; no paired reconstruction gate passed."
+}

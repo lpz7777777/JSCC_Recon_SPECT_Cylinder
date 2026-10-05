@@ -1,0 +1,16 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/f42118e899ccd10f",
+  "code_sha256": {
+    "process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "test_process_list_global_audit_v4.py": "4e9c51db5c995413e5d75489dfadf7ce4b9d4b1a706520d983a39d65816e2263",
+    "energy_probability_probe_v4.py": "30f3e6fbd5fae2b3f3faabe3efbd0dcacc0aca50bf592c6a6d22afc1d2fedf08",
+    "native_peak_responsibility_v4.py": "b5ab267f9830fa60e31e2e6f8d76d25e365334234e5481df857f6f003051cbbf",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "ab154e80cbb2054134e26e4f5895bb0eecab091535695c65b2dfd55719560da9",
+  "remote": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4"
+}

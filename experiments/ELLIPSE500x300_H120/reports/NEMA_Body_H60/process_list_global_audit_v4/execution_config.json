@@ -1,0 +1,52 @@
+{
+  "study": "process_list_global_audit_v4",
+  "geometry_mode": "stable_float64",
+  "q_delete_strictly_above": 3,
+  "event_sets": "unchanged R1 kept rows; each consumed file checked against frozen manifest",
+  "fine_spatial_bins": {
+    "radial_edges_mm": [
+      0,
+      81,
+      159,
+      219,
+      255
+    ],
+    "azimuth_sectors": 8,
+    "axial_edges_mm": [
+      -60,
+      -45,
+      -24,
+      0,
+      24,
+      45,
+      60
+    ],
+    "adequate_accepted_mass": 400
+  },
+  "hold_condition": "abs(relative bias)>20% and >3 combined worker SE in an adequate bin",
+  "independent_workers": 200,
+  "rotations_per_worker": 20,
+  "rotations_are_independent": false,
+  "whole_cell_controls": "fixed radii 0/60/120/180, four angles, z=-21/1.5/22.5 plus four far axial controls",
+  "sampling_orders": [
+    2,
+    4,
+    8
+  ],
+  "sampling_events_per_view": 16,
+  "new_transport_photons": 0,
+  "new_fine_A_matrices": 0,
+  "probe_time_limit_seconds": 600,
+  "single_diagnostic_gpu_limit_seconds": 7200,
+  "output_limit_bytes": 5000000000,
+  "frozen_release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/6fb60a8e5394049b",
+  "code_sha256": {
+    "process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "test_process_list_global_audit_v4.py": "42239f6898de1b6e8cf69a860723284194831f1b9fafb1f23d251b910d25789b",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  }
+}

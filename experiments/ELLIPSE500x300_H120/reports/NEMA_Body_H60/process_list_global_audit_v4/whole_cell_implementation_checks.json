@@ -1,0 +1,22 @@
+{
+  "study": "process_list_global_audit_v4",
+  "geometry_basis": "union_of_complete_polar_cells",
+  "full_points": 132040,
+  "active_points": 78920,
+  "layers": 40,
+  "views": 20,
+  "source_geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "nominal_ellipse_volume_mm3": 14137166.941154068,
+  "actual_whole_cell_volume_mm3": 14135997.191569462,
+  "relative_volume_difference": -8.274285714204854e-05,
+  "minimum_active_volume_mm3": 33.929200658769766,
+  "partial_overlap_applied": false,
+  "B_basis": "A times full cell volume; volume multiplied exactly once",
+  "existing_production_geometry_changed": false,
+  "existing_production_kernel_changed": false,
+  "max_forward_adjoint_relative_error": 2.7428436904272256e-16,
+  "event_constant_scaling_relative_error": 1.9715229027138505e-16,
+  "exact_event_chunking_relative_error": 1.1032671136230261e-16,
+  "limitations": "Synthetic operator tests only; not the 50-iteration production regression or independent physical validation"
+}

@@ -1,0 +1,35 @@
+{
+  "events": 320,
+  "control_cells": 43,
+  "cases": 13760,
+  "adequate_cases": 13032,
+  "converged_cases": 13032,
+  "center_relative_error": {
+    "n": 13032,
+    "mean": -0.005864029856268603,
+    "sd": 0.022839712871683394,
+    "rms": 0.023579637436438372,
+    "quantiles": {
+      "p01": -0.09491353125762776,
+      "p05": -0.030250096659963276,
+      "p50": -8.414075882712257e-05,
+      "p95": 0.0011726516456017958,
+      "p99": 0.0034733777516273595
+    }
+  },
+  "refinement_relative_error": {
+    "n": 13032,
+    "mean": 1.0213793188750194e-05,
+    "sd": 0.00015151172312704032,
+    "rms": 0.00015184980184798776,
+    "quantiles": {
+      "p01": 7.127001100393216e-11,
+      "p05": 4.47606340880924e-10,
+      "p50": 5.796083002440611e-09,
+      "p95": 6.321821201854527e-06,
+      "p99": 0.00015469025253783193
+    }
+  },
+  "A_assumption": "constant within each full polar cell; only K integrated",
+  "interpretation": "Isolates K sampling error; not a complete K*A integral or a reconstruction result"
+}

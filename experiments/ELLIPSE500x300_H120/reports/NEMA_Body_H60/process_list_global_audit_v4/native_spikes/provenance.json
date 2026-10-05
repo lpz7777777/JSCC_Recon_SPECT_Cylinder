@@ -1,0 +1,19 @@
+{
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "files": {
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_first_scatter_v2\\RemoteResults\\legacy\\Image_440_ComptonOnly_history.float32": "c71c9831db57a0d1d8d598038779cd02566b972b24abc2b25be721d4a28f94f3",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_first_scatter_v2\\RemoteResults\\legacy\\Image_440_SinglePlusCompton_history.float32": "cc785e0b853c80ac501d3a63c968ff2e88631e013044bc085b9cc64a641549e7",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_first_scatter_v2\\RemoteResults\\ideal\\Image_440_ComptonOnly_history.float32": "925cc8ddb9348fb22c991cbadc33b1e6de7c155291c97039dc83bc45ab8f225c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_first_scatter_v2\\RemoteResults\\ideal\\Image_440_SinglePlusCompton_history.float32": "7b09e5fa2b3b236614eb0b4b0809976a0759e7abf22427a4548e5c5a14c48319",
+    "experiments\\FOV120\\generated\\Results\\Uniform_1e9_1626560\\Image_440_ComptonOnly_Iter_10000_200.selected": "6de1ea1a395889a30ee963b74e795b185aae3b1f807452b4e36a1b6781b86f5c",
+    "experiments\\FOV120\\generated\\Results\\Uniform_1e9_1626560\\Image_440_SinglePlusCompton_Iter_10000_200.selected": "14cb11d1e1356d6d492815d74b54c57da559e89f69d015e0b526eb37eb4bd502"
+  },
+  "source_sha256": "646d268d7cedf984781a67e51b0b7b06f304aaba157c557319bd3b4452e3b3d7",
+  "native_data": true,
+  "smoothing": false,
+  "cropping": false,
+  "NEMA_label_method": "Nearest existing 3mm truth sample at native centre; diagnostic labels only, not ROI recovery measurement",
+  "scale": "One native volume-weighted final background mean per historical dataset/channel; no absolute cross-experiment comparison",
+  "peak_definition": "Physical 9mm neighbourhood local maxima; at most three per predefined region",
+  "interpretation": "Historical kernels/events/geometries differ; catalogue is not a new paired reconstruction"
+}

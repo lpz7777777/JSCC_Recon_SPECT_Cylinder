@@ -1,0 +1,16 @@
+{
+  "pid": 395589,
+  "server": "65114_lipeize",
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/6d11eaae7be92828",
+  "log": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/audit_6d11eaae7be92828.log",
+  "launcher_sha256": "d805696d354287a10da3cd8737b29d46363b34d1d979352007c3f4c4d1b19ed6",
+  "execution_config_sha256": "77dcfee056cc7bbc13c5a57d9d3af5d92c5f6a6432a61f7b1b4a0d4ff67b3dcc",
+  "outputs": {
+    "points": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/points_6d11eaae7be92828",
+    "probe": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/probe_6d11eaae7be92828",
+    "spatial": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/spatial_6d11eaae7be92828",
+    "sampling": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/sampling_6d11eaae7be92828"
+  },
+  "status": "FAILED_DIAGNOSTIC_PRECISION_CHECK",
+  "cause": "The text List has six significant digits; checking after float32 cast added half ULP. Now check serialized float64 against six-digit precision. No transport or kernel change."
+}

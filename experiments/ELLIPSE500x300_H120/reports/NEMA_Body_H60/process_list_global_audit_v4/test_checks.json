@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-05T10:18:16.341299+00:00",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "test_process_list_global_audit_v4",
+    "-v"
+  ],
+  "exit_code": 0,
+  "output": "test_emission_cell_rotation_matches_permutation (test_process_list_global_audit_v4.AuditGeometryTests.test_emission_cell_rotation_matches_permutation) ... ok\ntest_extreme_selection_tail_remains_finite (test_process_list_global_audit_v4.AuditGeometryTests.test_extreme_selection_tail_remains_finite) ... ok\ntest_free_compton_limits (test_process_list_global_audit_v4.AuditGeometryTests.test_free_compton_limits) ... ok\ntest_radial_and_axial_boundaries_assign_volume (test_process_list_global_audit_v4.AuditGeometryTests.test_radial_and_axial_boundaries_assign_volume) ... ok\ntest_sector_quadrature_has_correct_measure_and_moments (test_process_list_global_audit_v4.AuditGeometryTests.test_sector_quadrature_has_correct_measure_and_moments) ... ok\ntest_truncated_energy_mixture_is_a_density (test_process_list_global_audit_v4.AuditGeometryTests.test_truncated_energy_mixture_is_a_density) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.043s\n\nOK\n",
+  "code_sha256": {
+    "test_process_list_global_audit_v4.py": "4e9c51db5c995413e5d75489dfadf7ce4b9d4b1a706520d983a39d65816e2263",
+    "process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "energy_probability_probe_v4.py": "30f3e6fbd5fae2b3f3faabe3efbd0dcacc0aca50bf592c6a6d22afc1d2fedf08"
+  },
+  "remote_final_release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/f42118e899ccd10f",
+  "production_regression_completed": false,
+  "production_gate": "HOLD"
+}

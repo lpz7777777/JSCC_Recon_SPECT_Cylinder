@@ -1,0 +1,22 @@
+{
+  "archive": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/diagnostic_collection.tar.gz",
+  "archive_sha256": "ca656d93256815664d7dfcfa5488ef95a4473797472893977f34a562c0ff1438",
+  "files": {
+    "points/point_residual_summary.json": "9215f8460cd90625a1bfa43b20b5b79fe8076eb6623e7ee3e2fcad156af81a98",
+    "points/execution.json": "9d1b1868faddacf95917bf8f6c97794fd43f006a88f5b66678eed56686816d84",
+    "points/consumed_inputs.json": "3e608e9fe35f7b47969d25c85f6bb605b112c6c5be4158ce3b24a04df1f3fbd6",
+    "points/point_residuals.csv": "a7b757ca92e3e74f857120a97ed1af4f08b0c6ca1fcd38920a181f5df23ea4f6",
+    "probe/spatial_probe.json": "d0b49e3744cd730d1df96416c04d7020e4a9ef79a2ecce20e0784da1042889c7",
+    "probe/execution.json": "b5611d8bf5687d096d937599ba42ad5c8b7232834a644e94209ee58cd0f9a2b1",
+    "probe/consumed_inputs.json": "5e4338cc311ff8dc88b4d6df7e8de019519841950f3967031bc71b4b3daf8a6b",
+    "spatial/fine_spatial_gate.json": "1428de44afc732c6ab90ed739eb301b8e090e87a8fbd1b52fe47d242f5d0c49b",
+    "spatial/worker_spatial_evidence.npz": "f57332091fac5dc3be457fa5a6b460f4bbdb366499cb8bb248c18c0b3a87ad2a",
+    "spatial/execution.json": "133c540f8323532d1feee4db9b5cb3bed37ba8b7caf45bc29a30af3c751ce552",
+    "spatial/consumed_inputs.json": "5e4338cc311ff8dc88b4d6df7e8de019519841950f3967031bc71b4b3daf8a6b",
+    "spatial/fine_spatial_efficiency.csv": "855868ad517238590f5cc3b5c95981acc987d07a84e80c225979bc8ffc8f6f1b",
+    "sampling/execution.json": "2487a1ae0117572e4c1ca79b1226c49fd05c6d86d22dbee83fad60036f9ef011",
+    "sampling/consumed_inputs.json": "49f10e59f169f0ea40b8c285a8324406ad6624a2002e98d8d83d1f4be4e6c132",
+    "sampling/whole_cell_K_sampling.csv": "c78ac29d5277fcd2d4c35687a6150394e58b4e62dc9cc952f3ae4a9be821815c",
+    "sampling/whole_cell_K_sampling_summary.json": "bdafd2393ae97ddeb2b48025a6d95029213fae5744ce2bddeb75ab64a2e81a99"
+  }
+}

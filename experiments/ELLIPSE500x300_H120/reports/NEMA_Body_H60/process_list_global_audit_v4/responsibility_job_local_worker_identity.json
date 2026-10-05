@@ -1,0 +1,15 @@
+{
+  "pid": 429008,
+  "source_sha256": "e69857a13963d00020aadd25da53d2ddf25617bc262530738b3ccba37b942d57",
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/responsibility_e69857a13963d000",
+  "log": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/responsibility_e69857a13963d000.log",
+  "output": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/responsibility_e69857a13963d000",
+  "budget_seconds": 600,
+  "images_sha256": {
+    "Image_440_ComptonOnly_active.float32": "fdc8182a1c30169ea2cf26b350f7412b91898119446a2a6b8c2426b82d62e81a",
+    "Image_440_SinglePlusCompton_active.float32": "f8c871e22cf64ff9c899eb003968138d94f79bd636a963cba4213213fac6987a"
+  },
+  "probe_sha256": "e86032021becb1be5e0083182c610ee48b268d049190511e6353c37aaba09586",
+  "status": "SUPERSEDED_BY_GLOBAL_SEED_IDENTITY_FIX",
+  "note": "Local worker index repeats across views. Use independent seed for worker errors/counts. Scientific data and kernel unchanged."
+}

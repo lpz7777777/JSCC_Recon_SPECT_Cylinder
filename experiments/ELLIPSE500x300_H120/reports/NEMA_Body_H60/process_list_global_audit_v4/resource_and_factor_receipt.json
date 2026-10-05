@@ -1,0 +1,325 @@
+{
+  "factor_manifest.json": {
+    "bytes": 6133,
+    "sha256": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc"
+  },
+  "SysMat_polar": {
+    "bytes": 5543567360,
+    "sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38"
+  },
+  "Detector.csv": {
+    "bytes": 365367,
+    "sha256": "e73400af991a0cfac8254fe7371aa6bad34ab934c1c09c2e8c1d8641b67003e3"
+  },
+  "polar_cell_volume_mm3.float64": {
+    "bytes": 1056320,
+    "sha256": "135f0da5aebf0a48aef37e1d3df1d8ebf1ff63270cc43969e5866cdf39248ff9"
+  },
+  "host_memory_bytes": 1622941253632,
+  "cgroup_memory_max": null,
+  "existing_transport": {
+    "NEMA": {
+      "primary_counts": [
+        293821153,
+        706178847,
+        0
+      ],
+      "seeds": 200,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "circle_train": {
+      "primary_counts": [
+        0,
+        1000000000,
+        0
+      ],
+      "seeds": 200,
+      "views": [
+        1
+      ]
+    },
+    "circle_validation": {
+      "primary_counts": [
+        0,
+        1000000000,
+        0
+      ],
+      "seeds": 200,
+      "views": [
+        1
+      ]
+    },
+    "ellipse_validation": {
+      "primary_counts": [
+        0,
+        100000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_0": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_1": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_2": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_3": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_4": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_5": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "point_6": {
+      "primary_counts": [
+        0,
+        10000000,
+        0
+      ],
+      "seeds": 20,
+      "views": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  },
+  "primary_total": 3170000000,
+  "seeds_are_unique_and_disjoint": true,
+  "SysMat_matches_prior_audit": true,
+  "gpu_snapshot": "0, 0",
+  "diagnostic_pid_exited": true,
+  "energy_pid_exited": true,
+  "responsibility_pid_exited": true,
+  "crystal_pid_exited": true,
+  "peak_diagnostic_RSS_bytes": 12282716160,
+  "peak_RSS_fraction_actual_limit": 0.007568182848585776,
+  "peak_GPU_reserved_fraction": 0.13774366462322518
+}

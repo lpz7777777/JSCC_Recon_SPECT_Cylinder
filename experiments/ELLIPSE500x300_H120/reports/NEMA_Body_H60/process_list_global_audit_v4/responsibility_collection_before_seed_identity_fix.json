@@ -1,0 +1,12 @@
+{
+  "status": "READY",
+  "archive": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/responsibility_e69857a13963d000.tar.gz",
+  "archive_sha256": "64009defb558cf51d1871eb514d2014fa136ed61437e4ad10f785b24246b3270",
+  "files": {
+    "native_peak_responsibility.csv": "134a630881f9be4696740169838ff6e5e1b5390d0bf20439916161863eceffa0",
+    "execution.json": "54868425f6ed43e6018457670a6b3cec0b712efc204e227ff1c56c2e7af3f3d2",
+    "440_ComptonOnly_responsibility.npz": "571eb02877609fea2eaca0938e436fdb89d9a3b507e0d124fd34a543597f8f4b",
+    "440_SinglePlusCompton_responsibility.npz": "650bc42b263337db19afe8745e08817ceea0431ea1e3a9182529c894e5fdafe1",
+    "top_responsible_events.csv": "ed3a002bc733abc05ec04dff7deee3e694f6c90cf2ef26729a6537406a9f453a"
+  }
+}

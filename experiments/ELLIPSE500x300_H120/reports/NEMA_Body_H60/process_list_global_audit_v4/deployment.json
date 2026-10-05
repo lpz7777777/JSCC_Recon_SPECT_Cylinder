@@ -1,0 +1,14 @@
+{
+  "release": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4/releases/6fb60a8e5394049b",
+  "code_sha256": {
+    "process_list_global_audit_v4.py": "f8a8c31940be9a55639c49b5be15988cd0d07569eb74d750c61999f0e41e340c",
+    "test_process_list_global_audit_v4.py": "42239f6898de1b6e8cf69a860723284194831f1b9fafb1f23d251b910d25789b",
+    "geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "compton_event_response.py": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "detector_csv.py": "7c11cf59510ddcd4b2600efac62819cc4b398210bc2c26caa0f6b4dc2771192f",
+    "geometry.npz": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71"
+  },
+  "archive_sha256": "f979df5479ece38b20ebf676bcac197026450ab5643363666ecd0046f55f7a69",
+  "remote": "/home/lipeize/JSCC_FOV120_20260924/experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4"
+}
