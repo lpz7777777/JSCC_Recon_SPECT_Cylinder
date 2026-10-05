@@ -1,0 +1,49 @@
+{
+  "checked_blobs": 1848,
+  "total_blob_bytes": 62231516,
+  "largest_blobs": [
+    [
+      1323422,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/iteration_metrics.csv"
+      ]
+    ],
+    [
+      1317665,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/iteration_metrics.csv"
+      ]
+    ],
+    [
+      1313253,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/iteration_metrics.csv"
+      ]
+    ],
+    [
+      1312207,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/iteration_metrics.csv"
+      ]
+    ],
+    [
+      718667,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/event_manifests/paired_only_events.csv"
+      ]
+    ]
+  ],
+  "findings": [],
+  "post_audit_newline_only_normalization": {
+    "README.md": {
+      "audited_index_blob": "b7fa4594d354fb8fb0bc394b639aafcba4440030",
+      "current_sha256": "b3220b9adde2cadf6612bffd9a13753b833581ab9d2caeb0e58aacada3eb556b",
+      "content_changed": false
+    },
+    "PRODUCTION.md": {
+      "audited_index_blob": "dca7f2ec5ff978232beba6e3988197766a30b229",
+      "current_sha256": "a159df8b68e2ed7334d9c95e5c592678546e0f4f555b4eb25943ceaab6b999d9",
+      "content_changed": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "job": 1666205,
+  "nodes": 4,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/preflight_releases/a75a6a990f6b0be0",
+  "submitted_utc": "2026-10-05T15:51:49.013628+00:00",
+  "phases": [
+    "legacy regression 50",
+    "angular whole-cell 10",
+    "continuous_energy whole-cell 10"
+  ],
+  "nccl_interface": "bond0",
+  "host_memory_policy": "Slurm GPU-count default; no explicit mem option permitted",
+  "walltime_minutes": 90,
+  "phase_hard_timeout_minutes": 25,
+  "formal_submission_permitted": false
+}

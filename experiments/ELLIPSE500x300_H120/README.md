@@ -2,6 +2,8 @@
 
 **2026-10-05 21:41最新执行：[连续能量响应诊断验收](reports/NEMA_Body_H60/compton_energy_probability_v5/DIAGNOSTIC_ACCEPTANCE.md)完成，DIAGNOSTIC_GATES_PASSED。** 全159919固定训练事件的匹配S、独立空间/联合类别门槛通过，65114候选链已退出释放GPU。144个充分空间区偏差RMS由2.852%降至1.124%；联合类别仅57/504充分，447未判定，不能称整体联合物理已认证。下一步为独立入口的新基底回归与完整事件10次试跑；未提交配对成像，尚不能称尖峰已经解决。原生产核与基底未覆盖，新增Geant4和精细A矩阵均为0，原自动任务保持停止。
 
+**2026-10-05 23:54推进：[完整事件预检](reports/NEMA_Body_H60/compton_energy_probability_v5/PREFLIGHT.md)作业1666205已提交，4节点×1GPU，当前Priority排队。** 独立发布通过17项远端测试及75项文件哈希；链为历史50次回归→角度核完整事件10次→连续能量核完整事件10次。两种核共用91225事件、78920完整柱单元及各自匹配S，不改变原生产基底，不重启精细场。新图像及2000次配对尚未完成。
+
 上一阶段[科学总报告](reports/NEMA_Body_H60/process_list_global_audit_v4/REPORT.md)量化了144个充分空间区、内部多事件峰责任、材料尾部、厚层位置偏移和78920完整柱单元算子。精细场继续停止，约536GB清理及[停止证据](reports/NEMA_Body_H60/compton_response_geometry_v3/STOP_AND_CLEANUP_20261005.md)保留。以下精细场生产和续跑条目是停止前历史，不再执行。
 
 停止前生产记录（已终止）：[完整可续跑A候选场](reports/NEMA_Body_H60/compton_response_geometry_v3/TILED_FULL_PRODUCTION.md)已在65114 GPU0/1/3/4启动，PID2542514/2542646/2542872/2543046。区域168/168精度、21块读取/12公共面及四卡完整索引8块资源试跑均通过，复用29块，目标10720块/2.211TB。20小时tile边界停止、24小时外部上限；全场科学精度仍HOLD，S2和正式2000次未运行，尚无尖峰改善结论。
