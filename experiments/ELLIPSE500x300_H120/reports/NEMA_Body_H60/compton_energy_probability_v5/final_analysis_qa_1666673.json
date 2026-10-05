@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "job": 1666673,
+  "formal_summary_sha256": "8415fd63cd25f5f6fa6d6f591cee2ffdcde6cb5fc82c85cbf83a1a847cc5d471",
+  "comparison_sha256": "bd89b324d092cb97a4545f4384b64678af198b38897a4868ed01f568f07a8e85",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "source_manifest_sha256": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "native_rows": 160,
+  "sphere_rows": 480,
+  "history_frames": [
+    40,
+    40,
+    40,
+    40
+  ],
+  "checkpoint_directories": 80,
+  "independent_native_max_relative_errors": {
+    "max_density": 0.0,
+    "peak_x_mm": 0.0,
+    "peak_y_mm": 0.0,
+    "peak_z_mm": 0.0,
+    "total_integral": 5.049812394968601e-16,
+    "source_z_leakage": 9.408875985426164e-16
+  },
+  "independent_method": "Local fetched float64 elementwise density*whole_cell_volume then sum; compare all 160 rows with analysis dot products and independent remote receipt",
+  "all_40_frame_crc_costs_over_5pp": [],
+  "minimum_crc_changes_pp": {
+    "440_ComptonOnly/13": {
+      "iteration": 50,
+      "minimum_change_pp": 0.09396776220155587
+    },
+    "440_ComptonOnly/22": {
+      "iteration": 50,
+      "minimum_change_pp": 0.20601795882834295
+    },
+    "440_ComptonOnly/37": {
+      "iteration": 2000,
+      "minimum_change_pp": -1.6180133275399078
+    },
+    "440_SinglePlusCompton/13": {
+      "iteration": 50,
+      "minimum_change_pp": 0.007916152741326184
+    },
+    "440_SinglePlusCompton/22": {
+      "iteration": 50,
+      "minimum_change_pp": 0.008136091458515408
+    },
+    "440_SinglePlusCompton/37": {
+      "iteration": 2000,
+      "minimum_change_pp": -1.647419715020762
+    }
+  },
+  "candidate_peak_regions": {
+    "440_ComptonOnly": {
+      "point_mm": [
+        29.12461179749811,
+        21.160269082529034,
+        -10.5
+      ],
+      "containing_spheres_mm": [],
+      "nearest_truth_440": 1.0
+    },
+    "440_SinglePlusCompton": {
+      "point_mm": [
+        35.26711513754837,
+        -48.54101966249685,
+        -1.5
+      ],
+      "containing_spheres_mm": [
+        37.0
+      ],
+      "nearest_truth_440": 10.0
+    }
+  },
+  "common_normalizers": {
+    "440_ComptonOnly": 188.1327667236328,
+    "440_SinglePlusCompton": 173.7997283935547
+  },
+  "image_review": {
+    "files": [
+      "iterations_center.png",
+      "iterations_coronal.png",
+      "iterations_sagittal.png",
+      "iterations_mip72.png",
+      "final_multiplanar.png",
+      "spike_noise_leakage_curves.png",
+      "crc_cnr_curves.png",
+      "tail_integral_curves.png"
+    ],
+    "reviewed_by": "Codex visual inspection of actual PNGs",
+    "result": "Legible axes, matching truth/group/channel labels, shared display scale, no plot clipping; wide final overview supplemented by separate galleries"
+  },
+  "filtering": "No smoothing; MIP z edges [-36,36]mm only; all native quantitative metrics cover full 120mm",
+  "limitations": "Conditional calibrated B/KN/material proxy; 447 joint categories unresolved; 2000 iterations do not establish 10000-iteration stability or a complete physical certificate"
+}

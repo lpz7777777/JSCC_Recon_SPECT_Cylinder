@@ -1,0 +1,138 @@
+{
+  "scope": "Every staged added/modified blob relative to already audited and pushed 4832e22; no preceding unpushed commits",
+  "parent_commit": "4832e2294a627395951a210e688a3a747cccaf2f",
+  "parent_audit": "formal_angular_git_audit_1666673.json",
+  "prior_full_audit": "formal_submission_git_audit.json",
+  "audited_tree_excluding_this_receipt": "96b8f46eae5b6eb73c5b161226fe6fa95d05f2e3",
+  "checked_new_blobs": 29,
+  "total_new_blob_bytes": 2064702,
+  "files": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 21994,
+      "sha256": "cec815be2cb2346b29f6bf1b5c15d8386154152f7de040551006f0876bd6d823"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/ACCEPTANCE.md": {
+      "bytes": 12550,
+      "sha256": "64469c83a11cced58d8010c30278e32f625dcdbe8fe2f1cafcbcdfd6f38419eb"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL.md": {
+      "bytes": 5142,
+      "sha256": "1fbd044d013b0a9f64908a5a7e11fcab39fc44b9c27fb59ea7975c5d759e7d46"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/PRODUCTION.md": {
+      "bytes": 21290,
+      "sha256": "17ecae3af887a9f814798559d70749a026a4af7e5149eed951bc463ccea6a0da"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/README.md": {
+      "bytes": 4086,
+      "sha256": "52c69a730da24267ca3ac80ea8f14658b762d324bf8995158b6756dc2206fe9f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/README.md": {
+      "bytes": 3465,
+      "sha256": "6f67e2fcf16916757793a2813b554fa35bf50f4fbe6dbd9701530b57fcd2f28f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/artifact_manifest.json": {
+      "bytes": 1784,
+      "sha256": "33d984b16e2114092a1089204509ece9284a133fdd83b52a97a0acdf0f5a9ba5"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/comparison.json": {
+      "bytes": 15016,
+      "sha256": "bd89b324d092cb97a4545f4384b64678af198b38897a4868ed01f568f07a8e85"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/crc_cnr_curves.png": {
+      "bytes": 236187,
+      "sha256": "966991d93a80585139638a9754da310fac227917dc2206cc1708a15c2f7163bf"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/final_multiplanar.png": {
+      "bytes": 184830,
+      "sha256": "be8320e5f24dd08513464cdc8b0e25e75421ccbceb9f09f43460cc77a1683455"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/iterations_center.png": {
+      "bytes": 244524,
+      "sha256": "f18029f021e393c5a0959251a8ca5704bfd98931ff7dfb64c266ff79419311f2"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/iterations_coronal.png": {
+      "bytes": 144039,
+      "sha256": "40af651d76ebed5334dc9b9172db9a44488d9e79a3a35440f7fe89ea311862a1"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/iterations_mip72.png": {
+      "bytes": 263463,
+      "sha256": "02212d7d44646b531174c933688ab9a37606be847136496e7de31c62a3b14690"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/iterations_sagittal.png": {
+      "bytes": 146237,
+      "sha256": "2cbc59ef06965b7c90d479d13498a70853150711ccd9a833e166c1c9af6d451b"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/native_iteration_metrics.csv": {
+      "bytes": 46771,
+      "sha256": "ec54564b5104b79b1abf1b387f0263aa2325afbc961383aab4a281b712a06bf8"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/analyze_nema_result.py": {
+      "bytes": 9587,
+      "sha256": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/compare_energy_formal_v5.py": {
+      "bytes": 17214,
+      "sha256": "d8c66df2cb4eefe2196f2465169b2a102b8de2e73b39e255c6767ba55ccc9868"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/mip_projection.py": {
+      "bytes": 1692,
+      "sha256": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/verify_delivered_analysis.py": {
+      "bytes": 8821,
+      "sha256": "c4f6db50a401f6d0d30ac36be3d6cb70d1d931ec7002869c09f73d96c5ec43bf"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/selected_comparison_metrics.csv": {
+      "bytes": 2486,
+      "sha256": "6716263342bcec92ea9b4f8aa7bbe3181242ce41033a5c0c11a2c221c07ff928"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/sphere_iteration_metrics.csv": {
+      "bytes": 55959,
+      "sha256": "c4f393e048ce79ea8f5ffaf9c96a86ef29aff0bd54918a84937144da75fb7080"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/spike_noise_leakage_curves.png": {
+      "bytes": 213497,
+      "sha256": "f6efa65f90ff9ebd9f388c22b24312120cdb18dd380e30f4ac1e540d6c454345"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/tail_integral_curves.png": {
+      "bytes": 215277,
+      "sha256": "4687e9163b2b9793a32053da357768d9fce4ef7439b6ba21b9c21b0ba5cbee19"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/final_analysis_qa_1666673.json": {
+      "bytes": 3263,
+      "sha256": "a140fdf7d2555e56a01f6da1cf1a842be295c15c231d6878ae4a78e2d4ac4f5d"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/formal_evidence/1666673/continuous_energy/run_manifest.json": {
+      "bytes": 35706,
+      "sha256": "06fd9cbce6c3539741977588821199b4976da2cd638da96dcf5efa5b462cd498"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/formal_evidence/1666673/continuous_energy/verification.json": {
+      "bytes": 31570,
+      "sha256": "f34ca97c06b9e1af10e5d8680677902e3556d5c980ce3580ae5a79ee72d18d6e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/formal_summary.json": {
+      "bytes": 59524,
+      "sha256": "8415fd63cd25f5f6fa6d6f591cee2ffdcde6cb5fc82c85cbf83a1a847cc5d471"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/native_crosscheck_1666673.json": {
+      "bytes": 56645,
+      "sha256": "64bf4f089470b114830a44f21e7a601c0a38736070b0668611b156e934bfab13"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/runtime_summary_1666673.json": {
+      "bytes": 2083,
+      "sha256": "c6bb453518c44fa5d0d852d2839a2860259ff7b6e7e19f482b85dc1506d6301e"
+    }
+  },
+  "findings": [],
+  "guard_sha256": "96753b472febc4049f4e3ae4da05e8247d0a87d29d269582ece9ce5866491c61",
+  "exclusions": [
+    "generated raw data",
+    "truth npz",
+    "matrices",
+    "event response blocks",
+    "archives",
+    "credentials"
+  ],
+  "created_at": "2026-10-06T07:07:46+08:00"
+}

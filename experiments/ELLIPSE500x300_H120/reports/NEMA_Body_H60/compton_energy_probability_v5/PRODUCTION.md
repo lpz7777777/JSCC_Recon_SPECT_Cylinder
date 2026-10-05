@@ -129,3 +129,14 @@ python experiments/ELLIPSE500x300_H120/plot_energy_candidate_v5.py
 1666673的A角度核2000/save50已退出（Slurm .1 COMPLETED 0:0）。两路各40帧、40个持久检查点、有限非负、活动域外零、末帧一致、91225事件/20视角/4唯一节点及冻结身份通过原阶段验收。随后直接调用冻结验收器write_receipt=False独立复验全部内容、authority与检查点，返回证明逐项相等且原verification字节SHA不变。证明SHA 32ce8bc8e26872e34d76a1101ffa62cbea39a073e25d26a6777c7e277446b487；run_manifest SHA f9b4545d1c76137b7c840e8210dfc9110a63c2d9721e6035db5fa56635d1bb21。
 
 实际A显存预留峰值33.46%、进程RSS22.78%，Slurm .1 MaxRSS14157576KiB相对本作业60000MiB/节点23.04%。原始证明小文件已逐文件SHA取回formal_evidence/1666673/angular；完整数组待两组结束统一fetch。B连续能量核已进入迭代，最新持久化100/2000，现场四卡97%–99%、GPU使用约14.5–15.0GB，主存正常。未修改事件、核/S、矩阵、MLEM、阈值或迭代；没有重复提交。A完成不等于配对已验收或尖峰改善，待B实际完成后继续整体fetch与共同尺度科学比较。
+
+
+## 14. 2026-10-06正式配对完成、科学验收及交付
+
+1666673 COMPLETED 0:0且完全退出，Slurm ElapsedRaw6930秒（1:55:30），4个唯一节点×1GPU/bond0，实际60000MiB/节点。A/B各91225事件、78920完整活动列、2000/save50，两路各40帧，两个模型总80检查点；1e9实际初级γ、200唯一worker/种子、20视角和全部输入/Factors/代码/匹配S身份闭合。实际A/B预留显存33.46%/60.86%、进程RSS22.78%/22.76%、Slurm最大RSS23.04%，满足20%余量；GPU已释放。
+
+energy_formal_v5_workflow.py fetch实际成功，重新执行冻结严格验收并逐文件SHA取回四条完整历史、final、全部检查点和原始证明，不以COMPLETED代替。compare_energy_formal_v5.py --job 1666673对实际正式数据运行成功，生成comparison_1666673：真实H60三维球体、现有ROI、A2000背景共同固定尺度、无平滑、中心轴/冠/矢位及中央72mm MIP，160条原生指标/480条球体指标和全部40帧曲线。8张实际PNG完成视觉QA；独立远端/本地float64逐元素积分与脚本点积全部160行闭合，最大相对差小于1e−15；峰/位置完全一致。
+
+2000次Compton最大密度/峰背景下降73.76%/76.14%，JSCC66.11%/69.53%，均达到预设双50%极端峰工作判据。全120mm轴向源外积分由15.98%→7.08%、16.48%→9.63%。Compton内部仍有23.23倍背景峰；B的JSCC最大点落在真实37mm热球。CV仅小幅改善，p99略升，13mm球CRC仅约1.6%，恢复仍弱。全部40帧无CRC损失>5个百分点，37mm最终损失1.62/1.65个百分点；JSCC100次未达到尖峰判据。447联合类别仍统计不足，不外推10000次稳定性或完整物理/设备性能。
+
+[最终报告](ACCEPTANCE.md)、[图集与曲线](comparison_1666673/README.md)、formal_summary.json、formal_evidence/1666673两模型、runtime_summary_1666673.json、native_crosscheck_1666673.json和final_analysis_qa_1666673.json保存小型证据。原始约180MiB图像及80检查点完整保留generated，不提交大数组/矩阵/响应块/压缩包/凭证；图集内真值npz本地归档但按忽略规则排除。更新入口README，审计后提交推送；按既定授权完整交付后暂停compton-v5。此轮结束，不追加Geant4、精细场、阈值扫描、下一种响应修正或正则化。

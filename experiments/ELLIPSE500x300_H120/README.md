@@ -1,6 +1,6 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
-2026-10-06 05:49：唯一正式配对1666673的A角度核已完成2000/save50，91225事件/20视角/78920列及两路各40帧、40检查点通过阶段严格验收和独立只读复验；GPU峰值33.46%、进程RSS22.78%、Slurm阶段MaxRSS23.04%（实际60000MiB/节点）。B连续能量核已进入迭代，最新持久化100/2000，4节点×1GPU、bond0及冻结发布不变。完整A/B科学对照尚未完成，继续等待B结束及整体验收。[新入口验收](reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL_ENTRY_ACCEPTANCE.md)、[正式合同](reports/NEMA_Body_H60/compton_energy_probability_v5/FORMAL.md)。
+2026-10-06最终交付：唯一正式配对1666673的A角度核/B连续材料能量核均完成2000/save50，四条各40帧及80检查点通过严格内容、资源与SHA验收。相同91225事件/78920完整柱单元下，2000次Compton最大密度/峰背景降73.76%/76.14%，JSCC降66.11%/69.53%；源外轴向泄漏分别15.98%→7.08%、16.48%→9.63%。整体噪声只小幅改善，Compton内部仍有高值、13 mm球恢复仍弱，447联合类别仍未判定。实际4节点×1GPU/bond0，耗时1:55:30；A/B显存33.46%/60.86%，Slurm主存23.04%，全部满足20%余量。[最终报告](reports/NEMA_Body_H60/compton_energy_probability_v5/ACCEPTANCE.md)、[固定尺度图集/中央72mm MIP/全部40帧曲线](reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/README.md)。本轮结束，不增加光子数/迭代或响应修正，按授权暂停compton-v5；旧任务保持停止。以下早期“待执行/未成像”条目为当时历史状态。
 
 **2026-10-05 21:41最新执行：[连续能量响应诊断验收](reports/NEMA_Body_H60/compton_energy_probability_v5/DIAGNOSTIC_ACCEPTANCE.md)完成，DIAGNOSTIC_GATES_PASSED。** 全159919固定训练事件的匹配S、独立空间/联合类别门槛通过，65114候选链已退出释放GPU。144个充分空间区偏差RMS由2.852%降至1.124%；联合类别仅57/504充分，447未判定，不能称整体联合物理已认证。下一步为独立入口的新基底回归与完整事件10次试跑；未提交配对成像，尚不能称尖峰已经解决。原生产核与基底未覆盖，新增Geant4和精细A矩阵均为0，原自动任务保持停止。
 
