@@ -1,6 +1,6 @@
 # v5完整事件重建预检
 
-2026-10-06 03:30：**1666430已COMPLETED且三阶段实际严格验收和fetch通过**。两核各91225事件、20视角、78920完整单元、四唯一节点/rank、两路末图/历史及SHA闭合；GPU峰值35.73%/64.98%、RSS22.78%/22.77%，保守Slurm MaxRSS/实际主存25.27%。见[PREFLIGHT_ACCEPTANCE.md](PREFLIGHT_ACCEPTANCE.md)。已经继续实施独立正式入口，新入口完整事件验证1666534已提交，正式2000次尚未提交；下一阶段见[FORMAL.md](FORMAL.md)。
+2026-10-06 04:24：1666430三阶段实际预检与fetch通过，原历史回归证明只读。随后1666592独立正式入口两核完整事件10次实际通过，四张第10帧L2均0、资源与SHA闭合；已继续提交唯一正式1666673。原预检入口仍只允许10次，未绕过其保护。见[PREFLIGHT_ACCEPTANCE.md](PREFLIGHT_ACCEPTANCE.md)、[新入口验收](FORMAL_ENTRY_ACCEPTANCE.md)、[正式合同](FORMAL.md)。
 
 | 顺序 | 数据和基底 | 计算 | 验收 |
 |---|---|---|---|

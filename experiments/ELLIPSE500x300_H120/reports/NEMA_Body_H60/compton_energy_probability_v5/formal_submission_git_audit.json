@@ -1,0 +1,15 @@
+{
+  "scope": "Staged index and origin/codex/ellipse500x300-h120..HEAD",
+  "checked_blobs": 1914,
+  "total_blob_bytes": 62826769,
+  "audited_tree": "098a5eadae56e3deb9816e7c12a0a3b91652a97e",
+  "findings": [],
+  "supplemental_line_ending_correction_sha256": {
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/PREFLIGHT.md": "371f4a2b8484ae28e8bfe64441876415809735808ac9cab9b75c0924ccd29f6d"
+  },
+  "release_key": "2a62bcf35f00e1d4",
+  "validation_job": 1666592,
+  "formal_job": 1666673,
+  "large_generated_files_excluded": true,
+  "note": "Receipt created after full staged/outgoing scan. The PREFLIGHT CRLF restoration preserves normalized content; that corrected blob and this receipt were separately size/pattern checked."
+}

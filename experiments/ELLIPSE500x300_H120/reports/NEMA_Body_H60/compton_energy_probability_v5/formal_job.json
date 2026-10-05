@@ -1,0 +1,27 @@
+{
+  "job": 1666673,
+  "mode": "formal",
+  "nodes": 4,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/formal_releases/2a62bcf35f00e1d4",
+  "contract_sha256": "95d507f907f5670855502ee23ab11fbdaa7ae2e77e7ed9cc3dcf6f968a9a61fd",
+  "authority": {
+    "passed": true,
+    "sha256": "d33a11bcd6081a471fd662dd050d7fb10d2f45ac767cf591db97133a20ba2843",
+    "remote": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5/formal_authorities/d33a11bcd6081a471fd662dd050d7fb10d2f45ac767cf591db97133a20ba2843.json",
+    "contract_sha256": "95d507f907f5670855502ee23ab11fbdaa7ae2e77e7ed9cc3dcf6f968a9a61fd",
+    "validation_job": 1666592,
+    "estimated_max_phase_seconds": 4012.64972461015
+  },
+  "iterations": 2000,
+  "save_step": 50,
+  "models": [
+    "angular",
+    "continuous_energy"
+  ],
+  "nccl_interface": "bond0",
+  "walltime_minutes": 221,
+  "phase_timeout_seconds": 6319,
+  "submitted_utc": "2026-10-05T20:22:23.506165+00:00",
+  "formal_submitted": true
+}
