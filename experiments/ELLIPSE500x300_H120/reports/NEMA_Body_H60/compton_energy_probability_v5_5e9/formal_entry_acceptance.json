@@ -71,6 +71,7 @@
   "contract_sha256": "35a3c1b66d094dd912ae446fd598957daaf932e3216b849f9d14ee5b32b48cb1",
   "authority_sha256": "bc6276166659071fdf902d1019da15186c246d455c4f8f188d10696a11faa4d1",
   "formal_job": 1667869,
-  "formal_state": "PENDING Priority",
-  "formal_completed": false
+  "formal_state": "RUNNING angular",
+  "formal_completed": false,
+  "formal_start_observed_utc": "2026-10-06T02:52:50.430156+00:00"
 }

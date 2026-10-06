@@ -1,0 +1,148 @@
+{
+  "job": 1667869,
+  "observed_utc": "2026-10-06T02:52:50.430156+00:00",
+  "queue": "1667869 Energy_5e9_v5_formal RUNNING 3:45 8 wqd10naf05g4,wqd10nah05g4,wqd10nba06g[1-3,5],wqd10nba07g4,wqd10nba10g8",
+  "allocation": "JobId=1667869 JobName=Energy_5e9_v5_formal\n   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A\n   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:03:45 TimeLimit=09:13:00 TimeMin=N/A\n   SubmitTime=2026-10-06T10:45:59 EligibleTime=2026-10-06T10:45:59\n   AccrueTime=2026-10-06T10:45:59\n   StartTime=2026-10-06T10:46:25 EndTime=2026-10-06T19:59:25 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T10:46:25 Scheduler=Backfill\n   Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:1848712\n   ReqNodeList=(null) ExcNodeList=wqd10nba06g6\n   NodeList=wqd10naf05g4,wqd10nah05g4,wqd10nba06g[1-3,5],wqd10nba07g4,wqd10nba10g8\n   BatchHost=wqd10naf05g4\n   NumNodes=8 NumCPUs=48 NumTasks=8 CPUs/Task=6 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8\n   AllocTRES=cpu=48,mem=480000M,node=8,billing=48,gres/gpu=8\n   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*\n   MinCPUsNode=6 MinMemoryCPU=10000M MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9/formal_releases/36d4f91255655b39/reconstruct_energy_5e9_v5.sh\n   WorkDir=/tmp\n   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9/logs/formal.1667869.err\n   StdIn=/dev/null\n   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9/logs/formal.1667869.out\n   TresPerNode=gres/gpu:1\n   TresPerTask=cpu=6",
+  "phase": "angular",
+  "progress": null,
+  "resources": [
+    {
+      "host": "wqd10nba06g1",
+      "processes": [
+        {
+          "pid": 1192127,
+          "gpu_uuid": "GPU-0afd40a5-aa94-98e9-b2ef-7054e2027b03",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 47
+          },
+          "VmHWM": 26258178048,
+          "VmRSS": 20769689600
+        }
+      ]
+    },
+    {
+      "host": "wqd10nba10g8",
+      "processes": [
+        {
+          "pid": 3611208,
+          "gpu_uuid": "GPU-73661eca-a74c-b906-f5ad-0073adc5eb3a",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 55
+          },
+          "VmHWM": 24659099648,
+          "VmRSS": 20748595200
+        }
+      ]
+    },
+    {
+      "host": "wqd10nba06g3",
+      "processes": [
+        {
+          "pid": 2552761,
+          "gpu_uuid": "GPU-0417e354-bf9d-67b9-02d9-b8bdb112eded",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 56
+          },
+          "VmHWM": 26258345984,
+          "VmRSS": 20790923264
+        }
+      ]
+    },
+    {
+      "host": "wqd10nba06g5",
+      "processes": [
+        {
+          "pid": 3013204,
+          "gpu_uuid": "GPU-456f3685-1421-dd1a-328f-6d620fb63435",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 53
+          },
+          "VmHWM": 26260283392,
+          "VmRSS": 20771979264
+        }
+      ]
+    },
+    {
+      "host": "wqd10nah05g4",
+      "processes": [
+        {
+          "pid": 2885445,
+          "gpu_uuid": "GPU-264f6e7a-f300-8402-77f0-c02c10179549",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 44
+          },
+          "VmHWM": 26279632896,
+          "VmRSS": 20791906304
+        }
+      ]
+    },
+    {
+      "host": "wqd10naf05g4",
+      "processes": [
+        {
+          "pid": 3439240,
+          "gpu_uuid": "GPU-9600ed38-0c1f-cee5-0069-35de1bc11e99",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 55
+          },
+          "VmHWM": 26282090496,
+          "VmRSS": 20774051840
+        }
+      ]
+    },
+    {
+      "host": "wqd10nba06g2",
+      "processes": [
+        {
+          "pid": 2545271,
+          "gpu_uuid": "GPU-977cb9e8-8bb3-32a3-7c09-1955f3eed3eb",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 46
+          },
+          "VmHWM": 26260885504,
+          "VmRSS": 20793397248
+        }
+      ]
+    },
+    {
+      "host": "wqd10nba07g4",
+      "processes": [
+        {
+          "pid": 2018162,
+          "gpu_uuid": "GPU-f70b76c8-144a-b82b-d3c5-8c91794935cd",
+          "process_gpu_used_mib": 2504,
+          "gpu": {
+            "used_mib": 2513,
+            "total_mib": 24564,
+            "utilization_percent": 49
+          },
+          "VmHWM": 26263416832,
+          "VmRSS": 20775464960
+        }
+      ]
+    }
+  ],
+  "peak_resource_certificate": false,
+  "scope": "Bounded read-only live observation; final resource certificate requires both completed run manifests and Slurm MaxRSS"
+}
