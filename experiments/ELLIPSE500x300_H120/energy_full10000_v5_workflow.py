@@ -151,6 +151,18 @@ def status():
         for ext in ('out','err'):
             p=shlex.quote(REMOTE+'/logs/'+r['mode']+'.'+str(job)+'.'+ext)
             print(command(c,'if test -f '+p+'; then tail -n 12 '+p+'; fi'))
+        result=REMOTE+'/'+r['mode']+'_continuous_energy_'+str(job)
+        script="""import json
+from pathlib import Path
+p=Path("""+repr(result)+""")
+if (p/'progress.json').exists():
+ print('ACTUAL_PROGRESS',json.dumps(json.loads((p/'progress.json').read_text()),sort_keys=True))
+ for phase in ('440_single','218_corrected','compton_jscc'):
+  print('DURABLE_CHECKPOINTS',phase,len(list((p/('checkpoints_'+phase)).glob('checkpoint_*'))))
+"""
+        print(command(c,PYTHON+' -c '+shlex.quote(script)))
+        if any(x.split()[0]==str(job) and ' RUNNING ' in x for x in q.splitlines()):
+            print(command(c,f'sstat -j {job} --allsteps --noheader --parsable2 --format=JobID,MaxRSS,AveRSS'))
 
 
 def fetch():
@@ -189,19 +201,20 @@ def fetch():
                     with c.open_sftp() as s:s.get(remote+'/'+n,str(folder/n))
                     if digest(folder/n)!=sha:raise ValueError('Image transfer differs')
                     sha_map[n]=sha
-            for snapshot in v['checkpoints']:
-                relative=f"checkpoints_{snapshot['phase']}/checkpoint_{snapshot['iteration']:06d}"
-                local=folder/relative;local.mkdir(parents=True,exist_ok=True)
-                n='checkpoint_manifest.json'
-                with c.open_sftp() as s:s.get(remote+'/'+relative+'/'+n,str(local/n))
-                if digest(local/n)!=snapshot['manifest_sha256']:raise ValueError('Checkpoint manifest transfer differs')
-                metadata=json.loads((local/n).read_text())
-                for channel,kinds in metadata['outputs'].items():
-                    for kind,sha in kinds.items():
-                        n='Image_'+channel+'_'+kind+'.float32'
-                        if (local/n).exists() and digest(local/n)==sha:continue
-                        with c.open_sftp() as s:s.get(remote+'/'+relative+'/'+n,str(local/n))
-                        if digest(local/n)!=sha:raise ValueError('Persistent checkpoint image transfer differs')
+            with c.open_sftp() as snapshots:
+                for snapshot in v['checkpoints']:
+                    relative=f"checkpoints_{snapshot['phase']}/checkpoint_{snapshot['iteration']:06d}"
+                    local=folder/relative;local.mkdir(parents=True,exist_ok=True)
+                    n='checkpoint_manifest.json'
+                    snapshots.get(remote+'/'+relative+'/'+n,str(local/n))
+                    if digest(local/n)!=snapshot['manifest_sha256']:raise ValueError('Checkpoint manifest transfer differs')
+                    metadata=json.loads((local/n).read_text())
+                    for channel,kinds in metadata['outputs'].items():
+                        for kind,sha in kinds.items():
+                            n='Image_'+channel+'_'+kind+'.float32'
+                            if (local/n).exists() and digest(local/n)==sha:continue
+                            snapshots.get(remote+'/'+relative+'/'+n,str(local/n))
+                            if digest(local/n)!=sha:raise ValueError('Persistent checkpoint image transfer differs')
             with c.open_sftp() as transfer:
                 transfer.get(remote+'/PredictedCntStat_218_From440.float32',str(folder/'PredictedCntStat_218_From440.float32'))
             if digest(folder/'PredictedCntStat_218_From440.float32')!=v['prediction_sha256']:raise ValueError('Cross prediction transfer differs')
