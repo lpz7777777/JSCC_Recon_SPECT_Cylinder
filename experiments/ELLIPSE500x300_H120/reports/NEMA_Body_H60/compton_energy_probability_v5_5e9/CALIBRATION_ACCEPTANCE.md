@@ -24,4 +24,4 @@
 
 校准实际耗时3967.74秒，GPU预留峰值14.978GB/50.897GB（29.43%），进程RSS峰值12.294GB。主存分母为65114的实际宿主/cgroup上限；该资源记录不能替代scxi717的8节点成像资源验收。取回全部派生文件逐一SHA核对，原证明保持原字节。[汇总及哈希](calibration_acceptance.json)、[空间计数与偏差](calibration_evidence/spatial_efficiency.csv)、[联合类别](calibration_evidence/independent_joint_categories.csv)、[实际门控](calibration_evidence/calibration_gate.json)、[执行资源](calibration_evidence/execution.json)。
 
-重建发布`36d4f91255655b39`已冻结并部署，67个发布文件、23个原输入、27个完整Factors的117项SHA通过；11项远端测试全部通过，实际校准合同fixture不再跳过。当前完整事件10/save10作业1667841已运行，8节点×1GPU、bond0、实际60000MiB主存/节点，两核顺序使用全部483743个固定事件。待该实际试跑的身份/输出/数值及GPU、RSS、Slurm MaxRSS余量通过后，才提交唯一2000/save50配对。当前没有本轮正式图像或尖峰结论。
+重建发布`36d4f91255655b39`的117项SHA和11项远端测试通过。1667841完整事件10/save10已实际验收、只读复验及逐文件SHA取回，唯一正式1667869已提交；详见[正式入口验收](FORMAL_ENTRY_ACCEPTANCE.md)。当前尚无本轮正式图像或尖峰结论。

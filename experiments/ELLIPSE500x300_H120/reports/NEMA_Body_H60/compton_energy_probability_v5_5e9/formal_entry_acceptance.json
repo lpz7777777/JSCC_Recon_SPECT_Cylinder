@@ -1,0 +1,76 @@
+{
+  "validation_job": 1667841,
+  "actual_validation_passed": true,
+  "models": {
+    "angular": {
+      "accepted_events": 483743,
+      "frames": [
+        1,
+        1
+      ],
+      "nodes": [
+        "wqd10naf05g4",
+        "wqd10nba06g1",
+        "wqd10nba06g2",
+        "wqd10nba06g3",
+        "wqd10nba06g8",
+        "wqd10nba07g1",
+        "wqd10nba07g7",
+        "wqd10nba07g8"
+      ],
+      "gpu_reserved_percent": 30.72530279353971,
+      "host_rss_percent": 41.76602213541667,
+      "minimum_active_event_mass": 5.45411472790987e-10,
+      "initial_forward_floor_events": 0,
+      "numerical_checks": {
+        "chunk_relative_L2": 5.592529479441732e-08,
+        "rank_weight_relative_L2": 5.873831607824172e-09,
+        "forward_adjoint_relative_error": 0,
+        "event_constant_relative_error": 1.1927879474341812e-16,
+        "original_sparse_relative_L2": 0
+      },
+      "estimated_2000_phase_seconds": 8588.19405597262,
+      "verification_sha256": "c735e941d5304ae5121dc738c61b4033cb8c0350260db08ad57a45f4a8ea6bd6",
+      "run_manifest_sha256": "558691922feab22ffac3298e4399b8745f63de747943438d55155115765d7281"
+    },
+    "continuous_energy": {
+      "accepted_events": 483743,
+      "frames": [
+        1,
+        1
+      ],
+      "nodes": [
+        "wqd10naf05g4",
+        "wqd10nba06g1",
+        "wqd10nba06g2",
+        "wqd10nba06g3",
+        "wqd10nba06g8",
+        "wqd10nba07g1",
+        "wqd10nba07g7",
+        "wqd10nba07g8"
+      ],
+      "gpu_reserved_percent": 64.19171127020138,
+      "host_rss_percent": 41.78257161458333,
+      "minimum_active_event_mass": 2.021943343325224e-05,
+      "initial_forward_floor_events": 0,
+      "numerical_checks": {
+        "chunk_relative_L2": 0,
+        "rank_weight_relative_L2": 1.8708878273056915e-16,
+        "forward_adjoint_relative_error": 2.1247284306848971e-16,
+        "event_constant_relative_error": 1.009589975683314e-16,
+        "original_sparse_relative_L2": null
+      },
+      "estimated_2000_phase_seconds": 10641.503819141537,
+      "verification_sha256": "646ebf173a5d15209cd59c4c0c37757159580c422dbb3d9a21a7865e79ea9fd4",
+      "run_manifest_sha256": "030ba61811b4a3ad92e916ac3a053957cc503274d67994c64ce2cac4e6b8da54"
+    }
+  },
+  "slurm_maxrss_bytes": 31383052288.0,
+  "host_allocated_bytes_per_node": 62914560000,
+  "slurm_maxrss_percent": 49.88201822916667,
+  "contract_sha256": "35a3c1b66d094dd912ae446fd598957daaf932e3216b849f9d14ee5b32b48cb1",
+  "authority_sha256": "bc6276166659071fdf902d1019da15186c246d455c4f8f188d10696a11faa4d1",
+  "formal_job": 1667869,
+  "formal_state": "PENDING Priority",
+  "formal_completed": false
+}
