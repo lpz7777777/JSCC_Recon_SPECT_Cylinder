@@ -1,0 +1,29 @@
+{
+  "job": 1667869,
+  "phase": "angular",
+  "passed": true,
+  "observed_utc": "2026-10-06T05:18:35.949353+00:00",
+  "iterations": 2000,
+  "accepted_events": 483743,
+  "frames": [
+    40,
+    40
+  ],
+  "checkpoints": 40,
+  "sha256": {
+    "run_manifest.json": "f42a33d9170e0e560d1c94aee7d7f1c0df8faf1dab0d5ba09d42e194e334b0dc",
+    "verification.json": "e0dfc4b2dc1da9178bf9b39511304887ea54c49130e3ac1c6063fae385752449"
+  },
+  "gpu_reserved_percent": 30.721475029458023,
+  "process_rss_percent": 41.7742578125,
+  "slurm_maxrss_bytes": 26506600448.0,
+  "slurm_maxrss_percent": 42.131106770833334,
+  "host_allocated_bytes_per_node": 62914560000,
+  "prepare_seconds": 44.46709693595767,
+  "solve_seconds": 7875.630448959768,
+  "contract_sha256": "35a3c1b66d094dd912ae446fd598957daaf932e3216b849f9d14ee5b32b48cb1",
+  "authority_sha256": "bc6276166659071fdf902d1019da15186c246d455c4f8f188d10696a11faa4d1",
+  "paired_imaging_completed": false,
+  "continuous_energy_pending": true,
+  "scientific_comparison_pending": true
+}
