@@ -1,0 +1,400 @@
+{
+  "study": "compton_energy_probability_v5_5e9",
+  "event_policy": "legacy",
+  "actual_primary_gamma": 5000000000,
+  "through_iteration": 2000,
+  "selected_iterations": [
+    100,
+    500,
+    1000,
+    2000
+  ],
+  "job": 1667869,
+  "formal_summary_sha256": "0123a46838c68d0b9c99db9aa793e2f23bc7f300c1bfd50355c80546c4ff0dd4",
+  "contract_sha256": "35a3c1b66d094dd912ae446fd598957daaf932e3216b849f9d14ee5b32b48cb1",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "whole_active_cells": 78920,
+  "tiny_cell_metric": "not_applicable_whole_cells",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "history_sha256": {
+    "angular/440_ComptonOnly": "dfc84f012b354ab5939be2fd9da3e470625dbce5f89f82654824920f41280ecd",
+    "continuous_energy/440_ComptonOnly": "afe3a0900d12945b24c97ba7ae5981b5dff88e96ced7425f2e992f8d7b4be2ba",
+    "angular/440_SinglePlusCompton": "bc1a95bfedf13b98a7467c58b18ea5abd5b3d80d903f6d777f62c24eaee9cdf7",
+    "continuous_energy/440_SinglePlusCompton": "6d4ca8adbb074be51eb51927abd5839e3381758a5736473acf5ccc73efb77793"
+  },
+  "common_normalizers": {
+    "440_ComptonOnly": 945.671875,
+    "440_SinglePlusCompton": 853.9879150390625
+  },
+  "verdict": {
+    "440_ComptonOnly": {
+      "extreme_spike_improved": true,
+      "reductions": {
+        "max_density": 0.7662867833060235,
+        "peak_background_ratio": 0.7876470600741572
+      },
+      "crc_costs": [
+        {
+          "diameter_mm": 13,
+          "crc_change": 0.006033065353710881,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 22,
+          "crc_change": 0.01315247209048373,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 37,
+          "crc_change": 0.03126871132758152,
+          "cost_over_5_percentage_points": false
+        }
+      ],
+      "angular_final": {
+        "group": "angular",
+        "channel": "440_ComptonOnly",
+        "iteration": 2000,
+        "max_density": 84838.609375,
+        "peak_background_ratio": 89.7125244140625,
+        "peak_x_mm": 110.91177421627194,
+        "peak_y_mm": -134.06930424298739,
+        "peak_z_mm": -58.5,
+        "p99_density": 2687.82666015625,
+        "p999_density": 7368.08740234375,
+        "volume_weighted_p999_density": 7668.312503872714,
+        "background_mean": 945.671875,
+        "background_cv": 0.7278420368083208,
+        "total_integral": 3558922054.080552,
+        "integral_recovery": 1.007923028266392,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.1591520865371898
+      },
+      "continuous_energy_final": {
+        "group": "continuous_energy",
+        "channel": "440_ComptonOnly",
+        "iteration": 2000,
+        "max_density": 19827.904296875,
+        "peak_background_ratio": 19.050718307495117,
+        "peak_x_mm": 110.91177421627194,
+        "peak_y_mm": -134.06930424298739,
+        "peak_z_mm": -58.5,
+        "p99_density": 2841.4443359375,
+        "p999_density": 6907.8544921875,
+        "volume_weighted_p999_density": 6753.041204760751,
+        "background_mean": 1040.795654296875,
+        "background_cv": 0.7165807080717572,
+        "total_integral": 3528034877.309756,
+        "integral_recovery": 0.9991754647422835,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.06943370889504544
+      }
+    },
+    "440_SinglePlusCompton": {
+      "extreme_spike_improved": true,
+      "reductions": {
+        "max_density": 0.6205386735766552,
+        "peak_background_ratio": 0.6564850997688081
+      },
+      "crc_costs": [
+        {
+          "diameter_mm": 13,
+          "crc_change": -0.0019326044980060436,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 22,
+          "crc_change": 0.0012386350449984374,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 37,
+          "crc_change": -0.009962843260161336,
+          "cost_over_5_percentage_points": false
+        }
+      ],
+      "angular_final": {
+        "group": "angular",
+        "channel": "440_SinglePlusCompton",
+        "iteration": 2000,
+        "max_density": 20801.7109375,
+        "peak_background_ratio": 24.358320236206055,
+        "peak_x_mm": 110.91177421627194,
+        "peak_y_mm": -134.06930424298739,
+        "peak_z_mm": -58.5,
+        "p99_density": 1781.2349853515625,
+        "p999_density": 5374.71044921875,
+        "volume_weighted_p999_density": 5484.088627450255,
+        "background_mean": 853.9879150390625,
+        "background_cv": 0.47650738600165327,
+        "total_integral": 3477648077.1357903,
+        "integral_recovery": 0.984905408965769,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.17786070386095068
+      },
+      "continuous_energy_final": {
+        "group": "continuous_energy",
+        "channel": "440_SinglePlusCompton",
+        "iteration": 2000,
+        "max_density": 7893.44482421875,
+        "peak_background_ratio": 8.367445945739746,
+        "peak_x_mm": 27.239429984372798,
+        "peak_y_mm": -53.46039145130208,
+        "peak_z_mm": 4.5,
+        "p99_density": 1792.331298828125,
+        "p999_density": 4223.78076171875,
+        "volume_weighted_p999_density": 4020.750745883815,
+        "background_mean": 943.351806640625,
+        "background_cv": 0.45536021381123915,
+        "total_integral": 3517297100.4593887,
+        "integral_recovery": 0.9961344168082716,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.10752128599483
+      }
+    }
+  },
+  "selected_verdict": [
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 100,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.6308172982318092,
+      "peak_background_reduction": 0.6631157654098789,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": -0.06979441236701044,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 100,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.6308172982318092,
+      "peak_background_reduction": 0.6631157654098789,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.11463425825859949,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 100,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.6308172982318092,
+      "peak_background_reduction": 0.6631157654098789,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": -0.5142915294675164,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 500,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.8449827911709462,
+      "peak_background_reduction": 0.8580279122324069,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.2782693261513665,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 500,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.8449827911709462,
+      "peak_background_reduction": 0.8580279122324069,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.3639836506782776,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 500,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.8449827911709462,
+      "peak_background_reduction": 0.8580279122324069,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.0765005437420141,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 1000,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.8221470888067103,
+      "peak_background_reduction": 0.838227322439899,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.5143151696652434,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 1000,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.8221470888067103,
+      "peak_background_reduction": 0.838227322439899,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.36113639004216186,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 1000,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.8221470888067103,
+      "peak_background_reduction": 0.838227322439899,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 1.5787189793716294,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 2000,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.7662867833060235,
+      "peak_background_reduction": 0.7876470600741572,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.603306535371088,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 2000,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.7662867833060235,
+      "peak_background_reduction": 0.7876470600741572,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 1.3152472090483731,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "iteration": 2000,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.7662867833060235,
+      "peak_background_reduction": 0.7876470600741572,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 3.1268711327581524,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 100,
+      "diameter_mm": 13,
+      "maximum_density_reduction": -0.046902834404170646,
+      "peak_background_reduction": -0.0035170782834335057,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": 0.008948287830843043,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 100,
+      "diameter_mm": 22,
+      "maximum_density_reduction": -0.046902834404170646,
+      "peak_background_reduction": -0.0035170782834335057,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": 0.006869149138489898,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 100,
+      "diameter_mm": 37,
+      "maximum_density_reduction": -0.046902834404170646,
+      "peak_background_reduction": -0.0035170782834335057,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": -0.01565003447734116,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 500,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.42624047089647765,
+      "peak_background_reduction": 0.48388987227050595,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": -0.0033274255266987907,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 500,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.42624047089647765,
+      "peak_background_reduction": 0.48388987227050595,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": 0.034996205354754714,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 500,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.42624047089647765,
+      "peak_background_reduction": 0.48388987227050595,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": -0.14096394710180343,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 1000,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.42099507002792635,
+      "peak_background_reduction": 0.48116947973456536,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": -0.0850741549977465,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 1000,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.42099507002792635,
+      "peak_background_reduction": 0.48116947973456536,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": 0.02586539355630274,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 1000,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.42099507002792635,
+      "peak_background_reduction": 0.48116947973456536,
+      "extreme_spike_improved": false,
+      "crc_change_percentage_points": -0.5240552043355912,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 2000,
+      "diameter_mm": 13,
+      "maximum_density_reduction": 0.6205386735766552,
+      "peak_background_reduction": 0.6564850997688081,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": -0.19326044980060436,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 2000,
+      "diameter_mm": 22,
+      "maximum_density_reduction": 0.6205386735766552,
+      "peak_background_reduction": 0.6564850997688081,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": 0.12386350449984374,
+      "crc_cost_over_5_percentage_points": false
+    },
+    {
+      "channel": "440_SinglePlusCompton",
+      "iteration": 2000,
+      "diameter_mm": 37,
+      "maximum_density_reduction": 0.6205386735766552,
+      "peak_background_reduction": 0.6564850997688081,
+      "extreme_spike_improved": true,
+      "crc_change_percentage_points": -0.9962843260161336,
+      "crc_cost_over_5_percentage_points": false
+    }
+  ],
+  "method": "native full 120 mm metrics; 3 mm linear XY raster for existing truth ROI and display; central 72 mm MIP; no smoothing or crop; gray_r; common A2000 background scale",
+  "unresolved_joint_categories": 446,
+  "limitation": "Frozen ideal-trained material proxy evaluated on legacy events; 446 independent joint categories unresolved. The earlier 1e9 study uses ideal events and is not a dose-only control. 2000 iterations do not establish 10000-iteration stability or actual-device performance."
+}

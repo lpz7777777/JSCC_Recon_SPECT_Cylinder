@@ -1,0 +1,206 @@
+{
+  "study": "compton_energy_probability_v5_5e9",
+  "job": 1667869,
+  "ready_for_delivery": true,
+  "paired_imaging_completed": true,
+  "strict_formal_fetch_passed": true,
+  "scientific_and_visual_qa_passed": true,
+  "checked_utc": "2026-10-06T08:08:52.890081+00:00",
+  "actual_primary_gamma": 5000000000,
+  "accepted_events": 483743,
+  "views": 20,
+  "independent_workers_seeds": 200,
+  "whole_active_cells": 78920,
+  "history_frames": [
+    40,
+    40,
+    40,
+    40
+  ],
+  "dual_channel_checkpoints": 80,
+  "contract_sha256": "35a3c1b66d094dd912ae446fd598957daaf932e3216b849f9d14ee5b32b48cb1",
+  "authority_sha256": "91c0312c3a432e86218d851141b92a7f1c3b4b772a7d9f9ccd835a8b23b5e554",
+  "verdict": {
+    "440_ComptonOnly": {
+      "extreme_spike_improved": true,
+      "reductions": {
+        "max_density": 0.7662867833060235,
+        "peak_background_ratio": 0.7876470600741572
+      },
+      "crc_costs": [
+        {
+          "diameter_mm": 13,
+          "crc_change": 0.006033065353710881,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 22,
+          "crc_change": 0.01315247209048373,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 37,
+          "crc_change": 0.03126871132758152,
+          "cost_over_5_percentage_points": false
+        }
+      ],
+      "angular_final": {
+        "group": "angular",
+        "channel": "440_ComptonOnly",
+        "iteration": 2000,
+        "max_density": 84838.609375,
+        "peak_background_ratio": 89.7125244140625,
+        "peak_x_mm": 110.91177421627194,
+        "peak_y_mm": -134.06930424298739,
+        "peak_z_mm": -58.5,
+        "p99_density": 2687.82666015625,
+        "p999_density": 7368.08740234375,
+        "volume_weighted_p999_density": 7668.312503872714,
+        "background_mean": 945.671875,
+        "background_cv": 0.7278420368083208,
+        "total_integral": 3558922054.080552,
+        "integral_recovery": 1.007923028266392,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.1591520865371898
+      },
+      "continuous_energy_final": {
+        "group": "continuous_energy",
+        "channel": "440_ComptonOnly",
+        "iteration": 2000,
+        "max_density": 19827.904296875,
+        "peak_background_ratio": 19.050718307495117,
+        "peak_x_mm": 110.91177421627194,
+        "peak_y_mm": -134.06930424298739,
+        "peak_z_mm": -58.5,
+        "p99_density": 2841.4443359375,
+        "p999_density": 6907.8544921875,
+        "volume_weighted_p999_density": 6753.041204760751,
+        "background_mean": 1040.795654296875,
+        "background_cv": 0.7165807080717572,
+        "total_integral": 3528034877.309756,
+        "integral_recovery": 0.9991754647422835,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.06943370889504544
+      }
+    },
+    "440_SinglePlusCompton": {
+      "extreme_spike_improved": true,
+      "reductions": {
+        "max_density": 0.6205386735766552,
+        "peak_background_ratio": 0.6564850997688081
+      },
+      "crc_costs": [
+        {
+          "diameter_mm": 13,
+          "crc_change": -0.0019326044980060436,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 22,
+          "crc_change": 0.0012386350449984374,
+          "cost_over_5_percentage_points": false
+        },
+        {
+          "diameter_mm": 37,
+          "crc_change": -0.009962843260161336,
+          "cost_over_5_percentage_points": false
+        }
+      ],
+      "angular_final": {
+        "group": "angular",
+        "channel": "440_SinglePlusCompton",
+        "iteration": 2000,
+        "max_density": 20801.7109375,
+        "peak_background_ratio": 24.358320236206055,
+        "peak_x_mm": 110.91177421627194,
+        "peak_y_mm": -134.06930424298739,
+        "peak_z_mm": -58.5,
+        "p99_density": 1781.2349853515625,
+        "p999_density": 5374.71044921875,
+        "volume_weighted_p999_density": 5484.088627450255,
+        "background_mean": 853.9879150390625,
+        "background_cv": 0.47650738600165327,
+        "total_integral": 3477648077.1357903,
+        "integral_recovery": 0.984905408965769,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.17786070386095068
+      },
+      "continuous_energy_final": {
+        "group": "continuous_energy",
+        "channel": "440_SinglePlusCompton",
+        "iteration": 2000,
+        "max_density": 7893.44482421875,
+        "peak_background_ratio": 8.367445945739746,
+        "peak_x_mm": 27.239429984372798,
+        "peak_y_mm": -53.46039145130208,
+        "peak_z_mm": 4.5,
+        "p99_density": 1792.331298828125,
+        "p999_density": 4223.78076171875,
+        "volume_weighted_p999_density": 4020.750745883815,
+        "background_mean": 943.351806640625,
+        "background_cv": 0.45536021381123915,
+        "total_integral": 3517297100.4593887,
+        "integral_recovery": 0.9961344168082716,
+        "tiny_mass_fraction": "not_applicable_whole_cells",
+        "source_z_leakage": 0.10752128599483
+      }
+    }
+  },
+  "unresolved_joint_categories": 446,
+  "slurm_peak_rss_fraction": 0.5824658854166667,
+  "automation_action_on_delivery": "pause compton-v5; no further experiments or submissions",
+  "artifacts_sha256": {
+    "ACCEPTANCE.md": "b8d349b45d9a045d9c5006940dad43da0ea8ea0c315394313da7a5436a99705f",
+    "README.md": "f03a15325a2d341987d0849dd9b660c737508a53a7eb23596b2ddb3743d46300",
+    "PRODUCTION.md": "b9dc145b21c79cf5fba16f1bfb4d3054189c67606c8984f5e89e981ea485fcd2",
+    "formal_summary.json": "0123a46838c68d0b9c99db9aa793e2f23bc7f300c1bfd50355c80546c4ff0dd4",
+    "final_analysis_qa_1667869.json": "59464d9db71de9dfed49faa924799604e91884e1fe3a82e20f70917d44c33136",
+    "native_crosscheck_1667869.json": "13f514145d25c488501859a61fe1045139433a070c5a38591e9cd55ca05573d9",
+    "formal_job.json": "fa37aea92733fcb7bfa4c50e71ab95f3b036f872cadc6fd00dbafc3830db42c1",
+    "formal_authority.json": "91c0312c3a432e86218d851141b92a7f1c3b4b772a7d9f9ccd835a8b23b5e554",
+    "formal_freeze.json": "ba9d19c89610456d06efe7292c30762e2b1d5b41e4ee2da915c23c6c63d893ca",
+    "formal_deployment.json": "97dab337cd3c3ce445647abf9d931cc86ab51017c051e641e4696c06db749d14",
+    "calibration_acceptance.json": "f359c28163a670fa8acef0b44fe9ffccb2c3057b885ae6012f48f86a6e86d1f8",
+    "factor_identity.json": "d0e6427be8c0a9da393ed2e232283b4c3e694b6995bdbec32e07102db3f4568a",
+    "nema_selection_scan.json": "40f41ebb580cd949d72480644018df5a943f3688e678ec3c7cc41055909192d2",
+    "formal_evidence/1667869/angular/run_manifest.json": "f42a33d9170e0e560d1c94aee7d7f1c0df8faf1dab0d5ba09d42e194e334b0dc",
+    "formal_evidence/1667869/angular/verification.json": "e0dfc4b2dc1da9178bf9b39511304887ea54c49130e3ac1c6063fae385752449",
+    "formal_evidence/1667869/continuous_energy/run_manifest.json": "698ab80e97a24b9822a2951cf9c8fb4627213a53c49fa1090794aabd80cfc2ce",
+    "formal_evidence/1667869/continuous_energy/verification.json": "8454875ceec8fb17c4a0d06b8e3f27b051417f476f8e7be7057e802d030d6604",
+    "formal_evidence/1667869/execution.json": "2c1f2c1addfd074f11a5deaf37e81cb7acbf978680131cb251065c9a2763dd09",
+    "formal_evidence/1667869/formal.1667869.err": "11f9884526296cf78724fd6395fc5a8c964d609b19653752a3b530f3d797ef4b",
+    "formal_evidence/1667869/formal.1667869.out": "08df3b13de99c33ec5251d3d2a0ad9d8b5e9c8be9f94b536fcf675c3b201f351",
+    "comparison_1667869/artifact_manifest.json": "e2bc887eaec18304885d58cb2880453d632974e412f8f95be7590c86b931c47e",
+    "comparison_1667869/comparison.json": "3bc4bcd1bfa927daa214fff10b6f57776b81e37cfc682cabfb069bdd4a9dbb11",
+    "comparison_1667869/crc_cnr_curves.png": "b74d1ec38e0967a9c1f45e0c82ed36c716e8727657a649b97e275cf8badd56b2",
+    "comparison_1667869/final_multiplanar.png": "4784f4c1a028ed3781a70cd7671be556d42653cd7de15e793e20484116dcdc38",
+    "comparison_1667869/iterations_center.png": "0ef2d0caf798c0400c1664a3a8b0540d3fcbdb756760667848b2d5eb81f16515",
+    "comparison_1667869/iterations_coronal.png": "39c850bc29de69482357075b6ed3b6794672c18fada6ed650daff658ca0fae4c",
+    "comparison_1667869/iterations_mip72.png": "20fa26706bd066125434dce60f8395c269cb8bfa204a375788a3c0fbbfb7a5ea",
+    "comparison_1667869/iterations_sagittal.png": "64201259f27acc4314020f29fe14fd8d9fdc48224acf5be54727e376b17d1c62",
+    "comparison_1667869/native_iteration_metrics.csv": "c548cb0c8846faa252b484062154f84ede7a825cc115448f903a4ae5449355db",
+    "comparison_1667869/README.md": "2cbf9360d0b04804462689f77b0ac131194cc525d1adc4f82a275fd232d1d36e",
+    "comparison_1667869/selected_comparison_metrics.csv": "bde6aa6a4571cc8450a16d48cb29774f4916ecb551e484203b19c5b7d4466a70",
+    "comparison_1667869/sphere_iteration_metrics.csv": "81841a5a2f059d779dd879b8453a43180babdbf10db4579c7d9cfc166738c724",
+    "comparison_1667869/spike_noise_leakage_curves.png": "25084a6321498f442ffc23ae8f71bc6959d75009cd775884812273e6c5e96832",
+    "comparison_1667869/tail_integral_curves.png": "6cb5e926fce91e0147817577c45b26fec36dc15fe7df9b85fa33ce2d0ced12fc",
+    "comparison_1667869/scripts/analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "comparison_1667869/scripts/compare_energy_5e9_v5.py": "813215aed9d0dcce914d1d0cb1a6585f872b4d8f6850c0b4099d7d7ef3a27b6f",
+    "comparison_1667869/scripts/mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "comparison_1667869/scripts/verify_delivered_analysis.py": "15135cedf61d920f041611c5f400234b6cda6cc0e0f2daa9ae430528868555a7"
+  },
+  "local_only_truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "full_raw_data_directory": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9\\formal_results\\1667869",
+  "git_exclusions": [
+    "raw images/histories/checkpoints",
+    "matrices",
+    "response blocks",
+    "archives",
+    "truth npz",
+    "sensitive files"
+  ],
+  "git_byte_preservation": {
+    "factor_identity.json": "Restage unchanged local actual audit bytes under existing -text attributes; prior index normalized its CRLF. Matrix identities and original local receipt are unchanged.",
+    "formal_evidence/1667869/formal.1667869.err": "Preserve exact remote stderr SHA including 16 upstream torch warning trailing spaces; exclude only this original log from whitespace lint."
+  }
+}

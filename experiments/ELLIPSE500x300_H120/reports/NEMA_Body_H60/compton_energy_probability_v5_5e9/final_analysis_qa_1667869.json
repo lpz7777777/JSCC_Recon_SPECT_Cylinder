@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "job": 1667869,
+  "formal_summary_sha256": "0123a46838c68d0b9c99db9aa793e2f23bc7f300c1bfd50355c80546c4ff0dd4",
+  "comparison_sha256": "3bc4bcd1bfa927daa214fff10b6f57776b81e37cfc682cabfb069bdd4a9dbb11",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "source_manifest_sha256": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "native_rows": 160,
+  "sphere_rows": 480,
+  "history_frames": [
+    40,
+    40,
+    40,
+    40
+  ],
+  "checkpoint_directories": 80,
+  "independent_native_max_relative_errors": {
+    "max_density": 0.0,
+    "peak_x_mm": 0.0,
+    "peak_y_mm": 0.0,
+    "peak_z_mm": 0.0,
+    "total_integral": 4.1133531827335407e-16,
+    "source_z_leakage": 6.336521150341005e-16
+  },
+  "independent_method": "Local fetched float64 elementwise density*whole_cell_volume then sum; compare all 160 rows with analysis dot products and independent remote receipt",
+  "all_40_frame_crc_costs_over_5pp": [],
+  "minimum_crc_changes_pp": {
+    "440_ComptonOnly/13": {
+      "iteration": 150,
+      "minimum_change_pp": -0.09992542788184915
+    },
+    "440_ComptonOnly/22": {
+      "iteration": 50,
+      "minimum_change_pp": 0.047157740923083405
+    },
+    "440_ComptonOnly/37": {
+      "iteration": 200,
+      "minimum_change_pp": -0.7525858400860591
+    },
+    "440_SinglePlusCompton/13": {
+      "iteration": 2000,
+      "minimum_change_pp": -0.19326044980060436
+    },
+    "440_SinglePlusCompton/22": {
+      "iteration": 50,
+      "minimum_change_pp": -0.0017879032297205867
+    },
+    "440_SinglePlusCompton/37": {
+      "iteration": 2000,
+      "minimum_change_pp": -0.9962843260161336
+    }
+  },
+  "candidate_peak_regions": {
+    "440_ComptonOnly": {
+      "point_mm": [
+        110.91177421627194,
+        -134.06930424298739,
+        -58.5
+      ],
+      "containing_spheres_mm": [],
+      "nearest_truth_440": 0.0
+    },
+    "440_SinglePlusCompton": {
+      "point_mm": [
+        27.239429984372798,
+        -53.46039145130208,
+        4.5
+      ],
+      "containing_spheres_mm": [
+        37.0
+      ],
+      "nearest_truth_440": 10.0
+    }
+  },
+  "common_normalizers": {
+    "440_ComptonOnly": 945.671875,
+    "440_SinglePlusCompton": 853.9879150390625
+  },
+  "image_review": {
+    "files": [
+      "iterations_center.png",
+      "iterations_coronal.png",
+      "iterations_sagittal.png",
+      "iterations_mip72.png",
+      "final_multiplanar.png",
+      "spike_noise_leakage_curves.png",
+      "crc_cnr_curves.png",
+      "tail_integral_curves.png"
+    ],
+    "reviewed_by": "Codex visual inspection of actual PNGs",
+    "result": "Legible axes, matching truth/group/channel labels, shared display scale, no plot clipping; wide final overview supplemented by separate galleries"
+  },
+  "filtering": "No smoothing; MIP z edges [-36,36]mm only; all native quantitative metrics cover full 120mm",
+  "limitations": "Frozen ideal-trained material proxy evaluated on legacy events; 446 independent joint categories unresolved. The earlier 1e9 study uses ideal events and is not a dose-only control. 2000 iterations do not establish 10000-iteration stability or actual-device performance."
+}
