@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "job": 1669255,
+  "iteration": 2000,
+  "reference_job": 1667869,
+  "contract_sha256": "a75b13190cab84573f8c0a995b164572dcb7746761c5685e98a1cefc2691cbe8",
+  "receipt_sha256": "005d3e8ebb053612508cd78d84d7c764ee426ce3f129e9253ed366e8fa6252c7",
+  "checkpoint_manifest_sha256": "ae6af5eb3c0430d5ee41c6803c926c2d163a6f8292ffb9b3b438dabb3f11755e",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "checks": {
+    "440_ComptonOnly": {
+      "active_sha256": "510e44d647273c9f1b83f086614abb7562744d24271d54bcacea33310f7556a0",
+      "full_sha256": "6b1cb9a9f246eebe941a3783a47a55ef3914bcaa0f46dd5e8d8e69c3788658fb",
+      "finite_nonnegative": true,
+      "outside_support_zero": true,
+      "relative_L2": 0.0,
+      "reference_sha256": "510e44d647273c9f1b83f086614abb7562744d24271d54bcacea33310f7556a0",
+      "array_equal": true
+    },
+    "440_SinglePlusCompton": {
+      "active_sha256": "3a0711193b8fc436291120dce5ff3aa037c1f2c084ac3b0edbb23baf5251b971",
+      "full_sha256": "28c59bc16a6bbf7219dcedbee47d5506483bcd612b73cadd73e981986877983f",
+      "finite_nonnegative": true,
+      "outside_support_zero": true,
+      "relative_L2": 0.0,
+      "reference_sha256": "3a0711193b8fc436291120dce5ff3aa037c1f2c084ac3b0edbb23baf5251b971",
+      "array_equal": true
+    },
+    "440SingleComptonPlus218Single": {
+      "active_sha256": "de0550b70ae446138f52cb47c7434ca55b5830f284cdb285092ca1aae49c450b",
+      "full_sha256": "d58e84ce2bbe73123211e751f3a1699bbe8443e339929970dc90356dfa4ce61e",
+      "finite_nonnegative": true,
+      "outside_support_zero": true
+    }
+  },
+  "combined_sum_exact": true,
+  "full_formal_acceptance": false,
+  "allocation_sha256": "65f6dd3d7c5b36e981fcafaa71ed27e15dc4fbd9837bddc72b9aaf259b8f1b72",
+  "checked_utc": "2026-10-06T12:21:22.136347+00:00",
+  "progress": {
+    "phase": "compton_jscc",
+    "iteration": 2200,
+    "elapsed_seconds": 11222.170986838639,
+    "contract_sha256": "a75b13190cab84573f8c0a995b164572dcb7746761c5685e98a1cefc2691cbe8",
+    "peak_reserved_bytes": 15791554560
+  },
+  "sstat": "1669255.extern|0|0\n1669255.batch|5752K|5752K\n1669255.1|36824784K|24371040.50K",
+  "accounting": "1669255|RUNNING|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1669255.batch|RUNNING|0:0||cpu=6,gres/gpu=1,mem=60000M,node=1\n1669255.extern|RUNNING|0:0||billing=48,cpu=48,gres/gpu=8,mem=480000M,node=8\n1669255.0|COMPLETED|0:0|243568K|cpu=48,gres/gpu=8,mem=480000M,node=8\n1669255.1|RUNNING|0:0||cpu=48,gres/gpu=8,mem=480000M,node=8",
+  "slurm_peak_rss_bytes": 37708578816.0,
+  "allocated_host_bytes_per_node": 62914560000.0,
+  "slurm_peak_rss_fraction": 0.59936171875
+}

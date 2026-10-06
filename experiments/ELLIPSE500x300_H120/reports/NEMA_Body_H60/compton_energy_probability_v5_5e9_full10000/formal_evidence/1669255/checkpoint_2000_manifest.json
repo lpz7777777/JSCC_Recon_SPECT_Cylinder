@@ -1,0 +1,21 @@
+{
+  "study": "compton_energy_probability_v5_5e9_full10000",
+  "mode": "formal",
+  "phase": "compton_jscc",
+  "iteration": 2000,
+  "contract_sha256": "a75b13190cab84573f8c0a995b164572dcb7746761c5685e98a1cefc2691cbe8",
+  "outputs": {
+    "440_ComptonOnly": {
+      "active": "510e44d647273c9f1b83f086614abb7562744d24271d54bcacea33310f7556a0",
+      "full": "6b1cb9a9f246eebe941a3783a47a55ef3914bcaa0f46dd5e8d8e69c3788658fb"
+    },
+    "440_SinglePlusCompton": {
+      "active": "3a0711193b8fc436291120dce5ff3aa037c1f2c084ac3b0edbb23baf5251b971",
+      "full": "28c59bc16a6bbf7219dcedbee47d5506483bcd612b73cadd73e981986877983f"
+    },
+    "440SingleComptonPlus218Single": {
+      "active": "de0550b70ae446138f52cb47c7434ca55b5830f284cdb285092ca1aae49c450b",
+      "full": "d58e84ce2bbe73123211e751f3a1699bbe8443e339929970dc90356dfa4ce61e"
+    }
+  }
+}
