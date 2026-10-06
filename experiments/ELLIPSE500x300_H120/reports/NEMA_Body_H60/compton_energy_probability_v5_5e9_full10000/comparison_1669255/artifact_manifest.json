@@ -1,0 +1,62 @@
+{
+  "study": "compton_energy_probability_v5_5e9_full10000",
+  "job": 1669255,
+  "files": {
+    "compare_energy_full10000_v5.py": {
+      "sha256": "a916e4f604c04964ca4d01fc5d6c57ea75fb738ee276292d5ee37d28524abfd8",
+      "bytes": 15524
+    },
+    "comparison_report.json": {
+      "sha256": "93f0727e16955e0340c8eaf63dd00af6b72c6ea484ac24f5e7ef8df9264cdf13",
+      "bytes": 16187
+    },
+    "crc_cnr_curves.png": {
+      "sha256": "4dda4d3dda070f8f452c7716afaf2c2c4e0a4b3b3ffd395d9a02fe54ebb6046e",
+      "bytes": 346624
+    },
+    "iterations_axial.png": {
+      "sha256": "46bf48851a6df9ac87d3eda363e91a48ddfa010f2605eee855210de031f8d5ea",
+      "bytes": 401401
+    },
+    "iterations_coronal.png": {
+      "sha256": "624b9d2ab32ddf40beb8fa17b23ca583b27aa9a6058ca26cf701e80b9e908ffe",
+      "bytes": 217006
+    },
+    "iterations_mip72.png": {
+      "sha256": "06f7be93e06cceada09bc10783fb6135d5885bf0120c337cd67dbd7054d9f278",
+      "bytes": 448375
+    },
+    "iterations_sagittal.png": {
+      "sha256": "ffccef385c131896065bd4c2245fcfeaacd1b7d068a616cd254197840176a62d",
+      "bytes": 215933
+    },
+    "native_iteration_metrics.csv": {
+      "sha256": "58bc014f9012b132a01d4995bce71e865142e0dd9cfb42a44b98408a586eb30a",
+      "bytes": 335690
+    },
+    "README.md": {
+      "sha256": "fe98ed3dd83c76aef383fbfcf8b7b958561d31285f2fb08240131f9b684bf8f2",
+      "bytes": 1822
+    },
+    "requested_mip72.png": {
+      "sha256": "a8954c526e07333bedf8c3cb7a497072a7cf857fb943d567def733138deeff6e",
+      "bytes": 134140
+    },
+    "SCIENTIFIC_VISUAL_QA.json": {
+      "sha256": "e9aee49d1f7b40719caddafd5530f1980cd273507899530c8ca2551fa4198387",
+      "bytes": 5266
+    },
+    "sphere_iteration_metrics.csv": {
+      "sha256": "16676538a85c366a7b7b6dc58f4fdf2ff4f382a57c2dc0a8cccaab2a5c07028a",
+      "bytes": 594803
+    },
+    "spike_noise_leakage_curves.png": {
+      "sha256": "ae2bbe6cac54fa3cd4b86d8969745323f6da028ec90eb57b0d43fbc1af59c009",
+      "bytes": 371484
+    },
+    "tail_integral_curves.png": {
+      "sha256": "2079b053cc20b7fe9bdabd32027f69a2e7f089f624df7a2a20d850caaab26eb2",
+      "bytes": 359464
+    }
+  }
+}

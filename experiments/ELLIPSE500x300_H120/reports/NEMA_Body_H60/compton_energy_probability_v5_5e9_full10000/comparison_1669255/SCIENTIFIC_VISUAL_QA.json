@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "job": 1669255,
+  "checked_at_utc": "2026-10-06T21:53:10.983741+00:00",
+  "formal_summary_sha256": "89d2a9061e03daa202989355c090d5a9aab9cb49aa23d96db1b9b58d328d3587",
+  "metric_rows": 1200,
+  "sphere_metric_rows": 4800,
+  "frames_per_channel": 200,
+  "verified_2000_delivered_metric_regression": {
+    "440_ComptonOnly": {
+      "native_max_absolute_difference": 0.0,
+      "sphere_max_absolute_difference": 0.0
+    },
+    "440_SinglePlusCompton": {
+      "native_max_absolute_difference": 0.0,
+      "sphere_max_absolute_difference": 0.0
+    }
+  },
+  "independently_checked_native_final_metrics": {
+    "440_SinglePhoton": {
+      "max_density": 33085.5703125,
+      "peak_xyz_mm": [
+        27.239429984372798,
+        -53.46039145130208,
+        4.5
+      ],
+      "total_integral": 3510834488.5931907,
+      "source_z_leakage": 0.06117858681304552
+    },
+    "218_SinglePhoton_CrossTalkCorrected": {
+      "max_density": 10589.8916015625,
+      "peak_xyz_mm": [
+        -24.515486985935535,
+        -48.11435230617186,
+        4.5
+      ],
+      "total_integral": 1458644807.2060046,
+      "source_z_leakage": 0.030311570067543973
+    },
+    "440SinglePlus218Single": {
+      "max_density": 33319.3515625,
+      "peak_xyz_mm": [
+        29.96337298281008,
+        -58.806430596432286,
+        4.5
+      ],
+      "total_integral": 4969479294.982569,
+      "source_z_leakage": 0.052118479908686906
+    },
+    "440_ComptonOnly": {
+      "max_density": 106175.3359375,
+      "peak_xyz_mm": [
+        -59.261300435708264,
+        -9.386067902413844,
+        -10.5
+      ],
+      "total_integral": 3527709109.904875,
+      "source_z_leakage": 0.053407580509216124
+    },
+    "440_SinglePlusCompton": {
+      "max_density": 32457.998046875,
+      "peak_xyz_mm": [
+        27.239429984372798,
+        -53.46039145130208,
+        4.5
+      ],
+      "total_integral": 3514342779.709253,
+      "source_z_leakage": 0.053158011567958824
+    },
+    "440SingleComptonPlus218Single": {
+      "max_density": 32675.626953125,
+      "peak_xyz_mm": [
+        27.239429984372798,
+        -53.46039145130208,
+        4.5
+      ],
+      "total_integral": 4972987586.944813,
+      "source_z_leakage": 0.04645683993697813
+    }
+  },
+  "composite_integral_closure_all_200_frames": true,
+  "energy_background_weights": {
+    "218": 0.3056330420092506,
+    "440": 0.6943669579907493
+  },
+  "genuine_3D_truth_SHA_and_integrals_checked": true,
+  "mixed_nominal_CRC_contrast_checked": true,
+  "images": {
+    "crc_cnr_curves.png": {
+      "dimensions": [
+        1560,
+        2040
+      ],
+      "sha256": "4dda4d3dda070f8f452c7716afaf2c2c4e0a4b3b3ffd395d9a02fe54ebb6046e"
+    },
+    "iterations_axial.png": {
+      "dimensions": [
+        2760,
+        2040
+      ],
+      "sha256": "46bf48851a6df9ac87d3eda363e91a48ddfa010f2605eee855210de031f8d5ea"
+    },
+    "iterations_coronal.png": {
+      "dimensions": [
+        2760,
+        2040
+      ],
+      "sha256": "624b9d2ab32ddf40beb8fa17b23ca583b27aa9a6058ca26cf701e80b9e908ffe"
+    },
+    "iterations_mip72.png": {
+      "dimensions": [
+        2760,
+        2040
+      ],
+      "sha256": "06f7be93e06cceada09bc10783fb6135d5885bf0120c337cd67dbd7054d9f278"
+    },
+    "iterations_sagittal.png": {
+      "dimensions": [
+        2760,
+        2040
+      ],
+      "sha256": "ffccef385c131896065bd4c2245fcfeaacd1b7d068a616cd254197840176a62d"
+    },
+    "requested_mip72.png": {
+      "dimensions": [
+        1950,
+        1050
+      ],
+      "sha256": "a8954c526e07333bedf8c3cb7a497072a7cf857fb943d567def733138deeff6e"
+    },
+    "spike_noise_leakage_curves.png": {
+      "dimensions": [
+        2040,
+        2040
+      ],
+      "sha256": "ae2bbe6cac54fa3cd4b86d8969745323f6da028ec90eb57b0d43fbc1af59c009"
+    },
+    "tail_integral_curves.png": {
+      "dimensions": [
+        2040,
+        2040
+      ],
+      "sha256": "2079b053cc20b7fe9bdabd32027f69a2e7f089f624df7a2a20d850caaab26eb2"
+    }
+  },
+  "visual_inspection_completed": true,
+  "visual_findings": [
+    "All six channels and prescribed iterations present; axes and colorbars checked.",
+    "gray_r, fixed scales, crop0 and no Gaussian smoothing; XY barycentric display/ROI is disclosed.",
+    "Compton high-iteration MIP has strong focal and background hot regions; combined JSCC remains smoother but noisier than iteration 2000.",
+    "Central MIP excludes outer 24 mm at both ends; native metrics retain all 120 mm.",
+    "Color range is 0..10; larger display values saturate black without clipping stored arrays or metrics."
+  ],
+  "crc_cost_over_5pp": [
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 10,
+      "crc_change_percentage_points": -11.856757918272361,
+      "crc_cost_over_5_percentage_points": true
+    },
+    {
+      "channel": "440_ComptonOnly",
+      "diameter_mm": 13,
+      "crc_change_percentage_points": -8.107642345269229,
+      "crc_cost_over_5_percentage_points": true
+    },
+    {
+      "channel": "440SingleComptonPlus218Single",
+      "diameter_mm": 10,
+      "crc_change_percentage_points": -9.647153799336397,
+      "crc_cost_over_5_percentage_points": true
+    }
+  ],
+  "unresolved_joint_categories": 446,
+  "whole_fov_image_performance_certified": false,
+  "actual_device_performance_claimed": false
+}

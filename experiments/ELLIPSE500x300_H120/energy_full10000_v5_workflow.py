@@ -9,6 +9,7 @@ import shlex
 import shutil
 import tarfile
 import sys
+import time
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
 from energy_preflight_v5_workflow import (HERE,BASE,PYTHON,
@@ -19,6 +20,27 @@ DATA=HERE/'generated'/STUDY
 REPORT=HERE/'reports/NEMA_Body_H60'/STUDY
 REMOTE=BASE+'/generated/'+STUDY
 MODELS=('continuous_energy',)
+
+def read_only_verification_command(client,text,timeout_seconds=600):
+    """Drain both SSH streams under a total deadline for complete SHA verification."""
+    _,out,err=client.exec_command(text,timeout=30)
+    channel=out.channel;stdout=bytearray();stderr=bytearray()
+    started=time.monotonic();next_notice=started+60
+    while True:
+        while channel.recv_ready():stdout.extend(channel.recv(65536))
+        while channel.recv_stderr_ready():stderr.extend(channel.recv_stderr(65536))
+        if channel.exit_status_ready() and not channel.recv_ready() and not channel.recv_stderr_ready():
+            break
+        now=time.monotonic()
+        if now-started>=timeout_seconds:
+            raise TimeoutError('Read-only complete SHA verification exceeded total deadline')
+        if now>=next_notice:
+            print('FETCH_READ_ONLY_VERIFY_RUNNING_SECONDS',round(now-started),flush=True)
+            next_notice=now+60
+        time.sleep(.1)
+    data=stdout.decode(errors='replace');error=stderr.decode(errors='replace')
+    if channel.recv_exit_status():raise RuntimeError(error or data)
+    return data.strip()
 
 def freeze():
     DATA.mkdir(parents=True,exist_ok=True);REPORT.mkdir(parents=True,exist_ok=True)
@@ -178,7 +200,7 @@ def fetch():
         if digest(target/'allocation.txt')!=allocation_sha:raise ValueError('Allocation transfer differs')
         for model in MODELS:
             remote=REMOTE+'/'+mode+'_'+model+'_'+job;folder=target/model;folder.mkdir(exist_ok=True)
-            print(command(c,PYTHON+' '+shlex.quote(r['release']+'/verify_energy_full10000_v5.py')+
+            print(read_only_verification_command(c,PYTHON+' '+shlex.quote(r['release']+'/verify_energy_full10000_v5.py')+
                 ' --result '+shlex.quote(remote)+' --contract '+shlex.quote(r['release']+'/contract.json')+
                 ' --allocation '+shlex.quote(allocation)+' --mode '+mode+' --read-only'))
             with c.open_sftp() as s:
@@ -201,8 +223,9 @@ def fetch():
                     with c.open_sftp() as s:s.get(remote+'/'+n,str(folder/n))
                     if digest(folder/n)!=sha:raise ValueError('Image transfer differs')
                     sha_map[n]=sha
+                print('FETCH_CHANNEL_SHA_VERIFIED',item['channel'],flush=True)
             with c.open_sftp() as snapshots:
-                for snapshot in v['checkpoints']:
+                for checkpoint_count,snapshot in enumerate(v['checkpoints'],1):
                     relative=f"checkpoints_{snapshot['phase']}/checkpoint_{snapshot['iteration']:06d}"
                     local=folder/relative;local.mkdir(parents=True,exist_ok=True)
                     n='checkpoint_manifest.json'
@@ -215,6 +238,8 @@ def fetch():
                             if (local/n).exists() and digest(local/n)==sha:continue
                             snapshots.get(remote+'/'+relative+'/'+n,str(local/n))
                             if digest(local/n)!=sha:raise ValueError('Persistent checkpoint image transfer differs')
+                    if checkpoint_count%50==0:
+                        print('FETCH_PERSISTENT_CHECKPOINTS_SHA_VERIFIED',checkpoint_count,flush=True)
             with c.open_sftp() as transfer:
                 transfer.get(remote+'/PredictedCntStat_218_From440.float32',str(folder/'PredictedCntStat_218_From440.float32'))
             if digest(folder/'PredictedCntStat_218_From440.float32')!=v['prediction_sha256']:raise ValueError('Cross prediction transfer differs')
