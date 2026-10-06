@@ -1,0 +1,27 @@
+{
+  "study": "compton_energy_probability_v5_5e9",
+  "status": "PASSED",
+  "failures": [],
+  "event_policy": "legacy",
+  "files": {
+    "angular_Sensi_full": "1ada6c650d876cb4dace366b02b28bb78ea67d707149810531934ccf513c9044",
+    "continuous_energy_Sensi_full": "2140ec2be695a5bb1f18246db6e90872cd9bc9846b4146197f8fb1acec2cb56c",
+    "calibration_worker_evidence.npz": "ef594668a97947d1d26526e6a0ddae2fac283606b2f6590f6e4151ae02034583",
+    "angular_Sensi_detector": "80aa3cf96a8d63723b1c427f5c0567938b40c100de728601278215eb2bbd0899",
+    "execution.json": "33ab425f5d830e0b6f48015e22974f5bda8d258ec9c3c9727c6fd3024b778fbd",
+    "spatial_gate.json": "75043c476f268d77c9bf205bd02a851841d635b8601d4983ab4d7ce316702595",
+    "consumed_inputs.json": "21a8821810b74bbdb41bc5f11cd47e2e24379f40d32f5e7b0d45080d5ac91681",
+    "continuous_energy_Sensi_detector": "52090b36de0bb83bb42661b26932aca06bb322101257fd78424878d866ca5113",
+    "spatial_efficiency.csv": "718fc20df8ecb6f04fb9525a2f3f017f3d67f766bc108547a5f929d99a11cbd7",
+    "independent_joint_categories.csv": "3bf1a7cce3a12bfbbcfaeb9052412159c5bfc4c65292a984e18c579b2c52dfe5",
+    "fusion_gate.json": "17842ae662e8522087b2a5539e14208acddf8e22d1d3a2d6d970aff45dea6ddd",
+    "joint_gate.json": "1ad422fc8e75f3724ed4680485aa2f0e30974e51cf3ed7d303a90b7e0ea75069"
+  },
+  "selection_gate_sha256": "a5a2171b163be96a5ed02fb4ebce47944af4e95533093b423e59d5e563a8899c",
+  "models": [
+    "angular",
+    "continuous_energy"
+  ],
+  "normalization": "actual emitted photons, never accepted counts",
+  "limitation": "Frozen material law trained on ideal events; this is a legacy-policy transfer test. Sparse joint cells stay unresolved."
+}

@@ -1,0 +1,25 @@
+{
+  "categories": 72,
+  "source_positions": 7,
+  "fixed_E1_edges_MeV": [
+    0.05,
+    0.125,
+    0.2,
+    0.2773608914450036
+  ],
+  "fixed_E2_edges_MeV": [
+    0.05,
+    0.25,
+    "infinity"
+  ],
+  "layer_pairs": 12,
+  "adequacy": 50,
+  "hold_relative_bias": 0.3,
+  "hold_standard_errors": 3,
+  "candidate_hold_categories": 0,
+  "legacy_hold_categories": 0,
+  "source_location_evaluation": "nearest complete-circle polar representative; discretization remains a limitation",
+  "calibration_workers": 200,
+  "point_workers": 20,
+  "rotations_not_independent": true
+}

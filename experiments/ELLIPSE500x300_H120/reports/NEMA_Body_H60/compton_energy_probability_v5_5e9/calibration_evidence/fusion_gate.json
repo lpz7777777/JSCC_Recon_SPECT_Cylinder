@@ -1,0 +1,13 @@
+{
+  "response_relative_L2": 3.769726390601136e-05,
+  "max_total_variation": 0.00010918182670138776,
+  "threshold": 0.001,
+  "backend": "tail16_mid2",
+  "passed": true,
+  "events": 32,
+  "full_grid_points": 132040,
+  "warmup_seconds": 3.4187681560288183,
+  "geometry_dtype": "float64",
+  "gaussian_evaluation_dtype": "float32",
+  "new_model_parameters": false
+}

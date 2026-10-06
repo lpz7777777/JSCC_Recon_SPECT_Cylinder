@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "event_policy": "legacy",
+  "train_events": 170247,
+  "validation_events": 170124,
+  "actual_training_photons": 1000000000,
+  "actual_validation_photons": 1000000000,
+  "models": {
+    "angular": {
+      "adequate_spatial": 144,
+      "spatial_relative_bias_rms": 0.031059661658683235,
+      "spatial_max_absolute_bias": 0.07396273275604237,
+      "adequate_joint": 58,
+      "unresolved_joint": 446,
+      "circle": {
+        "relative_bias": 0.0007230189200650994,
+        "relative_se": 0.0034669148348198705,
+        "hold": false,
+        "predicted_efficiency": 0.00017024700287075718,
+        "observed_efficiency": 0.000170124
+      },
+      "ellipse": {
+        "observed_efficiency": 0.00015229,
+        "predicted_efficiency": 0.00014963004634024874,
+        "relative_bias": -0.01746637113238725,
+        "relative_se": 0.008493908646471803,
+        "hold": false
+      },
+      "sensitivity_sha256": "1ada6c650d876cb4dace366b02b28bb78ea67d707149810531934ccf513c9044"
+    },
+    "continuous_energy": {
+      "adequate_spatial": 144,
+      "spatial_relative_bias_rms": 0.011360641102636047,
+      "spatial_max_absolute_bias": 0.029612709209647092,
+      "adequate_joint": 58,
+      "unresolved_joint": 446,
+      "circle": {
+        "relative_bias": 0.0007230349237035139,
+        "relative_se": 0.003466914864813223,
+        "hold": false,
+        "predicted_efficiency": 0.00017024700559336016,
+        "observed_efficiency": 0.000170124
+      },
+      "ellipse": {
+        "observed_efficiency": 0.00015229,
+        "predicted_efficiency": 0.00015181578968977535,
+        "relative_bias": -0.0031138637482740483,
+        "relative_se": 0.008500179416654307,
+        "hold": false
+      },
+      "sensitivity_sha256": "2140ec2be695a5bb1f18246db6e90872cd9bc9846b4146197f8fb1acec2cb56c"
+    }
+  },
+  "gpu_reserved_fraction": 0.29427617491447033,
+  "host_rss_bytes": 12294262784,
+  "elapsed_seconds": 3967.7376150040072,
+  "files": {
+    "calibration_gate.json": "c2ae5f10857f55af96c5cef02e22695001ce67362d6d9588e70b6520fcf097e8",
+    "spatial_gate.json": "75043c476f268d77c9bf205bd02a851841d635b8601d4983ab4d7ce316702595",
+    "joint_gate.json": "1ad422fc8e75f3724ed4680485aa2f0e30974e51cf3ed7d303a90b7e0ea75069",
+    "execution.json": "33ab425f5d830e0b6f48015e22974f5bda8d258ec9c3c9727c6fd3024b778fbd",
+    "fusion_gate.json": "17842ae662e8522087b2a5539e14208acddf8e22d1d3a2d6d970aff45dea6ddd",
+    "consumed_inputs.json": "21a8821810b74bbdb41bc5f11cd47e2e24379f40d32f5e7b0d45080d5ac91681",
+    "spatial_efficiency.csv": "718fc20df8ecb6f04fb9525a2f3f017f3d67f766bc108547a5f929d99a11cbd7",
+    "independent_joint_categories.csv": "3bf1a7cce3a12bfbbcfaeb9052412159c5bfc4c65292a984e18c579b2c52dfe5"
+  },
+  "new_photons": 0,
+  "new_training": false,
+  "imaging_completed": false
+}

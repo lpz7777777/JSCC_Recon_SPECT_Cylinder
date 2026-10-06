@@ -1,5 +1,9 @@
 # 5e9独立两核对照运行簿
 
+2026-10-06最新：65114校准PID2513386已实际完成退出，legacy匹配S与独立圆/椭圆/七点源门控全部PASSED。逐文件SHA取回后保存`calibration_acceptance.json`、`calibration_evidence`及`CALIBRATION_ACCEPTANCE.md`。充分空间区144，RMS角度3.10597%/连续能量1.13606%；椭圆效率偏差−1.74664%/−0.31139%。联合类别58/504充分、446未判定，不套用上轮447。校准3967.74秒，GPU预留29.43%、RSS12.294GB，无新增模拟或重训。
+
+发布`36d4f91255655b39`已冻结并在scxi717部署，117项SHA（67发布/23原输入/27完整Factors）与11项远端测试全部通过，实际校准合同fixture通过且无跳过。唯一试跑1667841已RUNNING：8节点×1GPU/bond0、原483743固定事件、两核顺序10/save10，实际AllocTRES主存480000M合计、60000MiB/节点。已排除确认故障节点wqd10nba06g6，没有取消其它项目作业。原50次/1e9/旧10000次不重复。还未形成实际5e9试跑验收authority，不提交2000次正式作业。
+
 2026-10-06：按用户新要求开始`compton_energy_probability_v5_5e9`。原始5e9包完整SHA和23个文件逐一通过校验；旧事件关联必须使用`global_legacy_row`，不把ideal-only候选或ideal行号混入legacy集合。四项输入/策略关联测试和原连续核测试在65114冻结发布中通过。
 
 校准发布`9eb47339f4ac1a38`，65114既有agent安全连接，PID2513386。执行目录在本工程`generated/compton_energy_probability_v5_5e9`，单张空闲GPU0有界使用：扫描45分钟、8192事件吞吐/解析一致性探针10分钟、全量匹配S及独立验证120分钟。输入重用已有legacy配对输运；新增光子、规律重训和精细矩阵均为0。`calibration_job.json`和`calibration_deployment.json`记录真实PID/路径/代码/原始输入SHA。正常运行检查日志和实际资源，禁止重复启动。
@@ -22,8 +26,7 @@ NEMA全20视角扫描完成：原接受484936复现，stable_float64完整132040
 
 下一步执行链：
 
-1. `energy_5e9_v5_calibration_workflow.py status`；实际完成后`fetch`，要求独立legacy`calibration_gate`为PASSED。
-2. `factor_identity.json`完整跨机器Factors已经通过；部署/启动再次核对，不重复不必要的独立GPU计算。
-3. `energy_5e9_v5_workflow.py freeze`、`deploy`、`submit --mode validation`，完成本轮实际两核10次、完整事件/rank/输出/输入/资源闭合。
-4. 实际成功完全退出后`fetch`，生成钉住SHA的actual authority；`submit --mode formal`只提交唯一2000/save50顺序配对。
-5. 正式严格验收/取回后运行`compare_energy_5e9_v5.py --job JOB`，完成科学和视觉QA；未有正式结果前不生成或展示预测对照图。
+1. 校准及完整Factors实际已通过，不重复扫描/校准/探针；其原证明只读。
+2. `energy_5e9_v5_workflow.py status`检查1667841两核完整事件10次、事件/rank/输出/输入/资源闭合，禁止重复提交。
+3. 实际成功完全退出后`fetch`，生成钉住SHA的actual authority；`submit --mode formal`只提交唯一2000/save50顺序配对，不再询问批准。
+4. 正式严格验收/取回后运行`compare_energy_5e9_v5.py --job JOB`，完成科学和视觉QA；未有正式结果前不生成或展示预测对照图。

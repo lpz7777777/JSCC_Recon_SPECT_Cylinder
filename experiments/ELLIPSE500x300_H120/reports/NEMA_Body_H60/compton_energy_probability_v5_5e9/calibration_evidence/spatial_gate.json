@@ -1,0 +1,46 @@
+{
+  "candidate_hold_bins": 0,
+  "legacy_hold_bins": 0,
+  "adequate_bins": 144,
+  "event_policy": "legacy",
+  "circle": {
+    "angular": {
+      "relative_bias": 0.0007230189200650994,
+      "relative_se": 0.0034669148348198705,
+      "hold": false,
+      "predicted_efficiency": 0.00017024700287075718,
+      "observed_efficiency": 0.000170124
+    },
+    "continuous_energy": {
+      "relative_bias": 0.0007230349237035139,
+      "relative_se": 0.003466914864813223,
+      "hold": false,
+      "predicted_efficiency": 0.00017024700559336016,
+      "observed_efficiency": 0.000170124
+    }
+  },
+  "train_events": 170247,
+  "validation_events": 170124,
+  "actual_training_photons": 1000000000,
+  "actual_validation_photons": 1000000000,
+  "ellipse": {
+    "angular": {
+      "observed_efficiency": 0.00015229,
+      "predicted_efficiency": 0.00014963004634024874,
+      "relative_bias": -0.01746637113238725,
+      "relative_se": 0.008493908646471803,
+      "hold": false
+    },
+    "continuous_energy": {
+      "observed_efficiency": 0.00015229,
+      "predicted_efficiency": 0.00015181578968977535,
+      "relative_bias": -0.0031138637482740483,
+      "relative_se": 0.008500179416654307,
+      "hold": false
+    }
+  },
+  "normalization": "actual photons, full cell volume, same frozen events; no accepted-fraction rescaling",
+  "candidate_max_cell_detection_probability": 0.00024350331863650393,
+  "candidate_min_cell_detection_probability": 0.00012413430545794935,
+  "active_indices_from": "separate whole-polar-cell geometry; full S is not yet deployed"
+}
