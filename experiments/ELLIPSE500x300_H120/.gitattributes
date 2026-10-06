@@ -62,3 +62,9 @@ verify_energy_5e9_factors.py -text whitespace=cr-at-eol
 calibrate_energy_5e9_v5.py -text whitespace=cr-at-eol,-blank-at-eof
 reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/** -text whitespace=cr-at-eol
 reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/**/*allocation*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve the separately authorized six-channel 10000-iteration publication.
+single_checkpoint_mlem.py -text whitespace=cr-at-eol
+reconstruct_energy_full10000_v5.sh -text whitespace=cr-at-eol
+reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/** -text whitespace=cr-at-eol
+reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/**/*allocation*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

@@ -1,0 +1,11 @@
+test_actual_authority_required (test_energy_full10000_v5.Full10000EntryTests) ... ok
+test_all_six_200_frame_checkpoints_and_corruption_rejection (test_energy_full10000_v5.Full10000EntryTests) ... ok
+test_explicit_10000_policy_and_old_entry_protection (test_energy_full10000_v5.Full10000EntryTests) ... ok
+test_invalid_snapshot_never_published_or_overwritten (test_energy_full10000_v5.Full10000EntryTests) ... ok
+test_original_single_equations_and_save_callbacks_match_with_and_without_cross_talk (test_energy_full10000_v5.Full10000EntryTests) ... ok
+test_real_frozen_contract_at_deployment (test_energy_full10000_v5.Full10000EntryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.988s
+
+OK

@@ -1,5 +1,7 @@
 # 218+440 keV 椭圆柱 FOV 实验
 
+2026-10-06新增授权：[5e9连续能量核完整六路10000次](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/README.md)正在独立实施，先做全事件10次实际验收，再提交10000/save50。包含440 SC Compton、440 JSCC与校正218+440组合，原MLEM和冻结数据/核/S保持一致。已交付1667869保持完成，旧作业不恢复；以下“本轮结束”属于此前2000次对照。
+
 2026-10-06最终交付：[既有5e9两核2000次独立对照](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/ACCEPTANCE.md)1667869已完成、严格验收及逐文件SHA取回，四条各40帧/80检查点、8张图和全部指标通过科学/视觉QA。共同483743 legacy事件、78920完整柱单元下，Compton最大密度/峰背景降76.63%/78.76%，JSCC62.05%/65.65%；源外轴向泄漏15.92%→6.94%/17.79%→10.75%。背景CV仅相对降1.55%/4.44%，Compton仍有19.05倍背景端部峰，13 mm球恢复仍弱；全部40帧无CRC损失>5个百分点。8节点×1GPU/bond0、实测4:42:41，A/B显存30.72%/64.18%、Slurm主存58.25%，均满足20%余量。[图集/中央72mm MIP/40帧曲线](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/comparison_1667869/README.md)及完整小证据已交付。446联合类别未判定，5e9 legacy与上轮1e9 ideal不能作为纯剂量比较。该轮结束，按授权在完整交付后暂停compton-v5，旧任务继续停止；不追加模拟、迭代或下一项响应修正。以下早期状态为历史记录。
 
 2026-10-06最终交付：唯一正式配对1666673的A角度核/B连续材料能量核均完成2000/save50，四条各40帧及80检查点通过严格内容、资源与SHA验收。相同91225事件/78920完整柱单元下，2000次Compton最大密度/峰背景降73.76%/76.14%，JSCC降66.11%/69.53%；源外轴向泄漏分别15.98%→7.08%、16.48%→9.63%。整体噪声只小幅改善，Compton内部仍有高值、13 mm球恢复仍弱，447联合类别仍未判定。实际4节点×1GPU/bond0，耗时1:55:30；A/B显存33.46%/60.86%，Slurm主存23.04%，全部满足20%余量。[最终报告](reports/NEMA_Body_H60/compton_energy_probability_v5/ACCEPTANCE.md)、[固定尺度图集/中央72mm MIP/全部40帧曲线](reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/README.md)。本轮结束，不增加光子数/迭代或响应修正，按授权暂停compton-v5；旧任务保持停止。以下早期“待执行/未成像”条目为当时历史状态。
