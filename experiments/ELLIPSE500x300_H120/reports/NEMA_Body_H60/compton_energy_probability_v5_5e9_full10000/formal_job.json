@@ -1,0 +1,32 @@
+{
+  "job": 1669255,
+  "mode": "formal",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_releases/e0f01aea47f0f0fa",
+  "contract_sha256": "a75b13190cab84573f8c0a995b164572dcb7746761c5685e98a1cefc2691cbe8",
+  "authority": {
+    "passed": true,
+    "sha256": "dcfdbb9d688aa2d4e8e7b432b0d74d8e5cff1753ec005842181865e050cea682",
+    "remote": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_authorities/dcfdbb9d688aa2d4e8e7b432b0d74d8e5cff1753ec005842181865e050cea682.json",
+    "contract_sha256": "a75b13190cab84573f8c0a995b164572dcb7746761c5685e98a1cefc2691cbe8",
+    "validation_job": 1669189,
+    "estimated_max_phase_seconds": 47988.07497434318,
+    "estimated_total_seconds": 52788.76969702542,
+    "estimated_phase_seconds": {
+      "440_single": 2572.3936930298805,
+      "218_corrected": 2228.301029652357,
+      "compton_jscc": 47988.07497434318
+    }
+  },
+  "iterations": 10000,
+  "save_step": 50,
+  "models": [
+    "continuous_energy"
+  ],
+  "nccl_interface": "bond0",
+  "walltime_minutes": 1340,
+  "phase_timeout_seconds": 72283,
+  "submitted_utc": "2026-10-06T09:10:37.429612+00:00",
+  "formal_submitted": true
+}
