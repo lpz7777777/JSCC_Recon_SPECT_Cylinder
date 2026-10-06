@@ -1,0 +1,42 @@
+{
+  "resource_probe.json": {
+    "events": 8192,
+    "total_events": 170247,
+    "elapsed_seconds": 188.3385980760213,
+    "estimated_full_seconds": 3914.0724351864483,
+    "compile_warmup_seconds": 3.419833722000476,
+    "scientific_validation": false
+  },
+  "execution.json": {
+    "elapsed_seconds": 215.84185296396026,
+    "host_peak_rss_bytes": 12296568832,
+    "host_allocated_bytes": 1622941253632,
+    "gpu_peak_reserved_bytes": 13654556672,
+    "gpu_total_bytes": 50897289216,
+    "candidate_sha256": "b8308b077fc318c0205fad8e3354735ed3afb3532030ac13c6d7a1dd6f852a97",
+    "original_kernel_sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+    "source_sha256": "505b5c7cbab530747d5a83a19ca60b8ea6858319e9414075bb74f0227cdd0351",
+    "geometry_sha256": "82b60494e8444978869ba94b93b62dea80a6b12911bdcb186c430fe5a4414f71",
+    "training_law_sha256": "9b752ae4a8568646c2225b53736662410f5acceb4dbcb4d542a2167fe0ac784d",
+    "event_policy": "legacy",
+    "geometry_dtype": "float64",
+    "gaussian_evaluation_dtype": "float32",
+    "backend": "tail16_mid2",
+    "node_chunk": 16,
+    "new_photons": 0,
+    "new_training": false
+  },
+  "fusion_gate.json": {
+    "response_relative_L2": 3.769726390601136e-05,
+    "max_total_variation": 0.00010918182670138776,
+    "threshold": 0.001,
+    "backend": "tail16_mid2",
+    "passed": true,
+    "events": 32,
+    "full_grid_points": 132040,
+    "warmup_seconds": 3.419833722000476,
+    "geometry_dtype": "float64",
+    "gaussian_evaluation_dtype": "float32",
+    "new_model_parameters": false
+  }
+}

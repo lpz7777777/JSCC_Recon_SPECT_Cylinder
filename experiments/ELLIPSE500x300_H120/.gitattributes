@@ -55,3 +55,10 @@ reconstruct_energy_formal_v5.sh -text whitespace=cr-at-eol
 reports/NEMA_Body_H60/compton_energy_probability_v5/** -text whitespace=cr-at-eol
 # Preserve downloaded Slurm allocation bytes, including its trailing blanks.
 reports/NEMA_Body_H60/compton_energy_probability_v5/**/*allocation*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve the isolated legacy 5e9 execution and evidence hashes.
+reconstruct_energy_5e9_v5.sh -text whitespace=cr-at-eol
+verify_energy_5e9_factors.py -text whitespace=cr-at-eol
+calibrate_energy_5e9_v5.py -text whitespace=cr-at-eol,-blank-at-eof
+reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/** -text whitespace=cr-at-eol
+reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/**/*allocation*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

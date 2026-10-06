@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "files": {
+    "218keV_RotateNum20/SysMat_polar": {
+      "bytes": 5543567360,
+      "sha256": "3b37c9148cfb3cb510ce1d99981d8192d63fb50ff0270df6ce9b38daeb301f8a"
+    },
+    "218keV_RotateNum20/Detector.csv": {
+      "bytes": 365367,
+      "sha256": "e73400af991a0cfac8254fe7371aa6bad34ab934c1c09c2e8c1d8641b67003e3"
+    },
+    "218keV_RotateNum20/coor_polar_full.csv": {
+      "bytes": 4387294,
+      "sha256": "45b7d54a56ac55c2f2118b0306b8750b613d34ee1547783c6938b08e09127b70"
+    },
+    "218keV_RotateNum20/RotMat_full.csv": {
+      "bytes": 16263500,
+      "sha256": "85fafc048e36f5f2d016cced3d142d96b2234e638f579ed30ba52a5e59e2b346"
+    },
+    "218keV_RotateNum20/RotMatInv_full.csv": {
+      "bytes": 16263500,
+      "sha256": "215926a666c8bbd18b66c39d50579958ea72fb2f3db34cd19a4af00995fb841d"
+    },
+    "218keV_RotateNum20/polar_cell_volume_mm3.float64": {
+      "bytes": 1056320,
+      "sha256": "135f0da5aebf0a48aef37e1d3df1d8ebf1ff63270cc43969e5866cdf39248ff9"
+    },
+    "218keV_RotateNum20/ellipse_fraction.float64": {
+      "bytes": 1056320,
+      "sha256": "b0667c1c083794639549b421a2e2f4e21d07583fb2d3eee6bda30518687d41c9"
+    },
+    "218keV_RotateNum20/ellipse_active_indices.int32": {
+      "bytes": 328160,
+      "sha256": "5d51eac61059964e10956105e9244d03d24c541fc5bc61ecb8542ddf794822e6"
+    },
+    "218keV_RotateNum20/factor_manifest.json": {
+      "bytes": 6026,
+      "sha256": "b8ba0829d9fc99aa52a9f35d4f1edc1168287c06a7c41d77039875a941c30f8d"
+    },
+    "440keV_RotateNum20/SysMat_polar": {
+      "bytes": 5543567360,
+      "sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38"
+    },
+    "440keV_RotateNum20/Detector.csv": {
+      "bytes": 365367,
+      "sha256": "e73400af991a0cfac8254fe7371aa6bad34ab934c1c09c2e8c1d8641b67003e3"
+    },
+    "440keV_RotateNum20/coor_polar_full.csv": {
+      "bytes": 4387294,
+      "sha256": "45b7d54a56ac55c2f2118b0306b8750b613d34ee1547783c6938b08e09127b70"
+    },
+    "440keV_RotateNum20/RotMat_full.csv": {
+      "bytes": 16263500,
+      "sha256": "85fafc048e36f5f2d016cced3d142d96b2234e638f579ed30ba52a5e59e2b346"
+    },
+    "440keV_RotateNum20/RotMatInv_full.csv": {
+      "bytes": 16263500,
+      "sha256": "215926a666c8bbd18b66c39d50579958ea72fb2f3db34cd19a4af00995fb841d"
+    },
+    "440keV_RotateNum20/polar_cell_volume_mm3.float64": {
+      "bytes": 1056320,
+      "sha256": "135f0da5aebf0a48aef37e1d3df1d8ebf1ff63270cc43969e5866cdf39248ff9"
+    },
+    "440keV_RotateNum20/ellipse_fraction.float64": {
+      "bytes": 1056320,
+      "sha256": "b0667c1c083794639549b421a2e2f4e21d07583fb2d3eee6bda30518687d41c9"
+    },
+    "440keV_RotateNum20/ellipse_active_indices.int32": {
+      "bytes": 328160,
+      "sha256": "5d51eac61059964e10956105e9244d03d24c541fc5bc61ecb8542ddf794822e6"
+    },
+    "440keV_RotateNum20/factor_manifest.json": {
+      "bytes": 6133,
+      "sha256": "16a41f32e095eabdd12d3cfdf8d94db4b20d4ff7052a4d4515a91abab10783cc"
+    },
+    "440keV_to218win_RotateNum20/SysMat_polar": {
+      "bytes": 5543567360,
+      "sha256": "5b5a296880056f748fc5cafa9c97f9caf350daf681d66a79c0a99005b03b9959"
+    },
+    "440keV_to218win_RotateNum20/Detector.csv": {
+      "bytes": 365367,
+      "sha256": "e73400af991a0cfac8254fe7371aa6bad34ab934c1c09c2e8c1d8641b67003e3"
+    },
+    "440keV_to218win_RotateNum20/coor_polar_full.csv": {
+      "bytes": 4387294,
+      "sha256": "45b7d54a56ac55c2f2118b0306b8750b613d34ee1547783c6938b08e09127b70"
+    },
+    "440keV_to218win_RotateNum20/RotMat_full.csv": {
+      "bytes": 16263500,
+      "sha256": "85fafc048e36f5f2d016cced3d142d96b2234e638f579ed30ba52a5e59e2b346"
+    },
+    "440keV_to218win_RotateNum20/RotMatInv_full.csv": {
+      "bytes": 16263500,
+      "sha256": "215926a666c8bbd18b66c39d50579958ea72fb2f3db34cd19a4af00995fb841d"
+    },
+    "440keV_to218win_RotateNum20/polar_cell_volume_mm3.float64": {
+      "bytes": 1056320,
+      "sha256": "135f0da5aebf0a48aef37e1d3df1d8ebf1ff63270cc43969e5866cdf39248ff9"
+    },
+    "440keV_to218win_RotateNum20/ellipse_fraction.float64": {
+      "bytes": 1056320,
+      "sha256": "b0667c1c083794639549b421a2e2f4e21d07583fb2d3eee6bda30518687d41c9"
+    },
+    "440keV_to218win_RotateNum20/ellipse_active_indices.int32": {
+      "bytes": 328160,
+      "sha256": "5d51eac61059964e10956105e9244d03d24c541fc5bc61ecb8542ddf794822e6"
+    },
+    "440keV_to218win_RotateNum20/factor_manifest.json": {
+      "bytes": 6137,
+      "sha256": "6b947252d1529341ca3801daa763572515f566dbbb148253a0a4177e0c44971f"
+    }
+  },
+  "calibration_host": "65114_lipeize",
+  "imaging_host": "scxi717"
+}
