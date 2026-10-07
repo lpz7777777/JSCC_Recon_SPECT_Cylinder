@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "job": 1669255,
+  "channels": [
+    "218_SinglePhoton_CrossTalkCorrected",
+    "440_SinglePhoton",
+    "440_ComptonOnly",
+    "440_SinglePlusCompton"
+  ],
+  "actual_iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "original_history_SHA_verified": true,
+  "selected_frame_count": 24,
+  "selected_native_maxima_match_original_accepted_metrics": true,
+  "archived_script_identical": true,
+  "all_four_figures_visually_inspected": true,
+  "truth_is_original_H60_3D_dual_energy": true,
+  "four_rows_and_seven_columns_confirmed": true,
+  "fixed_scales_no_smoothing_crop0": true,
+  "PNG_files": {
+    "four_channels_axial.png": {
+      "dimensions": [
+        4320,
+        2070
+      ],
+      "sha256": "2571d2ae1b90e27ec37d6b5935c6c1af6479b86f94c583bc625745433afb0a50"
+    },
+    "four_channels_coronal.png": {
+      "dimensions": [
+        4320,
+        1260
+      ],
+      "sha256": "8039b3c49144b4fdbcf513bc887fa306928672146e574dee0cf9a3b0d611873a"
+    },
+    "four_channels_mip72.png": {
+      "dimensions": [
+        4320,
+        2070
+      ],
+      "sha256": "619126d97235c06bf536644ebb0d29b73a1f37baa0fc69ae5f18203ab1ac8fb1"
+    },
+    "four_channels_sagittal.png": {
+      "dimensions": [
+        4320,
+        1260
+      ],
+      "sha256": "67cedafbba4bd21d330eb3413bb469025dbc29dbff676a6ae1db97e168c8708e"
+    }
+  },
+  "raw_array_modification": false,
+  "reconstruction_rerun": false
+}

@@ -1,0 +1,64 @@
+{
+  "job": 1669255,
+  "study": "compton_energy_probability_v5_5e9_full10000",
+  "channels": [
+    "218_SinglePhoton_CrossTalkCorrected",
+    "440_SinglePhoton",
+    "440_ComptonOnly",
+    "440_SinglePlusCompton"
+  ],
+  "iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "frames_per_history": 200,
+  "history_sha256": {
+    "218_SinglePhoton_CrossTalkCorrected": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a",
+    "440_SinglePhoton": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b",
+    "440_ComptonOnly": "f05db3be000b4cf56e70f160cf958483b5ef161b1d03c09d1a6d2fde09bd915c",
+    "440_SinglePlusCompton": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af"
+  },
+  "formal_summary_sha256": "89d2a9061e03daa202989355c090d5a9aab9cb49aa23d96db1b9b58d328d3587",
+  "verification_sha256": "fb3f899da8664708d9f1693e4d44f88fb8ce7598d67967cdef069f181a1ff728",
+  "original_comparison_sha256": "93f0727e16955e0340c8eaf63dd00af6b72c6ea484ac24f5e7ef8df9264cdf13",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "truth_source": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\NEMA_Body_H60\\truth_3mm.npz",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "truth_manifest_sha256": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+  "truth_shape_zyx": [
+    40,
+    100,
+    168
+  ],
+  "fixed_display_scales": {
+    "218_SinglePhoton_CrossTalkCorrected": 415.22638574679667,
+    "440_SinglePhoton": 943.351806640625,
+    "440_ComptonOnly": 943.351806640625,
+    "440_SinglePlusCompton": 943.351806640625
+  },
+  "scale_reference": "This run 440 JSCC iteration2000 background; actual photon/truth-integral transfer to218",
+  "smoothing_sigma_pixels": 0,
+  "crop_pixels": 0,
+  "colormap": "gray_r",
+  "display_range": [
+    0,
+    10
+  ],
+  "mip_z_edges_mm": [
+    -36,
+    36
+  ],
+  "mip_z_centers_mm": [
+    -34.5,
+    34.5
+  ],
+  "interpolation": "3mm XY barycentric display only; no z or iteration interpolation",
+  "single_218_method": "Single-photon MLEM with fixed additive 440-to218 crosstalk background",
+  "jscc_440_method": "440 single-photon plus continuous-energy Compton; not an218+440 density sum",
+  "raw_reconstruction_arrays_modified": false,
+  "new_reconstruction_run": false
+}
