@@ -2,26 +2,9 @@
 
 [English](#english) | [中文](#中文)
 
-> **2026-10-04 当前研究：** 椭圆FOV矩阵及NEMA 1e9/5e9基线已形成，局部尖峰与源外泄漏尚未解决。
-> 用户已停止Huber/TV及旧10000次删除组，现实施独立
-> [Compton首散射事件定义修正与NEMA 1e9配对验证](experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/README.md)。
-> 默认Geant4旧策略保持兼容，新理想首散射策略通过同次输运产生配对事件；NEMA重放字节回归通过。
-> 3.17e9输运、200个NEMA旧输出字节复现和两组独立灵敏度验收已通过；[阶段诊断报告](experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/PRELIMINARY_REPORT.md)已形成。
-> 配对1660254已完成（4节点×1GPU，2:47:44），两组各Compton/JSCC2000次、四条40帧历史远端/本地验收通过。[最终报告与图集](experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/ACCEPTANCE.md)：JSCC峰值下降41.6%，Compton仅7.3%；均未达到预定双指标50%判据，Compton22/37mm球恢复有代价。本轮完整交付后结束。
-> 下方2026-09-25/28段落是历史交接，最新状态以实验入口及运行簿为准。
-
-> **2026-09-25 22:45 实验交接：** 60 mm 基线已完成；FOV120 的三套矩阵、
-> 独立校准/灵敏度、1e9 Uniform/Contrast Geant4 模拟和两套 10000 次六路重建均已完成。
-> 1e10 Uniform/Contrast 模拟在 maty 运行，收集与高计数重建尚待完成。
-> 当前 1e9 长迭代出现显著空间噪声，120 mm 有效 FOV 尚未通过科学验收。
-> 详细目录、代码、结果与作业状态见 [FOV120 实验进度](docs/FOV120_EXPERIMENT_STATUS.md)；
-> 可复现命令见 [实验手册](experiments/FOV120/README.md)；跨工程连接三处资源见
-> [安全连接说明](docs/REMOTE_COMPUTE_ACCESS.md)。密码、私钥、加密凭据与大数据均不入 Git。
-
-> **2026-09-28 新实验：** 500×300×120 mm 椭圆柱视野的独立实验已建立；
-> 网格、椭圆重叠权重及小问题正反算子验证通过，三路新距离矩阵正在 65114 生产，
-> maty 的 Geant4 源短程通过且校准 pilot 已提交。正式校准、灵敏度、六路重建及
-> 有效视野验收尚未完成。详见 [椭圆视野实验记录](experiments/ELLIPSE500x300_H120/README.md)。
+> **2026-10-07 当前基准：** 218/440双能NEMA H60、既有5e9 legacy连续能量核v5六路10000次（1669255）已严格交付。以[完整流程基准](docs/DUAL_ENERGY_BASELINE.md)作为后续代码与执行回归入口；[研究回顾](docs/DUAL_ENERGY_RESEARCH_REVIEW.md)汇总7月至今的正面、负面和未定结论。
+> 当前实现与执行有完整SHA、真实短程/2000回归和资源证明；长迭代噪声、小球恢复及446统计不足联合类别仍有限制。旧试验启动脚本已按[清理清单](docs/baselines/dual_energy_20261007/cleanup_manifest.json)退出，历史证据保留，自动任务保持暂停。
+> 下文no-suffix Factors、60mm本地入口与旧阶段交接用于兼容/历史复现；不能混入当前新距离椭圆基准。
 
 
 ---
@@ -36,7 +19,8 @@
 > map gamma-photon activity density rather than equal per-sample source weight.
 > A physical uniform Geant4 source must therefore be a volume-uniform cylinder,
 > not an equal-weight polar point array. Start with `docs/DEVELOPMENT_HANDOFF.md`
-> for current Factors, Geant4 semantics, verified findings, and next tasks.
+> for the dated 60-mm/FOV120 handoff; use `docs/DUAL_ENERGY_BASELINE.md`
+> for the current accepted ellipse pipeline.
 
 ### 1. Overview
 
@@ -62,7 +46,7 @@ The repository currently contains:
 
 | Area | Entry point | Scope |
 | --- | --- | --- |
-| Project handoff | [`docs/DEVELOPMENT_HANDOFF.md`](docs/DEVELOPMENT_HANDOFF.md) | Current production state, validated findings, data semantics, and next tasks |
+| Historical project handoff | [`docs/DEVELOPMENT_HANDOFF.md`](docs/DEVELOPMENT_HANDOFF.md) | Dated 60-mm/FOV120 state and data semantics; current baseline is linked above |
 | Main reconstruction | [`main_local_multi_energy_cntstat.py`](main_local_multi_energy_cntstat.py) | Local 218/440 CntStat MLEM, explicit 440-to-218 correction, density-basis Factors |
 | Reproduction | [`Reproduction/README.md`](Reproduction/README.md) | Step-by-step Factors, CntStat, reconstruction, and visualization workflow |
 | System-matrix generation | [`Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ReadMe.md`](Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ReadMe.md) | CUDA PE/Compton matrix engine and parameter generation |

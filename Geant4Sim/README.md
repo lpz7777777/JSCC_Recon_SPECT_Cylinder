@@ -1,5 +1,8 @@
 # Geant4Sim
 
+> 2026-10-07索引：本文保留原阶段/兼容说明。当前完整218/440椭圆基准见[DUAL_ENERGY_BASELINE](../docs/DUAL_ENERGY_BASELINE.md)；旧快照中的任务状态不授权恢复试验，物理/科学限制以当前基准及研究回顾为准。
+
+
 Read `../docs/DEVELOPMENT_HANDOFF.md` before generating new production data.
 It identifies the canonical density-basis Factors, required Geant4 semantics,
 and the active Compton-sensitivity task.

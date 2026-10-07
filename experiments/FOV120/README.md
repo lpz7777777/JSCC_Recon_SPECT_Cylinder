@@ -1,5 +1,8 @@
 # FOV120: 218/440 keV axial extension
 
+> 2026-10-07索引：本文保留原阶段/兼容说明。当前完整218/440椭圆基准见[DUAL_ENERGY_BASELINE](../../docs/DUAL_ENERGY_BASELINE.md)；旧快照中的任务状态不授权恢复试验，物理/科学限制以当前基准及研究回顾为准。
+
+
 Detailed Chinese inventory and progress: [experiment status](../../docs/FOV120_EXPERIMENT_STATUS.md).
 Cross-project authentication and resource usage: [safe access](../../docs/REMOTE_COMPUTE_ACCESS.md).
 

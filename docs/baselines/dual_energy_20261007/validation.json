@@ -1,0 +1,67 @@
+{
+  "baseline_id": "dual_energy_20261007",
+  "date_Asia_Shanghai": "2026-10-07",
+  "passed": true,
+  "cpu_tests": {
+    "full_frozen_entry": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 145.013
+    },
+    "existing_regression": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 5.149,
+      "modules": [
+        "test_nema_body_h60",
+        "test_compton_density_basis_closure",
+        "test_cntstat_crosstalk",
+        "test_compton_tiled_production_v3",
+        "test_compton_geometry_run_contract"
+      ]
+    },
+    "first_attempt_environment_failure": {
+      "reason": "Windows sandbox system temp denied checkpoint writes",
+      "resolved_by": "Workspace-contained TMP/TEMP",
+      "production_or_tests_changed": false
+    }
+  },
+  "code_and_config_files": 113,
+  "frozen_executed_source_files": 31,
+  "nonfrozen_source_LF_CRLF_only": 25,
+  "baseline_python_import_edges": 124,
+  "baseline_python_import_edges_resolve": true,
+  "original_frozen_small_proofs": 43,
+  "frozen_payload_files_full_sha_checked": 74,
+  "original_result_sha_checked": {
+    "channels": 6,
+    "kinds": [
+      "active",
+      "full",
+      "history"
+    ],
+    "fixed_cross_prediction": true,
+    "complete_stage_checkpoints": 600
+  },
+  "artifact_sha_checked": {
+    "original_six_gallery": 14,
+    "four_requested_channel_supplement": 9
+  },
+  "negative_code_hash_check_rejected": true,
+  "new_document_links_valid": true,
+  "git_whitespace_check_passed": true,
+  "new_simulation_or_physical_calibration": false,
+  "new_GPU_reconstruction": false,
+  "production_algorithm_changed": false,
+  "old_accepted_evidence_changed": false,
+  "not_repeated_this_cleanup": [
+    "Full 23-input / 27-Factor large matrix byte read; authoritative original full acceptance retained",
+    "Geant4 transport",
+    "Physical calibration",
+    "Distributed GPU reconstruction"
+  ]
+}

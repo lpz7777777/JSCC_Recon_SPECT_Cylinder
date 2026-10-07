@@ -1,5 +1,8 @@
 # JSCC Reconstruction Development Handoff
 
+> 2026-10-07索引：本文保留原阶段/兼容说明。当前完整218/440椭圆基准见[DUAL_ENERGY_BASELINE](DUAL_ENERGY_BASELINE.md)；旧快照中的任务状态不授权恢复试验，物理/科学限制以当前基准及研究回顾为准。
+
+
 Current consolidated snapshot: 2026-09-26 China time. For the latest
 measured job state, check Slurm; this is a dated handoff, not a live dashboard.
 The detailed evidence and per-job history live in

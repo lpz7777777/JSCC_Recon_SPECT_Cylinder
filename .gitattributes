@@ -1,4 +1,9 @@
 # Preserve execution-source bytes referenced by response-study SHA256 manifests.
+docs/baselines/dual_energy_20261007/** -text
+docs/DUAL_ENERGY_BASELINE.md -text
+docs/DUAL_ENERGY_RESEARCH_REVIEW.md -text
+tools/baseline/** -text
+experiments/ELLIPSE500x300_H120/HISTORY_20261007.md -text whitespace=cr-at-eol
 compton_event_response.py -text whitespace=cr-at-eol
 process_list_plane_sparse.py -text whitespace=cr-at-eol
 

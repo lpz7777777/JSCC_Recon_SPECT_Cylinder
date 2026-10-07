@@ -1,0 +1,143 @@
+{
+  "baseline_id": "dual_energy_20261007",
+  "source_commit": "b3eebec476a0c34287a92674ae358dc0f9f2d9e3",
+  "removed": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/build_spike_ablation.py",
+      "bytes": 7290,
+      "sha256": "7bc8c6588a9d94cf5b7aec7d7dfb1a2ce1505d51145a2ee8c13c6e0fba6b36ff",
+      "reason": "User-stopped Huber/boundary-binding production orchestration; diagnostic mathematics, tests and actual reports retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/build_spike_ablation.py",
+      "git_blob_sha256": "7bc8c6588a9d94cf5b7aec7d7dfb1a2ce1505d51145a2ee8c13c6e0fba6b36ff",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/compton_tiled_production_v3_workflow.py",
+      "bytes": 21594,
+      "sha256": "2a097425f6054d0655e372d4838f7eece19bd3c381db050455f63d00328331e7",
+      "reason": "User-stopped .75mm fine-A full-field production launcher; no accepted S2/R2 imaging, diagnostics and retirement guard retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/compton_tiled_production_v3_workflow.py",
+      "git_blob_sha256": "2a097425f6054d0655e372d4838f7eece19bd3c381db050455f63d00328331e7",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/deploy_response_mismatch.py",
+      "bytes": 3372,
+      "sha256": "99ed00b1e7c12b6f0c68f84972b91ff9eee8ff535b2e0ad419a32410bead0890",
+      "reason": "Superseded float q-cut production orchestration; stable_float64 frozen v5 workflow is baseline",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/deploy_response_mismatch.py",
+      "git_blob_sha256": "99ed00b1e7c12b6f0c68f84972b91ff9eee8ff535b2e0ad419a32410bead0890",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/deploy_spike_ablation.py",
+      "bytes": 10522,
+      "sha256": "f0ea5396b731cf2082b277569ed45d6fa9ebcdf2b151b94bcbd22dc05de7b30d",
+      "reason": "User-stopped Huber/boundary-binding production orchestration; diagnostic mathematics, tests and actual reports retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/deploy_spike_ablation.py",
+      "git_blob_sha256": "f0ea5396b731cf2082b277569ed45d6fa9ebcdf2b151b94bcbd22dc05de7b30d",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py",
+      "bytes": 6430,
+      "sha256": "1cce059d3482ed8cb6d74032b900948223cf709ab85c493383c735b24c395567",
+      "reason": "Superseded float q-cut production orchestration; stable_float64 frozen v5 workflow is baseline",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/fetch_response_mismatch.py",
+      "git_blob_sha256": "1cce059d3482ed8cb6d74032b900948223cf709ab85c493383c735b24c395567",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/fetch_spike_ablation.py",
+      "bytes": 4197,
+      "sha256": "f254e9eb4ba5cc37fe54c3e09fe3ee9a19e6bad49da513a4bc9509514b9dbcdd",
+      "reason": "User-stopped Huber/boundary-binding production orchestration; diagnostic mathematics, tests and actual reports retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/fetch_spike_ablation.py",
+      "git_blob_sha256": "f254e9eb4ba5cc37fe54c3e09fe3ee9a19e6bad49da513a4bc9509514b9dbcdd",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/prepare_remaining_scatter_slabs.sh",
+      "bytes": 374,
+      "sha256": "d94d911f1071c3fb423f24002892e12716d6c9115314be99640765e7d95e9bd6",
+      "reason": "One-off host/PID-specific matrix continuation; generic exact run_scatter_slabs.py retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/prepare_remaining_scatter_slabs.sh",
+      "git_blob_sha256": "d94d911f1071c3fb423f24002892e12716d6c9115314be99640765e7d95e9bd6",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reconstruct_spike_ablation.sh",
+      "bytes": 7757,
+      "sha256": "2ee6599976fab8524a3c5ad68854889d30f47dd5efdb00a9c05e418ebd203ead",
+      "reason": "User-stopped Huber/boundary-binding production orchestration; diagnostic mathematics, tests and actual reports retained",
+      "code_callers": [
+        "experiments/ELLIPSE500x300_H120/deploy_spike_ablation.py"
+      ],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/reconstruct_spike_ablation.sh",
+      "git_blob_sha256": "2ee6599976fab8524a3c5ad68854889d30f47dd5efdb00a9c05e418ebd203ead",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/run_remaining_scatter_slabs.sh",
+      "bytes": 1555,
+      "sha256": "4d3ce43d04290b34c68b90267aacff43bc572a8d3603ac52bb7633127e745c02",
+      "reason": "One-off host/PID-specific matrix continuation; generic exact run_scatter_slabs.py retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/run_remaining_scatter_slabs.sh",
+      "git_blob_sha256": "4d3ce43d04290b34c68b90267aacff43bc572a8d3603ac52bb7633127e745c02",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/run_scatter_all_free_gpus.sh",
+      "bytes": 1723,
+      "sha256": "cabd13f401d3c1fe2b5ac6ce091931375b0bc2d5d9e206584b88aa3ffd51516a",
+      "reason": "One-off host/PID-specific matrix continuation; generic exact run_scatter_slabs.py retained",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/run_scatter_all_free_gpus.sh",
+      "git_blob_sha256": "cabd13f401d3c1fe2b5ac6ce091931375b0bc2d5d9e206584b88aa3ffd51516a",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/submit_response_mismatch.py",
+      "bytes": 6372,
+      "sha256": "51726c9704b357b42843d2ee6f852ff8cebbfcddac783125f568c90e386fc659",
+      "reason": "Superseded float q-cut production orchestration; stable_float64 frozen v5 workflow is baseline",
+      "code_callers": [],
+      "remaining_code_callers": [],
+      "restore_command": "git restore --source b3eebec476a0c34287a92674ae358dc0f9f2d9e3 -- experiments/ELLIPSE500x300_H120/submit_response_mismatch.py",
+      "git_blob_sha256": "51726c9704b357b42843d2ee6f852ff8cebbfcddac783125f568c90e386fc659",
+      "recorded_original_sha_matches_git_LF_or_CRLF_variant": true
+    }
+  ],
+  "removed_files": 11,
+  "removed_bytes": 71186,
+  "preserved_history": {
+    "path": "experiments/ELLIPSE500x300_H120/HISTORY_20261007.md",
+    "sha256": "ce3fb69553b08b691f5b414c7336c7301cbf082d9c57bc30fd5000f0d3b6d475",
+    "original_readme_sha256": "ce3fb69553b08b691f5b414c7336c7301cbf082d9c57bc30fd5000f0d3b6d475"
+  },
+  "production_algorithm_changed": false,
+  "accepted_evidence_deleted": false,
+  "raw_data_deleted": false,
+  "new_simulation_or_reconstruction": false,
+  "restore_is_not_authorization_to_restart_stopped_jobs": true,
+  "remaining_recorded_baseline_local_imports": 124,
+  "remaining_recorded_baseline_local_imports_resolve": true
+}
