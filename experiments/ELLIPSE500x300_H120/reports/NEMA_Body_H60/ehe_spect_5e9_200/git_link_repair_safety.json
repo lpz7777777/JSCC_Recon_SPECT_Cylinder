@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "scope": "Staged link repair, actual transport pilot acceptance, geometry evidence and production registration before adding this audit file",
+  "audit": {
+    "checked_blobs": 21,
+    "total_blob_bytes": 209351,
+    "largest_blobs": [
+      [
+        49128,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_CollimatorHoles.csv"
+        ]
+      ],
+      [
+        47697,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_DetectorGeometry.csv"
+        ]
+      ],
+      [
+        40093,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py"
+        ]
+      ],
+      [
+        14775,
+        [
+          "experiments/ELLIPSE500x300_H120/prepare_ehe_5e9.py"
+        ]
+      ],
+      [
+        8163,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_freeze_617de71eaed668cd.json"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "files": {
+    "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py": {
+      "sha256": "4ea8d7d850edd8ed8ed131cc23d8231db7911c63d7d13dd3f6ee15025f3b14ac",
+      "bytes": 40093
+    },
+    "experiments/ELLIPSE500x300_H120/prepare_ehe_5e9.py": {
+      "sha256": "bfc5f3bcec06159cd8b4c1e4eb187329b702b6ee1360b8f6c81cefcd183bbcb6",
+      "bytes": 14775
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "sha256": "b67494b522dddd7fb9cca0e99be4e2d05e76ce8564d2cabecabb9b93c63ee845",
+      "bytes": 6998
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "sha256": "bc497ae3aa382d17a78522a49f22a029613f227a29e54b6352278b6aa0cc2f22",
+      "bytes": 3107
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "sha256": "89a52069f8ab2d2198bbc1f750b411f47fb0cd4c2472d8b95f27377212f0c176",
+      "bytes": 5979
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/deployment_maty.json": {
+      "sha256": "cf02f1d196a06c0c887e025124a8440cacc8ce4dcf719f44c5fd67ec2b1a94f3",
+      "bytes": 282
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/failed_transport_pilot_15633652_job.json": {
+      "sha256": "e5f6531e822b238e371af9daa484a158f7a8d5fd777f3c09db725a11aed7ad47",
+      "bytes": 3565
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/A218/EHE_GeometryComparison.txt": {
+      "sha256": "551cfa035cf74139464a1219d6fde38b3ac009ee50687bd86771d5078d863de6",
+      "bytes": 316
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/A440/EHE_GeometryComparison.txt": {
+      "sha256": "551cfa035cf74139464a1219d6fde38b3ac009ee50687bd86771d5078d863de6",
+      "bytes": 316
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/C440to218/EHE_GeometryComparison.txt": {
+      "sha256": "551cfa035cf74139464a1219d6fde38b3ac009ee50687bd86771d5078d863de6",
+      "bytes": 316
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_CollimatorHoles.csv": {
+      "sha256": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+      "bytes": 49128
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_DetectorGeometry.csv": {
+      "sha256": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+      "bytes": 47697
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_GeometrySummary.txt": {
+      "sha256": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+      "bytes": 526
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/union_audit.json": {
+      "sha256": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+      "bytes": 74
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_freeze_617de71eaed668cd.json": {
+      "sha256": "921dade7d9b11f23f436d5c217d7769e12f29acc239b05a4b7057c8aecd11373",
+      "bytes": 8163
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_job.json": {
+      "sha256": "43bd0e2edd9f096c5c74308b8e892d76943d04f12695eacac32e35e14e03dcd0",
+      "bytes": 1256
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_link_acceptance.json": {
+      "sha256": "e4b3a7a9e8c60213d1322711c5aa8a593cbbad6f2a25b701c76226c021fa67c1",
+      "bytes": 685
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_pilot.json": {
+      "sha256": "0b270b1aa9a043b84faec3de9ad180721fc7f875484ca3646b030ef63c2186b9",
+      "bytes": 2365
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_pilot_job.json": {
+      "sha256": "bc7c60a59f4ca9771fd27b43d0e7b9a8680b7906d093eb3a229ae4f239d1f77f",
+      "bytes": 3565
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_pilot_sha_acceptance.json": {
+      "sha256": "6cfa7ee9b79dd8d34903708281a71ed80904d3c92831ec40394bff63171b1473",
+      "bytes": 1963
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_repair_freeze.json": {
+      "sha256": "c7d34917df3b0c6e28a67e353beef0cdf00e602dc01743d48ba65eb21e00d9e3",
+      "bytes": 8159
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/unlinked_union_15633652.json": {
+      "sha256": "6b00f038f42beb7dce076bacbb69a431282bf72f739b25ba418fccd3d3618f6d",
+      "bytes": 3909
+    },
+    "experiments/ELLIPSE500x300_H120/test_ehe_5e9.py": {
+      "sha256": "5254c264d7027068775b5da6192fa9bb5133563f917b755c2af878603933dc2f",
+      "bytes": 6746
+    }
+  },
+  "excluded": "Matrices, response blocks, binaries, archives, large simulation data and credentials; original JSCC baseline unchanged"
+}

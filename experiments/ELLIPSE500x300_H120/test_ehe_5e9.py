@@ -27,6 +27,7 @@ class Contracts(unittest.TestCase):
             self.assertEqual(digest(p/'src/PrimaryGeneratorAction.cc'),digest(ROOT/'Geant4Sim/Geant4Code/src/PrimaryGeneratorAction.cc'))
             self.assertIn('298.5',(p/'include/DetectorConstruction.hh').read_text())
             self.assertIn('GetPrimary218',(p/'src/RunAction.cc').read_text())
+            self.assertIn('  src/ehe_G4MultiUnion_11_1.cc\n)',(p/'CMakeLists.txt').read_text())
     def test_policy(self):
         policy('formal',200,10);policy('validation',10,10)
         for x in (('formal',10000,50),('formal',200,50),('validation',200,10)):

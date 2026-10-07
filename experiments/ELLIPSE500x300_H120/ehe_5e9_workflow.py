@@ -35,6 +35,21 @@ def frozen(host):
 def release(host):return base(host)+'/releases/'+frozen(host)['release_key']
 def python(host):return 'python3' if host=='maty' else GPU_PYTHON
 
+def fetch_transport_geometry(c,pilot):
+    """Hash the actual remote geometry evidence before checking fetched bytes."""
+    import json
+    paths={name+'/EHE_GeometryComparison.txt':base('maty')+'/geometry_evidence/'+name+'/EHE_GeometryComparison.txt' for name in RESPONSES}
+    paths.update({'raw/'+name:pilot['output']+'/'+name for name in ('EHE_GeometrySummary.txt','EHE_CollimatorHoles.csv','EHE_DetectorGeometry.csv')})
+    paths['union_audit.json']=pilot['output']+'/EHE_MultiUnionAudit.json'
+    code='import json;from ehe_common import digest;print(json.dumps({n:digest(p) for n,p in '+repr(paths)+'.items()}))'
+    expected=json.loads(command(c,'cd '+q(release('maty'))+' && python3 -c '+q(code)))
+    target=REPORT/'geometry_evidence'
+    with c.open_sftp() as s:
+        for name,remote in paths.items():
+            local=target/name;local.parent.mkdir(parents=True,exist_ok=True);s.get(remote,str(local))
+    verify_files(target,expected)
+    return expected
+
 def put_tree(sftp,source,target):
     try:sftp.mkdir(target)
     except OSError:pass
@@ -74,6 +89,12 @@ python3 -c 'import hashlib,json,pathlib,sys;p=pathlib.Path(sys.argv[1]);b=p/"bui
             with c.open_sftp() as s:
                 with s.open(release(host)+'/build_geant4.sh','w') as f:f.write(script)
             print(command(c,'bash '+q(release(host)+'/build_geant4.sh')+' '+q(release(host))+' > '+q(base(host)+'/logs/build_geant4.log')+' 2>&1 && tail -n 4 '+q(base(host)+'/logs/build_geant4.log'),600))
+            if 'src/ehe_G4MultiUnion_11_1.cc' in (payload/'Geant4Code_EHE/CMakeLists.txt').read_text():
+                symbols=command(c,'nm -C '+q(release(host)+'/build/ehe_spect'))
+                required=('G4MultiUnion::InsideWithExclusion','G4MultiUnion::InsideNoVoxels','G4MultiUnion::G4MultiUnion')
+                for name in required:
+                    if not any(' T '+name in line for line in symbols.splitlines()):raise ValueError('Version-pinned local MultiUnion implementation was not linked: '+name)
+                write(REPORT/'transport_link_acceptance.json',dict(passed=True,release_key=r['release_key'],symbols=[l.strip() for l in symbols.splitlines() if any(' T '+n in l for n in required)]))
     write(REPORT/f'deployment_{host}.json',dict(passed=True,release_key=r['release_key'],root=release(host),files_verified=len(r['sha256'])))
 
 def query(c,job):
@@ -249,6 +270,30 @@ def repair_union_pilot():
     registration.rename(REPORT/f'failed_transport_pilot_{old["job"]}_job.json')
     deploy('maty');pilots()
 
+def repair_union_link_pilot():
+    registration=REPORT/'transport_pilot_job.json';old=read(registration)
+    evidence=read(REPORT/f'unlinked_union_{old["job"]}.json')
+    if not any('libG4geometry.so' in p['stack'] and 'DetectorConstruction::Construct' in p['stack'] for p in evidence['processes']):raise ValueError('Actual unlinked geometry stack required')
+    if ' T G4MultiUnion::' in evidence['linked_symbols']:raise ValueError('This repair only applies to absent executable-local symbols')
+    with connection('maty') as c:
+        state=query(c,old['job'])
+        if str(old['job']) in command(c,'squeue -h -u "$USER" -o %i').split():raise ValueError('Old own pilot must fully exit before link repair')
+        if not any(l.split('|')[0]==str(old['job']) and l.split('|')[1].startswith('CANCELLED') for l in state.splitlines()):raise ValueError('Own diagnosed stalled pilot exit required')
+        evidence['accounting']=state;write(REPORT/f'unlinked_union_{old["job"]}.json',evidence)
+    import shutil,hashlib,json
+    from prepare_ehe_5e9 import link_multiunion
+    prior=frozen('maty');write(REPORT/f'transport_freeze_{prior["release_key"]}.json',prior)
+    payload=DATA/'transport_payload_v4';shutil.copytree(DATA/prior['payload_dir'],payload)
+    link_multiunion(payload/'Geant4Code_EHE')
+    shutil.copy2(HERE/'ehe_GEANT4_LICENSE.txt',payload/'Geant4Code_EHE/LICENSE.Geant4')
+    for name in ('prepare_ehe_5e9.py','test_ehe_5e9.py','ehe_5e9_workflow.py'):shutil.copy2(HERE/name,payload/name)
+    files=hashes(payload);key=hashlib.sha256(json.dumps(files,sort_keys=True).encode()).hexdigest()[:16]
+    write(REPORT/'transport_repair_freeze.json',dict(study=STUDY,release_key=key,sha256=files,payload_dir=payload.name,
+        config_sha256=digest(payload/'config.json'),prior_pilot_job=old['job'],prior_release_key=prior['release_key'],
+        repair='Add already version-pinned local MultiUnion source to explicit CMake target; require linked text symbols before pilot; geometry/physics/sampler unchanged'))
+    registration.rename(REPORT/f'failed_transport_pilot_{old["job"]}_job.json')
+    deploy('maty');pilots()
+
 def get_json(c,path):
     with c.open_sftp() as s:
         with s.open(path,'r') as f:
@@ -322,13 +367,23 @@ def advance():
         pilot=read(REPORT/'transport_pilot_job.json');done,_=completed(c,pilot['job'])
         if done and not (REPORT/'transport_job.json').exists():
             proof=get_json(c,pilot.get('output',base('maty')+'/pilot_transport')+'/receipt.json')
-            if not proof['passed'] or not proof['pilot']:raise ValueError('Actual transport throughput required')
+            if not proof['passed'] or not proof['pilot'] or proof['photons']!=100000 or proof['release_key']!=frozen('maty')['release_key']:raise ValueError('Actual transport throughput required')
+            code=f'''from pathlib import Path
+from ehe_common import *
+r=Path({release('maty')!r});p=Path({pilot['output']!r})
+receipt=read(p/'receipt.json')
+verify_files(r,read(r/'release_manifest.json')['sha256'])
+verify_files(p,receipt['files'])
+verify_files(r,{{'build/ehe_spect':receipt['binary_sha256']}})
+audit=read(p/'EHE_MultiUnionAudit.json')
+assert audit['passed'] and audit['points']==11252 and audit['holes']==1250
+print('ACTUAL_TRANSPORT_PROBE_SHA_PASS')
+'''
+            print(command(c,'cd '+q(release('maty'))+' && python3 -c '+q(code),120))
             write(REPORT/'transport_pilot.json',proof)
-            with c.open_sftp() as s:
-                for response in RESPONSES:
-                    path=REPORT/'geometry_evidence'/response;path.mkdir(parents=True,exist_ok=True)
-                    s.get(base('maty')+'/geometry_evidence/'+response+'/EHE_GeometryComparison.txt',str(path/'EHE_GeometryComparison.txt'))
-                s.get(pilot['output']+'/EHE_MultiUnionAudit.json',str(REPORT/'geometry_evidence/union_audit.json'))
+            geometry_sha=fetch_transport_geometry(c,pilot)
+            write(REPORT/'transport_pilot_sha_acceptance.json',dict(passed=True,job=pilot['job'],release_key=proof['release_key'],
+                receipt_files=proof['files'],geometry_evidence_sha256=geometry_sha,remote_and_fetched_geometry_sha_match=True))
             timing=proof['phase_seconds']
             limit=max(600,math.ceil((timing['initialization_seconds']+timing['beam_seconds']*250)*1.8+300))
             r=release('maty');b=base('maty')
@@ -451,7 +506,7 @@ for folder in sorted(root.glob('*/slab_*')):
                 print(command(c,'if [ -f '+q(base('gpu')+'/results/'+record['stage']+'/progress.json')+' ]; then cat '+q(base('gpu')+'/results/'+record['stage']+'/progress.json')+'; fi'))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','deploy','pilots','repair-transport-pilot','repair-response-pilot','repair-geometry-pilot','repair-chord-pilot','repair-union-pilot','advance','status','fetch','compare']);p.add_argument('--host',choices=['maty','gpu'],default='maty');p.add_argument('--mode',choices=['validation','formal'],default='formal');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','deploy','pilots','repair-transport-pilot','repair-response-pilot','repair-geometry-pilot','repair-chord-pilot','repair-union-pilot','repair-union-link-pilot','advance','status','fetch','compare']);p.add_argument('--host',choices=['maty','gpu'],default='maty');p.add_argument('--mode',choices=['validation','formal'],default='formal');a=p.parse_args()
     if a.action=='prepare':
         from prepare_ehe_5e9 import prepare
         prepare()
@@ -462,6 +517,7 @@ if __name__=='__main__':
     elif a.action=='repair-geometry-pilot':repair_geometry_pilot()
     elif a.action=='repair-chord-pilot':repair_chord_pilot()
     elif a.action=='repair-union-pilot':repair_union_pilot()
+    elif a.action=='repair-union-link-pilot':repair_union_link_pilot()
     elif a.action=='advance':advance()
     elif a.action=='status':status()
     elif a.action=='fetch':fetch(a.mode)

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "release_key": "fdfc7b4a75399b55",
+  "symbols": [
+    "0000000000414b70 T G4MultiUnion::G4MultiUnion(__void__&)",
+    "0000000000414a40 T G4MultiUnion::G4MultiUnion(G4String const&)",
+    "0000000000414af0 T G4MultiUnion::G4MultiUnion(G4MultiUnion const&)",
+    "0000000000414b70 T G4MultiUnion::G4MultiUnion(__void__&)",
+    "0000000000414a40 T G4MultiUnion::G4MultiUnion(G4String const&)",
+    "0000000000414af0 T G4MultiUnion::G4MultiUnion(G4MultiUnion const&)",
+    "0000000000415a80 T G4MultiUnion::InsideNoVoxels(CLHEP::Hep3Vector const&) const",
+    "0000000000416f00 T G4MultiUnion::InsideWithExclusion(CLHEP::Hep3Vector const&, G4SurfBits*) const"
+  ]
+}

@@ -1,0 +1,15 @@
+geometry = EHE triangular-lattice parallel-hole SPECT
+fov_center_y_mm = -345
+common_front_face_distance_mm = 298.5
+fov_to_collimator_local_origin_mm = 323.75
+collimator_center_y_mm = -21.25
+collimator_front_y_mm = -46.5
+collimator_back_y_mm = 4
+collimator_size_x_y_z_mm = 330,50.5,165
+hole_rows_columns_count = 25,50,1250
+hole_diameter_pitch_septum_mm = 2.5,5.9,3.4
+detector_grid_x_z_count = 68,34,2312
+detector_pixel_x_y_z_mm = 4,10,4
+detector_center_y_mm = 9
+collimator_material = G4_Pb
+detector_material = G4_SODIUM_IODIDE

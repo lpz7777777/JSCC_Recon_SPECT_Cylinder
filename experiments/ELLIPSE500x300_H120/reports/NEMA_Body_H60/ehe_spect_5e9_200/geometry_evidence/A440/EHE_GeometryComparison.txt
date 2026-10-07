@@ -1,0 +1,10 @@
+Geant4 EHE geometry versus MATLAB Params
+status = PASS
+detector_count = 2312
+hole_count = 1250
+max_detector_error_mm = 0.0
+max_hole_error_mm = 6.469726571367573e-06
+nearest_pitch_min_mm = 5.899999999975581
+nearest_pitch_max_mm = 5.900000000000006
+minimum_septum_mm = 3.3999999999755808
+reference_shift_y_mm = -21.25

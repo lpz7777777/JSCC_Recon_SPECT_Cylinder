@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "job": 15633832,
+  "release_key": "fdfc7b4a75399b55",
+  "receipt_files": {
+    "CntStat_218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_218_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_218_from440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440_from440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "TransportSummary.json": "f997d4393b214d0d20ffc8e307de09b1e30b5d992fca5b3548b312c491cdc90f",
+    "TransportTiming.json": "0822b082bba4dd219253487c4dbc08527fa7dc5a1583c5461f81ac1365fda095",
+    "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+    "source.mac": "b0a8d2520a999620e20a3a8282894d28b28f91549f61c2c22b60939bafba775c",
+    "allocation.json": "523e6278f3f9dbcdf38d7ae2bfcb3516a77387f33bae2cc307064b23a2c9c5d8"
+  },
+  "geometry_evidence_sha256": {
+    "A218/EHE_GeometryComparison.txt": "551cfa035cf74139464a1219d6fde38b3ac009ee50687bd86771d5078d863de6",
+    "A440/EHE_GeometryComparison.txt": "551cfa035cf74139464a1219d6fde38b3ac009ee50687bd86771d5078d863de6",
+    "C440to218/EHE_GeometryComparison.txt": "551cfa035cf74139464a1219d6fde38b3ac009ee50687bd86771d5078d863de6",
+    "raw/EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+    "raw/EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+    "raw/EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+    "union_audit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3"
+  },
+  "remote_and_fetched_geometry_sha_match": true
+}

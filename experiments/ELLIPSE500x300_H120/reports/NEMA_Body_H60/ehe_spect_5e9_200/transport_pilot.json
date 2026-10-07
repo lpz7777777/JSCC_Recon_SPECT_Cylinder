@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "pilot": true,
+  "index": 0,
+  "view": 1,
+  "worker": 0,
+  "seed": 32100101,
+  "photons": 100000,
+  "primary_counts": [
+    29229,
+    70771,
+    0
+  ],
+  "counts": {
+    "CntStat_218.csv": 0,
+    "CntStat_440.csv": 0,
+    "CntStat_218_from218.csv": 0,
+    "CntStat_218_from440.csv": 0,
+    "CntStat_440_from218.csv": 0,
+    "CntStat_440_from440.csv": 0
+  },
+  "resource": {
+    "elapsed_seconds": 23.531757786870003,
+    "rss_peak_bytes": 106287104,
+    "host_allocated_bytes": 183396347904,
+    "rss_fraction": 0.0005795486399523979,
+    "gpu_used_peak_bytes": 0,
+    "gpu_total_bytes": 0,
+    "gpu_used_fraction": 0
+  },
+  "phase_seconds": {
+    "initialization_seconds": 0.302589,
+    "beam_seconds": 22.7152
+  },
+  "binary_sha256": "a49fbdef69b187df2cfebfb481c7974394d00264ab2d4aeb4cc83e65eeacb882",
+  "release_key": "fdfc7b4a75399b55",
+  "release_manifest_sha256": "c7d34917df3b0c6e28a67e353beef0cdf00e602dc01743d48ba65eb21e00d9e3",
+  "allocation_denominator_kind": "CPU transport physical MemAvailable at start; no Slurm memory allocation",
+  "registered_macro_sha256": "6e2bbbabf522cc32747d4b68af49138c0f9b9e7f597d1a9784be40ae15ee3331",
+  "actual_macro_sha256": "b0a8d2520a999620e20a3a8282894d28b28f91549f61c2c22b60939bafba775c",
+  "files": {
+    "CntStat_218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_218_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_218_from440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440_from440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "TransportSummary.json": "f997d4393b214d0d20ffc8e307de09b1e30b5d992fca5b3548b312c491cdc90f",
+    "TransportTiming.json": "0822b082bba4dd219253487c4dbc08527fa7dc5a1583c5461f81ac1365fda095",
+    "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+    "source.mac": "b0a8d2520a999620e20a3a8282894d28b28f91549f61c2c22b60939bafba775c",
+    "allocation.json": "523e6278f3f9dbcdf38d7ae2bfcb3516a77387f33bae2cc307064b23a2c9c5d8"
+  },
+  "started_epoch": 1791389350.8402557
+}

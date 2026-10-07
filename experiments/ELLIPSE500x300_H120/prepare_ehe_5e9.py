@@ -39,6 +39,7 @@ def safe_multiunion(destination):
     # corrected into this executable; the installed toolkit remains read-only.
     shutil.copy2(HERE/'ehe_G4MultiUnion_11_1.cc',destination/'src/ehe_G4MultiUnion_11_1.cc')
     shutil.copy2(HERE/'ehe_GEANT4_LICENSE.txt',destination/'LICENSE.Geant4')
+    link_multiunion(destination)
     source=destination/'src/DetectorConstruction.cc'
     replace_once(source,'  allHoles->Voxelize();','''  allHoles->Voxelize();
   int auditPoints=0;
@@ -54,6 +55,11 @@ def safe_multiunion(destination):
   std::ofstream unionAudit("EHE_MultiUnionAudit.json");
   unionAudit<<"{\\"passed\\":true,\\"points\\":"<<auditPoints<<",\\"holes\\":1250,\\"empty_candidates_guard\\":true}\\n";
   unionAudit.close();''')
+
+def link_multiunion(destination):
+    # This entry point has an explicit source list, not a src/*.cc glob.
+    replace_once(destination/'CMakeLists.txt','  src/SteppingVerbose.cc\n)',
+                 '  src/SteppingVerbose.cc\n  src/ehe_G4MultiUnion_11_1.cc\n)')
 
 def overlay(destination):
     base = ROOT/'Geant4Sim/Geant4Code_EHE'
