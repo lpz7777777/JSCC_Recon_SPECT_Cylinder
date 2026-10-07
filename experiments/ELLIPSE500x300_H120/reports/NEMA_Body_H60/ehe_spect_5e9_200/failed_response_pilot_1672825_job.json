@@ -1,0 +1,12 @@
+{
+  "job": 1672825,
+  "host": "gpu",
+  "stage": "response_pilot",
+  "release_key": "cfa2757c620cc123",
+  "minutes": 190,
+  "array": null,
+  "script": "source /etc/profile.d/modules.sh\nmodule load cuda/12.9\nexport OMP_NUM_THREADS=6\ncd /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/cfa2757c620cc123\nmkdir -p bin\nnvcc -std=c++17 -O3 -lineinfo -arch=sm_89 engine/PEGen_RayTracing_CircularHole/PEGen_V4_Production.cu -o bin/PEGen_V4_Production\nnvcc -std=c++17 -O3 -lineinfo -arch=sm_89 engine/ScatterGen_RayTracing_CircularHole/scatter.cu engine/ScatterGen_RayTracing_CircularHole/ScatterGen_CircularHole.cpp -o bin/ScatterGen_CircularHole\nnvcc -std=c++17 -O3 -lineinfo -arch=sm_89 ehe_pe_chord_test.cu -o bin/ehe_pe_chord_test\n/data/home/scxi717/.conda/envs/torch/bin/python validate_ehe_pe_v4.py --binary /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/cfa2757c620cc123/bin/ehe_pe_chord_test --params /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/cfa2757c620cc123/params/A440 --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/pe_geometry_cfa2757c620cc123\n/data/home/scxi717/.conda/envs/torch/bin/python -c 'from ehe_common import *;write(\"gpu_binary_manifest.json\",{\"files\":{n:digest(n) for n in (\"bin/PEGen_V4_Production\",\"bin/ScatterGen_CircularHole\")}})'\n/data/home/scxi717/.conda/envs/torch/bin/python ehe_gpu_pipeline.py pilot --release /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/cfa2757c620cc123 --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/pilot_responses_cfa2757c620cc123 --limit 3600\n",
+  "submitted_epoch": 1791385167.847623,
+  "workflow_sha256": "c353c48378aaddfabf9dd15176eefad1f05ab9a84620bd27a4783fbc6fb61494",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/pilot_responses_cfa2757c620cc123"
+}

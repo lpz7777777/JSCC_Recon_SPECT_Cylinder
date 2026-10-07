@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "release_key": "74e129c4460163c5",
+  "pilot": true,
+  "stages": {
+    "A218/0": {
+      "receipt_sha256": "26e4c435154aca06674a93fd445e023229783ba215f6b38512adffaf307f7125",
+      "verified_files": 14
+    },
+    "A440/0": {
+      "receipt_sha256": "7a08f660edc40d619bdfa86313a58a1fd458b94c3e6d4896428ec133b2c04901",
+      "verified_files": 14
+    },
+    "C440to218/0": {
+      "receipt_sha256": "ec8710549b06ecc960c251e3c49155e572f2f9f657d661189809491594a2374c",
+      "verified_files": 13
+    }
+  },
+  "job": 1672873,
+  "accounting": "1672873|COMPLETED|0:0||00:32:37|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1672873.batch|COMPLETED|0:0|1103800K|00:32:37|cpu=6,gres/gpu=1,mem=94500M,node=1\n1672873.extern|COMPLETED|0:0|0|00:32:37|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n"
+}

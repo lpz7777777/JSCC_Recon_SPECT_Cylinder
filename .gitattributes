@@ -26,3 +26,12 @@ experiments/ELLIPSE500x300_H120/research_process_list_followup.py -text whitespa
 experiments/ELLIPSE500x300_H120/test_compton_geometry_stability.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/summarize_process_list_followup.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_followup_20261004/** -text whitespace=cr-at-eol
+
+# Preserve immutable EHE execution and acceptance evidence bytes.
+experiments/ELLIPSE500x300_H120/ehe_*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/*_ehe_*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/verify_ehe.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/ehe_*.cu -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/ehe_G4MultiUnion_11_1.cc -text whitespace=cr-at-eol,-blank-at-eol
+experiments/ELLIPSE500x300_H120/ehe_GEANT4_LICENSE.txt -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/** -text whitespace=cr-at-eol

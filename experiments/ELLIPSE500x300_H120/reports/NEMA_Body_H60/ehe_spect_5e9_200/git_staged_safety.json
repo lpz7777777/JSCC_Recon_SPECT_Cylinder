@@ -1,0 +1,38 @@
+{
+  "checked_blobs": 53,
+  "total_blob_bytes": 319108,
+  "largest_blobs": [
+    [
+      35649,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py"
+      ]
+    ],
+    [
+      35192,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_G4MultiUnion_11_1.cc"
+      ]
+    ],
+    [
+      16895,
+      [
+        "experiments/ELLIPSE500x300_H120/compare_ehe_5e9.py"
+      ]
+    ],
+    [
+      14477,
+      [
+        "experiments/ELLIPSE500x300_H120/prepare_ehe_5e9.py"
+      ]
+    ],
+    [
+      12096,
+      [
+        "experiments/ELLIPSE500x300_H120/verify_ehe.py"
+      ]
+    ]
+  ],
+  "findings": [],
+  "scope": "Changed staged blobs before refreshing this small safety record; actual final index checked again before commit"
+}

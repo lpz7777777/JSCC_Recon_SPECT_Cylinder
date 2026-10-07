@@ -1,11 +1,15 @@
 # 500×300×120mm椭圆视野：当前218/440双能基准
 
-2026-10-07：以已严格交付的NEMA H60、既有5e9 legacy、连续能量核v5六路10000次作业1669255为后续实现与执行回归基准。旧试验不自动恢复，compton-v5保持暂停。
+2026-10-07：以已严格交付的NEMA H60、既有5e9 legacy、连续能量核v5六路10000次作业1669255为后续实现与执行回归基准。旧试验不自动恢复；后续EHE对比独立执行，JSCC已交付结果保持只读。
 
 - [完整基准：Geant4→三套Factors/匹配S→六路MLEM→验收→图像](../../docs/DUAL_ENERGY_BASELINE.md)
 - [7月至10月全部主要测试与正面/负面/未定结论](../../docs/DUAL_ENERGY_RESEARCH_REVIEW.md)
 - [源代码与输入/证明SHA登记](../../docs/baselines/dual_energy_20261007/manifest.json)
 - [代码分类](../../docs/baselines/dual_energy_20261007/source_inventory.json)与[旧脚本删除/恢复清单](../../docs/baselines/dual_energy_20261007/cleanup_manifest.json)
+
+## 新EHE平行孔SPECT对比
+
+用户已授权[独立EHE 5e9/200次实验](reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md)。保留1250孔/2312 NaI bin及272×136mm探测面，前表面298.5mm；重新模拟EHE观测、生成三套匹配响应与S，先做真实源物理门控及完整输入10次验证，随后正式200次。对照只读复用1669255的218单光子、440单光子/Compton/JSCC和双能结果。尚无EHE正式图像结论。
 
 ## 已交付的当前结果
 

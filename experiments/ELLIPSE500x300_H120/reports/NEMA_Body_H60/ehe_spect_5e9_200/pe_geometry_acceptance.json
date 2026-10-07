@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "rays": 5798,
+  "holes": 1250,
+  "max_absolute_chord_error_mm": 7.091651441015756e-05,
+  "relative_l2": 1.9709082265474037e-07,
+  "oracle": "independent exhaustive float64 finite-cylinder union subtracted from clipped material box",
+  "files": {
+    "actual.float32": "ee149290c60b9b2ef81977bcd82a69b42e5282e16679b1fe251d672bfda4d373",
+    "actual.float32.config": "185cceb94f7901834278e8f42e78dd6ae75a96270648c322fcae7b28d69fda46",
+    "expected.float64": "b760fb33dc11e699ec1705db77c1fcd107ac3bed17b1f4e4e823eed8f70b7680",
+    "rays.float32": "7e6c5cb0b747baba5faab346aada8e492b9af8acbb0b56ce342da953fe074aa8"
+  }
+}

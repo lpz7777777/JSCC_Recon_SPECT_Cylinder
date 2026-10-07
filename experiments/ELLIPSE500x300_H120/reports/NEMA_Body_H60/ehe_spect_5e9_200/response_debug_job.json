@@ -1,0 +1,11 @@
+{
+  "job": 1672858,
+  "host": "gpu",
+  "stage": "response_debug",
+  "release_key": "cfa2757c620cc123",
+  "minutes": 10,
+  "array": null,
+  "script": "source /etc/profile.d/modules.sh\nmodule load cuda/12.9\nexport OMP_NUM_THREADS=6\ncd /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/cfa2757c620cc123\nnvcc -std=c++17 -O3 -lineinfo -arch=sm_89 /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/diagnosis_1672825/test.cu -o /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/diagnosis_1672825/test\n/data/home/scxi717/.conda/envs/torch/bin/python validate_ehe_pe_v4.py --binary /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/diagnosis_1672825/test --params /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/cfa2757c620cc123/params/A440 --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/diagnosis_1672825/test_output\n",
+  "submitted_epoch": 1791385851.0956736,
+  "workflow_sha256": "9a9b575e931a3707f06041adad8cc4994778626a3126d648c32ce8d1ede6d433"
+}

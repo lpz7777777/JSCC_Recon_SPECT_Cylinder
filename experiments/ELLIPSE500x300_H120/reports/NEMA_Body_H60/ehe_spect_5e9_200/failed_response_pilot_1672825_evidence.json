@@ -1,0 +1,18 @@
+{
+  "accounting": "1672825|FAILED|1:0||00:04:27|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1672825.batch|FAILED|1:0|151508K|00:04:27|cpu=6,gres/gpu=1,mem=94500M,node=1\n1672825.extern|COMPLETED|0:0|0|00:04:27|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n",
+  "numerical": {
+    "passed": false,
+    "rays": 5798,
+    "holes": 1250,
+    "max_absolute_chord_error_mm": 50.53335189819336,
+    "relative_l2": 0.8830357096272597,
+    "oracle": "independent exhaustive float64 finite-cylinder union subtracted from clipped material box",
+    "files": {
+      "actual.float32": "f270c653ebf670253de01af38ca00a1ef70a03473595800778bed4226477cae1",
+      "expected.float64": "b760fb33dc11e699ec1705db77c1fcd107ac3bed17b1f4e4e823eed8f70b7680",
+      "rays.float32": "7e6c5cb0b747baba5faab346aada8e492b9af8acbb0b56ce342da953fe074aa8"
+    }
+  },
+  "complete_response_stages": 0,
+  "repair": "CUDA device-only double interval comparisons replace unsupported host constexpr mixed-type min/max; all-hole oracle gate stays unchanged"
+}

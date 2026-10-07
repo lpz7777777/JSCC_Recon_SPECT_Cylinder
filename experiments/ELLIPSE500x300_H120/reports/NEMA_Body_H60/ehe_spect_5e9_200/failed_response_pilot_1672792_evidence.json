@@ -1,0 +1,6 @@
+{
+  "accounting": "1672792|FAILED|1:0||00:02:49|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1672792.batch|FAILED|1:0|125616K|00:02:49|cpu=6,gres/gpu=1,mem=94500M,node=1\n1672792.extern|COMPLETED|0:0|0|00:02:49|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n",
+  "log": "PE v4 production failed: PE v4 production currently supports zero-hole collimators only\n",
+  "complete_response_stages": 0,
+  "reason": "PE-v4 currently rejects finite holes; independent EHE finite-cylinder extension, baseline untouched"
+}

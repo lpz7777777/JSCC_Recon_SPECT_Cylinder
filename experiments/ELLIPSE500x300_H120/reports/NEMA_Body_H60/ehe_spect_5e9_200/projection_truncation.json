@@ -1,0 +1,129 @@
+{
+  "rows": [
+    {
+      "view": 1,
+      "angle_deg": 0,
+      "geometric_outside_detector_fraction_218": 0.030045919120311737,
+      "geometric_outside_detector_fraction_440": 0.028400162234902382
+    },
+    {
+      "view": 2,
+      "angle_deg": 18,
+      "geometric_outside_detector_fraction_218": 0.0241033174097538,
+      "geometric_outside_detector_fraction_440": 0.02278306521475315
+    },
+    {
+      "view": 3,
+      "angle_deg": 36,
+      "geometric_outside_detector_fraction_218": 0.0229708943516016,
+      "geometric_outside_detector_fraction_440": 0.021712670102715492
+    },
+    {
+      "view": 4,
+      "angle_deg": 54,
+      "geometric_outside_detector_fraction_218": 0.010191810317337513,
+      "geometric_outside_detector_fraction_440": 0.009633556939661503
+    },
+    {
+      "view": 5,
+      "angle_deg": 72,
+      "geometric_outside_detector_fraction_218": 0.0,
+      "geometric_outside_detector_fraction_440": 0.0
+    },
+    {
+      "view": 6,
+      "angle_deg": 90,
+      "geometric_outside_detector_fraction_218": 0.0,
+      "geometric_outside_detector_fraction_440": 0.0
+    },
+    {
+      "view": 7,
+      "angle_deg": 108,
+      "geometric_outside_detector_fraction_218": 0.0,
+      "geometric_outside_detector_fraction_440": 0.0
+    },
+    {
+      "view": 8,
+      "angle_deg": 126,
+      "geometric_outside_detector_fraction_218": 0.010191810317337513,
+      "geometric_outside_detector_fraction_440": 0.009633556939661503
+    },
+    {
+      "view": 9,
+      "angle_deg": 144,
+      "geometric_outside_detector_fraction_218": 0.0229708943516016,
+      "geometric_outside_detector_fraction_440": 0.021712670102715492
+    },
+    {
+      "view": 10,
+      "angle_deg": 162,
+      "geometric_outside_detector_fraction_218": 0.0241033174097538,
+      "geometric_outside_detector_fraction_440": 0.02278306521475315
+    },
+    {
+      "view": 11,
+      "angle_deg": 180,
+      "geometric_outside_detector_fraction_218": 0.030045919120311737,
+      "geometric_outside_detector_fraction_440": 0.028400162234902382
+    },
+    {
+      "view": 12,
+      "angle_deg": 198,
+      "geometric_outside_detector_fraction_218": 0.0241033174097538,
+      "geometric_outside_detector_fraction_440": 0.02278306521475315
+    },
+    {
+      "view": 13,
+      "angle_deg": 216,
+      "geometric_outside_detector_fraction_218": 0.0229708943516016,
+      "geometric_outside_detector_fraction_440": 0.021712670102715492
+    },
+    {
+      "view": 14,
+      "angle_deg": 234,
+      "geometric_outside_detector_fraction_218": 0.010191810317337513,
+      "geometric_outside_detector_fraction_440": 0.009633556939661503
+    },
+    {
+      "view": 15,
+      "angle_deg": 252,
+      "geometric_outside_detector_fraction_218": 0.0,
+      "geometric_outside_detector_fraction_440": 0.0
+    },
+    {
+      "view": 16,
+      "angle_deg": 270,
+      "geometric_outside_detector_fraction_218": 0.0,
+      "geometric_outside_detector_fraction_440": 0.0
+    },
+    {
+      "view": 17,
+      "angle_deg": 288,
+      "geometric_outside_detector_fraction_218": 0.0,
+      "geometric_outside_detector_fraction_440": 0.0
+    },
+    {
+      "view": 18,
+      "angle_deg": 306,
+      "geometric_outside_detector_fraction_218": 0.010191810317337513,
+      "geometric_outside_detector_fraction_440": 0.009633556939661503
+    },
+    {
+      "view": 19,
+      "angle_deg": 324,
+      "geometric_outside_detector_fraction_218": 0.0229708943516016,
+      "geometric_outside_detector_fraction_440": 0.021712670102715492
+    },
+    {
+      "view": 20,
+      "angle_deg": 342,
+      "geometric_outside_detector_fraction_218": 0.0241033174097538,
+      "geometric_outside_detector_fraction_440": 0.02278306521475315
+    }
+  ],
+  "meaning": "orthographic source activity outside detector face; not the measured photon rejection probability",
+  "detector_face_mm": [
+    272,
+    136
+  ]
+}
