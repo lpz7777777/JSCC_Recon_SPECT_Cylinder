@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "scope": "Conditional geometry/material attenuation witnesses only, not a generated response or observed event",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "science_job": 1677211,
+  "producer_release_key": "74e129c4460163c5",
+  "frozen_input_sha256": {
+    "engine/ScatterGen_RayTracing_CircularHole/scatter.cu": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+    "engine/physics_data/nist_xcom_materials_1_1000keV.h": "8cc2044943a3a0fe385073188fe588323b62349d9bb1b87bcc8e15f39ddb25bb",
+    "params/C440to218/Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+    "params/C440to218/Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+    "params/C440to218/Params_Image.dat": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+    "params/C440to218/Params_Physics.dat": "c9c3cc37b1c51e41744857372d545f49c61e708b8bc30460c5757d8bdc6c9bc6"
+  },
+  "source_truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "source_point_mm": [
+    1.5,
+    -100.5,
+    -1.5
+  ],
+  "source_density_440_gamma_per_mm3": 1.0,
+  "hole_index": 625,
+  "hole_record": [
+    1.534000039100647,
+    -25.25,
+    25.25,
+    9.549694028108502e-16,
+    1.25,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "detector_bin_index": 2295,
+  "detector_center_mm": [
+    134.0,
+    354.0,
+    2.0
+  ],
+  "witness_construction": "Select central registered hole and a positive-density 3mm source voxel; conditional Pb points 0.01mm outside that hole and 0.25/0.5/1/2mm before the rear plane; choose outermost-x NaI bin nearest the hole z.",
+  "witnesses": [
+    {
+      "distance_from_rear_mm": 0.25,
+      "scatter_point_mm": [
+        2.7940000391006468,
+        348.75,
+        9.549694028108502e-16
+      ],
+      "incoming": {
+        "box_length_mm": 50.250488545536584,
+        "finite_hole_void_length_mm": 46.75979738014095,
+        "pb_length_mm": 3.4906911653956314,
+        "intersected_hole_indices": [
+          625
+        ],
+        "sampled_void_length_mm": 46.75933585383543,
+        "midpoint_membership_discrepancy_mm": 0.00046152630552143137,
+        "midpoint_discretization_bound_mm": 0.0025125244272768293,
+        "midpoint_samples": 40000
+      },
+      "outgoing": {
+        "box_length_mm": 6.253629680861379,
+        "finite_hole_void_length_mm": 2.497992582450519,
+        "pb_length_mm": 3.75563709841086,
+        "intersected_hole_indices": [
+          626
+        ],
+        "sampled_void_length_mm": 2.498012376020078,
+        "midpoint_membership_discrepancy_mm": 1.9793569558945734e-05,
+        "midpoint_discretization_bound_mm": 0.00031268148404306896,
+        "midpoint_samples": 40000
+      },
+      "kinematics": {
+        "angle_degrees": 87.54097348414692,
+        "scattered_energy_keV": 241.21310441417597,
+        "conditional_full_deposit_window_probability": 0.4585246715828732,
+        "two_sigma_prefilter_rejects": false
+      },
+      "frozen_pb_mu_primary_per_mm": 0.2075347602367401,
+      "frozen_pb_mu_scattered_per_mm": 0.6831398513084195,
+      "finite_holes_pb_survival_factor": 0.037251423391001036,
+      "solid_box_pb_survival_factor_same_legs": 4.1258370010953235e-07,
+      "removed_void_optical_depth": 11.410761619350884
+    },
+    {
+      "distance_from_rear_mm": 0.5,
+      "scatter_point_mm": [
+        2.7940000391006468,
+        348.5,
+        9.549694028108502e-16
+      ],
+      "incoming": {
+        "box_length_mm": 50.00048665644054,
+        "finite_hole_void_length_mm": 46.51173796365059,
+        "pb_length_mm": 3.4887486927899545,
+        "intersected_hole_indices": [
+          625
+        ],
+        "sampled_void_length_mm": 46.5117026999874,
+        "midpoint_membership_discrepancy_mm": 3.5263663185958194e-05,
+        "midpoint_discretization_bound_mm": 0.0025000243328220273,
+        "midpoint_samples": 40000
+      },
+      "outgoing": {
+        "box_length_mm": 11.939677732039284,
+        "finite_hole_void_length_mm": 4.979632673744713,
+        "pb_length_mm": 6.960045058294571,
+        "intersected_hole_indices": [
+          626,
+          627
+        ],
+        "sampled_void_length_mm": 4.979442598146983,
+        "midpoint_membership_discrepancy_mm": 0.00019007559772976634,
+        "midpoint_discretization_bound_mm": 0.0011939677732039284,
+        "midpoint_samples": 40000
+      },
+      "kinematics": {
+        "angle_degrees": 87.43190473247458,
+        "scattered_energy_keV": 241.4298401578482,
+        "conditional_full_deposit_window_probability": 0.45436811797265636,
+        "two_sigma_prefilter_rejects": false
+      },
+      "frozen_pb_mu_primary_per_mm": 0.2075347602367401,
+      "frozen_pb_mu_scattered_per_mm": 0.681737678754754,
+      "finite_holes_pb_survival_factor": 0.00421560743358419,
+      "solid_box_pb_survival_factor_same_legs": 9.085671797112674e-09,
+      "removed_void_optical_depth": 13.047605606530357
+    },
+    {
+      "distance_from_rear_mm": 1.0,
+      "scatter_point_mm": [
+        2.7940000391006468,
+        348.0,
+        9.549694028108502e-16
+      ],
+      "incoming": {
+        "box_length_mm": 49.50048286469461,
+        "finite_hole_void_length_mm": 46.015619117052815,
+        "pb_length_mm": 3.4848637476417963,
+        "intersected_hole_indices": [
+          625
+        ],
+        "sampled_void_length_mm": 46.01564887102011,
+        "midpoint_membership_discrepancy_mm": 2.9753967297097006e-05,
+        "midpoint_discretization_bound_mm": 0.0024750241432347306,
+        "midpoint_samples": 40000
+      },
+      "outgoing": {
+        "box_length_mm": 21.8930572618477,
+        "finite_hole_void_length_mm": 8.168580364435574,
+        "pb_length_mm": 13.724476897412128,
+        "intersected_hole_indices": [
+          626,
+          627,
+          628,
+          629
+        ],
+        "sampled_void_length_mm": 8.168299664395377,
+        "midpoint_membership_discrepancy_mm": 0.0002807000401965354,
+        "midpoint_discretization_bound_mm": 0.00437861145236954,
+        "midpoint_samples": 40000
+      },
+      "kinematics": {
+        "angle_degrees": 87.21381982105099,
+        "scattered_energy_keV": 241.86432069520362,
+        "conditional_full_deposit_window_probability": 0.4460417138881946,
+        "two_sigma_prefilter_rejects": false
+      },
+      "frozen_pb_mu_primary_per_mm": 0.2075347602367401,
+      "frozen_pb_mu_scattered_per_mm": 0.6789268055953042,
+      "finite_holes_pb_survival_factor": 4.3569829950273385e-05,
+      "solid_box_pb_survival_factor_same_legs": 1.2111638399274346e-11,
+      "removed_void_optical_depth": 15.095708653677478
+    },
+    {
+      "distance_from_rear_mm": 2.0,
+      "scatter_point_mm": [
+        2.7940000391006468,
+        347.0,
+        9.549694028108502e-16
+      ],
+      "incoming": {
+        "box_length_mm": 48.5004752266619,
+        "finite_hole_void_length_mm": 45.02338136906265,
+        "pb_length_mm": 3.4770938575992503,
+        "intersected_hole_indices": [
+          625
+        ],
+        "sampled_void_length_mm": 45.022991152910244,
+        "midpoint_membership_discrepancy_mm": 0.0003902161524038661,
+        "midpoint_discretization_bound_mm": 0.0024250237613330948,
+        "midpoint_samples": 40000
+      },
+      "outgoing": {
+        "box_length_mm": 37.545090633431876,
+        "finite_hole_void_length_mm": 14.470746692941177,
+        "pb_length_mm": 23.0743439404907,
+        "intersected_hole_indices": [
+          626,
+          627,
+          628,
+          629,
+          630,
+          631
+        ],
+        "sampled_void_length_mm": 14.469877930124646,
+        "midpoint_membership_discrepancy_mm": 0.0008687628165304773,
+        "midpoint_discretization_bound_mm": 0.011263527190029564,
+        "midpoint_samples": 40000
+      },
+      "kinematics": {
+        "angle_degrees": 86.77788227725019,
+        "scattered_energy_keV": 242.73727342239656,
+        "conditional_full_deposit_window_probability": 0.42935538095123815,
+        "two_sigma_prefilter_rejects": false
+      },
+      "frozen_pb_mu_primary_per_mm": 0.2075347602367401,
+      "frozen_pb_mu_scattered_per_mm": 0.6733712779043872,
+      "finite_holes_pb_survival_factor": 8.683827935758431e-08,
+      "solid_box_pb_survival_factor_same_legs": 4.45506357588159e-16,
+      "removed_void_optical_depth": 19.088101850332215
+    }
+  ],
+  "same_xy_collimator_center_kinematics": {
+    "angle_degrees": 76.84083488823266,
+    "scattered_energy_keV": 264.2593112921756,
+    "conditional_full_deposit_window_probability": 0.11256678585368685,
+    "two_sigma_prefilter_rejects": false
+  },
+  "frozen_production_model": "collimatorScatterSysMatCuda uses representative x/z and layer-center y for geometry/window; attenuatedSlabDepthIntegral applies total Pb attenuation through full thickness. Circular holes enter buildCollimatorScatterSamples through lead-area weights; this depth factor does not subtract finite-hole chord intervals.",
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "code_sha256": "496f8dfb5d2b60fd49f182c187d571f31cd4e0a7864a7107e263ff8debdbe34e",
+  "elapsed_seconds": 4.875,
+  "no_response_or_simulation_executed": true,
+  "no_production_input_modified": true,
+  "no_observed_count_fit": true,
+  "limitations": "These conditional two-leg Pb survival factors are not probabilities of scattering or detection. They exclude geometric solid angle, scattering interaction density, NaI/intervening-crystal attenuation and absorption. No angular/volume/source integration or pathway frequency was calculated; points need not coincide with producer quadrature nodes. This is not a quantified production error, a measured missing fraction, a 24.02% root-cause attribution or a CUDA capture. No corrected kernel or response was implemented."
+}

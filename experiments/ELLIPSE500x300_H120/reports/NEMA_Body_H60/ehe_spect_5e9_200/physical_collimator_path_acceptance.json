@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "scope": "Acceptance of a new executed local CPU conditional finite-hole chord/attenuation diagnostic; original physical HOLD remains",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "science_job": 1677211,
+  "actual_cpu_exit_code": 0,
+  "elapsed_seconds": 4.875,
+  "producer_code_sha256": "496f8dfb5d2b60fd49f182c187d571f31cd4e0a7864a7107e263ff8debdbe34e",
+  "conditional_evidence_sha256": "198485c555c7f753dc616d6a85ea9578e87365f33f60b8d7ffb8f7ae404aaf02",
+  "frozen_input_sha256_closed": true,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "independent_membership_checks": {
+    "new_legs": 8,
+    "all_finite_holes_per_leg": 1250,
+    "midpoints_per_leg": 40000,
+    "within_discretization_bound": true
+  },
+  "source_body_static_checks": {
+    "layer_center_y": true,
+    "full_thickness_attenuated_slab_depth_factor": true,
+    "lead_area_weight": true,
+    "finite_hole_parameters_not_available_to_collimator_kernel": true
+  },
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_job_submitted": true,
+  "no_response_or_simulation_run": true,
+  "limitations": "Conditional geometry witnesses and material survival only. Not original quadrature-node errors, integrated response/count predictions, measured mechanism fractions or attribution of the 24.02% deficit. Not a GPU resource certificate; no production correction or physical resubmission authorized by this acceptance."
+}

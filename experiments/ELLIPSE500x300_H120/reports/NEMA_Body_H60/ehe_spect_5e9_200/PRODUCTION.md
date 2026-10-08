@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09 07:47上海：本地CPU有限孔准直器条件路径诊断已完成，见physical_collimator_paths_read_only.json和physical_collimator_path_acceptance.json。8条新射线的全1250孔弦长/独立成员检查显示完整板深度衰减与实际有限孔两段Pb路径有差异；未计算全源/角度/体积权重或实测机制份额，不能宣称解除24%缺口或HOLD。不得重复本条件诊断当作推进，也不得实现修正响应、改冻结物理或重提physical/validation10/formal200。后续只在有新科学依据和授权范围内进行只读诊断，原门槛保持。
+
 2026-10-09 07:21上海：新的本地CPU晶体对筛选复算与标量归一/条件累计能量分析已完成，见physical_scatter_diagnostic_acceptance.json、physical_pair_pruning_read_only.json、physical_scatter_primitives_read_only.json。筛选排除数全为0，标量归一差异约0.0015%；条件多次Compton算例不提供实测缺失机制份额，原HOLD未解除。不得重复这两项已完成诊断当作推进，也不得据此重提physical或提交validation10/formal200。后续只继续有新依据的有限积分、准直器筛选或累计散射历史覆盖只读诊断，不实现下一种核或改冻结模型。
 
 2026-10-09 06:59上海：源/窗身份只读核对与完整三Cartesian的源盒平均敏感性分析已完成并严格SHA取回，原科学HOLD未解除。physical_cuboid_diagnostic_registration.json已complete/exit0；read_only_source_fold_1b9a43962af5c315为CPU只读诊断新目录，不是新的物理/重建作业。不要重复执行/取回该诊断，不将其作为GPU资源或物理PASS。现有插值模型内的C平均变化仅−0.004428%，尚不能解释−24.02%偏差；具体响应原因仍待有依据的只读诊断，参见PHYSICAL_HOLD.md。

@@ -1,5 +1,7 @@
 # EHE平行孔SPECT：5e9输运与200次重建
 
+2026-10-09 07:47上海：新的[有限孔准直器路径条件诊断](physical_collimator_paths_read_only.json)本地CPU实际退出0。冻结准直器散射深度因子使用完整均匀Pb板；新8条射线的全1250有限孔弦长及独立成员检查显示，Pb面积权重不能代替逐路径孔内真空弦长。一个条件入射段完整盒长50.2505mm、实际Pb长3.4907mm；尚未计算这些路径在完整源/响应中的权重，不能据此将24%缺口归因于该近似。没有生成响应或修改生产输入，原HOLD和重建停止保持；详见[验收](physical_collimator_path_acceptance.json)与[科学限制](PHYSICAL_HOLD.md)。
+
 2026-10-09 07:21上海：新增本地CPU只读诊断已实际退出0。[冻结晶体对支持筛选](physical_pair_pruning_read_only.json)在全部12种响应/10层块中均排除0个有序非自身晶体对，最小保留余量41.9670keV；[标量角度归一差异](physical_scatter_primitives_read_only.json)仅约0.0015%。有条件的两次Compton累计能量算例进一步说明局部helper的分区闭合不能证明窗历史覆盖完整，但没有本次路径标签支持缺失机制份额或24%缺口归因。原HOLD和生产输入保持，未提交重建；详见[诊断验收](physical_scatter_diagnostic_acceptance.json)与[科学限制](PHYSICAL_HOLD.md)。
 
 2026-10-09 06:59上海只读诊断：合并源盒展开后与原3mm双能三维密度一致，20视角旋转和三套2312-bin能窗未发现明显误配。[现有完整矩阵的源盒平均敏感性分析](physical_cuboid_read_only/cuboid_fold.json)实际退出0并严格SHA取回：C440→218预测只变化−0.004428%，对9869实测仍低估24.0263%；这不能解释当前串窗偏差，且不能排除更细响应网格或散射历史覆盖差异。原科学HOLD保持，validation10/formal200仍未提交；新证据与限制见[HOLD报告](PHYSICAL_HOLD.md)。

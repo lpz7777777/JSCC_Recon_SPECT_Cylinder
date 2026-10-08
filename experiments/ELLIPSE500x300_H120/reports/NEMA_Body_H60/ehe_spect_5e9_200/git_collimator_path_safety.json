@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "scope": "New local CPU conditional finite-hole Pb chord/attenuation diagnostic, acceptance and reports only; no response matrices, binary files, full raw CSV, archives or credentials",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 8,
+    "total_blob_bytes": 83503,
+    "largest_blobs": [
+      [
+        20987,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        11999,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md"
+        ]
+      ],
+      [
+        11618,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        10974,
+        [
+          "experiments/ELLIPSE500x300_H120/diagnose_ehe_collimator_paths.py"
+        ]
+      ],
+      [
+        10407,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 6178,
+      "sha256": "6379d1ae8e98a2875bc480fd944e42a7f5406f188f7b9c992cc8f36a0f3376bd",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_collimator_paths.py": {
+      "bytes": 10974,
+      "sha256": "496f8dfb5d2b60fd49f182c187d571f31cd4e0a7864a7107e263ff8debdbe34e",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 11999,
+      "sha256": "626c02b019aabcea08ff6b4b755e49ea707f75bc2a26e190be3790da24310657",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 11618,
+      "sha256": "42fa80eebf0fde8ee6a71b7cb138aceb0974052f736e2febfac049482fe2b5f9",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 10407,
+      "sha256": "077ee0893d9b3c2eaf5062ad2881dc38355369d043d736eadbe8b863d1668ac9",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 20987,
+      "sha256": "3f3e1fefd96a2608e3414388cf88df65589ac7eb4d5ecb59a7c51f2506964087",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_collimator_path_acceptance.json": {
+      "bytes": 1493,
+      "sha256": "61f14c3bf988b5596e369d15a65f5e4115b8c726527b92c5c85134939a6aa046",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_collimator_paths_read_only.json": {
+      "bytes": 9847,
+      "sha256": "198485c555c7f753dc616d6a85ea9578e87365f33f60b8d7ffb8f7ae404aaf02",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    }
+  },
+  "executed_code_and_evidence_sha_closed": true,
+  "actual_cpu_exit_code": 0,
+  "actual_elapsed_seconds": 4.875,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "new_conditional_legs": 8,
+  "independent_all_finite_hole_membership_checked": true,
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_or_reconstruction_job_submitted": true,
+  "limitation": "Conditional path comparisons do not quantify full response errors or measured missing mechanisms; size/credential-pattern scan is a conservative guard, not a complete secret scanner."
+}
