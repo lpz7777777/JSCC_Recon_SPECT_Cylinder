@@ -1,5 +1,8 @@
 """Bounded repair routing and immutable source evidence guards."""
 import tempfile
+import copy
+import hashlib
+import json
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -57,6 +60,39 @@ class ConversionRoutingTests(unittest.TestCase):
                 self.assertNotIn('ScatterGen', script)
                 self.assertNotIn('run_ehe_worker', script)
                 self.assertIn('PYTHONDONTWRITEBYTECODE=1', script)
+
+    def test_full_audited_receipts_must_match_pre_stop_preservation(self):
+        with tempfile.TemporaryDirectory() as f, patch.object(controller, 'REPORT', Path(f)):
+            root = Path(f)
+            b = dict(producer_release_key='74e129c4460163c5', original_pipeline_sha256='pipeline',
+                     original_geometry_sha256='geometry')
+            reuse = dict(**b, no_simulation_or_response_computation=True, receipts={}, factors={})
+            captured = {}
+            for name in ('A218', 'A440', 'C440to218'):
+                for slab in range(4):
+                    p = f'{name}/slab_{slab}/receipt.json'
+                    write(root / 'response_preservation_1672966' / p, dict(response=name, slab=slab))
+                    captured[p] = digest(root / 'response_preservation_1672966' / p)
+                    reuse['receipts'][f'{name}/{slab}'] = dict(receipt_sha256=captured[p])
+            for name in ('A218', 'A440'):
+                p = f'{name}/factor_manifest.json'
+                write(root / 'response_preservation_1672966' / p, dict(response=name, passed=True))
+                captured[p] = digest(root / 'response_preservation_1672966' / p)
+                reuse['factors'][name] = dict(manifest_sha256=captured[p])
+            write(root / 'response_user_stop_1672966.json', dict(job=1672966,
+                  release_key=b['producer_release_key'], preserved_before_cancel=captured))
+            def probe(value):
+                return dict(source_acceptance_sha256=hashlib.sha256(
+                    (json.dumps(value, indent=2) + '\n').encode()).hexdigest())
+            controller.validate_reuse_identity(b, probe(reuse), reuse)
+            for group, key, field in (('receipts', 'C440to218/2', 'receipt_sha256'),
+                                      ('factors', 'A440', 'manifest_sha256')):
+                changed = copy.deepcopy(reuse)
+                changed[group][key][field] = 'changed'
+                with self.assertRaises(ValueError):
+                    controller.validate_reuse_identity(b, probe(changed), changed)
+            with self.assertRaises(ValueError):
+                controller.validate_reuse_identity(b, dict(source_acceptance_sha256='changed'), reuse)
 
 
 if __name__ == '__main__':

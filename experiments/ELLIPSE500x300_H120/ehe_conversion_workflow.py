@@ -117,6 +117,33 @@ def register(stage, binding, minutes):
     return record
 
 
+def validate_reuse_identity(binding, probe, reuse):
+    """Pin the actually audited inputs to receipts captured before stopping."""
+    payload = (json.dumps(reuse, indent=2, allow_nan=False) + '\n').encode()
+    if hashlib.sha256(payload).hexdigest() != probe['source_acceptance_sha256']:
+        raise ValueError('Downloaded full source acceptance identity differs')
+    if (reuse['producer_release_key'] != binding['producer_release_key']
+            or reuse['original_pipeline_sha256'] != binding['original_pipeline_sha256']
+            or reuse['original_geometry_sha256'] != binding['original_geometry_sha256']
+            or not reuse['no_simulation_or_response_computation']):
+        raise ValueError('Audited scientific source identity differs')
+    captured = read(REPORT / 'response_user_stop_1672966.json')
+    if captured['job'] != 1672966 or captured['release_key'] != binding['producer_release_key']:
+        raise ValueError('Original preservation registration differs')
+    expected = captured['preserved_before_cancel']
+    verify_files(REPORT / 'response_preservation_1672966', expected)
+    keys = {f'{name}/{slab}' for name in ('A218', 'A440', 'C440to218') for slab in range(4)}
+    if set(reuse['receipts']) != keys or set(reuse['factors']) != {'A218', 'A440'}:
+        raise ValueError('All preserved completed computation and Factors required')
+    for key, value in reuse['receipts'].items():
+        name, slab = key.split('/')
+        if value['receipt_sha256'] != expected[f'{name}/slab_{slab}/receipt.json']:
+            raise ValueError('Audited receipt differs from pre-stop preservation: ' + key)
+    for name, value in reuse['factors'].items():
+        if value['manifest_sha256'] != expected[f'{name}/factor_manifest.json']:
+            raise ValueError('Audited complete Factor differs from pre-stop preservation: ' + name)
+
+
 def advance_conversion(c):
     """Return False while either unique registered storage-only stage is active."""
     from ehe_5e9_workflow import completed, get_json, gpu_stage_accounting
@@ -142,6 +169,7 @@ def advance_conversion(c):
         raise ValueError('Full real probe dimensions differ')
     write(REPORT / 'response_conversion_probe_acceptance.json', probe)
     reuse = get_json(c, binding['probe_output'] + '/source_reuse_acceptance.json')
+    validate_reuse_identity(binding, probe, reuse)
     write(REPORT / 'response_compute_reuse_acceptance.json', reuse)
     path = REPORT / 'response_conversion_job.json'
     if not path.exists():

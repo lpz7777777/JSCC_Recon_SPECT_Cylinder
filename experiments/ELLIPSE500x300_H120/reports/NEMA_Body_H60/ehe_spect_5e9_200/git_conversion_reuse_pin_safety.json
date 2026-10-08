@@ -1,0 +1,46 @@
+{
+  "checked_blobs": 5,
+  "total_blob_bytes": 38093,
+  "largest_blobs": [
+    [
+      12802,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_conversion_workflow.py"
+      ]
+    ],
+    [
+      12627,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+      ]
+    ],
+    [
+      6341,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+      ]
+    ],
+    [
+      5318,
+      [
+        "experiments/ELLIPSE500x300_H120/test_ehe_conversion_workflow.py"
+      ]
+    ],
+    [
+      1005,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_local_acceptance.json"
+      ]
+    ]
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Local coordinator pins all audited receipts and Factor manifests to immutable pre-stop evidence; running conversion release unchanged",
+  "raw_index_sha256": {
+    "experiments/ELLIPSE500x300_H120/ehe_conversion_workflow.py": "c51a652b69bee0e9103aad64da5043c0ca8e418b89c262a6a0cfc00228d61b4d",
+    "experiments/ELLIPSE500x300_H120/test_ehe_conversion_workflow.py": "0e0c75b3d6df07e2a89ac7eda88b64687058208631f97da45eeafe51eefe42f3",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_local_acceptance.json": "2e0a22d3716f8f9144468ae3f2d1b00da67510d740588227456a29ecbbc98984",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": "274d872aa43779e716957569ac9aaf23b9dae2748a034ad98992fd16c2abaae5",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": "ae8f3dce42a29ae48b9a89e254851c4a4b14bef5ff1fe1fbf181f8388d3efe65"
+  }
+}

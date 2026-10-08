@@ -8,7 +8,7 @@
 
 新转换发布b02df58a9d3fd48c独立冻结，仅包含I/O转换实现、原公共资源/原子写入函数和人工停止证明。唯一探针1677092已登记，当前Priority排队；它将逐一核验原12块全部receipt成员文件、实际PE/Scatter二进制和原发布SHA，以及A218/A440完整Cartesian/Polar/自身S/Params/whole geometry SHA。用真实C第一块的全10层、2312bin、33010点核对原插值表达式逐值一致，再连续写出973444480字节Cartesian+Polar探针数据、fsync及独立读回SHA，形成实际吞吐和资源证明。这不是新的PE/Scatter响应试跑。探针退出后完整转换复用该10层，只补剩余30层，内存处理后连续发布；新目录与旧部分输出分开，存在部分新输出则停报。
 
-6项转换/输出字节/不覆盖/路径绑定测试、原10项科学合同测试及7项状态测试全部实际通过；advance实际退出0并等待最新转换登记。它们不替代真实探针或full-input validation10。新恢复流程的停止/代码/探针登记见response_stop_acceptance.json、response_conversion_freeze.json、response_conversion_probe_job.json和response_conversion_local_acceptance.json；完整响应/物理门控/重建仍待实际证据。
+7项转换/输出字节/不覆盖/路径绑定/停止前SHA绑定测试、原10项科学合同测试及7项状态测试全部实际通过；advance实际退出0并等待最新转换登记。它们不替代真实探针或full-input validation10。新恢复流程的停止/代码/探针登记见response_stop_acceptance.json、response_conversion_freeze.json、response_conversion_probe_job.json和response_conversion_local_acceptance.json；完整响应/物理门控/重建仍待实际证据。
 
 2026-10-08 23:26（上海）更新：完整输运已验收；1672966实际仍RUNNING/0:0，Slurm elapsed23:33:20。12个PE/Scatter完整块已计算完成，A218/A440完整Cartesian/Polar/S/manifest已生成。C440→218的进程当前仍映射slab_0/response.sysmat，正在第一个10层块转换与共享盘写回，尚无自身S/manifest及response_summary。write_bytes从11:01UTC的25711796224增加到15:26UTC的28203347968，但写回计数并非剩余逻辑矩阵字节数，不能据此外推可靠结束时间。Slurm MaxRSS25972592K/实际94500MiB为26.8401%，尚未取得最终退出后的资源证书；物理门控、validation10和formal200尚未开始。
 
