@@ -1,0 +1,49 @@
+{
+  "checked_blobs": 8,
+  "total_blob_bytes": 62218,
+  "largest_blobs": [
+    [
+      33342,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_compute_reuse_acceptance.json"
+      ]
+    ],
+    [
+      14035,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+      ]
+    ],
+    [
+      7117,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+      ]
+    ],
+    [
+      2452,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_probe_resource_acceptance.json"
+      ]
+    ],
+    [
+      1944,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_job.json"
+      ]
+    ]
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Actual real 10-layer conversion proof, complete source reuse SHA audit and uniquely registered remainder; no response matrices",
+  "raw_index_sha256": {
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": "4afd40d8ee0b2b150f888a08d84b7571458388bb8583d31c187d97c219d7a015",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": "0f151b8c325d8f085cc8b41b99f9e0a4f56c288fca7a3d482689552410488064",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_local_acceptance.json": "761132725dc9b6088dfaffaee808b5c676b78b5ddb8db6a9d57c051e6e836e5c",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_job.json": "5a9f41858f97ff6567ea33d8c22c1b437accbd1bb15981a37751564758f0280c",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_probe_acceptance.json": "16ed1ff6940a801c8e160772b5e096579159d1506a36d7ee8a8ef521046d158d",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_probe_resource_acceptance.json": "4077019be7c1ba3ae8625afecde59d6d572190efc5f6020c15f2c2c6f29dc78c",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_compute_reuse_acceptance.json": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_probe.log": "26b9b83d0ef46f970943ba94b3dede35ed8d31b992ceebcea1a1be542dedc876"
+  }
+}

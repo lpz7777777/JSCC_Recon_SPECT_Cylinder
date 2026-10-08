@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "repair_key": "b02df58a9d3fd48c",
+  "producer_release_key": "74e129c4460163c5",
+  "checked_xy_layers": 10,
+  "checked_bins": 2312,
+  "checked_points": 33010,
+  "bitwise_equal_to_full_bin_original_expression": true,
+  "relative_l2": 0.0,
+  "frozen_pipeline_sha256": "f764712eee34de0329f821316cb13b9fd114183bad9b401c7c226f95f9d86f64",
+  "source_acceptance_sha256": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3",
+  "source_audit_seconds": 848.8775071315467,
+  "slab_conversion_seconds": 6.808980420231819,
+  "sequential_publication": {
+    "cartesian": {
+      "bytes": 668168000,
+      "sha256": "43ff621b6d0752b688a62298a886870b9dab3d78f9c10333dc359f28c2f04064",
+      "elapsed_seconds": 14.355225052684546
+    },
+    "polar": {
+      "bytes": 305276480,
+      "sha256": "13ba7c4aa531ce127776ad8c3ce459546391b340b64e06254bac9b8d5a4ceae6",
+      "elapsed_seconds": 5.915406785905361
+    }
+  },
+  "resource": {
+    "rss_peak_bytes": 4344553472,
+    "host_allocated_bytes": 99090432000,
+    "rss_fraction": 0.0438443287037037
+  },
+  "elapsed_seconds": 893.3184739537537,
+  "files": {
+    "slab0_cartesian.float32": "43ff621b6d0752b688a62298a886870b9dab3d78f9c10333dc359f28c2f04064",
+    "slab0_polar.float32": "13ba7c4aa531ce127776ad8c3ce459546391b340b64e06254bac9b8d5a4ceae6",
+    "source_reuse_acceptance.json": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3",
+    "allocation.json": "a80b2c6a02af46ade448b189090500b47d25e227a2b55f46dd516e4018dfa431"
+  }
+}
