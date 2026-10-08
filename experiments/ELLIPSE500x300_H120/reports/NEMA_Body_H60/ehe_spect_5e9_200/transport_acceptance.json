@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "primary_counts": [
+    1469040802,
+    3530959198,
+    0
+  ],
+  "workers": 200,
+  "views": 20,
+  "actual_218_primary_fraction": 0.2938081604,
+  "expected_218_primary_fraction": 0.29380779868182727,
+  "collection_sha256": "54146b05e864c12963ef6531223ac1cd60d86d86497f408aa26486885caff94a",
+  "seed_first": 31100101,
+  "seed_last": 31100300
+}

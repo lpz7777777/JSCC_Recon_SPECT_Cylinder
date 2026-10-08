@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-08T00:49:58.413958+00:00",
+  "scope": "Completed EHE 5e9 transport identity, actual tagged measurements, read-only verifier and documentation; staged blobs before adding this audit record",
+  "audit": {
+    "checked_blobs": 8,
+    "total_blob_bytes": 79484,
+    "largest_blobs": [
+      [
+        42079,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_identity_acceptance.json"
+        ]
+      ],
+      [
+        9635,
+        [
+          "experiments/ELLIPSE500x300_H120/verify_ehe_transport.py"
+        ]
+      ],
+      [
+        7989,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        7761,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        4732,
+        [
+          "experiments/ELLIPSE500x300_H120/README.md"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "files": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "sha256": "f9a72c35b47e362b69b180b2bf5f48cdb86bbf83c01a86573bbff4029f7aba5b",
+      "bytes": 4732
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "sha256": "b73168e68f71ccf43d5368dcfc6fe5b32a77ca6725f2408488259d3f31b85a2f",
+      "bytes": 7761
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "sha256": "1bed56f96173a0ce5d19266c5e04d44c7370e9fb5a8da87ba7b40839f7035762",
+      "bytes": 3961
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "sha256": "271222c2ef77a185235baf1c6c45376ddec5af8fb2cae1f5c2136344f693f1ba",
+      "bytes": 7989
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_acceptance.json": {
+      "sha256": "4743e6c7ccdd1362b066c9356312ffb71d5d91e03d6ac9a52475954e1293ddce",
+      "bytes": 364
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_identity_acceptance.json": {
+      "sha256": "06dbe3b6a479df27fb7baaed8070ccfac4a5b896b110265413d89dc8c194786a",
+      "bytes": 42079
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_measurement.json": {
+      "sha256": "8901b1ddf46f360be7690b6f1e8c8ece5168bd28581e5551bde8118e31529d8c",
+      "bytes": 2963
+    },
+    "experiments/ELLIPSE500x300_H120/verify_ehe_transport.py": {
+      "sha256": "1b73f0022d655da36b1c6e255c770489345b4aa58b5048695f68a6c87a5779b5",
+      "bytes": 9635
+    }
+  },
+  "excluded": "Matrices, response blocks, binaries, archives, large simulation data and credentials; executing EHE response release and original JSCC baseline unchanged"
+}
