@@ -1,0 +1,11 @@
+{
+  "job": 1672966,
+  "host": "gpu",
+  "stage": "response",
+  "release_key": "74e129c4460163c5",
+  "minutes": 2329,
+  "array": null,
+  "script": "source /etc/profile.d/modules.sh\nmodule load cuda/12.9\nexport OMP_NUM_THREADS=6\ncd /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/74e129c4460163c5\n/data/home/scxi717/.conda/envs/torch/bin/python ehe_gpu_pipeline.py responses --release /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/74e129c4460163c5 --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses --limit 11492\n",
+  "submitted_epoch": 1791388403.4583898,
+  "workflow_sha256": "6c5057c834e9111d395a08053d55aec459a0ab0c500085cfa9132c48ee3eea86"
+}

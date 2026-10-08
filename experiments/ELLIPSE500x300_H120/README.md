@@ -15,6 +15,8 @@
 
 ## 已交付的当前结果
 
+2026-10-09：用户授权保留EHE已有结果并停止共享盘转写缓慢的1672966，作业已完全退出。原12个计算块、A218/A440及部分C输出均保留。另冻结仅修改存储转换的b02df58a9d3fd48c，以唯一真实I/O探针1677092核对全SHA、数值及吞吐，随后只补剩余转换；科学发布、输运、物理门控与成像预算不变。最新状态见EHE运行簿和转换作业登记。
+
 [1669255完整执行与科学验收](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/ACCEPTANCE.md)：六路各10000次/200帧、600阶段检查点、3022文件逐SHA取回；8节点×1GPU/bond0，12:00:33；GPU预留63.69%、RSS42.14%、Slurm MaxRSS59.94%。第2000次Compton/JSCC对1667869 B逐值/SHA一致，L2=0。
 
 [六路图集及全部200帧曲线](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/comparison_1669255/README.md)；[218单光子、440单光子、440 Compton、440 JSCC的随迭代图](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/four_channel_iterations_1669255/README.md)，包含真值及100/500/1000/2000/5000/10000的轴/冠/矢位、中央72mm MIP，固定尺度/no smoothing/crop0。

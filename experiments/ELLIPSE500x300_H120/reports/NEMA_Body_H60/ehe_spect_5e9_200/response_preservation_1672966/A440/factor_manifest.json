@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "response": "A440",
+  "bins": 2312,
+  "full_points": 132040,
+  "active_points": 78920,
+  "density_equation": "B=A diag(volume_mm3), full cell volume exactly once; own S=sum_views(B)/20",
+  "sensitivity_min": 8.988947539650957e-05,
+  "sensitivity_max": 0.0007090772407841729,
+  "files": {
+    "SysMat_cartesian": "a62d1c86fc93dec5990284fc4adc564cacf8b82ae24e10acdff67b8f40c123b4",
+    "SysMat_polar": "e34bf81485508a4dc2543311d23a23e491b554faf076e1844b21c6cb6b22c163",
+    "S_active.float64": "ee7bd6b91bc5dd0fb45de1e8cea9fe79b4deb7d46e02f8f04835ba25db12ef10",
+    "S_full.float64": "0582bc255f304c34e81c4dcc41e813f0e0bb45bc1f3a5694ec9feae931ff9cc2",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+    "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+    "Params_Image.dat": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+    "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3"
+  }
+}

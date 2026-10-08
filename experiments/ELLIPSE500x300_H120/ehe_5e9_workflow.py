@@ -410,11 +410,15 @@ print('ACTUAL_TRANSPORT_PROBE_SHA_PASS')
             script=env_gpu()+f'cd {q(r)}\n'+q(GPU_PYTHON)+f' ehe_gpu_pipeline.py responses --release {q(r)} --output {q(b+"/responses")} --limit {limit}\n'
             submit('gpu','response',script,math.ceil(limit*12/60)+30)
         if not (REPORT/'transport_acceptance.json').exists() or not (REPORT/'response_job.json').exists():return
-        done,_=completed(c,read(REPORT/'response_job.json')['job'])
-        if not done:return
-        if not (REPORT/'response_resource_acceptance.json').exists():gpu_stage_accounting(c,'response',base('gpu')+'/responses')
+        from ehe_conversion_workflow import repair_binding,advance_conversion,response_root
+        if repair_binding() is not None:
+            if not advance_conversion(c):return
+        else:
+            done,_=completed(c,read(REPORT/'response_job.json')['job'])
+            if not done:return
+            if not (REPORT/'response_resource_acceptance.json').exists():gpu_stage_accounting(c,'response',base('gpu')+'/responses')
         if not (REPORT/'physical_job.json').exists():
-            r=release('gpu');b=base('gpu');script=env_gpu()+f'cd {q(r)}\n'+q(GPU_PYTHON)+f' ehe_gpu_pipeline.py physical --release {q(r)} --responses {q(b+"/responses")} --counts {q(b+"/counts")} --output {q(b+"/physical")}\n'
+            r=release('gpu');b=base('gpu');script=env_gpu()+f'cd {q(r)}\n'+q(GPU_PYTHON)+f' ehe_gpu_pipeline.py physical --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --output {q(b+"/physical")}\n'
             submit('gpu','physical',script,120);return
         done,_=completed(c,read(REPORT/'physical_job.json')['job'])
         if not done:return
@@ -433,12 +437,14 @@ print('ACTUAL_TRANSPORT_PROBE_SHA_PASS')
     if done and not (REPORT/'formal_summary.json').exists():fetch('formal')
 
 def submit_reconstruction(mode,limit,minutes):
+    from ehe_conversion_workflow import response_root
     b=base('gpu');r=release('gpu');iterations=10 if mode=='validation' else 200
-    script=env_gpu()+f'cd {q(r)}\n'+q(GPU_PYTHON)+f' run_ehe_reconstruction.py --release {q(r)} --responses {q(b+"/responses")} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --output {q(b+"/results/"+mode)} --mode {mode} --iterations {iterations} --limit {limit}'
+    script=env_gpu()+f'cd {q(r)}\n'+q(GPU_PYTHON)+f' run_ehe_reconstruction.py --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --output {q(b+"/results/"+mode)} --mode {mode} --iterations {iterations} --limit {limit}'
     if mode=='formal':script+=' --authority '+q(b+'/validation_authority.json')
     submit('gpu',mode,script+'\n',minutes)
 
 def fetch(mode):
+    from ehe_conversion_workflow import response_root
     job=read(REPORT/(mode+'_job.json'))['job'];b=base('gpu');r=release('gpu')
     with connection('gpu') as c:
         done,accounting=completed(c,job)
@@ -464,7 +470,7 @@ def fetch(mode):
         accounting_path=b+'/results/'+mode+'/accounting.txt'
         with c.open_sftp() as s:
             with s.open(accounting_path,'w') as f:f.write(accounting)
-        verify=q(GPU_PYTHON)+f' verify_ehe.py --verification-manifest {q(audit_remote+"/verification_manifest.json")} --result {q(b+"/results/"+mode)} --release {q(r)} --responses {q(b+"/responses")} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --accounting {q(accounting_path)} --output {q(b+"/"+mode+"_authority.json")}'
+        verify=q(GPU_PYTHON)+f' verify_ehe.py --verification-manifest {q(audit_remote+"/verification_manifest.json")} --result {q(b+"/results/"+mode)} --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --accounting {q(accounting_path)} --output {q(b+"/"+mode+"_authority.json")}'
         print(command(c,'cd '+q(audit_remote)+' && '+verify,1800))
         proof=get_json(c,b+'/'+mode+'_authority.json');local=DATA/'results'/mode;local.mkdir(parents=True,exist_ok=True)
         if proof['verification_source_sha256']!=sources or proof['verification_manifest_sha256']!=digest(manifest_path):raise ValueError('Actual read-only verifier identity differs')
@@ -478,9 +484,9 @@ def fetch(mode):
                 if digest(dest)!=expected:raise ValueError('Fetched physical evidence byte identity differs')
             for name in RESPONSES:
                 dest=DATA/'factor_evidence'/name;dest.mkdir(parents=True,exist_ok=True)
-                s.get(b+'/responses/'+name+'/factor_manifest.json',str(dest/'factor_manifest.json'))
+                s.get(response_root()+'/'+name+'/factor_manifest.json',str(dest/'factor_manifest.json'))
                 if digest(dest/'factor_manifest.json')!=proof['factor_sha256'][name]:raise ValueError('Fetched factor manifest identity differs')
-                s.get(b+'/responses/'+name+'/S_active.float64',str(dest/'S_active.float64'))
+                s.get(response_root()+'/'+name+'/S_active.float64',str(dest/'S_active.float64'))
                 if digest(dest/'S_active.float64')!=read(dest/'factor_manifest.json')['files']['S_active.float64']:raise ValueError('Fetched sensitivity byte identity differs')
         write(REPORT/(mode+'_summary.json'),proof)
         print('EHE_STRICT_FETCH_PASS',mode,job)
@@ -507,9 +513,12 @@ for folder in sorted(root.glob('*/slab_*')):
                 print(command(c,q(GPU_PYTHON)+' -c '+q(code)))
             if record['stage'] in ('validation','formal'):
                 print(command(c,'if [ -f '+q(base('gpu')+'/results/'+record['stage']+'/progress.json')+' ]; then cat '+q(base('gpu')+'/results/'+record['stage']+'/progress.json')+'; fi'))
+            if record['stage'] in ('response_conversion_probe','response_conversion'):
+                output=record['output']
+                print(command(c,'if [ -f '+q(output+'/progress.json')+' ]; then cat '+q(output+'/progress.json')+'; fi'))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','deploy','pilots','repair-transport-pilot','repair-response-pilot','repair-geometry-pilot','repair-chord-pilot','repair-union-pilot','repair-union-link-pilot','advance','status','fetch','compare']);p.add_argument('--host',choices=['maty','gpu'],default='maty');p.add_argument('--mode',choices=['validation','formal'],default='formal');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','deploy','pilots','repair-transport-pilot','repair-response-pilot','repair-geometry-pilot','repair-chord-pilot','repair-union-pilot','repair-union-link-pilot','repair-response-conversion','advance','status','fetch','compare']);p.add_argument('--host',choices=['maty','gpu'],default='maty');p.add_argument('--mode',choices=['validation','formal'],default='formal');a=p.parse_args()
     if a.action=='prepare':
         from prepare_ehe_5e9 import prepare
         prepare()
@@ -521,6 +530,10 @@ if __name__=='__main__':
     elif a.action=='repair-chord-pilot':repair_chord_pilot()
     elif a.action=='repair-union-pilot':repair_union_pilot()
     elif a.action=='repair-union-link-pilot':repair_union_link_pilot()
+    elif a.action=='repair-response-conversion':
+        from ehe_conversion_workflow import setup,advance_conversion
+        setup()
+        with connection('gpu') as c:advance_conversion(c)
     elif a.action=='advance':advance()
     elif a.action=='status':status()
     elif a.action=='fetch':fetch(a.mode)

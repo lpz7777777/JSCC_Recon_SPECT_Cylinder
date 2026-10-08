@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "pilot": false,
+  "shape": [
+    2312,
+    10,
+    85,
+    85
+  ],
+  "response": "A440",
+  "slab": 2,
+  "pe_resource": {
+    "elapsed_seconds": 553.2057963162661,
+    "rss_peak_bytes": 114020352,
+    "host_allocated_bytes": 99090432000,
+    "rss_fraction": 0.001150669642857143,
+    "gpu_used_peak_bytes": 526385152,
+    "gpu_total_bytes": 34190917632,
+    "gpu_used_fraction": 0.015395467230962677
+  },
+  "scatter_resource": {
+    "elapsed_seconds": 166.746567199938,
+    "rss_peak_bytes": 2791788544,
+    "host_allocated_bytes": 99090432000,
+    "rss_fraction": 0.028174148478835977,
+    "gpu_used_peak_bytes": 2537553920,
+    "gpu_total_bytes": 34190917632,
+    "gpu_used_fraction": 0.07421719262734995
+  },
+  "files": {
+    "PE_manifest.json": "e1ffb20a71b75f6cf9a29f093ab64a4311990740cc26795396c7e6cf5de202ea",
+    "PE_progress.json": "7f3ad08c9c6cf96edc818b5cf5c650f2d64c56e6c00527d8b92fbeb8429a35fd",
+    "PE_progress.tsv": "4903803e20f404af9b7a20b61ef1d4f7ee965db43cb42325003d53139e03d63e",
+    "PE_unwindowed.sysmat": "53671f1d42267754e75a588642093196271803d9c477a71eade8e4cbdc4b271d",
+    "PE_windowed.sysmat": "3829aee39aa753371dc4c7b2da5cff5af6c1e84832367401642d278e4f55f87e",
+    "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+    "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+    "Params_Image.dat": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+    "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+    "Scatter_SysMat_shift_0.000000_0.000000_15.000000.sysmat": "dee8c881a276ef1e270f0f2df47bb4d920ba98794b03876b3231545f642b309e",
+    "SysMat_withScatter_shift_0.000000_0.000000_15.000000.sysmat": "f9c268032959f613868d67de090b0a5db784b91c4d57877ad02e40be4124a660",
+    "pe.log": "1a9f534e5f16c91c71adccd43e26a38cdfdd4be7951ab2d6248a06ca639accaa",
+    "response.sysmat": "f9c268032959f613868d67de090b0a5db784b91c4d57877ad02e40be4124a660",
+    "scatter.log": "9f383160da471f864b899bde66e3f0723e6ddef7d7270dafc831d4cbc3980732"
+  }
+}

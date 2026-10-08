@@ -1,0 +1,15 @@
+{
+  "job": 1677092,
+  "host": "gpu",
+  "stage": "response_conversion_probe",
+  "release_key": "74e129c4460163c5",
+  "minutes": 30,
+  "array": null,
+  "script": "source /etc/profile.d/modules.sh\nmodule load cuda/12.9\nexport OMP_NUM_THREADS=6\nexport PYTHONDONTWRITEBYTECODE=1\ncd /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/conversion_releases/b02df58a9d3fd48c\n/data/home/scxi717/.conda/envs/torch/bin/python ehe_conversion_io.py probe --release /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/74e129c4460163c5 --source-responses /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/conversion_probe_b02df58a9d3fd48c --repair-manifest /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/conversion_releases/b02df58a9d3fd48c/repair_manifest.json\n",
+  "submitted_epoch": 1791486931.0866945,
+  "workflow_sha256": "f2c9a93ad050f47da15818168d2d225ed63d12f14e8c9b797da7abeb6ebf852d",
+  "repair_key": "b02df58a9d3fd48c",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/conversion_probe_b02df58a9d3fd48c",
+  "source_job": 1672966,
+  "scope": "Conversion only; immutable computed responses reused"
+}

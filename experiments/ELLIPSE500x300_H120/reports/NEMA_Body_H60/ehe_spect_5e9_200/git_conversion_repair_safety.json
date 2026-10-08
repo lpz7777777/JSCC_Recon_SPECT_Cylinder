@@ -1,0 +1,79 @@
+{
+  "checked_blobs": 35,
+  "total_blob_bytes": 175093,
+  "largest_blobs": [
+    [
+      40789,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py"
+      ]
+    ],
+    [
+      15624,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_conversion_io.py"
+      ]
+    ],
+    [
+      12608,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+      ]
+    ],
+    [
+      10888,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_conversion_workflow.py"
+      ]
+    ],
+    [
+      10228,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_stop_acceptance.json"
+      ]
+    ]
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Explicit small conversion repair sources, job and preservation evidence; no matrices or simulation outputs",
+  "raw_index_sha256": {
+    "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py": "f2c9a93ad050f47da15818168d2d225ed63d12f14e8c9b797da7abeb6ebf852d",
+    "experiments/ELLIPSE500x300_H120/ehe_conversion_io.py": "b92412fc99c7dd05d3f7718ffa3c52f126a0d5c645ace25e00944e3765cbe444",
+    "experiments/ELLIPSE500x300_H120/ehe_conversion_workflow.py": "e217755bd94f9826ff797970c1eccf7df281fe299d28f7a58ab088ccf154bee4",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": "6d639fd872acff221d15f11063a160702343ecf66980d44308eab2cd4ae89670",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": "16b899c4ab888a6a8ff3deeab15fc662358dcd95dd55a31f09a3a2425d87ac34",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": "840fc3eedbdad21f6c921c8e545677c4a8a2d35792302e860f167b406c578f7e",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_freeze.json": "5fb4d84889e7a93a842aac152e210c6a422029d0baafb343bfdf5cb9889dc912",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_local_acceptance.json": "20c8d8b8527fff02fee186aeb9d5392d128c9b7691c2dd5befcc2c4f2aaa07ab",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_conversion_probe_job.json": "c063f3ec152e96bcff936b9a44664f7ce759a1b1cdf20be3d70dba8a95ad0920",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A218/factor_manifest.json": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A218/slab_0/receipt.json": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A218/slab_1/receipt.json": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A218/slab_2/receipt.json": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A218/slab_3/receipt.json": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A440/factor_manifest.json": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A440/slab_0/receipt.json": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A440/slab_1/receipt.json": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A440/slab_2/receipt.json": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/A440/slab_3/receipt.json": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/C440to218/slab_0/receipt.json": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/C440to218/slab_1/receipt.json": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/C440to218/slab_2/receipt.json": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/C440to218/slab_3/receipt.json": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/accounting_after_cancel.txt": "2665c6ab7b53f760021b48bae34b92b70fb97a84f9807808fd3b88a764064c14",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/accounting_exit.txt": "674e20d55b9221c0d5ef8f80284394f0ec46167aed9e09bb96beaea556844359",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/producer.log": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/producer_final.log": "334d4e93ffce4577603d29b57601c3788d394734065ce91208408b2d375e752e",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/response_job.json": "29fc3a2f8ab019b29e309386a71faa4d52464e5761bbd11e3c4b92b74f04db74",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/scontrol_before.txt": "d8621cd197dadbd649338438d7da3fbdfd20cff24d151d752e23a3b61ff322be",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_stop_acceptance.json": "e4ad146cd9c4e0f45e8f0d1bd2f4549a4ad422c55dd6db601ab29a8e4fd4aea0",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_user_stop_1672966.json": "7b27c809677d0626b826538fe7bbed1afa0ed7845b296431e6eac424880a8157",
+    "experiments/ELLIPSE500x300_H120/test_ehe_conversion_io.py": "f28a08843f6970b86e0fbbb07f9191f9eb0f2da8490656ed11b3c6dd4cf358fe",
+    "experiments/ELLIPSE500x300_H120/test_ehe_conversion_workflow.py": "4c13fb79ae7058a8332e35662ba7e4297335088ab8ec714be0175a6b56ca9a63"
+  },
+  "newline_only_document_paths": [
+    ".gitattributes",
+    "experiments/ELLIPSE500x300_H120/README.md"
+  ],
+  "immutable_scontrol_trailing_space_preserved": true
+}

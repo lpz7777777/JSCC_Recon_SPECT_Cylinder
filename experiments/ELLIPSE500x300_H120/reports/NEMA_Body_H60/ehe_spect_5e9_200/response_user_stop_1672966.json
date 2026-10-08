@@ -1,0 +1,27 @@
+{
+  "job": 1672966,
+  "release_key": "74e129c4460163c5",
+  "requested_utc": "2026-10-08T19:04:33.177369+00:00",
+  "reason": "Explicit human authorization to stop current job while preserving completed results and repair only filesystem conversion bottleneck",
+  "preserved_before_cancel": {
+    "A218/factor_manifest.json": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A218/slab_0/receipt.json": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f",
+    "A218/slab_1/receipt.json": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855",
+    "A218/slab_2/receipt.json": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347",
+    "A218/slab_3/receipt.json": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed",
+    "A440/factor_manifest.json": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "A440/slab_0/receipt.json": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207",
+    "A440/slab_1/receipt.json": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a",
+    "A440/slab_2/receipt.json": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d",
+    "A440/slab_3/receipt.json": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0",
+    "C440to218/slab_0/receipt.json": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae",
+    "C440to218/slab_1/receipt.json": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230",
+    "C440to218/slab_2/receipt.json": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da",
+    "C440to218/slab_3/receipt.json": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16",
+    "producer.log": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+    "response_job.json": "29fc3a2f8ab019b29e309386a71faa4d52464e5761bbd11e3c4b92b74f04db74",
+    "scontrol_before.txt": "d8621cd197dadbd649338438d7da3fbdfd20cff24d151d752e23a3b61ff322be"
+  },
+  "preserve_original_outputs": true,
+  "scope": "Only own EHE response job 1672966"
+}

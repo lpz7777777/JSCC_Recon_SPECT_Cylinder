@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "local_conversion_and_routing_tests": 6,
+  "original_contract_tests": 10,
+  "status_guard_tests": 7,
+  "scientific_full_input_validation_claimed": false,
+  "source_sha256": {
+    "ehe_conversion_io.py": "b92412fc99c7dd05d3f7718ffa3c52f126a0d5c645ace25e00944e3765cbe444",
+    "ehe_conversion_workflow.py": "e217755bd94f9826ff797970c1eccf7df281fe299d28f7a58ab088ccf154bee4",
+    "ehe_5e9_workflow.py": "f2c9a93ad050f47da15818168d2d225ed63d12f14e8c9b797da7abeb6ebf852d",
+    "test_ehe_conversion_io.py": "f28a08843f6970b86e0fbbb07f9191f9eb0f2da8490656ed11b3c6dd4cf358fe",
+    "test_ehe_conversion_workflow.py": "4c13fb79ae7058a8332e35662ba7e4297335088ab8ec714be0175a6b56ca9a63"
+  },
+  "active_conversion_stage": "response_conversion_probe",
+  "active_job": 1677092,
+  "actual_advance_exit": 0,
+  "immutable_scientific_release_unchanged": "74e129c4460163c5",
+  "real_full_slab_conversion_probe_pass_claimed": false
+}

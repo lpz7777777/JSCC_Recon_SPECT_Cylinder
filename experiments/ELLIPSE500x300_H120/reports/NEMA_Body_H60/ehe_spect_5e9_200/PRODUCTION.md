@@ -2,6 +2,10 @@
 
 工作目录为仓库根。`ehe_5e9_workflow.py`提供`prepare/deploy/pilots/advance/status/fetch/compare`。
 
+2026-10-09人工授权的转换恢复：1672966已完整退出且原发布/12份slab收据/两份完整Factor清单/日志留存，见`response_stop_acceptance.json`。`repair-response-conversion`只创建独立`conversion_releases/<key>`，不重新prepare/deploy原科学发布，不调用PE/Scatter或输运。它实际逐SHA核验所有原slab成员、二进制、原发布和A218/A440全矩阵/自身S，然后用真实C440→218第一块测量转换和973MB连续写出/读回吞吐；完整转换时复用这10层，只补其余30层的存储转换。部分原文件保持只读，新目的目录存在任何部分输出即拒绝覆盖。
+
+新输出在`responses_conversion_<key>`；A218/A440只读引用原已完整SHA核验目录，C440→218由RAM连续发布，完整Cartesian/Polar/全20视角自身S/Params/坐标旋转体积保持原身份。`advance`优先读取`response_conversion_probe_job.json`、`response_conversion_job.json`和冻结绑定，实际成功退出与完整证据后才提交原物理门控。新成功转换的资源证书与原12块的计算资源及人工停止记录合并，不能把原CANCELLED解释为整阶段COMPLETED。重建和严格fetch使用同一登记的新响应目录，科学代码仍读取原74e129c4460163c5发布。
+
 1. `prepare`只执行一次：检查1669255验收、真值SHA、新种子冲突；生成200个worker注册和20份宏；独立EHE源overlay、三套Params、whole geometry和代码冻结。
 2. `deploy --host maty/gpu`逐文件SHA校验。模拟主机使用既有Geant4 11.1和GCC12.2、CMake3.25.2；DPAPI连接重建主机，凭证仅内存解密。
 3. `pilots`提交独立100000初级gamma吞吐试跑及逐孔/bin几何核对，GPU上编译PE-v4/Scatter并实际测试三种响应各一完整XY层。
