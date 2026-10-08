@@ -11,13 +11,16 @@
     "test_ehe_conversion_io.py": "f28a08843f6970b86e0fbbb07f9191f9eb0f2da8490656ed11b3c6dd4cf358fe",
     "test_ehe_conversion_workflow.py": "0e0c75b3d6df07e2a89ac7eda88b64687058208631f97da45eeafe51eefe42f3"
   },
-  "active_conversion_stage": "response_conversion",
-  "active_job": 1677140,
+  "active_conversion_stage": "physical",
+  "active_job": 1677211,
   "actual_advance_exit": 0,
   "immutable_scientific_release_unchanged": "74e129c4460163c5",
   "real_full_slab_conversion_probe_pass_claimed": true,
   "pre_stop_receipt_factor_identity_guard": true,
   "actual_probe_job": 1677092,
   "actual_probe_acceptance_sha256": "16ed1ff6940a801c8e160772b5e096579159d1506a36d7ee8a8ef521046d158d",
-  "actual_full_source_reuse_acceptance_sha256": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3"
+  "actual_full_source_reuse_acceptance_sha256": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3",
+  "actual_complete_conversion_pass_claimed": true,
+  "actual_complete_conversion_job": 1677140,
+  "actual_complete_conversion_acceptance_sha256": "f93a682d006832a0ff072cc9fba95c6f6e2830e312b41adc6c62a5806e606bdf"
 }

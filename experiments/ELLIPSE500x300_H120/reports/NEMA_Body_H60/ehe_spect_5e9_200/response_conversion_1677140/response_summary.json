@@ -1,0 +1,594 @@
+{
+  "passed": true,
+  "pilot": false,
+  "release_key": "74e129c4460163c5",
+  "stages": {
+    "A218/0": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A218",
+      "slab": 0,
+      "pe_resource": {
+        "elapsed_seconds": 713.3315356178209,
+        "rss_peak_bytes": 113938432,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011498429232804233,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 458.1666268161498,
+        "rss_peak_bytes": 2791825408,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028174520502645503,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "0698b17119785336754b845860ac1519954224085495393f676c4cace28695b6",
+        "PE_progress.json": "ddc15487032760f606d412bcc8add898753f3b6a836e55184aa0a6e7e96fe9dc",
+        "PE_progress.tsv": "095c992f27ef214ec6808e96560440c0b58114224ae3333118aa0a880a2a6ae4",
+        "PE_unwindowed.sysmat": "65028a37c2500cd7e6ea0f204af76f5469e387bf2195d578ddb655c1704bfbdc",
+        "PE_windowed.sysmat": "ea02fb03d07ecec2871268576c08e0c153e0d0cae0fa245874c3cbb14c7e1fd8",
+        "Params_Collimator.dat": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+        "Params_Detector.dat": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+        "Params_Image.dat": "37a693337c1bf92f9bdec12630e29c949b7c49073ed3119c1ffbb47126efc7a3",
+        "Params_Physics.dat": "fcc8b091d2d3645f15af467a7a86227db282e4ef3f9735d4d074890b6402d15d",
+        "Scatter_SysMat_shift_0.000000_0.000000_-45.000000.sysmat": "6bac27c070592da3c52578c921710440a57049aaaa55bba8ddb7863ce6a0fab3",
+        "SysMat_withScatter_shift_0.000000_0.000000_-45.000000.sysmat": "8a9eef99c60c3884ae1eb1f5578d3200f0de9b411bf8968fc92a0c88a980657b",
+        "pe.log": "b10136c86dcf558f404f4817d25677c5cc3fdd157a45d3f03a13249d61800f87",
+        "response.sysmat": "8a9eef99c60c3884ae1eb1f5578d3200f0de9b411bf8968fc92a0c88a980657b",
+        "scatter.log": "7ac462444b72cfe08c8d36eece93b0036a973a8ae04dd2f2eda2eef1c6a09b73"
+      }
+    },
+    "A218/1": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A218",
+      "slab": 1,
+      "pe_resource": {
+        "elapsed_seconds": 700.5548119531013,
+        "rss_peak_bytes": 114102272,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011514963624338623,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 475.1935194139369,
+        "rss_peak_bytes": 2791600128,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028172247023809525,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "b1ad968af1ef7c8b158a8a4515fecb83920d74350962c43f47bbbfba1073dc19",
+        "PE_progress.json": "8370d73097341b2d4ac4de28cc911ebb12ee3522cd4b35277ea1b48d9f38a246",
+        "PE_progress.tsv": "798bd1da4c430db325dd0f894d931b75531e2e80b30b1682b31b873cf6d438b7",
+        "PE_unwindowed.sysmat": "906c9d13a8659e7a0822d0ca2340dfa295f3cf6d8c965150f82cb7365f53ebab",
+        "PE_windowed.sysmat": "0f89dfda4b2dd03ab3e0cd5805eda3df560e4b8c210816a2ab8783c66fff45f0",
+        "Params_Collimator.dat": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+        "Params_Detector.dat": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+        "Params_Image.dat": "1a4c39cac05a5b2ca6c00b5fda7532cff5dc45d587fd4f43291e989cdcf26780",
+        "Params_Physics.dat": "fcc8b091d2d3645f15af467a7a86227db282e4ef3f9735d4d074890b6402d15d",
+        "Scatter_SysMat_shift_0.000000_0.000000_-15.000000.sysmat": "1d8d7cec2e57a1f7751bc312d55375e4a6056d38316e7c49d9baa704c06922f7",
+        "SysMat_withScatter_shift_0.000000_0.000000_-15.000000.sysmat": "28ffd44a639eebfaf4f74fe054b45a1513b64f369680ccb12f5132fb1f60bece",
+        "pe.log": "b7456e9fcc21f8b363adc5b2e77c9cb2c7429678e06c3a709d5f9838b5bb4ee4",
+        "response.sysmat": "28ffd44a639eebfaf4f74fe054b45a1513b64f369680ccb12f5132fb1f60bece",
+        "scatter.log": "88d3f4d31222ba6ef8f16f4bc9ed77ec617c843797d5d135c1f4c790b970a0c0"
+      }
+    },
+    "A218/2": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A218",
+      "slab": 2,
+      "pe_resource": {
+        "elapsed_seconds": 597.0595555151813,
+        "rss_peak_bytes": 113713152,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011475694444444445,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 503.25739664305,
+        "rss_peak_bytes": 2791751680,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028173776455026455,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "6c08d2535cef97db6e0c9f2e7823166e6fb62e1f608770a4712142c9a23942b4",
+        "PE_progress.json": "98a5d1b1ad72dc5a844f3747e0565a105d24ebe381d02b677101ae7b42ea5ebe",
+        "PE_progress.tsv": "feb7a54222720a690af259af1563b0125d4badb9ccd141a62373b8d4177a1164",
+        "PE_unwindowed.sysmat": "bc2dfeff2e34a0b777a13a3bdc5b53fed3289442400fe71bbcc65c012d0245fd",
+        "PE_windowed.sysmat": "72d21abc140edc303cf23fdf6e85dcb2def8567a98b49a0fe9cc2856354cf9c1",
+        "Params_Collimator.dat": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+        "Params_Detector.dat": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+        "Params_Image.dat": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+        "Params_Physics.dat": "fcc8b091d2d3645f15af467a7a86227db282e4ef3f9735d4d074890b6402d15d",
+        "Scatter_SysMat_shift_0.000000_0.000000_15.000000.sysmat": "294a0f382967c5efffe09742052637cb831e1e6085d3d52acdae6659a138a637",
+        "SysMat_withScatter_shift_0.000000_0.000000_15.000000.sysmat": "dcb567b4259208180ad820e10bca7d35b72720ec79bdf11175b5d7011e47cd49",
+        "pe.log": "ef3c6c726a6800088814af56489a96a9641df1d8a119b57c05751fc7784ce639",
+        "response.sysmat": "dcb567b4259208180ad820e10bca7d35b72720ec79bdf11175b5d7011e47cd49",
+        "scatter.log": "ba55c0d97bb1269d7df9f835e2a779bf4527dc214160f2cd859d1ff2610d5142"
+      }
+    },
+    "A218/3": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A218",
+      "slab": 3,
+      "pe_resource": {
+        "elapsed_seconds": 645.7518710582517,
+        "rss_peak_bytes": 114040832,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011508763227513227,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 460.102278504055,
+        "rss_peak_bytes": 2791886848,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.02817514054232804,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "9b6b35cc2a0d8cec5464f38dba51ee900875023abe8e8c96aaeed4928344785d",
+        "PE_progress.json": "7a0f79ef6bc9fbf7d1cb20602f19316411054d6426560b64f9bae7719a1ae874",
+        "PE_progress.tsv": "aea797c601478e3e265b4e1c695c4974e5724e0ca6c075db9b547c9acd7a2a8c",
+        "PE_unwindowed.sysmat": "75ef84ccb4982590a35af54816ecb3b941f9ba94f59cbca4768f91cc224d6753",
+        "PE_windowed.sysmat": "c5472ec2d6ca762582f0d141aa875ae915ccf1b9b096794a402b5906d5ac4d4d",
+        "Params_Collimator.dat": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+        "Params_Detector.dat": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+        "Params_Image.dat": "085f7345dfefc5e797a1733a522bc41bd13e444045bf631cf607c70c2f24df90",
+        "Params_Physics.dat": "fcc8b091d2d3645f15af467a7a86227db282e4ef3f9735d4d074890b6402d15d",
+        "Scatter_SysMat_shift_0.000000_0.000000_45.000000.sysmat": "f63393015564e8ca777f01cafbdab71375fa33987fb8c6d361633a3013f722f6",
+        "SysMat_withScatter_shift_0.000000_0.000000_45.000000.sysmat": "4cb87a96a107c45c1d5cf3989e009ec9ce6f4f9feb6eb7bcc5f8dea6c37e9ffa",
+        "pe.log": "3e6739b98c7ceb032d1172055b78c78a967ee9fc0b603053278a80cab36abab7",
+        "response.sysmat": "4cb87a96a107c45c1d5cf3989e009ec9ce6f4f9feb6eb7bcc5f8dea6c37e9ffa",
+        "scatter.log": "0493eac8aa81db32ea10445d5f89691cda8ece47c3e4baf315becb33545665c2"
+      }
+    },
+    "A440/0": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A440",
+      "slab": 0,
+      "pe_resource": {
+        "elapsed_seconds": 641.1808860893361,
+        "rss_peak_bytes": 113913856,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011495949074074073,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 189.39592593209818,
+        "rss_peak_bytes": 2791899136,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.02817526455026455,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "da6d7160d5053c2220c92e81a08efb45344fc3a7cf221cd65b3c7417e140c3f7",
+        "PE_progress.json": "71df07bc1bbf3cecfcd96947bf8b78231e8a6083e2711283f15a489fb51da57c",
+        "PE_progress.tsv": "e718bddb6ea3673401906a462bbc04571877fe34739dfe688a21a13a5afcdc4c",
+        "PE_unwindowed.sysmat": "367cc9c2d0b432cb5219395ee6809b545503f1e44870c9e28dd149d904cbde78",
+        "PE_windowed.sysmat": "cc30823c5467366a03cd763f30c6e8a0381128aeb67836eb6d963626f2ae75be",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "37a693337c1bf92f9bdec12630e29c949b7c49073ed3119c1ffbb47126efc7a3",
+        "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+        "Scatter_SysMat_shift_0.000000_0.000000_-45.000000.sysmat": "763f9880599356dd259b4a4c0b5bd24f8b8b44ccd5b93a91cbaf9c03b8811b0f",
+        "SysMat_withScatter_shift_0.000000_0.000000_-45.000000.sysmat": "906d6c36a28e1bbd0c07e4bcb5c264527834ca7744321b614ba9cf6a596f1441",
+        "pe.log": "bd0add60944377790d5617d21c4ed1148e655ac64ff9c2bf72073df60f926f4c",
+        "response.sysmat": "906d6c36a28e1bbd0c07e4bcb5c264527834ca7744321b614ba9cf6a596f1441",
+        "scatter.log": "33424eba13cd55e0a3187e0f170652a692c79403759bb7fe72027b4faab36de7"
+      }
+    },
+    "A440/1": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A440",
+      "slab": 1,
+      "pe_resource": {
+        "elapsed_seconds": 571.0411507938989,
+        "rss_peak_bytes": 113786880,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011483134920634921,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 175.21574179595336,
+        "rss_peak_bytes": 2791661568,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028172867063492063,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "c5d67337a19d1eece8802f58bf47f33c2218d0059c57daf77dad544e9e8c73e1",
+        "PE_progress.json": "c9ab1f0e993e8c87ff2890022ae25310fbfe7334a20f96015f47aa0b365c32e2",
+        "PE_progress.tsv": "d013aae82c6f79d04962489065662176ddad61c3729b3a3f5095413b9e47f1b4",
+        "PE_unwindowed.sysmat": "0bf7675e360ee4fb0efb8b3adf7eb08f4761c67a2948666435d40c9fd9179330",
+        "PE_windowed.sysmat": "28395997ac918970606881127278a69498429d75ee5ea154c123e4f1d09b168e",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "1a4c39cac05a5b2ca6c00b5fda7532cff5dc45d587fd4f43291e989cdcf26780",
+        "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+        "Scatter_SysMat_shift_0.000000_0.000000_-15.000000.sysmat": "815b6ee54ee4bbb30f0e93c5bb5cd24b2eb9c9276b592e647b4de1790eccd46f",
+        "SysMat_withScatter_shift_0.000000_0.000000_-15.000000.sysmat": "81098a56b877984ed1f53b362583e4641c76a43f675b3657f54b4c47e3bd1ad9",
+        "pe.log": "875e7276e3dabcd98f969fa2771166e6b6e9baa69611bcab37836598af862485",
+        "response.sysmat": "81098a56b877984ed1f53b362583e4641c76a43f675b3657f54b4c47e3bd1ad9",
+        "scatter.log": "ec5eca3eb375d75eaff3783ed44f5764f55e23cd0853d9da9994f6375d708f85"
+      }
+    },
+    "A440/2": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A440",
+      "slab": 2,
+      "pe_resource": {
+        "elapsed_seconds": 553.2057963162661,
+        "rss_peak_bytes": 114020352,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.001150669642857143,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 166.746567199938,
+        "rss_peak_bytes": 2791788544,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028174148478835977,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "e1ffb20a71b75f6cf9a29f093ab64a4311990740cc26795396c7e6cf5de202ea",
+        "PE_progress.json": "7f3ad08c9c6cf96edc818b5cf5c650f2d64c56e6c00527d8b92fbeb8429a35fd",
+        "PE_progress.tsv": "4903803e20f404af9b7a20b61ef1d4f7ee965db43cb42325003d53139e03d63e",
+        "PE_unwindowed.sysmat": "53671f1d42267754e75a588642093196271803d9c477a71eade8e4cbdc4b271d",
+        "PE_windowed.sysmat": "3829aee39aa753371dc4c7b2da5cff5af6c1e84832367401642d278e4f55f87e",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+        "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+        "Scatter_SysMat_shift_0.000000_0.000000_15.000000.sysmat": "dee8c881a276ef1e270f0f2df47bb4d920ba98794b03876b3231545f642b309e",
+        "SysMat_withScatter_shift_0.000000_0.000000_15.000000.sysmat": "f9c268032959f613868d67de090b0a5db784b91c4d57877ad02e40be4124a660",
+        "pe.log": "1a9f534e5f16c91c71adccd43e26a38cdfdd4be7951ab2d6248a06ca639accaa",
+        "response.sysmat": "f9c268032959f613868d67de090b0a5db784b91c4d57877ad02e40be4124a660",
+        "scatter.log": "9f383160da471f864b899bde66e3f0723e6ddef7d7270dafc831d4cbc3980732"
+      }
+    },
+    "A440/3": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "A440",
+      "slab": 3,
+      "pe_resource": {
+        "elapsed_seconds": 586.4560768632218,
+        "rss_peak_bytes": 114065408,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011511243386243385,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 173.88728369912133,
+        "rss_peak_bytes": 2791747584,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028173735119047617,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "ef43b3fbbfdac1f29a75b23dcefdd25059ad814e649b021a39e1b564ff6fac71",
+        "PE_progress.json": "b37d6608f7496c164256fbbd431fbde10d9fc4134a0c888fb2a5737290b53b92",
+        "PE_progress.tsv": "485c8aec7bd11efca4fd8cb0780a382db3813dc90c40fb97d6a1c91dfdfbcc61",
+        "PE_unwindowed.sysmat": "602ac437d6e70d3d747878b5f82bffe250a1162e0f01c3f60ad7b17959c19cdc",
+        "PE_windowed.sysmat": "68e5e7910f0f15dd69a74616dcd7bec84201d444cc3ff8745c3d2754b90571b6",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "085f7345dfefc5e797a1733a522bc41bd13e444045bf631cf607c70c2f24df90",
+        "Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+        "Scatter_SysMat_shift_0.000000_0.000000_45.000000.sysmat": "a0e5e5bd32eb4e947dd970139f66c4a578d10cdc8d0f3a407a6f4df9f3bbf78b",
+        "SysMat_withScatter_shift_0.000000_0.000000_45.000000.sysmat": "df6d30212ab9f2ea33b12dbb9915965329d99e4df9ef6fff9d11c28ef6fd2f99",
+        "pe.log": "b9fd218766fcda41f0038f8924699e08ae43d0976cc433ad2473426053ccd6dc",
+        "response.sysmat": "df6d30212ab9f2ea33b12dbb9915965329d99e4df9ef6fff9d11c28ef6fd2f99",
+        "scatter.log": "bfd631ea0ec8a6111179bbe284a59dcd7470c6713c095f216954249e5c44e5fd"
+      }
+    },
+    "C440to218/0": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "C440to218",
+      "slab": 0,
+      "pe_resource": {
+        "elapsed_seconds": 640.7343740267679,
+        "rss_peak_bytes": 113860608,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011490575396825397,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 770.3304830957204,
+        "rss_peak_bytes": 2791833600,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028174603174603175,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "3f471a966ab0c782211f8c01a5963faec41160196488bbe5f5ee345dfe4e51f6",
+        "PE_progress.json": "0be7b6d0aa5fc558fb3c1a12edc9b744de326417779845e733a3ee74debf4f16",
+        "PE_progress.tsv": "45632b9a1a1045756b916c7e64ff93e39ec7403e29d55a5b1b3cce2301192272",
+        "PE_unwindowed.sysmat": "367cc9c2d0b432cb5219395ee6809b545503f1e44870c9e28dd149d904cbde78",
+        "PE_windowed.sysmat": "995dd454b3a0486e4ae8f924b134a74b90fd2fc9c36240b6898f83906f33ddf2",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "37a693337c1bf92f9bdec12630e29c949b7c49073ed3119c1ffbb47126efc7a3",
+        "Params_Physics.dat": "c9c3cc37b1c51e41744857372d545f49c61e708b8bc30460c5757d8bdc6c9bc6",
+        "Scatter_SysMat_shift_0.000000_0.000000_-45.000000.sysmat": "43ff621b6d0752b688a62298a886870b9dab3d78f9c10333dc359f28c2f04064",
+        "pe.log": "a27248c6b9fa4afd8013f4baf66a58964cc2ff6686be4bad4e25e8af1f462adb",
+        "response.sysmat": "43ff621b6d0752b688a62298a886870b9dab3d78f9c10333dc359f28c2f04064",
+        "scatter.log": "cd77989d7b74f808387e058da97782a030b548e951a1ae289a1e14cdea90f9ef"
+      }
+    },
+    "C440to218/1": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "C440to218",
+      "slab": 1,
+      "pe_resource": {
+        "elapsed_seconds": 549.0236124130897,
+        "rss_peak_bytes": 114053120,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011510003306878307,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 776.8321986151859,
+        "rss_peak_bytes": 2791866368,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028174933862433863,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "b8cf841b8b61bd495858d0d18222db8a5b02eae03d7575a961b81d1a96bfeb89",
+        "PE_progress.json": "6974a00e44a229e3ef6a97671bd96d2666037f4fdade2425a302f92bad7fc76a",
+        "PE_progress.tsv": "e7d01ca62afe7f76fa22d89f34237885835862caef288d523be3c7db89cacb2a",
+        "PE_unwindowed.sysmat": "0bf7675e360ee4fb0efb8b3adf7eb08f4761c67a2948666435d40c9fd9179330",
+        "PE_windowed.sysmat": "995dd454b3a0486e4ae8f924b134a74b90fd2fc9c36240b6898f83906f33ddf2",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "1a4c39cac05a5b2ca6c00b5fda7532cff5dc45d587fd4f43291e989cdcf26780",
+        "Params_Physics.dat": "c9c3cc37b1c51e41744857372d545f49c61e708b8bc30460c5757d8bdc6c9bc6",
+        "Scatter_SysMat_shift_0.000000_0.000000_-15.000000.sysmat": "db901cf9f6897819165b09f081b96684c440cb6eaa64a1603898c02b19b1d353",
+        "pe.log": "ed4a811ae2bbc2bcb1063eaadc4b1026db77abc3739e1cc955a27dd4134f680f",
+        "response.sysmat": "db901cf9f6897819165b09f081b96684c440cb6eaa64a1603898c02b19b1d353",
+        "scatter.log": "921edc6eba7bd05f3495d293cc646a268a0892880e6928060cef19cc6f2d2de9"
+      }
+    },
+    "C440to218/2": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "C440to218",
+      "slab": 2,
+      "pe_resource": {
+        "elapsed_seconds": 567.5337275783531,
+        "rss_peak_bytes": 114192384,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.001152405753968254,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 783.7278522122651,
+        "rss_peak_bytes": 2791735296,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.02817361111111111,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "2d8873b435fb548813fa14357348b00bbf4c7fe5f5243d2cf40d2fbfae3889d2",
+        "PE_progress.json": "be4fbff8f6a879739a0a837fad3945432683c56a7212df5bd2947f9012ca0588",
+        "PE_progress.tsv": "a1249b4aadb57111fe87c62e5d99c4fc8ddd0ecae021c815b1c65ee1cdcf3136",
+        "PE_unwindowed.sysmat": "53671f1d42267754e75a588642093196271803d9c477a71eade8e4cbdc4b271d",
+        "PE_windowed.sysmat": "995dd454b3a0486e4ae8f924b134a74b90fd2fc9c36240b6898f83906f33ddf2",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+        "Params_Physics.dat": "c9c3cc37b1c51e41744857372d545f49c61e708b8bc30460c5757d8bdc6c9bc6",
+        "Scatter_SysMat_shift_0.000000_0.000000_15.000000.sysmat": "4ba8964f20d9d7449600f11beaeec8f2877486068861c2ba64902c7732fc1cbe",
+        "pe.log": "3508a9770b6eda63dfeb36a2853dab7e151e1eeb29161f2f482b4b418e344156",
+        "response.sysmat": "4ba8964f20d9d7449600f11beaeec8f2877486068861c2ba64902c7732fc1cbe",
+        "scatter.log": "ab2049b4a11513692e7bcfe41a0fd8bf85da8f0ce8eb105f5801d4b861ba5385"
+      }
+    },
+    "C440to218/3": {
+      "passed": true,
+      "pilot": false,
+      "shape": [
+        2312,
+        10,
+        85,
+        85
+      ],
+      "response": "C440to218",
+      "slab": 3,
+      "pe_resource": {
+        "elapsed_seconds": 606.909658451099,
+        "rss_peak_bytes": 114270208,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.0011531911375661375,
+        "gpu_used_peak_bytes": 526385152,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.015395467230962677
+      },
+      "scatter_resource": {
+        "elapsed_seconds": 770.944629337173,
+        "rss_peak_bytes": 2791784448,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.028174107142857143,
+        "gpu_used_peak_bytes": 2537553920,
+        "gpu_total_bytes": 34190917632,
+        "gpu_used_fraction": 0.07421719262734995
+      },
+      "files": {
+        "PE_manifest.json": "f98b240aa687f27283ef8ecb4b72829efc4c85c9776db13104df1724fb107a52",
+        "PE_progress.json": "c07fd47d13d27d14a9ebaf2181daa67c97b4a46efd83af8fd1a03273bdfbad9f",
+        "PE_progress.tsv": "a10e029ed794bc3de79ae0dea1f12ff4467eabca0f141e4aeefae10193356763",
+        "PE_unwindowed.sysmat": "602ac437d6e70d3d747878b5f82bffe250a1162e0f01c3f60ad7b17959c19cdc",
+        "PE_windowed.sysmat": "995dd454b3a0486e4ae8f924b134a74b90fd2fc9c36240b6898f83906f33ddf2",
+        "Params_Collimator.dat": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+        "Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+        "Params_Image.dat": "085f7345dfefc5e797a1733a522bc41bd13e444045bf631cf607c70c2f24df90",
+        "Params_Physics.dat": "c9c3cc37b1c51e41744857372d545f49c61e708b8bc30460c5757d8bdc6c9bc6",
+        "Scatter_SysMat_shift_0.000000_0.000000_45.000000.sysmat": "7a2b200203c7ab82bf13951d4fb83f0cecbe26d909e033488dd399d8fd63573c",
+        "pe.log": "a0de4492371ae96d1bd0c1c39c66799081097578b3cd02480594ef47e20a3855",
+        "response.sysmat": "7a2b200203c7ab82bf13951d4fb83f0cecbe26d909e033488dd399d8fd63573c",
+        "scatter.log": "39396d22d9f2346a56ce7fb4a359d571fc0a9e35a2c364b5f62494502f71917b"
+      }
+    }
+  },
+  "conversion_repair": {
+    "passed": true,
+    "repair_key": "b02df58a9d3fd48c",
+    "producer_release_key": "74e129c4460163c5",
+    "source_reuse_acceptance_sha256": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3",
+    "probe_acceptance_sha256": "16ed1ff6940a801c8e160772b5e096579159d1506a36d7ee8a8ef521046d158d",
+    "reused_complete_factors": [
+      "A218",
+      "A440"
+    ],
+    "reused_probe_layers": 10,
+    "converted_layers": 30,
+    "total_layers": 40,
+    "density_volume_applied_once": true,
+    "scientific_algorithm_unchanged": true,
+    "publication": {
+      "cartesian": {
+        "bytes": 2672672000,
+        "sha256": "8b15b804e0101636acade419eab5de9649da7c13f94d3ed7f9db3ab452c55059",
+        "elapsed_seconds": 51.530601100064814
+      },
+      "polar": {
+        "bytes": 1221105920,
+        "sha256": "e008242786cd1028837eae4b0a270aed63724208a09db201a3ca6a19281917b3",
+        "elapsed_seconds": 21.12384257465601
+      }
+    },
+    "resource": {
+      "rss_peak_bytes": 4599107584,
+      "host_allocated_bytes": 99090432000,
+      "rss_fraction": 0.04641323578042328
+    },
+    "elapsed_seconds": 853.349197323434,
+    "factors": {
+      "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+      "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+      "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+    }
+  }
+}

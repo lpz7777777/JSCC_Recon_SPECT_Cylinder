@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "repair_key": "b02df58a9d3fd48c",
+  "producer_release_key": "74e129c4460163c5",
+  "source_reuse_acceptance_sha256": "ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3",
+  "probe_acceptance_sha256": "16ed1ff6940a801c8e160772b5e096579159d1506a36d7ee8a8ef521046d158d",
+  "reused_complete_factors": [
+    "A218",
+    "A440"
+  ],
+  "reused_probe_layers": 10,
+  "converted_layers": 30,
+  "total_layers": 40,
+  "density_volume_applied_once": true,
+  "scientific_algorithm_unchanged": true,
+  "publication": {
+    "cartesian": {
+      "bytes": 2672672000,
+      "sha256": "8b15b804e0101636acade419eab5de9649da7c13f94d3ed7f9db3ab452c55059",
+      "elapsed_seconds": 51.530601100064814
+    },
+    "polar": {
+      "bytes": 1221105920,
+      "sha256": "e008242786cd1028837eae4b0a270aed63724208a09db201a3ca6a19281917b3",
+      "elapsed_seconds": 21.12384257465601
+    }
+  },
+  "resource": {
+    "rss_peak_bytes": 4599107584,
+    "host_allocated_bytes": 99090432000,
+    "rss_fraction": 0.04641323578042328
+  },
+  "elapsed_seconds": 853.349197323434,
+  "factors": {
+    "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+  }
+}

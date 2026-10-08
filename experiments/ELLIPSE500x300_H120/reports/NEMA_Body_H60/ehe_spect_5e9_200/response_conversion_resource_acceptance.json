@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "job": 1677140,
+  "allocation": {
+    "job": "1677140",
+    "scontrol": "JobId=1677140 JobName=ehe5e9_response_conversion\n   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A\n   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:16 TimeLimit=00:39:00 TimeMin=N/A\n   SubmitTime=2026-10-09T03:34:36 EligibleTime=2026-10-09T03:34:36\n   AccrueTime=2026-10-09T03:34:36\n   StartTime=2026-10-09T03:42:52 EndTime=2026-10-09T04:21:52 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-09T03:42:52 Scheduler=Backfill\n   Partition=gpu_5090 AllocNode:Sid=wqd10nbf05c05:3801014\n   ReqNodeList=(null) ExcNodeList=wqd10nba06g6\n   NodeList=wqd10nah09g1\n   BatchHost=wqd10nah09g1\n   NumNodes=1 NumCPUs=6 NumTasks=1 CPUs/Task=6 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=6,mem=94500M,node=1,billing=6,gres/gpu=1\n   AllocTRES=cpu=6,mem=94500M,node=1,billing=6,gres/gpu=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=6 MinMemoryCPU=15750M MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/scripts/response_conversion.sh\n   WorkDir=/data/home/scxi717\n   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/logs/response_conversion_1677140_4294967294.log\n   StdIn=/dev/null\n   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/logs/response_conversion_1677140_4294967294.log\n   TresPerNode=gres/gpu:1\n   TresPerTask=cpu=6\n   \n\n",
+    "host_allocated_bytes": 99090432000,
+    "denominator_kind": "actual Slurm AllocTRES",
+    "imaging_allocation_certificate": true
+  },
+  "slurm_maxrss_bytes": 46647504896,
+  "slurm_maxrss_fraction": 0.47075690310846563,
+  "accounting": "1677140|COMPLETED|0:0||00:14:35|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1677140.batch|COMPLETED|0:0|45554204K|00:14:35|cpu=6,gres/gpu=1,mem=94500M,node=1\n1677140.extern|COMPLETED|0:0|0|00:14:35|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n"
+}

@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09 04:15上海：完整转换1677140已成功退出，三Factor身份/完整输出SHA/实际Slurm资源验收通过，后续物理门控唯一作业1677211。以physical_job.json及随后physical_gate.json为准；原响应1672966人工取消与新转换成功分别留证，禁止重启原模拟或PE/Scatter阶段。
+
 工作目录为仓库根。`ehe_5e9_workflow.py`提供`prepare/deploy/pilots/advance/status/fetch/compare`。
 
 2026-10-09人工授权的转换恢复：1672966已完整退出且原发布/12份slab收据/两份完整Factor清单/日志留存，见`response_stop_acceptance.json`。`repair-response-conversion`只创建独立`conversion_releases/<key>`，不重新prepare/deploy原科学发布，不调用PE/Scatter或输运。它实际逐SHA核验所有原slab成员、二进制、原发布和A218/A440全矩阵/自身S，然后用真实C440→218第一块测量转换和973MB连续写出/读回吞吐；完整转换时复用这10层，只补其余30层的存储转换。部分原文件保持只读，新目的目录存在任何部分输出即拒绝覆盖。
