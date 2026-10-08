@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "scope": "Only new read-only source/window and cuboid sensitivity evidence, code and reports; no production matrices/binaries/full raw CSV/secrets",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 15,
+    "total_blob_bytes": 121806,
+    "largest_blobs": [
+      [
+        26200,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/cuboid_fold.json"
+        ]
+      ],
+      [
+        18500,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        14436,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_source_window_basis_audit.json"
+        ]
+      ],
+      [
+        10368,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        9075,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 5871,
+      "sha256": "0d35f77c2f55b16693cc9c4f508b39b76cc9b59f4a06876d13231785edf448ea",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_cuboid_fold.py": {
+      "bytes": 6620,
+      "sha256": "5c4fe73fbcca37510eff530d7a0c2798e8ca4f291660f77e479f4e3973790967",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_source_window.py": {
+      "bytes": 8287,
+      "sha256": "fc3ff547f171395331d854bce3a58e7dd6e325d9cd70ad398f17bcbad154442d",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 6435,
+      "sha256": "6a450751a224de59ee95ee67c6ec839bd3914756da12ac8b660d5a418e3ec4f3",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 10368,
+      "sha256": "7ee4eef52eebb42962c34e47dd155c2d226b612c2c8baad530c608908cbafed5",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 9075,
+      "sha256": "3a9d89f420f89f4a380c73872b603ce8e9124137a88ad051456619ae761c2316",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 18500,
+      "sha256": "54fbc54b3dd5ac0fd0d99cf37b7404db3f628797762c714cc1b1314544ba3b18",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_diagnostic_registration.json": {
+      "bytes": 1923,
+      "sha256": "79f66f1764fcd218fece0571e8d061ca26146f80c3a07a9911132f9c474917fb",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/binding.json": {
+      "bytes": 3149,
+      "sha256": "b26456244ec922b8a06e94a5cc7803a26a9ba63415d5a9cc5deafb9d88430365",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/cuboid_fold.json": {
+      "bytes": 26200,
+      "sha256": "e7d701e0466ba5f6ae5679fdd39f67b0d5234e12e2df4a161dba4aff2d8f08c1",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/diagnose_ehe_cuboid_fold.py": {
+      "bytes": 6620,
+      "sha256": "5c4fe73fbcca37510eff530d7a0c2798e8ca4f291660f77e479f4e3973790967",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/diagnostic_manifest.json": {
+      "bytes": 324,
+      "sha256": "2685ba6e8c9cbae21b715a40b2935a950d0596431b77df95ecb183d9c4c7a090",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/execution.log": {
+      "bytes": 1302,
+      "sha256": "5c14463cb2bee570f638f923da95089dd4d117328d4f57cd7f5c2bf9feb7aaed",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/launch_and_fetch_read_only.py": {
+      "bytes": 7564,
+      "sha256": "9234e17f79e3a9cc2966c233ab308a9ff7a15b7c14e0a004dc49f08713cb5e09",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only_acceptance.json": {
+      "bytes": 1752,
+      "sha256": "b63735ed5eecccbf37f3d58767d2c8da5f59b00de2bf8864dcf581a76347c482",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_source_window_basis_audit.json": {
+      "bytes": 14436,
+      "sha256": "99c9574de7916235c61a167e26c1ea20e4de9caf9229a9af9a0c2e8ae663e6bd",
+      "raw_equal": true
+    }
+  },
+  "actual_source_window_identity_pass": true,
+  "actual_cuboid_cpu_exit_code": 0,
+  "actual_cuboid_elapsed_seconds": 119.23107239231467,
+  "strict_remote_before_after_local_sha_pass": true,
+  "original_physical_gate_sha_unchanged": true,
+  "no_physical_or_validation_or_formal_job_submitted": true
+}

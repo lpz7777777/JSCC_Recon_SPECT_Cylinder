@@ -1,0 +1,20 @@
+{
+  "kind": "CPU read-only diagnostic, no Slurm submission",
+  "science_job": 1677211,
+  "key": "1b9a43962af5c315",
+  "local_launcher_pid": 16828,
+  "status": "complete",
+  "started_utc": "2026-10-08T22:56:18.689169+00:00",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/read_only_source_fold_1b9a43962af5c315/output",
+  "immutable_execution_files": {
+    "binding.json": "b26456244ec922b8a06e94a5cc7803a26a9ba63415d5a9cc5deafb9d88430365",
+    "diagnose_ehe_cuboid_fold.py": "5c4fe73fbcca37510eff530d7a0c2798e8ca4f291660f77e479f4e3973790967"
+  },
+  "launcher_sha256": "9234e17f79e3a9cc2966c233ab308a9ff7a15b7c14e0a004dc49f08713cb5e09",
+  "no_production_input_modified": true,
+  "no_stage_resubmitted": true,
+  "hard_limit_seconds": 540,
+  "exact_command": "bash -c 'set -o pipefail\ntimeout --signal=TERM --kill-after=10s 540s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /data/home/scxi717/.conda/envs/torch/bin/python -u /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/read_only_source_fold_1b9a43962af5c315/diagnose_ehe_cuboid_fold.py --binding /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/read_only_source_fold_1b9a43962af5c315/binding.json --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/read_only_source_fold_1b9a43962af5c315/output 2>&1 | tee /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/read_only_source_fold_1b9a43962af5c315/execution.log'",
+  "exit_code": 0,
+  "ended_utc": "2026-10-08T22:58:30.848162+00:00"
+}

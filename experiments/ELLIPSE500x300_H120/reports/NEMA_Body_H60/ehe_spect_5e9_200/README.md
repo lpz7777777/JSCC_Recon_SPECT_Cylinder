@@ -1,5 +1,7 @@
 # EHE平行孔SPECT：5e9输运与200次重建
 
+2026-10-09 06:59上海只读诊断：合并源盒展开后与原3mm双能三维密度一致，20视角旋转和三套2312-bin能窗未发现明显误配。[现有完整矩阵的源盒平均敏感性分析](physical_cuboid_read_only/cuboid_fold.json)实际退出0并严格SHA取回：C440→218预测只变化−0.004428%，对9869实测仍低估24.0263%；这不能解释当前串窗偏差，且不能排除更细响应网格或散射历史覆盖差异。原科学HOLD保持，validation10/formal200仍未提交；新证据与限制见[HOLD报告](PHYSICAL_HOLD.md)。
+
 2026-10-09 06:17上海：真实源物理门控1677211因22项预登记诊断HOLD退出（FAILED/1:0，elapsed06:08）。C440→218全局预测7498.176418、实测9869，低估24.0229%且差值为19.6482个独立worker SE；19个视角及全局HOLD，另A218第13、14视角HOLD。全部原JSON/138783行CSV/日志已严格SHA取回，独立worker统计逐条核验一致；全部138720个逐bin诊断统计不足，为UNDETERMINED。实际Slurm峰值14.0848%，无OOM/时限故障证据。validation10/formal200未提交；只读诊断继续，不能重提或绕过。见[科学HOLD报告](PHYSICAL_HOLD.md)。
 
 2026-10-09 04:15上海：完整转换1677140已实际COMPLETED/0:0，Slurm elapsed14:35，40层完整C440→218 Cartesian/Polar/自身S/清单已生成。保留原12块计算结果与部分旧C文件，复用探针10层、只补30层，A218/A440完整Factor清单SHA与停止前逐字一致。约3.894GB完整输出连续原子写出、fsync及全SHA读回共72.654444秒；进程RSS为实际分配的4.6413%，退出后Slurm MaxRSS为47.0757%，均有20%余量。[转换身份验收](response_conversion_identity_acceptance.json)通过，不能替代物理校准或成像验证。[真实源物理门控1677211](physical_job.json)已唯一提交，当前Priority排队；validation10和formal200尚未开始。
@@ -40,7 +42,8 @@
 
 ```powershell
 python -X utf8 experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py status
-python -X utf8 experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py advance
 ```
+
+当前科学HOLD期间仅查询登记；不要调用advance重提已失败物理阶段。原门控真实解除后才恢复既定推进。
 
 正式止于200次。完成严格验收、科学与视觉QA、报告和审计后的Git交付才算完成。

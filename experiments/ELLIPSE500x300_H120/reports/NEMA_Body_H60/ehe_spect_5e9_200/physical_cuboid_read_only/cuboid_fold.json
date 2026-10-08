@@ -1,0 +1,603 @@
+{
+  "passed": true,
+  "scope": "CPU read-only cuboid-averaging sensitivity of the existing interpolated full response; original scientific HOLD unchanged",
+  "scientific_status": "HOLD",
+  "physical_gate_pass_claimed": false,
+  "job": 1677211,
+  "rows_per_response": 2312,
+  "views": 20,
+  "channels": {
+    "A218": {
+      "cpu_center_total": 13473.91178565524,
+      "cuboid_quadrature4_total": 13473.67631928119,
+      "cuboid_quadrature8_total": 13473.676770415212,
+      "cuboid8_over_center": 0.9999825577572595,
+      "quadrature8_minus4_over8": 3.348262162525348e-08,
+      "actual_observed": 13060.0,
+      "cuboid8_signed_bias": 0.0316750972752842,
+      "views": [
+        {
+          "view": 1,
+          "original_center_predicted": 663.4323679717127,
+          "cpu_center_predicted": 663.4323808158033,
+          "cuboid_quadrature4_predicted": 663.4376223434708,
+          "cuboid_quadrature8_predicted": 663.4376251200638,
+          "quadrature8_over_center": 1.000007904805994,
+          "quadrature8_minus4_over8": 4.185160532514198e-09
+        },
+        {
+          "view": 2,
+          "original_center_predicted": 664.496045685244,
+          "cpu_center_predicted": 664.4960504168997,
+          "cuboid_quadrature4_predicted": 664.4654667231591,
+          "cuboid_quadrature8_predicted": 664.4654623184995,
+          "quadrature8_over_center": 0.9999539679756094,
+          "quadrature8_minus4_over8": -6.6288767413167705e-09
+        },
+        {
+          "view": 3,
+          "original_center_predicted": 667.648883057205,
+          "cpu_center_predicted": 667.6488829469675,
+          "cuboid_quadrature4_predicted": 667.641467343867,
+          "cuboid_quadrature8_predicted": 667.6414776458186,
+          "quadrature8_over_center": 0.9999889083898167,
+          "quadrature8_minus4_over8": 1.5430364766949307e-08
+        },
+        {
+          "view": 4,
+          "original_center_predicted": 676.7439366982851,
+          "cpu_center_predicted": 676.7439389467737,
+          "cuboid_quadrature4_predicted": 676.7321338715789,
+          "cuboid_quadrature8_predicted": 676.7322458159389,
+          "quadrature8_over_center": 0.9999827214842101,
+          "quadrature8_minus4_over8": 1.6541898321932685e-07
+        },
+        {
+          "view": 5,
+          "original_center_predicted": 684.449118559111,
+          "cpu_center_predicted": 684.4491228931157,
+          "cuboid_quadrature4_predicted": 684.4460624344556,
+          "cuboid_quadrature8_predicted": 684.4460554575203,
+          "quadrature8_over_center": 0.9999955183877182,
+          "quadrature8_minus4_over8": -1.0193550324010296e-08
+        },
+        {
+          "view": 6,
+          "original_center_predicted": 685.0747402958046,
+          "cpu_center_predicted": 685.0747508229512,
+          "cuboid_quadrature4_predicted": 685.0853166608375,
+          "cuboid_quadrature8_predicted": 685.085319521626,
+          "quadrature8_over_center": 1.0000154270737058,
+          "quadrature8_minus4_over8": 4.175813501531413e-09
+        },
+        {
+          "view": 7,
+          "original_center_predicted": 684.3377406506833,
+          "cpu_center_predicted": 684.3377437673465,
+          "cuboid_quadrature4_predicted": 684.3331465432883,
+          "cuboid_quadrature8_predicted": 684.3331415874466,
+          "quadrature8_over_center": 0.9999932749874724,
+          "quadrature8_minus4_over8": -7.2418555301476776e-09
+        },
+        {
+          "view": 8,
+          "original_center_predicted": 676.638599271093,
+          "cpu_center_predicted": 676.6385989165324,
+          "cuboid_quadrature4_predicted": 676.6240308445965,
+          "cuboid_quadrature8_predicted": 676.624093611924,
+          "quadrature8_over_center": 0.9999785627000416,
+          "quadrature8_minus4_over8": 9.27654336314021e-08
+        },
+        {
+          "view": 9,
+          "original_center_predicted": 667.843720687877,
+          "cpu_center_predicted": 667.8437202323438,
+          "cuboid_quadrature4_predicted": 667.8347497804933,
+          "cuboid_quadrature8_predicted": 667.8347961209118,
+          "quadrature8_over_center": 0.9999866374255509,
+          "quadrature8_minus4_over8": 6.9389044701334e-08
+        },
+        {
+          "view": 10,
+          "original_center_predicted": 665.3426253691246,
+          "cpu_center_predicted": 665.3426272695941,
+          "cuboid_quadrature4_predicted": 665.3040645554685,
+          "cuboid_quadrature8_predicted": 665.3040444687002,
+          "quadrature8_over_center": 0.9999420106283401,
+          "quadrature8_minus4_over8": -3.019186252084992e-08
+        },
+        {
+          "view": 11,
+          "original_center_predicted": 664.3319021866787,
+          "cpu_center_predicted": 664.3319138495362,
+          "cuboid_quadrature4_predicted": 664.327299073041,
+          "cuboid_quadrature8_predicted": 664.3273018544581,
+          "quadrature8_over_center": 0.999993057694532,
+          "quadrature8_minus4_over8": 4.186817467752781e-09
+        },
+        {
+          "view": 12,
+          "original_center_predicted": 665.4319511510678,
+          "cpu_center_predicted": 665.4319558128761,
+          "cuboid_quadrature4_predicted": 665.3936442730752,
+          "cuboid_quadrature8_predicted": 665.3936246129791,
+          "quadrature8_over_center": 0.9999423965146816,
+          "quadrature8_minus4_over8": -2.954656515932524e-08
+        },
+        {
+          "view": 13,
+          "original_center_predicted": 668.0157394906166,
+          "cpu_center_predicted": 668.0157397553969,
+          "cuboid_quadrature4_predicted": 668.0087825911787,
+          "cuboid_quadrature8_predicted": 668.0088265488985,
+          "quadrature8_over_center": 0.9999896511323206,
+          "quadrature8_minus4_over8": 6.580410019588909e-08
+        },
+        {
+          "view": 14,
+          "original_center_predicted": 676.6105343564326,
+          "cpu_center_predicted": 676.6105349965597,
+          "cuboid_quadrature4_predicted": 676.6040242121412,
+          "cuboid_quadrature8_predicted": 676.604113911815,
+          "quadrature8_over_center": 0.9999905099249677,
+          "quadrature8_minus4_over8": 1.3257334972942216e-07
+        },
+        {
+          "view": 15,
+          "original_center_predicted": 684.0991500995099,
+          "cpu_center_predicted": 684.0991525711748,
+          "cuboid_quadrature4_predicted": 684.0927318022185,
+          "cuboid_quadrature8_predicted": 684.0927260705778,
+          "quadrature8_over_center": 0.9999906058930597,
+          "quadrature8_minus4_over8": -8.37845588477922e-09
+        },
+        {
+          "view": 16,
+          "original_center_predicted": 684.8630863342087,
+          "cpu_center_predicted": 684.8630982093313,
+          "cuboid_quadrature4_predicted": 684.8662071935127,
+          "cuboid_quadrature8_predicted": 684.8662100579157,
+          "quadrature8_over_center": 1.000004543752748,
+          "quadrature8_minus4_over8": 4.1824272306202124e-09
+        },
+        {
+          "view": 17,
+          "original_center_predicted": 684.7170082502025,
+          "cpu_center_predicted": 684.7170113366437,
+          "cuboid_quadrature4_predicted": 684.7014790972642,
+          "cuboid_quadrature8_predicted": 684.7014765936314,
+          "quadrature8_over_center": 0.9999773121702029,
+          "quadrature8_minus4_over8": -3.6565319125636734e-09
+        },
+        {
+          "view": 18,
+          "original_center_predicted": 677.2528085301783,
+          "cpu_center_predicted": 677.2528082623048,
+          "cuboid_quadrature4_predicted": 677.2327822049767,
+          "cuboid_quadrature8_predicted": 677.2328909243527,
+          "quadrature8_over_center": 0.9999705909850661,
+          "quadrature8_minus4_over8": 1.6053469550480134e-07
+        },
+        {
+          "view": 19,
+          "original_center_predicted": 667.9654692896609,
+          "cpu_center_predicted": 667.965471887678,
+          "cuboid_quadrature4_predicted": 667.9567180751211,
+          "cuboid_quadrature8_predicted": 667.9567526138761,
+          "quadrature8_over_center": 0.9999869465201888,
+          "quadrature8_minus4_over8": 5.170807074223329e-08
+        },
+        {
+          "view": 20,
+          "original_center_predicted": 664.6162806367174,
+          "cpu_center_predicted": 664.6162819454102,
+          "cuboid_quadrature4_predicted": 664.5885896574432,
+          "cuboid_quadrature8_predicted": 664.5885855582601,
+          "quadrature8_over_center": 0.9999583272515248,
+          "quadrature8_minus4_over8": -6.168001083211601e-09
+        }
+      ],
+      "elapsed_seconds": 38.814751824364066
+    },
+    "A440": {
+      "cpu_center_total": 11951.135619288232,
+      "cuboid_quadrature4_total": 11950.680764534603,
+      "cuboid_quadrature8_total": 11950.680947921623,
+      "cuboid8_over_center": 0.9999619558022691,
+      "quadrature8_minus4_over8": 1.5345319652076547e-08,
+      "actual_observed": 12171.0,
+      "cuboid8_signed_bias": -0.018101967963057873,
+      "views": [
+        {
+          "view": 1,
+          "original_center_predicted": 583.770260415662,
+          "cpu_center_predicted": 583.7702366733465,
+          "cuboid_quadrature4_predicted": 583.7622791290376,
+          "cuboid_quadrature8_predicted": 583.7622815638933,
+          "quadrature8_over_center": 0.9999863728759134,
+          "quadrature8_minus4_over8": 4.170971410985169e-09
+        },
+        {
+          "view": 2,
+          "original_center_predicted": 585.2667633669616,
+          "cpu_center_predicted": 585.2667646674496,
+          "cuboid_quadrature4_predicted": 585.2328357830378,
+          "cuboid_quadrature8_predicted": 585.2328356864973,
+          "quadrature8_over_center": 0.9999420281775755,
+          "quadrature8_minus4_over8": -1.649607972805542e-10
+        },
+        {
+          "view": 3,
+          "original_center_predicted": 589.5689462892407,
+          "cpu_center_predicted": 589.5689472111109,
+          "cuboid_quadrature4_predicted": 589.544067117154,
+          "cuboid_quadrature8_predicted": 589.5440680515272,
+          "quadrature8_over_center": 0.9999578011024812,
+          "quadrature8_minus4_over8": 1.5849082330809484e-09
+        },
+        {
+          "view": 4,
+          "original_center_predicted": 598.1448309133455,
+          "cpu_center_predicted": 598.1448314579926,
+          "cuboid_quadrature4_predicted": 598.1177376086708,
+          "cuboid_quadrature8_predicted": 598.1177931240861,
+          "quadrature8_over_center": 0.9999547963428179,
+          "quadrature8_minus4_over8": 9.281685969165436e-08
+        },
+        {
+          "view": 5,
+          "original_center_predicted": 606.2351059361314,
+          "cpu_center_predicted": 606.2351060136971,
+          "cuboid_quadrature4_predicted": 606.2127282424665,
+          "cuboid_quadrature8_predicted": 606.2127226590009,
+          "quadrature8_over_center": 0.9999630780954878,
+          "quadrature8_minus4_over8": -9.21040653486072e-09
+        },
+        {
+          "view": 6,
+          "original_center_predicted": 608.613552707077,
+          "cpu_center_predicted": 608.6135272639345,
+          "cuboid_quadrature4_predicted": 608.6064457404973,
+          "cuboid_quadrature8_predicted": 608.6064482709166,
+          "quadrature8_over_center": 0.9999883686564613,
+          "quadrature8_minus4_over8": 4.157726817677651e-09
+        },
+        {
+          "view": 7,
+          "original_center_predicted": 608.3954535974053,
+          "cpu_center_predicted": 608.3954531017879,
+          "cuboid_quadrature4_predicted": 608.3759650567995,
+          "cuboid_quadrature8_predicted": 608.3759680151181,
+          "quadrature8_over_center": 0.9999679729909708,
+          "quadrature8_minus4_over8": 4.862648759291269e-09
+        },
+        {
+          "view": 8,
+          "original_center_predicted": 602.3936162261488,
+          "cpu_center_predicted": 602.393617199871,
+          "cuboid_quadrature4_predicted": 602.3714951722166,
+          "cuboid_quadrature8_predicted": 602.3715242849219,
+          "quadrature8_over_center": 0.9999633247857908,
+          "quadrature8_minus4_over8": 4.833014864139442e-08
+        },
+        {
+          "view": 9,
+          "original_center_predicted": 595.2342998225465,
+          "cpu_center_predicted": 595.2343000276635,
+          "cuboid_quadrature4_predicted": 595.2099206405422,
+          "cuboid_quadrature8_predicted": 595.2099397737179,
+          "quadrature8_over_center": 0.9999590745124324,
+          "quadrature8_minus4_over8": 3.214525563344656e-08
+        },
+        {
+          "view": 10,
+          "original_center_predicted": 591.6900564292398,
+          "cpu_center_predicted": 591.6900554727404,
+          "cuboid_quadrature4_predicted": 591.64833319997,
+          "cuboid_quadrature8_predicted": 591.6483218648302,
+          "quadrature8_over_center": 0.9999294671128505,
+          "quadrature8_minus4_over8": -1.9158576758644934e-08
+        },
+        {
+          "view": 11,
+          "original_center_predicted": 590.4047088615939,
+          "cpu_center_predicted": 590.4046848864168,
+          "cuboid_quadrature4_predicted": 590.3947429294531,
+          "cuboid_quadrature8_predicted": 590.3947453899314,
+          "quadrature8_over_center": 0.9999831649430638,
+          "quadrature8_minus4_over8": 4.1675138854792e-09
+        },
+        {
+          "view": 12,
+          "original_center_predicted": 592.3138635420362,
+          "cpu_center_predicted": 592.3138641013657,
+          "cuboid_quadrature4_predicted": 592.2762760235212,
+          "cuboid_quadrature8_predicted": 592.2762636403486,
+          "quadrature8_over_center": 0.9999365193636416,
+          "quadrature8_minus4_over8": -2.090776441479982e-08
+        },
+        {
+          "view": 13,
+          "original_center_predicted": 596.3057463469595,
+          "cpu_center_predicted": 596.3057475316842,
+          "cuboid_quadrature4_predicted": 596.2829594891502,
+          "cuboid_quadrature8_predicted": 596.2829723324437,
+          "quadrature8_over_center": 0.9999618061718594,
+          "quadrature8_minus4_over8": 2.15389237284274e-08
+        },
+        {
+          "view": 14,
+          "original_center_predicted": 603.6817115344163,
+          "cpu_center_predicted": 603.6817119126546,
+          "cuboid_quadrature4_predicted": 603.6577880291838,
+          "cuboid_quadrature8_predicted": 603.6578182322673,
+          "quadrature8_over_center": 0.9999604200691925,
+          "quadrature8_minus4_over8": 5.003345038381571e-08
+        },
+        {
+          "view": 15,
+          "original_center_predicted": 609.5390694967383,
+          "cpu_center_predicted": 609.5390713021482,
+          "cuboid_quadrature4_predicted": 609.5182873686592,
+          "cuboid_quadrature8_predicted": 609.518289385127,
+          "quadrature8_over_center": 0.9999659055210739,
+          "quadrature8_minus4_over8": 3.30829738153111e-09
+        },
+        {
+          "view": 16,
+          "original_center_predicted": 609.4572049221533,
+          "cpu_center_predicted": 609.457180729118,
+          "cuboid_quadrature4_predicted": 609.4482707338938,
+          "cuboid_quadrature8_predicted": 609.448273274474,
+          "quadrature8_over_center": 0.9999853846095744,
+          "quadrature8_minus4_over8": 4.1686560412183755e-09
+        },
+        {
+          "view": 17,
+          "original_center_predicted": 606.6833683379981,
+          "cpu_center_predicted": 606.6833689718125,
+          "cuboid_quadrature4_predicted": 606.6633276266336,
+          "cuboid_quadrature8_predicted": 606.663321405333,
+          "quadrature8_over_center": 0.9999669554705061,
+          "quadrature8_minus4_over8": -1.0254947684489678e-08
+        },
+        {
+          "view": 18,
+          "original_center_predicted": 598.3804503662475,
+          "cpu_center_predicted": 598.3804513040781,
+          "cuboid_quadrature4_predicted": 598.3570666002132,
+          "cuboid_quadrature8_predicted": 598.357117721732,
+          "quadrature8_over_center": 0.9999610054401089,
+          "quadrature8_minus4_over8": 8.543646813667143e-08
+        },
+        {
+          "view": 19,
+          "original_center_predicted": 589.7233513022916,
+          "cpu_center_predicted": 589.7233521169225,
+          "cuboid_quadrature4_predicted": 589.7010812766199,
+          "cuboid_quadrature8_predicted": 589.7010888763406,
+          "quadrature8_over_center": 0.999962247992212,
+          "quadrature8_minus4_over8": 1.2887411636749716e-08
+        },
+        {
+          "view": 20,
+          "original_center_predicted": 585.3333463753033,
+          "cpu_center_predicted": 585.3333473424392,
+          "cuboid_quadrature4_predicted": 585.299156766885,
+          "cuboid_quadrature8_predicted": 585.2991543691143,
+          "quadrature8_over_center": 0.9999415837599546,
+          "quadrature8_minus4_over8": -4.0966583807674474e-09
+        }
+      ],
+      "elapsed_seconds": 44.968652355484664
+    },
+    "C440to218": {
+      "cpu_center_total": 7498.176364320978,
+      "cuboid_quadrature4_total": 7497.844269351077,
+      "cuboid_quadrature8_total": 7497.844371392165,
+      "cuboid8_over_center": 0.9999557235102667,
+      "quadrature8_minus4_over8": 1.3609390000321373e-08,
+      "actual_observed": 9869.0,
+      "cuboid8_signed_bias": -0.24026300826910882,
+      "views": [
+        {
+          "view": 1,
+          "original_center_predicted": 365.89047889448096,
+          "cpu_center_predicted": 365.89046370827214,
+          "cuboid_quadrature4_predicted": 365.88343635594475,
+          "cuboid_quadrature8_predicted": 365.88343788256265,
+          "quadrature8_over_center": 0.9999807980081299,
+          "quadrature8_minus4_over8": 4.172415953745782e-09
+        },
+        {
+          "view": 2,
+          "original_center_predicted": 366.9803222452453,
+          "cpu_center_predicted": 366.98032292784546,
+          "cuboid_quadrature4_predicted": 366.95697515882347,
+          "cuboid_quadrature8_predicted": 366.95697489017795,
+          "quadrature8_over_center": 0.9999363779575939,
+          "quadrature8_minus4_over8": -7.320899729690318e-10
+        },
+        {
+          "view": 3,
+          "original_center_predicted": 369.95612784356393,
+          "cpu_center_predicted": 369.95612771045,
+          "cuboid_quadrature4_predicted": 369.93801561869066,
+          "cuboid_quadrature8_predicted": 369.93801543702773,
+          "quadrature8_over_center": 0.999951042104548,
+          "quadrature8_minus4_over8": -4.910631481462303e-10
+        },
+        {
+          "view": 4,
+          "original_center_predicted": 375.5627991641758,
+          "cpu_center_predicted": 375.56279932847923,
+          "cuboid_quadrature4_predicted": 375.54335374611475,
+          "cuboid_quadrature8_predicted": 375.5433847814126,
+          "quadrature8_over_center": 0.9999483054575657,
+          "quadrature8_minus4_over8": 8.26410452787498e-08
+        },
+        {
+          "view": 5,
+          "original_center_predicted": 380.93007573477837,
+          "cpu_center_predicted": 380.9300759692724,
+          "cuboid_quadrature4_predicted": 380.91311527286507,
+          "cuboid_quadrature8_predicted": 380.91311295720413,
+          "quadrature8_over_center": 0.9999554694860333,
+          "quadrature8_minus4_over8": -6.079236595229131e-09
+        },
+        {
+          "view": 6,
+          "original_center_predicted": 382.5144676017346,
+          "cpu_center_predicted": 382.5144521426039,
+          "cuboid_quadrature4_predicted": 382.50801511587184,
+          "cuboid_quadrature8_predicted": 382.5080167068232,
+          "quadrature8_over_center": 0.9999831759669611,
+          "quadrature8_minus4_over8": 4.1592627415241305e-09
+        },
+        {
+          "view": 7,
+          "original_center_predicted": 382.0751708417635,
+          "cpu_center_predicted": 382.07517234118745,
+          "cuboid_quadrature4_predicted": 382.0603170083328,
+          "cuboid_quadrature8_predicted": 382.0603193267335,
+          "quadrature8_over_center": 0.9999611254131932,
+          "quadrature8_minus4_over8": 6.068153677731411e-09
+        },
+        {
+          "view": 8,
+          "original_center_predicted": 377.9178428831559,
+          "cpu_center_predicted": 377.91784302859384,
+          "cuboid_quadrature4_predicted": 377.9016852463933,
+          "cuboid_quadrature8_predicted": 377.9017009370035,
+          "quadrature8_over_center": 0.9999572867704235,
+          "quadrature8_minus4_over8": 4.152034820986509e-08
+        },
+        {
+          "view": 9,
+          "original_center_predicted": 373.14546373993505,
+          "cpu_center_predicted": 373.145463912765,
+          "cuboid_quadrature4_predicted": 373.12778121626707,
+          "cuboid_quadrature8_predicted": 373.1277920402225,
+          "quadrature8_over_center": 0.9999526407949404,
+          "quadrature8_minus4_over8": 2.9008708759227436e-08
+        },
+        {
+          "view": 10,
+          "original_center_predicted": 370.6069703655297,
+          "cpu_center_predicted": 370.60697129232017,
+          "cuboid_quadrature4_predicted": 370.57888521654866,
+          "cuboid_quadrature8_predicted": 370.5788787064122,
+          "quadrature8_over_center": 0.9999241984417886,
+          "quadrature8_minus4_over8": -1.756747846854e-08
+        },
+        {
+          "view": 11,
+          "original_center_predicted": 369.61509021980066,
+          "cpu_center_predicted": 369.6150750316723,
+          "cuboid_quadrature4_predicted": 369.60699883246167,
+          "cuboid_quadrature8_predicted": 369.60700037339774,
+          "quadrature8_over_center": 0.9999781538719061,
+          "quadrature8_minus4_over8": 4.169120354770957e-09
+        },
+        {
+          "view": 12,
+          "original_center_predicted": 370.95616177900445,
+          "cpu_center_predicted": 370.95616285594804,
+          "cuboid_quadrature4_predicted": 370.9306290260128,
+          "cuboid_quadrature8_predicted": 370.9306217881496,
+          "quadrature8_over_center": 0.9999311480159764,
+          "quadrature8_minus4_over8": -1.9512714173702723e-08
+        },
+        {
+          "view": 13,
+          "original_center_predicted": 373.7440359659588,
+          "cpu_center_predicted": 373.74403610761743,
+          "cuboid_quadrature4_predicted": 373.72727643497126,
+          "cuboid_quadrature8_predicted": 373.727283254305,
+          "quadrature8_over_center": 0.9999551755969489,
+          "quadrature8_minus4_over8": 1.8246818078072376e-08
+        },
+        {
+          "view": 14,
+          "original_center_predicted": 378.6443020172378,
+          "cpu_center_predicted": 378.64430205634454,
+          "cuboid_quadrature4_predicted": 378.6269081330336,
+          "cuboid_quadrature8_predicted": 378.6269244614156,
+          "quadrature8_over_center": 0.9999541057535145,
+          "quadrature8_minus4_over8": 4.312525324543617e-08
+        },
+        {
+          "view": 15,
+          "original_center_predicted": 382.7218820618069,
+          "cpu_center_predicted": 382.72188275504146,
+          "cuboid_quadrature4_predicted": 382.70618075062407,
+          "cuboid_quadrature8_predicted": 382.70618249335445,
+          "quadrature8_over_center": 0.9999589773608606,
+          "quadrature8_minus4_over8": 4.553703221240634e-09
+        },
+        {
+          "view": 16,
+          "original_center_predicted": 382.991818241595,
+          "cpu_center_predicted": 382.99180295752956,
+          "cuboid_quadrature4_predicted": 382.9842343653559,
+          "cuboid_quadrature8_predicted": 382.98423596280116,
+          "quadrature8_over_center": 0.9999802424107515,
+          "quadrature8_minus4_over8": 4.171046999009207e-09
+        },
+        {
+          "view": 17,
+          "original_center_predicted": 381.1757237413948,
+          "cpu_center_predicted": 381.17572381443466,
+          "cuboid_quadrature4_predicted": 381.1601876638559,
+          "cuboid_quadrature8_predicted": 381.16018498927406,
+          "quadrature8_over_center": 0.999959234483757,
+          "quadrature8_minus4_over8": -7.016949637246391e-09
+        },
+        {
+          "view": 18,
+          "original_center_predicted": 375.68733817844725,
+          "cpu_center_predicted": 375.6873396802062,
+          "cuboid_quadrature4_predicted": 375.670130566966,
+          "cuboid_quadrature8_predicted": 375.67015851017106,
+          "quadrature8_over_center": 0.999954267370176,
+          "quadrature8_minus4_over8": 7.438228568790924e-08
+        },
+        {
+          "view": 19,
+          "original_center_predicted": 370.0414264462953,
+          "cpu_center_predicted": 370.0414265274038,
+          "cuboid_quadrature4_predicted": 370.02484544974936,
+          "cuboid_quadrature8_predicted": 370.0248493674562,
+          "quadrature8_over_center": 0.9999552018807647,
+          "quadrature8_minus4_over8": 1.0587685853041092e-08
+        },
+        {
+          "view": 20,
+          "original_center_predicted": 367.01891989653666,
+          "cpu_center_predicted": 367.01892017299025,
+          "cuboid_quadrature4_predicted": 366.99529817219286,
+          "cuboid_quadrature8_predicted": 366.9952965262609,
+          "quadrature8_over_center": 0.9999356337086976,
+          "quadrature8_minus4_over8": -4.4848856674284995e-09
+        }
+      ],
+      "elapsed_seconds": 35.25883867405355
+    }
+  },
+  "consumed_matrix_sha256": {
+    "A218": "aedafbac55179da95ad287e752c745803510d3049c96340198102c95640561dd",
+    "A440": "a62d1c86fc93dec5990284fc4adc564cacf8b82ae24e10acdff67b8f40c123b4",
+    "C440to218": "8b15b804e0101636acade419eab5de9649da7c13f94d3ed7f9db3ab452c55059"
+  },
+  "binding_sha256": "b26456244ec922b8a06e94a5cc7803a26a9ba63415d5a9cc5deafb9d88430365",
+  "code_sha256": "5c4fe73fbcca37510eff530d7a0c2798e8ca4f291660f77e479f4e3973790967",
+  "elapsed_seconds": 119.23107239231467,
+  "cpu_readonly_rss_peak_bytes": 143282176,
+  "imaging_allocation_certificate": false,
+  "no_gpu_used": true,
+  "no_slurm_job_submitted": true,
+  "no_response_generated": true,
+  "no_observed_count_fit": true,
+  "no_production_input_modified": true,
+  "limitation": "4x4 and 8x8 XY Gauss quadrature plus exact piecewise-linear z averaging test only the frozen interpolation model. Convergence of these two quadratures is diagnostic, not a rigorous integration error bound or a physics calibration PASS."
+}

@@ -1,0 +1,7 @@
+FULL_MATRIX_CONSUMED A218 seconds 28.820678231306374
+A218 {"cpu_center_total": 13473.91178565524, "cuboid_quadrature4_total": 13473.67631928119, "cuboid_quadrature8_total": 13473.676770415212, "cuboid8_over_center": 0.9999825577572595, "quadrature8_minus4_over8": 3.348262162525348e-08, "actual_observed": 13060.0, "cuboid8_signed_bias": 0.0316750972752842, "elapsed_seconds": 38.814751824364066}
+FULL_MATRIX_CONSUMED A440 seconds 37.325856590643525
+A440 {"cpu_center_total": 11951.135619288232, "cuboid_quadrature4_total": 11950.680764534603, "cuboid_quadrature8_total": 11950.680947921623, "cuboid8_over_center": 0.9999619558022691, "quadrature8_minus4_over8": 1.5345319652076547e-08, "actual_observed": 12171.0, "cuboid8_signed_bias": -0.018101967963057873, "elapsed_seconds": 44.968652355484664}
+FULL_MATRIX_CONSUMED C440to218 seconds 27.489577426575124
+C440to218 {"cpu_center_total": 7498.176364320978, "cuboid_quadrature4_total": 7497.844269351077, "cuboid_quadrature8_total": 7497.844371392165, "cuboid8_over_center": 0.9999557235102667, "quadrature8_minus4_over8": 1.3609390000321373e-08, "actual_observed": 9869.0, "cuboid8_signed_bias": -0.24026300826910882, "elapsed_seconds": 35.25883867405355}
+READ_ONLY_DIAGNOSTIC_COMPLETE e7d701e0466ba5f6ae5679fdd39f67b0d5234e12e2df4a161dba4aff2d8f08c1

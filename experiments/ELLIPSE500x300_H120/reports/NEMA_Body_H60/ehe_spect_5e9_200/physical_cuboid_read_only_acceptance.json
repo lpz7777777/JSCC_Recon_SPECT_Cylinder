@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "scope": "Only identity, CPU interpolation sensitivity execution, and strict retrieval; original physical HOLD unchanged",
+  "key": "1b9a43962af5c315",
+  "science_job": 1677211,
+  "scientific_status": "HOLD",
+  "no_physical_or_reconstruction_submission": true,
+  "remote_before": {
+    "cuboid_fold.json": {
+      "sha256": "e7d701e0466ba5f6ae5679fdd39f67b0d5234e12e2df4a161dba4aff2d8f08c1",
+      "bytes": 26200
+    },
+    "execution.log": {
+      "sha256": "5c14463cb2bee570f638f923da95089dd4d117328d4f57cd7f5c2bf9feb7aaed",
+      "bytes": 1302
+    },
+    "binding.json": {
+      "sha256": "b26456244ec922b8a06e94a5cc7803a26a9ba63415d5a9cc5deafb9d88430365",
+      "bytes": 3149
+    },
+    "diagnose_ehe_cuboid_fold.py": {
+      "sha256": "5c4fe73fbcca37510eff530d7a0c2798e8ca4f291660f77e479f4e3973790967",
+      "bytes": 6620
+    },
+    "diagnostic_manifest.json": {
+      "sha256": "2685ba6e8c9cbae21b715a40b2935a950d0596431b77df95ecb183d9c4c7a090",
+      "bytes": 324
+    }
+  },
+  "remote_after_equal": true,
+  "launcher_sha256": "9234e17f79e3a9cc2966c233ab308a9ff7a15b7c14e0a004dc49f08713cb5e09",
+  "factor_manifest_sha256": {
+    "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 119.23107239231467,
+  "cpu_readonly_rss_peak_bytes": 143282176,
+  "imaging_allocation_certificate": false,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "original_audit_csv_sha256": "a0491975b7533b167e4e1c0ab67793094949723380e3236e75b13b5e3a231a18"
+}

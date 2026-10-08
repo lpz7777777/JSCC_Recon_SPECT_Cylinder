@@ -1,5 +1,9 @@
 # 本次实际运行簿
 
+2026-10-09 06:59（上海）新增只读源诊断：diagnose_ehe_source_window.py逐一展开原20视角注册源盒，并核对原旋转、Cartesian坐标和全部2312-bin窗/分辨率。218/440密度相对L2为1.1732e−16/8.1451e−17，插值旋转质心最大误差2.6483e−8mm；窗边界float32/float64最大差1.5871e−5keV，未发现明显配置误配。证明为physical_source_window_basis_audit.json，不代表物理通过。
+
+CPU只读诊断发布1b9a43962af5c315在本实验新目录执行，无GPU/Slurm作业或PE/Scatter/输运重算；全部三Cartesian的2312行/40层在敏感性分析所需读取中核对同批SHA。原20视角中心预测复核最大相对差4.1806e−8；3mm源盒XY采用4×4/8×8积分、z精确分段线性平均，A218/A440/C全局预测变化分别−0.001744%/−0.003804%/−0.004428%。C源盒平均预测7497.844371对9869仍低估24.0263%，现有插值模型内该效应不能解释约24%偏差。两组积分逐视角最大相对差1.6542e−7，不是严格积分误差界，也不排除响应网格/历史覆盖误差。实际退出0、119.231072秒、CPU RSS143282176字节；仅CPU诊断，不能作为成像资源证书。代码/binding/结果/原日志取回前后及本地SHA闭合，见physical_cuboid_read_only_acceptance.json及physical_cuboid_read_only目录。注册physical_cuboid_diagnostic_registration.json已complete/exit0，PID16828已实际退出，不重复启动或取回本分析。原22项HOLD、138720逐binUNDETERMINED及所有生产输入保持；下一步只做有新依据的响应积分/散射覆盖只读诊断。
+
 2026-10-09 06:17（上海）科学HOLD：物理作业1677211于05:46:29–05:52:37实际运行06:08，root/batch FAILED/1:0、extern COMPLETED/0:0并完全退出，异常明确为Physical response HOLD: 22 diagnostics。原JSON/完整CSV/日志取回前后及本地SHA一致，3mm源/原worker/科学执行代码/三Factor清单身份闭合。138783行全部观测与worker标准误差、原充分性/双门槛由verify_ehe_physical_hold.py只读独立复核；22项HOLD、138720逐binUNDETERMINED。C全局7498.176418对9869，−24.0229%/19.6482SE，19视角和全局HOLD；A218全局+3.1693%，视角13/14 HOLD；A440全局−1.8065%且各视角总计通过。Slurm MaxRSS13629532K/实际94500MiB为14.0848%，运行RSS6.2407%/GPU reserved8.0102%；不是OOM/超时。validation10/formal200未提交。已保留HOLD并做冻结源只读审计，具体物理偏差原因仍UNDETERMINED；不追加光子、调整窗/阈值/增益、重跑模拟/响应或开始下一种核。详见PHYSICAL_HOLD.md。
 
 2026-10-09 04:15（上海）完整转换交付：1677140 root/batch/extern实际COMPLETED/0:0，elapsed14:35；转换程序实际853.349197秒。全部12块和原两套完整Factor再次全成员SHA核验，源复用证明SHA仍为ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3，与真实探针一致。复用已验收的10层，仅转换剩余30层；40层C440→218完整Cartesian/Polar、S_full、20视角自身S_active、Params、whole geometry及Factor清单均完整生成。A218/A440清单SHA逐字与停止前相同，科学发布74e129c4460163c5及原计算块保持原身份，旧部分C文件继续留存。
@@ -75,7 +79,7 @@ compton-v5已转为每30分钟推进此EHE实验，保持本聊天、正常排�
 ## 后续必须完成
 
 1. 已完成两项实际吞吐试跑、几何/资源/SHA证据和有界全量提交；不得重复提交15633840或1672966。
-2. 实际200×25M新EHE输运及种子/视角/标签/取回与同步SHA已完成；继续唯一1672966，等待三套完整Cartesian/Polar/自身S成功退出并严格验收，不重算已完成输运。
-3. 真实源前向计数/串窗与独立worker统计审计；HOLD先诊断，未判定明确披露。
-4. 完整输入validation10并严格取回authority，随后唯一formal200/save10；40完整检查点和三路20帧，EHE218背景仅来自本次440最终图。
+2. 实际200×25M新EHE输运及种子/视角/标签/取回与同步SHA、完整三响应转换与身份验收均已完成；原1672966人工停止与新转换1677140成功分别留证，不重算或重复转换。
+3. 真实源前向计数/串窗与独立worker统计审计已实际HOLD；原证据可信，具体原因仍UNDETERMINED。只做有新依据的只读诊断，不重提1677211或以重算旧证据冒充推进。
+4. 仅原物理门控真实解除后，完整输入validation10并严格取回authority，随后唯一formal200/save10；40完整检查点和三路20帧，EHE218背景仅来自本次440最终图。
 5. 严格取回，运行真实比较，50/100/150/200主图、JSCC2000/10000参考、全部EHE20帧和JSCC200帧曲线、窗计数/串窗比例/灵敏度/截断、背景估计预算差异。完成科学与视觉QA、报告、SHA清单、审计后的Git推送，再暂停自动推进。
