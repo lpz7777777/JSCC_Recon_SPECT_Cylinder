@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "kind": "read_only_diagnostic_failure",
+  "job": 1672966,
+  "producer_release_key": "74e129c4460163c5",
+  "recorded_utc": "2026-10-08T15:24:50.957991+00:00",
+  "failed_auxiliary_steps": {
+    "1672966.102": [
+      "FAILED",
+      "1:0"
+    ]
+  },
+  "reason": "Only this explicitly identified read-only /proc smaps/stack inspection failed at Python syntax parsing; the batch producer remained RUNNING/0:0. Corrected inspection step 1672966.103 exited COMPLETED/0:0.",
+  "evidence_origin": "Assistant tool execution and exact generated command bytes; actual Slurm step accounting preserved separately",
+  "mutation_scope": "Local coordinator completion classification only; no deployed response producer, response output, source geometry, simulation, physics gate, validation or reconstruction changed",
+  "files": {
+    "diagnostic_step_1672966_102_command.txt": "f4debfd97d42cdfa673cb63b47f05ccea5db978577acb1e60550cd6eb4a2fd80",
+    "diagnostic_step_1672966_102_accounting.txt": "2f30802e604b0afe56f7add39da4e3386ad99d327face5c5d8aa79366f489a35"
+  },
+  "active_release_manifest_all_file_sha_verified": true,
+  "exclusion_scope": "Only exact auxiliary numeric step 1672966.102 with FAILED/1:0; all other root/batch/extern/worker/step failures remain fatal"
+}

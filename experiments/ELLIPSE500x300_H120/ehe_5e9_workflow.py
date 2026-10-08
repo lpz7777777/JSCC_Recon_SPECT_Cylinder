@@ -102,13 +102,16 @@ def query(c,job):
 
 def completed(c,job):
     text=query(c,job)
-    if any(line.split('|')[:3]==[str(job),'COMPLETED','0:0'] for line in text.splitlines()):return True,text
-    if any(any(s in line for s in ('FAILED','CANCELLED','TIMEOUT','OUT_OF_MEMORY','NODE_FAIL')) for line in text.splitlines()):raise RuntimeError('Failed stage retained; diagnose before repair:\n'+text)
-    import re
-    array={int(m[1]):line.split('|')[1:3] for line in text.splitlines()
-           if (m:=re.fullmatch(re.escape(str(job))+r'_(\d+)',line.split('|')[0]))}
-    if set(array)==set(range(200)) and all(value==['COMPLETED','0:0'] for value in array.values()):return True,text
-    return False,text
+    from ehe_slurm_status import stage_completed
+    diagnostic_steps={}
+    path=REPORT/f'diagnostic_step_{job}_acceptance.json'
+    if path.exists():
+        proof=read(path)
+        if not proof['passed'] or str(proof['job'])!=str(job) or proof['kind']!='read_only_diagnostic_failure':
+            raise ValueError('Invalid auxiliary diagnostic evidence')
+        verify_files(REPORT,proof['files'])
+        diagnostic_steps=proof['failed_auxiliary_steps']
+    return stage_completed(text,job,diagnostic_steps),text
 
 def submit(host,stage,script,minutes,array=None):
     path=REPORT/(stage+'_job.json')

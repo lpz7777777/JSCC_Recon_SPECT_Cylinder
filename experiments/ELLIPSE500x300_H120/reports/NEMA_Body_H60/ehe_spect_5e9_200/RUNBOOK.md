@@ -1,5 +1,13 @@
 # 本次实际运行簿
 
+2026-10-08 23:26（上海）更新：完整输运已验收；1672966实际仍RUNNING/0:0，Slurm elapsed23:33:20。12个PE/Scatter完整块已计算完成，A218/A440完整Cartesian/Polar/S/manifest已生成。C440→218的进程当前仍映射slab_0/response.sysmat，正在第一个10层块转换与共享盘写回，尚无自身S/manifest及response_summary。write_bytes从11:01UTC的25711796224增加到15:26UTC的28203347968，但写回计数并非剩余逻辑矩阵字节数，不能据此外推可靠结束时间。Slurm MaxRSS25972592K/实际94500MiB为26.8401%，尚未取得最终退出后的资源证书；物理门控、validation10和formal200尚未开始。
+
+### 只读诊断步骤与本地状态判断修复
+
+23:16上海的只读/proc smaps/stack检查因Python字符串换行语法错误在解析阶段退出，对应1672966.102/FAILED/1:0，elapsed0秒；更正后的同范围只读检查1672966.103实际COMPLETED/0:0。主作业与batch保持RUNNING/0:0，主响应进程没有取消或重启。原失败命令字节及实际完整Slurm记账分别保存在diagnostic_step_1672966_102_command.txt和diagnostic_step_1672966_102_accounting.txt，SHA钉在diagnostic_step_1672966_acceptance.json。
+
+原completed检查把任何失败辅助步骤当成主阶段失败。仅修改本地协调器：读取有SHA闭合的小诊断证明，只排除精确的1672966.102/FAILED/1:0；其他未登记数值步骤、主作业、batch、extern和200个worker的失败仍阻止推进。失败检查先于成功完成判定。7项状态测试实际通过，修复后advance实际退出0，仍未提交下一阶段，见workflow_status_repair_acceptance.json。远端74e129c4460163c5发布清单中全部冻结文件实际SHA一致，没有部署、覆盖生产代码、改变几何/物理/门槛或重复模拟/响应计算。全部原失败记录保留。此前10项科学合同测试不由这7项状态测试替代；完整输入validation10仍待实际运行。
+
 2026-10-08 08:44（上海）：完整EHE 5e9输运已成功退出、严格取回并同步SHA验收。三套完整响应1672966仍运行，真实源物理门控、validation10及formal200尚未完成，尚无EHE成像或物理性能结论。
 
 | 阶段 | 当前登记 | 实际状态与边界 |

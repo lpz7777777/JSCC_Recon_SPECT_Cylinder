@@ -1,0 +1,16 @@
+srun --jobid=1672966 --overlap -n1 /data/home/scxi717/.conda/envs/torch/bin/python -c 'from pathlib import Path
+p=Path('"'"'/proc/3581561'"'"')
+cmd=(p/'"'"'cmdline'"'"').read_bytes().replace(bytes([0]),b'"'"' '"'"').decode(errors='"'"'replace'"'"')
+assert '"'"'/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/releases/74e129c4460163c5'"'"' in cmd and '"'"'ehe_gpu_pipeline.py responses'"'"' in cmd
+text=(p/'"'"'smaps'"'"').read_text()
+block=[]
+for line in text.splitlines()+['"'"'sentinel'"'"']:
+ if line=='"'"'sentinel'"'"' or (line and line[0] in '"'"'0123456789abcdef'"'"' and '"'"'-'"'"' in line.split()[0]):
+  if block and '"'"'/responses/C440to218/'"'"' in block[0]:
+   print('"'"'
+'"'"'.join([block[0]]+[x for x in block[1:] if x.startswith(('"'"'Size:'"'"','"'"'Rss:'"'"','"'"'Shared_Dirty:'"'"','"'"'Private_Dirty:'"'"'))]))
+  block=[line]
+ else:block.append(line)
+try:print('"'"'KERNEL_STACK'"'"', (p/'"'"'stack'"'"').read_text())
+except PermissionError:print('"'"'KERNEL_STACK unavailable to user'"'"')
+'

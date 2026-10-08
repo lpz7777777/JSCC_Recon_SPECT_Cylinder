@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "recorded_utc": "2026-10-08T15:28:57.417462+00:00",
+  "scope": "Nine explicitly staged coordinator/test/documentation/small diagnostic evidence blobs before adding this record",
+  "audit": {
+    "checked_blobs": 9,
+    "total_blob_bytes": 74865,
+    "largest_blobs": [
+      [
+        39993,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py"
+        ]
+      ],
+      [
+        12731,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/diagnostic_step_1672966_102_accounting.txt"
+        ]
+      ],
+      [
+        9961,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        4929,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ],
+      [
+        2539,
+        [
+          "experiments/ELLIPSE500x300_H120/test_ehe_workflow_status.py"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "excluded": "No response matrices, slabs, transport CSV/NPZ, images, archives, binaries or credential files",
+  "policy": "5MiB maximum blob and credential filename/pattern checks; every staged source/evidence byte SHA verified before commit"
+}

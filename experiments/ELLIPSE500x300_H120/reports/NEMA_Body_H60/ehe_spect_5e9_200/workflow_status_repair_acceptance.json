@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "Local coordinator only; exactly identified read-only auxiliary step failure",
+  "recorded_utc": "2026-10-08T15:26:43.788745+00:00",
+  "job": 1672966,
+  "active_response_state": "RUNNING/0:0",
+  "actual_advance_exit": 0,
+  "new_stage_submitted": false,
+  "tests": {
+    "command": "python -X utf8 experiments/ELLIPSE500x300_H120/test_ehe_workflow_status.py",
+    "actual_tests_passed": 7
+  },
+  "diagnostic_evidence_sha256": "20a973b51c0e114b9c7f6dd3e4ac046f4d25b744a9dfb4bfddf3a0d79ad75ba6",
+  "code_sha256": {
+    "ehe_5e9_workflow.py": "cb54ef6ff14e47fb651cb1f43bd8dd3d6bf49264ca465c7cf9e49077d064a27b",
+    "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
+    "test_ehe_workflow_status.py": "6e0d5a96cffabea65e41f271520c456b0ccb081b25c3e42fe873eb98d640aad0"
+  },
+  "response_release": "74e129c4460163c5",
+  "response_release_deployed_files_sha_pass": true,
+  "physics_and_reconstruction_unchanged": true,
+  "final_response_acceptance": false
+}
