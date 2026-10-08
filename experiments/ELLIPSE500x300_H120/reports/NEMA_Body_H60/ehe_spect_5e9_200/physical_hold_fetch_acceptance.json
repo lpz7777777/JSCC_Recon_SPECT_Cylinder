@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "scope": "Strict retrieval and immutable input/exit identity of scientific HOLD; physical gate failed",
+  "job": 1677211,
+  "science_gate_passed": false,
+  "hold_count": 22,
+  "no_queue": true,
+  "accounting_file": "physical_1677211/accounting.txt",
+  "physical_audit_local": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\physical_1677211\\physical_audit.csv",
+  "remote_before": {
+    "physical_gate.json": {
+      "sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+      "bytes": 935
+    },
+    "physical_audit.csv": {
+      "sha256": "a0491975b7533b167e4e1c0ab67793094949723380e3236e75b13b5e3a231a18",
+      "bytes": 12006731
+    },
+    "physical.log": {
+      "sha256": "929fc5e37cf11daa450b01817816aaefcb9c9a082964f86832bcb72e6cfb133d",
+      "bytes": 791
+    },
+    "ehe_gpu_pipeline.py": {
+      "sha256": "f764712eee34de0329f821316cb13b9fd114183bad9b401c7c226f95f9d86f64",
+      "bytes": 11030
+    },
+    "ehe_common.py": {
+      "sha256": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+      "bytes": 7883
+    },
+    "truth_3mm.npz": {
+      "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+      "bytes": 123700
+    },
+    "config.json": {
+      "sha256": "c2ff235880e8213bf0c81da1d3e5de15d0a7dbb726e389f3bfb39c81920203c6",
+      "bytes": 2548
+    },
+    "collection.json": {
+      "sha256": "54146b05e864c12963ef6531223ac1cd60d86d86497f408aa26486885caff94a",
+      "bytes": 779534
+    },
+    "worker_counts.npz": {
+      "sha256": "bc4dc483373bc47a0315390e6766a2233d43515348a0437f95214396c257ba19",
+      "bytes": 169166
+    },
+    "A218/factor_manifest.json": {
+      "sha256": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+      "bytes": 1149
+    },
+    "A440/factor_manifest.json": {
+      "sha256": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+      "bytes": 1149
+    },
+    "C440to218/factor_manifest.json": {
+      "sha256": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a",
+      "bytes": 1155
+    }
+  },
+  "remote_after_equal": true,
+  "local_evidence_sha256": {
+    "physical_gate.json": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+    "physical_1677211\\physical.log": "929fc5e37cf11daa450b01817816aaefcb9c9a082964f86832bcb72e6cfb133d"
+  },
+  "accounting_sha256": "57720cb16efc1a53f67340ef6920d54cc42ab9f9f5cf1c995e9a21aa9a66d9a6",
+  "queue_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "data_csv_sha256": "a0491975b7533b167e4e1c0ab67793094949723380e3236e75b13b5e3a231a18",
+  "fetch_code_sha256": "c6fdbfdc664c888f5a2662991afd4c60a0921b9bae60e86ac27bc1cae8f1eba7",
+  "science_release_key": "74e129c4460163c5",
+  "response_root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses_conversion_b02df58a9d3fd48c",
+  "validation_submitted": false,
+  "formal_submitted": false,
+  "fetch_code_evidence_file": "physical_1677211/fetch_read_only.py"
+}

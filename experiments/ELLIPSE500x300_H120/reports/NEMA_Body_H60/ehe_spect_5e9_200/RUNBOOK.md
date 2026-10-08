@@ -1,5 +1,7 @@
 # 本次实际运行簿
 
+2026-10-09 06:17（上海）科学HOLD：物理作业1677211于05:46:29–05:52:37实际运行06:08，root/batch FAILED/1:0、extern COMPLETED/0:0并完全退出，异常明确为Physical response HOLD: 22 diagnostics。原JSON/完整CSV/日志取回前后及本地SHA一致，3mm源/原worker/科学执行代码/三Factor清单身份闭合。138783行全部观测与worker标准误差、原充分性/双门槛由verify_ehe_physical_hold.py只读独立复核；22项HOLD、138720逐binUNDETERMINED。C全局7498.176418对9869，−24.0229%/19.6482SE，19视角和全局HOLD；A218全局+3.1693%，视角13/14 HOLD；A440全局−1.8065%且各视角总计通过。Slurm MaxRSS13629532K/实际94500MiB为14.0848%，运行RSS6.2407%/GPU reserved8.0102%；不是OOM/超时。validation10/formal200未提交。已保留HOLD并做冻结源只读审计，具体物理偏差原因仍UNDETERMINED；不追加光子、调整窗/阈值/增益、重跑模拟/响应或开始下一种核。详见PHYSICAL_HOLD.md。
+
 2026-10-09 04:15（上海）完整转换交付：1677140 root/batch/extern实际COMPLETED/0:0，elapsed14:35；转换程序实际853.349197秒。全部12块和原两套完整Factor再次全成员SHA核验，源复用证明SHA仍为ed6a1c86b4aea011fe3cd14b550e186abf7a30387d193c0c38ca982857dbf4a3，与真实探针一致。复用已验收的10层，仅转换剩余30层；40层C440→218完整Cartesian/Polar、S_full、20视角自身S_active、Params、whole geometry及Factor清单均完整生成。A218/A440清单SHA逐字与停止前相同，科学发布74e129c4460163c5及原计算块保持原身份，旧部分C文件继续留存。
 
 2672672000字节Cartesian连续原子写出、fsync及完整读回SHA51.530601秒，1221105920字节Polar同流程21.123843秒；共3893777920字节/72.654444秒。文件SHA分别为8b15b804e0101636acade419eab5de9649da7c13f94d3ed7f9db3ab452c55059与e008242786cd1028837eae4b0a270aed63724208a09db201a3ca6a19281917b3。实际进程RSS4599107584/99090432000为4.6413%；退出后Slurm MaxRSS46647504896/实际94500MiB为47.0757%，均保留20%余量。这是端到端发布及读回耗时，不是共享盘硬件带宽测量。

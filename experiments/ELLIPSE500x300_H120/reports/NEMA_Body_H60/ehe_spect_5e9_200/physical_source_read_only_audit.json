@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "scope": "Immutable source inspection only; causes of HOLD remain unquantified",
+  "science_gate_passed": false,
+  "job": 1677211,
+  "files": {
+    "response:engine/common/detector_local_scatter.h": {
+      "sha256": "6b32134429fd9aac78f805c08d248f8239cda0832c6f79c603ecf53109c309c7",
+      "release_key": "74e129c4460163c5"
+    },
+    "response:engine/ScatterGen_RayTracing_CircularHole/scatter.cu": {
+      "sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+      "release_key": "74e129c4460163c5"
+    },
+    "transport:Geant4Code_EHE/src/SteppingAction.cc": {
+      "sha256": "b49f072e1366fd54fadcac5b28a4541291b44eb07bf0027e4d2f54dcd6613c6a",
+      "release_key": "fdfc7b4a75399b55"
+    },
+    "transport:Geant4Code_EHE/src/EventAction.cc": {
+      "sha256": "c7a9aebdcbe2cdc607fb6ac1de25c9382d69f8b1d856c1a7ffe0e48a8ded738e",
+      "release_key": "fdfc7b4a75399b55"
+    }
+  },
+  "observations": [
+    "Frozen transport sums all positive step energy deposits in each Scin bin, then applies energy broadening and window checks at event end.",
+    "Frozen detector-local scatter helper accounts for first-Compton recoil with escape and first-Compton followed by photoelectric absorption as windowed contributions.",
+    "Its second-Compton partition contributes to partition closure/probability diagnostics, but does not directly add a windowed contribution in that local helper.",
+    "The full Scatter kernel separately includes inter-crystal and collimator scatter terms; absence in the local helper is not a measured whole-response missing fraction.",
+    "C440to218 frozen switches enable local recoil and disable same-crystal full-energy photoelectric follow-up; the final C matrix is Scatter-only, as preregistered."
+  ],
+  "hypothesis": "A candidate for further read-only investigation is whether represented scatter histories and finite quadrature sufficiently reproduce cumulative per-crystal 440-to-218 deposited energies. These data do not assign the 24.02% shortfall to a specific mechanism.",
+  "no_physics_modified": true,
+  "no_window_modified": true,
+  "no_gain_fit": true,
+  "no_gpu_simulation_or_response_repeated": true
+}

@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "scope": "Read-only independent statistical and resource verification of scientific HOLD; no physical PASS",
+  "job": 1677211,
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "rows_verified": 138783,
+  "hold_count": 22,
+  "undetermined_bins": 138720,
+  "max_worker_se_absolute_error": 1.4210854715202004e-14,
+  "channels": {
+    "A218": {
+      "predicted": 13473.911708571413,
+      "observed": 13060.0,
+      "worker_standard_error": 123.55655475215478,
+      "signed_relative_bias": 0.03169308641435018,
+      "predicted_over_observed": 1.03169308641435,
+      "absolute_difference_worker_se": 3.349977744213484,
+      "global_status": "PASSED",
+      "view_hold": [
+        13,
+        14
+      ],
+      "status_counts": {
+        "PASSED": 19,
+        "UNDETERMINED": 46240,
+        "HOLD": 2
+      },
+      "bins_adequate": 0
+    },
+    "A440": {
+      "predicted": 11951.135706789497,
+      "observed": 12171.0,
+      "worker_standard_error": 103.66130747133506,
+      "signed_relative_bias": -0.018064603829636275,
+      "predicted_over_observed": 0.9819353961703637,
+      "absolute_difference_worker_se": 2.1209870739021985,
+      "global_status": "PASSED",
+      "view_hold": [],
+      "status_counts": {
+        "PASSED": 21,
+        "UNDETERMINED": 46240
+      },
+      "bins_adequate": 0
+    },
+    "C440to218": {
+      "predicted": 7498.176417862442,
+      "observed": 9869.0,
+      "worker_standard_error": 120.66344378753105,
+      "signed_relative_bias": -0.2402293628673177,
+      "predicted_over_observed": 0.7597706371326823,
+      "absolute_difference_worker_se": 19.648234027798825,
+      "global_status": "HOLD",
+      "view_hold": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "status_counts": {
+        "HOLD": 20,
+        "UNDETERMINED": 46240,
+        "PASSED": 1
+      },
+      "bins_adequate": 0
+    }
+  },
+  "resource": {
+    "actual_allocated_bytes": 99090432000,
+    "slurm_maxrss_bytes": 13956640768,
+    "slurm_maxrss_fraction": 0.14084751157407407,
+    "runtime": {
+      "rss_peak_bytes": 6183972864,
+      "host_allocated_bytes": 99090432000,
+      "rss_fraction": 0.06240736607142857,
+      "gpu_reserved_peak_bytes": 2696937472,
+      "gpu_total_bytes": 33668988928,
+      "gpu_reserved_fraction": 0.08010152837577957
+    },
+    "margin_passed": true,
+    "exit_state": "FAILED",
+    "exit_code": "1:0",
+    "reason": "Physical response HOLD"
+  },
+  "files": {
+    "physical_gate.json": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+    "physical_hold_fetch_acceptance.json": "0417e1d3aadb84cc9bcd95a0b0f491963ce371e131ea7324933295ab150edc4f",
+    "physical_1677211/view_global_audit.csv": "1a2883f28814d2623bf07facdcfc8f57df79e90dd3e2d6fba5da2b934bc7713e",
+    "physical_1677211/accounting.txt": "57720cb16efc1a53f67340ef6920d54cc42ab9f9f5cf1c995e9a21aa9a66d9a6"
+  },
+  "complete_audit_data_sha256": "a0491975b7533b167e4e1c0ab67793094949723380e3236e75b13b5e3a231a18",
+  "verifier_sha256": "e9e8cc890e1c1fa909222ee83cc51e6b210fa46d208ad410ba158be776f783fa",
+  "prediction_refitted": false,
+  "simulations_repeated": false,
+  "validation_submitted": false,
+  "formal_submitted": false,
+  "root_cause": "UNDETERMINED; systematic cross-window shortfall identified, no causal attribution from these totals alone"
+}

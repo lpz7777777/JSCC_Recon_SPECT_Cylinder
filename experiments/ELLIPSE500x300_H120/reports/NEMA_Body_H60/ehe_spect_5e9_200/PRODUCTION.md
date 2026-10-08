@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09 06:17上海：physical1677211真实科学HOLD，原JSON/CSV/日志与完整退出证据已经严格取回，见PHYSICAL_HOLD.md及physical_hold_fetch_acceptance.json/physical_hold_diagnosis.json。不要将FAILED/1:0当成可重提的计算故障，不重复advance旧计算阶段、重新fetch已验收阶段或提交重建；先读HOLD证据，仅做有依据的只读诊断，原门槛、源、模型及所有输出保持。
+
 2026-10-09 04:15上海：完整转换1677140已成功退出，三Factor身份/完整输出SHA/实际Slurm资源验收通过，后续物理门控唯一作业1677211。以physical_job.json及随后physical_gate.json为准；原响应1672966人工取消与新转换成功分别留证，禁止重启原模拟或PE/Scatter阶段。
 
 工作目录为仓库根。`ehe_5e9_workflow.py`提供`prepare/deploy/pilots/advance/status/fetch/compare`。
