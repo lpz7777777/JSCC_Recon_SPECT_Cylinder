@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09 07:21上海：新的本地CPU晶体对筛选复算与标量归一/条件累计能量分析已完成，见physical_scatter_diagnostic_acceptance.json、physical_pair_pruning_read_only.json、physical_scatter_primitives_read_only.json。筛选排除数全为0，标量归一差异约0.0015%；条件多次Compton算例不提供实测缺失机制份额，原HOLD未解除。不得重复这两项已完成诊断当作推进，也不得据此重提physical或提交validation10/formal200。后续只继续有新依据的有限积分、准直器筛选或累计散射历史覆盖只读诊断，不实现下一种核或改冻结模型。
+
 2026-10-09 06:59上海：源/窗身份只读核对与完整三Cartesian的源盒平均敏感性分析已完成并严格SHA取回，原科学HOLD未解除。physical_cuboid_diagnostic_registration.json已complete/exit0；read_only_source_fold_1b9a43962af5c315为CPU只读诊断新目录，不是新的物理/重建作业。不要重复执行/取回该诊断，不将其作为GPU资源或物理PASS。现有插值模型内的C平均变化仅−0.004428%，尚不能解释−24.02%偏差；具体响应原因仍待有依据的只读诊断，参见PHYSICAL_HOLD.md。
 
 2026-10-09 06:17上海：physical1677211真实科学HOLD，原JSON/CSV/日志与完整退出证据已经严格取回，见PHYSICAL_HOLD.md及physical_hold_fetch_acceptance.json/physical_hold_diagnosis.json。不要将FAILED/1:0当成可重提的计算故障，不重复advance旧计算阶段、重新fetch已验收阶段或提交重建；先读HOLD证据，仅做有依据的只读诊断，原门槛、源、模型及所有输出保持。

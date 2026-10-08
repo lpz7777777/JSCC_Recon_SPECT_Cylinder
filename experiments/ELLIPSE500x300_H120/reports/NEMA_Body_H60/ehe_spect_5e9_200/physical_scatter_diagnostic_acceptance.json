@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "Acceptance of newly executed local CPU pair-support and scalar/conditional-history diagnostics only",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "science_job": 1677211,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "code_and_result_sha256": {
+    "diagnose_ehe_pair_pruning.py": "e6cc4c53ac20c44739353205911fbb1970d510e1c5c33b375de3b904a7c014bb",
+    "physical_pair_pruning_read_only.json": "3611b7f5134daf88936a8c965e7f2ead6918a0574b9d514b541f43aa0ee90e31",
+    "diagnose_ehe_scatter_primitives.py": "5e9624da839501078ef0880cebab327ac989f9ad3dae33588189f02ac3092a8e",
+    "physical_scatter_primitives_read_only.json": "71c5ae760752aeccca8b448e280140e2cf3357b3f028424984cb8d086e537c3a"
+  },
+  "actual_pair_cpu_exit_code": 0,
+  "actual_scalar_cpu_exit_code": 0,
+  "actual_pair_elapsed_seconds": 10.608999999938533,
+  "source_dispatch_read_only": {
+    "frozen_scatter_sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+    "production_intercrystal_launch": "crystalScatterSurfaceSysMatCuda",
+    "legacy_crystalScatterSysMatCuda_launch_absent": true,
+    "production_collimator_launch": "collimatorScatterSysMatCuda",
+    "intercrystal_five_sigma_pair_support_source_lines": [
+      2980,
+      3126
+    ],
+    "collimator_two_sigma_prefilter_source_line": 3658,
+    "local_second_compton_partition_window_term_absent": true
+  },
+  "no_gpu_or_slurm_job_submitted": true,
+  "no_response_or_simulation_calculated": true,
+  "no_production_input_modified": true,
+  "limitations": "CPU reproduction is not recorded CUDA runtime flags, a bitwise GPU comparison or an imaging resource certificate. Conditional energy history is not observed and provides no pathway fraction. Neither diagnostic resolves the original 22 HOLD diagnostics or per-bin UNDETERMINED status."
+}

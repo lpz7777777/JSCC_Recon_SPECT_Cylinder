@@ -1,5 +1,7 @@
 # 本次实际运行簿
 
+2026-10-09 07:21（上海）新增只读筛选/归一/历史覆盖诊断：diagnose_ehe_pair_pruning.py本地CPU实际退出0、10.609秒，12种响应/10层块Params逐一绑定原保存收据，float32/float64各复算每种5343032个有序非自身晶体对；5σ筛选排除数全为0，最小保留余量41.9670keV，C最小151.0987keV。没有生成响应或采集CUDA运行标志。diagnose_ehe_scatter_primitives.py本地CPU实际退出0，原0.01rad角度归一分母与256/512点cosθ Gauss参考的218/440偏差为−0.0011147%/−0.0014842%，不是全有限积分误差界。条件440→340→222keV两次Compton算例在同一bin沉积100+118=218keV且末光子逃逸时，原窗接受概率参考为0.760968；局部第二Compton分区未计累计反冲窗项，但该算例没有本次测量路径或全局机制份额。完整Scatter还含晶体间/准直器项，具体24.02%偏差根因仍UNDETERMINED。新代码/输出SHA闭合与生产dispatch核对见physical_scatter_diagnostic_acceptance.json。原physical_gate SHA、22项HOLD、138720逐binUNDETERMINED保持；未提交任何GPU/Slurm/物理/验证/正式作业，不重复执行这两项已完成分析冒充推进。
+
 2026-10-09 06:59（上海）新增只读源诊断：diagnose_ehe_source_window.py逐一展开原20视角注册源盒，并核对原旋转、Cartesian坐标和全部2312-bin窗/分辨率。218/440密度相对L2为1.1732e−16/8.1451e−17，插值旋转质心最大误差2.6483e−8mm；窗边界float32/float64最大差1.5871e−5keV，未发现明显配置误配。证明为physical_source_window_basis_audit.json，不代表物理通过。
 
 CPU只读诊断发布1b9a43962af5c315在本实验新目录执行，无GPU/Slurm作业或PE/Scatter/输运重算；全部三Cartesian的2312行/40层在敏感性分析所需读取中核对同批SHA。原20视角中心预测复核最大相对差4.1806e−8；3mm源盒XY采用4×4/8×8积分、z精确分段线性平均，A218/A440/C全局预测变化分别−0.001744%/−0.003804%/−0.004428%。C源盒平均预测7497.844371对9869仍低估24.0263%，现有插值模型内该效应不能解释约24%偏差。两组积分逐视角最大相对差1.6542e−7，不是严格积分误差界，也不排除响应网格/历史覆盖误差。实际退出0、119.231072秒、CPU RSS143282176字节；仅CPU诊断，不能作为成像资源证书。代码/binding/结果/原日志取回前后及本地SHA闭合，见physical_cuboid_read_only_acceptance.json及physical_cuboid_read_only目录。注册physical_cuboid_diagnostic_registration.json已complete/exit0，PID16828已实际退出，不重复启动或取回本分析。原22项HOLD、138720逐binUNDETERMINED及所有生产输入保持；下一步只做有新依据的响应积分/散射覆盖只读诊断。

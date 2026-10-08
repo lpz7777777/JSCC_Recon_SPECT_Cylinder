@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "scope": "New local CPU pair-pruning, scalar angular-normalization and conditional energy-history diagnostics, acceptance and reports only; excludes production data, binaries, archives and secrets",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 9,
+    "total_blob_bytes": 81824,
+    "largest_blobs": [
+      [
+        19698,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        15108,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_pair_pruning_read_only.json"
+        ]
+      ],
+      [
+        11010,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        9749,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ],
+      [
+        9207,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_pair_pruning.py": {
+      "bytes": 6511,
+      "sha256": "e6cc4c53ac20c44739353205911fbb1970d510e1c5c33b375de3b904a7c014bb",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_scatter_primitives.py": {
+      "bytes": 4891,
+      "sha256": "5e9624da839501078ef0880cebab327ac989f9ad3dae33588189f02ac3092a8e",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 9207,
+      "sha256": "93f74130c999a358a5b88d96c1f15f9a124ab55f241812e5b7a7919a41de817d",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 11010,
+      "sha256": "9d4b40a475222d039e4c4f6cb3ecfd32825e7b778a53a92b4172aaeb3ffe8131",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 9749,
+      "sha256": "4f474e9ef29cccf8efa13d28d4d7bf46eaceb064cfb68f839b11bc063b892336",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 19698,
+      "sha256": "990fdf21437dad468da43bb8ce2f059e00bbe737605b15dca5b10db04f95b388",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_pair_pruning_read_only.json": {
+      "bytes": 15108,
+      "sha256": "3611b7f5134daf88936a8c965e7f2ead6918a0574b9d514b541f43aa0ee90e31",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_scatter_diagnostic_acceptance.json": {
+      "bytes": 1903,
+      "sha256": "2dcb5b6fb5f6c7804abbbee4786144ae30e9079ae8a10a3dbf812d4db8a1d617",
+      "raw_equal": true
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_scatter_primitives_read_only.json": {
+      "bytes": 3747,
+      "sha256": "71c5ae760752aeccca8b448e280140e2cf3357b3f028424984cb8d086e537c3a",
+      "raw_equal": true
+    }
+  },
+  "code_and_executed_evidence_sha_closed": true,
+  "actual_pair_and_scalar_cpu_exit_codes": [
+    0,
+    0
+  ],
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_or_reconstruction_job_submitted": true,
+  "limitation": "Pattern/size scan is a conservative guard, not a complete secret scanner; diagnostic PASS is not physical PASS."
+}

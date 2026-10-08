@@ -1,0 +1,323 @@
+{
+  "passed": true,
+  "scope": "CPU reproduction of the frozen crystal-pair pruning support arithmetic for all ordered detector pairs and registered slabs; not a GPU response or a physical PASS",
+  "scientific_status": "HOLD",
+  "physical_gate_pass_claimed": false,
+  "science_job": 1677211,
+  "source_code_sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+  "producer_release_key": "74e129c4460163c5",
+  "parameter_sha256": {
+    "params/A218/Params_Detector.dat": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+    "params/A218/Params_Image.dat": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+    "params/A218/Params_Physics.dat": "fcc8b091d2d3645f15af467a7a86227db282e4ef3f9735d4d074890b6402d15d",
+    "params/A440/Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+    "params/A440/Params_Image.dat": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+    "params/A440/Params_Physics.dat": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+    "params/C440to218/Params_Detector.dat": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+    "params/C440to218/Params_Image.dat": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+    "params/C440to218/Params_Physics.dat": "c9c3cc37b1c51e41744857372d545f49c61e708b8bc30460c5757d8bdc6c9bc6"
+  },
+  "channels": {
+    "A218": [
+      {
+        "slab": 0,
+        "registered_image_sha256": "37a693337c1bf92f9bdec12630e29c949b7c49073ed3119c1ffbb47126efc7a3",
+        "saved_receipt_sha256": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 78.74949645996094,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 78.74951560065091,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 1,
+        "registered_image_sha256": "1a4c39cac05a5b2ca6c00b5fda7532cff5dc45d587fd4f43291e989cdcf26780",
+        "saved_receipt_sha256": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 83.74159240722656,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 83.74155759411894,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 2,
+        "registered_image_sha256": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+        "saved_receipt_sha256": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 83.74159240722656,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 83.74155759411894,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 3,
+        "registered_image_sha256": "085f7345dfefc5e797a1733a522bc41bd13e444045bf631cf607c70c2f24df90",
+        "saved_receipt_sha256": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 78.74949645996094,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 78.74951560065091,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      }
+    ],
+    "A440": [
+      {
+        "slab": 0,
+        "registered_image_sha256": "37a693337c1bf92f9bdec12630e29c949b7c49073ed3119c1ffbb47126efc7a3",
+        "saved_receipt_sha256": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 41.967041015625,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 41.96707537579971,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 1,
+        "registered_image_sha256": "1a4c39cac05a5b2ca6c00b5fda7532cff5dc45d587fd4f43291e989cdcf26780",
+        "saved_receipt_sha256": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 57.28875732421875,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 57.288768859172194,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 2,
+        "registered_image_sha256": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+        "saved_receipt_sha256": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 57.28875732421875,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 57.288768859172194,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 3,
+        "registered_image_sha256": "085f7345dfefc5e797a1733a522bc41bd13e444045bf631cf607c70c2f24df90",
+        "saved_receipt_sha256": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 41.967041015625,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 41.96707537579971,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      }
+    ],
+    "C440to218": [
+      {
+        "slab": 0,
+        "registered_image_sha256": "37a693337c1bf92f9bdec12630e29c949b7c49073ed3119c1ffbb47126efc7a3",
+        "saved_receipt_sha256": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 151.09866333007812,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 151.0986584192113,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 1,
+        "registered_image_sha256": "1a4c39cac05a5b2ca6c00b5fda7532cff5dc45d587fd4f43291e989cdcf26780",
+        "saved_receipt_sha256": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 152.95877075195312,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 152.95878739104955,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 2,
+        "registered_image_sha256": "63327ce3f7ada0211b5c6d54034e96e96ed5fdd32eb31a319a6a11634a08580e",
+        "saved_receipt_sha256": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 152.95877075195312,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 152.95878739104955,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      },
+      {
+        "slab": 3,
+        "registered_image_sha256": "085f7345dfefc5e797a1733a522bc41bd13e444045bf631cf607c70c2f24df90",
+        "saved_receipt_sha256": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16",
+        "cpu_float32": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 151.09866333007812,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374206542969
+        },
+        "cpu_float64": {
+          "ordered_off_diagonal_pairs": 5343032,
+          "rejected_by_support_test": 0,
+          "retained_by_support_test": 5343032,
+          "within_1e_minus3_keV_of_decision": 0,
+          "minimum_retained_support_margin_keV": 151.0986584192113,
+          "closest_rejected_support_margin_keV": null,
+          "fov_bound_radius_mm": 356.6374209193421
+        },
+        "aggregate_pruned_counts_equal": true
+      }
+    ]
+  },
+  "elapsed_seconds": 10.608999999938533,
+  "code_sha256": "e6cc4c53ac20c44739353205911fbb1970d510e1c5c33b375de3b904a7c014bb",
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "no_response_calculated": true,
+  "no_production_input_modified": true,
+  "no_observed_count_fit": true,
+  "limitation": "CPU NumPy float32 and float64 support arithmetic is not a capture of GPU runtime flags. Matching counts do not imply bitwise agreement. It audits pair eligibility only, not surface/position quadrature, material attenuation, Gaussian collimator cutoff, multiple-interaction histories, or measured pathway fractions."
+}
