@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09人类最新指令已明确授权按原方法继续200次重建，并接受现有物理偏差在报告中披露。physical_continuation_policy.json保留并绑定原22项HOLD；reconstruction_execution_freeze.json登记独立执行发布。工作流存在此冻结时只推进原输入validation10→严格authority→formal200→严格fetch，跳过已退出的physical1677211，不重跑输运/响应/转换。原科学代码发布及physical_gate.json保持原字节；新执行发布仅改变授权检查和结果物理状态标记，计算主体和原MLEM辅助SHA不变。所有数值/资源/背景/输入SHA验收照常；不能把authority的数值passed解释成physical_calibration_passed。compton-v5仍PAUSED。
+
 2026-10-09 09:48上海：新的纯几何晶体间路径检查已完成，见physical_intercrystal_path_geometry_read_only.json/physical_intercrystal_path_geometry_acceptance.json。复用已验收表面位移类别与缓存日志，只核对变化面节点与固定中心中间路径的几何差异，不计算衰减/散射贡献或生成响应；全部2311中心段/7042节点的完整箱体交集参考通过。毫米差值和节点数量不是完整计数误差或机制份额，原HOLD未解除。不重复本诊断，不实现修正核、改冻结模型或重提physical/validation10/formal200；后续仅有新依据的授权范围内只读诊断。
 
 2026-10-09 09:19上海：仅几何的晶体表面固体角检查已实际完成，见physical_surface_solid_angle_read_only.json/physical_surface_solid_angle_acceptance.json。全部位移类别/有序对覆盖，原近8×8/远1×1保留，没有计算散射核或生成响应。解析/球面三角形/Gauss参考相符，但面内窗/衰减/吸收变化未评估，几何误差不能作为完整响应误差界或解除HOLD。不得重复此检查、改冻结模型或重提physical/validation10/formal200；后续仅有新依据的授权范围内只读诊断。

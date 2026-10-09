@@ -365,6 +365,9 @@ def collect(c):
         collection_sha256=digest(local/'collection.json'),seed_first=records[0]['seed'],seed_last=records[-1]['seed']))
 
 def advance():
+    if (REPORT/'reconstruction_execution_freeze.json').exists():
+        from ehe_reconstruction_workflow import advance_reconstruction
+        return advance_reconstruction()
     if not (REPORT/'transport_pilot_job.json').exists():pilots();return
     with connection('maty') as c:
         pilot=read(REPORT/'transport_pilot_job.json');done,_=completed(c,pilot['job'])
@@ -438,21 +441,29 @@ print('ACTUAL_TRANSPORT_PROBE_SHA_PASS')
 
 def submit_reconstruction(mode,limit,minutes):
     from ehe_conversion_workflow import response_root
-    b=base('gpu');r=release('gpu');iterations=10 if mode=='validation' else 200
+    from ehe_reconstruction_workflow import execution_release,policy_argument,binding
+    b=base('gpu');r=execution_release();iterations=10 if mode=='validation' else 200
     script=env_gpu()+f'cd {q(r)}\n'+q(GPU_PYTHON)+f' run_ehe_reconstruction.py --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --output {q(b+"/results/"+mode)} --mode {mode} --iterations {iterations} --limit {limit}'
     if mode=='formal':script+=' --authority '+q(b+'/validation_authority.json')
-    submit('gpu',mode,script+'\n',minutes)
+    script+=policy_argument()
+    record=submit('gpu',mode,script+'\n',minutes)
+    execution=binding()
+    if execution is not None:
+        record.update(release_key=execution['release_key'],producer_release_key=execution['producer_release_key'],
+                      physical_policy_sha256=execution['policy_sha256'],physical_calibration_passed=False)
+        write(REPORT/(mode+'_job.json'),record)
 
 def fetch(mode):
     from ehe_conversion_workflow import response_root
-    job=read(REPORT/(mode+'_job.json'))['job'];b=base('gpu');r=release('gpu')
+    from ehe_reconstruction_workflow import execution_release,policy_argument
+    job=read(REPORT/(mode+'_job.json'))['job'];b=base('gpu');r=execution_release()
     with connection('gpu') as c:
         done,accounting=completed(c,job)
         if not done:raise ValueError('Stage must fully exit before strict fetch')
         # Freeze a separate read-only acceptance bundle. Never overwrite sources
         # in the release used by the running or completed simulation/response job.
         import hashlib,json,shutil
-        sources={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py')}
+        sources={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py','ehe_execution_policy.py')}
         key=hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()[:16]
         audit=DATA/'verification_releases'/key;audit.mkdir(parents=True,exist_ok=True)
         for name in sources:
@@ -471,6 +482,7 @@ def fetch(mode):
         with c.open_sftp() as s:
             with s.open(accounting_path,'w') as f:f.write(accounting)
         verify=q(GPU_PYTHON)+f' verify_ehe.py --verification-manifest {q(audit_remote+"/verification_manifest.json")} --result {q(b+"/results/"+mode)} --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --accounting {q(accounting_path)} --output {q(b+"/"+mode+"_authority.json")}'
+        verify+=policy_argument()
         print(command(c,'cd '+q(audit_remote)+' && '+verify,1800))
         proof=get_json(c,b+'/'+mode+'_authority.json');local=DATA/'results'/mode;local.mkdir(parents=True,exist_ok=True)
         if proof['verification_source_sha256']!=sources or proof['verification_manifest_sha256']!=digest(manifest_path):raise ValueError('Actual read-only verifier identity differs')

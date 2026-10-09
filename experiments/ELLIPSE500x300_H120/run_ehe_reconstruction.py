@@ -6,18 +6,20 @@ import torch
 from ehe_common import *
 from torch_active_operator import ActiveGeometry,ViewResponse,forward_project,single_mlem
 from single_checkpoint_mlem import single_mlem_checkpointed
+from ehe_execution_policy import physical_permission
 
 def reconstruct(a):
     policy(a.mode,a.iterations,10);r=a.release.resolve();root=a.responses.resolve();out=a.output.resolve()
     freeze=read(r/'release_manifest.json');verify_files(r,freeze['sha256'])
     gate=read(a.physical/'physical_gate.json')
-    if not gate['passed']:raise ValueError('Physical HOLD blocks reconstruction')
+    permission=physical_permission(a.physical,a.counts,root,freeze,getattr(a,'physical_policy',None))
     verify_files(a.physical,gate['files'])
     collection=read(a.counts/'collection.json');verify_files(a.counts,collection['files'])
     if a.mode=='formal':
         authority=read(a.authority)
         if not authority['passed'] or authority['mode']!='validation' or authority['release_key']!=freeze['release_key'] or authority['physical_gate_sha256']!=digest(a.physical/'physical_gate.json'):raise ValueError('Actual validation authority differs')
         if authority['counts_sha256']!=digest(a.counts/'collection.json') or authority['factor_sha256']!={n:digest(root/n/'factor_manifest.json') for n in RESPONSES}:raise ValueError('Validation input identity differs')
+        if any(authority.get(k)!=v for k,v in permission.items()):raise ValueError('Validation continuation identity differs')
     out.mkdir(parents=True,exist_ok=False);alloc=allocation();write(out/'allocation.json',alloc)
     geometry=ActiveGeometry.from_npz(r/'whole_geometry.npz','cuda');g=np.load(r/'whole_geometry.npz');active=g['active_indices']
     if len(active)!=78920:raise ValueError('Whole active basis differs')
@@ -70,11 +72,13 @@ def reconstruct(a):
         physical_gate_sha256=digest(a.physical/'physical_gate.json'),geometry_sha256=digest(r/'whole_geometry.npz'),tests=tests,
         phase_seconds=times,resources=resources_seen,allocation=alloc,started_epoch=started,finished_epoch=time.time(),
         background_source='this EHE final440 single image; fixed additive Poisson term',baseline_helper_sha256={n:digest(r/n) for n in ('torch_active_operator.py','single_checkpoint_mlem.py')})
+    record.update(permission)
     write(out/'run_manifest.json',record)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--release',type=Path,required=True);p.add_argument('--responses',type=Path,required=True);p.add_argument('--counts',type=Path,required=True);p.add_argument('--physical',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--mode',choices=['validation','formal'],required=True);p.add_argument('--iterations',type=int,required=True);p.add_argument('--limit',type=int,required=True);p.add_argument('--authority',type=Path)
+    p.add_argument('--physical-policy',type=Path)
     a=p.parse_args()
     try:reconstruct(a)
     except BaseException as e:

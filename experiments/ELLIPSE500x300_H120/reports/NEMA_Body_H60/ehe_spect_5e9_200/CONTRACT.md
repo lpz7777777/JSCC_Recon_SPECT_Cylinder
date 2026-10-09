@@ -1,5 +1,9 @@
 # 科学与执行合同
 
+## 2026-10-09人类授权补充（优先于下方历史门控要求）
+
+用户明确要求忽略串窗低估、按原方法继续，并在范围确认中选择继续200次重建且将现有物理偏差保留在报告。[physical_continuation_policy.json](physical_continuation_policy.json)逐SHA绑定原HOLD、原5e9观测、三套完整Factor及原MLEM辅助代码，仅授权validation10/formal200。物理校准保持未通过，原22项HOLD和138720逐binUNDETERMINED不更名、不覆盖；允许以已知物理偏差的研究结果继续计算。原完整输入数值验证、实际资源、严格取回、源/几何/矩阵/背景身份和图像QA要求仍有效。定时任务保持暂停。
+
 ## 身份
 
 - H60真实3D球体：`generated/NEMA_Body_H60/truth_3mm.npz`，SHA256 `2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af`；ROI依据既有`reports/NEMA_Body_H60/manifest.json`。

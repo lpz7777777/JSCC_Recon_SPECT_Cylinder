@@ -3,6 +3,7 @@ import argparse,math,re
 from pathlib import Path
 import numpy as np
 from ehe_common import *
+from ehe_execution_policy import physical_permission
 
 def source_macro_matches(original,actual):
     # The frozen launcher reads ASCII text and writes it on Linux. Only newline
@@ -59,7 +60,7 @@ def operator_closure(result,release,responses,geometry):
         method='Unmodified frozen ActiveGeometry, all rows/all views, CPU row blocks; no image rescaling',
         elapsed_seconds=time.monotonic()-started,imaging_resource_certificate=False)
 
-def verify(result,release,responses,counts,physical,accounting):
+def verify(result,release,responses,counts,physical,accounting,physical_policy=None):
     run=read(result/'run_manifest.json');policy(run['mode'],run['iterations'],run['save_step'])
     release_manifest=read(release/'release_manifest.json');verify_files(release,release_manifest['sha256'])
     if run['release_key']!=release_manifest['release_key']:raise ValueError('Release differs')
@@ -82,7 +83,8 @@ def verify(result,release,responses,counts,physical,accounting):
         if read(folder/'receipt.json')!=receipt:raise ValueError('Aggregated worker receipt differs')
         if digest(folder/'source.mac')!=receipt['actual_macro_sha256'] or not source_macro_matches(original,folder/'source.mac'):raise ValueError('Actual source content differs from frozen macro')
     gate=read(physical/'physical_gate.json');verify_files(physical,gate['files'])
-    if not gate['passed']:raise ValueError('Physical HOLD')
+    permission=physical_permission(physical,counts,responses,release_manifest,physical_policy)
+    if any(run.get(k)!=v for k,v in permission.items()):raise ValueError('Recorded continuation permission differs')
     if gate['collection_sha256']!=digest(counts/'collection.json') or gate['source_sha256']!=config['truth_sha256']:raise ValueError('Physical source/observation identity differs')
     for name in RESPONSES:
         f=read(responses/name/'factor_manifest.json');verify_files(responses/name,f['files'])
@@ -127,10 +129,11 @@ def verify(result,release,responses,counts,physical,accounting):
     return dict(passed=True,mode=run['mode'],release_key=run['release_key'],frames_per_channel=frames,checkpoints=checkpoints,
         iterations=run['iterations'],counts_sha256=run['counts_sha256'],physical_gate_sha256=run['physical_gate_sha256'],factor_sha256=run['factor_sha256'],
         phase_seconds=run['phase_seconds'],slurm_maxrss_bytes=maxrss,accounting=accounting,operator_closure=closure,
-        verification_source_sha256={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py')},files=hashes(result))
+        verification_source_sha256={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py','ehe_execution_policy.py')},files=hashes(result),**permission)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--result',type=Path,required=True);p.add_argument('--release',type=Path,required=True);p.add_argument('--responses',type=Path,required=True);p.add_argument('--counts',type=Path,required=True);p.add_argument('--physical',type=Path,required=True);p.add_argument('--accounting',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--verification-manifest',type=Path,required=True)
+    p.add_argument('--physical-policy',type=Path)
     a=p.parse_args();verifier=read(a.verification_manifest);verify_files(HERE,verifier['files'])
-    proof=verify(a.result,a.release,a.responses,a.counts,a.physical,a.accounting.read_text());proof['verification_manifest_sha256']=digest(a.verification_manifest)
+    proof=verify(a.result,a.release,a.responses,a.counts,a.physical,a.accounting.read_text(),a.physical_policy);proof['verification_manifest_sha256']=digest(a.verification_manifest)
     write(a.output,proof);print('EHE_VERIFIED',proof['mode'])

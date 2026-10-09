@@ -1,0 +1,19 @@
+{
+  "scope": "Explicitly authorized execution policy and immutable original algorithm; numerical validation still running",
+  "physical_calibration_passed": false,
+  "execution_release_key": "064404727f0e22b1",
+  "producer_release_key": "74e129c4460163c5",
+  "scientific_reconstruction_body_sha256": "715df33f6888632047ec0fd722ea04765e6d7f084bc8daff7faaa915775d9898",
+  "original_hold_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "policy_sha256": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441",
+  "files": {
+    "physical_continuation_policy.json": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441",
+    "reconstruction_execution_freeze.json": "e26746c908c66626049fce033321789a2c4376598a81a719a6fdd3c02fbb7332",
+    "validation_job.json": "51b650dcacc479ad7e7f0ace16ac934fdc9d71e8642182b3cd019fb259058ece"
+  },
+  "registered_validation_job": 1679300,
+  "local_contract_tests": 31,
+  "actual_full_input_validation_passed": false,
+  "automation_status": "PAUSED",
+  "recorded_utc": "2026-10-09T06:56:14.186365+00:00"
+}

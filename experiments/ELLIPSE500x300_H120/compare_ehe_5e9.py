@@ -62,6 +62,11 @@ def compare(job=None):
     if job is not None and int(job)!=registered:raise ValueError('Requested job differs from latest formal registration')
     proof=read(REPORT/'formal_summary.json')
     if not proof['passed'] or proof['mode']!='formal' or proof['iterations']!=200 or proof['frames_per_channel']!=20:raise ValueError('Actual EHE200 formal acceptance required')
+    def save_figure(fig,name):
+        if proof.get('physical_calibration_passed') is False and not name.startswith('jscc_long_reference_'):
+            title=fig._suptitle.get_text() if fig._suptitle is not None else ''
+            fig.suptitle((title+'\n' if title else '')+'EHE original response: physical audit HOLD; human-authorized research reconstruction',fontsize=10)
+        fig.savefig(output/name,dpi=140)
     result=DATA/'results/formal';verify_files(result,proof['files'])
     reference=reference_evidence()
     jscc=HERE/'generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy'
@@ -158,7 +163,7 @@ def compare(job=None):
                     if col==0:axes[row,col].set_ylabel(system+'\n'+c,fontsize=8)
             fig.colorbar(color,ax=axes,shrink=.6,label='gamma density / actual emitted-source background density; no fitted gain')
             fig.suptitle(f'EHE / JSCC {category} {kind}; crop0, no smoothing; 218 background budgets differ')
-            fig.savefig(output/f'{category}_{kind}.png',dpi=140);plt.close(fig)
+            save_figure(fig,f'{category}_{kind}.png');plt.close(fig)
     for kind,(select,ex) in views.items():
         pairs=[(s,c) for group in groups.values() for s,c in group if s=='JSCC']
         fig,axes=plt.subplots(len(pairs),3,figsize=(12,len(pairs)*2.8),layout='constrained')
@@ -166,21 +171,21 @@ def compare(job=None):
             for col,im in enumerate([source[system][energy(c)],selected[system,c,2000],selected[system,c,10000]]):
                 color=axes[row,col].imshow(select(im),origin='lower',extent=ex,cmap='gray_r',vmin=0,vmax=10,interpolation='nearest');axes[row,col].set(aspect='equal',title=('truth','JSCC2000','JSCC10000')[col])
                 if col==0:axes[row,col].set_ylabel(c,fontsize=8)
-        fig.colorbar(color,ax=axes,shrink=.6,label='source density scale');fig.savefig(output/f'jscc_long_reference_{kind}.png',dpi=140);plt.close(fig)
+        fig.colorbar(color,ax=axes,shrink=.6,label='source density scale');save_figure(fig,f'jscc_long_reference_{kind}.png');plt.close(fig)
     for category,pairs in groups.items():
         fig,axes=plt.subplots(2,3,figsize=(15,8),layout='constrained')
         for system,c in pairs:
             r=[v for v in (rows if system=='EHE' else jr) if v['channel']==c and int(v['iteration'])<=200];label=system+' '+c
             for ax,key in zip(axes.flat,('background_cv','max_density','peak_background_ratio','source_z_leakage','p999_density','integral_recovery')):
                 ax.plot([int(v['iteration']) for v in r],[float(v[key]) for v in r],label=label);ax.set(title=key,xlabel='iteration');ax.grid(alpha=.2)
-        axes[0,0].legend(fontsize=6);fig.savefig(output/f'{category}_native_curves.png',dpi=140);plt.close(fig)
+        axes[0,0].legend(fontsize=6);save_figure(fig,f'{category}_native_curves.png');plt.close(fig)
         fig,axes=plt.subplots(1,2,figsize=(14,5),layout='constrained')
         for system,c in pairs:
             r=[v for v in (spheres if system=='EHE' else js) if v['channel']==c and int(v['iteration'])<=200]
             for d in sorted({int(v['diameter_mm']) for v in r}):
                 rr=[v for v in r if int(v['diameter_mm'])==d]
                 for ax,key in zip(axes,('crc','cnr')):ax.plot([int(v['iteration']) for v in rr],[float(v[key]) for v in rr],label=f'{system} {c} {d}mm');ax.set(title=key,xlabel='iteration');ax.grid(alpha=.2)
-        axes[0].legend(fontsize=5);fig.savefig(output/f'{category}_crc_cnr.png',dpi=140);plt.close(fig)
+        axes[0].legend(fontsize=5);save_figure(fig,f'{category}_crc_cnr.png');plt.close(fig)
     disclosure=dict(physical_units='gamma/mm3; sums are not Ac225 activity',background_budgets={'EHE':'440 single final200','JSCC':'440 single final10000'},
         density_scales=scale,primary_counts=counts,reference_jscc_job=1669255,selected_iterations=ITERATIONS,jscc_supplement=[2000,10000],
         actual_window_counts={'EHE':window_report,'JSCC':reference['actual_window_counts']},sensitivity_comparison=sensitivity_report,
@@ -192,6 +197,12 @@ def compare(job=None):
         mip_z_mm=[-36,36],whole_cell_tiny_mass_metric='not applicable',
         unknown_joint_categories=read(previous/'comparison_1669255/comparison_report.json')['unresolved_independent_joint_categories'],
         limits=['Same iteration does not imply same convergence','Different detector coverage/materials; truncation is not an algorithm effect','Two research vacuum-source models; no real-device claim'])
+    disclosure.update(physical_calibration_passed=proof.get('physical_calibration_passed',True),
+        execution_authorized_under_known_physics_mismatch=proof.get('execution_authorized_under_known_physics_mismatch',False),
+        physical_policy_sha256=proof.get('physical_policy_sha256'),physical_gate_sha256=proof['physical_gate_sha256'])
+    if proof.get('physical_calibration_passed') is False:
+        disclosure['limits'].append('Original physical audit remains HOLD (22 diagnostics; 138720 per-bin UNDETERMINED); numerical acceptance is not physical calibration')
+        shutil.copy2(REPORT/'physical_continuation_policy.json',output/'physical_continuation_policy.json')
     write(output/'comparison_report.json',disclosure);shutil.copy2(REPORT/'projection_truncation.json',output/'projection_truncation.json');shutil.copy2(DATA/'physical/physical_gate.json',output/'physical_gate.json');shutil.copy2(DATA/'physical/physical_audit.csv',output/'physical_audit.csv')
     shutil.copy2(__file__,output/'compare_ehe_5e9.py')
     write(output/'artifact_manifest.json',dict(files=hashes(output)))

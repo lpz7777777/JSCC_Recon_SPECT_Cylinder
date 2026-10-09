@@ -1,0 +1,21 @@
+{
+  "release_key": "064404727f0e22b1",
+  "producer_release_key": "74e129c4460163c5",
+  "payload_dir": "reconstruction_releases\\064404727f0e22b1",
+  "root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/reconstruction_releases/064404727f0e22b1",
+  "sha256": {
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "config.json": "c2ff235880e8213bf0c81da1d3e5de15d0a7dbb726e389f3bfb39c81920203c6",
+    "run_ehe_reconstruction.py": "5e044376b56206907368a0cce2fdadee2514e5ca29c67b67cf5eec79f4ecbe76",
+    "ehe_execution_policy.py": "93e398f3dad7cbe5665e33e0e08b714a4b2fdecd37f3a77a6b5803e1f2a30e21",
+    "physical_continuation_policy.json": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441"
+  },
+  "manifest_sha256": "efd0fbe7d15a423d4bf43969181b33d174e4b71d0e6c6f9263244cbb65184acf",
+  "policy_sha256": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441",
+  "scientific_reconstruction_body_sha256": "715df33f6888632047ec0fd722ea04765e6d7f084bc8daff7faaa915775d9898",
+  "original_producer_source_sha256": "9e376c42b612739c0b976b6202a67353b4cdeb555f4b3fe94fe91787be17d132"
+}
