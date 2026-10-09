@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09 09:48上海：新的纯几何晶体间路径检查已完成，见physical_intercrystal_path_geometry_read_only.json/physical_intercrystal_path_geometry_acceptance.json。复用已验收表面位移类别与缓存日志，只核对变化面节点与固定中心中间路径的几何差异，不计算衰减/散射贡献或生成响应；全部2311中心段/7042节点的完整箱体交集参考通过。毫米差值和节点数量不是完整计数误差或机制份额，原HOLD未解除。不重复本诊断，不实现修正核、改冻结模型或重提physical/validation10/formal200；后续仅有新依据的授权范围内只读诊断。
+
 2026-10-09 09:19上海：仅几何的晶体表面固体角检查已实际完成，见physical_surface_solid_angle_read_only.json/physical_surface_solid_angle_acceptance.json。全部位移类别/有序对覆盖，原近8×8/远1×1保留，没有计算散射核或生成响应。解析/球面三角形/Gauss参考相符，但面内窗/衰减/吸收变化未评估，几何误差不能作为完整响应误差界或解除HOLD。不得重复此检查、改冻结模型或重提physical/validation10/formal200；后续仅有新依据的授权范围内只读诊断。
 
 2026-10-09 08:47上海：原运行散射分量摘要与近/远表面采样几何只读分析已完成，见physical_scatter_runtime_read_only.json/physical_scatter_runtime_acceptance.json。复用缓存日志与冻结Params，不生成响应、不评价散射核或重新提取日志；原未加权分量总和及晶体对数量不表示源加权计数、实测机制份额或积分误差。独立分量矩阵未保存，不能从标量总和恢复它们，也不得通过重跑PE/Scatter补出或调整分量绕过HOLD。原门槛保持；不重复本摘要/几何分类当作推进，后续仅有新依据的授权范围内只读诊断。

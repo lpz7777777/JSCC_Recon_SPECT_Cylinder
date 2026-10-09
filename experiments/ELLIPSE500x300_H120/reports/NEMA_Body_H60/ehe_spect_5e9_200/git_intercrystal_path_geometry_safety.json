@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "scope": "New local CPU geometry of centre-pair versus surface-node NaI paths, two evidence JSONs and five repository documents only",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 8,
+    "total_blob_bytes": 113685,
+    "largest_blobs": [
+      [
+        25086,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        23538,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md"
+        ]
+      ],
+      [
+        14092,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        13948,
+        [
+          "experiments/ELLIPSE500x300_H120/diagnose_ehe_intercrystal_path_geometry.py"
+        ]
+      ],
+      [
+        13905,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_intercrystal_path_geometry_read_only.json"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 7962,
+      "sha256": "844d713be0b09d3efe59184d49139443a4c3abbe81767f629c31dca536860447",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_intercrystal_path_geometry.py": {
+      "bytes": 13948,
+      "sha256": "972a24f48796c7ad6a1024eae0d22a34ca71210f7b8f184e7a7e915b8b090490",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 23538,
+      "sha256": "66a176eef2d0c05df53314d4475ce4ff310f315c3dea5f912c6c333b63b7cfb7",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 14092,
+      "sha256": "a4f43556e5c294c70b748d1add7129e165d81746534036af6a44dd2764d95216",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 13336,
+      "sha256": "81f181387ea1b1ffac1ca2e2f0edc1c39fa438827ed4c0a99386981a90e93bfd",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 25086,
+      "sha256": "f6b4dc542689d0b97ce634333876623e49ece1521e02c73483a83448450da5df",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_intercrystal_path_geometry_acceptance.json": {
+      "bytes": 1818,
+      "sha256": "21275d0af377e053949684a4a251446209e51983f33b8b6f295406ff1955f6b6",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_intercrystal_path_geometry_read_only.json": {
+      "bytes": 13905,
+      "sha256": "d8830cbcc9ce446a7275e6a3bd87bb18856afa1129992c1fa86ae9e394efd3ec",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    }
+  },
+  "executed_code_and_evidence_sha_closed": true,
+  "actual_cpu_exit_code": 0,
+  "actual_diagnostic_elapsed_seconds": 0.8130000000819564,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "original_params_receipt_log_bindings": 12,
+  "absolute_offset_classes": 2311,
+  "ordered_nonself_pairs": 5343032,
+  "surface_midpoint_node_classes": 7042,
+  "path_node_table_sha256": "7f0d3e13512b82c4fa904c02acc68305b42e2c59eba154de1283d7542ef69550",
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_or_scatter_contribution_or_simulation_or_response_or_reconstruction_executed": true,
+  "excluded": "Matrices, response blocks, full raw physical diagnostic CSV, path node table, NPZ, builds, archives, credentials and raw runtime logs",
+  "limitations": "Pure geometric reference lengths are not CUDA path captures, measured histories or integrated response errors. No source/energy/window/attenuation/absorption weights or correction kernel were evaluated. Original scientific HOLD persists. Conservative size/credential-pattern audit is not a complete secret scanner."
+}

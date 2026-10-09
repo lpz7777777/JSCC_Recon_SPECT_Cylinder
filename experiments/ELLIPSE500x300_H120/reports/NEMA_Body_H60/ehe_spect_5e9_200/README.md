@@ -1,5 +1,7 @@
 # EHE平行孔SPECT：5e9输运与200次重建
 
+2026-10-09 09:48上海：新增[晶体间表面节点路径几何检查](physical_intercrystal_path_geometry_read_only.json)实际CPU退出0。冻结表面规则逐节点更新源出射长度、沿用中心到中心的中间材料段；新7042个节点及2311中心段分别对全部2312箱体独立核对，最大闭合差5.684e−14mm。固定表达式减实际几何段范围近−4.889至+0.264mm、远−1.978至0mm；未计算源/窗/衰减/吸收贡献，不能换算完整响应误差或归因24%缺口。原HOLD保持，无响应/重建新作业；见[验收](physical_intercrystal_path_geometry_acceptance.json)与[科学报告](PHYSICAL_HOLD.md)。
+
 2026-10-09 09:19上海：新的[全晶体对可见面固体角几何检查](physical_surface_solid_angle_read_only.json)实际CPU退出0，2311个对称位移类别覆盖全部5343032个有序对，4522个面由解析/球面三角形/Gauss独立参考核对。原近8×8/远1×1规则每对可见面合计几何误差分别−0.143%至+0.265%、+0.012%至+3.831%；只含固体角，不含面内能窗、衰减或吸收变化，不能作为完整散射误差界或24%缺口归因。原HOLD保持，未生成响应或提交重建；见[验收](physical_surface_solid_angle_acceptance.json)与[科学报告](PHYSICAL_HOLD.md)。
 
 2026-10-09 08:47上海：新的[原运行散射统计只读分析](physical_scatter_runtime_read_only.json)实际CPU退出0。已缓存的原12份日志/停止前收据/冻结Detector Params SHA闭合，均记录全2312晶体范围、局部/准直器分量包含、独立分量矩阵关闭。四块C440→218的准直器项占完整Cartesian矩阵未加权散射总和约0.023116%；这不是本次源加权计数或实测机制份额，不能据此排除准直器模型严重低估。已记录近8×8/远1×1的表面积分配置；CPU几何分类近167548对、远5175484对，远对占96.8642%，对数量不等于响应权重或误差。新分析没有评价散射核、生成矩阵或改输入；原HOLD保持，见[验收与限制](physical_scatter_runtime_acceptance.json)和[科学报告](PHYSICAL_HOLD.md)。

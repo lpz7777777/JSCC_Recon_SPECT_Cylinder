@@ -1,5 +1,7 @@
 # 本次实际运行簿
 
+2026-10-09 09:48上海：diagnose_ehe_intercrystal_path_geometry.py实际本地CPU退出0/0.813秒，12份Params/停止前收据/缓存日志和执行代码/结果/完整节点表SHA闭合。原日志为NaI=2312、单层网格路径生成；表面函数沿用固定中心中间段。2311中心段和7042面节点分别对全部2312箱体作独立有限段交集，最大闭合差5.684e−14mm。固定表达式减方向特定总NaI段：近−4.889266至+0.263995mm、远−1.978003至0mm；没有能量、衰减、窗/吸收或源权重，非整体响应误差。见physical_intercrystal_path_geometry_acceptance.json。原HOLD/生产输入/所有数据保持，无GPU/Slurm/响应/重建作业，根因仍UNDETERMINED。
+
 2026-10-09 09:19上海：新的仅几何表面固体角诊断实际退出0/0.891秒，接受12份Params/停止前收据与原运行配置SHA，见physical_surface_solid_angle_acceptance.json。2311类别覆盖5343032对，4522面解析/独立参考最大相对差8.631e−11。近/远每对固体角有符号误差范围−0.143%至+0.265%/+0.012%至+3.831%，其余被积因子保持未评价；不属于完整响应误差界。原HOLD、现有数据和输入保持，无GPU/Slurm/响应/重建新作业，根因仍UNDETERMINED。
 
 2026-10-09 08:47（上海）新增原运行散射摘要与表面采样几何分析：diagnose_ehe_scatter_runtime.py本地CPU实际退出0、0.454秒，复用已缓存原12份scatter日志，没有远端取回、响应矩阵读取、面积/筛选/源盒诊断重算或GPU/Slurm/核评价。每份日志及冻结Detector Params绑定停止前receipt；全部运行记录晶体范围[0,2312)、局部/准直器分量包含、独立分量矩阵关闭，C局部self-Compton-PE开关为0、recoil为1。源码确认日志crystal和collimator为整块2312×85×85×10原Cartesian数组逐元素总和，crystal已包含局部与晶体间项；不是PE+Scatter的完整Factors或真实源前向计数。四块未加权准直器份额：A218=2.43209e−16、A440=0.0808651432、C=0.000231156179；原打印有效位舍入区间已传播，不能外推实测份额。日志记录晶体间近8×8/远1×1表面采样、近距离因子2。三响应/12块几何一致，CPU float32/float64新分类均近167548对（3.135823%）、远5175484对，20mm边界23964对按≤进入近分支。未再执行原5σ支持筛选；几何对数量不是贡献权重、CUDA逐对运行状态或误差界。源码/代码/原日志/Params/结果SHA闭合见physical_scatter_runtime_acceptance.json。实际根因仍UNDETERMINED，原22 HOLD、138720逐binUNDETERMINED和gate SHA保持，未提交physical/validation10/formal200。
