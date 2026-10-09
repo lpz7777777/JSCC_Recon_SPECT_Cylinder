@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "remote_complete_archive": {
+    "archive_receipt": {
+      "passed": true,
+      "archive_sha256": "2987088d3a44f20c48def92ffa37883f337663548fe34360327124e44bffeeae",
+      "collection_sha256": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8",
+      "files": 16026,
+      "bytes": 58948637
+    },
+    "collection_primary_counts": [
+      14690373781,
+      35309626219,
+      0
+    ],
+    "collection_window_counts": {
+      "218": 232888,
+      "440": 118846
+    },
+    "collection_tagged_counts": {
+      "CntStat_218": 232888,
+      "CntStat_440": 118846,
+      "CntStat_218_from218": 132562,
+      "CntStat_218_from440": 100326,
+      "CntStat_440_from218": 0,
+      "CntStat_440_from440": 118846
+    },
+    "source_archive_unchanged": true
+  },
+  "fault": "Local SSH command exceeded 600 seconds; remote full collection/archive finished and process has exited",
+  "correction": "Reuse completed archive, strict fetch and local all-worker verification; receipt filename transport_counts.tar.json",
+  "simulation_repeated": false,
+  "source_worker_outputs_unchanged": true,
+  "workflow_source_sha256": "551ffc859f57a3c689a9b39b788bab21cfe2627cd64dbe235bd14f302b47b770"
+}

@@ -1,0 +1,9 @@
+{
+  "job": 15684979,
+  "accounting": "15684979|COMPLETED|0:0|02:21:06|2026-10-09T21:31:23|2026-10-09T23:52:29||billing=1000,cpu=1000,node=18\n15684979.batch|COMPLETED|0:0|02:21:06|2026-10-09T21:31:23|2026-10-09T23:52:29|5464K|cpu=56,mem=0,node=1\n15684979.extern|COMPLETED|0:0|02:21:06|2026-10-09T21:31:23|2026-10-09T23:52:29|0|billing=1000,cpu=1000,node=18\n15684979.0|COMPLETED|0:0|02:21:10|2026-10-09T21:31:23|2026-10-09T23:52:33|108380K|cpu=1000,mem=0,node=18\n",
+  "completed": true,
+  "source_job_failed_preserved": true,
+  "full_worker_receipt_acceptance_pending": true,
+  "cpu_operational_guard_only": true,
+  "imaging_resource_certificate": false
+}

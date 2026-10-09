@@ -4,6 +4,15 @@ This is the user-requested new actual transport acquisition. It uses no old
 observation counts and is separate from the completed actual 5e9 and
 matrix-forward-plus-Poisson 5e9 studies.
 
+Latest 2026-10-10 milestone: full actual **5e10** transport now passed local
+strict archive/all-worker acceptance in `transport_acceptance.json` (1000
+workers,20 views,16,026 fetched archive members, exact source/seed/macros/
+geometry/windows/tags/member-SHA closure). Native windows218/440 are
+232888/118846; primary tags are [14690373781,35309626219,0]. CPU recovery job
+15684979 completed successfully. GPU synchronization and validation/formal
+reconstruction acceptance remain pending until their actual authorities exist.
+This transport execution acceptance is not physical response calibration.
+
 Current actual registration: recovery CPU job **15684979**, launcher/acceptance
 release `26ceb64dbf1bd332`. Original job **15683333** actually FAILED
 with exit9 after 1:40:24: the cluster's default srun WaitTime=50 killed the
@@ -22,6 +31,19 @@ reuse and 987 ranks compute. The observed running step exceeded the old
 50-second first-exit limit, with all 987 new workers started and no errors.
 Every final view still requires 50 accepted workers; the final accepted dose
 must be 5e10, never a sum of partial and restarted histories.
+
+2026-10-10 collection status: recovery job15684979 root/batch/extern/step all
+actually COMPLETED/0:0 (root 2:21:06, step 2:21:10). All 987 missing workers
+finished with receipts, plus the thirteen verified original workers. The
+remote collection/archive finished after the local 600-second SSH command
+expired. The finished 58,948,637-byte archive and 16,026-member receipt are
+preserved; no simulation or collection is repeated. Its receipt is named
+`transport_counts.tar.json` by the archive producer's `with_suffix` operation.
+The continuation now recognizes a completed archive, strictly fetches it and
+checks all 1000 workers locally before GPU synchronization and validation.
+Remote recorded primaries are [14690373781,35309626219,0] = 5e10; native
+windows218/440 are232888/118846. These totals remain distinct from full
+local/GPU execution acceptance until those registered authorities exist.
 
 [The angular audit](SOURCE_ANGLE.md) confirms **full 4π isotropic emission**,
 one photon/event and a dose-equivalent multiplier of **1**. The macro's

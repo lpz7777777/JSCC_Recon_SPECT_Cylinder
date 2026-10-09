@@ -81,3 +81,34 @@ unstarted GPU release and its prior deployment/freezing evidence are preserved.
 Fifteen local failure-oriented contract checks passed, including five new tests
 for changed reused hashes, wrong job identity, overlaps and incomplete partitions;
 actual complete transport/reconstruction acceptance remains pending.
+
+## 2026-10-10 completed transport and collection continuation
+
+transport_completion_sacct.json records successful recovery exit and all 987
+missing receipts. The thirteen completed original workers remain exactly bound
+in transport_stop_acceptance.json; old failed job15683333 is still FAILED.
+
+The original collection SSH call expired at600 seconds. Read-only inspection
+found no active collector and a finished archive with matching full archive and
+collection SHA. transport_collection_recovery_registration.json binds this
+actual evidence. Reuse the existing archive; do not rerun simulations, copy
+worker outputs again, overwrite counts or replace immutable CPU/GPU releases.
+The producer uses transport_counts.tar.json, while the former local consumer
+expected transport_counts.json. The corrected local consumer fetches the actual
+producer receipt and verifies its SHA, all source/worker members, original and
+recovered allocation identity, windows/tags/seeds/macros/geometry/full5e10 dose.
+
+Latest one-time helper PIDs/source SHA and log names are in
+one_time_pipeline_registration.json: watch_collection_resume_stdout.log,
+watch_collection_resume_stderr.log and the postprocess_collection_resume logs.
+Previous failed helper registrations/logs remain preserved. This is still a
+bounded one-time continuation; the recurring compton-v5 timer remains paused.
+Formal200, strict final fetch and numerical/visual QA remain pending until
+actual registered outputs and acceptance authorities pass.
+
+Local strict transport acceptance is now complete: transport_acceptance.json
+binds the actual5e10 primaries, all1000 workers/20views,16,026 archive members,
+new seeds/macros, full window/tag/source/geometry/SHA closure and the mixed
+allocation proof. Do not collect, fetch or upload the accepted CPU acquisition
+again. Continue the latest registered GPU synchronization and imaging stages;
+no physical calibration PASS is implied.

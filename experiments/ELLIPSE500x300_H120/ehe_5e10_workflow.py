@@ -163,12 +163,19 @@ def collect_transport(c,f,job,text):
     if (REPORT/'transport_acceptance.json').exists():return read(REPORT/'transport_acceptance.json')
     account=DATA/'transport_accounting.txt';account.write_bytes(text.encode())
     with c.open_sftp() as s:s.put(str(account),CPU_BASE+'/transport_accounting.txt')
-    line='cd '+q(f['root'])+' && python3 -u ehe_5e10_transport.py collect --release '+q(f['root'])+' --simulation '+q(CPU_BASE+'/simulation')+' --transport '+q(f.get('transport_root',CPU_BASE+'/transport'))+' --output '+q(CPU_BASE+'/counts')+' --job '+str(job)+' --accounting '+q(CPU_BASE+'/transport_accounting.txt')
-    print(command(c,line,600),flush=True)
+    # archive(Path('transport_counts.tar.gz')) writes its receipt via with_suffix:
+    # transport_counts.tar.json. A completed archive survives an SSH timeout.
+    remote_receipt=CPU_BASE+'/transport_counts.tar.json'
+    ready=command(c,'if [ -f '+q(remote_receipt)+' ] && [ -f '+q(CPU_BASE+'/transport_counts.tar.gz')+' ] && [ -f '+q(CPU_BASE+'/counts/collection.json')+' ]; then echo READY; fi').strip()
+    if ready!='READY':
+        line='cd '+q(f['root'])+' && python3 -u ehe_5e10_transport.py collect --release '+q(f['root'])+' --simulation '+q(CPU_BASE+'/simulation')+' --transport '+q(f.get('transport_root',CPU_BASE+'/transport'))+' --output '+q(CPU_BASE+'/counts')+' --job '+str(job)+' --accounting '+q(CPU_BASE+'/transport_accounting.txt')
+        print(command(c,line,1800),flush=True)
+    else:print('EHE_5E10_EXISTING_ARCHIVE_REUSED_NO_COLLECTION_RECOMPUTE',flush=True)
     bundle=DATA/'transport_counts.tar.gz';receipt=DATA/'transport_counts.json'
     with c.open_sftp() as s:
-        fetch_file(s,CPU_BASE+'/transport_counts.json',receipt)
+        fetch_file(s,remote_receipt,receipt)
         proof=read(receipt)
+        if not proof['passed']:raise ValueError('Completed transport archive receipt required')
         fetch_file(s,CPU_BASE+'/transport_counts.tar.gz',bundle,proof['archive_sha256'])
     folder=DATA/'counts'
     if not folder.exists():extract(bundle,folder)

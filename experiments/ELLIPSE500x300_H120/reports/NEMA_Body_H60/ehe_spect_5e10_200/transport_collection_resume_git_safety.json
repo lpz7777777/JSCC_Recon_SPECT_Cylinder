@@ -1,0 +1,50 @@
+{
+  "checked_blobs": 10,
+  "total_blob_bytes": 80709,
+  "largest_blobs": [
+    [
+      33463,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_acceptance.json"
+      ]
+    ],
+    [
+      28099,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py"
+      ]
+    ],
+    [
+      7024,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md"
+      ]
+    ],
+    [
+      6490,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/README.md"
+      ]
+    ],
+    [
+      1287,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/collection_resume_evidence/watch_timeout.txt"
+      ]
+    ]
+  ],
+  "findings": [],
+  "scope": "Changed staged and outgoing blobs only",
+  "git_byte_identity": {
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py": "551ffc859f57a3c689a9b39b788bab21cfe2627cd64dbe235bd14f302b47b770",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/README.md": "812dac8cf89d69c3d66086122359e6c0b3dd278eab7dd69f2802bada6e5c03d6",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md": "153ad328928d104a8bd148228995a772d67b6aec3c7a84b1f8593fcf36af658b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/collection_resume_evidence/watch_timeout.txt": "d190596988e1aadf5b24e58f0beab710ae92c52ff30552d44b663ab4c8c8538b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_before_collection_resume.json": "d08d65826066ab67ebad8ec4b1503d7efe2ca33a6542d6abb509258cf38847f5",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_registration.json": "a63554454bf836d4969292ea2ed2959ef5a8ded78f2b55a7581e38b1e351b666",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_acceptance.json": "5b437626bb451736c31b10fd03a381f1d3020268c379cbc54e91984c1f079477",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_collection_recovery_registration.json": "ccc957b06eca5cfe9f46d41aee2fc4a0b8d3cddccb079bf8498db1fbb5e3a0cd",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_collection_resume_local_acceptance.json": "459d5df59323e6a03b377071c86075d16b7ddbf556e2dd3d8a97c0ded266cc3d",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_completion_sacct.json": "d044c54397d78d3b7271c0142103d315fd54348b7525058397abb5bcbf5d9259"
+  }
+}

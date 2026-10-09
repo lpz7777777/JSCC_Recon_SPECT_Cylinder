@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "local_contract_tests": 15,
+  "actual_transport_acceptance_sha256": "5b437626bb451736c31b10fd03a381f1d3020268c379cbc54e91984c1f079477",
+  "actual_archive_receipt_sha256": "0891c217b1e1d2de1f905937e4ed85f910adcdc20cf399daf47903ed56fa1aa4",
+  "archive_sha256": "2987088d3a44f20c48def92ffa37883f337663548fe34360327124e44bffeeae",
+  "source_sha256": "551ffc859f57a3c689a9b39b788bab21cfe2627cd64dbe235bd14f302b47b770",
+  "source_members_unchanged": true,
+  "simulation_repeated": false,
+  "original_timeout_log_sha256": "d190596988e1aadf5b24e58f0beab710ae92c52ff30552d44b663ab4c8c8538b",
+  "corrected_receipt": "transport_counts.tar.json",
+  "reuse_completed_archive": true,
+  "physical_calibration_claim": false
+}

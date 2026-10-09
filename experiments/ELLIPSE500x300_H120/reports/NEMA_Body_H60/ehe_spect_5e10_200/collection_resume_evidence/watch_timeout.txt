@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\ehe_5e10_workflow.py", line 431, in <module>
+    with controller():watch(a.hours)
+                      ^^^^^^^^^^^^^^
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\ehe_5e10_workflow.py", line 407, in watch
+    if advance():return
+       ^^^^^^^^^
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\ehe_5e10_workflow.py", line 242, in advance
+    collect_transport(c,f,job,text)
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\ehe_5e10_workflow.py", line 167, in collect_transport
+    print(command(c,line,600),flush=True)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\ehe_5e9_workflow.py", line 24, in command
+    if time.monotonic()-began>timeout:channel.close();raise TimeoutError('Remote command timed out')
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Remote command timed out
