@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "scope": "Geometric Pb cell-area weights only, no response integrand or event generation",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "original_job": 1672966,
+  "science_job": 1677211,
+  "producer_release_key": "74e129c4460163c5",
+  "scientific_source_sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "code_sha256": "ea1dfe80485e4bbf1d0a97a87fac0363ab8a4f5aa04c4657e51a3287de358248",
+  "frozen_params_and_pre_stop_receipt_bindings": {
+    "A218/slab_0": {
+      "params_sha256": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+      "receipt_sha256": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f"
+    },
+    "A218/slab_1": {
+      "params_sha256": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+      "receipt_sha256": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855"
+    },
+    "A218/slab_2": {
+      "params_sha256": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+      "receipt_sha256": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347"
+    },
+    "A218/slab_3": {
+      "params_sha256": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+      "receipt_sha256": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed"
+    },
+    "A440/slab_0": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207"
+    },
+    "A440/slab_1": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a"
+    },
+    "A440/slab_2": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d"
+    },
+    "A440/slab_3": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0"
+    },
+    "C440to218/slab_0": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae"
+    },
+    "C440to218/slab_1": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230"
+    },
+    "C440to218/slab_2": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da"
+    },
+    "C440to218/slab_3": {
+      "params_sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+      "receipt_sha256": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16"
+    }
+  },
+  "original_runtime_logs": {
+    "passed": true,
+    "original_job": 1672966,
+    "scope": "New extraction of original area-sampling log lines only; no stage re-verification or computation",
+    "records": [
+      {
+        "response": "A218",
+        "slab": 0,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A218/slab_0/scatter.log",
+        "bytes": 30291,
+        "original_scatter_log_sha256": "7ac462444b72cfe08c8d36eece93b0036a973a8ae04dd2f2eda2eef1c6a09b73",
+        "pre_stop_receipt_sha256": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A218",
+        "slab": 1,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A218/slab_1/scatter.log",
+        "bytes": 30292,
+        "original_scatter_log_sha256": "88d3f4d31222ba6ef8f16f4bc9ed77ec617c843797d5d135c1f4c790b970a0c0",
+        "pre_stop_receipt_sha256": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A218",
+        "slab": 2,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A218/slab_2/scatter.log",
+        "bytes": 30287,
+        "original_scatter_log_sha256": "ba55c0d97bb1269d7df9f835e2a779bf4527dc214160f2cd859d1ff2610d5142",
+        "pre_stop_receipt_sha256": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A218",
+        "slab": 3,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A218/slab_3/scatter.log",
+        "bytes": 30286,
+        "original_scatter_log_sha256": "0493eac8aa81db32ea10445d5f89691cda8ece47c3e4baf315becb33545665c2",
+        "pre_stop_receipt_sha256": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A440",
+        "slab": 0,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A440/slab_0/scatter.log",
+        "bytes": 30285,
+        "original_scatter_log_sha256": "33424eba13cd55e0a3187e0f170652a692c79403759bb7fe72027b4faab36de7",
+        "pre_stop_receipt_sha256": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A440",
+        "slab": 1,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A440/slab_1/scatter.log",
+        "bytes": 30284,
+        "original_scatter_log_sha256": "ec5eca3eb375d75eaff3783ed44f5764f55e23cd0853d9da9994f6375d708f85",
+        "pre_stop_receipt_sha256": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A440",
+        "slab": 2,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A440/slab_2/scatter.log",
+        "bytes": 30286,
+        "original_scatter_log_sha256": "9f383160da471f864b899bde66e3f0723e6ddef7d7270dafc831d4cbc3980732",
+        "pre_stop_receipt_sha256": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "A440",
+        "slab": 3,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/A440/slab_3/scatter.log",
+        "bytes": 30288,
+        "original_scatter_log_sha256": "bfd631ea0ec8a6111179bbe284a59dcd7470c6713c095f216954249e5c44e5fd",
+        "pre_stop_receipt_sha256": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "C440to218",
+        "slab": 0,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/C440to218/slab_0/scatter.log",
+        "bytes": 30220,
+        "original_scatter_log_sha256": "cd77989d7b74f808387e058da97782a030b548e951a1ae289a1e14cdea90f9ef",
+        "pre_stop_receipt_sha256": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "C440to218",
+        "slab": 1,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/C440to218/slab_1/scatter.log",
+        "bytes": 30220,
+        "original_scatter_log_sha256": "921edc6eba7bd05f3495d293cc646a268a0892880e6928060cef19cc6f2d2de9",
+        "pre_stop_receipt_sha256": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "C440to218",
+        "slab": 2,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/C440to218/slab_2/scatter.log",
+        "bytes": 30220,
+        "original_scatter_log_sha256": "ab2049b4a11513692e7bcfe41a0fd8bf85da8f0ce8eb105f5801d4b861ba5385",
+        "pre_stop_receipt_sha256": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      },
+      {
+        "response": "C440to218",
+        "slab": 3,
+        "remote_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses/C440to218/slab_3/scatter.log",
+        "bytes": 30219,
+        "original_scatter_log_sha256": "39396d22d9f2346a56ce7fb4a359d571fc0a9e35a2c364b5f62494502f71917b",
+        "pre_stop_receipt_sha256": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16",
+        "collimator_area_lines": [
+          "Collimator layer 0 XCOM material=Pb volume samples=1250 represented Pb/high-Z area=48324.4 mm^2"
+        ]
+      }
+    ],
+    "reader_code_sha256": "989d867a27aaa3712b52a5239f4938b6afa3cd5c8a80840b1f5a797656aae275"
+  },
+  "geometry": {
+    "width_mm": 330.0,
+    "height_mm": 165.0,
+    "holes": 1250,
+    "nx": 50,
+    "nz": 25,
+    "holes_nonoverlapping_and_inside": true,
+    "minimum_hole_gap_mm": 3.399993896484375,
+    "exact_pb_area_mm2": 48314.07684845744,
+    "maximum_disk_partition_conservation_error_mm2": 8.881784197001252e-16,
+    "analytic_area_gauss_check_maximum_difference_mm2": 1.525225918896922e-07
+  },
+  "comparisons": [
+    {
+      "subdivisions": 8,
+      "cpu_dtype": "float32",
+      "sample_count": 80000,
+      "represented_area_mm2": 48324.372371673584,
+      "signed_total_area_error_fraction": 0.00021309572463606202,
+      "absolute_cell_error_sum_mm2": 489.8101114177791,
+      "absolute_cell_error_fraction": 0.010138041402594195,
+      "minimum_cell_error_fraction": -0.060481774435243496,
+      "maximum_cell_error_fraction": 0.07515904254764083,
+      "maximum_absolute_cell_error_fraction": 0.07515904254764083,
+      "zero_lead_sample_cells": 0,
+      "maximum_absolute_reweighting_fraction_relative_to_sampled": 0.0699050462055808,
+      "maximum_error_cell_xz_indices": [
+        5,
+        8
+      ]
+    },
+    {
+      "subdivisions": 8,
+      "cpu_dtype": "float64",
+      "sample_count": 80000,
+      "represented_area_mm2": 48324.375,
+      "signed_total_area_error_fraction": 0.00021315012547701558,
+      "absolute_cell_error_sum_mm2": 489.80921893120876,
+      "absolute_cell_error_fraction": 0.010138022929995138,
+      "minimum_cell_error_fraction": -0.06048177443524369,
+      "maximum_cell_error_fraction": 0.0751590508592838,
+      "maximum_absolute_cell_error_fraction": 0.0751590508592838,
+      "zero_lead_sample_cells": 0,
+      "maximum_absolute_reweighting_fraction_relative_to_sampled": 0.06990505339578879,
+      "maximum_error_cell_xz_indices": [
+        5,
+        8
+      ]
+    },
+    {
+      "subdivisions": 16,
+      "cpu_dtype": "float64",
+      "sample_count": 320000,
+      "represented_area_mm2": 48319.2703125,
+      "signed_total_area_error_fraction": 0.00010749380680179257,
+      "absolute_cell_error_sum_mm2": 178.7086572824876,
+      "absolute_cell_error_fraction": 0.0036988941720448782,
+      "minimum_cell_error_fraction": -0.016887993057133895,
+      "maximum_cell_error_fraction": 0.020727932158618755,
+      "maximum_absolute_cell_error_fraction": 0.020727932158618755,
+      "zero_lead_sample_cells": 0,
+      "maximum_absolute_reweighting_fraction_relative_to_sampled": 0.02030700983638578,
+      "maximum_error_cell_xz_indices": [
+        39,
+        7
+      ]
+    },
+    {
+      "subdivisions": 32,
+      "cpu_dtype": "float64",
+      "sample_count": 1280000,
+      "represented_area_mm2": 48315.01640625,
+      "signed_total_area_error_fraction": 1.9446874572437474e-05,
+      "absolute_cell_error_sum_mm2": 45.41030839972627,
+      "absolute_cell_error_fraction": 0.0009398980868900969,
+      "minimum_cell_error_fraction": -0.007339741276495288,
+      "maximum_cell_error_fraction": 0.006036153097450201,
+      "maximum_absolute_cell_error_fraction": 0.007339741276495288,
+      "zero_lead_sample_cells": 0,
+      "maximum_absolute_reweighting_fraction_relative_to_sampled": 0.007394011407219736,
+      "maximum_error_cell_xz_indices": [
+        43,
+        10
+      ]
+    }
+  ],
+  "default_reference_weights_sha256": "2f3e297546f61898e653aef3db9c52b53893fbb19581632dd1594d27595893c9",
+  "original_log_total_area_error_fraction_interval": [
+    0.00021263267794156596,
+    0.0002147024680839339
+  ],
+  "configuration_identity": "Frozen defaults: hole-count cells and 8x8 subgrid. CPU sequential float32 reference reproduces all12 logged sample counts and area at printed precision. Inherited environment overrides and per-cell runtime weights were not captured; this is not bitwise producer-state identification.",
+  "area_only_bound": "For fixed nonnegative per-cell factors k, abs(sum(sampled*k)-sum(exact*k))/sum(exact*k) is at most max(abs(sampled/exact-1)); the corresponding bound with sampled sum as denominator is max(abs(exact/sampled-1)). This applies to the reported CPU reference weights only, and excludes representative-point, depth/path, angular, source and other response errors. It is not a bound on the actual complete response.",
+  "no_response_or_simulation_executed": true,
+  "no_production_input_modified": true,
+  "no_observed_count_fit": true,
+  "limitations": "This geometric reference does not integrate the frozen scattering kernel, modify its sampling, or quantify the continuum finite-position/depth/angle error. Total area cancellation alone does not bound detection-weighted error. Higher-subdivision area comparisons are diagnostics, not new production inputs. Root cause remains UNDETERMINED; original22 HOLD and138720 inadequate bin diagnostics remain unchanged.",
+  "elapsed_seconds": 0.3440000000409782
+}

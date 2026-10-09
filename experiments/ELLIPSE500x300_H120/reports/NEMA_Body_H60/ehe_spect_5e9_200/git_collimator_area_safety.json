@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "scope": "New local CPU Pb cell-area diagnostic, original log extractor, two evidence JSONs and five repository documents only",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 9,
+    "total_blob_bytes": 97896,
+    "largest_blobs": [
+      [
+        22422,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        16119,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_collimator_area_read_only.json"
+        ]
+      ],
+      [
+        14471,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md"
+        ]
+      ],
+      [
+        12228,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        11228,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 6632,
+      "sha256": "677511ab3cef38db53c1beaa623123a482d1fd9ca2693694de9fc8fe541b25ad",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_collimator_area.py": {
+      "bytes": 10965,
+      "sha256": "ea1dfe80485e4bbf1d0a97a87fac0363ab8a4f5aa04c4657e51a3287de358248",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 14471,
+      "sha256": "0b42a7d5b947c17b8646448c14e2ce9742d97a36669d7bb6947e99e009341955",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 12228,
+      "sha256": "61cb85e106a60567ffe9212b2e80e2f79c9f124ad625fbad37b02c45843f6f51",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 11228,
+      "sha256": "7a7ed85f4cae5bde8a100797c9b19f597daa7852ddf32fa9092a0e56575d789c",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 22422,
+      "sha256": "a9a9da63b357861789bf7d366dc211111b4e1a79d77bce1f35b2a55e0ff9998c",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_collimator_area_acceptance.json": {
+      "bytes": 1917,
+      "sha256": "beea651925523d5f6345b0c25939809797e35071135945aaba9102ba4233fae4",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_collimator_area_read_only.json": {
+      "bytes": 16119,
+      "sha256": "6a7e0ec4a12b3f693bb9f3c4b55d157dd12358ca642ed3a3d7b9a05be87244a1",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_collimator_area_read_only/log_reader.py": {
+      "bytes": 1914,
+      "sha256": "989d867a27aaa3712b52a5239f4938b6afa3cd5c8a80840b1f5a797656aae275",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    }
+  },
+  "executed_code_and_evidence_sha_closed": true,
+  "actual_cpu_exit_code": 0,
+  "actual_elapsed_seconds": 0.3440000000409782,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "original_area_logs_sha_bound_to_pre_stop_receipts": 12,
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_or_simulation_or_response_or_reconstruction_submitted": true,
+  "excluded": "Matrices, response blocks, full raw diagnostic CSV, NPZ, builds, archives, credentials and raw runtime logs",
+  "limitations": "Conditional geometric weight error bounds are not full physical response error bounds; original scientific HOLD persists. Conservative size/credential-pattern audit is not a complete secret scanner."
+}
