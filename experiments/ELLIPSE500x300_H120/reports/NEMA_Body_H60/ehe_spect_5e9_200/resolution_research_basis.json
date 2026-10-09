@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-09T13:30:14.310219+08:00",
+  "scope": "Read-only frozen source coverage research and proposal; no new scientific execution",
+  "automation": {
+    "id": "compton-v5",
+    "status": "PAUSED",
+    "verified_from_saved_app_configuration": true
+  },
+  "physical_job": 1677211,
+  "physical_gate_sha256_unchanged": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "root_cause": "UNDETERMINED",
+  "production_physics_changed": false,
+  "new_simulation_response_or_reconstruction_submitted": false,
+  "sources": {
+    "response:ehe_gpu_pipeline.py": {
+      "sha256": "f764712eee34de0329f821316cb13b9fd114183bad9b401c7c226f95f9d86f64",
+      "release_key": "74e129c4460163c5",
+      "matches_registered_freeze": true
+    },
+    "response:engine/PEGen_RayTracing_CircularHole/PEGen_V4_Production.cu": {
+      "sha256": "0ec774f38c06599f8c7e3933348a93566e076506ba3587f19dfc88bc138e42e8",
+      "release_key": "74e129c4460163c5",
+      "matches_registered_freeze": true
+    },
+    "response:engine/common/detector_local_scatter.h": {
+      "sha256": "6b32134429fd9aac78f805c08d248f8239cda0832c6f79c603ecf53109c309c7",
+      "release_key": "74e129c4460163c5",
+      "matches_registered_freeze": true
+    },
+    "response:engine/ScatterGen_RayTracing_CircularHole/scatter.cu": {
+      "sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+      "release_key": "74e129c4460163c5",
+      "matches_registered_freeze": true
+    },
+    "transport:Geant4Code_EHE/src/SteppingAction.cc": {
+      "sha256": "b49f072e1366fd54fadcac5b28a4541291b44eb07bf0027e4d2f54dcd6613c6a",
+      "release_key": "fdfc7b4a75399b55",
+      "matches_registered_freeze": true
+    },
+    "transport:Geant4Code_EHE/src/EventAction.cc": {
+      "sha256": "c7a9aebdcbe2cdc607fb6ac1de25c9382d69f8b1d856c1a7ffe0e48a8ded738e",
+      "release_key": "fdfc7b4a75399b55",
+      "matches_registered_freeze": true
+    },
+    "transport:Geant4Code_EHE/ehe_spect.cc": {
+      "sha256": "1af10d316bd7e11b1f01df031db4e7451e82dfb5df68598ecf87ea4d819189f7",
+      "release_key": "fdfc7b4a75399b55",
+      "matches_registered_freeze": true
+    }
+  },
+  "research_document_sha256": "542ba26e4d63b80a54e53d6aaf1f08814998b6c4411b2e171d124a3ce2236415",
+  "new_findings": [
+    "Frozen intercrystal target term explicitly represents first photoelectric interaction, not a full cumulative target-deposit spectrum.",
+    "Production Scatter input is PE_unwindowed; raw PE writer is distinct from windowed writer.",
+    "Existing aggregate observations cannot recover missing event/bin history labels."
+  ],
+  "proposal_not_executed": true
+}

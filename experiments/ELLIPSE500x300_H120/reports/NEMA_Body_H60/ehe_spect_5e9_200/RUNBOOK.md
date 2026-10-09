@@ -1,5 +1,7 @@
 # 本次实际运行簿
 
+2026-10-09人类最新指令要求停止定时任务并研究解决问题。应用automation_update已实际将compton-v5设为PAUSED。新增RESOLUTION_RESEARCH.md整理冻结局部/晶体间/准直器分支与输运事件/bin累计沉积可观测量的对应，记录未加窗PE生产链、待执行互斥历史标签诊断、分支验证和有界修复/原门控恢复条件。研究不构成已确证根因或科学PASS；没有新GPU/Slurm/模拟/响应/物理/验证/正式作业，原22 HOLD、逐binUNDETERMINED和gate SHA保持。不恢复定时任务或自动advance；新诊断输运/新响应模型等待明确执行授权。
+
 2026-10-09 09:48上海：diagnose_ehe_intercrystal_path_geometry.py实际本地CPU退出0/0.813秒，12份Params/停止前收据/缓存日志和执行代码/结果/完整节点表SHA闭合。原日志为NaI=2312、单层网格路径生成；表面函数沿用固定中心中间段。2311中心段和7042面节点分别对全部2312箱体作独立有限段交集，最大闭合差5.684e−14mm。固定表达式减方向特定总NaI段：近−4.889266至+0.263995mm、远−1.978003至0mm；没有能量、衰减、窗/吸收或源权重，非整体响应误差。见physical_intercrystal_path_geometry_acceptance.json。原HOLD/生产输入/所有数据保持，无GPU/Slurm/响应/重建作业，根因仍UNDETERMINED。
 
 2026-10-09 09:19上海：新的仅几何表面固体角诊断实际退出0/0.891秒，接受12份Params/停止前收据与原运行配置SHA，见physical_surface_solid_angle_acceptance.json。2311类别覆盖5343032对，4522面解析/独立参考最大相对差8.631e−11。近/远每对固体角有符号误差范围−0.143%至+0.265%/+0.012%至+3.831%，其余被积因子保持未评价；不属于完整响应误差界。原HOLD、现有数据和输入保持，无GPU/Slurm/响应/重建新作业，根因仍UNDETERMINED。
