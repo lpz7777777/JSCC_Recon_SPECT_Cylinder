@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "method": "All seven final PDF pages rendered with bundled Poppler and visually inspected, plus full-resolution PNG/detail inspection",
+  "pdf_sha256": "d9a8e5ae6bbabbfd9f1819869247011f292a2d80351a7ab7cbf39773d4240def",
+  "pdf_pages": 7,
+  "page_reviews": [
+    {
+      "page": 1,
+      "source_png": "overall_mip72.png",
+      "source_png_sha256": "eea4b8f062870a9240121db950f245f5d739de645e36c8fe2909d18ee9a9c27f",
+      "render_sha256": "66ab04ad1ee31c295fdffb2b8e8a60b742901d0f87e2ff34ee0af903a2c0432f",
+      "passed": true
+    },
+    {
+      "page": 2,
+      "source_png": "overall_axial.png",
+      "source_png_sha256": "26861875e525c79dc3d8fa4b2e2918ebdc79472461a80d819f0d3f3e15cce6d0",
+      "render_sha256": "063e889106bf7ea508940e8586114de9843503a02cb6d14214e90d888ca48c94",
+      "passed": true
+    },
+    {
+      "page": 3,
+      "source_png": "overall_coronal.png",
+      "source_png_sha256": "9f0075a8893d3e6732ed2ecd883261854cedea75390f7102d8dbed99b55fb4e2",
+      "render_sha256": "1d9275befa694b5c69b678bc25a3c767aeac271bc5d9a9b362c09892eeb3ad69",
+      "passed": true
+    },
+    {
+      "page": 4,
+      "source_png": "overall_sagittal.png",
+      "source_png_sha256": "10c27543105b6045978fcbc621f92198ea54374e7c7c236ad0c3c90dc689cf4e",
+      "render_sha256": "64ed6899f67e9afa49f3c55d3f0df1b1fbf3b525c38c8062a8434320514401a9",
+      "passed": true
+    },
+    {
+      "page": 5,
+      "source_png": "native_density_curves.png",
+      "source_png_sha256": "96b5b90297e88c7a4da3498f34d710e3a9ffe0c4e57dca6928944124c6ff36c9",
+      "render_sha256": "fd40c2173e616cdaae1574ac9db866898b39ba5ce9e2092c2c311712cb9f90fa",
+      "passed": true
+    },
+    {
+      "page": 6,
+      "source_png": "native_integral_position_curves.png",
+      "source_png_sha256": "63749a90c619782b566b9c67cfea9a4bf7f89ceef41a960b82f8d43ce10f021f",
+      "render_sha256": "91bda6823119738ebdd70fcafabbf6ab3f04a1a940f3650dbed060cb998fea59",
+      "passed": true
+    },
+    {
+      "page": 7,
+      "source_png": "data_and_endpoints.png",
+      "source_png_sha256": "da4461ca591d1fdcd5b53ae2603280df712c002e0d2d53e7f284281992c8ada8",
+      "render_sha256": "d6dc2b84c3fa9b9a1a5b141670233f6fa9dfee6e7aee11f4e92869370dc76d0a",
+      "passed": true
+    }
+  ],
+  "checks": {
+    "labels_and_full_route_mapping": true,
+    "independent_iteration_axes": true,
+    "fixed_truth_scale_gray_r_0_to_10": true,
+    "no_smoothing_or_gain_fit": true,
+    "initialization_explicitly_labeled_not_saved_snapshot": true,
+    "all_rows_and_true_3d_views_present": true,
+    "correct_72mm_mip_and_120mm_native_metrics": true,
+    "no_clipped_text_or_label_overlap_after_spacing_repair": true,
+    "count_and_endpoint_tables_readable": true,
+    "legend_matches_sphere_diameters": true
+  },
+  "repair": "In draft1 curve row titles and x labels were too close; final atlas uses larger gaps and footer separation, metric plots start below subtitle.",
+  "scope": "QA certifies faithful scientific presentation and layout, not physical calibration or high reconstruction quality."
+}

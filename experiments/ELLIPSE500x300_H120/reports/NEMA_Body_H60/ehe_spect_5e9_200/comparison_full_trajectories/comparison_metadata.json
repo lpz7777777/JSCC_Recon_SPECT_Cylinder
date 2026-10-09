@@ -1,0 +1,877 @@
+{
+  "task": "Separate complete iteration trajectories, never equal-iteration/equal-convergence pairing",
+  "reference_jobs": {
+    "EHE": 1679415,
+    "JSCC": 1669255
+  },
+  "routes": [
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "label": "218 corrected single",
+      "label_zh": "218\u6821\u6b63\u5355\u5149\u5b50"
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "label": "218 corrected single",
+      "label_zh": "218\u6821\u6b63\u5355\u5149\u5b50"
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "label": "440 single",
+      "label_zh": "440\u5355\u5149\u5b50"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "label": "440 single",
+      "label_zh": "440\u5355\u5149\u5b50"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "label": "440 SC Compton",
+      "label_zh": "440 SC Compton"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "label": "440 JSCC",
+      "label_zh": "440 JSCC"
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "label": "dual single sum",
+      "label_zh": "\u53cc\u80fd\u5355\u5149\u5b50\u548c"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "label": "dual single sum",
+      "label_zh": "\u53cc\u80fd\u5355\u5149\u5b50\u548c"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "label": "440 JSCC + 218 single",
+      "label_zh": "440 JSCC + 218\u5355\u5149\u5b50\u548c"
+    }
+  ],
+  "source_sha256": {
+    "ehe_native_iteration_metrics.csv": "76bafcc2ca93bc883a20d477e224a098b531c167eac6e65e251e475e594e553f",
+    "ehe_sphere_iteration_metrics.csv": "3d77a30174031281c1aeacc821efa78122741142e1db8378212ca8e9bbc88daa",
+    "jscc_native_iteration_metrics.csv": "58bc014f9012b132a01d4995bce71e865142e0dd9cfb42a44b98408a586eb30a",
+    "jscc_sphere_iteration_metrics.csv": "16676538a85c366a7b7b6dc58f4fdf2ff4f382a57c2dc0a8cccaab2a5c07028a",
+    "truth_npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "truth_manifest": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+    "whole_geometry": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "EHE_formal_summary": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+    "JSCC_verification": "fb3f899da8664708d9f1693e4d44f88fb8ce7598d67967cdef069f181a1ff728",
+    "accepted_comparison_report": "645c0204cab2ed3a09920444b4683fad484209cc87ffcc19479bec795291dccf"
+  },
+  "histories": {
+    "EHE/218_SinglePhoton_CrossTalkCorrected": {
+      "history_sha256": "f751f2faf1330013200738c2c77d83e7fd033e955079f85f07411448d49d595d",
+      "saved_frames": 20,
+      "save_step": 10,
+      "final_iteration": 200,
+      "selected_iterations": [
+        0,
+        10,
+        20,
+        50,
+        100,
+        150,
+        200
+      ]
+    },
+    "JSCC/218_SinglePhoton_CrossTalkCorrected": {
+      "history_sha256": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a",
+      "saved_frames": 200,
+      "save_step": 50,
+      "final_iteration": 10000,
+      "selected_iterations": [
+        0,
+        500,
+        1000,
+        2500,
+        5000,
+        7500,
+        10000
+      ]
+    },
+    "EHE/440_SinglePhoton": {
+      "history_sha256": "337523e925dca872b69628221b2613a8bd2a8fb0ac02363019d0db1b09ff1f7b",
+      "saved_frames": 20,
+      "save_step": 10,
+      "final_iteration": 200,
+      "selected_iterations": [
+        0,
+        10,
+        20,
+        50,
+        100,
+        150,
+        200
+      ]
+    },
+    "JSCC/440_SinglePhoton": {
+      "history_sha256": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b",
+      "saved_frames": 200,
+      "save_step": 50,
+      "final_iteration": 10000,
+      "selected_iterations": [
+        0,
+        500,
+        1000,
+        2500,
+        5000,
+        7500,
+        10000
+      ]
+    },
+    "JSCC/440_ComptonOnly": {
+      "history_sha256": "f05db3be000b4cf56e70f160cf958483b5ef161b1d03c09d1a6d2fde09bd915c",
+      "saved_frames": 200,
+      "save_step": 50,
+      "final_iteration": 10000,
+      "selected_iterations": [
+        0,
+        500,
+        1000,
+        2500,
+        5000,
+        7500,
+        10000
+      ]
+    },
+    "JSCC/440_SinglePlusCompton": {
+      "history_sha256": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af",
+      "saved_frames": 200,
+      "save_step": 50,
+      "final_iteration": 10000,
+      "selected_iterations": [
+        0,
+        500,
+        1000,
+        2500,
+        5000,
+        7500,
+        10000
+      ]
+    },
+    "EHE/440SinglePlus218Single": {
+      "history_sha256": "202335008d358f90f966ce718cf8f57c6c469732f90f3fd5e86941c179b7b6f1",
+      "saved_frames": 20,
+      "save_step": 10,
+      "final_iteration": 200,
+      "selected_iterations": [
+        0,
+        10,
+        20,
+        50,
+        100,
+        150,
+        200
+      ]
+    },
+    "JSCC/440SinglePlus218Single": {
+      "history_sha256": "02ed5ce4cd50f60272e2c918383bed8fa325a111dba909fffae8a3b56350f931",
+      "saved_frames": 200,
+      "save_step": 50,
+      "final_iteration": 10000,
+      "selected_iterations": [
+        0,
+        500,
+        1000,
+        2500,
+        5000,
+        7500,
+        10000
+      ]
+    },
+    "JSCC/440SingleComptonPlus218Single": {
+      "history_sha256": "20c1461c37cde7de156a98fb29070d1ad938bccd32630eb22bf76ce02c8e7881",
+      "saved_frames": 200,
+      "save_step": 50,
+      "final_iteration": 10000,
+      "selected_iterations": [
+        0,
+        500,
+        1000,
+        2500,
+        5000,
+        7500,
+        10000
+      ]
+    }
+  },
+  "initialization": {
+    "source_sha256": {
+      "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+      "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+      "run_energy_full10000_v5.py": "f1cc970f64e9bcd1a75280fcfda7d725269c7ae60d2144ce7b9e9a3dd4a081b0"
+    },
+    "ehe_freeze_sha256": "e26746c908c66626049fce033321789a2c4376598a81a719a6fdd3c02fbb7332",
+    "jscc_freeze_sha256": "6d6d4dd13cf9d47292825e5127131cb6cbced635f8191f214abd2c64d1062fbe",
+    "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+    "single_density_gamma_per_mm3": 1,
+    "sum_density_gamma_per_mm3": 2,
+    "zero_CNR": "undefined: uniform background standard deviation is zero",
+    "zero_peak_location": "undefined: uniform initialization has no unique maximum"
+  },
+  "display_nodes": [
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 456.39950822493626,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 10,
+      "frame_index": 0,
+      "density_scale": 456.39950822493626,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 20,
+      "frame_index": 1,
+      "density_scale": 456.39950822493626,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 30
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 50,
+      "frame_index": 4,
+      "density_scale": 456.39950822493626,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 478
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 100,
+      "frame_index": 9,
+      "density_scale": 456.39950822493626,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 1543
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 150,
+      "frame_index": 14,
+      "density_scale": 456.39950822493626,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 2364
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 200,
+      "frame_index": 19,
+      "density_scale": 456.39950822493626,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 2984
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 456.4035256096357,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 500,
+      "frame_index": 9,
+      "density_scale": 456.4035256096357,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 1000,
+      "frame_index": 19,
+      "density_scale": 456.4035256096357,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 2500,
+      "frame_index": 49,
+      "density_scale": 456.4035256096357,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 5000,
+      "frame_index": 99,
+      "density_scale": 456.4035256096357,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 24
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 7500,
+      "frame_index": 149,
+      "density_scale": 456.4035256096357,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 46
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 10000,
+      "frame_index": 199,
+      "density_scale": 456.4035256096357,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 60
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1036.9058469627134,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 10,
+      "frame_index": 0,
+      "density_scale": 1036.9058469627134,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 1
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 20,
+      "frame_index": 1,
+      "density_scale": 1036.9058469627134,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 106
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 50,
+      "frame_index": 4,
+      "density_scale": 1036.9058469627134,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 516
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 100,
+      "frame_index": 9,
+      "density_scale": 1036.9058469627134,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 1335
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 150,
+      "frame_index": 14,
+      "density_scale": 1036.9058469627134,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 2057
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 200,
+      "frame_index": 19,
+      "density_scale": 1036.9058469627134,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 2626
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1036.9020496292537,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 500,
+      "frame_index": 9,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 1000,
+      "frame_index": 19,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 2500,
+      "frame_index": 49,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 5000,
+      "frame_index": 99,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 72
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 7500,
+      "frame_index": 149,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 124
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 10000,
+      "frame_index": 199,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 162
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1036.9020496292537,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 500,
+      "frame_index": 9,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 1000,
+      "frame_index": 19,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 2
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 2500,
+      "frame_index": 49,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 67
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 5000,
+      "frame_index": 99,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 571
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 7500,
+      "frame_index": 149,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 1264
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 10000,
+      "frame_index": 199,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 1948
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1036.9020496292537,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 500,
+      "frame_index": 9,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 1000,
+      "frame_index": 19,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 2500,
+      "frame_index": 49,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 5000,
+      "frame_index": 99,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 60
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 7500,
+      "frame_index": 149,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 133
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 10000,
+      "frame_index": 199,
+      "density_scale": 1036.9020496292537,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 179
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1493.3053551876496,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 10,
+      "frame_index": 0,
+      "density_scale": 1493.3053551876496,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 20,
+      "frame_index": 1,
+      "density_scale": 1493.3053551876496,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 2
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 50,
+      "frame_index": 4,
+      "density_scale": 1493.3053551876496,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 165
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 100,
+      "frame_index": 9,
+      "density_scale": 1493.3053551876496,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 532
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 150,
+      "frame_index": 14,
+      "density_scale": 1493.3053551876496,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 966
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 200,
+      "frame_index": 19,
+      "density_scale": 1493.3053551876496,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 1338
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1493.3055752388896,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 500,
+      "frame_index": 9,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 1000,
+      "frame_index": 19,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 2500,
+      "frame_index": 49,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 5000,
+      "frame_index": 99,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 12
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 7500,
+      "frame_index": 149,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 40
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 10000,
+      "frame_index": 199,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 65
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 0,
+      "frame_index": null,
+      "density_scale": 1493.3055752388896,
+      "provenance": "SHA-bound executed all-ones initialization; not a saved reconstruction snapshot",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 500,
+      "frame_index": 9,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 1000,
+      "frame_index": 19,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 2500,
+      "frame_index": 49,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 5000,
+      "frame_index": 99,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 6
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 7500,
+      "frame_index": 149,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 38
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 10000,
+      "frame_index": 199,
+      "density_scale": 1493.3055752388896,
+      "provenance": "accepted saved history frame",
+      "clipped_high_pixels": 57
+    }
+  ],
+  "selected_iterations": {
+    "EHE": [
+      0,
+      10,
+      20,
+      50,
+      100,
+      150,
+      200
+    ],
+    "JSCC": [
+      0,
+      500,
+      1000,
+      2500,
+      5000,
+      7500,
+      10000
+    ]
+  },
+  "physical_calibration_passed": false,
+  "density_scales": {
+    "EHE": {
+      "218": 456.39950822493626,
+      "440": 1036.9058469627134,
+      "sum": 1493.3053551876496
+    },
+    "JSCC": {
+      "218": 456.4035256096357,
+      "440": 1036.9020496292537,
+      "sum": 1493.3055752388896
+    }
+  },
+  "physical_units": "gamma/mm3; dual sum is not Ac225 activity",
+  "display": {
+    "crop": 0,
+    "smoothing_sigma": 0,
+    "colormap": "gray_r",
+    "range": [
+      0,
+      10
+    ],
+    "fitted_gain": false,
+    "truth": "Actual H60 3D dual-energy source",
+    "mip_z_edges_mm": [
+      -36,
+      36
+    ],
+    "axial_z_mm": 1.5,
+    "coronal_y_mm": -1.5,
+    "sagittal_x_mm": -1.5
+  },
+  "native_metrics_extent_mm": 120,
+  "background_budgets": {
+    "EHE": "440 single final200",
+    "JSCC": "440 single final10000"
+  },
+  "metric_rows": {
+    "native": 1269,
+    "sphere": 5076
+  },
+  "pages": [
+    "overall_mip72.png",
+    "overall_axial.png",
+    "overall_coronal.png",
+    "overall_sagittal.png",
+    "native_density_curves.png",
+    "native_integral_position_curves.png",
+    "data_and_endpoints.png"
+  ],
+  "scientific_checks": {
+    "history_sha": true,
+    "byte_shape": true,
+    "finite_nonnegative": true,
+    "actual_saved_node_mapping": true,
+    "all_positive_metrics_unchanged": true,
+    "full_frame_curves": true,
+    "frozen_initialization_sha": true,
+    "no_equal_convergence_claim": true,
+    "no_simulation_or_reconstruction": true
+  },
+  "producer_sha256": "59edddeb66296ba9ec3d2fadccc1e911f838b7183635d923d16d290109ef28c5"
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "metric_fields_compared_unchanged": 59220,
+  "metric_rows": {
+    "native": 1269,
+    "sphere": 5076
+  },
+  "complete_independent_iterations": true,
+  "saved_nodes_mapping": true,
+  "initialization_not_saved_snapshot": true,
+  "undefined_CNR0_and_peak_xyz_omitted": true,
+  "original_input_sha_checks": {
+    "history_sha": true,
+    "byte_shape": true,
+    "finite_nonnegative": true,
+    "actual_saved_node_mapping": true,
+    "all_positive_metrics_unchanged": true,
+    "full_frame_curves": true,
+    "frozen_initialization_sha": true,
+    "no_equal_convergence_claim": true,
+    "no_simulation_or_reconstruction": true
+  },
+  "artifact_files_verified": 14,
+  "analysis": "CNR maxima only among available saved frames; no equality of convergence is asserted",
+  "CNR_peak_iteration_range": {
+    "EHE": [
+      10,
+      40
+    ],
+    "JSCC": [
+      150,
+      10000
+    ]
+  },
+  "verifier_sha256": "f75cb36b18e3cefac91241ab196c60d9c0d60f533e605cc41dfaa6b24d314ddc",
+  "producer_sha256": "59edddeb66296ba9ec3d2fadccc1e911f838b7183635d923d16d290109ef28c5"
+}
