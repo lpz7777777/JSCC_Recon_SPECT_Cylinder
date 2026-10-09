@@ -1,0 +1,365 @@
+{
+  "passed": true,
+  "payload_commit": "a4f53e1",
+  "also_staged_original_slurm_logs": [
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/acceptance_slurm.log",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/compute_slurm.log",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/acceptance_slurm.log",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/compute_slurm.log"
+  ],
+  "files": {
+    ".gitignore": {
+      "git_blob": "00d83df7ec4f701db8f89f5756d46b30ab1788e9",
+      "sha256": "3e0ae3138487f0e9cb231c72fd6681213429a5b01bba67c1265100c536f86100",
+      "bytes": 2839
+    },
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "git_blob": "123c4b8438c03d6fbaa135d764351672d19afd49",
+      "sha256": "618cf6450d6b84442ddf878d1c6f75b984d895881a7e6ebc241d31a8b61382ec",
+      "bytes": 8272
+    },
+    "experiments/ELLIPSE500x300_H120/compare_ehe_5e9.py": {
+      "git_blob": "8fb3fad932050bd2b6f53a9a9c5df8b48b9fdccb",
+      "sha256": "20690f15682967cc90786caa677f9103f53b321ea47d337486434d7400cc11c1",
+      "bytes": 22258
+    },
+    "experiments/ELLIPSE500x300_H120/ehe_5e9_workflow.py": {
+      "git_blob": "5480d52369abfffb43f2e1cfc97ab2f5a90dcb11",
+      "sha256": "30631cc292f8f14c06fe33670e647ab7b64c3c65c702236355f79733edd4157c",
+      "bytes": 45165
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "git_blob": "12322bcc11e411a9db96257243f9913bd99a25c5",
+      "sha256": "fa1f62709dd59be0011ce8c48bc9769b2e994643b79d4aa1509ee66cebcc9425",
+      "bytes": 15762
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "git_blob": "fa69547498bd6308feb55555e10806b208c55b87",
+      "sha256": "f8c975aed6abf827a5c5f1b74e139c62f2f1477bfa3675be4013873e866823cd",
+      "bytes": 16862
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RESULTS.md": {
+      "git_blob": "c8c2ef89434e38d306a086fd1ec150beab450ad7",
+      "sha256": "335218b068fc3320927879e3e4afec201bb18b7083425175d0d525335cb9af50",
+      "bytes": 11581
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "git_blob": "6290841873189f2391ecd545b1498bc04881adc7",
+      "sha256": "ede0489c792e7e9cd1e55c77499d0eebc2afbd385bae590fb689ed2b633d1cbf",
+      "bytes": 28528
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_axial.png": {
+      "git_blob": "b9fc8611f008d07f627231c195ef4ebf3a5e451f",
+      "sha256": "3ad8928b3bae304b19147288c889bdd7f0679cf8714083cc2f43de9362f61549",
+      "bytes": 156025
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_coronal.png": {
+      "git_blob": "4a8891a8418eb950d2a5a7003179e6c63047d46b",
+      "sha256": "c11d8cb4269869caf59a5407c190fa4336138b93cfd9276a732e225fde469fef",
+      "bytes": 113154
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_crc_cnr.png": {
+      "git_blob": "2fe11750e4ed005fb82fc8e5162f5405e905d214",
+      "sha256": "4efb0995abd9546d8a840533b0c6dd2be89e97a6a1e11a58c5c27ae6ecd65051",
+      "bytes": 97223
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_full_history_crc_cnr.png": {
+      "git_blob": "1d907fa25b5a9880fcbb3f486afa33ce3174e15a",
+      "sha256": "68adaa2dae8b7dc7a641ed524128e162a5a1302dcf62248ea86e012aff66ab35",
+      "bytes": 113401
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_full_history_native_curves.png": {
+      "git_blob": "a4fb9bfc75ee9ab0b693348ea2244948aa0428f6",
+      "sha256": "507c202727bd1a29d02b00f4958dfa576f0af8539c6c76ce0d047b17c50739fb",
+      "bytes": 151429
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_mip72.png": {
+      "git_blob": "21200d4dfa48dda6b17e125b03b4be49c7f65d08",
+      "sha256": "4319e24efeb816d82dc37dd05dfc16074252ca7649aebeb38bf05f4760f1dce4",
+      "bytes": 206242
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_native_curves.png": {
+      "git_blob": "d426abc896f1606676e5a35000d113f6e0bb4997",
+      "sha256": "66f6cbf1c6dd1242520ebec99efa5d1796df2d9c0ca2842866855c75b27ec18b",
+      "bytes": 146745
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/218_sagittal.png": {
+      "git_blob": "bc42ecad6c9b068b78bf24e41cbe77c6c758eb8c",
+      "sha256": "3c77e4607bbadba8f7c13b8d0c29962afd2d91ba9d77a29daa84187975233b58",
+      "bytes": 110849
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_axial.png": {
+      "git_blob": "d2cb0fb9bd2ac509e962da943dd3a48d866795de",
+      "sha256": "1be4a6fd073e492ceda2694de8d0060ef00af8273922a04b1046a55ffc6cf1fe",
+      "bytes": 233766
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_coronal.png": {
+      "git_blob": "75fdb7c09fde34f91eb39897081283d4df519594",
+      "sha256": "4852c589da827038ce572a15ca273d5b1b23287a636187719dfee1f74257e3e3",
+      "bytes": 167770
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_crc_cnr.png": {
+      "git_blob": "792bccaba7759af3ab2fcaaa6a63998c0d9d9302",
+      "sha256": "555d3a6e6aa831d0f6f1951aa9fc0799b1173f99f47922aac76d7e4f54d1dfed",
+      "bytes": 150320
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_full_history_crc_cnr.png": {
+      "git_blob": "9e64b0d93620079a0bdcf4a8e9fb3577e17c3501",
+      "sha256": "49304133390f355e21fe923672394305ba7f717d713a62e901102d3dc8f19840",
+      "bytes": 185419
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_full_history_native_curves.png": {
+      "git_blob": "61d955c436fec9deb479ad3145f3002e4190a1a6",
+      "sha256": "5463df681d5d3a39d459eb99ae5ea3537678d24b44f5ebb2a4902ad6e4b16ed3",
+      "bytes": 215327
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_mip72.png": {
+      "git_blob": "7d893539b88e444439a5eb16b9b5a043cbb4bcc2",
+      "sha256": "40dff4fd613f08ea8a8de7c9d4bf8d2f46f60602ca9d74e4016d1bf98f406841",
+      "bytes": 287554
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_native_curves.png": {
+      "git_blob": "5361735b9d4ad5996558fcf8b0ae7d823dc302ed",
+      "sha256": "92ccf55f12a2db59c32cb75367309bf9a22f0a6be50582898723a918bb370495",
+      "bytes": 169176
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/440_sagittal.png": {
+      "git_blob": "0cb8d2bf0b22f8eae19e922f03c6f69c20b814f1",
+      "sha256": "34a96f4265e8f8183fc4a90b3d8e06727d96e2ba91d972d976c1d5e1e8108820",
+      "bytes": 170909
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/artifact_manifest.json": {
+      "git_blob": "5a12f465d11310c8d785809e934e197c55a7bb02",
+      "sha256": "cbafcb6443ecd0d2aaab4e73f51fb54bab3ae7dc849a5871c897e34645317fd7",
+      "bytes": 4010
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/compare_ehe_5e9.py": {
+      "git_blob": "fede68c81c405d696b1d86e26f9798ef62d7a43f",
+      "sha256": "b49b2188b1c58a3f81de94ed527d415c4d0673b08f86b54d44be42b89e346b68",
+      "bytes": 22177
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/comparison_report.json": {
+      "git_blob": "d18d576239f961695d7106840de9f228d6737dbd",
+      "sha256": "645c0204cab2ed3a09920444b4683fad484209cc87ffcc19479bec795291dccf",
+      "bytes": 11974
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_axial.png": {
+      "git_blob": "9f71a9cc8b23b76cce9617867bcf983afbeea03c",
+      "sha256": "5bcfdd112ab1e8c06d473eac184041155f0d7e2f37ab5c43b31dadca8794f6b6",
+      "bytes": 197792
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_coronal.png": {
+      "git_blob": "9bd0d5f86ab6af7c7c884c4c612632be2c7940af",
+      "sha256": "07d70fa777b1ab1fe62a1a88450e2dc16d85376524fa9925623d5105e9b98cfc",
+      "bytes": 142895
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_crc_cnr.png": {
+      "git_blob": "4b0e76ae419aef035ca0096bb297bfbf344b1367",
+      "sha256": "7551ee9cb3c5edd2e38eddcb7350f4968dbd1e76e284443e4aff2bd036fa4bee",
+      "bytes": 172764
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_full_history_crc_cnr.png": {
+      "git_blob": "3f8b23439a1c6bf1ca14bebce2e8da7059670fe5",
+      "sha256": "ef9c720d9ae267e6df6e357af7b597d537f48bccd453b2804418f38b69f631ed",
+      "bytes": 224472
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_full_history_native_curves.png": {
+      "git_blob": "76b647e7b5d21d9d8db5605527b62ed30335c347",
+      "sha256": "214c56875c84c7373fb3b9d832f78a78656325f96011dd8b29fc8a5c805cd37d",
+      "bytes": 184691
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_mip72.png": {
+      "git_blob": "f293b4e3732da817b41bad98a6751ba2537b44fd",
+      "sha256": "fe7f3226e3b1bc33ee57961ba3a6ed86a8aefa2d5c75fe0e2bc99dc124dad7d5",
+      "bytes": 248074
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_native_curves.png": {
+      "git_blob": "e3d87ab96f6a29330905236bc93cd610661ae044",
+      "sha256": "38e37463189ad699af65921d1a0e3010d5fc64de86a78e247d919690b9732ad3",
+      "bytes": 160435
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/dual_sagittal.png": {
+      "git_blob": "0d150ab1e9a246accfb4a18fd930fae7ca34bccd",
+      "sha256": "3d0642ccea1115279632137d875dcf42a28ff729d67fd3a167caae19dec27337",
+      "bytes": 142320
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/ehe_native_iteration_metrics.csv": {
+      "git_blob": "fb93867488320ed9aa06d7c92e0244b4accb07f1",
+      "sha256": "76bafcc2ca93bc883a20d477e224a098b531c167eac6e65e251e475e594e553f",
+      "bytes": 15410
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/ehe_sphere_iteration_metrics.csv": {
+      "git_blob": "044047f3748422490a1a8031b733606c71c48f99",
+      "sha256": "3d77a30174031281c1aeacc821efa78122741142e1db8378212ca8e9bbc88daa",
+      "bytes": 27864
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/ehe_window_and_background_by_view.csv": {
+      "git_blob": "bdf33345c38b931104c23ea152e89196109211c1",
+      "sha256": "5cd3bdbc8ef12777a7ba4b70e33d4d54fcd2e4acc4a7454f35e7e44caa1fa082",
+      "bytes": 780
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/gallery.md": {
+      "git_blob": "4bd010f813d34e1a85a458c03523ea5a8241c4d7",
+      "sha256": "5b37fd129f86cb02fd978434d849d21bb931b07fe4f5a7dd12a5b86ba93d7b65",
+      "bytes": 3058
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/jscc_long_reference_axial.png": {
+      "git_blob": "884a35869b113cd85b33c8072095347941035be8",
+      "sha256": "1a6c38cfeab9af89bb775185b6493af2e5eeb69581c2dd69f3ce6cb506b5d9f1",
+      "bytes": 282881
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/jscc_long_reference_coronal.png": {
+      "git_blob": "3713e0b3bf06bc66f6d99ca3dd5946e5efebb891",
+      "sha256": "d9d854b626b2aff29e8dca1ae3d2ddd2fff98f925ce8a23a5eb5b208495bdfb3",
+      "bytes": 171806
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/jscc_long_reference_mip72.png": {
+      "git_blob": "44c219568fa3f3dd04cf81818b278dbb347f43e6",
+      "sha256": "b5c984a0e47184c68eecb536f0969aacee19bdd827199192d89f676078f9d104",
+      "bytes": 316389
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/jscc_long_reference_sagittal.png": {
+      "git_blob": "09914bef0d82a250645e07391be535e9d5b2dd23",
+      "sha256": "7848fb3abe688f872203522de107297c152e70b987430c4bbd3a78a22a8d7adc",
+      "bytes": 174596
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/jscc_native_iteration_metrics.csv": {
+      "git_blob": "d929eddb03890a752a3937034e90e444db0b40ac",
+      "sha256": "58bc014f9012b132a01d4995bce71e865142e0dd9cfb42a44b98408a586eb30a",
+      "bytes": 335690
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/jscc_sphere_iteration_metrics.csv": {
+      "git_blob": "173a0423596e576dfd983b88fa2e1b4d017a4a55",
+      "sha256": "16676538a85c366a7b7b6dc58f4fdf2ff4f382a57c2dc0a8cccaab2a5c07028a",
+      "bytes": 594803
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/physical_continuation_policy.json": {
+      "git_blob": "325d5babaedfe49169ba64eb4b8acf48a9d3a563",
+      "sha256": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441",
+      "bytes": 2359
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/physical_gate.json": {
+      "git_blob": "0fa8dc39c9c52fd665d18f3c238c370d3c51caf1",
+      "sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+      "bytes": 935
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/projection_truncation.json": {
+      "git_blob": "37312a1ffd8ada094c14ccd32c0916b3c0ba2d4e",
+      "sha256": "cca8c3bf09054435dbfe7248210fdb317b864fc3aefc35aa437907993f44967a",
+      "bytes": 3859
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_scientific_qa.json": {
+      "git_blob": "4263eb3dfc53f87c7fede20b35928beba388a450",
+      "sha256": "e5b32c7d16172e4577edd283a1e5ad32ece985e2269a4c7fa426b332d73669d6",
+      "bytes": 4288
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_visual_qa.json": {
+      "git_blob": "c1b7af5d8024af8a0ad5be83bd1803f01ee0aa96",
+      "sha256": "e567817019c9f833864e310c0d24d62db3b4c3286108120088c9a70b702ac790",
+      "bytes": 5094
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/curve_legibility_repair.json": {
+      "git_blob": "e96b3c3305343e5d0c7aa84c15bed0d36e2ddb3c",
+      "sha256": "5a64c0c1ababefb7c502b0e52dabc47c3b850e240f872fb34d41d3378b9fb643",
+      "bytes": 850
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/final_delivery_acceptance.json": {
+      "git_blob": "ab32fa5f545327db6ac88bc46bd42761eb43dca2",
+      "sha256": "399372f14198835997413abad80eddf0c3e6244166602c35d96d71b00a8b1d41",
+      "bytes": 2790
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/acceptance_allocation.json": {
+      "git_blob": "d42efae3573eb533c0a05dd3d9b3b818cf6bb08e",
+      "sha256": "aeffadfc2ee8f5bb1301103565a2c0b44f3bfa95af3d3e8ab9cd3a573daffd2f",
+      "bytes": 2001
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/acceptance_receipt.json": {
+      "git_blob": "e57dca9f48f4d1cba4c7ea6fb920ed245c13d4a6",
+      "sha256": "230fba20858c95d582b5162f05a3874bd44c5ccb6f47bef3c0ace2fa7130fe01",
+      "bytes": 449
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/acceptance_submitted.sh": {
+      "git_blob": "439c163bc53cdb40861df7d04004517deefe1339",
+      "sha256": "3b53d93220ae2b7ef7cee53f0a9e44630af370f0df83b56509538f438e1162a8",
+      "bytes": 2231
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/compute_submitted.sh": {
+      "git_blob": "58e7924412ce5e540c042a3add7ce262d15da7c9",
+      "sha256": "62dc5b2d92624fb2dc043efc7260da7671ab5fa6ace9de65cbfafba21eb840e8",
+      "bytes": 1675
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/fetch_receipt.json": {
+      "git_blob": "99f112e879b0f47611c8b2cba5463dfe8de05c35",
+      "sha256": "a68a6e8a3ee6a5baf9c1ddcbf05eb7d4bcce0f82d1b49b261d4fb52ddd77228e",
+      "bytes": 1367
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_acceptance_job.json": {
+      "git_blob": "8bd410ba64bd5b5b6e30f0f1f998a1fdf98669ce",
+      "sha256": "13df69b94b03c8edda126b5230f74b77dada49323f63cfc61f0dbcb9e55ef92f",
+      "bytes": 2983
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_acceptance_receipt.json": {
+      "git_blob": "fd8e08fe48d9fcfab5a87eab0b613a3f171bc8d7",
+      "sha256": "9933abd98d5b5b65929d23e92d5f42100584eaa5e6d53010b0b304e36592c54f",
+      "bytes": 716
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json": {
+      "git_blob": "8ef17589362ba6e8c57e5f10baf2bcb22c782c3a",
+      "sha256": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+      "bytes": 28541
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/acceptance_allocation.json": {
+      "git_blob": "323394a8fe3d19e419a7c80b89389ec3fd8ef1b1",
+      "sha256": "acfb2d045de40d8d6685c0623cfd2809d70eb960459d2441a3e32737db6e3c38",
+      "bytes": 2017
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/acceptance_receipt.json": {
+      "git_blob": "fd425ed38fcce4cc274075138c2a05630b15ae98",
+      "sha256": "6f85b8a72e37d3f7f81342d804c5bd335bef39b0a8257597c13c80d7ab60869b",
+      "bytes": 450
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/acceptance_submitted.sh": {
+      "git_blob": "ee0c7d6ab1a3f84d5a7a9e26ddc0d256dd901018",
+      "sha256": "8a550604ee251dca6bde4ea21d0a4a0389c2a9195ff7c94926e1f7e37ba936f5",
+      "bytes": 2247
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/compute_submitted.sh": {
+      "git_blob": "1aa0f46fb719d43485bc3c848583a71825d96ede",
+      "sha256": "f5271a76e26c5fdd75a5748397b83602674cfccbb67677f48a2b6d6c78e8f99a",
+      "bytes": 1506
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/fetch_receipt.json": {
+      "git_blob": "d27b9a253f173b115bc4e789e8bea6dd46a05d77",
+      "sha256": "4315dec376f60054ab4ce4a628d1df279e3a0eadac7ba0b5a91b526b8176b0d2",
+      "bytes": 1371
+    },
+    "experiments/ELLIPSE500x300_H120/verify_ehe_comparison.py": {
+      "git_blob": "89a492a4e84f50c43e1f85ce84ac5ae4ec81bf93",
+      "sha256": "7760e6bdde3a47ec686ea1f72fa88ecb943f82377aa6707f6945de7590a4f7d8",
+      "bytes": 9258
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/acceptance_slurm.log": {
+      "git_blob": "f558a5dd1b6ef5cc9281aab1ce75a8565c073426",
+      "sha256": "13703e555a1244f1fb2fc7550f8e0bf17756744fd9b49bb15d11269c5de81618",
+      "bytes": 92285
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_1679415/compute_slurm.log": {
+      "git_blob": "97551461e5f2040d5715487603a1e7ad30aafb98",
+      "sha256": "a420e68a720dc164717f22e370838d99876c847bcd42bba93d6b1114f04951ec",
+      "bytes": 2110
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/acceptance_slurm.log": {
+      "git_blob": "6bb460fb0840666bb9d5db8e43be819d2c0179bf",
+      "sha256": "c6e0f1ad15f566ce0ec0629fe1a1fc5ceda0ab825870d1e801651d34d271018b",
+      "bytes": 75737
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/validation_1679300/compute_slurm.log": {
+      "git_blob": "a36fc047d7f6c737191269d572d51448392a7262",
+      "sha256": "25621b808d333ae200238d51bf927af1c1c2d1fde867e36298ffbbfb11edad8f",
+      "bytes": 129
+    }
+  },
+  "actual_executed_plotting_archive_preserved": true,
+  "original_slurm_logs_sha_matches_strict_fetch_receipts": true,
+  "scope": "Final66 payload files plus four original small Slurm logs; this receipt itself is excluded from its own SHA map"
+}
