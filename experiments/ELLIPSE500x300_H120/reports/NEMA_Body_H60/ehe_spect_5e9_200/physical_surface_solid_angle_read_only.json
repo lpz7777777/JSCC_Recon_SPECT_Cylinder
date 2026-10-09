@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "scope": "Full detector-pair geometry-only visible-face solid-angle midpoint audit",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "science_job": 1677211,
+  "code_sha256": "19c9826b0d2f00a64dc6a61567bbe0be5954308ce9b00c605816256b8df5e3da",
+  "scientific_source_sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+  "producer_release_key": "74e129c4460163c5",
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "accepted_runtime_evidence_sha256": "a1c0b53cc70e3f913a9c7404b615921f41d16e809973599bf91ae0657b9d09a9",
+  "accepted_runtime_acceptance_sha256": "c75a65768f96f9812d74bb8c3053c885051d29cd4508524f543d3aa2fc6522cd",
+  "original_detector_params_receipt_bindings": [
+    {
+      "response": "A218",
+      "slab": 0,
+      "params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "pre_stop_receipt_sha256": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f"
+    },
+    {
+      "response": "A218",
+      "slab": 1,
+      "params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "pre_stop_receipt_sha256": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855"
+    },
+    {
+      "response": "A218",
+      "slab": 2,
+      "params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "pre_stop_receipt_sha256": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347"
+    },
+    {
+      "response": "A218",
+      "slab": 3,
+      "params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "pre_stop_receipt_sha256": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed"
+    },
+    {
+      "response": "A440",
+      "slab": 0,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207"
+    },
+    {
+      "response": "A440",
+      "slab": 1,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a"
+    },
+    {
+      "response": "A440",
+      "slab": 2,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d"
+    },
+    {
+      "response": "A440",
+      "slab": 3,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0"
+    },
+    {
+      "response": "C440to218",
+      "slab": 0,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae"
+    },
+    {
+      "response": "C440to218",
+      "slab": 1,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230"
+    },
+    {
+      "response": "C440to218",
+      "slab": 2,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da"
+    },
+    {
+      "response": "C440to218",
+      "slab": 3,
+      "params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "pre_stop_receipt_sha256": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16"
+    }
+  ],
+  "geometry": {
+    "detector_count": 2312,
+    "dimensions_mm": [
+      4,
+      10,
+      4
+    ],
+    "rotation": 0,
+    "lattice_shape": [
+      68,
+      34
+    ],
+    "lattice_spacing_mm": 4,
+    "absolute_offset_classes": 2311,
+    "total_ordered_nonself_pairs": 5343032
+  },
+  "branch_summary": {
+    "near": {
+      "unique_absolute_offset_classes": 25,
+      "ordered_pairs": 167548,
+      "minimum_bias_class": {
+        "offset_x_mm": 4,
+        "offset_z_mm": 4,
+        "ordered_pair_multiplicity": 8844,
+        "centre_distance_mm": 5.656854249492381,
+        "subdivisions": 8,
+        "visible_faces": 2,
+        "analytic_solid_angle_sr": 1.4456045014533307,
+        "midpoint_solid_angle_sr": 1.443537537955994,
+        "relative_midpoint_bias": -0.0014298264118980386
+      },
+      "maximum_bias_class": {
+        "offset_x_mm": 0,
+        "offset_z_mm": 4,
+        "ordered_pair_multiplicity": 4488,
+        "centre_distance_mm": 4.0,
+        "subdivisions": 8,
+        "visible_faces": 1,
+        "analytic_solid_angle_sr": 2.864848298819579,
+        "midpoint_solid_angle_sr": 2.872434175699466,
+        "relative_midpoint_bias": 0.0026479157318775037
+      },
+      "multiplicity_weighted_analytic_angle_sum_sr": 86782.18547450153,
+      "multiplicity_weighted_midpoint_angle_sum_sr": 86889.53769934495,
+      "multiplicity_weighted_geometry_only_relative_bias": 0.001237030667716521
+    },
+    "far": {
+      "unique_absolute_offset_classes": 2286,
+      "ordered_pairs": 5175484,
+      "minimum_bias_class": {
+        "offset_x_mm": 268,
+        "offset_z_mm": 132,
+        "ordered_pair_multiplicity": 4,
+        "centre_distance_mm": 298.74403759740545,
+        "subdivisions": 1,
+        "visible_faces": 2,
+        "analytic_solid_angle_sr": 0.0006030274082511958,
+        "midpoint_solid_angle_sr": 0.000603099310744616,
+        "relative_midpoint_bias": 0.00011923586297468702
+      },
+      "maximum_bias_class": {
+        "offset_x_mm": 4,
+        "offset_z_mm": 20,
+        "ordered_pair_multiplicity": 7772,
+        "centre_distance_mm": 20.396078054371138,
+        "subdivisions": 1,
+        "visible_faces": 2,
+        "analytic_solid_angle_sr": 0.12009624534920307,
+        "midpoint_solid_angle_sr": 0.12469738986064548,
+        "relative_midpoint_bias": 0.03831214288226659
+      },
+      "multiplicity_weighted_analytic_angle_sum_sr": 58282.21163439115,
+      "multiplicity_weighted_midpoint_angle_sum_sr": 58847.926229994744,
+      "multiplicity_weighted_geometry_only_relative_bias": 0.009706470975267223
+    }
+  },
+  "reference_checks": {
+    "visible_face_classes": 4522,
+    "max_abs_triangle_relative_difference": 8.630951509047691e-11,
+    "max_abs_gauss64_relative_difference": 8.630918202356952e-11,
+    "max_abs_gauss32_64_relative_difference": 4.271061282423716e-11,
+    "minimum_midpoint_face_bias": {
+      "offset_x_mm": 4,
+      "offset_z_mm": 4,
+      "normal_axis": 0,
+      "relative_midpoint_bias": -0.0014298264118980386,
+      "triangle_relative_difference": 2.220446049250313e-16,
+      "gauss64_relative_difference": 6.661338147750939e-16,
+      "gauss32_64_relative_difference": -1.5543122344752192e-15
+    },
+    "maximum_midpoint_face_bias": {
+      "offset_x_mm": 4,
+      "offset_z_mm": 20,
+      "normal_axis": 2,
+      "relative_midpoint_bias": 0.040697972957392414,
+      "triangle_relative_difference": 0.0,
+      "gauss64_relative_difference": 0.0,
+      "gauss32_64_relative_difference": -2.220446049250313e-16
+    }
+  },
+  "table_relative_to_data": "surface_solid_angle_read_only/absolute_offset_geometry.csv",
+  "table_sha256": "751b71aad391c7a7b65d05033b33ef0f47345ad62f4679d42e49b2927e94d5c3",
+  "class_reduction": "Translation and sign-reflection symmetry of the identical axis-aligned boxes with common y. Every absolute x/z offset class and its full ordered-pair multiplicity is included. This is an analytic symmetry reduction, not a production sampling change.",
+  "method": "Float64 re-expression of the frozen projected-cosine*area/r^2 factor only. Four-corner analytic rectangle integral, independently checked by two spherical triangles and 32x32/64x64 Gauss integration on every visible face class. Logged near8/far1 rule retained.",
+  "aggregate_definition": "Pair-multiplicity weighted sums of solid angles only, with all other surface factors held constant. Neither source nor energy nor window nor attenuation nor absorption weights are evaluated.",
+  "no_response_or_scatter_kernel_or_simulation_or_reconstruction_evaluated": true,
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_job_submitted": true,
+  "no_observed_count_fit": true,
+  "limitations": "Finite geometry-class comparisons and numerical agreement checks are not rigorous floating-point bounds, captured CUDA states or a full integrand error bound. Actual angular density, window, attenuation and target absorption vary across each face and are omitted here. Geometric factor errors cannot prove or exclude a24% source-weighted cross-window response deficit. Root cause remains UNDETERMINED; original22 HOLD and138720 inadequate bin diagnostics persist.",
+  "elapsed_seconds": 0.8909999998286366
+}

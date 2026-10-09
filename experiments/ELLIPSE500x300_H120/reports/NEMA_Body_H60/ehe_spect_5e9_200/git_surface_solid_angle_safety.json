@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "scope": "New local CPU full-pair geometry-only visible-face solid-angle check, two evidence JSONs and five repository documents only",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 8,
+    "total_blob_bytes": 100745,
+    "largest_blobs": [
+      [
+        24362,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        20103,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md"
+        ]
+      ],
+      [
+        13435,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        12675,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ],
+      [
+        11944,
+        [
+          "experiments/ELLIPSE500x300_H120/diagnose_ehe_surface_solid_angle.py"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 7505,
+      "sha256": "deca3e1f925cee4786c6de60f4941bfc701254db1c1c317016457d9c867c85b8",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_surface_solid_angle.py": {
+      "bytes": 11944,
+      "sha256": "19c9826b0d2f00a64dc6a61567bbe0be5954308ce9b00c605816256b8df5e3da",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 20103,
+      "sha256": "fcd523e99c745af1e1fb7184aef76be8d3ec18dd3ba6599416cb1efb152d7a3a",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 13435,
+      "sha256": "890fa8c45e7ec455af6854b0076927a69a9ee6bf08abeb7f3ae50b4a9e59b5be",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 12675,
+      "sha256": "51377c4f0bb780828b38702ff8e423a2f3da250b135b30e501dd7c34fe4663b1",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 24362,
+      "sha256": "8f487c9bf594f305a663ab169d55c4e4ac1522128439a1a04c962dfe7fd756f9",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_surface_solid_angle_acceptance.json": {
+      "bytes": 1772,
+      "sha256": "6fbb554f77819dfe0e9038d3a9e279c43b68188f5158e75558dba55dd86325c6",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_surface_solid_angle_read_only.json": {
+      "bytes": 8949,
+      "sha256": "36021b68e8e2ba06f65d38223543cc9d46d944f9c3b43de9751cbf00b34efc46",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    }
+  },
+  "executed_code_and_evidence_sha_closed": true,
+  "actual_cpu_exit_code": 0,
+  "actual_diagnostic_elapsed_seconds": 0.8909999998286366,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "original_detector_params_receipt_bindings": 12,
+  "complete_absolute_offset_classes": 2311,
+  "complete_ordered_nonself_pairs": 5343032,
+  "geometric_class_table_sha256": "751b71aad391c7a7b65d05033b33ef0f47345ad62f4679d42e49b2927e94d5c3",
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_or_scatter_kernel_or_simulation_or_response_or_reconstruction_executed": true,
+  "excluded": "Matrices, response blocks, full raw physical diagnostic CSV, geometric class table, NPZ, builds, archives, credentials and raw runtime logs",
+  "limitations": "Geometry-only comparisons are not full surface-integrand error bounds or captured CUDA states and cannot establish24% source-weighted deficit attribution. Original scientific HOLD persists. Conservative size/credential-pattern audit is not a complete secret scanner."
+}
