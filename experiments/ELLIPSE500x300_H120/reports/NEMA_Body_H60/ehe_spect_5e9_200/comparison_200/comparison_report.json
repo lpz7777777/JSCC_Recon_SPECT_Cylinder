@@ -1,0 +1,437 @@
+{
+  "physical_units": "gamma/mm3; sums are not Ac225 activity",
+  "background_budgets": {
+    "EHE": "440 single final200",
+    "JSCC": "440 single final10000"
+  },
+  "density_scales": {
+    "EHE": {
+      "218": 456.39950822493626,
+      "440": 1036.9058469627134,
+      "sum": 1493.3053551876496
+    },
+    "JSCC": {
+      "218": 456.4035256096357,
+      "440": 1036.9020496292537,
+      "sum": 1493.3055752388896
+    }
+  },
+  "primary_counts": {
+    "EHE": [
+      1469040802,
+      3530959198,
+      0
+    ],
+    "JSCC": [
+      1469053733,
+      3530946267,
+      0
+    ]
+  },
+  "reference_jscc_job": 1669255,
+  "selected_iterations": [
+    50,
+    100,
+    150,
+    200
+  ],
+  "jscc_supplement": [
+    2000,
+    10000
+  ],
+  "actual_window_counts": {
+    "EHE": {
+      "218": {
+        "total": 22929,
+        "by_view": [
+          1114,
+          1103,
+          1131,
+          1151,
+          1117,
+          1186,
+          1205,
+          1154,
+          1163,
+          1147,
+          1157,
+          1133,
+          1116,
+          1083,
+          1155,
+          1157,
+          1261,
+          1124,
+          1160,
+          1112
+        ],
+        "other_primary_energy_counts": 9869,
+        "other_primary_energy_counts_by_view": [
+          469,
+          469,
+          463,
+          490,
+          480,
+          500,
+          539,
+          505,
+          485,
+          486,
+          495,
+          493,
+          519,
+          477,
+          506,
+          493,
+          581,
+          486,
+          475,
+          458
+        ],
+        "actual_cross_fraction": 0.43041563086048235,
+        "actual_cross_fraction_by_view": [
+          0.42100538599640935,
+          0.4252039891205802,
+          0.4093722369584439,
+          0.4257167680278019,
+          0.4297224709042077,
+          0.42158516020236086,
+          0.4473029045643154,
+          0.4376083188908146,
+          0.4170249355116079,
+          0.4237140366172624,
+          0.4278305963699222,
+          0.4351279788172992,
+          0.4650537634408602,
+          0.4404432132963989,
+          0.4380952380952381,
+          0.4261019878997407,
+          0.4607454401268834,
+          0.43238434163701067,
+          0.40948275862068967,
+          0.4118705035971223
+        ]
+      },
+      "440": {
+        "total": 12171,
+        "by_view": [
+          581,
+          614,
+          622,
+          599,
+          615,
+          651,
+          608,
+          628,
+          581,
+          586,
+          620,
+          584,
+          631,
+          647,
+          635,
+          568,
+          624,
+          625,
+          549,
+          603
+        ],
+        "other_primary_energy_counts": 0,
+        "other_primary_energy_counts_by_view": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_cross_fraction": 0.0,
+        "actual_cross_fraction_by_view": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "JSCC": {
+      "218": {
+        "total": 12314473,
+        "by_view": [
+          567109,
+          571635,
+          580446,
+          597829,
+          616433,
+          633894,
+          646323,
+          647795,
+          641907,
+          631328,
+          627212,
+          630424,
+          639440,
+          645472,
+          643128,
+          632571,
+          616087,
+          594890,
+          581317,
+          569233
+        ],
+        "sha256": "8ef3844fc347813be116bea16ad021e1bb6f6dc2de4ee18a2ff8f78d939843ff"
+      },
+      "440": {
+        "total": 5363190,
+        "by_view": [
+          245002,
+          245961,
+          250990,
+          258721,
+          266909,
+          274210,
+          279450,
+          279750,
+          278200,
+          275689,
+          275643,
+          278116,
+          282523,
+          285473,
+          282700,
+          276971,
+          267908,
+          260109,
+          252151,
+          246714
+        ],
+        "sha256": "04239ca2df0016c85b28610c5a3bb24ca9d71f1c532204584551b337a3f7f935"
+      }
+    }
+  },
+  "sensitivity_comparison": {
+    "A218": {
+      "EHE": {
+        "density_response_mm3": {
+          "min": 0.0002546484838395712,
+          "max": 0.0019169073487815917,
+          "mean": 0.0013028014061467726,
+          "median": 0.001421478304591717,
+          "p90": 0.0017356632054464478,
+          "p99": 0.0019026426195808957
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 2.383245075165819e-06,
+          "max": 9.471272428382887e-06,
+          "mean": 7.4231188932257164e-06,
+          "median": 8.29712908980256e-06,
+          "p90": 9.340368637840502e-06,
+          "p99": 9.386872809359473e-06
+        }
+      },
+      "JSCC": {
+        "matrix_sha256": "3b37c9148cfb3cb510ce1d99981d8192d63fb50ff0270df6ce9b38daeb301f8a",
+        "density_response_mm3": {
+          "min": 0.17981554189877472,
+          "max": 1.778512854878653,
+          "mean": 1.1177547277160451,
+          "median": 1.1277689182288895,
+          "p90": 1.4227510113408788,
+          "p99": 1.6574941813351471
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 0.005296713200849348,
+          "max": 0.008949475092343787,
+          "mean": 0.006188434048304494,
+          "median": 0.005983981291141414,
+          "p90": 0.007218142080279595,
+          "p99": 0.008397615732556967
+        }
+      }
+    },
+    "A440": {
+      "EHE": {
+        "density_response_mm3": {
+          "min": 8.988947539650957e-05,
+          "max": 0.0007090772407841729,
+          "mean": 0.00048180271708139045,
+          "median": 0.0005076335317246161,
+          "p90": 0.0006234964881290273,
+          "p99": 0.0007030184181237576
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 1.0267778558270028e-06,
+          "max": 3.495526036419482e-06,
+          "mean": 2.74110204414532e-06,
+          "median": 2.9813173086078294e-06,
+          "p90": 3.448743186183262e-06,
+          "p99": 3.4763496179382986e-06
+        }
+      },
+      "JSCC": {
+        "matrix_sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38",
+        "density_response_mm3": {
+          "min": 0.04746042855666417,
+          "max": 0.47878804931010566,
+          "mean": 0.2981270297504099,
+          "median": 0.3000915750832348,
+          "p90": 0.38435528634181537,
+          "p99": 0.4458075761002533
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 0.0013982934383303305,
+          "max": 0.0024092610351725665,
+          "mean": 0.0016492601722258647,
+          "median": 0.0015946847419881735,
+          "p90": 0.0019468245657769667,
+          "p99": 0.0022678137566826064
+        }
+      }
+    },
+    "C440to218": {
+      "EHE": {
+        "density_response_mm3": {
+          "min": 5.4736803920847615e-05,
+          "max": 0.0004459821208479765,
+          "mean": 0.000298920459894281,
+          "median": 0.0003169911040033196,
+          "p90": 0.00039122488330196604,
+          "p99": 0.0004421612317291268
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 6.147301214810622e-07,
+          "max": 2.198618753449792e-06,
+          "mean": 1.7017980026044773e-06,
+          "median": 1.8394494413481056e-06,
+          "p90": 2.1684756742322163e-06,
+          "p99": 2.1861173940894313e-06
+        }
+      },
+      "JSCC": {
+        "matrix_sha256": "5b5a296880056f748fc5cafa9c97f9caf350daf681d66a79c0a99005b03b9959",
+        "density_response_mm3": {
+          "min": 0.03436022685000921,
+          "max": 0.3304869662360602,
+          "mean": 0.21237497349463766,
+          "median": 0.21437571174586764,
+          "p90": 0.2700866782263347,
+          "p99": 0.3105722809364465
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 0.0010124171461960143,
+          "max": 0.0016630101180099058,
+          "mean": 0.0011760034332993102,
+          "median": 0.001140335633901813,
+          "p90": 0.0013646610676961944,
+          "p99": 0.0015686304113744509
+        }
+      }
+    }
+  },
+  "jscc_cross_diagnostic": {
+    "primary_tagged_fraction": "unavailable in legacy observations",
+    "modeled_218_background_sum": 3862811.576815605,
+    "modeled_background_fraction": 0.3136806241578998,
+    "prediction_source": "accepted 440 single final10000; model prediction, not measured primary-tagged cross counts"
+  },
+  "ehe_cross_diagnostic": {
+    "modeled_218_background_sum": 7616.3834938090295,
+    "modeled_background_fraction": 0.3321725105241846,
+    "modeled_background_by_view": [
+      340.37373283319175,
+      347.7972947661765,
+      365.3882115967572,
+      388.7106031421572,
+      415.7425705008209,
+      429.8561256653629,
+      414.3641073941253,
+      388.2825010828674,
+      363.66705075092614,
+      350.3629845730029,
+      344.63766423566267,
+      352.30640221899375,
+      369.85511163575575,
+      392.6372719942592,
+      418.8210365669802,
+      429.9562454270199,
+      412.7700181393884,
+      385.209414944984,
+      359.46668195864186,
+      346.17846438195556
+    ],
+    "prediction_source": "accepted EHE 440 single final200; fixed additive Poisson background",
+    "measured_primary_tagged_cross_counts": 9869,
+    "fixed_background_sha256": "f180d7016ee56d8d9a8b943b92ee19aea803f368742ebb38c768c4c5ccb37c51"
+  },
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "history_sha256": {
+    "EHE/440_SinglePhoton": "337523e925dca872b69628221b2613a8bd2a8fb0ac02363019d0db1b09ff1f7b",
+    "EHE/218_SinglePhoton_CrossTalkCorrected": "f751f2faf1330013200738c2c77d83e7fd033e955079f85f07411448d49d595d",
+    "EHE/440SinglePlus218Single": "202335008d358f90f966ce718cf8f57c6c469732f90f3fd5e86941c179b7b6f1",
+    "JSCC/440_SinglePhoton": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b",
+    "JSCC/218_SinglePhoton_CrossTalkCorrected": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a",
+    "JSCC/440SinglePlus218Single": "02ed5ce4cd50f60272e2c918383bed8fa325a111dba909fffae8a3b56350f931",
+    "JSCC/440_ComptonOnly": "f05db3be000b4cf56e70f160cf958483b5ef161b1d03c09d1a6d2fde09bd915c",
+    "JSCC/440_SinglePlusCompton": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af",
+    "JSCC/440SingleComptonPlus218Single": "20c1461c37cde7de156a98fb29070d1ad938bccd32630eb22bf76ce02c8e7881"
+  },
+  "formal_proof_sha256": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+  "crop": 0,
+  "smoothing_sigma": 0,
+  "mip_z_mm": [
+    -36,
+    36
+  ],
+  "display_slice_centers_mm": {
+    "axial_z": 1.5,
+    "coronal_y": -1.5,
+    "sagittal_x": -1.5
+  },
+  "display_range": [
+    0,
+    10
+  ],
+  "colormap": "gray_r (white low, black high)",
+  "whole_cell_tiny_mass_metric": "not applicable",
+  "unknown_joint_categories": 446,
+  "limits": [
+    "Same iteration does not imply same convergence",
+    "Different detector coverage/materials; truncation is not an algorithm effect",
+    "Two research vacuum-source models; no real-device claim",
+    "Original physical audit remains HOLD (22 diagnostics; 138720 per-bin UNDETERMINED); numerical acceptance is not physical calibration"
+  ],
+  "physical_calibration_passed": false,
+  "execution_authorized_under_known_physics_mismatch": true,
+  "physical_policy_sha256": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441",
+  "physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0"
+}

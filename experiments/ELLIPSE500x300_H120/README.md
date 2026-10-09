@@ -9,7 +9,7 @@
 
 ## 新EHE平行孔SPECT对比
 
-用户已授权[独立EHE 5e9/200次实验](reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md)。保留1250孔/2312 NaI bin及272×136mm探测面，前表面298.5mm；重新模拟EHE观测、生成三套匹配响应与S，先做真实源物理门控及完整输入10次验证，随后正式200次。对照只读复用1669255的218单光子、440单光子/Compton/JSCC和双能结果。尚无EHE正式图像结论。
+用户已授权[独立EHE 5e9/200次实验](reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md)。保留1250孔/2312 NaI bin及272×136mm探测面，前表面298.5mm；重新模拟EHE观测、生成三套匹配响应与S，先做真实源物理门控及完整输入10次验证，随后正式200次。对照只读复用1669255的218单光子、440单光子/Compton/JSCC和双能结果。2026-10-09已按用户明确授权完成原方案200次及严格取回/科学视觉QA，见[最终报告](reports/NEMA_Body_H60/ehe_spect_5e9_200/RESULTS.md)和[28张图表](reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/gallery.md)。实际EHE有明显斑点和高背景波动，原物理审计仍HOLD，定时任务保持暂停。
 
 2026-10-08：EHE输运15633840的200个worker全部成功退出，实际5e9、20视角、种子31100101–31100300、初级标签及2424份取回/同步文件SHA通过[完整输运身份验收](reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_identity_acceptance.json)。实测218/440窗计数22929/12171，218窗中9869个来自440初级gamma，见[测量证据](reports/NEMA_Body_H60/ehe_spect_5e9_200/transport_measurement.json)。三套响应1672966仍在生成，真实源物理门控、validation10、formal200和图像对比尚未完成；输运身份通过不代表响应物理通过。
 

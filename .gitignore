@@ -117,3 +117,6 @@ Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/FileGen
 id_rsa*
 id_ed25519*
 known_hosts*
+
+# Full physical audit remains locally preserved and SHA registered; no large data blob.
+/experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_200/physical_audit.csv

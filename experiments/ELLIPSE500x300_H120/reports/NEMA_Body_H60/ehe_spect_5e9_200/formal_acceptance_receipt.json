@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "elapsed_seconds": 378.96852718666196,
+  "peak_rss_bytes": 2091077632,
+  "host_allocated_bytes": 99090432000,
+  "rss_fraction": 0.02110271990740741,
+  "allocation_job": "1679434",
+  "authority_sha256": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+  "driver_sha256": "cca0fbb9c9f96cfc236c3851a20c6ee819da45e44ad9e22742c7f66d6ace1ee1",
+  "imaging_resource_certificate": false,
+  "gpu_calculation": false,
+  "accounting": "1679434|COMPLETED|0:0||00:06:37|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1679434.batch|COMPLETED|0:0|11609524K|00:06:37|cpu=6,gres/gpu=1,mem=94500M,node=1\n1679434.extern|COMPLETED|0:0|0|00:06:37|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n"
+}

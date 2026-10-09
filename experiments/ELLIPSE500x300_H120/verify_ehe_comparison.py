@@ -117,7 +117,19 @@ def verify():
         if len(rows)!=expected: raise ValueError('Complete comparison table differs: '+name)
     images = sorted(p.name for p in folder.glob('*.png'))
     if len(images) != 28: raise ValueError('Complete gallery/curve set required')
-    proof = dict(scientific_output_qa_passed=True, visual_qa_pending=True,
+    visual_path = REPORT / 'comparison_visual_qa.json'
+    visual_passed = False
+    if visual_path.exists():
+        visual = read(visual_path)
+        if (visual.get('visual_presentation_qa_passed') is not True or
+                visual.get('physical_calibration_passed') is not False or
+                visual.get('comparison_manifest_sha256') != digest(folder/'artifact_manifest.json') or
+                visual.get('figures_sha256') != {name: digest(folder/name) for name in images}):
+            raise ValueError('Visual inspection receipt is stale or incomplete')
+        visual_passed = True
+    proof = dict(scientific_output_qa_passed=True, visual_qa_pending=not visual_passed,
+        visual_presentation_qa_passed=visual_passed,
+        visual_receipt_sha256=digest(visual_path) if visual_passed else None,
         physical_calibration_passed=False, formal_job=read(REPORT/'formal_job.json')['job'],
         native_rows=60, spherical_rows=240, jscc_frames_per_channel=200, figures=images,
         truth_sha256=digest(TRUTH), truth_dimensions_zyx=meta['shape_zyx'],
@@ -126,7 +138,8 @@ def verify():
         formal_authority_sha256=digest(REPORT/'formal_summary.json'),
         comparison_manifest_sha256=digest(folder/'artifact_manifest.json'))
     write(REPORT/'comparison_scientific_qa.json', proof)
-    print('EHE_COMPARISON_SCIENTIFIC_QA_PASS; visual inspection still required')
+    print('EHE_COMPARISON_SCIENTIFIC_QA_PASS; ' +
+          ('current visual inspection receipt verified' if visual_passed else 'visual inspection still required'))
 
 
 if __name__ == '__main__':

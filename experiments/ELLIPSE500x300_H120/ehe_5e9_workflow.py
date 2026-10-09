@@ -519,6 +519,27 @@ def fetch(mode):
                 if digest(dest/'factor_manifest.json')!=proof['factor_sha256'][name]:raise ValueError('Fetched factor manifest identity differs')
                 s.get(response_root()+'/'+name+'/S_active.float64',str(dest/'S_active.float64'))
                 if digest(dest/'S_active.float64')!=read(dest/'factor_manifest.json')['files']['S_active.float64']:raise ValueError('Fetched sensitivity byte identity differs')
+        # Keep original Slurm logs, submitted script bytes and the acceptance
+        # allocation separately from the immutable reconstruction outputs.
+        evidence=REPORT/(mode+'_'+str(job));evidence.mkdir(parents=True,exist_ok=True)
+        remote_files={'compute_slurm.log':b+'/logs/'+mode+'_'+str(job)+'_4294967294.log',
+            'acceptance_slurm.log':b+'/logs/'+mode+'_acceptance_'+str(registration['job'])+'_4294967294.log',
+            'compute_submitted.sh':b+'/scripts/'+mode+'.sh',
+            'acceptance_submitted.sh':b+'/scripts/'+mode+'_acceptance.sh',
+            'acceptance_allocation.json':b+'/read_only_acceptance_'+mode+'_'+key+'/allocation.json',
+            'acceptance_receipt.json':b+'/read_only_acceptance_'+mode+'_'+key+'/receipt.json'}
+        code='from ehe_common import digest;import json;print(json.dumps({n:digest(p) for n,p in '+repr(remote_files)+'.items()}))'
+        remote_sha=json.loads(command(c,'cd '+q(audit_remote)+' && '+q(GPU_PYTHON)+' -c '+q(code)))
+        with c.open_sftp() as s:
+            for name,remote in remote_files.items():
+                s.get(remote,str(evidence/name))
+                if digest(evidence/name)!=remote_sha[name]:raise ValueError('Exit/launch evidence SHA differs: '+name)
+        for prefix,record in [('compute',read(REPORT/(mode+'_job.json'))),('acceptance',registration)]:
+            expected=('#!/bin/bash\nset -euo pipefail\n'+record['script']).encode()
+            if (evidence/(prefix+'_submitted.sh')).read_bytes()!=expected:raise ValueError('Actual submitted script differs')
+        write(evidence/'fetch_receipt.json',dict(passed=True,compute_job=job,acceptance_job=registration['job'],
+            files=remote_sha,compute_accounting=accounting,acceptance_accounting=acceptance_accounting,
+            output_manifest_sha256=digest(local/'run_manifest.json'),physical_calibration_passed=proof['physical_calibration_passed']))
         write(REPORT/(mode+'_summary.json'),proof)
         print('EHE_STRICT_FETCH_PASS',mode,job)
         return True

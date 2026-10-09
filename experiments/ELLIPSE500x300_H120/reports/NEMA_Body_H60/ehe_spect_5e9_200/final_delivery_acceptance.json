@@ -1,0 +1,52 @@
+{
+  "numerical_pipeline_delivery_passed": true,
+  "physical_calibration_passed": false,
+  "execution_authorized_under_known_physics_mismatch": true,
+  "original_hold_count": 22,
+  "original_undetermined_bins": 138720,
+  "experiment": "ehe_spect_5e9_200",
+  "recorded_at": "2026-10-09T15:57:24.971493+08:00",
+  "formal_job": 1679415,
+  "validation_job": 1679300,
+  "read_only_acceptance_jobs": [
+    1679391,
+    1679434
+  ],
+  "final_current_imaging_acceptance_queue_empty": true,
+  "formal_files_local_sha_checked": 131,
+  "checkpoints": 40,
+  "channels": 3,
+  "frames_per_channel": 20,
+  "figures": 28,
+  "scientific_output_qa_passed": true,
+  "visual_presentation_qa_passed": true,
+  "automation_id": "compton-v5",
+  "automation_status": "PAUSED",
+  "report_and_proof_sha256": {
+    "RESULTS.md": "335218b068fc3320927879e3e4afec201bb18b7083425175d0d525335cb9af50",
+    "README.md": "f8c975aed6abf827a5c5f1b74e139c62f2f1477bfa3675be4013873e866823cd",
+    "RUNBOOK.md": "ede0489c792e7e9cd1e55c77499d0eebc2afbd385bae590fb689ed2b633d1cbf",
+    "PRODUCTION.md": "fa1f62709dd59be0011ce8c48bc9769b2e994643b79d4aa1509ee66cebcc9425",
+    "formal_summary.json": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+    "formal_acceptance_receipt.json": "9933abd98d5b5b65929d23e92d5f42100584eaa5e6d53010b0b304e36592c54f",
+    "validation_summary.json": "cc632731d9671b2a9a89a4de1de2dbed23d782e38b16f107dc422f183f3217b7",
+    "validation_acceptance_receipt.json": "f18f07039c73eb62d72bdbdb773706db52f018e88d9fd86c458b62c57cef09f0",
+    "comparison_scientific_qa.json": "e5b32c7d16172e4577edd283a1e5ad32ece985e2269a4c7fa426b332d73669d6",
+    "comparison_visual_qa.json": "e567817019c9f833864e310c0d24d62db3b4c3286108120088c9a70b702ac790",
+    "curve_legibility_repair.json": "5a64c0c1ababefb7c502b0e52dabc47c3b850e240f872fb34d41d3378b9fb643",
+    "physical_continuation_policy.json": "a875323c130d921510316107353627f33184344133aa34292c1e63c4709d1441",
+    "comparison_200/artifact_manifest.json": "cbafcb6443ecd0d2aaab4e73f51fb54bab3ae7dc849a5871c897e34645317fd7",
+    "comparison_200/gallery.md": "5b37fd129f86cb02fd978434d849d21bb931b07fe4f5a7dd12a5b86ba93d7b65"
+  },
+  "producer_current_sha256": "20690f15682967cc90786caa677f9103f53b321ea47d337486434d7400cc11c1",
+  "producer_executed_archive_sha256": "b49b2188b1c58a3f81de94ed527d415c4d0673b08f86b54d44be42b89e346b68",
+  "post_render_producer_maintenance": "Only exclude artifact_manifest.json from its own future hash; archived actual plotting source retained; draw_curves body byte-identical",
+  "git_payload_excludes": [
+    "full response matrices",
+    "binary reconstruction histories/checkpoints",
+    "truth/source NPZ",
+    "full physical_audit.csv",
+    "credentials"
+  ],
+  "git_payload_is_not_full_raw_dataset": true
+}

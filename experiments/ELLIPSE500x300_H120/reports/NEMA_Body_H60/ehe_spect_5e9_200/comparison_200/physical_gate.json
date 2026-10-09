@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "hold_count": 22,
+  "undetermined_bins": 138720,
+  "adequate_rule": "at least 100 observed counts and 10 independent workers/view",
+  "rule": "HOLD iff adequate and absolute relative bias >10% and absolute difference >3 worker-derived SE",
+  "source_method": "unfitted 3mm true voxel mass; bilinear point-response interpolation, clockwise source rotation",
+  "source_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "collection_sha256": "54146b05e864c12963ef6531223ac1cd60d86d86497f408aa26486885caff94a",
+  "resource": {
+    "rss_peak_bytes": 6183972864,
+    "host_allocated_bytes": 99090432000,
+    "rss_fraction": 0.06240736607142857,
+    "gpu_reserved_peak_bytes": 2696937472,
+    "gpu_total_bytes": 33668988928,
+    "gpu_reserved_fraction": 0.08010152837577957
+  },
+  "files": {
+    "physical_audit.csv": "a0491975b7533b167e4e1c0ab67793094949723380e3236e75b13b5e3a231a18"
+  }
+}

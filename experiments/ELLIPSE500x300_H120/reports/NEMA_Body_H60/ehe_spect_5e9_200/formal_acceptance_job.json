@@ -1,0 +1,19 @@
+{
+  "job": 1679434,
+  "host": "gpu",
+  "stage": "formal_acceptance",
+  "release_key": "74e129c4460163c5",
+  "minutes": 45,
+  "array": null,
+  "script": "source /etc/profile.d/modules.sh\nmodule load cuda/12.9\nexport OMP_NUM_THREADS=6\ncd /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/verification_releases/9f691c17d851f5ed\n/data/home/scxi717/.conda/envs/torch/bin/python -u ehe_acceptance_driver.py --verification-manifest /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/verification_releases/9f691c17d851f5ed/verification_manifest.json --result /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal --release /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/reconstruction_releases/064404727f0e22b1 --responses /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses_conversion_b02df58a9d3fd48c --counts /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/counts --physical /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/physical --accounting /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal/accounting.txt --output /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/formal_authority.json --evidence /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/read_only_acceptance_formal_9f691c17d851f5ed --physical-policy /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/reconstruction_releases/064404727f0e22b1/physical_continuation_policy.json\n",
+  "submitted_epoch": 1791530669.091748,
+  "workflow_sha256": "30631cc292f8f14c06fe33670e647ab7b64c3c65c702236355f79733edd4157c",
+  "verification_release_key": "9f691c17d851f5ed",
+  "verification_source_sha256": {
+    "verify_ehe.py": "789683df5f7b71430b5c92fdb63cfa5012dafc22c05364856d303ca01275bca0",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_execution_policy.py": "93e398f3dad7cbe5665e33e0e08b714a4b2fdecd37f3a77a6b5803e1f2a30e21",
+    "ehe_acceptance_driver.py": "cca0fbb9c9f96cfc236c3851a20c6ee819da45e44ad9e22742c7f66d6ace1ee1"
+  },
+  "compute_job": 1679415
+}

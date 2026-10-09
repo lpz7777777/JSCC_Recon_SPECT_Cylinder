@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09最终数值交付：原方法formal200作业1679415及只读严格验收1679434均实际COMPLETED/0:0，131份结果逐SHA取回、40完整检查点、三路各20帧、固定背景来自本次440200。全部20视角前向/转置最大相对误差2.29736e−7、原S闭合≤8e−16、固定背景L2=2.62155e−7；正式Slurm主存13.1878%/GPU16.0141%，实际94500MiB分母均有20%余量。[最终报告](RESULTS.md)、[28张图集/全部指标](comparison_200/gallery.md)、[科学QA](comparison_scientific_qa.json)和[视觉QA](comparison_visual_qa.json)已保存。实际EHE斑点和高背景波动如实披露，原physical_calibration_passed=false/22 HOLD保持；本次依据人类明确授权继续，不能称物理通过。compton-v5保持PAUSED。
+
 2026-10-09人类最新指令已明确授权按原方法继续200次重建，并接受现有物理偏差在报告中披露。physical_continuation_policy.json保留并绑定原22项HOLD；reconstruction_execution_freeze.json登记独立执行发布。工作流存在此冻结时只推进原输入validation10→严格authority→formal200→严格fetch，跳过已退出的physical1677211，不重跑输运/响应/转换。原科学代码发布及physical_gate.json保持原字节；新执行发布仅改变授权检查和结果物理状态标记，计算主体和原MLEM辅助SHA不变。所有数值/资源/背景/输入SHA验收照常；不能把authority的数值passed解释成physical_calibration_passed。compton-v5仍PAUSED。
 
 2026-10-09 09:48上海：新的纯几何晶体间路径检查已完成，见physical_intercrystal_path_geometry_read_only.json/physical_intercrystal_path_geometry_acceptance.json。复用已验收表面位移类别与缓存日志，只核对变化面节点与固定中心中间路径的几何差异，不计算衰减/散射贡献或生成响应；全部2311中心段/7042节点的完整箱体交集参考通过。毫米差值和节点数量不是完整计数误差或机制份额，原HOLD未解除。不重复本诊断，不实现修正核、改冻结模型或重提physical/validation10/formal200；后续仅有新依据的授权范围内只读诊断。
@@ -31,7 +33,7 @@
 3. `pilots`提交独立100000初级gamma吞吐试跑及逐孔/bin几何核对，GPU上编译PE-v4/Scatter并实际测试三种响应各一完整XY层。
 4. `advance`读取已登记作业，实际成功退出后按实测吞吐计算运行上限，唯一提交200个worker的5e9输运和三套完整响应。输运数组先限制40并发；只等待，不取消其他项目。阶段登记存在时不重复提交。
 5. 全部200worker成功退出，核验6份窗/初级能量分解CSV、primary总数/能量份额/独立种子/源码宏SHA，保存原观测并上传GPU主机。三套完整响应与自身S通过后执行真实源物理审计。
-6. 物理无HOLD后唯一提交完整输入validation10；退出后严格fetch，形成实际validation authority，再唯一formal200。
+6. 默认物理无HOLD才提交validation10。本次由physical_continuation_policy.json绑定的人类明确授权允许在原HOLD保持时继续原冻结输入；实际validation10及严格authority通过后唯一formal200已完成，全部数值/资源/身份检查照常，物理状态仍false。
 7. 正式完全退出后严格fetch，`compare`生成50/100/150/200主图和JSCC2000/10000参考、全部20帧EHE指标及既有JSCC曲线。图像生成完成仍需科学/视觉QA、文字报告、SHA清单与安全Git审计推送。
 
 正常排队/运行不重复提交，不因尖峰提前停算或调参数。故障先读queue/accounting/logs/failure；旧进程完全退出后，保留其不可变发布和证明。有效完整响应slab有SHA receipt，可只读复用；部分失败目录留存，不自动覆盖。补缺失worker/响应/求解阶段需要登记新修复发布和已经完成阶段的严格SHA及算法身份，不能仅以存在一个末图为依据。当前通用推进器对未完成的部分目录报错停留，避免未经证实地续跑。

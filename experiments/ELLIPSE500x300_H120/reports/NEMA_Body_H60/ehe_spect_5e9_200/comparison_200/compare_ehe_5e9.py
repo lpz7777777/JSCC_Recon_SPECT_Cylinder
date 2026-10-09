@@ -253,8 +253,7 @@ def compare(job=None):
         shutil.copy2(REPORT/'physical_continuation_policy.json',output/'physical_continuation_policy.json')
     write(output/'comparison_report.json',disclosure);shutil.copy2(REPORT/'projection_truncation.json',output/'projection_truncation.json');shutil.copy2(DATA/'physical/physical_gate.json',output/'physical_gate.json');shutil.copy2(DATA/'physical/physical_audit.csv',output/'physical_audit.csv')
     shutil.copy2(__file__,output/'compare_ehe_5e9.py')
-    write(output/'artifact_manifest.json',dict(files={name: sha for name, sha in hashes(output).items()
-        if name != 'artifact_manifest.json'}))
+    write(output/'artifact_manifest.json',dict(files=hashes(output)))
     print('EHE_COMPARISON_CREATED',output,'scientific and visual QA still required')
 
 if __name__=='__main__':

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "compute_job": 1679415,
+  "acceptance_job": 1679434,
+  "files": {
+    "compute_slurm.log": "a420e68a720dc164717f22e370838d99876c847bcd42bba93d6b1114f04951ec",
+    "acceptance_slurm.log": "13703e555a1244f1fb2fc7550f8e0bf17756744fd9b49bb15d11269c5de81618",
+    "compute_submitted.sh": "62dc5b2d92624fb2dc043efc7260da7671ab5fa6ace9de65cbfafba21eb840e8",
+    "acceptance_submitted.sh": "3b53d93220ae2b7ef7cee53f0a9e44630af370f0df83b56509538f438e1162a8",
+    "acceptance_allocation.json": "aeffadfc2ee8f5bb1301103565a2c0b44f3bfa95af3d3e8ab9cd3a573daffd2f",
+    "acceptance_receipt.json": "230fba20858c95d582b5162f05a3874bd44c5ccb6f47bef3c0ace2fa7130fe01"
+  },
+  "compute_accounting": "1679415|COMPLETED|0:0||00:05:45|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1679415.batch|COMPLETED|0:0|12761584K|00:05:45|cpu=6,gres/gpu=1,mem=94500M,node=1\n1679415.extern|COMPLETED|0:0|0|00:05:45|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n",
+  "acceptance_accounting": "1679434|COMPLETED|0:0||00:06:37|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1679434.batch|COMPLETED|0:0|11609524K|00:06:37|cpu=6,gres/gpu=1,mem=94500M,node=1\n1679434.extern|COMPLETED|0:0|0|00:06:37|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n",
+  "output_manifest_sha256": "5a4ab2bebd7cec249e70d49adf8fcb827533ebc010a98052198d4055b8a4d33d",
+  "physical_calibration_passed": false
+}

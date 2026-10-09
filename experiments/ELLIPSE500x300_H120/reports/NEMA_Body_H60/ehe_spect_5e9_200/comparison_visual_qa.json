@@ -1,0 +1,79 @@
+{
+  "visual_presentation_qa_passed": true,
+  "inspection_recorded_at": "2026-10-09T15:51:39.555968+08:00",
+  "inspector": "Codex visual inspection of actual rendered files",
+  "formal_job": 1679415,
+  "physical_calibration_passed": false,
+  "meaning": "Readable and faithful presentation; does not certify image quality, physical calibration or sphere performance",
+  "inspection_coverage": {
+    "main_galleries": 12,
+    "curve_figures": 12,
+    "long_reference_galleries": 4,
+    "full_resolution_examples": [
+      "218_axial.png",
+      "440_axial.png",
+      "dual_mip72.png",
+      "dual_coronal.png",
+      "440_crc_cnr.png",
+      "dual_full_history_crc_cnr.png"
+    ],
+    "all_long_reference_planes_inspected": true,
+    "all_main_and_curve_figures_inspected_in_contact_sheets": true
+  },
+  "checks": {
+    "real_3d_truth_and_channel_order": true,
+    "iteration_order_50_100_150_200": true,
+    "axes_mm_and_display_slices": true,
+    "fixed_emitted_source_truth_scale_0_to_10": true,
+    "crop0_sigma0_no_image_fit": true,
+    "mip72_only_display_selection": true,
+    "native120_metrics_unchanged": true,
+    "distinct_curve_colors_styles_legends": true,
+    "no_observed_clipped_titles_axes_or_legends": true,
+    "known_physics_and_budget_disclosures": true
+  },
+  "observations": [
+    "EHE has pronounced speckles and density outliers; MIP emphasizes them",
+    "Small-sphere visibility and CNR are limited; requested200 is not declared optimal",
+    "JSCC single-photon200 images are faint on the fixed truth scale; no fitted brightness applied",
+    "Long JSCC iterations show different convergence; same iteration is not equal convergence"
+  ],
+  "figures_sha256": {
+    "218_axial.png": "3ad8928b3bae304b19147288c889bdd7f0679cf8714083cc2f43de9362f61549",
+    "218_coronal.png": "c11d8cb4269869caf59a5407c190fa4336138b93cfd9276a732e225fde469fef",
+    "218_crc_cnr.png": "4efb0995abd9546d8a840533b0c6dd2be89e97a6a1e11a58c5c27ae6ecd65051",
+    "218_full_history_crc_cnr.png": "68adaa2dae8b7dc7a641ed524128e162a5a1302dcf62248ea86e012aff66ab35",
+    "218_full_history_native_curves.png": "507c202727bd1a29d02b00f4958dfa576f0af8539c6c76ce0d047b17c50739fb",
+    "218_mip72.png": "4319e24efeb816d82dc37dd05dfc16074252ca7649aebeb38bf05f4760f1dce4",
+    "218_native_curves.png": "66f6cbf1c6dd1242520ebec99efa5d1796df2d9c0ca2842866855c75b27ec18b",
+    "218_sagittal.png": "3c77e4607bbadba8f7c13b8d0c29962afd2d91ba9d77a29daa84187975233b58",
+    "440_axial.png": "1be4a6fd073e492ceda2694de8d0060ef00af8273922a04b1046a55ffc6cf1fe",
+    "440_coronal.png": "4852c589da827038ce572a15ca273d5b1b23287a636187719dfee1f74257e3e3",
+    "440_crc_cnr.png": "555d3a6e6aa831d0f6f1951aa9fc0799b1173f99f47922aac76d7e4f54d1dfed",
+    "440_full_history_crc_cnr.png": "49304133390f355e21fe923672394305ba7f717d713a62e901102d3dc8f19840",
+    "440_full_history_native_curves.png": "5463df681d5d3a39d459eb99ae5ea3537678d24b44f5ebb2a4902ad6e4b16ed3",
+    "440_mip72.png": "40dff4fd613f08ea8a8de7c9d4bf8d2f46f60602ca9d74e4016d1bf98f406841",
+    "440_native_curves.png": "92ccf55f12a2db59c32cb75367309bf9a22f0a6be50582898723a918bb370495",
+    "440_sagittal.png": "34a96f4265e8f8183fc4a90b3d8e06727d96e2ba91d972d976c1d5e1e8108820",
+    "dual_axial.png": "5bcfdd112ab1e8c06d473eac184041155f0d7e2f37ab5c43b31dadca8794f6b6",
+    "dual_coronal.png": "07d70fa777b1ab1fe62a1a88450e2dc16d85376524fa9925623d5105e9b98cfc",
+    "dual_crc_cnr.png": "7551ee9cb3c5edd2e38eddcb7350f4968dbd1e76e284443e4aff2bd036fa4bee",
+    "dual_full_history_crc_cnr.png": "ef9c720d9ae267e6df6e357af7b597d537f48bccd453b2804418f38b69f631ed",
+    "dual_full_history_native_curves.png": "214c56875c84c7373fb3b9d832f78a78656325f96011dd8b29fc8a5c805cd37d",
+    "dual_mip72.png": "fe7f3226e3b1bc33ee57961ba3a6ed86a8aefa2d5c75fe0e2bc99dc124dad7d5",
+    "dual_native_curves.png": "38e37463189ad699af65921d1a0e3010d5fc64de86a78e247d919690b9732ad3",
+    "dual_sagittal.png": "3d0642ccea1115279632137d875dcf42a28ff729d67fd3a167caae19dec27337",
+    "jscc_long_reference_axial.png": "1a6c38cfeab9af89bb775185b6493af2e5eeb69581c2dd69f3ce6cb506b5d9f1",
+    "jscc_long_reference_coronal.png": "d9d854b626b2aff29e8dca1ae3d2ddd2fff98f925ce8a23a5eb5b208495bdfb3",
+    "jscc_long_reference_mip72.png": "b5c984a0e47184c68eecb536f0969aacee19bdd827199192d89f676078f9d104",
+    "jscc_long_reference_sagittal.png": "7848fb3abe688f872203522de107297c152e70b987430c4bbd3a78a22a8d7adc"
+  },
+  "contact_sheet_sha256": {
+    "main_gallery.png": "45d437300b4e5685de28bf22c3796844d35294e9d685c1042bae6380b1f34521",
+    "curve_gallery.png": "e14465192f76b18bff17439471a7fb5002396032130aba90b741763be52adca9"
+  },
+  "curve_format_repair_sha256": "5a64c0c1ababefb7c502b0e52dabc47c3b850e240f872fb34d41d3378b9fb643",
+  "comparison_manifest_sha256": "cbafcb6443ecd0d2aaab4e73f51fb54bab3ae7dc849a5871c897e34645317fd7",
+  "formal_authority_sha256": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af"
+}

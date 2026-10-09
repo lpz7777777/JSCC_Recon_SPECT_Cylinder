@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scope": "Format only: consistent sphere colors, distinct system/channel line styles, shorter labels and exterior legends",
+  "metric_sha256_unchanged": {
+    "ehe_native_iteration_metrics.csv": "76bafcc2ca93bc883a20d477e224a098b531c167eac6e65e251e475e594e553f",
+    "ehe_sphere_iteration_metrics.csv": "3d77a30174031281c1aeacc821efa78122741142e1db8378212ca8e9bbc88daa",
+    "jscc_native_iteration_metrics.csv": "58bc014f9012b132a01d4995bce71e865142e0dd9cfb42a44b98408a586eb30a",
+    "jscc_sphere_iteration_metrics.csv": "16676538a85c366a7b7b6dc58f4fdf2ff4f382a57c2dc0a8cccaab2a5c07028a",
+    "comparison_report.json": "645c0204cab2ed3a09920444b4683fad484209cc87ffcc19479bec795291dccf"
+  },
+  "plotting_source_sha256": "b49b2188b1c58a3f81de94ed527d415c4d0673b08f86b54d44be42b89e346b68",
+  "physical_calibration_passed": false
+}

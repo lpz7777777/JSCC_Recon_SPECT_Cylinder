@@ -1,0 +1,39 @@
+{
+  "kind": "explicit_human_original_method_continuation",
+  "study": "ehe_spect_5e9_200",
+  "authorized_modes": [
+    "validation",
+    "formal"
+  ],
+  "formal_iterations": 200,
+  "save_step": 10,
+  "physical_calibration_passed": false,
+  "acknowledges_all_recorded_hold_diagnostics": true,
+  "preserve_original_scientific_algorithm": true,
+  "producer_release_key": "74e129c4460163c5",
+  "physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "hold_count": 22,
+  "undetermined_bins": 138720,
+  "counts_sha256": "54146b05e864c12963ef6531223ac1cd60d86d86497f408aa26486885caff94a",
+  "factor_sha256": {
+    "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+  },
+  "source_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "physical_audit_sha256": "a0491975b7533b167e4e1c0ab67793094949723380e3236e75b13b5e3a231a18",
+  "baseline_helper_sha256": {
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994"
+  },
+  "human_instruction": "\u5ffd\u7565\u4e32\u7a97\u4f4e\u4f30\u8fd9\u4e2a\u95ee\u9898\u3002\u5c31\u6309\u4ee5\u524d\u7684\u65b9\u6cd5\u8ba1\u7b97\u7cfb\u7edf\u77e9\u9635\u3001\u4e32\u6270\u7b49\u6570\u636e\u3002",
+  "human_scope_question": "\u539f\u65b9\u6cd5\u7684A218\u3001A440\u548cC440\u2192218\u4e09\u5957\u5b8c\u6574\u77e9\u9635\u5df2\u7ecf\u7b97\u5b8c\u3002\u60a8\u8fd9\u6b21\u5e0c\u671b\u7ee7\u7eed\u5230200\u6b21\u91cd\u5efa\uff08\u5c06\u73b0\u6709\u7269\u7406\u504f\u5dee\u4fdd\u7559\u5728\u62a5\u544a\uff09\uff0c\u8fd8\u662f\u5148\u4ea4\u4ed8\u7cfb\u7edf\u77e9\u9635\u3001\u7075\u654f\u5ea6\u53ca\u4e32\u6270\u6570\u636e\uff1f",
+  "human_scope_answer": "\u7ee7\u7eed\u539f\u65b9\u6848200\u6b21\u91cd\u5efa\uff08\u63a8\u8350\uff09",
+  "accepted_limitations": [
+    "Original physical HOLD remains; no claim of calibrated response",
+    "C440to218 low estimate and A218 view13/view14 deviations disclosed",
+    "Per-bin evidence remains UNDETERMINED"
+  ],
+  "automation_status": "PAUSED",
+  "recorded_utc": "2026-10-09T06:49:15.160630+00:00"
+}
