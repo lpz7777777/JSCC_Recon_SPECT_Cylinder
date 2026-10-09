@@ -1,0 +1,17 @@
+{
+  "stopped_input_only_pid": 1856510,
+  "command_sha256": "dcd3eb1cba48a328b39b16653807d867660675d89a676d0f094e45af67f640ff",
+  "prior_process": {
+    "status": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t1856510\nNgid:\t0\nPid:\t1856510\nPPid:\t1846459\nTracerPid:\t0\nUid:\t1721\t1721\t1721\t1721\nGid:\t1721\t1721\t1721\t1721\nFDSize:\t64\nGroups:\t1721 \nNStgid:\t1856510\nNSpid:\t1856510\nNSpgid:\t1856510\nNSsid:\t1856510\nVmPeak:\t 2296340 kB\nVmSize:\t 2296216 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t   48916 kB\nVmRSS:\t   48804 kB\nRssAnon:\t   32100 kB\nRssFile:\t   16704 kB\nRssShmem:\t       0 kB\nVmData:\t 2226728 kB\nVmStk:\t     132 kB\nVmExe:\t    1984 kB\nVmLib:\t   47768 kB\nVmPTE:\t     456 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nThreads:\t64\nSigQ:\t0/2062813\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffffffff,ffffffff,ffffffff\nCpus_allowed_list:\t0-95\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,000000ff\nMems_allowed_list:\t0-7\nvoluntary_ctxt_switches:\t58370\nnonvoluntary_ctxt_switches:\t334\n",
+    "io": "rchar: 124336159\nwchar: 36210144\nsyscr: 1344\nsyscw: 1200\nread_bytes: 0\nwrite_bytes: 0\ncancelled_write_bytes: 0\n",
+    "wchan": "request_wait_answer"
+  },
+  "partial_workers": 48,
+  "partial_receipts": 47,
+  "partial_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/counts",
+  "archive_sha256": "2987088d3a44f20c48def92ffa37883f337663548fe34360327124e44bffeeae",
+  "archive_bytes": 58948637,
+  "tmp_free_bytes_login_host": 796545024,
+  "fully_exited": true,
+  "simulation_or_gpu_job_cancelled": false
+}

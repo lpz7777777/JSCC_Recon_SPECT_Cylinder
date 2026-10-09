@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "scope": "Only changed staged paths plus actual outgoing history; original credential patterns and5MiB size guard",
+  "audit": {
+    "checked_blobs": 18,
+    "total_blob_bytes": 74419,
+    "largest_blobs": [
+      [
+        31069,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py"
+        ]
+      ],
+      [
+        9391,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        8705,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/README.md"
+        ]
+      ],
+      [
+        5798,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_5e10_archive_input.py"
+        ]
+      ],
+      [
+        3968,
+        [
+          "experiments/ELLIPSE500x300_H120/test_ehe_5e10_archive_input.py"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "git_blob_sha256": {
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_archive_input.py": "dfe49c0110b91508fbc8775a9714cc971ca7d6204cad67fa0b3a9215bf62f60c",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_storage_workflow.py": "c33f8519d12c29175fc0c6e6a5d82b097b6b6a4a1d3b213c19e008de0b56790a",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py": "4f9f94ad21fe734e91a19d91b4d9f858e191df592f1902b6d762033820aec0e3",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/README.md": "35145f4ae08bd3268605d03be456ad2d92ba47bd7f2eca88c195a0ee560aca48",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md": "dabb89b37ccfc2a0dbc383fe6fbedc4b14538cf925d7bfd7d45d4b612e55512c",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/deployment_gpu.json": "199c2821fc1ee2060b52208b4a79f54e34b1857950b759729211ad2ca6270850",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/deployment_gpu_before_archive_storage.json": "9fedce53e4ba730e8245bcd612442b15f94928bbec02174f1c98fb227a910b21",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/freeze.json": "d7810fe6b353f7f2043bfa5dc4c07559e44ac0a12de20a9f7128d025dbf1bafb",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/freeze_before_archive_storage.json": "3821138ecf0103ce988e5954be7881ba72c70afccc395dfb8dbdd94de62e30dd",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/input_storage_contract_acceptance.json": "513335dcb186afea1ea32dcc24a4afb194871788205031393cc87002c15b0531",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/input_storage_freeze.json": "d7810fe6b353f7f2043bfa5dc4c07559e44ac0a12de20a9f7128d025dbf1bafb",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/input_storage_local_acceptance.json": "4359fc5c8582853d15502b28094946cba6c19a473fa0d71f8a1f40e9b145b3f7",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/input_storage_stop_acceptance.json": "983459382cb24ca1daca78a99a4fa9d6ebe5b49fe95ce8b074b8a3d8c1130510",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_before_archive_storage.json": "a63554454bf836d4969292ea2ed2959ef5a8ded78f2b55a7581e38b1e351b666",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_registration.json": "b20dfa5f1969ea4dea613526a317dcb0dc0c2164398bad1b4754bf72df196e8b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_gpu_archive_acceptance.json": "30a95589f3aa0fcf2b209a42158bf4966459a6dcb13a6afdbbdaa6904305e125",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/validation_job.json": "1638962e7dcfafecaf95ce62f5b00dff4d1a7263d8e31e2a9c46c45a31941509",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/validation_submission_intent.json": "afe916096d0d4e06e58ca7974ffa38e1bdd67e4d65990f18d21e60f36600e2c2",
+    "experiments/ELLIPSE500x300_H120/test_ehe_5e10_archive_input.py": "73be14045a2fe78432e720b0484a6157fc6432be34b3ddacd21bc63b858e94fc"
+  },
+  "release_key": "7ace84c81c85b6a8",
+  "actual_gpu_validation_job": 1681331,
+  "registered_epoch": 1791565844.9833226
+}

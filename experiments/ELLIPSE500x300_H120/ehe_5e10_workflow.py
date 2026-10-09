@@ -300,6 +300,21 @@ def deploy_gpu(c,f):
 
 
 def sync_counts(c,f):
+    storage=read(DATA/f['payload_dir']/'config.json').get('archive_storage')
+    if storage:
+        path=REPORT/'transport_gpu_archive_acceptance.json'
+        if path.exists():
+            v=read(path)
+            if not v['passed'] or v['release_key']!=f['release_key'] or v['archive_sha256']!=storage['archive_sha256']:
+                raise ValueError('Registered archive transfer identity differs')
+            return v
+        code='from ehe_common import digest;from pathlib import Path;p=Path('+repr(storage['archive_path'])+');assert p.stat().st_size=='+str(storage['archive_bytes'])+';assert digest(p)=='+repr(storage['archive_sha256'])+';print("ACCEPTED_GPU_ARCHIVE_SHA_PASS_NO_REUPLOAD")'
+        print(command(c,'cd '+q(f['root'])+' && '+q(GPU_PYTHON)+' -c '+q(code),120),flush=True)
+        value=dict(passed=True,archive_sha256=storage['archive_sha256'],archive_bytes=storage['archive_bytes'],
+            collection_sha256=storage['collection_sha256'],release_key=f['release_key'],
+            full_gpu_worker_acceptance_pending=True,scope='Archive transfer identity only; actual complete verification in each allocated stage',
+            physical_calibration_claim=False)
+        write(path,value);return value
     path=REPORT/'transport_gpu_sync_acceptance.json'
     if path.exists():return read(path)
     accepted=read(REPORT/'transport_acceptance.json')
@@ -344,7 +359,9 @@ def verification_release(c,f):
     path=REPORT/'verification_freeze.json'
     if path.exists():return read(path)
     source=DATA/f['payload_dir'];folder=DATA/'verification_payload';folder.mkdir(exist_ok=False)
-    for name in ('ehe_common.py','torch_active_operator.py','ehe_5e10_transport.py','verify_ehe_5e10.py','ehe_slurm_status.py'):
+    names=['ehe_common.py','torch_active_operator.py','ehe_5e10_transport.py','verify_ehe_5e10.py','ehe_slurm_status.py']
+    if f.get('input_storage')=='node_local_archive':names.append('ehe_5e10_archive_input.py')
+    for name in names:
         shutil.copy2(source/name,folder/name)
     files=hashes(folder);key=hashlib.sha256(json.dumps(files,sort_keys=True).encode()).hexdigest()[:16]
     v=dict(key=key,files=files,root=BASE+'/verification_releases/'+key,payload_dir='verification_payload')
@@ -371,16 +388,33 @@ def fetch_authority(c,mode,f):
         for name,sha in proof['files'].items():fetch_file(s,BASE+'/'+mode+'/'+name,DATA/'results'/mode/name,sha)
         for stage in (mode,mode+'_acceptance'):
             j=registered(stage)['job'];fetch_file(s,BASE+'/logs/'+stage+'_'+str(j)+'.log',DATA/'logs'/(stage+'_'+str(j)+'.log'))
+            if f.get('input_storage')=='node_local_archive':
+                local=target/(stage+'_input_receipt.json')
+                fetch_file(s,BASE+'/input_receipts/'+stage+'.json',local)
+                bootstrap=read(local);storage=read(DATA/f['payload_dir']/'config.json')['archive_storage']
+                if not bootstrap['passed'] or bootstrap['status']!='complete' or str(bootstrap['job'])!=str(j):
+                    raise ValueError('Actual allocated archive input stage did not complete')
+                if bootstrap['release_key']!=f['release_key'] or bootstrap['bootstrap_sha256']!=f['sha256']['ehe_5e10_archive_input.py']:
+                    raise ValueError('Archive bootstrap actual execution identity differs')
+                if bootstrap['archive_sha256']!=storage['archive_sha256'] or bootstrap['collection_sha256']!=proof['counts_sha256']:
+                    raise ValueError('Allocated input receipt differs from strict full-worker authority')
+                write(REPORT/(stage+'_input_acceptance.json'),dict(**bootstrap,receipt_sha256=digest(local)))
     verify_files(DATA/'results'/mode,proof['files'])
     write(REPORT/(mode+'_acceptance_receipt.json'),receipt)
     write(REPORT/(mode+'_acceptance_sacct.json'),dict(job=job,accounting=text,passed=True))
     write(path,proof);print('EHE_5E10_STRICT_FETCH',mode,len(proof['files']),flush=True);return proof
 
 
+def gpu_entry(f,stage,program,program_root,arguments):
+    if f.get('input_storage')=='node_local_archive':
+        return q(GPU_PYTHON)+' -u '+q(program_root+'/ehe_5e10_archive_input.py')+' --release '+q(f['root'])+' --program '+q(program_root+'/'+program)+' --receipt '+q(BASE+'/input_receipts/'+stage+'.json')+' -- '+arguments
+    return q(GPU_PYTHON)+' -u '+q(program_root+'/'+program)+' '+arguments+' --counts '+q(BASE+'/counts')
+
+
 def advance_reconstruction():
     f=gpu_freeze()
     with connection('gpu') as c:
-        if not (REPORT/'deployment_gpu.json').exists():deploy_gpu(c,f)
+        if not (REPORT/'deployment_gpu.json').exists() or read(REPORT/'deployment_gpu.json')['release_key']!=f['release_key']:deploy_gpu(c,f)
         sync_counts(c,f);r=f['root'];resp=f['response_root'];counts=BASE+'/counts'
         for mode in ('validation','formal'):
             if registered(mode) is None:
@@ -390,8 +424,9 @@ def advance_reconstruction():
                     if not authority['passed'] or not authority['operator_closure']['passed']:raise ValueError('Strict full-input validation authority required')
                     limit=math.ceil(max(authority['phase_seconds'].values())*20*1.8+300)
                     iterations=200;wall=2*limit+2400
-                line='cd '+q(r)+'\ntimeout --signal=TERM --kill-after=10s '+str(wall)+'s '+q(GPU_PYTHON)+' -u run_ehe_5e10_reconstruction.py --release '+q(r)+' --responses '+q(resp)+' --counts '+q(counts)+' --output '+q(BASE+'/'+mode)+' --mode '+mode+' --iterations '+str(iterations)+' --limit '+str(limit)
-                if mode=='formal':line+=' --authority '+q(BASE+'/validation_acceptance/authority.json')
+                args='--release '+q(r)+' --responses '+q(resp)+' --output '+q(BASE+'/'+mode)+' --mode '+mode+' --iterations '+str(iterations)+' --limit '+str(limit)
+                if mode=='formal':args+=' --authority '+q(BASE+'/validation_acceptance/authority.json')
+                line='cd '+q(r)+'\ntimeout --signal=TERM --kill-after=10s '+str(wall)+'s '+gpu_entry(f,mode,'run_ehe_5e10_reconstruction.py',r,args)
                 submit_gpu(c,mode,line,math.ceil(wall/60)+5);return False
             imaging=registered(mode);text=accounting(c,imaging['job'])
             if not stage_completed(text,imaging['job']):return False
@@ -402,7 +437,8 @@ def advance_reconstruction():
                 command(c,'mkdir -p '+q(BASE+'/accounting'))
                 with c.open_sftp() as s:put_tree(s,folder,BASE+'/accounting')
                 dest=BASE+'/'+mode+'_acceptance'
-                line='cd '+q(v['root'])+'\nmkdir -p '+q(dest)+'\ntimeout --signal=TERM --kill-after=10s 2700s '+q(GPU_PYTHON)+' -u verify_ehe_5e10.py --result '+q(BASE+'/'+mode)+' --release '+q(r)+' --responses '+q(resp)+' --counts '+q(counts)+' --accounting '+q(BASE+'/accounting/'+mode+'.txt')+' --transport-accounting '+q(BASE+'/accounting/transport.txt')+' --output '+q(dest+'/authority.json')+' --verification-manifest '+q(v['root']+'/verification_manifest.json')+' --evidence '+q(dest+'/evidence')
+                args='--result '+q(BASE+'/'+mode)+' --release '+q(r)+' --responses '+q(resp)+' --accounting '+q(BASE+'/accounting/'+mode+'.txt')+' --transport-accounting '+q(BASE+'/accounting/transport.txt')+' --output '+q(dest+'/authority.json')+' --verification-manifest '+q(v['root']+'/verification_manifest.json')+' --evidence '+q(dest+'/evidence')
+                line='cd '+q(v['root'])+'\nmkdir -p '+q(dest)+'\ntimeout --signal=TERM --kill-after=10s 2700s '+gpu_entry(f,mode+'_acceptance','verify_ehe_5e10.py',v['root'],args)
                 submit_gpu(c,mode+'_acceptance',line,50);return False
             if fetch_authority(c,mode,f) is None:return False
     print('EHE_5E10_FORMAL200_STRICTLY_FETCHED',flush=True);return True

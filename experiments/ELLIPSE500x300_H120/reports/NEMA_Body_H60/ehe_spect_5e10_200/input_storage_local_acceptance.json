@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "release_key": "7ace84c81c85b6a8",
+  "original_scientific_files_sha256": {
+    "ehe_5e10_transport.py": "e0fe56bb72d462e7231acfaaa5c3321fd169b5e167612f5fc3e561fce7a7d367",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
+    "run_ehe_5e10_reconstruction.py": "f023205614292fa8a039321ac56c35e9a3815107fd2109ce98d20f0de9770d60",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "verify_ehe_5e10.py": "b1590362a90ef4410da7bc4bae04ee33f0c570e44f622e77d16da14c3a061255",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4"
+  },
+  "original_config_except_storage_unchanged": true,
+  "archive_storage": {
+    "archive_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/transport_counts.tar.gz",
+    "archive_bytes": 58948637,
+    "archive_sha256": "2987088d3a44f20c48def92ffa37883f337663548fe34360327124e44bffeeae",
+    "collection_sha256": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8",
+    "uncompressed_bytes": 585920655,
+    "disk_allocation_bytes": 762118144,
+    "archive_members": 16026,
+    "method": "Exact archive to actual Slurm node-local disk; original complete-worker verifier and science unchanged"
+  },
+  "stop_acceptance_sha256": "983459382cb24ca1daca78a99a4fa9d6ebe5b49fe95ce8b074b8a3d8c1130510",
+  "no_new_simulation": true,
+  "no_matrix_or_algorithm_change": true,
+  "no_gpu_stage_submitted": true
+}

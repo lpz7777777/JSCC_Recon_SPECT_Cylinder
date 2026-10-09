@@ -60,8 +60,10 @@ account limits without submitting 1000 separate jobs or modifying other jobs.
 
 The original complete A218/A440/C440to218 matrices are reused by exact SHA.
 Unstarted initial GPU release `8dc6d9218cb7c290` is preserved; new release
-`80ff01a669cee377` is frozen and deployed, with an explicit mixed-allocation
-receipt verifier. The original reconstruction runner/operator/solver/geometry/
+`80ff01a669cee377` is preserved with an explicit mixed-allocation
+receipt verifier. New storage-only release `7ace84c81c85b6a8` retains these
+scientific files by exact SHA and bootstraps the accepted archive on node-local
+disk within each actual validation/reconstruction/verification allocation. The original reconstruction runner/operator/solver/geometry/
 truth bytes are unchanged. Actual
 transport acceptance and complete-input validation10 precede the unique
 formal200 run. Both solver helpers, all 78920 active cells, all 2312 bins,
@@ -95,7 +97,39 @@ crop0, no smoothing, no gain fit and existing 3D sphere ROIs. Different doses,
 materials, coverage, model approximations and 440-background budgets are
 reported. Numerical and direct visual QA are required for final delivery.
 
-Ten local failure-oriented contract checks passed, including full dose/view/
+Nineteen local failure-oriented contract checks passed, including full dose/view/
 seed partition, rejection of changed/repeated identities, original helper
 SHA, macro-only-dose changes and safe archive failure cases. These local
 checks do not substitute for actual all-worker or imaging acceptance.
+
+## 2026-10-10 accepted acquisition and GPU input storage continuation
+
+The complete local transport authority is PASSED:1000 workers,20views, actual
+50000000000 primaries, windows218/440=232888/118846 and all16026 archive
+members. The recovery allocation15684979 exited COMPLETED/0:0 in02:21:06;
+the original13 completed workers remain bound to their original receipts.
+
+Shared-disk extraction had written only47 receipts in48 worker directories
+after several minutes, with almost no additional CPU time. The owned input
+extraction process was explicitly stopped and confirmed fully exited. Its
+partial shared directory and logs remain preserved. No simulation, Slurm
+compute job, matrix or observation is repeated or canceled. The uploaded
+58948637-byte archive retains its accepted SHA, and is not uploaded again.
+
+The new wrapper copies that exact archive to actual Slurm node-local disk,
+checks space and local filesystem identity, extracts every approved member,
+and calls the unchanged reconstruction or independent verifier. Each target
+retains its original complete1000-worker verification. Archive transfer
+acceptance alone is not GPU full-worker or reconstruction acceptance.
+Independent verification has a separate immutable code release. Each allocated
+input receipt must finish successfully and bind job/program/archive/collection
+SHA before strict imaging authority is fetched.
+
+Full-input validation10 job1681331 is registered and PENDING(Priority) at this
+read-only snapshot. Formal200 has not been submitted. Only actual completed
+validation plus strict independent authority permits the unique formal run.
+The node-local disk free-space check and extraction throughput still await
+actual allocation; no login-host disk reading is claimed as compute-node proof.
+The recurring timer remains PAUSED, with a single bounded8-hour controller
+and postprocessor continuing this authorized acquisition. Final delivery is
+still pending strict final acceptance, comparison, scientific and visual QA.

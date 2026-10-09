@@ -112,3 +112,41 @@ new seeds/macros, full window/tag/source/geometry/SHA closure and the mixed
 allocation proof. Do not collect, fetch or upload the accepted CPU acquisition
 again. Continue the latest registered GPU synchronization and imaging stages;
 no physical calibration PASS is implied.
+
+## 2026-10-10 shared-input storage bottleneck
+
+input_storage_stop_acceptance.json records the fully exited owned input-only
+PID1856510,47 partial receipts and48 worker directories, the unchanged full
+archive SHA, and retained shared counts directory. The failed one-time helper
+registrations are preserved in generated/shared_input_storage_stop; prior
+report registration is one_time_pipeline_before_archive_storage.json.
+
+input_storage_freeze.json registers new immutable7ace84c81c85b6a8. Preserve
+80ff01a669cee377 and freeze_before_archive_storage/deployment proof. Its only
+input config addition is archive_storage; every original scientific source,
+operator, solver, transport verifier, truth and geometry SHA is unchanged.
+The bootstrap must execute inside the actual Slurm allocation, select ext4/
+xfs/btrfs on a local device with sufficient disk space, copy/check the exact
+accepted archive, safely extract all members and call the frozen entry point.
+It does not reuse or overwrite the partial shared counts directory. Original
+full-worker verification remains necessary within each scientific target.
+
+transport_gpu_archive_acceptance.json is archive transfer identity only;
+full GPU worker acceptance is pending actual validation/independent authority.
+Each allocated input receipt must be complete, passed, and bound to its exact
+job/program/bootstrap/archive/collection identity during strict fetch.
+validation_job.json registers1681331. If any stage fails or is partial, retain
+all outputs/logs and stop; no automatic resubmission, matrix change or count
+replacement. Completed strict validation alone permits formal200.
+
+Nineteen local contract checks actually passed, including shared/RAM scratch
+rejection, insufficient-space and alternate-count rejection, changed archive
+SHA rejection before science, and exact-byte original-target execution with
+cleanup limited to the owned temporary directory. Actual compute-node disk
+identity, full1000-worker verification and GPU execution still require their
+real receipts; local checks do not replace them.
+
+Latest bounded helper PIDs36496/31452 and source/log SHA registration is in
+one_time_pipeline_registration.json. watch_archive_input_stdout/stderr and
+postprocess_archive_input_stdout/stderr preserve the current continuation.
+Only one controller may advance/fetch/submit. compton-v5 remains PAUSED.
