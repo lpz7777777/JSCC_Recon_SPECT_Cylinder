@@ -1,5 +1,7 @@
 # 本次实际运行簿
 
+2026-10-09 15:18上海：完整输入validation10作业1679300已实际COMPLETED/0:0并完成[严格取回验收](validation_summary.json)。新只读验收1679391实际COMPLETED/0:0，原结果复用，全部20视角/所有行的前向转置最大相对误差2.29736e-07，自身S闭合≤8e−16，本次440末图重算固定背景L2=1.26078e-07，原10次与保存历史逐值一致。实际Slurm计算主存峰值13.2065%、GPU峰值18.1879%；这只是数值/资源/身份验收，物理校准仍为false。唯一[formal200作业1679415](formal_job.json)已提交并RUNNING，按原方法顺序440→固定C背景→218→双能和；定时任务保持PAUSED。
+
 2026-10-09 15:13上海：validation10计算1679300已实际COMPLETED/0:0，elapsed08:08；原MLEM与保存循环的两路L2均0、历史逐值一致，前向/转置检查分别8.56e−8与3.19e−7。完整严格验收尚未通过：登录节点只读进程1783665异常退出且没有authority，原helper未保存真实退出码；自己的cgroup没有OOM记录，原因仍UNDETERMINED，见[中断证据](validation_fetch_interruption.json)。已完全退出后只补同一冻结验收代码的有界Slurm只读验收1679391，保留阶段日志、真实退出与资源证明；不重复GPU验证计算、不改原结果。formal200仍须此严格验收通过才唯一提交，定时任务保持PAUSED。
 
 2026-10-09人类新指令及范围回复授权“继续原方案200次重建（将现有物理偏差保留在报告）”。physical_continuation_policy.json已冻结原gate/CSV、计数collection、三Factor及MLEM辅助代码SHA。新增有界执行授权入口，计算/保存/固定背景主体与旧冻结逐字一致；原HOLD不修改，结果声明physical_calibration_passed=false。31项策略拒绝错输入/合同/既有恢复路由检查实际通过；完整输入GPU validation10尚须实际执行后验收。定时任务仍暂停，不恢复旧诊断或响应计算。

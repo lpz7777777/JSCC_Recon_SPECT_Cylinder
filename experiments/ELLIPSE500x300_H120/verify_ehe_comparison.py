@@ -83,13 +83,15 @@ def verify():
             b = cart[bg]; mean = float(b.mean()); std = float(b.std(ddof=1))
             integral = float(np.sum(image.astype(float)*volume, dtype=np.float64))
             peak = int(np.argmax(image))
+            order = np.argsort(image)
             expected = dict(max_density=float(image[peak]), background_mean=mean,
                 background_cv=std/mean, peak_background_ratio=float(image[peak]/mean),
                 total_integral=integral,
                 integral_recovery=integral/(sum(primary[:2]) if energy=='sum' else primary[0 if energy==218 else 1]),
                 source_z_leakage=float(np.sum(image[np.abs(coords[active, 2])>30].astype(float)*
                     volume[np.abs(coords[active, 2])>30], dtype=np.float64)/integral),
-                p99_density=float(np.quantile(image, .99)), p999_density=float(np.quantile(image, .999)))
+                p99_density=float(np.quantile(image, .99)), p999_density=float(np.quantile(image, .999)),
+                volume_weighted_p999_density=float(np.interp(.999, np.cumsum(volume[order])/volume.sum(), image[order])))
             for axis, value in zip('xyz', coords[active[peak]]): expected[f'peak_{axis}_mm'] = float(value)
             for key, value in expected.items(): close(float(row[key]), value, channel+'/'+str(iteration)+'/'+key)
             for sphere in meta['spheres']:
