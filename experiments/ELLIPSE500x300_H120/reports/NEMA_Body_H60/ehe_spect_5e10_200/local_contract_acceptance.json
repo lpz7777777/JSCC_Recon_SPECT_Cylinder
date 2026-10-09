@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests": 10,
+  "kind": "Local failure-oriented contract checks; not actual transport or imaging acceptance",
+  "test_source_sha256": "721ca12a39a36c7f37a60fc3488ea356f27c8c90f467c99c7144d258998d721f",
+  "workflow_source_sha256": "2ec7dde731417ed8b0b6d1ae66e3813dd823bc58158cae580b2b36a652b9dbec",
+  "non_mutating_controller_liveness_query": true
+}

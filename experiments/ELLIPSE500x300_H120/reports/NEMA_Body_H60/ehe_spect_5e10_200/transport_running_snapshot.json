@@ -1,0 +1,13 @@
+{
+  "checked_epoch": 1791546971.0975819,
+  "job": 15683333,
+  "squeue": "15683333|RUNNING|23:03|ibc12b11n[01-18]\n",
+  "srun": "StepId=15683333.0 UserId=10016 StartTime=2026-10-09T19:22:05 TimeLimit=UNLIMITED\n   State=RUNNING Partition=cnmix NodeList=ibc12b11n[01-18]\n   Nodes=18 CPUs=1000 Tasks=1000 Name=python3 Network=(null)\n   TRES=cpu=1000,mem=0,node=18\n   ResvPorts=(null)\n   CPUFreqReq=Default Dist=Block\n   SrunHost:Pid=ibc12b11n01:77332\n\n",
+  "worker_progress": {
+    "worker_directories": 1000,
+    "launched_macros": 1000,
+    "receipt_count": 0,
+    "failure_count": 0
+  },
+  "logs_sample": "==> /WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/transport/worker_0000/transport.log <==\n--------- Ranecu engine status ---------\n Initial seed (index) = 206\n Current couple of seeds = 1881016957, 1381290701\n----------------------------------------\n\n==> /WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/transport/worker_0999/transport.log <==\n--------- Ranecu engine status ---------\n Initial seed (index) = 130\n Current couple of seeds = 1788316752, 1098463799\n----------------------------------------\n"
+}

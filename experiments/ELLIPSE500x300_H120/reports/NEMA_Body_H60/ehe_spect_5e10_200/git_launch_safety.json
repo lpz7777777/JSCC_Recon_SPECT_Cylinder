@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "safety": {
+    "checked_blobs": 29,
+    "total_blob_bytes": 423879,
+    "largest_blobs": [
+      [
+        273007,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/source_rng_startup_audit.json"
+        ]
+      ],
+      [
+        27101,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py"
+        ]
+      ],
+      [
+        15422,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_5e10_transport.py"
+        ]
+      ],
+      [
+        13922,
+        [
+          "experiments/ELLIPSE500x300_H120/plot_ehe_5e10.py"
+        ]
+      ],
+      [
+        12025,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/source_angular_audit.json"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "staged_git_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/audit_ehe_5e10_angles.py": "dca9c6679fe6488959f7b7d6f9d0a351cced5b5716cc1eaec0c86a78c4abe556",
+    "experiments/ELLIPSE500x300_H120/audit_ehe_5e10_rng.py": "627ef9e2902c70f9b36432310950144d2811d6987950be7540a7e3a8c848e938",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_finalize.py": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_transport.py": "5f56efa766810f4db3b2b2ba1e0b2e1797ba82e17c18eb9f2f91192341323131",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py": "2ec7dde731417ed8b0b6d1ae66e3813dd823bc58158cae580b2b36a652b9dbec",
+    "experiments/ELLIPSE500x300_H120/plot_ehe_5e10.py": "2756fe0c796042d85d68771c63fa70b5cc49a048aad0759863dd335efbbf68bc",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/README.md": "704b306e9b2e9881ecd173df7b1299a9377780d69d3de2d837a65e9075497d3e",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md": "23a3e0c2e149150744765019c8f5a8e75c070827b0b98d416660029b3e627f12",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/SOURCE_ANGLE.md": "c48a899758c249b805940b36f9488f4525305d8b0c06fd2cce4eca24c46047e8",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/cpu_capacity_read_only.json": "0ba66fca1a5f3dbbd79161fda9448a35bd62a8c5d11e5fc48bdc6083445fb0b8",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/deployment_cpu.json": "9fc0098d9a02b3c6a8b9fde855894ccbe9c315d18f07f964e08c354031806ba7",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/deployment_gpu.json": "3e405b5481c09eba823d9f196d1611ec9aa785e6757075f28c7e2af40d3c2199",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/freeze.json": "bf114b78b5c5d8a57e8c586e0e28a8e39e6fbd37c59e090b064e3efa621f5e40",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/local_contract_acceptance.json": "515f5f13d7bda83f28f0094c2a3cf6ccdc85f087627466b1b6f18159799f415d",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_registration.json": "f6964f15daa0b71f3649586e5f7b48da64375ddaf0079eeb39d05ca03a26669b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/source_angular_audit.json": "1109c956b1ffb7ed5abe8999fddfe8a7a9b449eaa553a06be8de10fcd677b717",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/source_rng_startup_audit.json": "30cfcbd0f9b508692eb1b2e3088edb3a7867b2611bc58d96870413d513af9ef5",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_freeze.json": "68aec6941e698b101e9b244ab158858e32bbfab8057ba2610688ddd8cac432c5",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_job.json": "a68d57c5ffe8bf1aa2e9642261b5e9c1b78cf6ed52bf8a445b2e818998f26744",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_partition_local_acceptance.json": "4906eb1aae37b7bbbaa4390160d14f7509469ee6d6eb59f96c1c27286dd1509e",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_reuse_acceptance.json": "64042802f0a57d1fcbc463e64a8ded4d3536d1e5310f56ad4bbffa66e6092566",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_running_snapshot.json": "bf97893bb68d409a6e58b362d7bc755e6426b8938ff1438959d6a632edff1c2f",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_submission_intent.json": "4d5bb77e33b82a601455f7d6dd01d957045b3380389976fd67326243f26a43c6",
+    "experiments/ELLIPSE500x300_H120/run_ehe_5e10_reconstruction.py": "f023205614292fa8a039321ac56c35e9a3815107fd2109ce98d20f0de9770d60",
+    "experiments/ELLIPSE500x300_H120/test_ehe_5e10.py": "721ca12a39a36c7f37a60fc3488ea356f27c8c90f467c99c7144d258998d721f",
+    "experiments/ELLIPSE500x300_H120/verify_ehe_5e10.py": "b1590362a90ef4410da7bc4bae04ee33f0c570e44f622e77d16da14c3a061255",
+    "experiments/ELLIPSE500x300_H120/verify_ehe_5e10_figures.py": "eb455cf5162cd38efcdbfd2a601a9295517cdd23b365b933fa43e0f7ee034289"
+  },
+  "scope": "Reviewed code and small launch/angular/partition evidence only; full experiment completion remains pending"
+}

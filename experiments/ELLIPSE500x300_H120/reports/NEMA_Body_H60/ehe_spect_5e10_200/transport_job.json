@@ -1,0 +1,18 @@
+{
+  "job": 15683333,
+  "stage": "transport",
+  "host": "maty",
+  "release_key": "24cef961cf6890a1",
+  "script": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/scripts/transport.sh",
+  "script_sha256": "dd710d87dc915c4e38750efdd285b62aef9191141d2638eeb382a5057df0fd5a",
+  "submitted_epoch": 1791545572.8368168,
+  "minutes": 240,
+  "allocation": "single multinode allocation, independent srun tasks",
+  "nodes": 18,
+  "parallel_limit": 1000,
+  "workers": 1000,
+  "photons_per_worker": 50000000,
+  "total_primary_photons": 50000000000,
+  "seed_first": 33100101,
+  "seed_last": 33101100
+}

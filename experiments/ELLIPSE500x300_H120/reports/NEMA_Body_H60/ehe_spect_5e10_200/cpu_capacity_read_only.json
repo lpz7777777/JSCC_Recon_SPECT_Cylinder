@@ -1,0 +1,61 @@
+{
+  "checked_epoch": 1791544917.1106493,
+  "host": "maty",
+  "queries": {
+    "partition": {
+      "passed": true,
+      "command": "scontrol show partition cnmix",
+      "output": "PartitionName=cnmix\n   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL\n   AllocNodes=ALL Default=NO QoS=N/A\n   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO\n   MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=56\n   Nodes=ibc11b11n[01-38],ibc12b11n[01-38]\n   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO\n   OverTimeLimit=NONE PreemptMode=OFF\n   State=UP TotalCPUs=4256 TotalNodes=76 SelectTypeParameters=NONE\n   JobDefaults=(null)\n   DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED\n   TRES=cpu=4256,mem=76M,node=76,billing=4256\n\n"
+    },
+    "capacity": {
+      "passed": true,
+      "command": "sinfo -p cnmix -h -o \"%P|%a|%D|%C\"",
+      "output": "cnmix|up|76|191/3897/168/4256\n"
+    },
+    "own_queue": {
+      "passed": true,
+      "command": "squeue -u maty -h -o \"%i|%j|%T|%C|%R\"",
+      "output": {
+        "raw_sha256": "54c21ae7a29316166291322f8d45e9659991343646a6f1827b5ace8696a172e8",
+        "raw_bytes": 90000,
+        "jobs": 1800,
+        "states": {
+          "RUNNING": 1800
+        },
+        "allocated_cpu_count": 1800,
+        "scope": "aggregate published; raw unrelated account job names retained locally"
+      }
+    },
+    "associations": {
+      "passed": true,
+      "command": "sacctmgr -n -P show assoc where user=maty",
+      "output": "tansuo1000|users|maty||1|||cpu=15000||||4000|||2000|||defaultqos|defaultqos|\n"
+    },
+    "qos": {
+      "passed": true,
+      "command": "sacctmgr -n -P show qos",
+      "output": "normal|0|00:00:00|||cluster|||1.000000|||||||||||||||||\ndefaultqos|0|00:00:00|||cluster|||1.000000|||||||||||||||||\n"
+    },
+    "config": {
+      "passed": true,
+      "command": "scontrol show config",
+      "output": "MaxArraySize            = 1001\nMaxJobCount             = 20000\nSchedulerParameters     = bf_interval=60,bf_continue,bf_resolution=300,bf_max_job_test=5000,bf_max_job_user=100,enable_user_top\nSchedulerType           = sched/backfill\nSelectType              = select/cons_tres\nSelectTypeParameters    = CR_CORE\nSlurmctldParameters     = enable_configless"
+    },
+    "associations_with_headers": {
+      "passed": true,
+      "command": "sacctmgr -P show assoc where user=maty",
+      "output": "Cluster|Account|User|Partition|Share|Priority|GrpJobs|GrpTRES|GrpSubmit|GrpWall|GrpTRESMins|MaxJobs|MaxTRES|MaxTRESPerNode|MaxSubmit|MaxWall|MaxTRESMins|QOS|Def QOS|GrpTRESRunMins\ntansuo1000|users|maty||1|||cpu=15000||||4000|||2000|||defaultqos|defaultqos|\n"
+    },
+    "qos_with_headers": {
+      "passed": true,
+      "command": "sacctmgr -P show qos",
+      "output": "Name|Priority|GraceTime|Preempt|PreemptExemptTime|PreemptMode|Flags|UsageThres|UsageFactor|GrpTRES|GrpTRESMins|GrpTRESRunMins|GrpJobs|GrpSubmit|GrpWall|MaxTRES|MaxTRESPerNode|MaxTRESMins|MaxWall|MaxTRESPU|MaxJobsPU|MaxSubmitPU|MaxTRESPA|MaxJobsPA|MaxSubmitPA|MinTRES\nnormal|0|00:00:00|||cluster|||1.000000|||||||||||||||||\ndefaultqos|0|00:00:00|||cluster|||1.000000|||||||||||||||||\n"
+    },
+    "cnmix_own_queue": {
+      "passed": true,
+      "command": "squeue -p cnmix -u maty -h -o \"%i|%T|%C|%R\"",
+      "output": ""
+    }
+  },
+  "read_only": true
+}

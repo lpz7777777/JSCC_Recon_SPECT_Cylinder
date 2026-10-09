@@ -1,0 +1,23 @@
+{
+  "study": "ehe_spect_5e10_200",
+  "release_key": "8dc6d9218cb7c290",
+  "payload_dir": "payload",
+  "root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/releases/8dc6d9218cb7c290",
+  "sha256": {
+    "config.json": "d44062e5c7b7230d2fd93eb63982be872ab12fb170809f2681e67d302c380cb8",
+    "ehe_5e10_transport.py": "5f56efa766810f4db3b2b2ba1e0b2e1797ba82e17c18eb9f2f91192341323131",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
+    "run_ehe_5e10_reconstruction.py": "f023205614292fa8a039321ac56c35e9a3815107fd2109ce98d20f0de9770d60",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "verify_ehe_5e10.py": "b1590362a90ef4410da7bc4bae04ee33f0c570e44f622e77d16da14c3a061255",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4"
+  },
+  "response_root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses_conversion_b02df58a9d3fd48c",
+  "transport_release_key": "24cef961cf6890a1",
+  "original_reconstruction_release_key": "064404727f0e22b1",
+  "data_kind": "Geant4_transport",
+  "physical_calibration_claim": false
+}
