@@ -1,0 +1,38 @@
+{
+  "checked_blobs": 26,
+  "total_blob_bytes": 115706,
+  "largest_blobs": [
+    [
+      29530,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_stop_acceptance.json"
+      ]
+    ],
+    [
+      27497,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py"
+      ]
+    ],
+    [
+      16966,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_5e10_recovered_transport.py"
+      ]
+    ],
+    [
+      7732,
+      [
+        "experiments/ELLIPSE500x300_H120/ehe_5e10_recovery_workflow.py"
+      ]
+    ],
+    [
+      5092,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md"
+      ]
+    ]
+  ],
+  "findings": [],
+  "scope": "Only changed staged blobs and outgoing base..HEAD; pre-existing unrelated index blobs excluded"
+}

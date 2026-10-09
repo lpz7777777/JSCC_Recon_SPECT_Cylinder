@@ -1,25 +1,28 @@
 {
-  "checked_epoch": 1791547270.4143877,
-  "workflow": {
-    "pid": 372,
-    "status": "running",
-    "started_epoch": 1791546788.686414
-  },
-  "postprocess": {
-    "pid": 51316,
-    "status": "running",
-    "started_epoch": 1791547201.610836,
-    "source_sha256": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69",
-    "bounded_hours": 8.0,
-    "advance_fetch_submit": false
-  },
-  "workflow_source_sha256": "2ec7dde731417ed8b0b6d1ae66e3813dd823bc58158cae580b2b36a652b9dbec",
-  "postprocess_source_sha256": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69",
-  "prior_recurring_automation": {
-    "id": "compton-v5",
-    "status": "PAUSED"
-  },
-  "one_time_bounded_only": true,
-  "imaging_completed": false,
-  "final_delivery": false
+  "passed": true,
+  "transport_job": 15684979,
+  "recovery": true,
+  "helpers": [
+    {
+      "pid": 44404,
+      "source": "ehe_5e10_workflow.py",
+      "source_sha256": "7fb2e94406228fcb1293ca23910885ba27c4bf2feb6f44da06f4dd496fdf8193",
+      "stdout": "watch_recovery_stdout.log",
+      "stderr": "watch_recovery_stderr.log",
+      "bounded_hours": 8,
+      "advance_fetch_submit": true
+    },
+    {
+      "pid": 40104,
+      "source": "ehe_5e10_finalize.py",
+      "source_sha256": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69",
+      "stdout": "postprocess_recovery_stdout.log",
+      "stderr": "postprocess_recovery_stderr.log",
+      "bounded_hours": 8,
+      "advance_fetch_submit": false
+    }
+  ],
+  "recurring_automation_resumed": false,
+  "visual_review_pending": true,
+  "registered_epoch": 1791553386.4711022
 }

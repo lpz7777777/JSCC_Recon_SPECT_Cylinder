@@ -1,0 +1,3 @@
+  -W, --wait=sec              seconds to wait after first task exits
+                              before killing job
+      --wckey=wckey           wckey to run job under

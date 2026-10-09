@@ -1,0 +1,523 @@
+{
+  "passed": true,
+  "completed": {
+    "998": {
+      "receipt_sha256": "a2319b46a2a8191cb6a02b8499bae2696f2ce9cc0602cadae006f9723a46c86d",
+      "files": {
+        "CntStat_218.csv": "8a9601e85dbb68c09621d33cd00cd51c4b94cde20c68677d74a9f34c7d0a36e4",
+        "CntStat_440.csv": "24b99a8c2c3d58712617b8887fc92d0c6c9299d78dbc3bca5f8778b6df341018",
+        "CntStat_218_from218.csv": "5ff0a7972470fc424c3dc46ceaafe38b209b0e060d22df726eb5cdf310b1b9ed",
+        "CntStat_218_from440.csv": "c6fbd101b48ea88ddfcb75f8c34d74f84dd02c4b82e10a4a91c4455c4b11d98f",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "24b99a8c2c3d58712617b8887fc92d0c6c9299d78dbc3bca5f8778b6df341018",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "8486af668240bbaf1b904a1e9ac61b74f891a2183723c358ba4611d5502af87b",
+        "TransportTiming.json": "163782234ccfd665e79a7ae1d47b4ec54b5470af17c97b74d27bc37c395d4104",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "0b809f36cec9a105efc6fe2efd6f3a95af8e8fbbbf4bbdd1504c30fb6bd312e6",
+        "transport.log": "09194ff30ef5e867f49c08ac07e37e792a60d94e3f059165293376fdd1317e77"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14693322,
+        35306678,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.322801,
+        "beam_seconds": 5968.67
+      },
+      "resource": {
+        "elapsed_seconds": 5969.50088596344,
+        "rss_peak_bytes": 106426368,
+        "host_allocated_bytes": 186647666688,
+        "rss_fraction": 0.0005701992952202407,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "964": {
+      "receipt_sha256": "4e5155c2697e660d9c48509e647fcee086c0cb59f4f7c492ea05dcc11f486520",
+      "files": {
+        "CntStat_218.csv": "1cf2bc30d1f5bacce19fd804637e4b40990e72e763725f0257dff1f7a683ded4",
+        "CntStat_440.csv": "de4d91b854d45f16526026387e08f142a7b91f3bc8f54691d48dff4616fe4246",
+        "CntStat_218_from218.csv": "c19dfcac408273fb376c6642edb71b2cb210abc90f498f37f92b0f4f69f456de",
+        "CntStat_218_from440.csv": "e6936130cf29ea020fc2dceab15196fdb048ce4903051f495ae48c7f583806b9",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "de4d91b854d45f16526026387e08f142a7b91f3bc8f54691d48dff4616fe4246",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "9c10cf54a435737e6302434805cdbfeee8f18c4c86438fb8ace925e300453cb7",
+        "TransportTiming.json": "132d46e9b2ba28a3a90c1778ec203803203082819dda7456604adddb79b7bd76",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "cf5e3aa6118bd361d3164d4b04a2184e47fa8eacfb3bf72f443f52876a533914",
+        "transport.log": "d25db358619e45a9bec5d2e644837824ed4c5a15781c847676ccea0042a58c20"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14684460,
+        35315540,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.304482,
+        "beam_seconds": 6001.01
+      },
+      "resource": {
+        "elapsed_seconds": 6002.058944515884,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 186652078080,
+        "rss_fraction": 0.0005702077635288014,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "958": {
+      "receipt_sha256": "b0d0cd098dd9e4f2305ed8fbcd87aad12cdc48d3de9fa2a303fc1824919436dc",
+      "files": {
+        "CntStat_218.csv": "0dfa607b011ef0d1ba47b7e03c780a5506433771b6889264c365d03d14351480",
+        "CntStat_440.csv": "c5d0b9ebe31dcbc77c9e261048baf212a3a1ec22017825f1f5c40cae6d01da6a",
+        "CntStat_218_from218.csv": "d810d1c93e658eeeda7757988ce559158300c97a3a537056b79c91da3771d637",
+        "CntStat_218_from440.csv": "46b695d0eeb14f8120dc6db56e999b207810282294371773e59ea1ad5e1bc711",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "c5d0b9ebe31dcbc77c9e261048baf212a3a1ec22017825f1f5c40cae6d01da6a",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "860518584e2b5c5ac8f3675b2c6353d965e66cb0f8c07dd0dfbcb50867b3a430",
+        "TransportTiming.json": "ca27114dd9145eab77f1bbc18846be02cb6ea78ac53b7542e2258ca044bcae5a",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "76c19545efbb1074079f28043cdd04d39dc5cbcbdcfd240dad6b1ac7b05fefb2",
+        "transport.log": "65b995f528de1ddafd13d7a7212dc46523bca61a84b308a8df814c64bdeb4790"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14691745,
+        35308255,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.305146,
+        "beam_seconds": 6015.81
+      },
+      "resource": {
+        "elapsed_seconds": 6016.536424359307,
+        "rss_peak_bytes": 106426368,
+        "host_allocated_bytes": 186651561984,
+        "rss_fraction": 0.0005701873955339468,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "992": {
+      "receipt_sha256": "bfcbb9130ee771d71088d3671442f8a5d460d132af8042767a447c2cf6349415",
+      "files": {
+        "CntStat_218.csv": "c47d0124162beb456874ff54e0c8a77f01ca287f385585cc6c05407b26025339",
+        "CntStat_440.csv": "ad63826595840575f94b9a2a9d6c9a2f3fd62c8b21ce47a7ba58de008d7c8c5e",
+        "CntStat_218_from218.csv": "ecafb266109a7c4e76dc0e2c717b82204a96e6c460ffe47c033853332c12007a",
+        "CntStat_218_from440.csv": "625c98b9ab1e34e20c3f800f7197327cbaa07c2f07800097ea138102f3b13d2f",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "ad63826595840575f94b9a2a9d6c9a2f3fd62c8b21ce47a7ba58de008d7c8c5e",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "4e45e5149ec8cf1e214e192c5bbe9c597e52403c317e542913b252e59807232f",
+        "TransportTiming.json": "055c1238936dee36b6a3a6042891e8b13642a9db3e37075c9309fd3b83583892",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "e0a4eeb006fffac194188aaf7af067c87dd65243595bb9d6a50f310d1e18b86f",
+        "transport.log": "e312f15047aef883af3d22f88c7198aa2a1e80e4d0b9790472d5aaca208bb035"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14687585,
+        35312415,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.305175,
+        "beam_seconds": 5990.67
+      },
+      "resource": {
+        "elapsed_seconds": 5991.505500329658,
+        "rss_peak_bytes": 106434560,
+        "host_allocated_bytes": 186645995520,
+        "rss_fraction": 0.0005702482911753391,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "950": {
+      "receipt_sha256": "8148cca1aa66fe1846c48cef4076a4c497370b1a042ed04c4d812a7400f3da58",
+      "files": {
+        "CntStat_218.csv": "641506a0012ee16e2a6b4aea9a6ee6ecc4eb5270f6f1850d01ee43aad1a7acb8",
+        "CntStat_440.csv": "086df3760e8ff4525abcd0a62dc96587ee7362e6e64ed1b897eb97b779cca3d3",
+        "CntStat_218_from218.csv": "da68227ee0b4fdd42a2cb4bf0b3c55ec66643787ee73ddfcb00b8714fe26c319",
+        "CntStat_218_from440.csv": "bd33f37f4b67f8f537a96bbec2ddaa6e2d81e1eb82ddc39ed53246f964711e9a",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "086df3760e8ff4525abcd0a62dc96587ee7362e6e64ed1b897eb97b779cca3d3",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "64bf364cce4d73a9d9808eff6f9cafe6eef85f17dbb69cb427bec610eb92efd9",
+        "TransportTiming.json": "aa5253f1b715afa079b9a09d7e48b2901a77e4c1474385c0d310d816ad7b534c",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "cf5e3aa6118bd361d3164d4b04a2184e47fa8eacfb3bf72f443f52876a533914",
+        "transport.log": "ca7600ea95b1f1bab9108d8df9ba5a8427ae0e5198aa0f64b6e66705b9fadfef"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14691167,
+        35308833,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.304042,
+        "beam_seconds": 6005.73
+      },
+      "resource": {
+        "elapsed_seconds": 6006.557579172775,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 186652078080,
+        "rss_fraction": 0.0005702077635288014,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "15": {
+      "receipt_sha256": "dc36ce662744f311ca7823a0b5a71a1f4f7b3a1651693fa64703256ffcca558b",
+      "files": {
+        "CntStat_218.csv": "5630417101b5c044a9ca4600db7ee431587eb39c4749b84ed330ab9711c24ace",
+        "CntStat_440.csv": "ff781a2f038f8ef6a8256a509ca51dbf1579042272214d76346eebda7ce556c9",
+        "CntStat_218_from218.csv": "313c018dc8746ec2f3ec545a91e808468d82e0981808d4f140b7be12f59d5664",
+        "CntStat_218_from440.csv": "dbf9463d7e17c085ef64f5f4381843fe99e5c97dd327b2b915e754d3eb20e9f8",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "ff781a2f038f8ef6a8256a509ca51dbf1579042272214d76346eebda7ce556c9",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "476fc276e23ba405354f6b516b1af0872a1b0560637b63aca937c6ffb7ebf8cc",
+        "TransportTiming.json": "bd526b42f274e721a26ea3588435b36d203bfcb6e26be66314178326e562a761",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "27f58f55c8a854af63f0c7e7be9e0ad0f2c70a01223d5276d1607b4e44d654a2",
+        "allocation.json": "586bc70ebc7e2a9e6c034263d21fc91e7f5109c0ff00e4bc238305bb5d366128",
+        "transport.log": "d701d85206b31e52c924a5287c797ad5421d10c667b9676e61f7d2ee815333af"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14691697,
+        35308303,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.313658,
+        "beam_seconds": 6015.94
+      },
+      "resource": {
+        "elapsed_seconds": 6017.030295258388,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 185865863168,
+        "rss_fraction": 0.0005726197494577037,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "980": {
+      "receipt_sha256": "41939a626c41a3a9b5dd859bfe5386f56db0e1fe1e7051e1bdd17f91201f1104",
+      "files": {
+        "CntStat_218.csv": "f0c04aab5ac46ad2e351fd91885581b0abe6e1a90b1e5c24301fb44d2145618e",
+        "CntStat_440.csv": "05faad80a228301691101b681aa064b4e9112987f7fd188133e07cc30297466a",
+        "CntStat_218_from218.csv": "687a9a7d48f98742cacc8336e8079982d95b888ee6d5fabc3fcf2e86a3d67248",
+        "CntStat_218_from440.csv": "3b85ec5d6713991f6848060a904b5ff058e44125cf3615f1cca8e354db372c87",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "05faad80a228301691101b681aa064b4e9112987f7fd188133e07cc30297466a",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "e4daae0bbe59bc6bf639dca2d0d0d8eb26c85531e5908292daaf8c7c0eeaf8cc",
+        "TransportTiming.json": "e52c56c6c89b334f24bf009fed36e48241f456253cc7668cb69986245a543c46",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "0a4542068b5a7fa46e4474ffcb5bf62a56df3412fd6d98e62e3246c2a80ee420",
+        "transport.log": "0cbf245dc4ac0f0ac3995538accb272c418b154c629cfdd6b828b755b11b1fdd"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14688078,
+        35311922,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.304365,
+        "beam_seconds": 6010.55
+      },
+      "resource": {
+        "elapsed_seconds": 6011.547810984775,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 186651561984,
+        "rss_fraction": 0.0005702093401668042,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "968": {
+      "receipt_sha256": "eae770ff687c2fbe89d27a806439ddc80342115432cf9625806c0ba2f45fd474",
+      "files": {
+        "CntStat_218.csv": "1e0fd15d5500cbaac7bcda5caec10810a4a3da27e135fa3fa90ab00edc0d21e0",
+        "CntStat_440.csv": "2ee57cf90569885df6a4087b89dd9a137e97cca4815f937de7647edbf95d0449",
+        "CntStat_218_from218.csv": "150f99bf9df747da44c971238ac1865099da5fcb4a831bb29b77357d420db740",
+        "CntStat_218_from440.csv": "d543c23be6b31787cae933d833ad39dbc487ac111ee535c7ccd06d1669afb561",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "2ee57cf90569885df6a4087b89dd9a137e97cca4815f937de7647edbf95d0449",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "8c99d19185ca16f2a87cfe19416448e80364a459eac6d376889c35eef3570129",
+        "TransportTiming.json": "3d58f300cdef419144536fba59d6589cbaa1eadc1096807fa72297a9fbba74dc",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "a8ea967265e4a74e4f1f3ca0b1465db848f6030aabf09b6a911929db52c4ed6e",
+        "transport.log": "cc26df94cb7b63ca47ae949106441f45cfe0dabe97c38f292f8e649e258dad30"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14686604,
+        35313396,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.305119,
+        "beam_seconds": 6005.57
+      },
+      "resource": {
+        "elapsed_seconds": 6006.534406905994,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 186651045888,
+        "rss_fraction": 0.0005702109168135261,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "962": {
+      "receipt_sha256": "d5d9cd302cb66093eb67deee5d765c6a25fea01e75ff46b5d5268d42ccd7cc91",
+      "files": {
+        "CntStat_218.csv": "f298679b4938003d18d4aae443cd34b6736b4859c96e7257cbab0eba3de001b9",
+        "CntStat_440.csv": "b8223e672b13c6eee9a07c1bf89953241cfc3e93889b9447f58737b9d901cfc1",
+        "CntStat_218_from218.csv": "6d0950005132e29c3d0a9ddfe7caf22d5bf7af71b157edbafa3027033176f23e",
+        "CntStat_218_from440.csv": "ffcb1659998c868b9b4bd291317519626209ee0b2d67107b3de2de959a576f23",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "b8223e672b13c6eee9a07c1bf89953241cfc3e93889b9447f58737b9d901cfc1",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "84027b1f3e6ea5d3185a1cac4dd13114e99d92e8f944cf170400ededef2b88cf",
+        "TransportTiming.json": "b369ed0c168d8c25fdf27f10ee21a616db1ee36a8bfb6cf2e2ef2f3bc8eabbcb",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "e0a4eeb006fffac194188aaf7af067c87dd65243595bb9d6a50f310d1e18b86f",
+        "transport.log": "f9bf0ac90a1861c10349b7e9bb1b4246351166ad6a9218d1d8f4199f37f4f481"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14690522,
+        35309478,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.306388,
+        "beam_seconds": 5984.97
+      },
+      "resource": {
+        "elapsed_seconds": 5986.00391493924,
+        "rss_peak_bytes": 106438656,
+        "host_allocated_bytes": 186645995520,
+        "rss_fraction": 0.0005702702364626654,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "974": {
+      "receipt_sha256": "14cf6700a62782e36277004e1ce1384e1c2b573d523bc04b2c9e7002b7173e7e",
+      "files": {
+        "CntStat_218.csv": "44ab86fe495d57131b1587857e219d7d15dd4b74b5066d50ab690f96181c3d39",
+        "CntStat_440.csv": "489141c76ae861c0872bb1a4b21861e37f14e861f52cb239e5756150f0601447",
+        "CntStat_218_from218.csv": "cb334d18870493d88e0b4444249ee7bf1cc6af87b2ad3f917fe0c0ae16a07b0e",
+        "CntStat_218_from440.csv": "6b9935fd42d36c186e668cce46b49551771bf9c4a5e41eaebb8fbfa49051d54b",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "489141c76ae861c0872bb1a4b21861e37f14e861f52cb239e5756150f0601447",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "6dd0ae26bb4907f0ee59815aa55b8c74ed1cb7e4c72efdd9c3c678a0232e7426",
+        "TransportTiming.json": "a3c6bd92d0c76290e3fa81005740d9213f11266ed18e1c4ed08ea3ef0a34e87b",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "e0a4eeb006fffac194188aaf7af067c87dd65243595bb9d6a50f310d1e18b86f",
+        "transport.log": "0dc6e0f72c2f690bca348c407dc25745e49597159ebe2f39be071280838c9074"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14692131,
+        35307869,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.308942,
+        "beam_seconds": 5967.43
+      },
+      "resource": {
+        "elapsed_seconds": 5968.486749829724,
+        "rss_peak_bytes": 106426368,
+        "host_allocated_bytes": 186645995520,
+        "rss_fraction": 0.0005702044006006865,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "25": {
+      "receipt_sha256": "47460471849fe03b51431b7b31c6fb7f36e2fa4b25fd667109ea8fa939df083e",
+      "files": {
+        "CntStat_218.csv": "c9cb07d0511be1ce5f1d1795a7f6d5321e14219363f647119549fd8a02039884",
+        "CntStat_440.csv": "2fb473a58ae1871e20c016b750e125942bcc80a35162aa2aa2801e8aa6a9b3f1",
+        "CntStat_218_from218.csv": "1159e7d133ce969eb67356971bf58f7e878de91581200d59cb0ff7a58f05b1bf",
+        "CntStat_218_from440.csv": "ab6f3469a85e9ae99d9b676c278b279cd037b1263c08109c46ae182db8ead791",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "2fb473a58ae1871e20c016b750e125942bcc80a35162aa2aa2801e8aa6a9b3f1",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "6b75ec547b16ca73217b017005938bae05815e8258c82427945c34b40753d0df",
+        "TransportTiming.json": "61955d8c1e75b1f0f6aeb1a3dc5772a66785c7e009fb407801ffcd40c787c37b",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "27f58f55c8a854af63f0c7e7be9e0ad0f2c70a01223d5276d1607b4e44d654a2",
+        "allocation.json": "90ce7cb5dcaec16e233b77a8d4b13c3aed933781d28ae8a5404c456b50dbbe0d",
+        "transport.log": "bdd792d3a7969671a8e42eaf397ebcd92962003332cadd4017384daa16ef8e43"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14692713,
+        35307287,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.312311,
+        "beam_seconds": 5998.64
+      },
+      "resource": {
+        "elapsed_seconds": 5999.509423142299,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 185865863168,
+        "rss_fraction": 0.0005726197494577037,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "990": {
+      "receipt_sha256": "1657f348bdc9878f3e64d1ce66466211b802d5d561d2389c5c6d2d459f5b3bbd",
+      "files": {
+        "CntStat_218.csv": "a44d8b109e82c36da66fe13913d8285ad2dd4fd50174a9f38e381ecd8ad8476e",
+        "CntStat_440.csv": "898f239a5ae09b905130ff198137e81237ae1b8145fd616c5aa4d8250c4cb6fb",
+        "CntStat_218_from218.csv": "41b662405f87481a62ce5a74560a4f8c71664cb3252ca0d8ed2c3ff76e3283d5",
+        "CntStat_218_from440.csv": "cefc1197e40d2cf57bceb0293df519d61d33fe28feb4c18459550d8b31e137ee",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "898f239a5ae09b905130ff198137e81237ae1b8145fd616c5aa4d8250c4cb6fb",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "92f78874e7d105745d51054fd9bd2008e7cd58c36790f60244ea113cb461f7d1",
+        "TransportTiming.json": "6e17313f4064fe28dc6d0c1be68c26e8550407a6753001ec7ad21d5f8312e237",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "3bfa9b14a706402155ca4884fac278d39f73b2384aee7b4efc9795f5e5839ea7",
+        "transport.log": "11b1c21006df047c403b8bba18fb36dfed43e58444d0eda70b5d017c463ac733"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14692684,
+        35307316,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.305896,
+        "beam_seconds": 6013.27
+      },
+      "resource": {
+        "elapsed_seconds": 6014.057411726564,
+        "rss_peak_bytes": 106430464,
+        "host_allocated_bytes": 186651561984,
+        "rss_fraction": 0.0005702093401668042,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    },
+    "972": {
+      "receipt_sha256": "ba88d2b9f6e69d2f2c965a45309503779d6c411e956f7f168480e494ddea5672",
+      "files": {
+        "CntStat_218.csv": "9ec9b4256b018d0335a5d4a49fca376e2c0e31a0374140601720bcdba3c9b1b3",
+        "CntStat_440.csv": "0dba51fa7f57b2a59399f4e064eef729f9561b45bc2c11e2a091727d9105d295",
+        "CntStat_218_from218.csv": "9b7287ce6a679b1b308efcc1b529409c18f6375bc1e1a619e45bc546582eed04",
+        "CntStat_218_from440.csv": "b4fadc9a870236514631f9a485467f863f0e21b57b529f784cd62144201decea",
+        "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+        "CntStat_440_from440.csv": "0dba51fa7f57b2a59399f4e064eef729f9561b45bc2c11e2a091727d9105d295",
+        "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+        "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+        "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+        "TransportSummary.json": "18d558cc7bd723226435298bcbd348c099d009054acde34ff2c92201db59b242",
+        "TransportTiming.json": "5590393be1b1af42d45ab0cea7ac25967231e1b867af1e17adb182f5ac007d85",
+        "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+        "source.mac": "ae17e872890a84932a210121820c4274103db40e91f9d934d7b06e1afd117908",
+        "allocation.json": "e0a4eeb006fffac194188aaf7af067c87dd65243595bb9d6a50f310d1e18b86f",
+        "transport.log": "86784dd1398238f14e48897b3d4c9ec5d4f74b014b071247dc0cc228398af44b"
+      },
+      "allocation_job": "15683333",
+      "primary_counts": [
+        14685874,
+        35314126,
+        0
+      ],
+      "phase_seconds": {
+        "initialization_seconds": 0.305166,
+        "beam_seconds": 5970.8
+      },
+      "resource": {
+        "elapsed_seconds": 5971.488259276375,
+        "rss_peak_bytes": 106434560,
+        "host_allocated_bytes": 186645995520,
+        "rss_fraction": 0.0005702482911753391,
+        "gpu_used_peak_bytes": 0,
+        "gpu_total_bytes": 0,
+        "gpu_used_fraction": 0
+      }
+    }
+  },
+  "old_release_key": "24cef961cf6890a1",
+  "old_binary_sha256": "a49fbdef69b187df2cfebfb481c7974394d00264ab2d4aeb4cc83e65eeacb882",
+  "original_job": 15683333,
+  "original_state": "FAILED",
+  "original_accounting": "15683333|FAILED|9:0|0:9|None|01:40:24|04:00:00|billing=1008,cpu=1008,node=18|\n15683333.batch|FAILED|9:0|||01:40:24||cpu=56,mem=0,node=1|5476K\n15683333.extern|COMPLETED|0:0|||01:40:24||billing=1008,cpu=1008,node=18|0\n15683333.0|CANCELLED by 10016|0:9|||01:40:23||cpu=1000,mem=0,node=18|107492K\n",
+  "slurm_wait_configuration": "KillWait                = 30 sec\nWaitTime                = 50 sec\n",
+  "launcher_wait_override_present": false,
+  "diagnosis": "srun default WaitTime=50 terminated outstanding tasks 50 seconds after first successful task exited; explicit --wait=0 required",
+  "new_computation_required": 987,
+  "physical_changes": false,
+  "created_local_epoch": 1791553053.4705098
+}

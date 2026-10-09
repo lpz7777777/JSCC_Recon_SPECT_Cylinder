@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "tests": 15,
+  "new_failure_oriented_tests": 5,
+  "original_worker_source_sha256": "5f56efa766810f4db3b2b2ba1e0b2e1797ba82e17c18eb9f2f91192341323131",
+  "original_frozen_worker_sha256": "5f56efa766810f4db3b2b2ba1e0b2e1797ba82e17c18eb9f2f91192341323131",
+  "source_sha256": {
+    "ehe_5e10_workflow.py": "7fb2e94406228fcb1293ca23910885ba27c4bf2feb6f44da06f4dd496fdf8193",
+    "ehe_5e10_recovered_transport.py": "e0fe56bb72d462e7231acfaaa5c3321fd169b5e167612f5fc3e561fce7a7d367",
+    "ehe_5e10_recovery.py": "f347860b3b8a362807d4231af4d7ed83f4dc2feb70c8e1b072ccaa786c88474d",
+    "ehe_5e10_recovery_workflow.py": "8842487e8ed8455c04ad8f9294344ad4b4ec7499bd0a756ee116e7c9bccf51c8",
+    "test_ehe_5e10_recovery.py": "b6ce493edceaf768fea715b18af9b826770c03c02bcc3e0361554f63a76f7184"
+  },
+  "actual_runtime_acceptance": false,
+  "physical_calibration_claim": false,
+  "original_scientific_runner_sha256": "f023205614292fa8a039321ac56c35e9a3815107fd2109ce98d20f0de9770d60",
+  "operator_sha256": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+  "solver_sha256": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994"
+}

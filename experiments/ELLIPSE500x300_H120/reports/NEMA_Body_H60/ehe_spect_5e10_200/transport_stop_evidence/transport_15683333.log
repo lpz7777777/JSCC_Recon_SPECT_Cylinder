@@ -1,0 +1,24 @@
+srun: Warning: can't honor --ntasks-per-node set to 56 which doesn't match the requested tasks 1000 with the number of requested nodes 18. Ignoring --ntasks-per-node.
+srun: First task exited 50s ago
+srun: StepId=15683333.0 tasks 0-14,16-24,26-949,951-957,959-961,963,965-967,969-971,973,975-979,981-989,991,993-997,999: running
+srun: StepId=15683333.0 tasks 15,25,950,958,962,964,968,972,974,980,990,992,998: exited
+srun: launch/slurm: _step_signal: Terminating StepId=15683333.0
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: ibc12b11n18: tasks 945-949,951-957,959-961,963,965-967,969-971,973,975-979,981-989,991,993-997,999: Killed
+srun: error: ibc12b11n17: tasks 890-944: Killed
+srun: error: ibc12b11n15: tasks 780-834: Killed
+srun: error: ibc12b11n13: tasks 670-724: Killed
+srun: error: ibc12b11n16: tasks 835-889: Killed
+srun: error: ibc12b11n11: tasks 560-614: Killed
+srun: error: ibc12b11n14: tasks 725-779: Killed
+srun: error: ibc12b11n03: tasks 112-167: Killed
+srun: error: ibc12b11n06: tasks 280-335: Killed
+srun: error: ibc12b11n05: tasks 224-279: Killed
+srun: error: ibc12b11n08: tasks 392-447: Killed
+srun: error: ibc12b11n02: tasks 56-111: Killed
+srun: error: ibc12b11n09: tasks 448-503: Killed
+srun: error: ibc12b11n12: tasks 615-669: Killed
+srun: error: ibc12b11n04: tasks 168-223: Killed
+srun: error: ibc12b11n07: tasks 336-391: Killed
+srun: error: ibc12b11n10: tasks 504-559: Killed
+srun: error: ibc12b11n01: tasks 0-14,16-24,26-55: Killed

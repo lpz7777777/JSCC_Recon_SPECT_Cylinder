@@ -163,7 +163,7 @@ def collect_transport(c,f,job,text):
     if (REPORT/'transport_acceptance.json').exists():return read(REPORT/'transport_acceptance.json')
     account=DATA/'transport_accounting.txt';account.write_bytes(text.encode())
     with c.open_sftp() as s:s.put(str(account),CPU_BASE+'/transport_accounting.txt')
-    line='cd '+q(f['root'])+' && python3 -u ehe_5e10_transport.py collect --release '+q(f['root'])+' --simulation '+q(CPU_BASE+'/simulation')+' --transport '+q(CPU_BASE+'/transport')+' --output '+q(CPU_BASE+'/counts')+' --job '+str(job)+' --accounting '+q(CPU_BASE+'/transport_accounting.txt')
+    line='cd '+q(f['root'])+' && python3 -u ehe_5e10_transport.py collect --release '+q(f['root'])+' --simulation '+q(CPU_BASE+'/simulation')+' --transport '+q(f.get('transport_root',CPU_BASE+'/transport'))+' --output '+q(CPU_BASE+'/counts')+' --job '+str(job)+' --accounting '+q(CPU_BASE+'/transport_accounting.txt')
     print(command(c,line,600),flush=True)
     bundle=DATA/'transport_counts.tar.gz';receipt=DATA/'transport_counts.json'
     with c.open_sftp() as s:
@@ -174,14 +174,18 @@ def collect_transport(c,f,job,text):
     if not folder.exists():extract(bundle,folder)
     if digest(folder/'collection.json')!=proof['collection_sha256']:
         raise ValueError('Fetched collection authority SHA differs')
-    collection=verify_counts(folder,DATA/f['payload_dir'])
+    if 'transport_root' in f:
+        from ehe_5e10_recovered_transport import verify_counts as check_counts
+    else:check_counts=verify_counts
+    collection=check_counts(folder,DATA/f['payload_dir'])
     write(REPORT/'transport_acceptance.json',dict(passed=True,job=job,
         collection_sha256=digest(folder/'collection.json'),strict_fetch_files=proof['files'],
         primary_counts=collection['primary_counts'],window_counts=collection['window_counts'],
         workers=WORKERS,actual_primary_photons=TOTAL,seed_first=SEED_BASE,seed_last=SEED_BASE+WORKERS-1,
         accounting=text,source_registry_sha256=f['source_registry_sha256'],
         actual_binary_sha256=f['binary_sha256'],cpu_operational_guard_only=True,
-        imaging_resource_certificate=False,physical_calibration_claim=False))
+        imaging_resource_certificate=False,physical_calibration_claim=False,
+        recovery=collection.get('recovery')))
     return read(REPORT/'transport_acceptance.json')
 
 
@@ -232,6 +236,9 @@ def advance():
         text=accounting(c,job)
         if not stage_completed(text,job):
             return False
+        if (REPORT/'transport_recovery_freeze.json').exists():
+            f=read(REPORT/'transport_recovery_freeze.json')
+            verify_files(DATA/f['payload_dir'],f['sha256'])
         collect_transport(c,f,job,text)
     return advance_reconstruction()
 

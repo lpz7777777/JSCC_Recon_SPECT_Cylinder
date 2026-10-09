@@ -4,13 +4,24 @@ This is the user-requested new actual transport acquisition. It uses no old
 observation counts and is separate from the completed actual 5e9 and
 matrix-forward-plus-Poisson 5e9 studies.
 
-Current actual registration: CPU job **15683333**, release
-`24cef961cf6890a1`, one 18-node allocation with 1000 independent single-core
-tasks. The actual allocation contains 1008 CPUs; its srun step uses 1000
-CPUs. All 20 views have 50 workers × 50 million events, totaling **5e10**.
-New seeds are 33100101–33101100. The job was observed RUNNING on
-`ibc12b11n[01-18]`. Completion, counts and timing remain pending until actual
-exit and all-worker acceptance.
+Current actual registration: recovery CPU job **15684979**, launcher/acceptance
+release `26ceb64dbf1bd332`. Original job **15683333** actually FAILED
+with exit9 after 1:40:24: the cluster's default srun WaitTime=50 killed the
+remaining tasks 50 seconds after the first successful task exited. This was
+not the four-hour allocation limit; no OOM evidence is present in accounting
+or the retained launch log. The original failed job is not relabelled PASSED.
+
+Thirteen complete original workers passed member-SHA verification and are
+reused by their exact receipt/member hashes and original allocation identity.
+Only the **987 interrupted workers** run again in a separate transport output
+folder. Incomplete original outputs and all original logs/releases remain
+unchanged. The original Geant4 binary and original Python worker wrapper,
+macros, source directions, 50M events/worker and seeds are unchanged. The new
+18-node/1000-rank allocation explicitly uses `srun --wait=0`; 13 ranks verify
+reuse and 987 ranks compute. The observed running step exceeded the old
+50-second first-exit limit, with all 987 new workers started and no errors.
+Every final view still requires 50 accepted workers; the final accepted dose
+must be 5e10, never a sum of partial and restarted histories.
 
 [The angular audit](SOURCE_ANGLE.md) confirms **full 4π isotropic emission**,
 one photon/event and a dose-equivalent multiplier of **1**. The macro's
@@ -26,7 +37,10 @@ to 50M. The larger single multi-node job follows the actual partition and
 account limits without submitting 1000 separate jobs or modifying other jobs.
 
 The original complete A218/A440/C440to218 matrices are reused by exact SHA.
-GPU reconstruction release `8dc6d9218cb7c290` is frozen and deployed. Actual
+Unstarted initial GPU release `8dc6d9218cb7c290` is preserved; new release
+`80ff01a669cee377` is frozen and deployed, with an explicit mixed-allocation
+receipt verifier. The original reconstruction runner/operator/solver/geometry/
+truth bytes are unchanged. Actual
 transport acceptance and complete-input validation10 precede the unique
 formal200 run. Both solver helpers, all 78920 active cells, all 2312 bins,
 20 views, volume/rotation geometry, unit initial density and original MLEM

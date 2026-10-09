@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "files": {
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_recovered_transport.py": "e0fe56bb72d462e7231acfaaa5c3321fd169b5e167612f5fc3e561fce7a7d367",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_recovery.py": "f347860b3b8a362807d4231af4d7ed83f4dc2feb70c8e1b072ccaa786c88474d",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_recovery_workflow.py": "8842487e8ed8455c04ad8f9294344ad4b4ec7499bd0a756ee116e7c9bccf51c8",
+    "experiments/ELLIPSE500x300_H120/ehe_5e10_workflow.py": "7fb2e94406228fcb1293ca23910885ba27c4bf2feb6f44da06f4dd496fdf8193",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/README.md": "5031388381099921746c2b9b6c87c78b9433c9dd129e0cac122ed0364ba03f00",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RUNBOOK.md": "617e901fbcafa80724527b8db493fa8d284312aa64d8b68f7b68760c7fdac536",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/deployment_gpu.json": "9fedce53e4ba730e8245bcd612442b15f94928bbec02174f1c98fb227a910b21",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/deployment_gpu_initial_unstarted.json": "3e405b5481c09eba823d9f196d1611ec9aa785e6757075f28c7e2af40d3c2199",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/freeze.json": "3821138ecf0103ce988e5954be7881ba72c70afccc395dfb8dbdd94de62e30dd",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/freeze_initial_unstarted.json": "bf114b78b5c5d8a57e8c586e0e28a8e39e6fbd37c59e090b064e3efa621f5e40",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_initial_registration.json": "f6964f15daa0b71f3649586e5f7b48da64375ddaf0079eeb39d05ca03a26669b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/one_time_pipeline_registration.json": "d08d65826066ab67ebad8ec4b1503d7efe2ca33a6542d6abb509258cf38847f5",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/reconstruction_recovery_freeze.json": "3821138ecf0103ce988e5954be7881ba72c70afccc395dfb8dbdd94de62e30dd",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_job.json": "c4321399f370c41ec5c757a2411178d5ab9e2ec871f36ed84beb5fb4c375047a",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_job_initial_15683333.json": "a68d57c5ffe8bf1aa2e9642261b5e9c1b78cf6ed52bf8a445b2e818998f26744",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_recovery_deployment.json": "4c5bb5c78bced36126be62f061a0ae7d493991172a94bbcb3ec0fa6f8a2da49d",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_recovery_freeze.json": "55353428e6e48ee2a9d936adf9c6f53ae1eb4404070a4edb00724873f524167b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_recovery_job.json": "c4321399f370c41ec5c757a2411178d5ab9e2ec871f36ed84beb5fb4c375047a",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_recovery_local_acceptance.json": "0f204cf138420c6f5d7da1f8493a019d82ce301afe4c2e7d4ac08570910e8759",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_recovery_running_snapshot.json": "d5ce2ee92646eb2022ff50530af8fa470d82996c3a5ef5e474a2c0e9b9f1636d",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_recovery_submission_intent.json": "08c72e21668640c0444e3a0ffcb36d9a0b8f615d6e1afaf5fff232975aef7dd5",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_stop_acceptance.json": "298573c350e7df06867d6e1c040f1089f77bbd32aa9c39a43601f395630a6c1e",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_stop_evidence/slurm_wait_configuration.txt": "d632b87c275c1242bccbe4753be9f7b5c7eddf85faceaf552fefe862e6441c88",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_stop_evidence/srun_wait_help.txt": "c1c1bab63b9ddc401ae2f1b59ddc5468a98bab29199cde55a9477de27d045e24",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/transport_stop_evidence/transport_15683333.sacct": "6da82921a9a6473cac37f2745bbff73c4f4d2b197dea014792f7132cb27c8e68",
+    "experiments/ELLIPSE500x300_H120/test_ehe_5e10_recovery.py": "b6ce493edceaf768fea715b18af9b826770c03c02bcc3e0361554f63a76f7184"
+  },
+  "scope": "Staged code/evidence bytes exactly match worktree/executed immutable payload bindings; no large data or binary included"
+}

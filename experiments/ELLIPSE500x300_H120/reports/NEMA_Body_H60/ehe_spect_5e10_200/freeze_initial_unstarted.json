@@ -1,11 +1,11 @@
 {
   "study": "ehe_spect_5e10_200",
-  "release_key": "80ff01a669cee377",
-  "payload_dir": "reconstruction_recovery_payload",
-  "root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/releases/80ff01a669cee377",
+  "release_key": "8dc6d9218cb7c290",
+  "payload_dir": "payload",
+  "root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/releases/8dc6d9218cb7c290",
   "sha256": {
-    "config.json": "ca593180d905f9c1e4f7aa4d7f71c5cde035d895dbe62ce153c623d8efef8e60",
-    "ehe_5e10_transport.py": "e0fe56bb72d462e7231acfaaa5c3321fd169b5e167612f5fc3e561fce7a7d367",
+    "config.json": "d44062e5c7b7230d2fd93eb63982be872ab12fb170809f2681e67d302c380cb8",
+    "ehe_5e10_transport.py": "5f56efa766810f4db3b2b2ba1e0b2e1797ba82e17c18eb9f2f91192341323131",
     "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
     "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
     "run_ehe_5e10_reconstruction.py": "f023205614292fa8a039321ac56c35e9a3815107fd2109ce98d20f0de9770d60",
@@ -19,7 +19,5 @@
   "transport_release_key": "24cef961cf6890a1",
   "original_reconstruction_release_key": "064404727f0e22b1",
   "data_kind": "Geant4_transport",
-  "physical_calibration_claim": false,
-  "initial_unstarted_release_key": "8dc6d9218cb7c290",
-  "transport_recovery_job": 15684979
+  "physical_calibration_claim": false
 }
