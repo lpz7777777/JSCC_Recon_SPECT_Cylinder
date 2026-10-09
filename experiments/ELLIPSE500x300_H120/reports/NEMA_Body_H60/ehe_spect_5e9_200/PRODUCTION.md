@@ -1,5 +1,7 @@
 # 执行入口与有界推进
 
+2026-10-09 08:47上海：原运行散射分量摘要与近/远表面采样几何只读分析已完成，见physical_scatter_runtime_read_only.json/physical_scatter_runtime_acceptance.json。复用缓存日志与冻结Params，不生成响应、不评价散射核或重新提取日志；原未加权分量总和及晶体对数量不表示源加权计数、实测机制份额或积分误差。独立分量矩阵未保存，不能从标量总和恢复它们，也不得通过重跑PE/Scatter补出或调整分量绕过HOLD。原门槛保持；不重复本摘要/几何分类当作推进，后续仅有新依据的授权范围内只读诊断。
+
 2026-10-09 08:19上海：Pb逐格面积只读诊断已实际完成，见physical_collimator_area_read_only.json和physical_collimator_area_acceptance.json。原12份日志只读提取并绑定停止前SHA；冻结默认采样的CPU参考与日志打印值一致，但没有运行时逐格/继承环境捕获。面积权重的条件误差界不能作为全响应/深度/散射历史误差界；原HOLD未解除。不得重复该面积检查、改生产采样、实现修正核或重提physical/validation10/formal200；下一步仅有新科学依据的授权范围内只读诊断，已有输出完整保留。
 
 2026-10-09 07:47上海：本地CPU有限孔准直器条件路径诊断已完成，见physical_collimator_paths_read_only.json和physical_collimator_path_acceptance.json。8条新射线的全1250孔弦长/独立成员检查显示完整板深度衰减与实际有限孔两段Pb路径有差异；未计算全源/角度/体积权重或实测机制份额，不能宣称解除24%缺口或HOLD。不得重复本条件诊断当作推进，也不得实现修正响应、改冻结物理或重提physical/validation10/formal200。后续只在有新科学依据和授权范围内进行只读诊断，原门槛保持。

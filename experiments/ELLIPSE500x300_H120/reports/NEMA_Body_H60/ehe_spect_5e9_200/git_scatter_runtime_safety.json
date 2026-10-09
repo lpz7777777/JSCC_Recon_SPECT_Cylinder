@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "scope": "New local CPU original scatter-summary interpretation, surface branch geometry, two evidence JSONs and five repository documents only",
+  "scientific_status": "HOLD",
+  "scientific_gate_passed": false,
+  "science_job": 1677211,
+  "scanner_sha256": "b00d5297af2d6ca0c6b8a9d102078da6bc11269a2a33429d54d8a54f8132b819",
+  "staged_scan": {
+    "checked_blobs": 8,
+    "total_blob_bytes": 102820,
+    "largest_blobs": [
+      [
+        23829,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md"
+        ]
+      ],
+      [
+        18835,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_scatter_runtime_read_only.json"
+        ]
+      ],
+      [
+        17424,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md"
+        ]
+      ],
+      [
+        12870,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md"
+        ]
+      ],
+      [
+        12047,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "index_blob_identity": {
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 7074,
+      "sha256": "2cb8b009da295225413f64a98750477e0c5049cfc0830ab33b0e4424244cb5f3",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/diagnose_ehe_scatter_runtime.py": {
+      "bytes": 9170,
+      "sha256": "29bb86a8e57bfbe656c22375a74d205e8a020fdc12dc02ba23edfb47146dded9",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md": {
+      "bytes": 17424,
+      "sha256": "b84d9e656818b97c4658eadf93b88326374ede83bd4dbc0cfe2d279d2ddeda9f",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/PRODUCTION.md": {
+      "bytes": 12870,
+      "sha256": "0485099115325a5cc254938dc1ec9a601639f8221e8c57c561cf20fc1872d4ec",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/README.md": {
+      "bytes": 12047,
+      "sha256": "92b6d42066a353e30e9533bf239fcc47d0eaeaedc2596f0b1a0c52a4e8a98775",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RUNBOOK.md": {
+      "bytes": 23829,
+      "sha256": "ffac404cf73b08a8943e18b279e0db01bcec0b0420350b73a555481fb6bd9ba0",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_scatter_runtime_acceptance.json": {
+      "bytes": 1571,
+      "sha256": "c75a65768f96f9812d74bb8c3053c885051d29cd4508524f543d3aa2fc6522cd",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_scatter_runtime_read_only.json": {
+      "bytes": 18835,
+      "sha256": "a1c0b53cc70e3f913a9c7404b615921f41d16e809973599bf91ae0657b9d09a9",
+      "raw_equal": true,
+      "newline_conversion_only": false
+    }
+  },
+  "executed_code_and_evidence_sha_closed": true,
+  "actual_cpu_exit_code": 0,
+  "actual_elapsed_seconds": 0.45399999991059303,
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "original_log_receipt_detector_params_bindings": 12,
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_or_kernel_or_simulation_or_response_or_reconstruction_executed": true,
+  "excluded": "Matrices, response blocks, full raw diagnostic CSV, NPZ, builds, archives, credentials and raw runtime logs",
+  "limitations": "Original raw model component fractions and geometric pair counts are not source-weighted or measured mechanism fractions or error bounds. Original scientific HOLD persists. Conservative size/credential-pattern audit is not a complete secret scanner."
+}

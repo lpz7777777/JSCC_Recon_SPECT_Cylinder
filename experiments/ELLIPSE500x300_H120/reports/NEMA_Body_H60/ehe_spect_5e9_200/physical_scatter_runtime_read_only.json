@@ -1,0 +1,424 @@
+{
+  "passed": true,
+  "scope": "New analysis of original scalar component logs and near/far geometry selection only",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "original_job": 1672966,
+  "science_job": 1677211,
+  "code_sha256": "29bb86a8e57bfbe656c22375a74d205e8a020fdc12dc02ba23edfb47146dded9",
+  "scientific_source_sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+  "producer_release_key": "74e129c4460163c5",
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "records": [
+    {
+      "response": "A218",
+      "slab": 0,
+      "original_log_sha256": "7ac462444b72cfe08c8d36eece93b0036a973a8ae04dd2f2eda2eef1c6a09b73",
+      "pre_stop_receipt_sha256": "6d8860fcbdfeb0faa737a66093864ced86bbef5601e7807bed605bffa753a13f",
+      "frozen_detector_params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0519791 collimator=1.18201e-17 collimator_fraction=2.27401e-16"
+      ],
+      "crystal_sum": 0.0519791,
+      "collimator_sum": 1.18201e-17,
+      "printed_fraction": 2.27401e-16,
+      "crystal_printed_interval": [
+        0.05197905,
+        0.05197915
+      ],
+      "collimator_printed_interval": [
+        1.182005e-17,
+        1.182015e-17
+      ],
+      "fraction_interval_from_printed_sums": [
+        2.2739983243281197e-16,
+        2.2740219376845087e-16
+      ]
+    },
+    {
+      "response": "A218",
+      "slab": 1,
+      "original_log_sha256": "88d3f4d31222ba6ef8f16f4bc9ed77ec617c843797d5d135c1f4c790b970a0c0",
+      "pre_stop_receipt_sha256": "632af386db3b6be8f8ad23c83f60f59a116efb1ec53fbc051bb7e78a456ac855",
+      "frozen_detector_params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0537442 collimator=1.38854e-17 collimator_fraction=2.58361e-16"
+      ],
+      "crystal_sum": 0.0537442,
+      "collimator_sum": 1.38854e-17,
+      "printed_fraction": 2.58361e-16,
+      "crystal_printed_interval": [
+        0.05374415,
+        0.05374425
+      ],
+      "collimator_printed_interval": [
+        1.388535e-17,
+        1.388545e-17
+      ],
+      "fraction_interval_from_printed_sums": [
+        2.583597315061611e-16,
+        2.583620728953755e-16
+      ]
+    },
+    {
+      "response": "A218",
+      "slab": 2,
+      "original_log_sha256": "ba55c0d97bb1269d7df9f835e2a779bf4527dc214160f2cd859d1ff2610d5142",
+      "pre_stop_receipt_sha256": "ebb53f61257ca059ddebf6d79dbb493deeb92920df70219f338e09b089946347",
+      "frozen_detector_params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0537442 collimator=1.38701e-17 collimator_fraction=2.58076e-16"
+      ],
+      "crystal_sum": 0.0537442,
+      "collimator_sum": 1.38701e-17,
+      "printed_fraction": 2.58076e-16,
+      "crystal_printed_interval": [
+        0.05374415,
+        0.05374425
+      ],
+      "collimator_printed_interval": [
+        1.387005e-17,
+        1.387015e-17
+      ],
+      "fraction_interval_from_printed_sums": [
+        2.580750498890578e-16,
+        2.5807739074857444e-16
+      ]
+    },
+    {
+      "response": "A218",
+      "slab": 3,
+      "original_log_sha256": "0493eac8aa81db32ea10445d5f89691cda8ece47c3e4baf315becb33545665c2",
+      "pre_stop_receipt_sha256": "dd2d412a22ee0585680d8ff27f35204eaba07668c4fc058a6df65dfabddf59ed",
+      "frozen_detector_params_sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0519791 collimator=1.18502e-17 collimator_fraction=2.2798e-16"
+      ],
+      "crystal_sum": 0.0519791,
+      "collimator_sum": 1.18502e-17,
+      "printed_fraction": 2.2798e-16,
+      "crystal_printed_interval": [
+        0.05197905,
+        0.05197915
+      ],
+      "collimator_printed_interval": [
+        1.185015e-17,
+        1.185025e-17
+      ],
+      "fraction_interval_from_printed_sums": [
+        2.27978910774801e-16,
+        2.2798127322450097e-16
+      ]
+    },
+    {
+      "response": "A440",
+      "slab": 0,
+      "original_log_sha256": "33424eba13cd55e0a3187e0f170652a692c79403759bb7fe72027b4faab36de7",
+      "pre_stop_receipt_sha256": "73304571bb53d02660867c8841cf11cf8092fd45bc16358bee9a909eb30ac207",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0273412 collimator=0.0023446 collimator_fraction=0.0789804"
+      ],
+      "crystal_sum": 0.0273412,
+      "collimator_sum": 0.0023446,
+      "printed_fraction": 0.0789804,
+      "crystal_printed_interval": [
+        0.02734115,
+        0.02734125
+      ],
+      "collimator_printed_interval": [
+        0.00234455,
+        0.00234465
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.07897883836716543,
+        0.07898220698111555
+      ]
+    },
+    {
+      "response": "A440",
+      "slab": 1,
+      "original_log_sha256": "ec5eca3eb375d75eaff3783ed44f5764f55e23cd0853d9da9994f6375d708f85",
+      "pre_stop_receipt_sha256": "aa81c0f3820c045b119d344444b3633e44040b64473a1358a867841b5ab0509a",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0292182 collimator=0.0026301 collimator_fraction=0.0825823"
+      ],
+      "crystal_sum": 0.0292182,
+      "collimator_sum": 0.0026301,
+      "printed_fraction": 0.0825823,
+      "crystal_printed_interval": [
+        0.02921815,
+        0.02921825
+      ],
+      "collimator_printed_interval": [
+        0.00263005,
+        0.00263015
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.08258054590040913,
+        0.08258368578542655
+      ]
+    },
+    {
+      "response": "A440",
+      "slab": 2,
+      "original_log_sha256": "9f383160da471f864b899bde66e3f0723e6ddef7d7270dafc831d4cbc3980732",
+      "pre_stop_receipt_sha256": "8780cb888df648f5a36d06368635c7e749fd4e99be4dba58ae8ec94a47bc005d",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0292182 collimator=0.00262919 collimator_fraction=0.082556"
+      ],
+      "crystal_sum": 0.0292182,
+      "collimator_sum": 0.00262919,
+      "printed_fraction": 0.082556,
+      "crystal_printed_interval": [
+        0.02921815,
+        0.02921825
+      ],
+      "collimator_printed_interval": [
+        0.002629185,
+        0.002629195
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.08255562810631374,
+        0.08255617540488853
+      ]
+    },
+    {
+      "response": "A440",
+      "slab": 3,
+      "original_log_sha256": "bfd631ea0ec8a6111179bbe284a59dcd7470c6713c095f216954249e5c44e5fd",
+      "pre_stop_receipt_sha256": "c61d26289f439f22be5f496a6f56b517c198223858d31fa954178726ab71c7c0",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=1",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0273412 collimator=0.00234826 collimator_fraction=0.0790941"
+      ],
+      "crystal_sum": 0.0273412,
+      "collimator_sum": 0.00234826,
+      "printed_fraction": 0.0790941,
+      "crystal_printed_interval": [
+        0.02734115,
+        0.02734125
+      ],
+      "collimator_printed_interval": [
+        0.002348255,
+        0.002348265
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.07909377404574444,
+        0.07909435062967728
+      ]
+    },
+    {
+      "response": "C440to218",
+      "slab": 0,
+      "original_log_sha256": "cd77989d7b74f808387e058da97782a030b548e951a1ae289a1e14cdea90f9ef",
+      "pre_stop_receipt_sha256": "5a75ae200a1733016b012f5dcbc6d0499e1e767bd147aad4faa394e2cb6c18ae",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=0",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0797833 collimator=1.76843e-05 collimator_fraction=0.000221606"
+      ],
+      "crystal_sum": 0.0797833,
+      "collimator_sum": 1.76843e-05,
+      "printed_fraction": 0.000221606,
+      "crystal_printed_interval": [
+        0.07978325,
+        0.07978335
+      ],
+      "collimator_printed_interval": [
+        1.768425e-05,
+        1.768435e-05
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.00022160427074916013,
+        0.00022160580128595948
+      ]
+    },
+    {
+      "response": "C440to218",
+      "slab": 1,
+      "original_log_sha256": "921edc6eba7bd05f3495d293cc646a268a0892880e6928060cef19cc6f2d2de9",
+      "pre_stop_receipt_sha256": "aad091143fe9a66e92c78efa9e72038b83c42cb318eb3e6249dc1f1636a02230",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=0",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0862046 collimator=2.07235e-05 collimator_fraction=0.000240341"
+      ],
+      "crystal_sum": 0.0862046,
+      "collimator_sum": 2.07235e-05,
+      "printed_fraction": 0.000240341,
+      "crystal_printed_interval": [
+        0.08620455,
+        0.08620465
+      ],
+      "collimator_printed_interval": [
+        2.072345e-05,
+        2.072355e-05
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.0002403405073335754,
+        0.00024034194554318114
+      ]
+    },
+    {
+      "response": "C440to218",
+      "slab": 2,
+      "original_log_sha256": "ab2049b4a11513692e7bcfe41a0fd8bf85da8f0ce8eb105f5801d4b861ba5385",
+      "pre_stop_receipt_sha256": "669f0f0bfaec05493d7ea92f540114a96c0793879f9dd63c5d81d16f595d64da",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=0",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0862046 collimator=2.07093e-05 collimator_fraction=0.000240177"
+      ],
+      "crystal_sum": 0.0862046,
+      "collimator_sum": 2.07093e-05,
+      "printed_fraction": 0.000240177,
+      "crystal_printed_interval": [
+        0.08620455,
+        0.08620465
+      ],
+      "collimator_printed_interval": [
+        2.070925e-05,
+        2.070935e-05
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.0002401758621840709,
+        0.00024017730020315674
+      ]
+    },
+    {
+      "response": "C440to218",
+      "slab": 3,
+      "original_log_sha256": "39396d22d9f2346a56ce7fb4a359d571fc0a9e35a2c364b5f62494502f71917b",
+      "pre_stop_receipt_sha256": "0b27e0c850771f469f5baad1d54b7cbe5a6fff8d8da4b3bb695daf3a8d0fee16",
+      "frozen_detector_params_sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+      "original_lines": [
+        "Detector local scatter switches: compton=1 recoil_escape=1 self_compton_photoelectric=0",
+        "Scatter crystal source range: [0,2312) of 2312; detector-local/collimator components=included",
+        "Diagnostic component matrices: disabled",
+        "Inter-crystal target surface quadrature: far=1x1 near=8x8 near_distance_factor=2",
+        "Scatter component sums: crystal=0.0797833 collimator=1.76389e-05 collimator_fraction=0.000221036"
+      ],
+      "crystal_sum": 0.0797833,
+      "collimator_sum": 1.76389e-05,
+      "printed_fraction": 0.000221036,
+      "crystal_printed_interval": [
+        0.07978325,
+        0.07978335
+      ],
+      "collimator_printed_interval": [
+        1.763885e-05,
+        1.763895e-05
+      ],
+      "fraction_interval_from_printed_sums": [
+        0.0002210354815672187,
+        0.00022103701139284117
+      ]
+    }
+  ],
+  "aggregates": {
+    "A218": {
+      "crystal_sum": 0.21144659999999998,
+      "collimator_sum": 5.1425799999999996e-17,
+      "raw_cartesian_collimator_fraction": 2.4320939660415434e-16,
+      "fraction_interval_from_rounded_logs": [
+        2.43208220696648e-16,
+        2.4321057251388524e-16
+      ]
+    },
+    "A440": {
+      "crystal_sum": 0.11311879999999999,
+      "collimator_sum": 0.00995215,
+      "raw_cartesian_collimator_fraction": 0.08086514323648271,
+      "fraction_interval_from_rounded_logs": [
+        0.08086419030829675,
+        0.08086609616606238
+      ]
+    },
+    "C440to218": {
+      "crystal_sum": 0.33197580000000004,
+      "collimator_sum": 7.6756e-05,
+      "raw_cartesian_collimator_fraction": 0.00023115617878273457,
+      "fraction_interval_from_rounded_logs": [
+        0.00023115543737944788,
+        0.00023115692018691353
+      ]
+    }
+  },
+  "surface_quadrature_geometry": [
+    {
+      "cpu_dtype": "float32",
+      "near_ordered_pairs": 167548,
+      "far_ordered_pairs": 5175484,
+      "total_ordered_pairs": 5343032,
+      "near_fraction": 0.03135822506771436,
+      "exact_boundary_pairs": 23964,
+      "near_threshold_mm": 20.0,
+      "logged_near_surface_subdivisions": 8,
+      "logged_far_surface_subdivisions": 1
+    },
+    {
+      "cpu_dtype": "float64",
+      "near_ordered_pairs": 167548,
+      "far_ordered_pairs": 5175484,
+      "total_ordered_pairs": 5343032,
+      "near_fraction": 0.03135822506771436,
+      "exact_boundary_pairs": 23964,
+      "near_threshold_mm": 20.0,
+      "logged_near_surface_subdivisions": 8,
+      "logged_far_surface_subdivisions": 1
+    }
+  ],
+  "logged_crystal_sum_definition": "Unweighted sum over all 2312 detector bins and 85x85x10 Cartesian sample points per slab, after adding detector-local scatter to the intercrystal buffer. These are scatter-only buffers, not PE plus scatter Factors or source-folded counts.",
+  "aggregate_definition": "Sums of four equal-size disjoint 10-layer slab summaries; six-significant-digit rounded original log values, with propagated rounding intervals. No Polar/active-volume restriction or truth/view weighting.",
+  "missing_component_information": "Diagnostic component matrices were disabled in all12 original runs. Crystal sum does not separate local recoil/self-PE and intercrystal contributions. Source-weighted component fractions cannot be recovered from these scalar sums.",
+  "surface_geometry_definition": "CPU float32/float64 distance classification using the logged factor2 times the maximum size of both detector boxes. This is not captured per-pair CUDA state or contribution-weighted near/far coverage. Equal20mm pairs enter the near branch.",
+  "no_response_or_kernel_or_simulation_evaluated": true,
+  "no_production_input_modified": true,
+  "no_observed_count_fit": true,
+  "limitations": "Small raw model collimator fraction does not imply small actual physical collimator contribution or a bound on its possible missing response. Near/far pair counts are not their weighted contribution fractions or quadrature error estimates. No model component was fitted to observations or isolated by rerunning kernels. Root cause remains UNDETERMINED; original22 HOLD and138720 inadequate bin diagnostics persist.",
+  "elapsed_seconds": 0.45399999991059303
+}

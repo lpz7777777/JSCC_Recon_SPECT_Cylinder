@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "Acceptance of new original runtime-summary interpretation and geometric near/far classification only",
+  "scientific_status": "HOLD",
+  "physical_gate_passed": false,
+  "science_job": 1677211,
+  "actual_cpu_exit_code": 0,
+  "elapsed_seconds": 0.45399999991059303,
+  "producer_code_sha256": "29bb86a8e57bfbe656c22375a74d205e8a020fdc12dc02ba23edfb47146dded9",
+  "runtime_evidence_sha256": "a1c0b53cc70e3f913a9c7404b615921f41d16e809973599bf91ae0657b9d09a9",
+  "scientific_source_sha256": "dbdb0c536fb3bd6c72d3c441a7491f7b36d7e6d97339cac6e70e1934646f04e1",
+  "original_physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0",
+  "original_log_receipt_detector_params_binding_count": 12,
+  "original_printed_component_ratio_consistency_passed": true,
+  "all_logged_full_crystal_ranges_and_global_components_included": true,
+  "float32_float64_geometric_branch_counts_agree": true,
+  "actual_component_matrices_disabled": true,
+  "no_response_or_kernel_or_simulation_or_reconstruction_evaluated": true,
+  "no_production_input_modified": true,
+  "no_gpu_or_slurm_job_submitted": true,
+  "no_observed_count_fit": true,
+  "limitations": "Original raw model scalar sums are not source-weighted count predictions or measured mechanism fractions. Pair counts are not weighted response shares or quadrature error estimates. CUDA per-pair state and component response matrices are unavailable. Original scientific HOLD persists; this does not authorize production correction or physical/validation/formal submission."
+}
