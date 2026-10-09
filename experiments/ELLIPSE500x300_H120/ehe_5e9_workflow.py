@@ -460,10 +460,15 @@ def fetch(mode):
     with connection('gpu') as c:
         done,accounting=completed(c,job)
         if not done:raise ValueError('Stage must fully exit before strict fetch')
+        prior=REPORT/(mode+'_acceptance_job.json')
+        if prior.exists():
+            done,_=completed(c,read(prior)['job'])
+            if not done:return False
         # Freeze a separate read-only acceptance bundle. Never overwrite sources
         # in the release used by the running or completed simulation/response job.
         import hashlib,json,shutil
-        sources={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py','ehe_execution_policy.py')}
+        check_sources={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py','ehe_execution_policy.py')}
+        sources=dict(check_sources,**{'ehe_acceptance_driver.py':digest(HERE/'ehe_acceptance_driver.py')})
         key=hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()[:16]
         audit=DATA/'verification_releases'/key;audit.mkdir(parents=True,exist_ok=True)
         for name in sources:
@@ -476,16 +481,30 @@ def fetch(mode):
         if not manifest_path.exists():write(manifest_path,manifest)
         audit_remote=b+'/verification_releases/'+key
         command(c,'mkdir -p '+q(b+'/verification_releases'))
-        with c.open_sftp() as s:put_tree(s,audit,audit_remote)
+        with c.open_sftp() as s:
+            try:s.stat(audit_remote+'/verification_manifest.json')
+            except FileNotFoundError:put_tree(s,audit,audit_remote)
+            else:
+                if get_json(c,audit_remote+'/verification_manifest.json')!=manifest:raise ValueError('Remote immutable verifier manifest changed')
         write(REPORT/'verification_freeze.json',dict(**manifest,manifest_sha256=digest(manifest_path)))
         accounting_path=b+'/results/'+mode+'/accounting.txt'
         with c.open_sftp() as s:
             with s.open(accounting_path,'w') as f:f.write(accounting)
-        verify=q(GPU_PYTHON)+f' verify_ehe.py --verification-manifest {q(audit_remote+"/verification_manifest.json")} --result {q(b+"/results/"+mode)} --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --accounting {q(accounting_path)} --output {q(b+"/"+mode+"_authority.json")}'
+        verify=q(GPU_PYTHON)+f' -u ehe_acceptance_driver.py --verification-manifest {q(audit_remote+"/verification_manifest.json")} --result {q(b+"/results/"+mode)} --release {q(r)} --responses {q(response_root())} --counts {q(b+"/counts")} --physical {q(b+"/physical")} --accounting {q(accounting_path)} --output {q(b+"/"+mode+"_authority.json")} --evidence {q(b+"/read_only_acceptance_"+mode+"_"+key)}'
         verify+=policy_argument()
-        print(command(c,'cd '+q(audit_remote)+' && '+verify,1800))
+        registration=submit('gpu',mode+'_acceptance',env_gpu()+'cd '+q(audit_remote)+'\n'+verify+'\n',45)
+        binding=dict(verification_release_key=key,verification_source_sha256=sources,compute_job=job)
+        if any(k in registration and registration[k]!=v for k,v in binding.items()):raise ValueError('Registered acceptance source/result identity differs')
+        registration.update(binding)
+        write(REPORT/(mode+'_acceptance_job.json'),registration)
+        done,acceptance_accounting=completed(c,registration['job'])
+        if not done:return False
+        print(command(c,'tail -n 8 '+q(b+'/logs/'+mode+'_acceptance_'+str(registration['job'])+'_4294967294.log')))
+        receipt=get_json(c,b+'/read_only_acceptance_'+mode+'_'+key+'/receipt.json')
+        if not receipt['passed'] or receipt['driver_sha256']!=sources['ehe_acceptance_driver.py']:raise ValueError('Read-only allocation receipt differs')
+        write(REPORT/(mode+'_acceptance_receipt.json'),dict(**receipt,accounting=acceptance_accounting))
         proof=get_json(c,b+'/'+mode+'_authority.json');local=DATA/'results'/mode;local.mkdir(parents=True,exist_ok=True)
-        if proof['verification_source_sha256']!=sources or proof['verification_manifest_sha256']!=digest(manifest_path):raise ValueError('Actual read-only verifier identity differs')
+        if proof['verification_source_sha256']!=check_sources or proof['verification_manifest_sha256']!=digest(manifest_path) or proof['acceptance_driver_sha256']!=sources['ehe_acceptance_driver.py']:raise ValueError('Actual read-only verifier identity differs')
         with c.open_sftp() as s:
             for name,sha in proof['files'].items():
                 path=local/name;path.parent.mkdir(parents=True,exist_ok=True);s.get(b+'/results/'+mode+'/'+name,str(path))
@@ -502,6 +521,7 @@ def fetch(mode):
                 if digest(dest/'S_active.float64')!=read(dest/'factor_manifest.json')['files']['S_active.float64']:raise ValueError('Fetched sensitivity byte identity differs')
         write(REPORT/(mode+'_summary.json'),proof)
         print('EHE_STRICT_FETCH_PASS',mode,job)
+        return True
 
 def status():
     for path in sorted(REPORT.glob('*_job.json')):

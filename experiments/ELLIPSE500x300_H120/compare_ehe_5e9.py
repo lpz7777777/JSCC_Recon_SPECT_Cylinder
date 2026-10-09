@@ -91,6 +91,7 @@ def compare(job=None):
         total=workers[f'CntStat_{e}'].reshape(20,10,2312).sum(axis=(1,2))
         cross=workers[f'CntStat_{e}_from{440 if e==218 else 218}'].reshape(20,10,2312).sum(axis=(1,2))
         window_report[str(e)]=dict(total=int(total.sum()),by_view=total.tolist(),other_primary_energy_counts=int(cross.sum()),
+            other_primary_energy_counts_by_view=cross.tolist(),
             actual_cross_fraction=float(cross.sum()/max(int(total.sum()),1)),actual_cross_fraction_by_view=(cross/np.maximum(total,1)).tolist())
     for name in RESPONSES:
         folder=DATA/'factor_evidence'/name;manifest=read(folder/'factor_manifest.json');s=folder/'S_active.float64'
@@ -141,6 +142,14 @@ def compare(job=None):
             im=image(h[iteration//step-1]);selected[system,c,iteration]=im/scale[system][energy(c)]
     output=REPORT/'comparison_200';output.mkdir(parents=True,exist_ok=False)
     table(output/'ehe_native_iteration_metrics.csv',rows);table(output/'ehe_sphere_iteration_metrics.csv',spheres)
+    fixed=np.load(result/'fixed_cross_background.npy')
+    if fixed.shape!=(2312,20) or np.any(~np.isfinite(fixed)) or np.any(fixed<0):raise ValueError('Accepted EHE cross background shape/value differs')
+    modeled=fixed.astype(float).sum(axis=0)
+    table(output/'ehe_window_and_background_by_view.csv',[
+        dict(view=i+1,window218=window_report['218']['by_view'][i],
+             measured440to218=window_report['218']['other_primary_energy_counts_by_view'][i],
+             window440=window_report['440']['by_view'][i],
+             modeled218_background_from_final440_200=float(modeled[i])) for i in range(20)])
     prior=previous/'comparison_1669255'
     for name in ('native_iteration_metrics.csv','sphere_iteration_metrics.csv'):
         shutil.copy2(prior/name,output/('jscc_'+name))
@@ -186,6 +195,28 @@ def compare(job=None):
                 rr=[v for v in r if int(v['diameter_mm'])==d]
                 for ax,key in zip(axes,('crc','cnr')):ax.plot([int(v['iteration']) for v in rr],[float(v[key]) for v in rr],label=f'{system} {c} {d}mm');ax.set(title=key,xlabel='iteration');ax.grid(alpha=.2)
         axes[0].legend(fontsize=5);save_figure(fig,f'{category}_crc_cnr.png');plt.close(fig)
+        # Preserve the complete 200-frame JSCC trajectory alongside EHE's 20
+        # frames. A shared iteration axis is not a convergence certificate.
+        fig,axes=plt.subplots(2,3,figsize=(15,8),layout='constrained')
+        for system,c in pairs:
+            r=[v for v in (rows if system=='EHE' else jr) if v['channel']==c]
+            for ax,key in zip(axes.flat,('background_cv','max_density','peak_background_ratio','source_z_leakage','p999_density','integral_recovery')):
+                ax.plot([int(v['iteration']) for v in r],[float(v[key]) for v in r],label=system+' '+c)
+                ax.set(title=key,xlabel='actual iteration',xscale='log');ax.grid(alpha=.2)
+        axes[0,0].legend(fontsize=6)
+        fig.suptitle('EHE 20 saved frames / JSCC 200 saved frames; equal iteration does not imply equal convergence')
+        save_figure(fig,f'{category}_full_history_native_curves.png');plt.close(fig)
+        fig,axes=plt.subplots(1,2,figsize=(14,5),layout='constrained')
+        for system,c in pairs:
+            r=[v for v in (spheres if system=='EHE' else js) if v['channel']==c]
+            for d in sorted({int(v['diameter_mm']) for v in r}):
+                rr=[v for v in r if int(v['diameter_mm'])==d]
+                for ax,key in zip(axes,('crc','cnr')):
+                    ax.plot([int(v['iteration']) for v in rr],[float(v[key]) for v in rr],label=f'{system} {c} {d}mm')
+                    ax.set(title=key,xlabel='actual iteration',xscale='log');ax.grid(alpha=.2)
+        axes[0].legend(fontsize=5)
+        fig.suptitle('Existing 3D sphere ROIs; EHE 20 frames / JSCC 200 frames; no smoothing')
+        save_figure(fig,f'{category}_full_history_crc_cnr.png');plt.close(fig)
     disclosure=dict(physical_units='gamma/mm3; sums are not Ac225 activity',background_budgets={'EHE':'440 single final200','JSCC':'440 single final10000'},
         density_scales=scale,primary_counts=counts,reference_jscc_job=1669255,selected_iterations=ITERATIONS,jscc_supplement=[2000,10000],
         actual_window_counts={'EHE':window_report,'JSCC':reference['actual_window_counts']},sensitivity_comparison=sensitivity_report,
@@ -193,6 +224,12 @@ def compare(job=None):
             modeled_218_background_sum=float(jscc_predicted.astype(float).sum()),
             modeled_background_fraction=float(jscc_predicted.astype(float).sum()/reference['actual_window_counts']['218']['total']),
             prediction_source='accepted 440 single final10000; model prediction, not measured primary-tagged cross counts'),
+        ehe_cross_diagnostic=dict(modeled_218_background_sum=float(modeled.sum()),
+            modeled_background_fraction=float(modeled.sum()/window_report['218']['total']),
+            modeled_background_by_view=modeled.tolist(),
+            prediction_source='accepted EHE 440 single final200; fixed additive Poisson background',
+            measured_primary_tagged_cross_counts=window_report['218']['other_primary_energy_counts'],
+            fixed_background_sha256=digest(result/'fixed_cross_background.npy')),
         truth_sha256=digest(TRUTH),history_sha256=history_sha,formal_proof_sha256=digest(REPORT/'formal_summary.json'),crop=0,smoothing_sigma=0,
         mip_z_mm=[-36,36],whole_cell_tiny_mass_metric='not applicable',
         unknown_joint_categories=read(previous/'comparison_1669255/comparison_report.json')['unresolved_independent_joint_categories'],

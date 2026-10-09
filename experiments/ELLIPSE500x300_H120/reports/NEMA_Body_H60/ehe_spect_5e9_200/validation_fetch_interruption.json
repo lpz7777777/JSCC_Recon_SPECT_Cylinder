@@ -1,0 +1,28 @@
+{
+  "compute_job": 1679300,
+  "compute_state": "COMPLETED/0:0",
+  "compute_elapsed": "00:08:08",
+  "read_only_pid": 1783665,
+  "read_only_process_fully_exited": true,
+  "authority_generated": false,
+  "failure": "SSH acceptance command returned nonzero with empty stdout/stderr; original helper discarded exit code",
+  "root_cause": "UNDETERMINED",
+  "login_host": "ln01",
+  "own_user_cgroup_memory_events": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0
+  },
+  "own_user_cgroup_memory_max": "max",
+  "kernel_log_access": "denied",
+  "repair_scope": "Same frozen read-only verifier on a bounded Slurm allocation with persistent logs, exit/accounting and phase receipts; no reconstruction rerun",
+  "verifier_source_sha256": {
+    "verify_ehe.py": "789683df5f7b71430b5c92fdb63cfa5012dafc22c05364856d303ca01275bca0",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_execution_policy.py": "93e398f3dad7cbe5665e33e0e08b714a4b2fdecd37f3a77a6b5803e1f2a30e21"
+  },
+  "original_results_preserved": true,
+  "physical_gate_sha256": "6a68fcf79b9dc5bbfe0fbb602579b74c3531b7d8042481c5bdbd10be04b277e0"
+}

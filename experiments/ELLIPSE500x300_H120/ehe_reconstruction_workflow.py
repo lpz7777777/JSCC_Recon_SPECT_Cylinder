@@ -117,7 +117,8 @@ def advance_reconstruction():
     if not done:
         return
     if not (REPORT / 'validation_summary.json').exists():
-        fetch('validation')
+        if not fetch('validation'):
+            return
     proof = read(REPORT / 'validation_summary.json')
     if (not proof['passed'] or proof['release_key'] != value['release_key']
             or proof['physical_policy_sha256'] != value['policy_sha256']

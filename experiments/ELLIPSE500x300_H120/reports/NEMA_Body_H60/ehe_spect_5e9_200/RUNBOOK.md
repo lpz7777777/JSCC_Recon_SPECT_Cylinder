@@ -1,5 +1,7 @@
 # 本次实际运行簿
 
+2026-10-09 15:13上海：validation10计算1679300已实际COMPLETED/0:0，elapsed08:08；原MLEM与保存循环的两路L2均0、历史逐值一致，前向/转置检查分别8.56e−8与3.19e−7。完整严格验收尚未通过：登录节点只读进程1783665异常退出且没有authority，原helper未保存真实退出码；自己的cgroup没有OOM记录，原因仍UNDETERMINED，见[中断证据](validation_fetch_interruption.json)。已完全退出后只补同一冻结验收代码的有界Slurm只读验收1679391，保留阶段日志、真实退出与资源证明；不重复GPU验证计算、不改原结果。formal200仍须此严格验收通过才唯一提交，定时任务保持PAUSED。
+
 2026-10-09人类新指令及范围回复授权“继续原方案200次重建（将现有物理偏差保留在报告）”。physical_continuation_policy.json已冻结原gate/CSV、计数collection、三Factor及MLEM辅助代码SHA。新增有界执行授权入口，计算/保存/固定背景主体与旧冻结逐字一致；原HOLD不修改，结果声明physical_calibration_passed=false。31项策略拒绝错输入/合同/既有恢复路由检查实际通过；完整输入GPU validation10尚须实际执行后验收。定时任务仍暂停，不恢复旧诊断或响应计算。
 
 2026-10-09人类最新指令要求停止定时任务并研究解决问题。应用automation_update已实际将compton-v5设为PAUSED。新增RESOLUTION_RESEARCH.md整理冻结局部/晶体间/准直器分支与输运事件/bin累计沉积可观测量的对应，记录未加窗PE生产链、待执行互斥历史标签诊断、分支验证和有界修复/原门控恢复条件。研究不构成已确证根因或科学PASS；没有新GPU/Slurm/模拟/响应/物理/验证/正式作业，原22 HOLD、逐binUNDETERMINED和gate SHA保持。不恢复定时任务或自动advance；新诊断输运/新响应模型等待明确执行授权。
