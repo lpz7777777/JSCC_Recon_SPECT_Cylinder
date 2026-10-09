@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "release_key": "a73d3e0f89c133d8",
+  "actual_uploaded_sources": {
+    "config.json": "309953c82d2fe2f8eb0810b2d1eb84e4d38a4eb6dcb5e35b8600490db48b2c2b",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_forward_poisson_data.py": "89a3559a34dce84c9029558598449e6ab33e9dbfc26ff4046c2f9976e98dc4a2",
+    "ehe_gpu_pipeline.py": "f764712eee34de0329f821316cb13b9fd114183bad9b401c7c226f95f9d86f64",
+    "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
+    "run_ehe_forward_poisson.py": "ec57773a1df90c32e62ab25ba01234afd6b9d0c7fdb0d4eed27c82124c228003",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "verify_ehe_forward_poisson.py": "7ced3301d2fef8cbac52b3f664c6970d5835ca6477aba8e39efef5dcc78714f4",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4"
+  },
+  "local_execution_sources_match": true,
+  "code_check": "Frozen helpers and deployed byte identity; not a numerical/physical certificate"
+}

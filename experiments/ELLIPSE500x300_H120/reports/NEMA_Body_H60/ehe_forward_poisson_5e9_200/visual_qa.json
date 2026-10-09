@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "reviewed_at_utc": "2026-10-09T11:04:16.414682+00:00",
+  "method": "Direct visual inspection of every final PNG with view_image; numeric QA is separately recorded.",
+  "figures": {
+    "cnr_full_trajectories.png": {
+      "width": 2280,
+      "height": 2040,
+      "sha256": "b24c3c506c5522fa741d9f8d0a83ab20a606af348c74858a9c1202d266c1de95",
+      "passed": true,
+      "review": "All 12 sphere/route panels, shared per-panel vertical scales and own iteration ranges; initial undefined CNR omitted, late noise and negative values retained."
+    },
+    "crc_full_trajectories.png": {
+      "width": 2280,
+      "height": 2040,
+      "sha256": "d41373cd8ff662ef8bd57d029bba77a2a53b8c3beb20a1ca3a5ad536037b27b5",
+      "passed": true,
+      "review": "All 12 sphere/route panels and own iteration ranges; fixed 3D truth ROI and negative recovery retained, no fitted gain."
+    },
+    "density_noise_curves.png": {
+      "width": 2400,
+      "height": 2388,
+      "sha256": "602687bba4551e82479ba36f63ca04dbd6dfcaceb35af7ebe493d672e00ab11b",
+      "passed": true,
+      "review": "Three systems, common per-metric vertical scale, actual background CV, peaks and density quantiles; labels and legends readable."
+    },
+    "integral_position_curves.png": {
+      "width": 2400,
+      "height": 2064,
+      "sha256": "0b682511436452652242d44a5d2c04973c207aa54dd5e9a9555890a429e3ec6f",
+      "passed": true,
+      "review": "Three systems, full native 120mm metrics, source integral and z leakage; nonunique initial peak location omitted and labels readable."
+    },
+    "overall_mip72_12_routes.png": {
+      "width": 2880,
+      "height": 3623,
+      "sha256": "983ecc8c4ae33a6a2367f51e5100c48fbcca8c9f429decc6c84bc0ebb8294153",
+      "passed": true,
+      "review": "All 12 routes included; new and transport EHE use 0-200, JSCC uses 0-10000; own iteration labels, source legend and fixed scales readable at full resolution."
+    },
+    "synthetic_axial.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "16308166258002719e44bf918976259e7e198a89a6d91335f84292a0ad94c47a",
+      "passed": true,
+      "review": "Actual axial plane, truth and all selected new EHE iterations; labels, orientation and fixed color scale readable."
+    },
+    "synthetic_coronal.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "27ab06d50765a45aebb641d4e85b0e31e8cf1950920989fe6f9cf079ce71a81f",
+      "passed": true,
+      "review": "Actual coronal plane and native physical aspect ratio; whitespace is intentional, no clipping of panels or labels."
+    },
+    "synthetic_mip72.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "02e8f223bcafed5bb84869fceaf01144a4fd15d495e2718593ff61c23df662ec",
+      "passed": true,
+      "review": "Three new EHE routes, actual 72mm MIP, own iteration titles and fixed truth density scale; visible late noise retained."
+    },
+    "synthetic_sagittal.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "d011e7eee433f6e1d06e482336dacdf8241684a64a305efac6835c5a814836e8",
+      "passed": true,
+      "review": "Actual sagittal plane and native physical aspect ratio; whitespace is intentional, no clipping of panels or labels."
+    }
+  },
+  "changes_after_review": false,
+  "scientific_basis": "Existing H60 3D truth and 3D fractional sphere ROI; crop0, no smoothing, no fitted gain; fixed emitted-source truth density scale."
+}

@@ -1,0 +1,37 @@
+{
+  "study": "ehe_forward_poisson_5e9_200",
+  "data_kind": "matrix_forward_plus_independent_Poisson",
+  "expected_emitted_photons": 5000000000.0,
+  "budget": {
+    "integrals_mm3": {
+      "218": 3218760.703125,
+      "440": 3405284.296875
+    },
+    "expected_primary_photons": {
+      "218": 1469038993.4091363,
+      "440": 3530961006.5908637
+    },
+    "density_gamma_per_mm3": {
+      "218": 456.3989463344975,
+      "440": 1036.9063780757442
+    },
+    "expected_emitted_photons": 5000000000.0
+  },
+  "noise_seeds": {
+    "A218": 32100101,
+    "A440": 32100102,
+    "C440to218": 32100103
+  },
+  "bit_generator": "PCG64",
+  "numpy_version": "2.0.2",
+  "true_source_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "factor_sha256": {
+    "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+  },
+  "noise_generation": "Independent Poisson per complete view/bin/component; 218=sum of A218 and C samples; no count matching",
+  "model_data_physical_calibration_claim": false,
+  "views": 20,
+  "bins": 2312
+}

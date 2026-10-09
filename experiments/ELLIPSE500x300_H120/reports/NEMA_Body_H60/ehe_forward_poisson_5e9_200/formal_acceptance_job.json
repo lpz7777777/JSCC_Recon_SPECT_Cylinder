@@ -1,0 +1,10 @@
+{
+  "job": 1680300,
+  "stage": "formal_acceptance",
+  "script": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200/scripts/formal_acceptance.sh",
+  "script_sha256": "15edda22ff52def1f12b8ea1aab23ff75fbfd9f612abccbcbc00ce3c2620b676",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200/formal_acceptance",
+  "submitted_epoch": 1791542760.4982424,
+  "slurm_minutes": 50,
+  "release_key": "a73d3e0f89c133d8"
+}

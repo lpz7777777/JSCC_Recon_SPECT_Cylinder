@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "study": "ehe_forward_poisson_5e9_200",
+  "data_kind": "matrix_forward_plus_independent_Poisson",
+  "release_key": "a73d3e0f89c133d8",
+  "config_sha256": "309953c82d2fe2f8eb0810b2d1eb84e4d38a4eb6dcb5e35b8600490db48b2c2b",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "factor_sha256": {
+    "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+  },
+  "views": 20,
+  "bins": 2312,
+  "budget": {
+    "integrals_mm3": {
+      "218": 3218760.703125,
+      "440": 3405284.296875
+    },
+    "expected_primary_photons": {
+      "218": 1469038993.4091363,
+      "440": 3530961006.5908637
+    },
+    "density_gamma_per_mm3": {
+      "218": 456.3989463344975,
+      "440": 1036.9063780757442
+    },
+    "expected_emitted_photons": 5000000000.0
+  },
+  "noise_seeds": {
+    "A218": 32100101,
+    "A440": 32100102,
+    "C440to218": 32100103
+  },
+  "bit_generator": "PCG64",
+  "numpy_version": "2.0.2",
+  "components": {
+    "A218": {
+      "expected_counts": 13473.895759474552,
+      "sampled_counts": 13483,
+      "global_poisson_z": 0.07843269380399473,
+      "expected_by_view": [
+        663.5054615732489,
+        664.5347194977938,
+        667.8038573571838,
+        676.8115485197086,
+        684.544511153325,
+        684.9787961089445,
+        684.2446194369552,
+        676.6095060230352,
+        667.8398080456564,
+        665.3120161264616,
+        664.314100221241,
+        665.3937467913627,
+        667.9192385930902,
+        676.4971462252871,
+        684.1301067049432,
+        684.9712116529661,
+        684.7814353873474,
+        677.1755569776202,
+        667.9335663779725,
+        664.5948067004078
+      ],
+      "sampled_by_view": [
+        647,
+        688,
+        663,
+        658,
+        686,
+        700,
+        657,
+        631,
+        650,
+        689,
+        655,
+        675,
+        651,
+        702,
+        702,
+        691,
+        710,
+        653,
+        715,
+        660
+      ]
+    },
+    "A440": {
+      "expected_counts": 11951.142755158384,
+      "sampled_counts": 11921,
+      "global_poisson_z": -0.27572632277087766,
+      "expected_by_view": [
+        583.7435058858221,
+        585.2525929359425,
+        589.5120290490971,
+        598.1199719175124,
+        606.1999604728162,
+        608.6490217009275,
+        608.4299035151926,
+        602.4043928480796,
+        595.2357506883487,
+        591.701382263528,
+        590.411291341463,
+        592.3280129049066,
+        596.3415925287129,
+        603.7238113637873,
+        609.5275946101285,
+        609.4171818724429,
+        606.6596216881932,
+        598.4088520674475,
+        589.7350704063339,
+        585.3412150977058
+      ],
+      "sampled_by_view": [
+        600,
+        555,
+        583,
+        604,
+        565,
+        638,
+        607,
+        603,
+        592,
+        589,
+        562,
+        597,
+        632,
+        582,
+        589,
+        635,
+        623,
+        616,
+        570,
+        579
+      ]
+    },
+    "C440to218": {
+      "expected_counts": 7498.180745863032,
+      "sampled_counts": 7486,
+      "global_poisson_z": -0.1406681998407246,
+      "expected_by_view": [
+        365.87370992147885,
+        366.97143694768977,
+        369.9204121195532,
+        375.5471907135511,
+        380.90799195264293,
+        382.5367599138902,
+        382.0968055501537,
+        377.9246037079778,
+        373.14637327084154,
+        370.61406433827204,
+        369.61921109460695,
+        370.9650232858251,
+        373.7665031260096,
+        378.67070808553973,
+        382.71467712545456,
+        382.96666717199344,
+        381.16080385583587,
+        375.70516990994435,
+        370.0487799858269,
+        367.02385378594334
+      ],
+      "sampled_by_view": [
+        375,
+        379,
+        359,
+        376,
+        379,
+        349,
+        400,
+        375,
+        346,
+        361,
+        398,
+        386,
+        389,
+        362,
+        395,
+        391,
+        404,
+        352,
+        355,
+        355
+      ]
+    }
+  },
+  "window_counts": {
+    "218": 20969,
+    "440": 11921
+  },
+  "generated_cross_fraction": 0.3570031951929038,
+  "physical_calibration_claim": false,
+  "transport_performed": false,
+  "source_basis": "All actual 3mm truth voxel masses, original Cartesian bilinear stencil and clockwise 20-view rotation",
+  "reconstruction_basis": "Original complete volume-weighted Polar operator; source and reconstruction grids differ",
+  "allocation": {
+    "job": "1680214",
+    "scontrol": "JobId=1680214 JobName=ehe_fp_generate_validation\n   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A\n   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:18 TimeLimit=01:30:00 TimeMin=N/A\n   SubmitTime=2026-10-09T18:04:17 EligibleTime=2026-10-09T18:04:17\n   AccrueTime=2026-10-09T18:04:17\n   StartTime=2026-10-09T18:06:28 EndTime=2026-10-09T19:36:28 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-09T18:06:28 Scheduler=Backfill\n   Partition=gpu_5090 AllocNode:Sid=wqd10nbf05c05:1913519\n   ReqNodeList=(null) ExcNodeList=wqd10nba06g6\n   NodeList=wqd10nbj01g3\n   BatchHost=wqd10nbj01g3\n   NumNodes=1 NumCPUs=6 NumTasks=1 CPUs/Task=6 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=6,mem=94500M,node=1,billing=6,gres/gpu=1\n   AllocTRES=cpu=6,mem=94500M,node=1,billing=6,gres/gpu=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=6 MinMemoryCPU=15750M MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200/scripts/generate_validation.sh\n   WorkDir=/data/home/scxi717\n   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200/logs/generate_validation_1680214.log\n   StdIn=/dev/null\n   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200/logs/generate_validation_1680214.log\n   TresPerNode=gres/gpu:1\n   TresPerTask=cpu=6\n   \n\n",
+    "host_allocated_bytes": 99090432000,
+    "denominator_kind": "actual Slurm AllocTRES",
+    "imaging_allocation_certificate": true
+  },
+  "resources": {
+    "A218": {
+      "rss_peak_bytes": 5988950016,
+      "host_allocated_bytes": 99090432000,
+      "rss_fraction": 0.060439236111111114,
+      "gpu_reserved_peak_bytes": 7356809216,
+      "gpu_total_bytes": 33668988928,
+      "gpu_reserved_fraction": 0.21850401364092903
+    },
+    "A440": {
+      "rss_peak_bytes": 6270414848,
+      "host_allocated_bytes": 99090432000,
+      "rss_fraction": 0.06327972056878307,
+      "gpu_reserved_peak_bytes": 8025800704,
+      "gpu_total_bytes": 33668988928,
+      "gpu_reserved_fraction": 0.23837367736711385
+    },
+    "C440to218": {
+      "rss_peak_bytes": 6270431232,
+      "host_allocated_bytes": 99090432000,
+      "rss_fraction": 0.06327988591269841,
+      "gpu_reserved_peak_bytes": 8025800704,
+      "gpu_total_bytes": 33668988928,
+      "gpu_reserved_fraction": 0.23837367736711385
+    }
+  },
+  "elapsed_seconds": 277.05029511199973,
+  "files": {
+    "allocation.json": "d51bf8b5956a3d74b3b0bb21948fd985c82dab012e5fe13c007bb7d7e7a879a6",
+    "mean_A218.npy": "b6c08f4906b93656927fa8c6a692cdc1fc26f343272dcb43f16d2d91a92b9c89",
+    "mean_A440.npy": "0f5907704be3ed952abadd16f0f7ee19f9758b093a2ad66f4e39c4cda5c34ce4",
+    "mean_C440to218.npy": "b27a10cb08603c202b675b7ba8bda665f19a3cf20a4ec30a31f22eab97424522",
+    "projection_218.npy": "75b3f0198c259a03f35c704fb53e925abffd7a8ccd2ef85ce7121242cd6660a7",
+    "projection_440.npy": "f35d79887ccbee77733d3e1700e5f03557e847201383f0145402d0ac5ad7f63b",
+    "sampled_A218.npy": "5f8176aceaedadd5e8de63b398660053df0b78f1992125edad06f496d7937480",
+    "sampled_A440.npy": "f35d79887ccbee77733d3e1700e5f03557e847201383f0145402d0ac5ad7f63b",
+    "sampled_C440to218.npy": "899e6b3a8271783a87e9c4c06c9c12358204ee39c85d04dbbfe9a3956b4f6b04"
+  }
+}

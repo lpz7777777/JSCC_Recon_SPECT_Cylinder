@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "native_scalar_identities_checked": 441,
+  "independent_float64_background_scalar_checks": 189,
+  "independent_float64_sphere_roi_scalar_checks": 996,
+  "roi_metric_tolerance": 1e-06,
+  "native_rows": 63,
+  "sphere_rows": 252,
+  "zero_peak_undefined": true,
+  "zero_cnr_undefined": true,
+  "figures": {
+    "cnr_full_trajectories.png": {
+      "width": 2280,
+      "height": 2040,
+      "sha256": "b24c3c506c5522fa741d9f8d0a83ab20a606af348c74858a9c1202d266c1de95"
+    },
+    "crc_full_trajectories.png": {
+      "width": 2280,
+      "height": 2040,
+      "sha256": "d41373cd8ff662ef8bd57d029bba77a2a53b8c3beb20a1ca3a5ad536037b27b5"
+    },
+    "density_noise_curves.png": {
+      "width": 2400,
+      "height": 2388,
+      "sha256": "602687bba4551e82479ba36f63ca04dbd6dfcaceb35af7ebe493d672e00ab11b"
+    },
+    "integral_position_curves.png": {
+      "width": 2400,
+      "height": 2064,
+      "sha256": "0b682511436452652242d44a5d2c04973c207aa54dd5e9a9555890a429e3ec6f"
+    },
+    "overall_mip72_12_routes.png": {
+      "width": 2880,
+      "height": 3623,
+      "sha256": "983ecc8c4ae33a6a2367f51e5100c48fbcca8c9f429decc6c84bc0ebb8294153"
+    },
+    "synthetic_axial.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "16308166258002719e44bf918976259e7e198a89a6d91335f84292a0ad94c47a"
+    },
+    "synthetic_coronal.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "27ab06d50765a45aebb641d4e85b0e31e8cf1950920989fe6f9cf079ce71a81f"
+    },
+    "synthetic_mip72.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "02e8f223bcafed5bb84869fceaf01144a4fd15d495e2718593ff61c23df662ec"
+    },
+    "synthetic_sagittal.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "d011e7eee433f6e1d06e482336dacdf8241684a64a305efac6835c5a814836e8"
+    }
+  },
+  "qa_source_sha256": "2d5e95f739a4328a46e117674fbc74d00452eecdae9fed0d61e9f25d3fff349f",
+  "artifact_manifest_sha256": "8097d4c688d48588917e09bd1edda84aa0bfc1c115948687ec6feef830d27beb",
+  "visual_review": "PASSED: every final scientific figure directly viewed; see visual_qa.json",
+  "visual_qa_sha256": "81bc7d548d25b2b325324d2e76def9dd990d646c8165c91288e0ce2bef857f84"
+}

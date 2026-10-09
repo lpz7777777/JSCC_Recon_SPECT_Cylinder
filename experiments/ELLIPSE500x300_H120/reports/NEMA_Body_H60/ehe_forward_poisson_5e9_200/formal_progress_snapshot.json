@@ -1,0 +1,25 @@
+{
+  "job": 1680255,
+  "snapshot": {
+    "progress": {
+      "mode": "formal",
+      "channel": "440_SinglePhoton",
+      "iteration": 200,
+      "target": 200,
+      "elapsed_seconds": 372.5269875526428,
+      "resource": {
+        "rss_peak_bytes": 3110158336,
+        "host_allocated_bytes": 99090432000,
+        "rss_fraction": 0.031387070105820106,
+        "gpu_reserved_peak_bytes": 4169138176,
+        "gpu_total_bytes": 33668988928,
+        "gpu_reserved_fraction": 0.12382724604280698
+      }
+    },
+    "fixed_background_exists": true
+  },
+  "actual_complete_acceptance": false,
+  "historical_snapshot": true,
+  "superseded_by": "formal_summary.json",
+  "superseded_at_utc": "2026-10-09T11:04:16.414682+00:00"
+}

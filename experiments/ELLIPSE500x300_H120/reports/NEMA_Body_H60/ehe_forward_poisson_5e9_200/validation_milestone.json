@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "imaging_job": 1680214,
+  "read_only_acceptance_job": 1680238,
+  "actual_iterations": 10,
+  "authority_sha256": "bd988aa2d3676eb91f63baeeff3fedf10943511f6d21592ac09da63971a305af",
+  "original_mlem_l2_by_channel": {
+    "440_SinglePhoton": 0.0,
+    "218_SinglePhoton_CrossTalkCorrected": 0.0
+  },
+  "saved_history_exact": true,
+  "max_forward_mean_l2": 4.920746497650417e-08,
+  "max_all_view_adjoint_error": 2.297359705095585e-07,
+  "fixed_background_l2": 1.2707002383649524e-07,
+  "physical_calibration_claim": false
+}

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests": 4,
+  "command": "python -X utf8 -m unittest discover -s experiments/ELLIPSE500x300_H120 -p test_ehe_forward_poisson.py -v",
+  "test_source_sha256": "7fd67def81b447206033942d75d0b102f3e64675d918c32746b4ba1d23446e91",
+  "actual_input_validation": false
+}

@@ -1,0 +1,16 @@
+{
+  "job": 1680255,
+  "node": "wqd10nbj03g3",
+  "pid": 237584,
+  "scope": "Read-only live process and Slurm sstat; no srun step, compute, mutation, cancel or response regeneration",
+  "sstat_maxrss_k": 3057956,
+  "sstat_cpu": "00:00:05",
+  "process_elapsed_snapshot": "06:42",
+  "process_cpu_snapshot": "00:00:06",
+  "process_state": "Dl",
+  "process_rchar_bytes": 3289956085,
+  "open_factor_file": "responses/A440/SysMat_polar",
+  "fd_position_bytes": 587202560,
+  "inference": "Process is reading registered reused matrix files for SHA; file-read progress observed. Not a GPU fault certificate or final resource acceptance",
+  "raw_pid_source": "ps on the allocated node, filtered to this experiment run_ehe_forward_poisson.py"
+}
