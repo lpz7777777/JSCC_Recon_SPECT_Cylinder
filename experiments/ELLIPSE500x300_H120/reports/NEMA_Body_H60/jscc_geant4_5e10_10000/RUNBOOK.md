@@ -68,3 +68,21 @@ formal strict fetch完成后读重建可视化skill，并使用本工程3mm真�
 ## 2026-10-10 17:48上海：唯一修复后筛选登记
 
 正常advance PID49728已完整退出/exit0，唯一selection1685272已提交gpu_5090，8节点32GPU、每节点32CPU，科学release2a67b816bf25eb7a和控制ce90d678eb32757f。原40CPU意向保留为selection_cpu40_rejected_submission_intent.json，新intent仅绑定1685272。启动原字节/提交scontrol/Torch构建信息保存；这些只是提交/静态构建观察，实际运行、完整事件数、32GPU身份和80%资源仍需验收。不要重复部署/提交或重跑已交付输运。
+
+## 2026-10-10 20:00上海：用户授权保留主作业并试4090
+
+原5090主筛选1685272仍PENDING(Priority)，用户明确要求保持它不动，另用4090队列提交试验。实际gpu_4090每GPU最多6CPU、每CPU10000MiB；新独立筛选1686107为8节点×4GPU、每节点24CPU/共192CPU，自动请求1875GiB总内存（240000MiB/节点），AllocTRES尚为空，不能称为已分配资源证书。查询工具当时报告47张4090空闲卡，但仅3个节点可各提供至少4张卡；32张卡总数充足不表示8个所需节点可以同时立即启动。真实新作业仍PENDING(Priority)，不使用test-only打印的2051日期作ETA。
+
+独立启动冻结fd8245063b549b78保存控制器/两个隔离检查/实际脚本；kernel2a67b816bf25eb7a、完整5e10输入、原筛选算法/20view/32rank拓扑保持。两项本地隔离检查实际通过：科学调用和拓扑逐字一致、未知启动布局拒绝；真实bash语法、scheduler test-only和三个控制成员远端SHA通过。脚本只更改OMP环境8→6、分配/输出路径及结束标签，不更改科学源码；冻结runtime中的torch.set_num_threads(10)仍保持，不能声称已改为每rank6线程。没有Geant4/PE/Scatter/验证/正式重建新作业。
+
+新目录selection_4090_trial_1686107及allocation/logs/intent/job均独立。selection_job.json SHA b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1提交前后相同，原本地协调器SHA41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca不变；primary_before/after保留实际scontrol，主作业申请8×4/32CPU和原Command不变。不取消、重提、移动或覆盖任一登记。
+
+后续定时推进先检查advance_registration和selection_4090_trial_registration活PID，再读取两个作业登记。运行以下独立只读检查，然后按原主流程推进：
+
+```powershell
+python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_trial.py status
+python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_workflow.py status
+python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_workflow.py advance
+```
+
+不要再次执行trial submit。试跑成功退出后只读独立验收其完整筛选/资源/SHA；不可凭COMPLETED直接改主selection_job或跳过完整输入validation10。4090筛选阶段不常驻全部Compton事件响应，能运行不能证明后续完整Compton求解能在该内存配额内保留20%余量。主流程后续预算及5090提交保持原门槛。

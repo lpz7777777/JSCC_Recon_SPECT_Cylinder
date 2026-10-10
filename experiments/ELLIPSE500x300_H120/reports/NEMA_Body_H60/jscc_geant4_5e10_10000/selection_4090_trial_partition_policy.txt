@@ -1,0 +1,13 @@
+PartitionName=gpu_4090
+   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=gpu
+   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED MaxCPUsPerSocket=UNLIMITED
+   Nodes=wqd10nae09g[3-4],wqd10naf04g1,wqd10naf05g[2-6,8],wqd10naf06g[1-3],wqd10naf13g[1,7-8],wqd10nah05g4,wqd10nba06g[1-8],wqd10nba07g[1,3-8],wqd10nba08g[2-4],wqd10nba10g8
+   PriorityJobFactor=1 PriorityTier=1000 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=3312 TotalNodes=35 SelectTypeParameters=NONE
+   JobDefaults=DefCpuPerGPU=6
+   DefMemPerCPU=10000 MaxMemPerCPU=10000
+   TRES=cpu=3312,mem=18025000M,node=35,billing=3312,gres/gpu=280
+

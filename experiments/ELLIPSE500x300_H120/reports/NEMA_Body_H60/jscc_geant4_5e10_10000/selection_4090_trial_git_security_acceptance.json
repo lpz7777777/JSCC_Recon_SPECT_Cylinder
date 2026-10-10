@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "scope": "New actual trial code/launch/registration/evidence and updated instructions only; excludes this self-referential receipt.",
+  "checked_unique_blobs": 19,
+  "total_blob_bytes": 56284,
+  "findings": [],
+  "staged_local_identity_passed": true,
+  "files": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/jscc_5e10_4090_trial.py",
+      "git_blob": "be704d58a6f7d870af22facd50cac04564a7e2dc",
+      "bytes": 9749,
+      "sha256": "e9b367a2971139e590a688c71ae9a53a390a3eff2b29f66a034252fc049145c8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_jscc_5e10_4090_trial.py",
+      "git_blob": "19061a2a9fdc23913c752f1ec42cb2f02754aa05",
+      "bytes": 1238,
+      "sha256": "6e6975bae54b3479528897e44293f78ba7d1693c72de16271ec3e1fbe15c3725"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/AGENTS.md",
+      "git_blob": "dc28e08d0feb8bd61df98abd1bb7521579a78047",
+      "bytes": 4976,
+      "sha256": "e17ce6014f7edca2a23538fa01f34d3251d1b51fae6a48d30edd1baaa3194e7c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+      "git_blob": "c33af993611a3b1e627c85369f3a38b547cb0417",
+      "bytes": 5605,
+      "sha256": "3c764e647918f983bac97b5fc1bb95320a087a004718338549b99fdf8faaa32b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+      "git_blob": "a6bea4f327ef18ebc71b398d379e7042f7497875",
+      "bytes": 5443,
+      "sha256": "7d12a5a1b91137ac1c895373db10c2b29957396a9ee7c1ce5ed3e07d9467659e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md",
+      "git_blob": "6499d94adec5484216580269e3d38e26d9823218",
+      "bytes": 13390,
+      "sha256": "316f3d8f1797ed67532f7ed50413ebc2a1dfc620c04e05438e81f6609d945035"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_freeze.json",
+      "git_blob": "bde36d45122323efc94d7607b22f7819cde9a0a4",
+      "bytes": 1352,
+      "sha256": "d5390b7da8d6dd0c4168a9aa9b228535f3449ed0a36bb74ee56b400958ab7e8a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_job.json",
+      "git_blob": "bd8f8e39e5c56e92d16bf97fcef67bbf0584b7e1",
+      "bytes": 1503,
+      "sha256": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_latest_status.json",
+      "git_blob": "dfbeacb3b624b0398016b0b7124369a8305ca4c3",
+      "bytes": 191,
+      "sha256": "d0c489635cc5a8eeef3b301e29cfa473c89b56343adbcd8036146bc0128840f5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_launch_acceptance.json",
+      "git_blob": "4a608581a1086ce9e735f46bf244842f2325a8ec",
+      "bytes": 642,
+      "sha256": "45a1277e24d6f6e13185eb952db1589aa4d53f8d947ee8b8487a0d5e37d7833d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_partition_policy.txt",
+      "git_blob": "fc06aec98db26aaea7f14f487d4126122545871f",
+      "bytes": 811,
+      "sha256": "a3489ecd1c0e2857a200dd3205cd4be2bf761f765abc43ecbde91438a4df56b8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_primary_after.txt",
+      "git_blob": "46b7890b78523273075e096f3942c7b432cec0a4",
+      "bytes": 1645,
+      "sha256": "17756b5f17873372a9ac9d894b9b72bad1138014cfff3e9ca30aae206884e8b9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_primary_before.txt",
+      "git_blob": "3529a224dfe85bb7e68c9f644e813cc83c654a15",
+      "bytes": 1645,
+      "sha256": "2e2a8ce90b41e67ebb8978057cade9e5db1e22de233685621a1f668d2629f730"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_queue_at_acceptance.txt",
+      "git_blob": "ad6f1dbe1ee104fa8460c9eec72d482974380e09",
+      "bytes": 105,
+      "sha256": "7c5e6f01ee13eba727edad269b02fa29e16d718b3ea860b05fd6217077c8ef04"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_submission_acceptance.json",
+      "git_blob": "ac35ce4bffcb5e6208842c91e31c21d873e5bab0",
+      "bytes": 2780,
+      "sha256": "f29ab85922291ef744bbfd21c1679406520454e3258c26418cc6d1219bbc3903"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_submission_intent.json",
+      "git_blob": "645f3a0171824169a0c7af0c33a32d653bbcd124",
+      "bytes": 338,
+      "sha256": "3636c487f8bfc342e0ffcc4e22d89aa6bf7fe80f1644bc45049b7a8b2acffc22"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_submit_scontrol.txt",
+      "git_blob": "a54ad1e1b9ec06116bab347ae3c517e10a4ba8df",
+      "bytes": 1619,
+      "sha256": "22baaab1e8af1b19fc61344f94f2ac23cb4ce7e89fe235005682bb64231687c4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_4090_trial_tests.txt",
+      "git_blob": "e828b1102f635f29fe0040ab9a51e1ec54647615",
+      "bytes": 391,
+      "sha256": "e80ed239d9c994ea6ee94035d5cfaf2252bd55e7330e93485971e89813176cea"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/selection_4090_trial_1686107.sh",
+      "git_blob": "89d74a2a962065bf5608ad7be1e462bd82956c6c",
+      "bytes": 2861,
+      "sha256": "34f80f4265ec72d8d057c7e2f92f27ac71661c343189d9b119b1ba3fe8e9baad"
+    }
+  ],
+  "large_scientific_data_staged": false
+}

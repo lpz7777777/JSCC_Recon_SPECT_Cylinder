@@ -5,6 +5,7 @@
 - 2026-10-10 17:46最新：完整5e10输运15708389/收集15709588已成功退出且严格SHA取回。原GPU4090请求40CPU被每卡6核配额拒绝、未创建selection作业；单独启动控制冻结ce90d678eb32757f保留失败intent/脚本和原科学发布。GPU计算改gpu_5090、每节点32CPU/4卡、8节点不变，自动预期504000MiB/节点、无显式mem；只读验收8CPU/1GPU配额但仅CPU计算。最新launch_control_repair_freeze/acceptance允许只对绑定原/新SHA的本地协调器作配额修复，其他科学源码不得变化；实际80%资源门槛不变。
 - `jscc-5e10`为用户授权的新定时推进任务，每15分钟推进本实验；等待计算期间保持ACTIVE，科学/视觉QA、报告和安全Git交付实际完成后暂停。旧compton-v5不恢复。旧实验只读，不重复使用旧计数代替新观测。
 - 推进前读 `generated/jscc_geant4_5e10_10000/advance_registration.json`；登记PID仍活跃时不并行advance/fetch/submit。先完整输入32GPU validation10并严格取回生成本次authority，随后直接唯一formal10000/save50。失败保留旧发布和部分输出，诊断后有界补缺；不取消其他项目。
+- 2026-10-10 20:00上海用户新增授权：保持5090主筛选1685272不动，另提交4090独立完整输入筛选试跑。唯一试跑1686107，8节点×4卡、每节点24CPU、自动预期240000MiB、无显式mem；单独selection_4090_trial_job/freeze/launch_acceptance和输出目录，原科学kernel及5e10观测不变。这是用户明确允许的并行筛选例外，不是第二套生产重建。每轮同时读取该登记，并运行 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_trial.py status`；另外先检查generated中的selection_4090_trial_registration.json，任一提交/推进PID存活时不并行advance/fetch/submit。不重复试跑submit，不取消或改动主作业，不以试跑退出状态替代完整资源/逐行筛选验收，不自动替换生产selection_job。后续重建仍由主流程完整输入验收和实际内存门槛决定；不得把4090筛选能运行当成完整Compton重建内存证明。
 
 - 后续不生成、计算、绘制或纳入比较任何218与440 keV跨能量相加图像，包括 `440SinglePlus218Single` 和 `440SingleComptonPlus218Single`。用户所写218+400按本工程218/440双能解释。440的Single+Compton联合重建仍保留，它不是跨能量叠加。
 - EHE保留440单光子和218串扰校正单光子；JSCC保留这两路以及440 Compton、440 Single+Compton。218求解中的固定440→218前投影加性背景仍必须保留。

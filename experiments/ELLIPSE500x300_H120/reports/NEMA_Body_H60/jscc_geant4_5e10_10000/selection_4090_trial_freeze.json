@@ -1,0 +1,26 @@
+{
+  "release_key": "fd8245063b549b78",
+  "sha256": {
+    "jscc_5e10_4090_trial.py": "e9b367a2971139e590a688c71ae9a53a390a3eff2b29f66a034252fc049145c8",
+    "selection.sh": "34f80f4265ec72d8d057c7e2f92f27ac71661c343189d9b119b1ba3fe8e9baad",
+    "test_jscc_5e10_4090_trial.py": "6e6975bae54b3479528897e44293f78ba7d1693c72de16271ec3e1fbe15c3725"
+  },
+  "primary_job": 1685272,
+  "primary_job_record_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+  "kernel_freeze_sha256": "35d6084b2e5ecb61b89e60d701e804ac9af2b739bd3305b3fff6aa2be3874f1a",
+  "transport_acceptance_sha256": "e90428cbf1fb8f0974977ed1d0e65472f032ac8b7bf8644af7b839c0e54b2ba3",
+  "local_launch_tests_sha256": "e80ed239d9c994ea6ee94035d5cfaf2252bd55e7330e93485971e89813176cea",
+  "original_controller_sha256": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca",
+  "scope": "Full-input selection only; no transport, response generation, validation or reconstruction.",
+  "user_authorized_parallel_trial": true,
+  "primary_job_preserved": true,
+  "partition": "gpu_4090",
+  "nodes": 8,
+  "gpus_per_node": 4,
+  "world_size": 32,
+  "cpus_per_node": 24,
+  "expected_auto_memory_mib_per_node": 240000,
+  "explicit_mem_parameter": false,
+  "actual_resource_and_strict_selection_acceptance_required": true,
+  "frozen_runtime_torch_threads_per_rank": 10
+}

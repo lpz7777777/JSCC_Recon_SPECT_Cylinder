@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Launch policy and immutable script only; not a compute/resource certificate.",
+  "freeze_sha256": "d5390b7da8d6dd0c4168a9aa9b228535f3449ed0a36bb74ee56b400958ab7e8a",
+  "partition_policy_sha256": "a3489ecd1c0e2857a200dd3205cd4be2bf761f765abc43ecbde91438a4df56b8",
+  "scheduler_test_only": "sbatch: Job 1686106 to start at 2051-06-12T23:20:30 using 192 processors on nodes wqd10nae09g3,wqd10naf05g[4-5],wqd10naf13g8,wqd10nba06g5,wqd10nba07g[3-5] in partition gpu_4090\n",
+  "primary_job_record_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+  "scientific_release_unchanged": true
+}
