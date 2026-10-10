@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "method": "Actual tool view_image inspection of all eleven final PNGs; original EHE CNR also viewed to check full title",
+  "inspected_at_utc": "2026-10-10T06:23:13.658048+00:00",
+  "figures": {
+    "common_background_cv.png": {
+      "sha256": "d6cfce7501206385f494299835c0e81853361084aaacf0d402c6076a2ca2bd30",
+      "pixels": [
+        1980,
+        1170
+      ],
+      "passed": true
+    },
+    "ehe_hot_cnr.png": {
+      "sha256": "0929295d4dbc35fd4db05b51c004dd6ab206fc7e490dc50c09a98c5891f3df62",
+      "pixels": [
+        2160,
+        1260
+      ],
+      "passed": true
+    },
+    "ehe_hot_crc.png": {
+      "sha256": "24ed6a3512c156cb0e3c7e6943fb16476517f23e23583dc082a283f04348398d",
+      "pixels": [
+        2160,
+        1260
+      ],
+      "passed": true
+    },
+    "gallery_0.png": {
+      "sha256": "c689e9b13dbb964f458d6b6bb05995c582c63c0cf58147dee10b753710ac2281",
+      "pixels": [
+        2160,
+        540
+      ],
+      "passed": true
+    },
+    "gallery_1.png": {
+      "sha256": "790d9651c276dca7c87f219a915d0155be3d16122f86ab4059d62a620488a22d",
+      "pixels": [
+        2160,
+        540
+      ],
+      "passed": true
+    },
+    "gallery_2.png": {
+      "sha256": "fb6bead824de7949b1a973f45ef2392eefd6a317081de09a38a9ea0bd48945f4",
+      "pixels": [
+        2160,
+        540
+      ],
+      "passed": true
+    },
+    "gallery_3.png": {
+      "sha256": "7e92545ab517f01ffe9aa22a0220b46fd84cfa88f14accc6f63351c148d67b6e",
+      "pixels": [
+        2160,
+        540
+      ],
+      "passed": true
+    },
+    "gallery_4.png": {
+      "sha256": "c66606ef23a5d4b9418eee4739fc599778e1cdf2939b7f4f2e7ee83e9748227d",
+      "pixels": [
+        2160,
+        954
+      ],
+      "passed": true
+    },
+    "jscc_hot_cnr.png": {
+      "sha256": "94705b54dee1782ea698400ad535dc30c86661c4644c263434194b1d9e4c57d5",
+      "pixels": [
+        2160,
+        1260
+      ],
+      "passed": true
+    },
+    "jscc_hot_crc.png": {
+      "sha256": "b8609c1499a5b2e33e7f2e0c95bfb09d526b3ca4cd07bf702c180320cdc3c701",
+      "pixels": [
+        2160,
+        1260
+      ],
+      "passed": true
+    },
+    "roi_masks.png": {
+      "sha256": "bc0f65ca112578bcbdefc4c278e59880b4b9ef46eca6b378aa9a099d38d87c33",
+      "pixels": [
+        2160,
+        827
+      ],
+      "passed": true
+    }
+  },
+  "ROI_checks": "Actual registered 3D sphere masks, correct orientation and interior common background cutouts; red circles are XY projections",
+  "curve_checks": "All six hot spheres; EHE actual0-200, JSCC actual0-10000; negative CNR/CRC retained; iteration0 CNR undefined",
+  "gallery_checks": "Four EHE two-channel galleries and one JSCC four-channel gallery; original3D truth; central72mm MIP, fullXY/crop0, no smoothing, gray_r, fixed emitted-source density range0-10; labels and colorbars legible, no clipped content",
+  "per_image_fitted_gain": false,
+  "cross_energy_sum_images_computed": 0,
+  "matched_iteration_convergence_claim": false,
+  "scientific_acceptance_sha256": "68f2380a08fe0ab63247e2f2ac8d70a1aae596c7e599ed262facc578ab77497a",
+  "independent_numeric_acceptance_sha256": "f04e7ffd1bb5e0b3d152f798e22f4f9ebd89331d07c2e3d50f18d372ab4d327d"
+}

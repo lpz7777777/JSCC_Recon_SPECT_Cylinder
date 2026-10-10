@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "test_command": "python -X utf8 experiments/ELLIPSE500x300_H120/test_nema_current_policy.py",
+  "tests_passed": 8,
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.106s\n\nOK\n",
+  "test_code_sha256": "8c86917be42f07c0551890c5bbdb8d35a3e42ee433f0c48584b9ce787f603056",
+  "policy_code_sha256": {
+    "nema_roi_policy.py": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+    "reconstruction_output_policy.py": "ea8fc629cd3f01629ab07277ee8961b821e20499e79067048757305fa37b6fa8"
+  },
+  "syntax_files_passed": 16,
+  "GPU_production_validation_performed": false,
+  "baseline_reference": "Historical JSCC 113-source baseline checked unchanged during this task; no frozen JSCC source modified"
+}

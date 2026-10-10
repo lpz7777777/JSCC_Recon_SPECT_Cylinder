@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "scope": "Current separate-energy NEMA ROI analysis and local future EHE output policy; historic freezes unchanged",
+  "report_files": {
+    "common_background_iteration_metrics.csv": {
+      "sha256": "264bb46471bed70a669f9f6b5081341c91eea461fe5bf0d6610cd29759904a9b",
+      "bytes": 134867
+    },
+    "figures\\common_background_cv.png": {
+      "sha256": "d6cfce7501206385f494299835c0e81853361084aaacf0d402c6076a2ca2bd30",
+      "bytes": 205111
+    },
+    "figures\\ehe_hot_cnr.png": {
+      "sha256": "0929295d4dbc35fd4db05b51c004dd6ab206fc7e490dc50c09a98c5891f3df62",
+      "bytes": 298604
+    },
+    "figures\\ehe_hot_crc.png": {
+      "sha256": "24ed6a3512c156cb0e3c7e6943fb16476517f23e23583dc082a283f04348398d",
+      "bytes": 223471
+    },
+    "figures\\gallery_0.png": {
+      "sha256": "c689e9b13dbb964f458d6b6bb05995c582c63c0cf58147dee10b753710ac2281",
+      "bytes": 233344
+    },
+    "figures\\gallery_1.png": {
+      "sha256": "790d9651c276dca7c87f219a915d0155be3d16122f86ab4059d62a620488a22d",
+      "bytes": 233415
+    },
+    "figures\\gallery_2.png": {
+      "sha256": "fb6bead824de7949b1a973f45ef2392eefd6a317081de09a38a9ea0bd48945f4",
+      "bytes": 199882
+    },
+    "figures\\gallery_3.png": {
+      "sha256": "7e92545ab517f01ffe9aa22a0220b46fd84cfa88f14accc6f63351c148d67b6e",
+      "bytes": 197925
+    },
+    "figures\\gallery_4.png": {
+      "sha256": "c66606ef23a5d4b9418eee4739fc599778e1cdf2939b7f4f2e7ee83e9748227d",
+      "bytes": 249080
+    },
+    "figures\\jscc_hot_cnr.png": {
+      "sha256": "94705b54dee1782ea698400ad535dc30c86661c4644c263434194b1d9e4c57d5",
+      "bytes": 223788
+    },
+    "figures\\jscc_hot_crc.png": {
+      "sha256": "b8609c1499a5b2e33e7f2e0c95bfb09d526b3ca4cd07bf702c180320cdc3c701",
+      "bytes": 180658
+    },
+    "figures\\roi_masks.png": {
+      "sha256": "bc0f65ca112578bcbdefc4c278e59880b4b9ef46eca6b378aa9a099d38d87c33",
+      "bytes": 93316
+    },
+    "future_output_source_regression.json": {
+      "sha256": "c5e968c4686cca53bd8963d42101442ad4dc94a44249a8ef6a4687977b7ef71a",
+      "bytes": 3053
+    },
+    "hot_sphere_cnr_peak_and_final.csv": {
+      "sha256": "e122e7cc856bba88393dd544cc59cd30e2f95d612fbf976aeacf6a258bb27c63",
+      "bytes": 3927
+    },
+    "independent_numeric_acceptance.json": {
+      "sha256": "f04e7ffd1bb5e0b3d152f798e22f4f9ebd89331d07c2e3d50f18d372ab4d327d",
+      "bytes": 690
+    },
+    "local_policy_acceptance.json": {
+      "sha256": "66aeaddb33fb12681ff0086d58b115e88b2028cc0a1badb1204d7b0e00034298",
+      "bytes": 844
+    },
+    "README.md": {
+      "sha256": "c45c3646dc3eb71e2f1018d0a8c10d897978871e3c74edd9de83a8abfd754f40",
+      "bytes": 5650
+    },
+    "roi_definition.json": {
+      "sha256": "2ca5effb713f822b0db7299ab3c8a6e5dc718f11c14d888db2ec2be64c219055",
+      "bytes": 3336
+    },
+    "scientific_acceptance.json": {
+      "sha256": "68f2380a08fe0ab63247e2f2ac8d70a1aae596c7e599ed262facc578ab77497a",
+      "bytes": 10788
+    },
+    "sphere_endpoint_metrics.csv": {
+      "sha256": "3ee8b7a9845bcf5934076659d36a2661bd97a59540d4b8a91cab74aa31da78b4",
+      "bytes": 13170
+    },
+    "sphere_iteration_metrics.csv": {
+      "sha256": "cb7fe8405d8e843c39b514bbc8ef342119d5922cdd8829cf4d166beb11efc12f",
+      "bytes": 1005510
+    },
+    "visual_acceptance.json": {
+      "sha256": "0bc73b15a56d9483eacc760c1a3c336e64d32cdc1213db72031f04a97b0f9afa",
+      "bytes": 3280
+    }
+  },
+  "current_reusable_entrypoints": {
+    "tools\\research\\analyze_nema_interior_roi.py": "6d55250a75f0daf3da0175d4299f60dddfdba57d5e93ab66fa20b0aa91ac912b",
+    "tools\\research\\verify_nema_interior_analysis.py": "db69c4de84ee721a29e39250dc6c025edece7ee00cdad63052d2e9089122d851",
+    "experiments\\ELLIPSE500x300_H120\\nema_roi_policy.py": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+    "experiments\\ELLIPSE500x300_H120\\reconstruction_output_policy.py": "ea8fc629cd3f01629ab07277ee8961b821e20499e79067048757305fa37b6fa8",
+    "experiments\\ELLIPSE500x300_H120\\test_nema_current_policy.py": "8c86917be42f07c0551890c5bbdb8d35a3e42ee433f0c48584b9ce787f603056"
+  },
+  "routes": 12,
+  "background_measurements": 972,
+  "sphere_measurements": 5832,
+  "sphere_roi_voxels": [
+    8,
+    20,
+    60,
+    136,
+    312,
+    772
+  ],
+  "background_voxels": 97604,
+  "all_figures_visually_checked": 11,
+  "reconstruction_or_transport_run": false,
+  "new_GPU_production_validation_performed": false,
+  "cross_energy_sum_images_computed": 0,
+  "automation_intent": "compton-v5 remains paused",
+  "manifest_excludes_self_and_final_git_audit_receipt": true
+}

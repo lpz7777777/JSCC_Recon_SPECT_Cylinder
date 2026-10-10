@@ -7,10 +7,12 @@ from ehe_common import *
 from torch_active_operator import ActiveGeometry,ViewResponse,forward_project,single_mlem
 from single_checkpoint_mlem import single_mlem_checkpointed
 from ehe_execution_policy import physical_permission
+from reconstruction_output_policy import require_separate_channels, POLICY_ID as OUTPUT_POLICY
 
 def reconstruct(a):
     policy(a.mode,a.iterations,10);r=a.release.resolve();root=a.responses.resolve();out=a.output.resolve()
     freeze=read(r/'release_manifest.json');verify_files(r,freeze['sha256'])
+    channels=require_separate_channels(read(r/'config.json'))
     gate=read(a.physical/'physical_gate.json')
     permission=physical_permission(a.physical,a.counts,root,freeze,getattr(a,'physical_policy',None))
     verify_files(a.physical,gate['files'])
@@ -64,10 +66,7 @@ def reconstruct(a):
             cross=response('C440to218');b=forward_project(cross,final).cpu().numpy()
             np.save(out/'fixed_cross_background.npy',b);del cross,b
         del model,s,final,h;gc.collect();torch.cuda.empty_cache()
-    h440=np.memmap(out/f'Image_{CHANNELS[0]}_history.float32','<f4',mode='r',shape=(a.iterations//10,78920))
-    h218=np.memmap(out/f'Image_{CHANNELS[1]}_history.float32','<f4',mode='r',shape=(a.iterations//10,78920))
-    combined=np.asarray(h440+h218,dtype='<f4');array_write(out/f'Image_{CHANNELS[2]}_history.float32',combined);array_write(out/f'Image_{CHANNELS[2]}_final.float32',combined[-1])
-    record=dict(mode=a.mode,iterations=a.iterations,save_step=10,channels=CHANNELS,release_key=freeze['release_key'],
+    record=dict(mode=a.mode,iterations=a.iterations,save_step=10,channels=channels,output_policy=OUTPUT_POLICY,release_key=freeze['release_key'],
         counts_sha256=digest(a.counts/'collection.json'),factor_sha256={n:digest(root/n/'factor_manifest.json') for n in RESPONSES},
         physical_gate_sha256=digest(a.physical/'physical_gate.json'),geometry_sha256=digest(r/'whole_geometry.npz'),tests=tests,
         phase_seconds=times,resources=resources_seen,allocation=alloc,started_epoch=started,finished_epoch=time.time(),

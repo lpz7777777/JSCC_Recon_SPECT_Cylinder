@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "policy_id": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "code_sha256": {
+    "tools\\research\\analyze_nema_interior_roi.py": "6d55250a75f0daf3da0175d4299f60dddfdba57d5e93ab66fa20b0aa91ac912b",
+    "experiments\\ELLIPSE500x300_H120\\nema_roi_policy.py": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+    "experiments\\ELLIPSE500x300_H120\\reconstruction_output_policy.py": "ea8fc629cd3f01629ab07277ee8961b821e20499e79067048757305fa37b6fa8",
+    "experiments\\ELLIPSE500x300_H120\\mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594"
+  },
+  "histories_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "337523e925dca872b69628221b2613a8bd2a8fb0ac02363019d0db1b09ff1f7b",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "f751f2faf1330013200738c2c77d83e7fd033e955079f85f07411448d49d595d",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e9_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "63504b2db745e7eb6dd20e41b35982cc2ca3bade5e717dbb785e6dedaad7aa10",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e9_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "15dc209f6326f1707d65f1f1d9687c6e147d863257b445fb52ab5018e147a9fa",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e10_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "dcd8e3b389950e542c8fba6d4c1ce94f36d8997f7a2265de44a3eb6e8678d0c0",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e10_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "7519df28140899aed8341700d1fd5c2ebff5d5825a7726a4aea1a71dcec58b19",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e10_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "eeadec024cb34078fe73ba52b848218bb13cd59f44657f62962a80930c5e1035",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e10_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "d1063029e8fc2d111b46f1b56fc0fe59814e261b5deb03ef21bfd8812f0af32c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440_SinglePhoton_history.float32": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440_ComptonOnly_history.float32": "f05db3be000b4cf56e70f160cf958483b5ef161b1d03c09d1a6d2fde09bd915c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440_SinglePlusCompton_history.float32": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af"
+  },
+  "authorities_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e9_200\\formal_summary.json": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e9_200\\formal_summary.json": "0d3e4e1cb39f2ec62ba47c63594586134e28b3b5ea26e8e0c196c5fa76b3dfbc",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e10_200\\formal_summary.json": "61c6d2bd20e5a1bef97a3481adf63cfd10c99c5c004a2c710bce6c2c28fca62e",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\formal_summary.json": "dcec91f9825229f368c9035ce2549334e56e08c45a130026875798cf944838c3",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\verification.json": "fb3f899da8664708d9f1693e4d44f88fb8ce7598d67967cdef069f181a1ff728"
+  },
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "source_manifest_sha256": "922381c43c1f99f43b6fce908f582302b40dee5945eff48d915b6907f8767c4f",
+  "phantom_manifest_sha256": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+  "source_scale_record_sha256": "20312148ad077668aa7ef78d3093ac08dc89d44987c5c295b3e70d75ea02e5ab",
+  "source_config_sha256": "883bdca4cc006c7841d9e8818b015b5d4ddf7e42b1c79a39467d9d7bafd84216",
+  "original_interpolator_sha256": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+  "route_coverage": [
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE matrix+Poisson 5e10",
+      "channel": "440_SinglePhoton",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "EHE matrix+Poisson 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "frames": 21,
+      "iterations_start": 0,
+      "iterations_end": 200,
+      "save_step": 10,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "frames": 201,
+      "iterations_start": 0,
+      "iterations_end": 10000,
+      "save_step": 50,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "frames": 201,
+      "iterations_start": 0,
+      "iterations_end": 10000,
+      "save_step": 50,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "frames": 201,
+      "iterations_start": 0,
+      "iterations_end": 10000,
+      "save_step": 50,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "frames": 201,
+      "iterations_start": 0,
+      "iterations_end": 10000,
+      "save_step": 50,
+      "iteration_zero": "all-one active density; no iteration rerun"
+    }
+  ],
+  "total_routes": 12,
+  "iteration_rows": 972,
+  "sphere_rows": 5832,
+  "endpoint_rows": 72,
+  "background_identical_within_each_frame": true,
+  "sum_histories_read": 0,
+  "cross_energy_sum_images_computed": 0,
+  "reconstruction_run": false,
+  "transport_run": false,
+  "response_run": false,
+  "EHE_iterations": [
+    0,
+    200
+  ],
+  "JSCC_iterations": [
+    0,
+    10000
+  ],
+  "matched_iteration_convergence_claim": false,
+  "no_smoothing": true,
+  "crop": 0,
+  "fitted_gain": false,
+  "display_scale": "original emitted source density",
+  "display_range": [
+    0,
+    10
+  ],
+  "hot_crc_denominator": 9,
+  "cold_crc_definition": "1 - sphere_mean / background_mean",
+  "cnr_definition": "signed (sphere_mean - background_mean) / spatial sample std",
+  "outputs_sha256": {
+    "common_background_iteration_metrics.csv": "264bb46471bed70a669f9f6b5081341c91eea461fe5bf0d6610cd29759904a9b",
+    "hot_sphere_cnr_peak_and_final.csv": "e122e7cc856bba88393dd544cc59cd30e2f95d612fbf976aeacf6a258bb27c63",
+    "roi_definition.json": "2ca5effb713f822b0db7299ab3c8a6e5dc718f11c14d888db2ec2be64c219055",
+    "sphere_endpoint_metrics.csv": "3ee8b7a9845bcf5934076659d36a2661bd97a59540d4b8a91cab74aa31da78b4",
+    "sphere_iteration_metrics.csv": "cb7fe8405d8e843c39b514bbc8ef342119d5922cdd8829cf4d166beb11efc12f",
+    "figures\\common_background_cv.png": "d6cfce7501206385f494299835c0e81853361084aaacf0d402c6076a2ca2bd30",
+    "figures\\ehe_hot_cnr.png": "0929295d4dbc35fd4db05b51c004dd6ab206fc7e490dc50c09a98c5891f3df62",
+    "figures\\ehe_hot_crc.png": "24ed6a3512c156cb0e3c7e6943fb16476517f23e23583dc082a283f04348398d",
+    "figures\\gallery_0.png": "c689e9b13dbb964f458d6b6bb05995c582c63c0cf58147dee10b753710ac2281",
+    "figures\\gallery_1.png": "790d9651c276dca7c87f219a915d0155be3d16122f86ab4059d62a620488a22d",
+    "figures\\gallery_2.png": "fb6bead824de7949b1a973f45ef2392eefd6a317081de09a38a9ea0bd48945f4",
+    "figures\\gallery_3.png": "7e92545ab517f01ffe9aa22a0220b46fd84cfa88f14accc6f63351c148d67b6e",
+    "figures\\gallery_4.png": "c66606ef23a5d4b9418eee4739fc599778e1cdf2939b7f4f2e7ee83e9748227d",
+    "figures\\jscc_hot_cnr.png": "94705b54dee1782ea698400ad535dc30c86661c4644c263434194b1d9e4c57d5",
+    "figures\\jscc_hot_crc.png": "b8609c1499a5b2e33e7f2e0c95bfb09d526b3ca4cd07bf702c180320cdc3c701",
+    "figures\\roi_masks.png": "bc0f65ca112578bcbdefc4c278e59880b4b9ef46eca6b378aa9a099d38d87c33"
+  },
+  "elapsed_seconds": 14.936999999918044
+}

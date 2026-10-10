@@ -5,6 +5,7 @@ from ehe_common import HERE, GPU_BASE, GPU_PYTHON, RESPONSES, digest, read, writ
 from ehe_forward_poisson_data import STUDY, verify_counts, dose_budget
 from ehe_5e9_workflow import connection, command, q, put_tree, env_gpu
 from ehe_slurm_status import stage_completed
+from reconstruction_output_policy import EHE_CHANNELS, POLICY_ID as OUTPUT_POLICY
 
 DATA=HERE/'generated'/STUDY
 REPORT=HERE/'reports/NEMA_Body_H60'/STUDY
@@ -30,9 +31,10 @@ def freeze():
         reconstruction_basis='Original full Polar volume-weighted density operator',
         background_source='This new experiment final440 single image, fixed additive Poisson term',
         initial_density=1,regularization=None,source_integral_normalization='Expected emitted dose only; no detected-count matching',
+        output_channels=list(EHE_CHANNELS),output_policy=OUTPUT_POLICY,
         human_instruction='Use system matrix forward projection plus noise for a new 5e9 EHE reconstruction')
     payload=DATA/'payload';payload.mkdir(parents=True,exist_ok=False)
-    for name in ('ehe_forward_poisson_data.py','run_ehe_forward_poisson.py','verify_ehe_forward_poisson.py','ehe_slurm_status.py'):
+    for name in ('ehe_forward_poisson_data.py','run_ehe_forward_poisson.py','verify_ehe_forward_poisson.py','ehe_slurm_status.py','reconstruction_output_policy.py'):
         shutil.copy2(HERE/name,payload/name)
     for name in ('ehe_common.py','torch_active_operator.py','single_checkpoint_mlem.py','whole_geometry.npz','truth_3mm.npz'):
         if digest(old_payload/name)!=old['sha256'][name]:raise ValueError('Original execution helper/source identity differs')
@@ -95,7 +97,7 @@ def verification_release(c,f):
     path=REPORT/'verification_freeze.json'
     if path.exists():return read(path)
     source=DATA/f['payload_dir'];folder=DATA/'verification_payload';folder.mkdir(exist_ok=False)
-    for name in ('ehe_common.py','ehe_gpu_pipeline.py','torch_active_operator.py','ehe_forward_poisson_data.py','verify_ehe_forward_poisson.py','ehe_slurm_status.py'):
+    for name in ('ehe_common.py','ehe_gpu_pipeline.py','torch_active_operator.py','ehe_forward_poisson_data.py','verify_ehe_forward_poisson.py','ehe_slurm_status.py','reconstruction_output_policy.py'):
         shutil.copy2(source/name,folder/name)
     files=hashes(folder);key=hashlib.sha256(json.dumps(files,sort_keys=True).encode()).hexdigest()[:16]
     v=dict(key=key,files=files,root=BASE+'/verification_releases/'+key,payload_dir='verification_payload')

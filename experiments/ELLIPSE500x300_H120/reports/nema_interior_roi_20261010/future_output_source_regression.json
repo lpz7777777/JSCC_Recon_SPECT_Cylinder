@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "base_commit": "a885b281a611d9e82d7ba7d6b19c491b46deacb3",
+  "comparison": "source body identity only; no new GPU validation or execution claimed",
+  "EHE_runners": {
+    "run_ehe_reconstruction.py": {
+      "solve_and_fixed_background_body_equal": true,
+      "body_sha256": "f0dd6b6fdc1634cf89bf70076b5418737876cd5b3a13c88477d1106ae79dcd03",
+      "cross_energy_sum_tail_removed": true
+    },
+    "run_ehe_5e10_reconstruction.py": {
+      "solve_and_fixed_background_body_equal": true,
+      "body_sha256": "cf0f1068ce84979007e6a2c1e1c368eff584d779bebcf032a48eccc00d230c17",
+      "cross_energy_sum_tail_removed": true
+    },
+    "run_ehe_forward_poisson.py": {
+      "solve_and_fixed_background_body_equal": true,
+      "body_sha256": "384797d47370a944050c3bfd774653d0589b938f9e39db493be1d47dbc3f2a60",
+      "cross_energy_sum_tail_removed": true
+    }
+  },
+  "JSCC_historical_baseline_unchanged": true,
+  "current_code_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\run_ehe_reconstruction.py": "07b350ad21dfaacbcadd995e13cf5c26940bda0220065282431cb2a1978223ff",
+    "experiments\\ELLIPSE500x300_H120\\run_ehe_5e10_reconstruction.py": "acdbf717718e61f2a6c5caa8964eb9ca060405861c53fd9daec281f99c208e8a",
+    "experiments\\ELLIPSE500x300_H120\\run_ehe_forward_poisson.py": "7b1ce7c9ca662844aa5a56ffe1c15dc7d6809afc34272ec618b7a84acd1ab3fa",
+    "experiments\\ELLIPSE500x300_H120\\verify_ehe.py": "d368cad8789a7a44ae6c7d75a3155b65e085bf9d2b4ff99e8faf316e5c83b619",
+    "experiments\\ELLIPSE500x300_H120\\verify_ehe_5e10.py": "ba459602035487a931a4596a6e14b5480840bf5b706d78757612d7d35de0158d",
+    "experiments\\ELLIPSE500x300_H120\\verify_ehe_forward_poisson.py": "9b2cb6ec7ce1c7102f7dbffbd454663662a447f8390a0286220c4478b6920a02",
+    "experiments\\ELLIPSE500x300_H120\\ehe_reconstruction_workflow.py": "bc02cb07c1980763518b422f3c2b61f6503002ecd5745fa7fe92c013505ac30a",
+    "experiments\\ELLIPSE500x300_H120\\ehe_5e9_workflow.py": "a99ccaffb47b66c550567f234ed589c5ac4f02658465779d7a989dfe31d49b03",
+    "experiments\\ELLIPSE500x300_H120\\ehe_5e10_workflow.py": "f4b0288925f12e671f9b122f3c99d46a3d2cc52b63ddcc8c97256a2883c367a4",
+    "experiments\\ELLIPSE500x300_H120\\ehe_forward_poisson_workflow.py": "adef57c9af35e70f18c5b591c52380b30588647c8d1a90a879d095c86968074b",
+    "experiments\\ELLIPSE500x300_H120\\ehe_forward_poisson_5e10_workflow.py": "911afceff9746a8f47c999f542509fbf89f1cf1233b5a569f5600790811a6426",
+    "experiments\\ELLIPSE500x300_H120\\nema_roi_policy.py": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+    "experiments\\ELLIPSE500x300_H120\\reconstruction_output_policy.py": "ea8fc629cd3f01629ab07277ee8961b821e20499e79067048757305fa37b6fa8",
+    "experiments\\ELLIPSE500x300_H120\\test_nema_current_policy.py": "8c86917be42f07c0551890c5bbdb8d35a3e42ee433f0c48584b9ce787f603056"
+  },
+  "syntax_files_passed": 16,
+  "source_body_newlines": "Read as text with CRLF normalized to LF on both sides; final execution file SHA separately recorded"
+}

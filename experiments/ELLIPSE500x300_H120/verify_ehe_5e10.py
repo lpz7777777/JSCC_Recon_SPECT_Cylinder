@@ -3,6 +3,7 @@ import argparse,math,re
 from pathlib import Path
 import numpy as np
 from ehe_common import *
+from reconstruction_output_policy import accepted_channels
 
 def source_macro_matches(original,actual):
     # The frozen launcher reads ASCII text and writes it on Linux. Only newline
@@ -67,7 +68,8 @@ def verify(result,release,responses,counts,accounting,transport_accounting):
     if not stage_completed(accounting,run['allocation']['job']):raise ValueError('Imaging has not actually completed')
     release_manifest=read(release/'release_manifest.json');verify_files(release,release_manifest['sha256'])
     if run['release_key']!=release_manifest['release_key']:raise ValueError('Release differs')
-    if run['channels']!=list(CHANNELS) or run['geometry_sha256']!=digest(release/'whole_geometry.npz'):raise ValueError('Channel/whole geometry identity differs')
+    channels=accepted_channels(run,read(release/'config.json'),CHANNELS)
+    if run['geometry_sha256']!=digest(release/'whole_geometry.npz'):raise ValueError('Whole geometry identity differs')
     if run['baseline_helper_sha256']!={n:digest(release/n) for n in ('torch_active_operator.py','single_checkpoint_mlem.py')}:raise ValueError('Frozen MLEM helper identity differs')
     collection=verify_counts(counts,release);config=read(release/'config.json')
     if collection['job']!=config['transport_job']:raise ValueError('Registered actual transport job differs')
@@ -87,7 +89,7 @@ def verify(result,release,responses,counts,accounting,transport_accounting):
         s=np.fromfile(responses/name/'S_active.float64','<f8')
         if s.shape!=(78920,) or np.any(~np.isfinite(s)) or np.any(s<=0):raise ValueError('Sensitivity invalid')
     g=np.load(release/'whole_geometry.npz');active=g['active_indices'];frames=run['iterations']//10;hist={};checkpoints=[]
-    for channel in CHANNELS:
+    for channel in channels:
         path=result/f'Image_{channel}_history.float32'
         if path.stat().st_size!=frames*78920*4:raise ValueError('History length differs')
         h=np.fromfile(path,'<f4').reshape(frames,78920);hist[channel]=h
@@ -103,7 +105,7 @@ def verify(result,release,responses,counts,accounting,transport_accounting):
             expected=np.zeros(132040,'<f4');expected[active]=h[i]
             if not np.array_equal(a,h[i]) or not np.array_equal(f,expected):raise ValueError('Complete checkpoint/support domain mismatch')
             checkpoints.append(dict(channel=channel,iteration=m['iteration'],sha256=digest(folder/'manifest.json')))
-    if not np.array_equal(hist[CHANNELS[2]],hist[CHANNELS[0]]+hist[CHANNELS[1]]):raise ValueError('Combined sum differs')
+    if CHANNELS[2] in channels and not np.array_equal(hist[CHANNELS[2]],hist[CHANNELS[0]]+hist[CHANNELS[1]]):raise ValueError('Historical combined sum differs')
     if run['mode']=='validation':
         if len(run['tests'])!=2 or any(not math.isfinite(v['l2']) or not math.isfinite(v['adjoint_relative_error']) or v['l2']>1e-5 or v['adjoint_relative_error']>1e-5 or not v['history_equal'] for v in run['tests'].values()):raise ValueError('Actual numerical checks missing/failed')
     if not any(line.split('|')[:3]==[str(run['allocation']['job']),'COMPLETED','0:0'] for line in accounting.splitlines()):raise ValueError('Actual successful exit required')
@@ -118,10 +120,10 @@ def verify(result,release,responses,counts,accounting,transport_accounting):
     if not run['allocation']['imaging_allocation_certificate'] or allocated_bytes(run['allocation']['scontrol'])!=run['allocation']['host_allocated_bytes']:raise ValueError('Actual imaging memory allocation identity differs')
     if len(run['resources'])!=2*frames or any(not math.isfinite(v['rss_fraction']) or not math.isfinite(v['gpu_reserved_fraction']) or v['rss_fraction']>.8 or v['gpu_reserved_fraction']>.8 or v['gpu_reserved_peak_bytes']<=0 or v['gpu_total_bytes']<=0 for v in run['resources']):raise MemoryError('Runtime resource proof failed')
     closure=operator_closure(result,release,responses,g)
-    return dict(passed=True,mode=run['mode'],release_key=run['release_key'],frames_per_channel=frames,checkpoints=checkpoints,
+    return dict(passed=True,mode=run['mode'],release_key=run['release_key'],channels=list(channels),output_policy=run.get('output_policy'),frames_per_channel=frames,checkpoints=checkpoints,
         iterations=run['iterations'],counts_sha256=run['counts_sha256'],data_kind=run['data_kind'],physical_calibration_claim=False,factor_sha256=run['factor_sha256'],
         phase_seconds=run['phase_seconds'],slurm_maxrss_bytes=maxrss,accounting=accounting,operator_closure=closure,
-        verification_source_sha256={n:digest(HERE/n) for n in ('verify_ehe_5e10.py','ehe_common.py','ehe_5e10_transport.py')},files=hashes(result),transport_closure=transport_closure)
+        verification_source_sha256={n:digest(HERE/n) for n in ('verify_ehe_5e10.py','ehe_common.py','ehe_5e10_transport.py','reconstruction_output_policy.py')},files=hashes(result),transport_closure=transport_closure)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()

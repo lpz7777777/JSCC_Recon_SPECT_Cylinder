@@ -1,0 +1,121 @@
+{
+  "policy_id": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "pitch_mm": 3,
+  "sphere_rule": "center distance <= radius - 1.5 mm",
+  "sphere_center_margin_mm": 1.5,
+  "extra_erosion_mm": 0,
+  "sphere_cube_corners_may_cross_surface": true,
+  "background_rule": "whole voxel strictly inside inner body; no contact/intersection with any sphere or lung cylinder",
+  "background_shared_by_all_spheres": true,
+  "background_voxels": 97604,
+  "background_std_ddof": 1,
+  "lung_excluded": true,
+  "boundary_contact_excluded_from_background": true,
+  "background_z_centers_mm": [
+    -25.5,
+    -22.5,
+    -19.5,
+    -16.5,
+    -13.5,
+    -10.5,
+    -7.5,
+    -4.5,
+    -1.5,
+    1.5,
+    4.5,
+    7.5,
+    10.5,
+    13.5,
+    16.5,
+    19.5,
+    22.5,
+    25.5
+  ],
+  "background_mask_sha256": "917c9988880c592d17314e040133feebe241ad3b966f4e105efd27b0130c5f35",
+  "spheres": [
+    {
+      "diameter_mm": 10,
+      "energy_keV": 218,
+      "center_mm": [
+        57.0,
+        0.0,
+        0.0
+      ],
+      "voxels": 8,
+      "mask_sha256": "f6a10e6d9ba3e3d158bed4c67ab5f58be4aecd05fb8613bc964cf1e422a707bc",
+      "truth_fraction_min": 1.0,
+      "sampled_truth_hot_mean": 10.0,
+      "sampled_truth_crc": 1.0
+    },
+    {
+      "diameter_mm": 13,
+      "energy_keV": 440,
+      "center_mm": [
+        28.500000000000007,
+        49.363448015713,
+        0.0
+      ],
+      "voxels": 20,
+      "mask_sha256": "2c6bcfa9718a597254c23d6d2904a2e0ce72c826a70b975302788d60d79637c1",
+      "truth_fraction_min": 0.990234375,
+      "sampled_truth_hot_mean": 9.97890625,
+      "sampled_truth_crc": 0.9976562499999999
+    },
+    {
+      "diameter_mm": 17,
+      "energy_keV": 218,
+      "center_mm": [
+        -28.499999999999986,
+        49.363448015713004,
+        0.0
+      ],
+      "voxels": 60,
+      "mask_sha256": "800f96ccc1edd252231dbd529e0a7904acbcefcf2ae5aa491eeb875e2b458c62",
+      "truth_fraction_min": 0.958984375,
+      "sampled_truth_hot_mean": 9.935546875,
+      "sampled_truth_crc": 0.9928385416666666
+    },
+    {
+      "diameter_mm": 22,
+      "energy_keV": 440,
+      "center_mm": [
+        -57.0,
+        6.980486755139913e-15,
+        0.0
+      ],
+      "voxels": 136,
+      "mask_sha256": "3e7ccde6a8d12ed513963a5818149827d3e0d42d8ad3f6e7f853b4870d811f36",
+      "truth_fraction_min": 1.0,
+      "sampled_truth_hot_mean": 10.0,
+      "sampled_truth_crc": 1.0
+    },
+    {
+      "diameter_mm": 28,
+      "energy_keV": 218,
+      "center_mm": [
+        -28.500000000000025,
+        -49.363448015713,
+        0.0
+      ],
+      "voxels": 312,
+      "mask_sha256": "cdf5fbcbef88c3b50faaeb42441f6dfb5bf0daf2e0e5b7857bcec1e50b8fc843",
+      "truth_fraction_min": 0.958984375,
+      "sampled_truth_hot_mean": 9.978590745192308,
+      "sampled_truth_crc": 0.9976211939102565
+    },
+    {
+      "diameter_mm": 37,
+      "energy_keV": 440,
+      "center_mm": [
+        28.500000000000007,
+        -49.363448015713,
+        0.0
+      ],
+      "voxels": 772,
+      "mask_sha256": "31903a50b41793e4a8395ab4055f2557083108d324254fbd901f1ee7b59a57ff",
+      "truth_fraction_min": 0.958984375,
+      "sampled_truth_hot_mean": 9.985063147668393,
+      "sampled_truth_crc": 0.9983403497409326
+    }
+  ]
+}

@@ -48,3 +48,9 @@ experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/*.pdf binary
 experiments/ELLIPSE500x300_H120/HISTORY_20261010.md -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/HISTORY_20261010.md -text whitespace=cr-at-eol
 tools/research/*.py -text whitespace=cr-at-eol
+
+# Current ROI definitions, independent measurements and source-bound QA.
+experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/nema_roi_policy.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reconstruction_output_policy.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/test_nema_current_policy.py -text whitespace=cr-at-eol

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "all_iteration_rows_checked": 972,
+  "all_sphere_rows_checked": 5832,
+  "independent_method": "One sparse Cartesian-query operator; independent ROI reductions from original active histories; no full-image export",
+  "maximum_scaled_absolute_difference": 0.0,
+  "tolerance": 1e-06,
+  "source_and_derived_SHA_passed": true,
+  "scientific_acceptance_sha256": "68f2380a08fe0ab63247e2f2ac8d70a1aae596c7e599ed262facc578ab77497a",
+  "verifier_sha256": "db69c4de84ee721a29e39250dc6c025edece7ee00cdad63052d2e9089122d851",
+  "elapsed_seconds": 1.3279999997466803,
+  "reconstruction_run": false,
+  "transport_run": false,
+  "cross_energy_sum_images_computed": 0
+}

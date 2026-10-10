@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 
 from ehe_common import DATA, HERE, REPORT, RESPONSES, digest, read, verify_files, write
+from reconstruction_output_policy import EHE_CHANNELS, POLICY_ID as OUTPUT_POLICY
 
 
 def binding():
@@ -57,22 +58,30 @@ def setup():
     # The solve, saved-history loop and fixed-background construction stay exact.
     def core(path):
         text = Path(path).read_text(encoding='utf-8')
-        return text.split('    out.mkdir', 1)[1].split('    record=dict', 1)[0]
+        solve = text.split('    out.mkdir', 1)[1]
+        return solve.split('    h440=np.memmap', 1)[0] if '    h440=np.memmap' in solve else solve.split('    record=dict', 1)[0]
     if core(original / 'run_ehe_reconstruction.py') != core(HERE / 'run_ehe_reconstruction.py'):
         raise ValueError('Original scientific reconstruction body changed')
     if digest(original / 'run_ehe_reconstruction.py') != scientific['sha256']['run_ehe_reconstruction.py']:
         raise ValueError('Original producer reconstruction source changed')
     sources = {n: scientific['sha256'][n] for n in baseline_names}
-    sources.update({n: digest(HERE / n) for n in ('run_ehe_reconstruction.py', 'ehe_execution_policy.py')})
+    sources.update({n: digest(HERE / n) for n in ('run_ehe_reconstruction.py', 'ehe_execution_policy.py', 'reconstruction_output_policy.py')})
+    config = read(original / 'config.json')
+    config.update(output_channels=list(EHE_CHANNELS), output_policy=OUTPUT_POLICY)
+    config_bytes = (json.dumps(config, indent=2, allow_nan=False) + '\n').encode()
+    sources['config.json'] = hashlib.sha256(config_bytes).hexdigest()
     sources['physical_continuation_policy.json'] = digest(policy)
     identity = dict(sha256=sources, producer_release_key=scientific['release_key'],
                     producer_manifest_sha256=digest(REPORT / 'response_repair_freeze.json'),
                     scientific_reconstruction_body_sha256=hashlib.sha256(core(original / 'run_ehe_reconstruction.py').encode()).hexdigest(),
-                    scope='Human continuation policy only; original MLEM, geometry, matrices and fixed-background method')
+                    scope='Original MLEM, geometry, matrices and fixed background; separate 218/440 outputs, no cross-energy image sum')
     key = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()[:16]
     payload = DATA / 'reconstruction_releases' / key
     payload.mkdir(parents=True, exist_ok=False)
     for name in sources:
+        if name == 'config.json':
+            (payload / name).write_bytes(config_bytes)
+            continue
         source = policy if name == 'physical_continuation_policy.json' else (
             original / name if name in baseline_names else HERE / name)
         shutil.copy2(source, payload / name)

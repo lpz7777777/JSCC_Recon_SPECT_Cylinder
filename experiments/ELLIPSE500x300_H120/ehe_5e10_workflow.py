@@ -3,6 +3,7 @@ import argparse, contextlib, hashlib, json, math, os, shutil, sys, time
 from pathlib import Path
 from ehe_common import HERE, MATY_BASE, GPU_BASE, GPU_PYTHON, RESPONSES
 from ehe_common import read, write, digest, hashes, verify_files
+from reconstruction_output_policy import EHE_CHANNELS, POLICY_ID as OUTPUT_POLICY
 from ehe_5e9_workflow import connection, command, q, put_tree, env_cpu, env_gpu
 from ehe_5e10_transport import STUDY, TOTAL, WORKERS, PER_VIEW, PER_WORKER, SEED_BASE
 from ehe_5e10_transport import extract, verify_counts
@@ -269,13 +270,13 @@ def gpu_freeze():
         source_basis='Original 3mm 3D Xcat cuboids, full-sphere isotropic Geant4 photons',
         reconstruction_basis='Original full Polar volume-weighted density operator',
         background_source='This independent acquisition final440 single200 image, fixed additive Poisson term',
-        initial_density=1,regularization=None,
+        initial_density=1,regularization=None,output_channels=list(EHE_CHANNELS),output_policy=OUTPUT_POLICY,
         human_continuation='User explicitly continued original method despite existing response discrepancy; no physical calibration claim')
     payload=DATA/'payload';payload.mkdir(parents=True,exist_ok=False)
     # CPU worker execution bytes remain untouched. They also validate the exact
     # same receipts on the reconstruction host and during independent acceptance.
     shutil.copy2(DATA/cpu['payload_dir']/'ehe_5e10_transport.py',payload/'ehe_5e10_transport.py')
-    for name in ('run_ehe_5e10_reconstruction.py','verify_ehe_5e10.py','ehe_slurm_status.py'):
+    for name in ('run_ehe_5e10_reconstruction.py','verify_ehe_5e10.py','ehe_slurm_status.py','reconstruction_output_policy.py'):
         shutil.copy2(HERE/name,payload/name)
     for name in ('ehe_common.py','torch_active_operator.py','single_checkpoint_mlem.py','whole_geometry.npz','truth_3mm.npz'):
         if digest(old_payload/name)!=old['sha256'][name]:raise ValueError('Original complete execution helper/source identity differs')
@@ -360,6 +361,7 @@ def verification_release(c,f):
     if path.exists():return read(path)
     source=DATA/f['payload_dir'];folder=DATA/'verification_payload';folder.mkdir(exist_ok=False)
     names=['ehe_common.py','torch_active_operator.py','ehe_5e10_transport.py','verify_ehe_5e10.py','ehe_slurm_status.py']
+    if (source/'reconstruction_output_policy.py').exists():names.append('reconstruction_output_policy.py')
     if f.get('input_storage')=='node_local_archive':names.append('ehe_5e10_archive_input.py')
     for name in names:
         shutil.copy2(source/name,folder/name)

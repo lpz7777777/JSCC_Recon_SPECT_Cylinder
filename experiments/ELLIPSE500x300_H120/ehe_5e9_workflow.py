@@ -467,7 +467,7 @@ def fetch(mode):
         # Freeze a separate read-only acceptance bundle. Never overwrite sources
         # in the release used by the running or completed simulation/response job.
         import hashlib,json,shutil
-        check_sources={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py','ehe_execution_policy.py')}
+        check_sources={n:digest(HERE/n) for n in ('verify_ehe.py','ehe_common.py','ehe_execution_policy.py','reconstruction_output_policy.py')}
         sources=dict(check_sources,**{'ehe_acceptance_driver.py':digest(HERE/'ehe_acceptance_driver.py')})
         key=hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()[:16]
         audit=DATA/'verification_releases'/key;audit.mkdir(parents=True,exist_ok=True)

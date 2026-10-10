@@ -11,6 +11,7 @@ import time
 
 import numpy as np
 from ehe_common import HERE, GPU_BASE, digest, hashes, read, write, verify_files
+from reconstruction_output_policy import EHE_CHANNELS, POLICY_ID as OUTPUT_POLICY
 import ehe_forward_poisson_workflow as original
 from ehe_forward_poisson_5e10_data import STUDY, dose_budget, verify_counts
 from ehe_5e10_workflow import pid_alive
@@ -57,7 +58,7 @@ def freeze():
         raise ValueError('New independent noise seeds required')
     config.update(study=STUDY, expected_emitted_photons=DOSE,
                   noise_seeds=SEEDS, physical_calibration_claim=False,
-                  transport_performed=False,
+                  transport_performed=False,output_channels=list(EHE_CHANNELS),output_policy=OUTPUT_POLICY,
                   human_instruction='New EHE5e10 matrix-forward plus independent Poisson noise; original MLEM200')
     payload = DATA / 'payload'
     payload.mkdir(parents=True, exist_ok=False)
@@ -69,6 +70,9 @@ def freeze():
     if data_source != (HERE / 'ehe_forward_poisson_5e10_data.py').read_bytes():
         raise ValueError('Local5e10 adapter differs from the bounded accepted source')
     (payload / 'ehe_forward_poisson_data.py').write_bytes(data_source)
+    # New output contract only; the historical release above remains untouched.
+    for name in ('run_ehe_forward_poisson.py','verify_ehe_forward_poisson.py','reconstruction_output_policy.py'):
+        shutil.copy2(HERE / name, payload / name)
     write(payload / 'config.json', config)
     budget = dose_budget(np.load(payload / 'truth_3mm.npz'), config)
     if not math.isclose(budget['expected_emitted_photons'], DOSE, rel_tol=1e-13):
@@ -77,7 +81,7 @@ def freeze():
                         .29380779868182727, rel_tol=1e-13):
         raise ValueError('Actual3D source integral/gamma-yield fraction differs')
     preserved = {n: digest(payload / n) for n in previous['sha256']
-                 if n not in ('config.json', 'ehe_forward_poisson_data.py')}
+                 if n not in ('config.json', 'ehe_forward_poisson_data.py', 'run_ehe_forward_poisson.py', 'verify_ehe_forward_poisson.py', 'reconstruction_output_policy.py')}
     if any(s != previous['sha256'][n] for n, s in preserved.items()):
         raise ValueError('Original scientific runner/operator/verifier/source changed')
     files = hashes(payload)
