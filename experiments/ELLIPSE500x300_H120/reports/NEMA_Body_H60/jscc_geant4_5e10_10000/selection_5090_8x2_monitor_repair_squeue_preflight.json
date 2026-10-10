@@ -1,0 +1,14 @@
+{
+  "submitted": false,
+  "job_registration_created": false,
+  "release_uploaded": false,
+  "preflight_release_key": "2a119d1a87e3b181",
+  "reason": "Final job1686450 purged from squeue; direct query rejects completed job ID. Use account queue plus final sacct instead.",
+  "registration": {
+    "pid": 11632,
+    "status": "complete",
+    "started_epoch": 1791640643.5021672,
+    "exit_code": 1,
+    "finished_epoch": 1791640646.025877
+  }
+}

@@ -1,0 +1,496 @@
+cuda-12.9 loaded successful
+6: [rank12]: Traceback (most recent call last):
+6: [rank12]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+6: [rank12]:     if __name__=='__main__':main()
+6: [rank12]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+6: [rank12]:     rank,world,local,device=setup()
+6: [rank12]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+6: [rank12]:     _monitor=DeviceMonitor(device)
+6: [rank12]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+6: [rank12]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+6: [rank12]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+6: [rank12]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+6: [rank12]: ValueError: Allocated GPU UUID missing from measured memory evidence
+6: [rank13]: Traceback (most recent call last):
+6: [rank13]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+6: [rank13]:     if __name__=='__main__':main()
+6: [rank13]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+6: [rank13]:     rank,world,local,device=setup()
+6: [rank13]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+6: [rank13]:     _monitor=DeviceMonitor(device)
+6: [rank13]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+6: [rank13]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+6: [rank13]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+6: [rank13]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+6: [rank13]: ValueError: Allocated GPU UUID missing from measured memory evidence
+3: [rank7]: Traceback (most recent call last):
+3: [rank7]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+3: [rank7]:     if __name__=='__main__':main()
+3: [rank7]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+3: [rank7]:     rank,world,local,device=setup()
+3: [rank7]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+3: [rank7]:     _monitor=DeviceMonitor(device)
+3: [rank7]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+3: [rank7]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+3: [rank7]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+3: [rank7]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+3: [rank7]: ValueError: Allocated GPU UUID missing from measured memory evidence
+7: [rank15]: Traceback (most recent call last):
+7: [rank15]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+7: [rank15]:     if __name__=='__main__':main()
+7: [rank15]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+7: [rank15]:     rank,world,local,device=setup()
+7: [rank15]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+7: [rank15]:     _monitor=DeviceMonitor(device)
+7: [rank15]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+7: [rank15]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+7: [rank15]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+7: [rank15]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+7: [rank15]: ValueError: Allocated GPU UUID missing from measured memory evidence
+7: [rank14]: Traceback (most recent call last):
+7: [rank14]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+7: [rank14]:     if __name__=='__main__':main()
+7: [rank14]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+7: [rank14]:     rank,world,local,device=setup()
+7: [rank14]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+7: [rank14]:     _monitor=DeviceMonitor(device)
+7: [rank14]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+7: [rank14]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+7: [rank14]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+7: [rank14]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+7: [rank14]: ValueError: Allocated GPU UUID missing from measured memory evidence
+3: [rank6]: Traceback (most recent call last):
+3: [rank6]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+3: [rank6]:     if __name__=='__main__':main()
+3: [rank6]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+3: [rank6]:     rank,world,local,device=setup()
+3: [rank6]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+3: [rank6]:     _monitor=DeviceMonitor(device)
+3: [rank6]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+3: [rank6]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+3: [rank6]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+3: [rank6]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+3: [rank6]: ValueError: Allocated GPU UUID missing from measured memory evidence
+4: [rank9]: Traceback (most recent call last):
+4: [rank9]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+4: [rank9]:     if __name__=='__main__':main()
+4: [rank9]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+4: [rank9]:     rank,world,local,device=setup()
+4: [rank9]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+4: [rank9]:     _monitor=DeviceMonitor(device)
+4: [rank9]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+4: [rank9]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+4: [rank9]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+4: [rank9]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+4: [rank9]: ValueError: Allocated GPU UUID missing from measured memory evidence
+6: [rank12]:[W1010 21:45:57.723357309 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+5: [rank10]: Traceback (most recent call last):
+5: [rank10]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+5: [rank10]:     if __name__=='__main__':main()
+5: [rank10]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+5: [rank10]:     rank,world,local,device=setup()
+5: [rank10]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+5: [rank10]:     _monitor=DeviceMonitor(device)
+5: [rank10]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+5: [rank10]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+5: [rank10]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+5: [rank10]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+5: [rank10]: ValueError: Allocated GPU UUID missing from measured memory evidence
+2: [rank4]: Traceback (most recent call last):
+2: [rank4]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+2: [rank4]:     if __name__=='__main__':main()
+2: [rank4]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+2: [rank4]:     rank,world,local,device=setup()
+2: [rank4]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+2: [rank4]:     _monitor=DeviceMonitor(device)
+2: [rank4]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+2: [rank4]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+2: [rank4]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+2: [rank4]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+2: [rank4]: ValueError: Allocated GPU UUID missing from measured memory evidence
+5: [rank11]: Traceback (most recent call last):
+5: [rank11]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+5: [rank11]:     if __name__=='__main__':main()
+5: [rank11]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+5: [rank11]:     rank,world,local,device=setup()
+5: [rank11]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+5: [rank11]:     _monitor=DeviceMonitor(device)
+5: [rank11]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+5: [rank11]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+5: [rank11]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+5: [rank11]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+5: [rank11]: ValueError: Allocated GPU UUID missing from measured memory evidence
+2: [rank5]: Traceback (most recent call last):
+2: [rank5]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+2: [rank5]:     if __name__=='__main__':main()
+2: [rank5]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+2: [rank5]:     rank,world,local,device=setup()
+2: [rank5]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+2: [rank5]:     _monitor=DeviceMonitor(device)
+2: [rank5]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+2: [rank5]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+2: [rank5]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+2: [rank5]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+2: [rank5]: ValueError: Allocated GPU UUID missing from measured memory evidence
+4: [rank8]: Traceback (most recent call last):
+4: [rank8]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+4: [rank8]:     if __name__=='__main__':main()
+4: [rank8]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+4: [rank8]:     rank,world,local,device=setup()
+4: [rank8]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+4: [rank8]:     _monitor=DeviceMonitor(device)
+4: [rank8]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+4: [rank8]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+4: [rank8]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+4: [rank8]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+4: [rank8]: ValueError: Allocated GPU UUID missing from measured memory evidence
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+0: [rank1]:     if __name__=='__main__':main()
+0: [rank1]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+0: [rank1]:     rank,world,local,device=setup()
+0: [rank1]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+0: [rank1]:     _monitor=DeviceMonitor(device)
+0: [rank1]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+0: [rank1]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+0: [rank1]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+0: [rank1]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+0: [rank1]: ValueError: Allocated GPU UUID missing from measured memory evidence
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+0: [rank0]:     if __name__=='__main__':main()
+0: [rank0]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+0: [rank0]:     rank,world,local,device=setup()
+0: [rank0]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+0: [rank0]:     _monitor=DeviceMonitor(device)
+0: [rank0]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+0: [rank0]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+0: [rank0]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+0: [rank0]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+0: [rank0]: ValueError: Allocated GPU UUID missing from measured memory evidence
+1: [rank3]: Traceback (most recent call last):
+1: [rank3]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+1: [rank3]:     if __name__=='__main__':main()
+1: [rank3]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+1: [rank3]:     rank,world,local,device=setup()
+1: [rank3]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+1: [rank3]:     _monitor=DeviceMonitor(device)
+1: [rank3]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+1: [rank3]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+1: [rank3]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+1: [rank3]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+1: [rank3]: ValueError: Allocated GPU UUID missing from measured memory evidence
+1: [rank2]: Traceback (most recent call last):
+1: [rank2]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 94, in <module>
+1: [rank2]:     if __name__=='__main__':main()
+1: [rank2]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py", line 25, in main
+1: [rank2]:     rank,world,local,device=setup()
+1: [rank2]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 40, in setup
+1: [rank2]:     _monitor=DeviceMonitor(device)
+1: [rank2]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 18, in __init__
+1: [rank2]:     self.sample();self.thread=threading.Thread(target=self.loop,daemon=True);self.thread.start()
+1: [rank2]:   File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_runtime.py", line 22, in sample
+1: [rank2]:     if len(values)!=1:raise ValueError('Allocated GPU UUID missing from measured memory evidence')
+1: [rank2]: ValueError: Allocated GPU UUID missing from measured memory evidence
+7: [rank14]:[W1010 21:45:57.138689936 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+3: [rank6]:[W1010 21:45:57.690670981 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+2: [rank4]:[W1010 21:45:57.311213021 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+0: [rank0]:[W1010 21:45:57.798124181 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+4: [rank8]:[W1010 21:45:57.620522645 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+5: [rank10]:[W1010 21:45:57.063860429 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+1: [rank2]:[W1010 21:45:57.791537488 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+6: W1010 21:45:57.681492 1275663 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1275987 closing signal SIGTERM
+7: W1010 21:45:57.705712 3923896 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3923913 closing signal SIGTERM
+6: E1010 21:45:57.717414 1275663 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 1275986) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+6: Traceback (most recent call last):
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+6:     return _run_code(code, main_globals, None,
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+6:     exec(code, run_globals)
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+7: E1010 21:45:57.746519 3923896 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 3923912) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+7: Traceback (most recent call last):
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+7:     return _run_code(code, main_globals, None,
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+7:     exec(code, run_globals)
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+3: W1010 21:45:57.792555 916509 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 916537 closing signal SIGTERM
+5: W1010 21:45:57.808151 3759779 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3759819 closing signal SIGTERM
+0: W1010 21:45:57.808708 2188700 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2188734 closing signal SIGTERM
+0: E1010 21:45:57.819527 2188700 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 1 (pid: 2188735) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+0: Traceback (most recent call last):
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+0:     return _run_code(code, main_globals, None,
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+2: E1010 21:45:57.813328 829240 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 829250) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+0:     exec(code, run_globals)
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+2: Traceback (most recent call last):
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+0:     main()
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+1: W1010 21:45:57.814347 3928980 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3928984 closing signal SIGTERM
+2:     return _run_code(code, main_globals, None,
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+0:     return f(*args, **kwargs)
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+2:     exec(code, run_globals)
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+0:     run(args)
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+0:     elastic_launch(
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+2:     main()
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-10-10_21:45:57
+0:   host      : wqd10nah09g4
+0:   rank      : 1 (local_rank: 1)
+0:   exitcode  : 1 (pid: 2188735)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+2:     return f(*args, **kwargs)
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+2:     run(args)
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+2:     elastic_launch(
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+1: E1010 21:45:57.856227 3928980 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 3928983) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+1: Traceback (most recent call last):
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+1:     return _run_code(code, main_globals, None,
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+1:     exec(code, run_globals)
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+4: W1010 21:45:57.857590 4158757 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 4158778 closing signal SIGTERM
+3: E1010 21:45:57.861704 916509 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 1 (pid: 916538) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+3: Traceback (most recent call last):
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+3:     return _run_code(code, main_globals, None,
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+3:     exec(code, run_globals)
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+6:     main()
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+1:     main()
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+3:     main()
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+7:     main()
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+5: E1010 21:45:57.876453 3759779 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 1 (pid: 3759820) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+5: Traceback (most recent call last):
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+5:     return _run_code(code, main_globals, None,
+7:     return f(*args, **kwargs)
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+5:     exec(code, run_globals)
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+7:     run(args)
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+5:     main()
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+7:     elastic_launch(
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+7:     return launch_agent(self._config, self._entrypoint, list(args))
+7:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+7:     raise ChildFailedError(
+7: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+7: ============================================================
+7: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+7: ------------------------------------------------------------
+7: Failures:
+7:   <NO_OTHER_FAILURES>
+7: ------------------------------------------------------------
+7: Root Cause (first observed failure):
+7: [0]:
+7:   time      : 2026-10-10_21:45:57
+7:   host      : wqd10nbl11g5
+7:   rank      : 14 (local_rank: 0)
+7:   exitcode  : 1 (pid: 3923912)
+7:   error_file: <N/A>
+7:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+7: ============================================================
+2:     return launch_agent(self._config, self._entrypoint, list(args))
+2:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+2:     raise ChildFailedError(
+2: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+2: ============================================================
+2: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+2: ------------------------------------------------------------
+2: Failures:
+2: [1]:
+2:   time      : 2026-10-10_21:45:57
+2:   host      : wqd10nah10g1
+2:   rank      : 5 (local_rank: 1)
+2:   exitcode  : 1 (pid: 829251)
+2:   error_file: <N/A>
+2:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+2: ------------------------------------------------------------
+2: Root Cause (first observed failure):
+2: [0]:
+2:   time      : 2026-10-10_21:45:57
+2:   host      : wqd10nah10g1
+2:   rank      : 4 (local_rank: 0)
+2:   exitcode  : 1 (pid: 829250)
+2:   error_file: <N/A>
+2:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+2: ============================================================
+6:     return f(*args, **kwargs)
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+1:     return f(*args, **kwargs)
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+5:     return f(*args, **kwargs)
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+3:     return f(*args, **kwargs)
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+3:     run(args)
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+5:     run(args)
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+3:     elastic_launch(
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+5:     elastic_launch(
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+6:     run(args)
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+1:     run(args)
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+6:     elastic_launch(
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+1:     elastic_launch(
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+3:     return launch_agent(self._config, self._entrypoint, list(args))
+3:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+5:     return launch_agent(self._config, self._entrypoint, list(args))
+5:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+3:     raise ChildFailedError(
+5:     raise ChildFailedError(
+6:     return launch_agent(self._config, self._entrypoint, list(args))
+6:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+3: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+3: ============================================================
+3: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+3: ------------------------------------------------------------
+3: Failures:
+3:   <NO_OTHER_FAILURES>
+3: ------------------------------------------------------------
+3: Root Cause (first observed failure):
+3: [0]:
+3:   time      : 2026-10-10_21:45:57
+3:   host      : wqd10nah11g1
+3:   rank      : 7 (local_rank: 1)
+3:   exitcode  : 1 (pid: 916538)
+3:   error_file: <N/A>
+3:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+3: ============================================================
+5: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+5: ============================================================
+5: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+5: ------------------------------------------------------------
+5: Failures:
+5:   <NO_OTHER_FAILURES>
+5: ------------------------------------------------------------
+5: Root Cause (first observed failure):
+5: [0]:
+5:   time      : 2026-10-10_21:45:57
+5:   host      : wqd10nbj06g2
+5:   rank      : 11 (local_rank: 1)
+5:   exitcode  : 1 (pid: 3759820)
+5:   error_file: <N/A>
+5:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+5: ============================================================
+6:     raise ChildFailedError(
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+6: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+6: ============================================================
+6: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+6: ------------------------------------------------------------
+6: Failures:
+6:   <NO_OTHER_FAILURES>
+6: ------------------------------------------------------------
+6: Root Cause (first observed failure):
+6: [0]:
+6:   time      : 2026-10-10_21:45:57
+6:   host      : wqd10nbj06g4
+6:   rank      : 12 (local_rank: 0)
+6:   exitcode  : 1 (pid: 1275986)
+6:   error_file: <N/A>
+6:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+6: ============================================================
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-10-10_21:45:57
+1:   host      : wqd10nah09g5
+1:   rank      : 2 (local_rank: 0)
+1:   exitcode  : 1 (pid: 3928983)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+4: E1010 21:45:57.975988 4158757 /data/run01/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 4158777) of binary: /data/home/scxi717/.conda/envs/torch/bin/python
+4: Traceback (most recent call last):
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+4:     return _run_code(code, main_globals, None,
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/runpy.py", line 87, in _run_code
+4:     exec(code, run_globals)
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 905, in <module>
+4:     main()
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+4:     return f(*args, **kwargs)
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 901, in main
+4:     run(args)
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in run
+4:     elastic_launch(
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+4:     return launch_agent(self._config, self._entrypoint, list(args))
+4:   File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+4:     raise ChildFailedError(
+4: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+4: ============================================================
+4: /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/1516a532adb59f94/jscc_5e10_selection.py FAILED
+4: ------------------------------------------------------------
+4: Failures:
+4:   <NO_OTHER_FAILURES>
+4: ------------------------------------------------------------
+4: Root Cause (first observed failure):
+4: [0]:
+4:   time      : 2026-10-10_21:45:57
+4:   host      : wqd10naj09g5
+4:   rank      : 8 (local_rank: 0)
+4:   exitcode  : 1 (pid: 4158777)
+4:   error_file: <N/A>
+4:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+4: ============================================================
+srun: error: wqd10nah09g4: task 0: Exited with exit code 1
+srun: Terminating StepId=1686450.1
+srun: error: wqd10nah09g5: task 1: Terminated
+srun: error: wqd10nbj06g2: task 5: Terminated
+srun: error: wqd10nah10g1: task 2: Terminated
+srun: error: wqd10nah11g1: task 3: Terminated
+srun: error: wqd10nbj06g4: task 6: Terminated
+srun: error: wqd10naj09g5: task 4: Terminated
+srun: error: wqd10nbl11g5: task 7: Terminated
+srun: Force Terminated StepId=1686450.1

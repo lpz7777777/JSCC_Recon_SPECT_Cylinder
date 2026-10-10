@@ -1,0 +1,13 @@
+{
+  "submitted": false,
+  "release_uploaded": false,
+  "preflight_release_key": "5f17baaf6d601c8d",
+  "reason": "Preserved4090 job1686107 actually FAILED before new submission. scontrol purged its final record; preservation now uses sacct terminal identity.",
+  "registration": {
+    "pid": 38368,
+    "status": "complete",
+    "started_epoch": 1791640674.5836282,
+    "exit_code": 1,
+    "finished_epoch": 1791640696.4156258
+  }
+}

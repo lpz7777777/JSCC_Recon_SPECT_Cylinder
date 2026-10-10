@@ -1,0 +1,41 @@
+{
+  "job": 1686450,
+  "fully_exited": true,
+  "queue_empty": true,
+  "original_files": {
+    "allocation.txt": "4d2f157e44135f068da6f071e6cacaefdb54ee7aabd656a7ffd06f10c043bfa9",
+    "original.err": "ceb4425fe20f4a601a993736d733509a58f91f99ae7d4cdd51a805be175719a1",
+    "original.out": "bebfd21d9fd8300618978c1f3005f385e834dec08c8dde8f6256b3ad2ff8c9a7",
+    "sacct.txt": "878f756f388a5ac6c72aac129c5a7d6de64759a659448216e153a23884515031",
+    "scontrol.txt": "d6b4ab42252499bbf31501c68dd730ec8eb001d744eed5026655b7ce7dd62ce0",
+    "squeue.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "runtime_version_sha256": "ffe34a0b5682b29fc2ac091bcc81f73c7ab521626b1018f3b03edefbfebef3a6",
+  "all_rank_failure": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "observed_failure": "DeviceMonitor.sample could not match CUDA property UUID to nvidia-smi; failed before selection output creation.",
+  "root_state": "FAILED",
+  "root_exit_code": "15:0",
+  "compute_step_exit_code": "1:0",
+  "selection_completed": false,
+  "memory_or_event_count_conclusion": false,
+  "source_runtime_sha256": "313e69139feb14961d11dc121fd1ef21c24ceba8e2294458db2782ca786e396c",
+  "torch_uuid_string_definition": "https://github.com/pytorch/pytorch/blob/v2.8.0/torch/csrc/cuda/Module.cpp#L951",
+  "inference": "PyTorch 2.8.0 CUDA UUID string has no GPU- prefix, whereas nvidia-smi GPU UUID does; original monitor compares raw strings. Original failure log did not capture raw UUID; repair must log and strictly match both actual identities."
+}

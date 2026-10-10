@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Source/launch identity only, actual GPU execution and strict selection still pending.",
+  "freeze_sha256": "43fa6580eb017d8f24e01d3960e7cbdaa29477ac26d35e07fd2470e73b403c49",
+  "all_declared_members": 62,
+  "remote_full_sha_check": "ALL_62_DECLARED_MEMBERS_SHA_PASS\n",
+  "source_snapshots_sha256": {
+    "jscc_5e10_contract.py": "efa75407c28fc997a747b58002840765366e11f35750c5b3887d021c0be90ba0",
+    "jscc_5e10_runtime.py": "313e69139feb14961d11dc121fd1ef21c24ceba8e2294458db2782ca786e396c",
+    "jscc_5e10_selection.py": "34c7f196693e23757c2ec8a62360b99e7a8c8e41c485be8df732647813f3ce08"
+  },
+  "local_helper_matches_execution": true,
+  "original_controller_sha256": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca",
+  "original_scientific_members_preserved": 56,
+  "production_contract_and_runtime_unmodified": true
+}

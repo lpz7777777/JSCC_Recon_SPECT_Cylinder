@@ -86,3 +86,23 @@ python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_workflow.py advance
 ```
 
 不要再次执行trial submit。试跑成功退出后只读独立验收其完整筛选/资源/SHA；不可凭COMPLETED直接改主selection_job或跳过完整输入validation10。4090筛选阶段不常驻全部Compton事件响应，能运行不能证明后续完整Compton求解能在该内存配额内保留20%余量。主流程后续预算及5090提交保持原门槛。
+
+
+## 2026-10-10 21:47上海：新增独立5090 8×2筛选试跑
+
+
+2026-10-10 21:47上海用户新增授权：保留5090主筛选1685272及4090试跑1686107，另提交独立8节点×2张5090完整输入事件筛选 **1686450**。每节点16CPU、16rank、按配额自动252000MiB/节点，无显式mem。原20view/54631328原List/全部132040点/10496bin/稳定float64全圆q≤3和矩阵科学字节保持；独立试跑发布1516a532adb59f94仅适配16进程身份、资源验收和最终全行汇总。当前PENDING(Resources)，原两项PENDING(Priority)；上限4小时不是ETA。正式重建仍未提交，按实际筛选事件数及后续完整响应内存验证决定，不凭筛选RSS放行Compton重建。
+本地3项与实际Linux3项检查均通过：事件数学AST保持、输入/输出和启动隔离、实际16GPU资源身份及重复UUID/主存超80%/错误32GPU分配拒绝。原60成员中56成员原字节不变；3个拓扑副本和kernel_config另冻，源快照见selection_5090_8x2_trial_sources。整个62成员及启动脚本远端SHA闭合。首次CPU预检因测试导入本地协调器缺失失败，尚未sbatch且无intent/job；失败发布341ccb80d8345605保留。修复只使测试助手可独立导入，原错误日志/冻结/无提交证明保留，新发布不覆盖旧发布。成功Linux检查/bash/test-only只是启动验收，不是GPU物理/数值通过。
+
+后续先读三项本地PID登记，再分别运行两个trial helper的status和原workflow status/advance。不要再次执行submit，不取消原两项、不自动更换正式流程。新试跑完全成功退出后需要独立16rank只读逐行/资源验收（原32rank验证器不能原样套用），保留所有原字节和SHA。正式预算由真实选中事件数×78920×4字节/8节点，加实际运行开销推算，并再做完整输入验证；当前筛选不生成和常驻全部Compton响应。
+
+
+2026-10-10 22:06实际8×2试跑有界恢复
+
+- 1686450 root/batch FAILED/15:0，compute step1 FAILED/1:0，16rank都在DeviceMonitor.sample匹配UUID时失败，未创建筛选输出。原日志/分配/完整sacct远端前后及本地SHA闭合，保存selection_5090_8x2_trial_failure_1686450；旧1516a532adb59f94发布和原job/freeze保持。原执行helper/test另保存于selection_5090_8x2_trial_sources，原身份验收描述的是执行当时的字节。
+- 1686107 root/batch FAILED/15:0，step1 CANCELLED/0:15；这表示失败作业终止其计算步骤，不是本轮取消原作业。原4090日志严格SHA取回，确认同一UUID检查失败；保留selection_4090_trial_failure_1686107及原冻结/登记。主1685272仍PENDING，未修改其请求或脚本。
+- 远端实际torch2.8.0+cu128；其v2.8.0官方Module.cpp将UUID格式化成完整8-4-4-4-12，nvidia-smi加GPU-前缀。独立监控修复按完整非零UUID严格转换，拒绝缩写/未知/MIG/重复或缺失匹配，继续使用真实指定设备的nvidia-smi内存和原80%门槛。实际新启动16份原/规范UUID对应均通过，证据只证明启动身份，不是完整资源证书。
+- 启动控制器两个未提交的预检查候选因已终止作业被squeue/scontrol清除而退出，均未上传或提交新Slurm：本地候选freeze/launch/payload以preflight_squeue或preflight_terminal后缀保存；恢复使用账号队列和最终sacct确认完整退出及保持终态作业。相应小证明记录不代替计算验收。
+- 新唯一恢复1686507，冻结75e6ca22ffb21fa4、64份声明成员及原56份非改动成员SHA闭合；完整selection.py和16rank资源contract.py与旧试跑字节相同。7项本地/实际Linux检查通过。新恢复目录独立，原1686450没有完成的筛选阶段可复用；没有重做Geant4/响应。
+- 推进时四个PID登记都要检查：advance_registration、selection_4090_trial_registration、selection_5090_8x2_trial_registration、selection_5090_8x2_monitor_repair_registration。status助手自动优先读取最新monitor_repair_job，不再repair/submit。旧FAILED4090仅保存证据，不能让其status异常阻止新的试跑监测；原主作业继续不动。
+- 新试跑完整退出后，匹配16rank的独立只读验证发布核对全部20view/原始行/选中缓存/SHA及实际分配、逐设备/逐节点RSS和退出后Slurm MaxRSS。先保留原结果再验收，不用原32rank验证器直接声称通过。依据实际事件数和完整响应实测保留20%余量，再决定正式拓扑；目前未提交validation10或formal10000。

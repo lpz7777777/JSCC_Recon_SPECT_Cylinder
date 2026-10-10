@@ -1,0 +1,25 @@
+{
+  "job": 1686507,
+  "stage": "selection_5090_8x2_monitor_repair",
+  "host": "gpu",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/75e6ca22ffb21fa4",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_1686507",
+  "allocation": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/allocations/selection_5090_8x2_monitor_repair_1686507.txt",
+  "nodes": 8,
+  "gpus_per_node": 2,
+  "world_size": 16,
+  "partition": "gpu_5090",
+  "cpus_per_node": 16,
+  "explicit_mem_parameter": false,
+  "walltime_minutes": 240,
+  "total_limit_seconds": 14220,
+  "trial_freeze_sha256": "9fd860163a2036b7346b106fe93ea9cf9e9e7f1c8e3694aad79038bbbddf2552",
+  "script_sha256": "b996f56ed44b407c86bbe78ebdf42cb32622b6313b5f9c5b5dce68f3c0f3e669",
+  "user_authorized_parallel_trial": true,
+  "production_registry_replaced": false,
+  "preserved_jobs": {
+    "selection_job.json": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+    "selection_4090_trial_job.json": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1"
+  },
+  "submitted_epoch": 1791640925.4479327
+}

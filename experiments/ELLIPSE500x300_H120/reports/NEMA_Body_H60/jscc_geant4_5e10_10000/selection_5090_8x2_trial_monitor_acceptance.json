@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "automation_id": "jscc-5e10",
+  "status": "ACTIVE",
+  "existing_15minute_schedule_preserved": true,
+  "prompt_sha256": "d2345e64300cc8821cc14610ea34e1f4f9a492f8e558b491a5bc297f7382047e",
+  "all_three_registered_jobs_instructions_present": true,
+  "live_pid_guards": [
+    "advance_registration.json",
+    "selection_4090_trial_registration.json",
+    "selection_5090_8x2_trial_registration.json"
+  ],
+  "quiet_on_normal_waiting": true
+}

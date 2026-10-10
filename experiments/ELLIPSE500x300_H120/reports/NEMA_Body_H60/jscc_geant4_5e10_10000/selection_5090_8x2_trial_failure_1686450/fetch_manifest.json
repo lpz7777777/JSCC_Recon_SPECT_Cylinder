@@ -1,0 +1,12 @@
+{
+  "job": 1686450,
+  "files": {
+    "allocation.txt": "4d2f157e44135f068da6f071e6cacaefdb54ee7aabd656a7ffd06f10c043bfa9",
+    "original.err": "ceb4425fe20f4a601a993736d733509a58f91f99ae7d4cdd51a805be175719a1",
+    "original.out": "bebfd21d9fd8300618978c1f3005f385e834dec08c8dde8f6256b3ad2ff8c9a7",
+    "sacct.txt": "878f756f388a5ac6c72aac129c5a7d6de64759a659448216e153a23884515031",
+    "scontrol.txt": "d6b4ab42252499bbf31501c68dd730ec8eb001d744eed5026655b7ce7dd62ce0",
+    "squeue.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Failed trial logs and allocation strictly fetched; no selection acceptance."
+}

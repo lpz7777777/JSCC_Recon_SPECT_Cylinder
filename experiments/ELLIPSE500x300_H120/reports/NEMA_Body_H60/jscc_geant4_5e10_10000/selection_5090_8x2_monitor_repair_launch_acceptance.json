@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Source SHA, actual Linux CPU topology tests, bash and scheduler test-only; not actual GPU execution.",
+  "freeze_sha256": "9fd860163a2036b7346b106fe93ea9cf9e9e7f1c8e3694aad79038bbbddf2552",
+  "linux_tests_sha256": "822fecfe514274c08b41bade3cfe9affe4f2cdcc975553eac7272ae09f919afd",
+  "partition_policy_sha256": "71dceaed400d741ed0f35e572b66e51820806b3a2a517186eb77f9d56368cffb",
+  "scheduler_test_only": "sbatch: Job 1686506 to start at 2032-03-16T05:34:26 using 128 processors on nodes wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4] in partition gpu_5090\n",
+  "script_sha256": "b996f56ed44b407c86bbe78ebdf42cb32622b6313b5f9c5b5dce68f3c0f3e669"
+}

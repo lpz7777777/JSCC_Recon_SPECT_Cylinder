@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "job": 1686507,
+  "captured_epoch": 1791641106.502186,
+  "scope": "Actual initial16GPU UUID matching only, running log snapshot; no complete selection/resource acceptance.",
+  "actual_cuda_to_nvidia_identities": [
+    {
+      "rank": 15,
+      "cuda_uuid_raw": "f402df43-d278-6368-7cbb-79c2a7313394",
+      "nvidia_uuid": "GPU-f402df43-d278-6368-7cbb-79c2a7313394",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 14,
+      "cuda_uuid_raw": "0c979e7e-167c-ed77-a8aa-9ca232f76bb8",
+      "nvidia_uuid": "GPU-0c979e7e-167c-ed77-a8aa-9ca232f76bb8",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 12,
+      "cuda_uuid_raw": "331022d2-1189-487c-cdb5-2a2590f36eab",
+      "nvidia_uuid": "GPU-331022d2-1189-487c-cdb5-2a2590f36eab",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 13,
+      "cuda_uuid_raw": "63667013-6794-206b-bc9e-80f12382ec26",
+      "nvidia_uuid": "GPU-63667013-6794-206b-bc9e-80f12382ec26",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 2,
+      "cuda_uuid_raw": "684bcf60-03ca-538d-8d0c-cae7b2c973a6",
+      "nvidia_uuid": "GPU-684bcf60-03ca-538d-8d0c-cae7b2c973a6",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 0,
+      "cuda_uuid_raw": "e5cb8a1c-4aed-647b-e9f4-df8866c53023",
+      "nvidia_uuid": "GPU-e5cb8a1c-4aed-647b-e9f4-df8866c53023",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 3,
+      "cuda_uuid_raw": "5d3de7a1-82d7-14fa-7619-59548deb4e4f",
+      "nvidia_uuid": "GPU-5d3de7a1-82d7-14fa-7619-59548deb4e4f",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 1,
+      "cuda_uuid_raw": "c7e048d4-a14e-eb6a-3563-57e3e6c5db1c",
+      "nvidia_uuid": "GPU-c7e048d4-a14e-eb6a-3563-57e3e6c5db1c",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 5,
+      "cuda_uuid_raw": "64e4e774-7149-2afb-d173-e4f009ec2b96",
+      "nvidia_uuid": "GPU-64e4e774-7149-2afb-d173-e4f009ec2b96",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 4,
+      "cuda_uuid_raw": "5a669d58-8a36-27d3-1593-177f68310a41",
+      "nvidia_uuid": "GPU-5a669d58-8a36-27d3-1593-177f68310a41",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 6,
+      "cuda_uuid_raw": "62356ad6-da14-d78f-cf45-34fbf1d708bc",
+      "nvidia_uuid": "GPU-62356ad6-da14-d78f-cf45-34fbf1d708bc",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 7,
+      "cuda_uuid_raw": "cf37b479-d3c3-b763-b0d5-a28cb3485088",
+      "nvidia_uuid": "GPU-cf37b479-d3c3-b763-b0d5-a28cb3485088",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 11,
+      "cuda_uuid_raw": "f0138ddb-ff2f-6707-f807-2aa1dc2d63c5",
+      "nvidia_uuid": "GPU-f0138ddb-ff2f-6707-f807-2aa1dc2d63c5",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 10,
+      "cuda_uuid_raw": "41009505-7684-bc74-9b06-c6b9d5c9d89d",
+      "nvidia_uuid": "GPU-41009505-7684-bc74-9b06-c6b9d5c9d89d",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 9,
+      "cuda_uuid_raw": "65161eff-fe33-3a74-165f-3a736de4278c",
+      "nvidia_uuid": "GPU-65161eff-fe33-3a74-165f-3a736de4278c",
+      "torch_version": "2.8.0+cu128"
+    },
+    {
+      "rank": 8,
+      "cuda_uuid_raw": "55d4f248-af2b-1d1b-241f-f97fc5e7c977",
+      "nvidia_uuid": "GPU-55d4f248-af2b-1d1b-241f-f97fc5e7c977",
+      "torch_version": "2.8.0+cu128"
+    }
+  ],
+  "eight_nodes_two_visible_gpus": true,
+  "allocation_sha256": "9140283c0042cd154b02d033a50c9a3a31886a2747330f75166fb3f721f1a97c",
+  "stdout_snapshot_sha256": "d5dae542950a619228b181aad5086245470f33b721db81e5ebd8154b6963b22f",
+  "stderr_snapshot_sha256": "fd00d1913392a74f1feb074bad7a1acc86fad00c1e689f97d5b66a92529bd34f",
+  "host_allocated_bytes_per_node": 264241152000,
+  "selection_completed": false
+}

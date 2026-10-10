@@ -14,3 +14,7 @@
 - 具体实现和验收以 `nema_roi_policy.py`、`reconstruction_output_policy.py` 及最新 `reports/nema_interior_roi_20261010/README.md` 为准。真值必须来自本工程现有3D真值和登记球心。
 - 旧六路JSCC和三路EHE的冻结发布、作业登记、数组及验收记录属于历史结果，只读保留。旧比较/报告脚本用于理解历史定义；新的对比使用 `tools/research/analyze_nema_interior_roi.py`，不能重新运行旧脚本产生叠加图或旧ROI指标。新JSCC入口按当前用户明确选择的路线冻结独立合同及匹配验证器，不能沿用历史六路合同提交。
 - 先前ROI规则变更本身未授权新增计算；随后新增的JSCC5e10实验按上方最新授权独立推进。compton-v5保持暂停。
+
+- 最新用户新增并行例外：独立8×2张5090完整输入筛选1686450，16rank、每节点16CPU/自动252000MiB、无显式mem，原1685272/1686107均保持不动。最新登记selection_5090_8x2_trial_job/freeze/identity_acceptance及独立输出为准。每轮先检查advance_registration.json、selection_4090_trial_registration.json、selection_5090_8x2_trial_registration.json；任一PID存活不并行advance/fetch/submit。另运行 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_5090_8x2_trial.py status`。不重复trial submit，不自动采用试跑结果替换主selection_job；完整退出/16rank真实资源/全部原行与缓存/SHA独立验收后才评估后续方案。原生产32卡冻结未改，正式拓扑以用户后续选择与完整输入验证为准，筛选占用不是全部Compton事件响应的内存证明。
+
+- 2026-10-10 22:06最新有界恢复：1686450和1686107实际在GPU UUID监控处FAILED、已完全退出并保留原证据；原主1685272仍PENDING、原两项作业/登记没有修改或取消。新增独立monitor_repair冻结75e6ca22ffb21fa4及唯一恢复1686507实际RUNNING，仅修正完整CUDA/NVIDIA UUID字符串并捕获实际身份，原科学筛选及80%资源合同不变。四个PID（再加selection_5090_8x2_monitor_repair_registration.json）任一仍活不并行advance/fetch/submit；status助手自动优先最新恢复登记。不重复repair/submit，不覆盖旧发布/登记；只有完整筛选和匹配16rank的严格全行/资源验收才能评估后续正式内存，不能直接提交16GPU正式重建。

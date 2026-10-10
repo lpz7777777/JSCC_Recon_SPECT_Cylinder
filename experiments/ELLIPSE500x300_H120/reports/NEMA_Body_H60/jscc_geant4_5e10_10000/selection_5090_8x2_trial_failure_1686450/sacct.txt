@@ -1,0 +1,5 @@
+1686450|FAILED|15:0|00:01:52||billing=128,cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah10g1,wqd10nah11g1,wqd10naj09g5,wqd10nbj06g[2,4],wqd10nbl11g5
+1686450.batch|FAILED|15:0|00:01:52|16844K|cpu=16,gres/gpu=2,mem=252000M,node=1|wqd10nah09g4
+1686450.extern|COMPLETED|0:0|00:01:52|0|billing=128,cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah10g1,wqd10nah11g1,wqd10naj09g5,wqd10nbj06g[2,4],wqd10nbl11g5
+1686450.0|COMPLETED|0:0|00:01:15|562472K|cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah10g1,wqd10nah11g1,wqd10naj09g5,wqd10nbj06g[2,4],wqd10nbl11g5
+1686450.1|FAILED|1:0|00:00:33|1034560K|cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah10g1,wqd10nah11g1,wqd10naj09g5,wqd10nbj06g[2,4],wqd10nbl11g5

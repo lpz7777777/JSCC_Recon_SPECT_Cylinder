@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Deployment/CPU checks only; actual selection/event/resource acceptance remains pending.",
+  "job": 1686507,
+  "all_declared_members": 64,
+  "remote_full_sha_check": "ALL_64_DECLARED_MEMBERS_SHA_PASS\n",
+  "freeze_sha256": "9fd860163a2036b7346b106fe93ea9cf9e9e7f1c8e3694aad79038bbbddf2552",
+  "job_sha256": "1ad2ab9eb6f562a9c217767c0ad65b0a0da4c0bef2d816a33a228a427b66d3fe",
+  "snapshots_sha256": {
+    "jscc_5e10_contract.py": "efa75407c28fc997a747b58002840765366e11f35750c5b3887d021c0be90ba0",
+    "jscc_5e10_gpu_uuid.py": "84f6807c9766b885f1179ad5f4823880a528439bd6ca865e0b979f59742c6a75",
+    "jscc_5e10_runtime.py": "051ee1c8cabcc86a327ad72154289dde895ef62853787434839d1d4b1dee8f3b",
+    "jscc_5e10_selection.py": "34c7f196693e23757c2ec8a62360b99e7a8c8e41c485be8df732647813f3ce08"
+  },
+  "original_controller_sha256": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca",
+  "root_helper_matches_execution": true,
+  "original_1685272_1686107_1686450_registrations_unchanged": true,
+  "selection_science_identical_to_failed_trial": true,
+  "resource_contract_identical_to_failed_trial": true
+}

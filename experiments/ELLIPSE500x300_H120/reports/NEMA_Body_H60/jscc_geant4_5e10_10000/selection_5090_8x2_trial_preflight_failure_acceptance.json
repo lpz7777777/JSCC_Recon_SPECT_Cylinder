@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "CPU preflight import failure, no Slurm submission.",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/341ccb80d8345605",
+  "freeze_sha256": "df2151761800e3337332f75113d3c76e37816e690910262fcfa0c9c84f3c6eed",
+  "failure_log_sha256": "0c666a996c2fce162b9babf2573e93b0768d59d772cb304469e4365671e29c42",
+  "no_trial_job_or_submission_intent": true,
+  "registration": {
+    "pid": 12100,
+    "status": "complete",
+    "started_epoch": 1791639671.9143348,
+    "exit_code": 1,
+    "finished_epoch": 1791639793.693881
+  }
+}

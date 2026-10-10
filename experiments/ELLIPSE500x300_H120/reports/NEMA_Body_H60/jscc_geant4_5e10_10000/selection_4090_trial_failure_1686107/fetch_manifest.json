@@ -1,0 +1,15 @@
+{
+  "job": 1686107,
+  "files": {
+    "original.out": "f35e2afa932b1c0af840c2eff22e4529fde49f26fc538a326b8c734671cdfa9a",
+    "original.err": "0e5f310f276382a136580477590c7bfc6b11daa93fb03274b9fe9a5a386f52e5",
+    "allocation.txt": "4273d5b0ee611a6c9d18ac516797d44838d9d8265e2132d2878ec3b7b16a975b",
+    "sacct.txt": "3287cec1a5cee842b2c9b580381250aff63e117dc3d277ae73828bbdb3b2f882",
+    "squeue.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "passed": true,
+  "fully_exited": true,
+  "no_selection_output": true,
+  "original_job_sha256": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1",
+  "scope": "Final failed4090 trial logs strictly fetched; original job not changed."
+}

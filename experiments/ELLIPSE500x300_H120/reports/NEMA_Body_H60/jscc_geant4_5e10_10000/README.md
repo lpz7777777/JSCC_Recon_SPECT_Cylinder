@@ -28,3 +28,9 @@ GPU重建采用8节点×4卡、32进程，每节点32CPU，通过Slurm自动分�
 2026-10-10 17:48上海：配额启动修复后唯一8节点×4GPU5090事件筛选 **1685272** 已实际提交，最新selection_job/selection_latest_status及selection_launch_acceptance为准。4小时是有界Slurm上限，不是预计耗时；排队和完整输入GPU资源/数值验收尚待实际发生。
 
 2026-10-10 20:00上海：用户明确要求保持原作业不动，另用4090队列试一次。独立完整输入筛选 **1686107** 已提交gpu_4090，仍为8节点×4GPU，每节点24CPU，按配额自动请求240000MiB/节点，不指定mem；原5090主作业1685272及登记/科学发布/输入保持。两项启动隔离检查、真实bash/scheduler test-only和上传SHA通过，但实际计算和资源验收尚待发生。4090空闲卡分散，提交时仍PENDING(Priority)；4小时是上限，不是ETA。新作业只进行原事件筛选，不模拟新光子、不重新计算响应、不提交第二套重建。见 [独立登记](selection_4090_trial_job.json) 与 [启动冻结](selection_4090_trial_freeze.json)。
+
+
+2026-10-10 21:47上海用户新增授权：保留5090主筛选1685272及4090试跑1686107，另提交独立8节点×2张5090完整输入事件筛选 **1686450**。每节点16CPU、16rank、按配额自动252000MiB/节点，无显式mem。原20view/54631328原List/全部132040点/10496bin/稳定float64全圆q≤3和矩阵科学字节保持；独立试跑发布1516a532adb59f94仅适配16进程身份、资源验收和最终全行汇总。首次登记的排队快照保存在state_at_submission.json，后续真实状态以下方最新登记为准；上限4小时不是ETA。正式重建仍未提交，按实际筛选事件数及后续完整响应内存验证决定，不凭筛选RSS放行Compton重建。
+
+
+2026-10-10 22:06上海最新：独立8×2张5090恢复试跑 **1686507** 已实际RUNNING，8节点/16rank/16GPU、每节点16CPU及自动252000MiB。原1686450在筛选前因GPU UUID监控匹配失败完全退出；原4090试跑1686107也自行在同一检查处FAILED并完全退出，原5090主作业1685272仍PENDING(Priority)。原两项作业及登记均未改动或取消。新独立冻结75e6ca22ffb21fa4只修复完整CUDA UUID与nvidia-smi GPU-字符串的身份匹配并记录两种实际身份，原筛选科学代码及资源合同与失败8×2试跑逐字节一致。7项本地及实际Linux检查、64份发布成员SHA通过；实际16rank启动日志已逐一证明原CUDA UUID→GPU-UUID唯一匹配，尚未形成完整筛选/内存验收。见 [恢复登记](selection_5090_8x2_monitor_repair_job.json)、[原失败证据](selection_5090_8x2_trial_failure_1686450/failure_acceptance.json)、[实际启动身份](selection_5090_8x2_monitor_repair_startup_identity_acceptance.json)。正式重建继续按实际事件数和完整响应内存余量决定，筛选占用不能替代全部Compton响应的主存证书。

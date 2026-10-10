@@ -1,0 +1,22 @@
+test_jscc_5e10_5090_8x2_trial (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_jscc_5e10_5090_8x2_trial (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_jscc_5e10_5090_8x2_trial
+Traceback (most recent call last):
+  File "/data/home/scxi717/.conda/envs/torch/lib/python3.9/unittest/loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/341ccb80d8345605/test_jscc_5e10_5090_8x2_trial.py", line 9, in <module>
+    import jscc_5e10_5090_8x2_trial as trial
+  File "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_selection_releases/341ccb80d8345605/jscc_5e10_5090_8x2_trial.py", line 12, in <module>
+    from jscc_5e10_workflow import connection, command, q, job_state
+ModuleNotFoundError: No module named 'jscc_5e10_workflow'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+PREFLIGHT_EXIT=1

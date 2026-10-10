@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "job": 1686507,
+  "scope": "Actual submission and preservation only; GPU execution/selection acceptance pending.",
+  "job_record_sha256": "1ad2ab9eb6f562a9c217767c0ad65b0a0da4c0bef2d816a33a228a427b66d3fe",
+  "freeze_sha256": "9fd860163a2036b7346b106fe93ea9cf9e9e7f1c8e3694aad79038bbbddf2552",
+  "actual_scontrol_sha256": "f117db55d42fbd8d7482d4a6f8b1efc67e244293147854670ba0c6a50560a6f0",
+  "preserved_records": {
+    "selection_job.json": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+    "selection_4090_trial_job.json": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1"
+  },
+  "preserved_scheduler_fields": {
+    "selection_job.json": {
+      "JobId": "1685272",
+      "JobName": "JSCC5e10_selection",
+      "Partition": "gpu_5090",
+      "NumNodes": "8-8",
+      "NumCPUs": "256",
+      "NumTasks": "8",
+      "CPUs/Task": "32",
+      "ReqTRES": "cpu=256,mem=3937.50G,node=8,billing=256,gres/gpu=32",
+      "Command": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh",
+      "TimeLimit": "04:00:00",
+      "ExcNodeList": "wqd10nba06g6"
+    },
+    "selection_4090_trial_job.json": {
+      "JobId": "1686107",
+      "JobName": "JSCC5e10Trial4090",
+      "Partition": "gpu_4090",
+      "NumNodes": "8",
+      "NumCPUs": "192",
+      "NumTasks": "",
+      "ReqCPUS": "192",
+      "ReqTRES": "billing=192,cpu=192,gres/gpu=32,mem=1875G,node=8",
+      "TimeLimit": "04:00:00",
+      "State": "FAILED",
+      "ExitCode": "15:0",
+      "SubmitLine": "sbatch --parsable -p gpu_4090 --qos=gpugpu -N8 -n8 --ntasks-per-node=1 --cpus-per-task=24 --gres=gpu:4 --time=240 --exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10Trial4090 --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/selection_4090_trial.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/selection_4090_trial.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/trial_launch_releases/fd8245063b549b78/selection.sh"
+    }
+  },
+  "full_input_and_original_scientific_members_preserved": true
+}
