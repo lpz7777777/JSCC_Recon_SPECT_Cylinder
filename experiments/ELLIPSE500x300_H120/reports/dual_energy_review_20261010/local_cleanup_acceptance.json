@@ -1,0 +1,2141 @@
+{
+  "passed": true,
+  "tracked_scripts": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/ehe_5e10_finalize.py",
+      "bytes": 5394,
+      "sha256": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/ehe_forward_poisson_5e10_finalize.py",
+      "bytes": 5378,
+      "sha256": "eb138308e16f3e1de64b8d490ca322103f7f75de567641a906ec98daca1dc2ec",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/render_ehe_5e10_reviewed.py",
+      "bytes": 4049,
+      "sha256": "a8977f52351bde1e884039eb7e13f99098c560372022a6ae1de21fbf03c52300",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/review_ehe_forward_poisson_5e10_layout.py",
+      "bytes": 2742,
+      "sha256": "d7342ad46677b9fe57add2c29f6a59df0b57959da93f2089b7196b8d113fe79b",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/launch_er13_fwhm511_sum350.ps1",
+      "bytes": 1102,
+      "sha256": "d56d8ff5c47e4c052a1064df53d835c00f4430b65bd928f81aa5971ceaa90312",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/monitor_full_sensid_and_compton_validation.ps1",
+      "bytes": 2274,
+      "sha256": "edf3ebdfa671c44ee8f67a4e6e685be0714b251e6722937a2803c69e75d57022",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/run_full_sensid_and_compton_validation.ps1",
+      "bytes": 4522,
+      "sha256": "46e2aed9f44444d79ed46e1a7260e05c8a4124b464717cf7f78f83b27dd68e8c",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/watch_and_run_jscc_compton_validation.ps1",
+      "bytes": 2010,
+      "sha256": "3805145e8e037c9509eef9a2441273e731c05548f9499979483270129f5b92e1",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    }
+  ],
+  "generated_scripts": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/checkpoint_pilot3_resource.py",
+      "bytes": 1315,
+      "sha256": "0e6fab210f4572b54c4679a92cb49784ee3250dd9aceae4e96e5291996a708dc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/checkpoint_pilot_resource.py",
+      "bytes": 1448,
+      "sha256": "7800095c13c0652cd46c1e8f7fb35b617e9c410c14674497e4b5de5b1aa88811"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_array_completed.py",
+      "bytes": 502,
+      "sha256": "8d29464ee1523f0a40d53052471936f78da2546e369e26b221d0abfbde8fbaf3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_completed_stages.py",
+      "bytes": 1809,
+      "sha256": "45458cf571bf21ef37802c7ae9df11907ff5bf5d5583a4cba3481c3bb86bc6bc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_final_accounting.py",
+      "bytes": 2914,
+      "sha256": "0d250a49d3eb2fa756085e9c04e37d3beb7b0d92af44dab644e5e8743bc209d2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_formal_progress.py",
+      "bytes": 1753,
+      "sha256": "6858459b9a88b8d041d56c2dab0c5ad196e8708313f40733da3bde0f3e31c63b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compare_allocator_pilots.py",
+      "bytes": 1993,
+      "sha256": "783e693681d29461a5a21eca5dee8b657e729b099c08161f85c2876f059dcda5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/finalize_nema_5e9_report.py",
+      "bytes": 14464,
+      "sha256": "c6bdbd2790d5089fae7283276acaad04c53ffbd8e2279cf96e738cd36943cb33"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/monitor_pilot.py",
+      "bytes": 533,
+      "sha256": "f6824ac758214dde18bfe03c9ab359ad41b14469616cd8917b00fca37164f3f7"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_1432_progress_docs.py",
+      "bytes": 3493,
+      "sha256": "8e0f7bd9258d35b7732dccfb85804808a64ac64df3810a4e5cf9ceab9c595936"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_1502_progress_docs.py",
+      "bytes": 3345,
+      "sha256": "ee1d440e4fadc5bf8348d8597db75c99413e1f45c062703ec39531eccc94e13e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_1532_progress_docs.py",
+      "bytes": 5704,
+      "sha256": "e08c6f62e00c2ef2ef4fb41aa99bf2dec0e3d12a7b6532a73e4aa1ddc623c76a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_checkpoint_docs.py",
+      "bytes": 3971,
+      "sha256": "dfc1ac93e22993657086de22c20f70de85d3a3b5fcc8c0e2e3a80de3a61c89a3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_formal_docs.py",
+      "bytes": 1486,
+      "sha256": "11920575ce482d22392f34b473130ab1300ca858ecd98600441a0f5ac9050934"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_joint_progress_docs.py",
+      "bytes": 2484,
+      "sha256": "33fc9cb970045cdce20347484905f22f1b6811dd69d96c463fdc88155208c56c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_normal_progress_docs.py",
+      "bytes": 3361,
+      "sha256": "2eb40b3fac1baa9e68ac249f5f978a66eba10ae4dfa11a4c5d1f33daf8fa81b4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_pass_docs.py",
+      "bytes": 2102,
+      "sha256": "38049c1e9f31791648dc044e74bdbd0dfcff718865970d927a7d256e4ac29333"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_progress_docs.py",
+      "bytes": 1920,
+      "sha256": "6baed29390661780b3b2fb7eac721227362e638a151b2f463860555d6cca5c52"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_progress_journal.py",
+      "bytes": 3700,
+      "sha256": "f41f623eb12e68416b9e0fc17fb772596e28f462ed6d106e4d811ba9df7eaef2"
+    }
+  ],
+  "cache_files": [
+    {
+      "path": "Auxiliary_Studies/ComptonSystemMatrixPrototype/__pycache__/prototype_comp_matrix_e1.cpython-312.pyc",
+      "bytes": 71304
+    },
+    {
+      "path": "Auxiliary_Studies/CRCVAR_SinglePhoton/__pycache__/run_crcvar_single_photon.cpython-312.pyc",
+      "bytes": 36042
+    },
+    {
+      "path": "Auxiliary_Studies/CRCVAR_SinglePhoton/__pycache__/run_crcvar_single_photon_direct.cpython-312.pyc",
+      "bytes": 34792
+    },
+    {
+      "path": "Auxiliary_Studies/EventOrderInference_Experiment/__pycache__/export_visualization_data.cpython-312.pyc",
+      "bytes": 27190
+    },
+    {
+      "path": "Auxiliary_Studies/EventOrderInference_Experiment/__pycache__/infer_event_order.cpython-312.pyc",
+      "bytes": 32764
+    },
+    {
+      "path": "Auxiliary_Studies/EventOrderInference_Experiment/__pycache__/infer_event_order.cpython-39.pyc",
+      "bytes": 17878
+    },
+    {
+      "path": "Auxiliary_Studies/EventOrderInference_Experiment/__pycache__/run_event_order_experiment.cpython-312.pyc",
+      "bytes": 9846
+    },
+    {
+      "path": "Auxiliary_Studies/EventOrderInference_Experiment/__pycache__/train_supervised_order_classifier.cpython-39.pyc",
+      "bytes": 24569
+    },
+    {
+      "path": "Auxiliary_Studies/FreePath/__pycache__/apply_compton_gaussian_blur.cpython-312.pyc",
+      "bytes": 28204
+    },
+    {
+      "path": "Auxiliary_Studies/FreePath/__pycache__/simulate_compton_freepath.cpython-312.pyc",
+      "bytes": 17376
+    },
+    {
+      "path": "Auxiliary_Studies/FreePath/__pycache__/simulate_compton_freepath_energy_weighted.cpython-312.pyc",
+      "bytes": 11328
+    },
+    {
+      "path": "Auxiliary_Studies/FreePath/__pycache__/simulate_nai_slab_event_probabilities.cpython-312.pyc",
+      "bytes": 13022
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/FileGenerater_3D_Unified/__pycache__/test_hole_size.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 4660
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/analyze_pe_v4_center_edge_symmetry.cpython-39.pyc",
+      "bytes": 9816
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/audit_jscc_w_gagg_paths.cpython-39.pyc",
+      "bytes": 12685
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/benchmark_scatter_first_state_surface.cpython-39.pyc",
+      "bytes": 13810
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/validate_jscc_material_density_alignment.cpython-312.pyc",
+      "bytes": 10348
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/validate_pe_v4_gpu_outputs.cpython-312.pyc",
+      "bytes": 6101
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/validate_pe_v4_jscc_reference.cpython-312.pyc",
+      "bytes": 13798
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/tests/__pycache__/validate_scatter_shared_first_state.cpython-39.pyc",
+      "bytes": 6466
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/config.cpython-312.pyc",
+      "bytes": 8056
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/config.cpython-39.pyc",
+      "bytes": 5319
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/io.cpython-312.pyc",
+      "bytes": 14101
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/io.cpython-39.pyc",
+      "bytes": 8204
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/kernel.cpython-312.pyc",
+      "bytes": 4072
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/kernel.cpython-39.pyc",
+      "bytes": 2513
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/pipeline.cpython-312.pyc",
+      "bytes": 28246
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/pipeline.cpython-39.pyc",
+      "bytes": 15220
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 522
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 521
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/tests/__pycache__/test_sensitivity_pipeline.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 13020
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/tests/__pycache__/test_sensitivity_pipeline.cpython-312.pyc",
+      "bytes": 18597
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/tests/__pycache__/test_sensitivity_pipeline.cpython-39.pyc",
+      "bytes": 10899
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/convert_cartesian_sensitivity_to_polar.cpython-312.pyc",
+      "bytes": 7307
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/convert_cartesian_sensitivity_to_polar.cpython-39.pyc",
+      "bytes": 3905
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/diagnose_sparse_sensi_compatibility.cpython-39.pyc",
+      "bytes": 3927
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/prepare_cartesian_sensitivity_input.cpython-312.pyc",
+      "bytes": 5779
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/prepare_cartesian_sensitivity_input.cpython-39.pyc",
+      "bytes": 3260
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/run_compton_sensitivity.cpython-39.pyc",
+      "bytes": 5972
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/validate_uniform_compton_closure.cpython-312.pyc",
+      "bytes": 16692
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/validate_uniform_compton_closure.cpython-39.pyc",
+      "bytes": 8643
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/visualize_raw_sensi_d_cartesian.cpython-39.pyc",
+      "bytes": 3383
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/visualize_sensi_d_vs_single_photon.cpython-312.pyc",
+      "bytes": 13027
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/__pycache__/visualize_sensi_d_vs_single_photon.cpython-39.pyc",
+      "bytes": 7903
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/main_dist_dual_energy_compton.cpython-312.pyc",
+      "bytes": 25921
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/main_dist_dual_energy_compton.cpython-39.pyc",
+      "bytes": 12872
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/preflight.cpython-312.pyc",
+      "bytes": 7847
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/preflight.cpython-39.pyc",
+      "bytes": 3251
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/reconstruction.cpython-312.pyc",
+      "bytes": 12361
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/reconstruction.cpython-39.pyc",
+      "bytes": 6255
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/validate_synthetic_distributed.cpython-312.pyc",
+      "bytes": 10032
+    },
+    {
+      "path": "distributed/dual_energy_compton_python/__pycache__/validate_synthetic_distributed.cpython-39.pyc",
+      "bytes": 4831
+    },
+    {
+      "path": "distributed/python/__pycache__/cpu_mem_report.cpython-312.pyc",
+      "bytes": 2835
+    },
+    {
+      "path": "distributed/python/__pycache__/cpu_mem_report.cpython-39.pyc",
+      "bytes": 1986
+    },
+    {
+      "path": "distributed/python/__pycache__/gpu_mem_report.cpython-312.pyc",
+      "bytes": 3319
+    },
+    {
+      "path": "distributed/python/__pycache__/gpu_mem_report.cpython-39.pyc",
+      "bytes": 2025
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist.cpython-312.pyc",
+      "bytes": 12674
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_1e10.cpython-312.pyc",
+      "bytes": 12682
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_1e100.cpython-312.pyc",
+      "bytes": 12684
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_1e11.cpython-312.pyc",
+      "bytes": 12677
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_2e10.cpython-312.pyc",
+      "bytes": 12682
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_2e9.cpython-312.pyc",
+      "bytes": 12680
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_3e10.cpython-312.pyc",
+      "bytes": 12679
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_5e10.cpython-312.pyc",
+      "bytes": 12682
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_5e9.cpython-312.pyc",
+      "bytes": 12680
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_cntstat.cpython-312.pyc",
+      "bytes": 19928
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_multi_energy.cpython-312.pyc",
+      "bytes": 31835
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_sparse.cpython-312.pyc",
+      "bytes": 25873
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_sparse_jsccsd_only.cpython-312.pyc",
+      "bytes": 25467
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_sparse_jsccsd_only_cpu.cpython-312.pyc",
+      "bytes": 27834
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_tonline_cache.cpython-312.pyc",
+      "bytes": 25730
+    },
+    {
+      "path": "distributed/python/__pycache__/main_dist_tstream.cpython-312.pyc",
+      "bytes": 27140
+    },
+    {
+      "path": "distributed/python/__pycache__/multi_energy_tasks.cpython-312.pyc",
+      "bytes": 8590
+    },
+    {
+      "path": "distributed/python/__pycache__/multi_energy_tasks.cpython-39.pyc",
+      "bytes": 6430
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist.cpython-312.pyc",
+      "bytes": 19302
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist.cpython-39.pyc",
+      "bytes": 7486
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_cntstat.cpython-312.pyc",
+      "bytes": 6231
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_multi_energy.cpython-312.pyc",
+      "bytes": 20215
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_sparse.cpython-312.pyc",
+      "bytes": 19675
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_sparse_jsccsd_only.cpython-312.pyc",
+      "bytes": 12708
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_sparse_jsccsd_only.cpython-39.pyc",
+      "bytes": 7523
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_tonline_cache.cpython-312.pyc",
+      "bytes": 14132
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_tonline_cache.cpython-39.pyc",
+      "bytes": 6632
+    },
+    {
+      "path": "distributed/python/__pycache__/recon_osem_dist_tstream.cpython-312.pyc",
+      "bytes": 14953
+    },
+    {
+      "path": "distributed/python/__pycache__/t_online_cache_dist.cpython-312.pyc",
+      "bytes": 11150
+    },
+    {
+      "path": "distributed/python/__pycache__/t_online_cache_dist.cpython-39.pyc",
+      "bytes": 6342
+    },
+    {
+      "path": "distributed/python/__pycache__/t_shard_dist.cpython-312.pyc",
+      "bytes": 10307
+    },
+    {
+      "path": "distributed/python/__pycache__/_path_setup.cpython-312.pyc",
+      "bytes": 792
+    },
+    {
+      "path": "distributed/python/__pycache__/_path_setup.cpython-39.pyc",
+      "bytes": 486
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/compton_event_response.cpython-312.pyc",
+      "bytes": 29234
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/compton_sparse_ops.cpython-312.pyc",
+      "bytes": 21246
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/detector_csv.cpython-312.pyc",
+      "bytes": 2915
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/energy_5e9_v5_contract.cpython-312.pyc",
+      "bytes": 11075
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/energy_full10000_v5_contract.cpython-312.pyc",
+      "bytes": 9877
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/geometry.cpython-312.pyc",
+      "bytes": 11066
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/prepare_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 16955
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/process_list_global_audit_v4.cpython-312.pyc",
+      "bytes": 43736
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/process_list_plane_sparse.cpython-312.pyc",
+      "bytes": 5619
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/run_reconstruction.cpython-312.pyc",
+      "bytes": 45025
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/single_checkpoint_mlem.cpython-312.pyc",
+      "bytes": 2968
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/test_energy_full10000_v5.cpython-312.pyc",
+      "bytes": 8923
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/torch_active_operator.cpython-312.pyc",
+      "bytes": 21285
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/validate_factors.cpython-312.pyc",
+      "bytes": 6697
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/verify_energy_full10000_v5.cpython-312.pyc",
+      "bytes": 17667
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/__pycache__/verify_first_scatter.cpython-312.pyc",
+      "bytes": 13005
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2/__pycache__/topology_count_command.cpython-312.pyc",
+      "bytes": 2056
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/Diagnostics/__pycache__/setup_response_audit.cpython-312.pyc",
+      "bytes": 2110
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/payload/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/response_payload/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/response_payload_v2/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport_payload/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport_payload_v2/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport_payload_v3/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport_payload_v4/engine/physics_data/__pycache__/download_nist_xcom.cpython-312.pyc",
+      "bytes": 14099
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_upload_5e9/__pycache__/check_simulation.cpython-312.pyc",
+      "bytes": 2364
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_upload_5e9/__pycache__/package_imaging.cpython-312.pyc",
+      "bytes": 7319
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_upload_5e9/__pycache__/validate_nema_simulation.cpython-312.pyc",
+      "bytes": 7762
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/checkpoint_pilot3_resource.cpython-312.pyc",
+      "bytes": 2870
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/checkpoint_pilot_resource.cpython-312.pyc",
+      "bytes": 2933
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/check_array_completed.cpython-312.pyc",
+      "bytes": 1281
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/check_completed_stages.cpython-312.pyc",
+      "bytes": 4331
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/check_final_accounting.cpython-312.pyc",
+      "bytes": 5144
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/check_formal_progress.cpython-312.pyc",
+      "bytes": 3592
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/compare_allocator_pilots.cpython-312.pyc",
+      "bytes": 2988
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/finalize_nema_5e9_report.cpython-312.pyc",
+      "bytes": 18132
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/monitor_pilot.cpython-312.pyc",
+      "bytes": 1187
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_1432_progress_docs.cpython-312.pyc",
+      "bytes": 4900
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_1502_progress_docs.cpython-312.pyc",
+      "bytes": 4668
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_1532_progress_docs.cpython-312.pyc",
+      "bytes": 8045
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_checkpoint_docs.cpython-312.pyc",
+      "bytes": 4470
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_formal_docs.cpython-312.pyc",
+      "bytes": 2201
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_joint_progress_docs.cpython-312.pyc",
+      "bytes": 3192
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_normal_progress_docs.cpython-312.pyc",
+      "bytes": 4661
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_pass_docs.cpython-312.pyc",
+      "bytes": 2613
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_progress_docs.cpython-312.pyc",
+      "bytes": 2465
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/__pycache__/update_progress_journal.cpython-312.pyc",
+      "bytes": 5737
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/comparison/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15794
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/comparison/scripts/__pycache__/compare_nema_counts.cpython-312.pyc",
+      "bytes": 18640
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/comparison/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 22354
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/mip_trim3/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2694
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/mip_trim3/scripts/__pycache__/plot_nema_mip.cpython-312.pyc",
+      "bytes": 14259
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15609
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/scripts/__pycache__/fetch_nema_results.cpython-312.pyc",
+      "bytes": 4001
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 21520
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2694
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/scripts/__pycache__/plot_nema_mip.cpython-312.pyc",
+      "bytes": 14259
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15815
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2781
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23557
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/__pycache__/plot_nema_mip.cpython-312.pyc",
+      "bytes": 14874
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15805
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 22365
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15834
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2800
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23576
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/__pycache__/plot_nema_mip.cpython-312.pyc",
+      "bytes": 14893
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15824
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/__pycache__/fetch_nema_results.cpython-312.pyc",
+      "bytes": 4983
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2703
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23566
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15835
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2801
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23577
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/__pycache__/plot_nema_mip.cpython-312.pyc",
+      "bytes": 14894
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15825
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/__pycache__/fetch_nema_results.cpython-312.pyc",
+      "bytes": 4984
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2704
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23567
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_interim_1657887/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15832
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_interim_1657887/scripts/__pycache__/compare_response_mismatch.cpython-312.pyc",
+      "bytes": 25865
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_interim_1657887/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2798
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15814
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/__pycache__/compare_spike_ablation.cpython-312.pyc",
+      "bytes": 23993
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2693
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23556
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15820
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/__pycache__/compare_spike_ablation.cpython-312.pyc",
+      "bytes": 24694
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2786
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23562
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_circle_uniform.cpython-312.pyc",
+      "bytes": 5144
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_contrast_result.cpython-312.pyc",
+      "bytes": 12138
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_ellipse_uniform.cpython-312.pyc",
+      "bytes": 6129
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_first_scatter.cpython-312.pyc",
+      "bytes": 27294
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_nema_result.cpython-312.pyc",
+      "bytes": 15749
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_point_factor_alignment.cpython-312.pyc",
+      "bytes": 7514
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_selected_points.cpython-312.pyc",
+      "bytes": 4740
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/analyze_xcat_result.cpython-312.pyc",
+      "bytes": 9705
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/assess_pilot.cpython-312.pyc",
+      "bytes": 4923
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/audit_compton_response.cpython-312.pyc",
+      "bytes": 28740
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/build_compton_a_guard_field.cpython-312.pyc",
+      "bytes": 11868
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/build_spike_ablation.cpython-312.pyc",
+      "bytes": 12300
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/bundle_calibration_inputs.cpython-312.pyc",
+      "bytes": 8605
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/calibrate.cpython-312.pyc",
+      "bytes": 7589
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/calibrate_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 34892
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/check_nema_dose_inputs.cpython-312.pyc",
+      "bytes": 3567
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/check_nema_transport_progress.cpython-312.pyc",
+      "bytes": 5754
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/check_remote_pilot.cpython-312.pyc",
+      "bytes": 6298
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/check_simulation.cpython-312.pyc",
+      "bytes": 2338
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/collect_energy_candidate_v5.cpython-312.pyc",
+      "bytes": 10403
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_ehe_5e9.cpython-312.pyc",
+      "bytes": 38359
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_ehe_jscc_full_trajectories.cpython-312.pyc",
+      "bytes": 45522
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 31579
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_energy_formal_v5.cpython-312.pyc",
+      "bytes": 30844
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_energy_full10000_v5.cpython-312.pyc",
+      "bytes": 26900
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_first_scatter.cpython-312.pyc",
+      "bytes": 21906
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_nema_counts.cpython-312.pyc",
+      "bytes": 18595
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_response_mismatch.cpython-312.pyc",
+      "bytes": 25782
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compare_spike_ablation.cpython-312.pyc",
+      "bytes": 24623
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_boundary_quadrature.cpython-312.pyc",
+      "bytes": 14078
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_cartesian_patch.cpython-312.pyc",
+      "bytes": 5265
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_cell_response_field.cpython-312.pyc",
+      "bytes": 14506
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_energy_probability_v5.cpython-312.pyc",
+      "bytes": 31456
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_geometry_R1_preflight.cpython-312.pyc",
+      "bytes": 13835
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_geometry_run_contract.cpython-312.pyc",
+      "bytes": 2168
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_geometry_v3_workflow.cpython-312.pyc",
+      "bytes": 114600
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_overlap_assembly.cpython-312.pyc",
+      "bytes": 7371
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_overlap_cuda.cpython-312.pyc",
+      "bytes": 13174
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_overlap_integrator.cpython-312.pyc",
+      "bytes": 14478
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_tiled_a_field.cpython-312.pyc",
+      "bytes": 10742
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/compton_tiled_production_v3_workflow.cpython-312.pyc",
+      "bytes": 32239
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/convert_factors.cpython-312.pyc",
+      "bytes": 11811
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/deploy_factors.cpython-312.pyc",
+      "bytes": 7369
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/deploy_imaging.cpython-312.pyc",
+      "bytes": 7804
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/deploy_nema_simulation.cpython-312.pyc",
+      "bytes": 6019
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/deploy_reconstruction.cpython-312.pyc",
+      "bytes": 5261
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/deploy_response_mismatch.cpython-312.pyc",
+      "bytes": 6154
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/deploy_spike_ablation.cpython-312.pyc",
+      "bytes": 16210
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_compton_a_components_v3.cpython-312.pyc",
+      "bytes": 17996
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_compton_event_contract.cpython-312.pyc",
+      "bytes": 11863
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_compton_geometry_stability.cpython-312.pyc",
+      "bytes": 22494
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_first_scatter_points.cpython-312.pyc",
+      "bytes": 10041
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_geometry_payload.cpython-312.pyc",
+      "bytes": 2829
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_nccl.cpython-312.pyc",
+      "bytes": 2263
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/diagnose_nema_spikes.cpython-312.pyc",
+      "bytes": 13827
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_archive_input.cpython-312.pyc",
+      "bytes": 9815
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_finalize.cpython-312.pyc",
+      "bytes": 7690
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_recovered_transport.cpython-312.pyc",
+      "bytes": 25501
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_recovery.cpython-312.pyc",
+      "bytes": 2708
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_recovery_workflow.cpython-312.pyc",
+      "bytes": 12378
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_transport.cpython-312.pyc",
+      "bytes": 23199
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e10_workflow.cpython-312.pyc",
+      "bytes": 50045
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_5e9_workflow.cpython-312.pyc",
+      "bytes": 75390
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_common.cpython-312.pyc",
+      "bytes": 14517
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_conversion_io.cpython-312.pyc",
+      "bytes": 22613
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_conversion_workflow.cpython-312.pyc",
+      "bytes": 16370
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_execution_policy.cpython-312.pyc",
+      "bytes": 3765
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_forward_poisson_5e10_data.cpython-312.pyc",
+      "bytes": 16825
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_forward_poisson_5e10_workflow.cpython-312.pyc",
+      "bytes": 11178
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_forward_poisson_data.cpython-312.pyc",
+      "bytes": 16750
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_forward_poisson_workflow.cpython-312.pyc",
+      "bytes": 24196
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_gpu_pipeline.cpython-312.pyc",
+      "bytes": 19570
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_pe_v4_overlay.cpython-312.pyc",
+      "bytes": 7364
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_reconstruction_workflow.cpython-312.pyc",
+      "bytes": 10574
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_reference_evidence.cpython-312.pyc",
+      "bytes": 7811
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ehe_slurm_status.cpython-312.pyc",
+      "bytes": 2760
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/ellipse_operator.cpython-312.pyc",
+      "bytes": 4808
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_5e9_v5_contract.cpython-312.pyc",
+      "bytes": 11006
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_5e9_v5_workflow.cpython-312.pyc",
+      "bytes": 29439
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_candidate_v5_workflow.cpython-312.pyc",
+      "bytes": 27744
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_formal_v5_contract.cpython-312.pyc",
+      "bytes": 11223
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_formal_v5_workflow.cpython-312.pyc",
+      "bytes": 27194
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_full10000_v5_contract.cpython-312.pyc",
+      "bytes": 9739
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_full10000_v5_workflow.cpython-312.pyc",
+      "bytes": 30418
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_preflight_v5_workflow.cpython-312.pyc",
+      "bytes": 36205
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/energy_probability_probe_v4.cpython-312.pyc",
+      "bytes": 14106
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/export_first_scatter_events.cpython-312.pyc",
+      "bytes": 6503
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_final_images.cpython-312.pyc",
+      "bytes": 3837
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_gallery_frames.cpython-312.pyc",
+      "bytes": 5285
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_history_frames.cpython-312.pyc",
+      "bytes": 5593
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_integrity_report.cpython-312.pyc",
+      "bytes": 3021
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_nema_imaging.cpython-312.pyc",
+      "bytes": 5786
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_nema_results.cpython-312.pyc",
+      "bytes": 4908
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_point_alignment_report.cpython-312.pyc",
+      "bytes": 2319
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_response_mismatch.cpython-312.pyc",
+      "bytes": 10060
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fetch_spike_ablation.cpython-312.pyc",
+      "bytes": 6692
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/fine_field_retirement.cpython-312.pyc",
+      "bytes": 982
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/first_scatter_imaging.cpython-312.pyc",
+      "bytes": 26842
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/first_scatter_offline.cpython-312.pyc",
+      "bytes": 16839
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/first_scatter_pipeline.cpython-312.pyc",
+      "bytes": 21380
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/first_scatter_workflow.cpython-312.pyc",
+      "bytes": 35730
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/generate_compton_a_column_v3.cpython-312.pyc",
+      "bytes": 10405
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/generate_compton_a_guard.cpython-312.pyc",
+      "bytes": 15966
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/generate_compton_a_tile_pilot_v3.cpython-312.pyc",
+      "bytes": 14636
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/generate_compton_tiled_field_v3.cpython-312.pyc",
+      "bytes": 21555
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/geometry.cpython-312.pyc",
+      "bytes": 10997
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/make_nema_body_h60.cpython-312.pyc",
+      "bytes": 29829
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/mip_projection.cpython-312.pyc",
+      "bytes": 2784
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/package_factors.cpython-312.pyc",
+      "bytes": 6398
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/package_imaging.cpython-312.pyc",
+      "bytes": 7370
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plan_compton_a_tiles_v3.cpython-312.pyc",
+      "bytes": 9679
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_circle_uniformity.cpython-312.pyc",
+      "bytes": 2668
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_contrast_rod_galleries.cpython-312.pyc",
+      "bytes": 8968
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_ehe_5e10.cpython-312.pyc",
+      "bytes": 27926
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_ehe_forward_poisson.cpython-312.pyc",
+      "bytes": 27947
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_ehe_forward_poisson_5e10.cpython-312.pyc",
+      "bytes": 29443
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_ellipse_uniformity.cpython-312.pyc",
+      "bytes": 3569
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_energy_candidate_v5.cpython-312.pyc",
+      "bytes": 7102
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_first_scatter_diagnostics.cpython-312.pyc",
+      "bytes": 17773
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_first_scatter_supplement.cpython-312.pyc",
+      "bytes": 9763
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_iteration_amplitude.cpython-312.pyc",
+      "bytes": 4384
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_iteration_galleries.cpython-312.pyc",
+      "bytes": 11617
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_nema_iterations.cpython-312.pyc",
+      "bytes": 23530
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_nema_mip.cpython-312.pyc",
+      "bytes": 14829
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_point_alignment.cpython-312.pyc",
+      "bytes": 2948
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_response_audit.cpython-312.pyc",
+      "bytes": 8018
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/plot_response_mismatch_diagnostics.cpython-312.pyc",
+      "bytes": 9311
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/point_factor_interpolation_remote.cpython-312.pyc",
+      "bytes": 8866
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/point_scan.cpython-312.pyc",
+      "bytes": 4713
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/prepare_compton_overlap_measure.cpython-312.pyc",
+      "bytes": 8168
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/prepare_ehe_5e9.cpython-312.pyc",
+      "bytes": 19791
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/prepare_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 16886
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/prepare_nema_simulation.cpython-312.pyc",
+      "bytes": 14901
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/prepare_response_audit_truth.cpython-312.pyc",
+      "bytes": 4929
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/prepare_xcat_jobs.cpython-312.pyc",
+      "bytes": 3185
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/process_list_global_audit_v4.cpython-312.pyc",
+      "bytes": 43667
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/regularized_update.cpython-312.pyc",
+      "bytes": 16996
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/repair_compton_guard_measure.cpython-312.pyc",
+      "bytes": 2544
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/research_process_list_followup.cpython-312.pyc",
+      "bytes": 17321
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/resource_budget.cpython-312.pyc",
+      "bytes": 3363
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_ehe_5e10_reconstruction.cpython-312.pyc",
+      "bytes": 13229
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_ehe_forward_poisson.cpython-312.pyc",
+      "bytes": 12892
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_ehe_reconstruction.cpython-312.pyc",
+      "bytes": 13369
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_ehe_worker.cpython-312.pyc",
+      "bytes": 8028
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 20398
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_energy_formal_v5.cpython-312.pyc",
+      "bytes": 17661
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_energy_full10000_v5.cpython-312.pyc",
+      "bytes": 31013
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_energy_preflight_v5.cpython-312.pyc",
+      "bytes": 24834
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_factor_conversion.cpython-312.pyc",
+      "bytes": 4793
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_matrices.cpython-312.pyc",
+      "bytes": 6436
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_reconstruction.cpython-312.pyc",
+      "bytes": 44887
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_scatter_slabs.cpython-312.pyc",
+      "bytes": 11321
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/run_sensitivity.cpython-312.pyc",
+      "bytes": 7784
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/scan_response_mismatch.cpython-312.pyc",
+      "bytes": 22960
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/simulation.cpython-312.pyc",
+      "bytes": 9685
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/single_checkpoint_mlem.cpython-312.pyc",
+      "bytes": 2830
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/submit_nema_formal.cpython-312.pyc",
+      "bytes": 9359
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/submit_nema_pilot.cpython-312.pyc",
+      "bytes": 8588
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/submit_nema_transport.cpython-312.pyc",
+      "bytes": 4184
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/submit_response_mismatch.cpython-312.pyc",
+      "bytes": 10828
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/summarize_contrast_iterations.cpython-312.pyc",
+      "bytes": 4930
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_active_dist.cpython-312.pyc",
+      "bytes": 3474
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compare_response_mismatch.cpython-312.pyc",
+      "bytes": 7496
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_a_guard.cpython-312.pyc",
+      "bytes": 6621
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_a_tiles_v3.cpython-312.pyc",
+      "bytes": 6408
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_boundary_v3.cpython-312.pyc",
+      "bytes": 5840
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_cartesian_patch.cpython-312.pyc",
+      "bytes": 6237
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_energy_probability_v5.cpython-312.pyc",
+      "bytes": 17974
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_geometry_run_contract.cpython-312.pyc",
+      "bytes": 8961
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_geometry_stability.cpython-312.pyc",
+      "bytes": 8174
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_geometry_v3.cpython-312.pyc",
+      "bytes": 7566
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_guard_field.cpython-312.pyc",
+      "bytes": 6928
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_overlap_assembly.cpython-312.pyc",
+      "bytes": 5747
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_overlap_cuda.cpython-312.pyc",
+      "bytes": 6490
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_overlap_integrator.cpython-312.pyc",
+      "bytes": 12063
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_regional_plan_v3.cpython-312.pyc",
+      "bytes": 5534
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_tiled_a_field_v3.cpython-312.pyc",
+      "bytes": 8783
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_compton_tiled_production_v3.cpython-312.pyc",
+      "bytes": 5215
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_5e10.cpython-312.pyc",
+      "bytes": 10624
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_5e10_archive_input.cpython-312.pyc",
+      "bytes": 8910
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_5e10_recovery.cpython-312.pyc",
+      "bytes": 6144
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_5e9.cpython-312.pyc",
+      "bytes": 14131
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_conversion_io.cpython-312.pyc",
+      "bytes": 5473
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_conversion_workflow.cpython-312.pyc",
+      "bytes": 8891
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_execution_policy.cpython-312.pyc",
+      "bytes": 8944
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_forward_poisson.cpython-312.pyc",
+      "bytes": 5694
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_ehe_workflow_status.cpython-312.pyc",
+      "bytes": 5146
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_energy_5e9_formal_v5.cpython-312.pyc",
+      "bytes": 10183
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 5215
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_energy_formal_v5.cpython-312.pyc",
+      "bytes": 15995
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_energy_full10000_v5.cpython-312.pyc",
+      "bytes": 8785
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_energy_preflight_v5.cpython-312.pyc",
+      "bytes": 14159
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_energy_preflight_workflow_v5.cpython-312.pyc",
+      "bytes": 6007
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_first_scatter.cpython-312.pyc",
+      "bytes": 12040
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_first_scatter_verification.cpython-312.pyc",
+      "bytes": 8496
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_nema_body_h60.cpython-312.pyc",
+      "bytes": 5813
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_process_list_global_audit_v4.cpython-312.pyc",
+      "bytes": 7765
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_response_mismatch.cpython-312.pyc",
+      "bytes": 10677
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_spike_ablation.cpython-312.pyc",
+      "bytes": 17278
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/test_spike_ablation_dist.cpython-312.pyc",
+      "bytes": 5415
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/torch_active_operator.cpython-312.pyc",
+      "bytes": 21216
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/upload_point_alignment_inputs.cpython-312.pyc",
+      "bytes": 3953
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/validate_1e9_inputs.cpython-312.pyc",
+      "bytes": 5270
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/validate_circle_response.cpython-312.pyc",
+      "bytes": 8732
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/validate_ehe_pe_v4.cpython-312.pyc",
+      "bytes": 8991
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/validate_energy_candidate_v5.cpython-312.pyc",
+      "bytes": 44484
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/validate_factors.cpython-312.pyc",
+      "bytes": 6559
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/validate_nema_simulation.cpython-312.pyc",
+      "bytes": 7805
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe.cpython-312.pyc",
+      "bytes": 21580
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe_5e10.cpython-312.pyc",
+      "bytes": 19872
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe_5e10_figures.cpython-312.pyc",
+      "bytes": 13072
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe_comparison.cpython-312.pyc",
+      "bytes": 14754
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe_forward_poisson.cpython-312.pyc",
+      "bytes": 21217
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe_forward_poisson_5e10_figures.cpython-312.pyc",
+      "bytes": 13318
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_ehe_forward_poisson_figures.cpython-312.pyc",
+      "bytes": 12103
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_energy_5e9_v5.cpython-312.pyc",
+      "bytes": 13715
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_energy_formal_v5.cpython-312.pyc",
+      "bytes": 13248
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_energy_full10000_v5.cpython-312.pyc",
+      "bytes": 17529
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_energy_preflight_v5.cpython-312.pyc",
+      "bytes": 14359
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_first_scatter.cpython-312.pyc",
+      "bytes": 12867
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_formal_result.cpython-312.pyc",
+      "bytes": 10696
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_response_mismatch.cpython-312.pyc",
+      "bytes": 9146
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/verify_spike_ablation.cpython-312.pyc",
+      "bytes": 18144
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/visualize_pilot.cpython-312.pyc",
+      "bytes": 3061
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/visualize_setup.cpython-312.pyc",
+      "bytes": 4277
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/visualize_transport.cpython-312.pyc",
+      "bytes": 5781
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/__pycache__/xcat.cpython-312.pyc",
+      "bytes": 13950
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/assess_pilot.cpython-312.pyc",
+      "bytes": 3531
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/calibrate.cpython-312.pyc",
+      "bytes": 8595
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/collect_point_responses.cpython-312.pyc",
+      "bytes": 6102
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/compare_center_matrices.cpython-312.pyc",
+      "bytes": 3809
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/compare_point_responses.cpython-312.pyc",
+      "bytes": 8386
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/deploy_collected_qc.cpython-312.pyc",
+      "bytes": 8100
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/deploy_recon_scripts.cpython-312.pyc",
+      "bytes": 2619
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/evaluate_axial_uniform.cpython-312.pyc",
+      "bytes": 9151
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/finish_matrices.cpython-312.pyc",
+      "bytes": 4176
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/imaging.cpython-312.pyc",
+      "bytes": 28104
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/matrix_fingerprint.cpython-312.pyc",
+      "bytes": 2991
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/package_collected_qc.cpython-312.pyc",
+      "bytes": 6332
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/plot_point_responses.cpython-312.pyc",
+      "bytes": 9892
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/reconstruction_ssh.cpython-312.pyc",
+      "bytes": 3647
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/reconstruct_point.cpython-312.pyc",
+      "bytes": 7057
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/remote_status.cpython-312.pyc",
+      "bytes": 3114
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/run_matrices.cpython-312.pyc",
+      "bytes": 6840
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/run_sensitivity.cpython-312.pyc",
+      "bytes": 5420
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/validate_cpu_collectives.cpython-312.pyc",
+      "bytes": 1578
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/validate_recon_pilot.cpython-312.pyc",
+      "bytes": 3888
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/visualize_closedloop.cpython-312.pyc",
+      "bytes": 20360
+    },
+    {
+      "path": "experiments/FOV120/__pycache__/workflow.cpython-312.pyc",
+      "bytes": 23028
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_CntStatOnly/__pycache__/analyze_uniform_fov_cntstat.cpython-39.pyc",
+      "bytes": 6661
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_CntStatResponseStudy/__pycache__/analyze_radial_point_response.cpython-39.pyc",
+      "bytes": 10218
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_GAGGIntrinsicResponse/__pycache__/analyze_containment_impact.cpython-39.pyc",
+      "bytes": 7113
+    },
+    {
+      "path": "Geant4Sim/__pycache__/apply_uniform_fov_factor_corrections.cpython-39.pyc",
+      "bytes": 6951
+    },
+    {
+      "path": "Geant4Sim/__pycache__/compare_factor_correction_reconstructions.cpython-39.pyc",
+      "bytes": 5683
+    },
+    {
+      "path": "Geant4Sim/__pycache__/compare_uniform_fov_factor_sets.cpython-312.pyc",
+      "bytes": 19184
+    },
+    {
+      "path": "Geant4Sim/__pycache__/generate_xcat_ac225_psma_abdomen.cpython-312.pyc",
+      "bytes": 29325
+    },
+    {
+      "path": "Geant4Sim/__pycache__/validate_xcat_ac225_psma_abdomen.cpython-312.pyc",
+      "bytes": 15066
+    },
+    {
+      "path": "GenProj/__pycache__/analyze_polar_source_measure.cpython-39.pyc",
+      "bytes": 23410
+    },
+    {
+      "path": "GenProj/__pycache__/build_polar_volume_weighted_factors.cpython-39.pyc",
+      "bytes": 10526
+    },
+    {
+      "path": "GenProj/__pycache__/compare_polar_volume_reconstruction.cpython-39.pyc",
+      "bytes": 8931
+    },
+    {
+      "path": "tests/__pycache__/test_cntstat_crosstalk.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 11077
+    },
+    {
+      "path": "tests/__pycache__/test_cntstat_crosstalk.cpython-312.pyc",
+      "bytes": 10963
+    },
+    {
+      "path": "tests/__pycache__/test_cntstat_crosstalk.cpython-39.pyc",
+      "bytes": 5937
+    },
+    {
+      "path": "tests/__pycache__/test_compton_density_basis_closure.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 5374
+    },
+    {
+      "path": "tests/__pycache__/test_compton_density_basis_closure.cpython-312.pyc",
+      "bytes": 5261
+    },
+    {
+      "path": "tests/__pycache__/test_compton_density_basis_closure.cpython-39.pyc",
+      "bytes": 3326
+    },
+    {
+      "path": "tests/__pycache__/test_compton_operator_equivalence.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 10441
+    },
+    {
+      "path": "tests/__pycache__/test_compton_operator_equivalence.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 10426
+    },
+    {
+      "path": "tests/__pycache__/test_compton_operator_equivalence.cpython-312.pyc",
+      "bytes": 10313
+    },
+    {
+      "path": "tests/__pycache__/test_compton_operator_equivalence.cpython-39.pyc",
+      "bytes": 5757
+    },
+    {
+      "path": "tests/__pycache__/test_distributed_dual_energy_compton.cpython-312-pytest-7.4.4.pyc",
+      "bytes": 7946
+    },
+    {
+      "path": "tests/__pycache__/test_distributed_dual_energy_compton.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 8084
+    },
+    {
+      "path": "tests/__pycache__/test_distributed_dual_energy_compton.cpython-39.pyc",
+      "bytes": 3908
+    },
+    {
+      "path": "tests/__pycache__/test_fov120.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 29431
+    },
+    {
+      "path": "tests/__pycache__/test_geant4_event_classification.cpython-312.pyc",
+      "bytes": 12810
+    },
+    {
+      "path": "tools/baseline/__pycache__/verify_dual_energy_baseline.cpython-312.pyc",
+      "bytes": 13015
+    },
+    {
+      "path": "tools/diagnostics/list/__pycache__/analyze_list_e1_e2_histogram.cpython-312.pyc",
+      "bytes": 10122
+    },
+    {
+      "path": "tools/diagnostics/reconstruction/__pycache__/analyze_compton_radial_bias.cpython-312.pyc",
+      "bytes": 14528
+    },
+    {
+      "path": "tools/security/__pycache__/audit_git_payload.cpython-312.pyc",
+      "bytes": 4787
+    },
+    {
+      "path": "tools/visualization/compton/__pycache__/plot_dual_energy_contrast_phantom.cpython-311.pyc",
+      "bytes": 11501
+    },
+    {
+      "path": "tools/visualization/compton/__pycache__/visualize_jscc_compton_iteration_evolution.cpython-311.pyc",
+      "bytes": 14950
+    },
+    {
+      "path": "tools/visualization/compton/__pycache__/visualize_jscc_compton_iteration_evolution.cpython-312.pyc",
+      "bytes": 11619
+    },
+    {
+      "path": "tools/visualization/compton/__pycache__/visualize_jscc_compton_validation.cpython-312.pyc",
+      "bytes": 6920
+    },
+    {
+      "path": "tools/visualization/sensitivity/__pycache__/visualize_440_sensitivity_xz_yz.cpython-312.pyc",
+      "bytes": 11096
+    },
+    {
+      "path": "__pycache__/compton_event_response.cpython-312.pyc",
+      "bytes": 29133
+    },
+    {
+      "path": "__pycache__/compton_event_response.cpython-39.pyc",
+      "bytes": 10557
+    },
+    {
+      "path": "__pycache__/compton_sparse_ops.cpython-312.pyc",
+      "bytes": 21145
+    },
+    {
+      "path": "__pycache__/compton_sparse_ops.cpython-39.pyc",
+      "bytes": 10828
+    },
+    {
+      "path": "__pycache__/detector_csv.cpython-312.pyc",
+      "bytes": 2814
+    },
+    {
+      "path": "__pycache__/detector_csv.cpython-39.pyc",
+      "bytes": 1551
+    },
+    {
+      "path": "__pycache__/fov_config.cpython-312.pyc",
+      "bytes": 10849
+    },
+    {
+      "path": "__pycache__/main_local_cntstat.cpython-312.pyc",
+      "bytes": 19133
+    },
+    {
+      "path": "__pycache__/main_local_cntstat.cpython-39.pyc",
+      "bytes": 10364
+    },
+    {
+      "path": "__pycache__/main_local_multi_energy_cntstat.cpython-312.pyc",
+      "bytes": 44503
+    },
+    {
+      "path": "__pycache__/main_local_multi_energy_cntstat.cpython-39.pyc",
+      "bytes": 25030
+    },
+    {
+      "path": "__pycache__/process_list_plane_sparse.cpython-312.pyc",
+      "bytes": 5518
+    },
+    {
+      "path": "__pycache__/process_list_plane_sparse.cpython-39.pyc",
+      "bytes": 2998
+    },
+    {
+      "path": "__pycache__/process_list_plane_strict.cpython-312.pyc",
+      "bytes": 17193
+    },
+    {
+      "path": "__pycache__/process_list_plane_strict.cpython-39.pyc",
+      "bytes": 8327
+    },
+    {
+      "path": "__pycache__/recon_osem_local_cntstat.cpython-312.pyc",
+      "bytes": 13779
+    },
+    {
+      "path": "__pycache__/recon_osem_local_cntstat.cpython-39.pyc",
+      "bytes": 8437
+    },
+    {
+      "path": "__pycache__/recon_osem_local_sparse_jsccsd_only.cpython-312.pyc",
+      "bytes": 19734
+    },
+    {
+      "path": "__pycache__/recon_osem_local_sparse_jsccsd_only.cpython-39.pyc",
+      "bytes": 10850
+    },
+    {
+      "path": "__pycache__/run_local_jscc_compton_validation.cpython-312.pyc",
+      "bytes": 13292
+    },
+    {
+      "path": "__pycache__/run_local_jscc_compton_validation.cpython-39.pyc",
+      "bytes": 7581
+    },
+    {
+      "path": "__pycache__/sparse_main_utils.cpython-312.pyc",
+      "bytes": 11596
+    },
+    {
+      "path": "__pycache__/sparse_main_utils.cpython-39.pyc",
+      "bytes": 7231
+    },
+    {
+      "path": "__pycache__/visualize_440_sensitivity_xz_yz.cpython-39.pyc",
+      "bytes": 5159
+    },
+    {
+      "path": "__pycache__/visualize_jscc_compton_iteration_evolution.cpython-39.pyc",
+      "bytes": 5496
+    },
+    {
+      "path": "__pycache__/visualize_jscc_compton_validation.cpython-312.pyc",
+      "bytes": 6892
+    },
+    {
+      "path": "__pycache__/visualize_jscc_compton_validation.cpython-39.pyc",
+      "bytes": 3800
+    }
+  ],
+  "retained_historical_code_archive": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\historical_process_scripts_20261010.tar.gz",
+  "archive_sha256": "a1ac0ca855fcdfc881c1f520471db4c53664801866a5c40022b0817ee47df3fd",
+  "archive_bytes": 20145,
+  "removed_files": 518,
+  "removed_bytes": 6384427,
+  "accepted_raw_data_or_figures_deleted": false,
+  "algorithm_changed": false,
+  "production_dependencies_changed": false,
+  "source_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8"
+}

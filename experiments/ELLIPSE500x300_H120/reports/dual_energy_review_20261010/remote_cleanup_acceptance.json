@@ -1,0 +1,1572 @@
+{
+  "passed": true,
+  "duplicate_transfer": {
+    "path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/factors_transfer.tar.zst",
+    "bytes": 14600091201,
+    "allocated_bytes": 14600091648,
+    "sha256": "547665b16946aa26ac25679e14e5258c8c954bb256e23a9f6b9567b1769996c8"
+  },
+  "pip_download_cache": [
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/0/4/f/5/004f51e4cdaa64d7951a6294c47f410a2290cde6415bd52c394181fd",
+      "bytes": 1257,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/0/4/f/5/004f51e4cdaa64d7951a6294c47f410a2290cde6415bd52c394181fd.body",
+      "bytes": 1250147,
+      "allocated_bytes": 1250304
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/1/4/b/6/014b6410ecec4b61e50d794d4fdd34072535bc187fdd37e5f57b5c5d",
+      "bytes": 1273,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/1/4/b/6/014b6410ecec4b61e50d794d4fdd34072535bc187fdd37e5f57b5c5d.body",
+      "bytes": 2351,
+      "allocated_bytes": 2560
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/3/9/d/b/039db589a9fd13ac2a4a1b65e6cfb6e24eac0b4306b13a37c92afbfa",
+      "bytes": 1152,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/3/9/d/b/039db589a9fd13ac2a4a1b65e6cfb6e24eac0b4306b13a37c92afbfa.body",
+      "bytes": 15988,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/5/a/7/4/05a74540eb65ad078e4e70140f951919d2248dc11cb1db5ccba5484a",
+      "bytes": 1206,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/5/a/7/4/05a74540eb65ad078e4e70140f951919d2248dc11cb1db5ccba5484a.body",
+      "bytes": 3259,
+      "allocated_bytes": 3584
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/6/7/d/e/067de891d4624fc09de1c690b01d8bf477f69f0ce81f8101b21b3549",
+      "bytes": 1148,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/6/7/d/e/067de891d4624fc09de1c690b01d8bf477f69f0ce81f8101b21b3549.body",
+      "bytes": 134899,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/7/5/9/3/07593bb905dded4b84aacb1d96c1e64704669d6bab658dcaeab79c36",
+      "bytes": 1898,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/7/5/9/3/07593bb905dded4b84aacb1d96c1e64704669d6bab658dcaeab79c36.body",
+      "bytes": 2440,
+      "allocated_bytes": 2560
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/9/f/8/9/09f89c3ce88983d8d9b404612eb53deb91ab35d4b1e2372a172624a4",
+      "bytes": 1898,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/9/f/8/9/09f89c3ce88983d8d9b404612eb53deb91ab35d4b1e2372a172624a4.body",
+      "bytes": 6753,
+      "allocated_bytes": 7168
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/a/d/7/d/0ad7d3ee4ad4f5b2f55ff0e4b7d7dacf9406427dd713744a71dab046",
+      "bytes": 1202,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/a/d/7/d/0ad7d3ee4ad4f5b2f55ff0e4b7d7dacf9406427dd713744a71dab046.body",
+      "bytes": 11423,
+      "allocated_bytes": 11776
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/c/2/1/8/0c218d526767991766d9b365a4f3e4449ce3579fd8b0f96a707d5a52",
+      "bytes": 1898,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/c/2/1/8/0c218d526767991766d9b365a4f3e4449ce3579fd8b0f96a707d5a52.body",
+      "bytes": 46783,
+      "allocated_bytes": 47104
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/d/1/7/8/0d1781d2aaf61be8a01a8325ca890c61f5a327140509248181d44508",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/d/1/7/8/0d1781d2aaf61be8a01a8325ca890c61f5a327140509248181d44508.body",
+      "bytes": 7742,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/d/6/1/0/0d6100a4fcc13fa7a82df2587795e65dd8302556986207631e36290d",
+      "bytes": 1166,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/d/6/1/0/0d6100a4fcc13fa7a82df2587795e65dd8302556986207631e36290d.body",
+      "bytes": 7411,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/d/c/6/5/0dc65f4b29d51b2f90df91210aa3854f61c3ce304a4adcb3b27d0dc0",
+      "bytes": 1177,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/d/c/6/5/0dc65f4b29d51b2f90df91210aa3854f61c3ce304a4adcb3b27d0dc0.body",
+      "bytes": 1741,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/e/d/3/3/0ed336d749e009fe1267c844e36c442e5b3dc645d5eb9865c545b81a",
+      "bytes": 1232,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/0/e/d/3/3/0ed336d749e009fe1267c844e36c442e5b3dc645d5eb9865c545b81a.body",
+      "bytes": 20538,
+      "allocated_bytes": 20992
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/3/2/c/0/132c0792c69ced5f28290e1851b91dcc199c8e128a581d6696483ca8",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/3/2/c/0/132c0792c69ced5f28290e1851b91dcc199c8e128a581d6696483ca8.body",
+      "bytes": 8002,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/5/d/4/c/15d4cd6210f15c474e627a8a68538482e917027b43c91f4d1f1bb4b2",
+      "bytes": 1277,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/5/d/4/c/15d4cd6210f15c474e627a8a68538482e917027b43c91f4d1f1bb4b2.body",
+      "bytes": 2651,
+      "allocated_bytes": 3072
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/9/d/f/3/19df30afbf96bc5b9085f6efcf3342e8c3d7cbab6862be1382d05e83",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/9/d/f/3/19df30afbf96bc5b9085f6efcf3342e8c3d7cbab6862be1382d05e83.body",
+      "bytes": 7649,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/e/4/e/3/1e4e32ad05d5e3572c6dd7a0b08d3e255bdc821a8b5970c72228cb48",
+      "bytes": 1854,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/1/e/4/e/3/1e4e32ad05d5e3572c6dd7a0b08d3e255bdc821a8b5970c72228cb48.body",
+      "bytes": 7440,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/1/9/5/e/2195e86dadf689b32b54e3aa26801d1bef1cac5a6f829d72dbae30e8",
+      "bytes": 1209,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/1/9/5/e/2195e86dadf689b32b54e3aa26801d1bef1cac5a6f829d72dbae30e8.body",
+      "bytes": 706758467,
+      "allocated_bytes": 706758656
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/7/6/8/c/2768cfa0ff5cec340d13872ba64da07a8a97051d47359e15d75d18f9",
+      "bytes": 1212,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/7/6/8/c/2768cfa0ff5cec340d13872ba64da07a8a97051d47359e15d75d18f9.body",
+      "bytes": 288216466,
+      "allocated_bytes": 288216576
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/8/3/7/a/2837a5918b0bed1201770081f5513a64d8099fd74dcb7a9fe856fcf7",
+      "bytes": 1230,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/8/3/7/a/2837a5918b0bed1201770081f5513a64d8099fd74dcb7a9fe856fcf7.body",
+      "bytes": 14583,
+      "allocated_bytes": 14848
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/8/7/5/a/2875a44cc7697141a06527419dd44e158c7dd3207822a4c2e3de3645",
+      "bytes": 1162,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/8/7/5/a/2875a44cc7697141a06527419dd44e158c7dd3207822a4c2e3de3645.body",
+      "bytes": 1607044,
+      "allocated_bytes": 1607168
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/8/c/6/0/28c60eb264451fac6f6e8b1eea388c5dedbc65c62abba671d2badf86",
+      "bytes": 1147,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/8/c/6/0/28c60eb264451fac6f6e8b1eea388c5dedbc65c62abba671d2badf86.body",
+      "bytes": 10276,
+      "allocated_bytes": 10752
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/9/4/8/c/2948c6ee62e18ad149b50c1632a307c40e164e9df035d12a42234308",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/9/4/8/c/2948c6ee62e18ad149b50c1632a307c40e164e9df035d12a42234308.body",
+      "bytes": 7572,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/a/5/e/1/2a5e1cea20bc33f7fd34f36755f0833ea7e14386b2bfc18bcb37d017",
+      "bytes": 1183,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/a/5/e/1/2a5e1cea20bc33f7fd34f36755f0833ea7e14386b2bfc18bcb37d017.body",
+      "bytes": 1684,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/c/b/2/7/2cb27b0af240ae036ead91bcd73160d63ead61de78e60619d7b1fc62",
+      "bytes": 1194,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/c/b/2/7/2cb27b0af240ae036ead91bcd73160d63ead61de78e60619d7b1fc62.body",
+      "bytes": 30748,
+      "allocated_bytes": 31232
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/e/5/b/6/2e5b6ced06806dcc8a76919087cfc0d76c4240a8acb8d34511ad15d6",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/2/e/5/b/6/2e5b6ced06806dcc8a76919087cfc0d76c4240a8acb8d34511ad15d6.body",
+      "bytes": 16735,
+      "allocated_bytes": 16896
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/2/2/d/5/322d58f05fc0bdf450e4e74577c2bf6cf466ae1493540d3d2edd2cd9",
+      "bytes": 1127,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/2/2/d/5/322d58f05fc0bdf450e4e74577c2bf6cf466ae1493540d3d2edd2cd9.body",
+      "bytes": 8630400,
+      "allocated_bytes": 8630784
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/3/9/7/4/33974f84394d9a943f68359da08431dab4af9f86c33962982ea21b5f",
+      "bytes": 1898,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/3/9/7/4/33974f84394d9a943f68359da08431dab4af9f86c33962982ea21b5f.body",
+      "bytes": 6913,
+      "allocated_bytes": 7168
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/5/2/3/1/352317308b320ee40293f67e937a7c041e8d086c5db8d489047d211f",
+      "bytes": 1211,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/5/2/3/1/352317308b320ee40293f67e937a7c041e8d086c5db8d489047d211f.body",
+      "bytes": 3947,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/8/2/4/2/382429a8620050490b7c9ee6bd1ea3532b3773691e2f56c14147a6a4",
+      "bytes": 1135,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/8/2/4/2/382429a8620050490b7c9ee6bd1ea3532b3773691e2f56c14147a6a4.body",
+      "bytes": 8314492,
+      "allocated_bytes": 8314880
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/9/e/6/0/39e60e4073e50ad0c3cf8b708535caa4fa27c6822ffa7c03bac3964b",
+      "bytes": 1213,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/9/e/6/0/39e60e4073e50ad0c3cf8b708535caa4fa27c6822ffa7c03bac3964b.body",
+      "bytes": 267506905,
+      "allocated_bytes": 267507200
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/b/0/c/5/3b0c5b0aec5aaa79a8ac084ba31087d7fff942582228659a50dd43af",
+      "bytes": 1274,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/b/0/c/5/3b0c5b0aec5aaa79a8ac084ba31087d7fff942582228659a50dd43af.body",
+      "bytes": 7656,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/c/e/7/7/3ce770df07ea321ab056bed31a67391a50e82aea9460d349fd057276",
+      "bytes": 1199,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/c/e/7/7/3ce770df07ea321ab056bed31a67391a50e82aea9460d349fd057276.body",
+      "bytes": 3309,
+      "allocated_bytes": 3584
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/c/f/e/8/3cfe8ad0742088368690cfec457312d12dd46f85d524823fd19b772f",
+      "bytes": 1276,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/c/f/e/8/3cfe8ad0742088368690cfec457312d12dd46f85d524823fd19b772f.body",
+      "bytes": 2527,
+      "allocated_bytes": 2560
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/d/2/3/a/3d23a5ad548471fdadffd54fe2363185ef4648db7c0bf11d16c83f16",
+      "bytes": 1192,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/3/d/2/3/a/3d23a5ad548471fdadffd54fe2363185ef4648db7c0bf11d16c83f16.body",
+      "bytes": 536198,
+      "allocated_bytes": 536576
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/0/0/d/b/400db3c9a550719d76958c9c597bfbff6eb98533f684c02cc870de92",
+      "bytes": 1157,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/0/0/d/b/400db3c9a550719d76958c9c597bfbff6eb98533f684c02cc870de92.body",
+      "bytes": 11050,
+      "allocated_bytes": 11264
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/4/8/9/0/44890d5b76812dd73c7cd8254516742f0c39fef9de4ae02626af9242",
+      "bytes": 1226,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/4/8/9/0/44890d5b76812dd73c7cd8254516742f0c39fef9de4ae02626af9242.body",
+      "bytes": 2108,
+      "allocated_bytes": 2560
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/4/a/0/8/44a08affceccf45cc0123cfc1997487a75f3d1f8dfe80723c2ee8398",
+      "bytes": 1854,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/4/a/0/8/44a08affceccf45cc0123cfc1997487a75f3d1f8dfe80723c2ee8398.body",
+      "bytes": 9211,
+      "allocated_bytes": 9216
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/4/e/5/b/44e5b11a6caa92636d8ccfe658d420ba4ed8f67f7f4e835b214255aa",
+      "bytes": 1901,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/4/e/5/b/44e5b11a6caa92636d8ccfe658d420ba4ed8f67f7f4e835b214255aa.body",
+      "bytes": 14909,
+      "allocated_bytes": 15360
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/5/9/7/6/45976c194ebb9180bf7410d422bcad653ce13bcb64dda0d07d72b09d",
+      "bytes": 1861,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/5/9/7/6/45976c194ebb9180bf7410d422bcad653ce13bcb64dda0d07d72b09d.body",
+      "bytes": 12580,
+      "allocated_bytes": 12800
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/b/a/7/0/4ba704f5e4e6214e732114a9a52b90b07079981eceef7c9b0ccc46ec",
+      "bytes": 1190,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/b/a/7/0/4ba704f5e4e6214e732114a9a52b90b07079981eceef7c9b0ccc46ec.body",
+      "bytes": 3563,
+      "allocated_bytes": 3584
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/e/e/3/1/4ee3138b60ee0c1b5c7c6d39d2830adba9f08a2f0a1a300dfb7d80b0",
+      "bytes": 1860,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/4/e/e/3/1/4ee3138b60ee0c1b5c7c6d39d2830adba9f08a2f0a1a300dfb7d80b0.body",
+      "bytes": 384670,
+      "allocated_bytes": 385024
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/0/5/8/5/505854e616d82edc7c37bf544d6118b7ace0156d1c2ba975483c7619",
+      "bytes": 1208,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/0/5/8/5/505854e616d82edc7c37bf544d6118b7ace0156d1c2ba975483c7619.body",
+      "bytes": 287193691,
+      "allocated_bytes": 287194112
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/0/8/2/0/508203f16556dff95827c2822c0f9a05f47a54ae3cc9423dced934f1",
+      "bytes": 1181,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/0/8/2/0/508203f16556dff95827c2822c0f9a05f47a54ae3cc9423dced934f1.body",
+      "bytes": 1730,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/4/b/4/b/54b4bc782e57e01b01c130e779badf30a8f82e9675cc08db0775da07",
+      "bytes": 1176,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/4/b/4/b/54b4bc782e57e01b01c130e779badf30a8f82e9675cc08db0775da07.body",
+      "bytes": 1796,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/5/3/7/0/55370f55886180d82c7c82bc5b1b501aa05e483aceb4db0563885620",
+      "bytes": 1167,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/5/3/7/0/55370f55886180d82c7c82bc5b1b501aa05e483aceb4db0563885620.body",
+      "bytes": 9023,
+      "allocated_bytes": 9216
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/6/5/9/d/5659d489289db6050d3f65b3a0486a24cf2cf93d35acbe849fa9ca14",
+      "bytes": 1172,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/6/5/9/d/5659d489289db6050d3f65b3a0486a24cf2cf93d35acbe849fa9ca14.body",
+      "bytes": 2674,
+      "allocated_bytes": 3072
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/6/9/5/0/5695075ec25bc4cbc1d58926d3701ea65f095ebae5271487582ec182",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/6/9/5/0/5695075ec25bc4cbc1d58926d3701ea65f095ebae5271487582ec182.body",
+      "bytes": 14166,
+      "allocated_bytes": 14336
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/7/7/6/c/5776c0877a222d98e87df64e05a75afb9e303354920bee7b5f8b6b91",
+      "bytes": 1204,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/7/7/6/c/5776c0877a222d98e87df64e05a75afb9e303354920bee7b5f8b6b91.body",
+      "bytes": 5434,
+      "allocated_bytes": 5632
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/8/7/7/2/5877275af02bb4671d96ac31a2db0cfddfb08541e1afd2272def23c1",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/8/7/7/2/5877275af02bb4671d96ac31a2db0cfddfb08541e1afd2272def23c1.body",
+      "bytes": 1717,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/b/9/a/9/5b9a9fd3c0c45469fcb69cafd8dcbf862b093a20c76a8fbb53eca5af",
+      "bytes": 1194,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/b/9/a/9/5b9a9fd3c0c45469fcb69cafd8dcbf862b093a20c76a8fbb53eca5af.body",
+      "bytes": 2871,
+      "allocated_bytes": 3072
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/d/e/7/4/5de74aa606aaf8588141cbe765382839ecb0982f091a947770ca6fa8",
+      "bytes": 1275,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/5/d/e/7/4/5de74aa606aaf8588141cbe765382839ecb0982f091a947770ca6fa8.body",
+      "bytes": 45571,
+      "allocated_bytes": 46080
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/0/5/b/1/605b10fba8faa36999a18aa474ebf6a0d2f689ff71d419c39047d2fe",
+      "bytes": 1166,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/0/5/b/1/605b10fba8faa36999a18aa474ebf6a0d2f689ff71d419c39047d2fe.body",
+      "bytes": 60568,
+      "allocated_bytes": 60928
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/0/f/d/8/60fd80a4b5b79b42ecbac52a77806c8905484649f0bb0f5bbf8dcb91",
+      "bytes": 1180,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/0/f/d/8/60fd80a4b5b79b42ecbac52a77806c8905484649f0bb0f5bbf8dcb91.body",
+      "bytes": 1826,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/2/d/1/e/62d1e95eb11943c4752bea63594748c62e32adb6c222bba3e62aaed2",
+      "bytes": 1206,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/2/d/1/e/62d1e95eb11943c4752bea63594748c62e32adb6c222bba3e62aaed2.body",
+      "bytes": 594346921,
+      "allocated_bytes": 594347008
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/4/c/f/c/64cfc03e83f9fad4049b1d2a1d785c9273270a4ab9788b538f5054e3",
+      "bytes": 1860,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/4/c/f/c/64cfc03e83f9fad4049b1d2a1d785c9273270a4ab9788b538f5054e3.body",
+      "bytes": 294777,
+      "allocated_bytes": 294912
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/5/1/e/5/651e58859e8db8c99b9e7068d03984cfd4577518ff0e021c717afbf4",
+      "bytes": 1200,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/5/1/e/5/651e58859e8db8c99b9e7068d03984cfd4577518ff0e021c717afbf4.body",
+      "bytes": 3779,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/5/a/f/8/65af88561e8b18ff500b9fe7d5ad34c1636e3423202d926b9e18a96f",
+      "bytes": 1194,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/5/a/f/8/65af88561e8b18ff500b9fe7d5ad34c1636e3423202d926b9e18a96f.body",
+      "bytes": 8354,
+      "allocated_bytes": 8704
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/6/6/7/0/66670d98c3dba8de85eb9345a0218067efada229dd75080cffea78bb",
+      "bytes": 1134,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/6/6/7/0/66670d98c3dba8de85eb9345a0218067efada229dd75080cffea78bb.body",
+      "bytes": 4835385,
+      "allocated_bytes": 4835840
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/7/a/4/7/67a47c6334f86b3dfdff4246e7d19ecce02d8fb7a976287056dd7796",
+      "bytes": 1196,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/7/a/4/7/67a47c6334f86b3dfdff4246e7d19ecce02d8fb7a976287056dd7796.body",
+      "bytes": 10398,
+      "allocated_bytes": 10752
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/a/b/3/2/6ab326e009cba846af017bad9896a2a6282e9efd5e5e8ed8c0194fbc",
+      "bytes": 1178,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/a/b/3/2/6ab326e009cba846af017bad9896a2a6282e9efd5e5e8ed8c0194fbc.body",
+      "bytes": 1684,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/c/6/e/e/6c6eeaf6757edbde690577822daacaba826c2b12ce67b57b33e8021d",
+      "bytes": 1153,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/c/6/e/e/6c6eeaf6757edbde690577822daacaba826c2b12ce67b57b33e8021d.body",
+      "bytes": 8321,
+      "allocated_bytes": 8704
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/f/8/1/0/6f810a0ec34b60ecdd32b8eefb6996b10c2e1fde471dfd3ea3a47b1a",
+      "bytes": 1177,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/6/f/8/1/0/6f810a0ec34b60ecdd32b8eefb6996b10c2e1fde471dfd3ea3a47b1a.body",
+      "bytes": 1673,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/2/7/1/d/7271d4c0bfd6147a98a3979120c2c8d78733980ceb9db732d107c4cb",
+      "bytes": 1239,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/2/7/1/d/7271d4c0bfd6147a98a3979120c2c8d78733980ceb9db732d107c4cb.body",
+      "bytes": 16740,
+      "allocated_bytes": 16896
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/2/8/a/2/728a2f33f382f4dacf08f6df77aad6f3d889f819ba4fa3efad5ec7e4",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/2/8/a/2/728a2f33f382f4dacf08f6df77aad6f3d889f819ba4fa3efad5ec7e4.body",
+      "bytes": 110185,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/2/f/1/f/72f1f771cda8a846ab711ce310ec804b67362c366d502832718add13",
+      "bytes": 1848,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/2/f/1/f/72f1f771cda8a846ab711ce310ec804b67362c366d502832718add13.body",
+      "bytes": 75382,
+      "allocated_bytes": 75776
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/3/c/3/a/73c3a780e17f5e947c788a9cb111cdef096f43dbe925001283e27a77",
+      "bytes": 1858,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/3/c/3/a/73c3a780e17f5e947c788a9cb111cdef096f43dbe925001283e27a77.body",
+      "bytes": 37072,
+      "allocated_bytes": 37376
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/4/b/d/f/74bdf372f3d845193f395b9ba4ed91510cd09dc32621fc25fe02568d",
+      "bytes": 1851,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/4/b/d/f/74bdf372f3d845193f395b9ba4ed91510cd09dc32621fc25fe02568d.body",
+      "bytes": 161598,
+      "allocated_bytes": 161792
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/5/2/9/7/75297772cf0b7848e63f888bd947f6fbd9d2c61f903452229086c6c0",
+      "bytes": 1140,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/5/2/9/7/75297772cf0b7848e63f888bd947f6fbd9d2c61f903452229086c6c0.body",
+      "bytes": 39254836,
+      "allocated_bytes": 39255040
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/9/2/1/a/7921ac3318a5cdb592026cc26a94f7a2c1e1f7d3a1dc1e3857fd49f1",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/9/2/1/a/7921ac3318a5cdb592026cc26a94f7a2c1e1f7d3a1dc1e3857fd49f1.body",
+      "bytes": 1958,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/a/5/f/7/7a5f717e7b3fb99ec006f4d173aad55224eb063005c662c586ba0518",
+      "bytes": 1898,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/a/5/f/7/7a5f717e7b3fb99ec006f4d173aad55224eb063005c662c586ba0518.body",
+      "bytes": 22817,
+      "allocated_bytes": 23040
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/a/d/f/e/7adfe796f3bbef6d7a179ee327579bcaaf183ca2d06d5717db5fb06c",
+      "bytes": 1205,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/a/d/f/e/7adfe796f3bbef6d7a179ee327579bcaaf183ca2d06d5717db5fb06c.body",
+      "bytes": 322364134,
+      "allocated_bytes": 322364416
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/c/8/6/f/7c86f347077c7c816e2a1a165dfcb6634fb3d66f308c68f1324fd16b",
+      "bytes": 1133,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/c/8/6/f/7c86f347077c7c816e2a1a165dfcb6634fb3d66f308c68f1324fd16b.body",
+      "bytes": 1197834,
+      "allocated_bytes": 1198080
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/d/0/6/d/7d06ddc2f8070ce09a5a2290e2020c460e8ab32b6a2c6b69fc06e979",
+      "bytes": 1179,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/d/0/6/d/7d06ddc2f8070ce09a5a2290e2020c460e8ab32b6a2c6b69fc06e979.body",
+      "bytes": 229892,
+      "allocated_bytes": 230400
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/d/f/3/5/7df355c2cbc2705f16cbb4f6a340034f4a52c7223615aedbc157cfa9",
+      "bytes": 1139,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/d/f/3/5/7df355c2cbc2705f16cbb4f6a340034f4a52c7223615aedbc157cfa9.body",
+      "bytes": 88040029,
+      "allocated_bytes": 88040448
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/f/4/c/2/7f4c21440a33aab7add91c78c2286e9c62150c5fc7741c5240938b36",
+      "bytes": 1854,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/7/f/4/c/2/7f4c21440a33aab7add91c78c2286e9c62150c5fc7741c5240938b36.body",
+      "bytes": 7800,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/5/b/a/a/85baa118794e0405d21a297dbff4d3db06c2499118aec868544ecccd",
+      "bytes": 1159,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/5/b/a/a/85baa118794e0405d21a297dbff4d3db06c2499118aec868544ecccd.body",
+      "bytes": 27865,
+      "allocated_bytes": 28160
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/8/5/d/d/885dde68f93352d15bbeee27a365cb3f3d38aaf8603bdd559eee4877",
+      "bytes": 1233,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/8/5/d/d/885dde68f93352d15bbeee27a365cb3f3d38aaf8603bdd559eee4877.body",
+      "bytes": 6050,
+      "allocated_bytes": 6144
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/c/a/e/2/8cae21252cb086c42c2a929884a2724ceb26602eb504cd23e2f142bd",
+      "bytes": 1179,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/c/a/e/2/8cae21252cb086c42c2a929884a2724ceb26602eb504cd23e2f142bd.body",
+      "bytes": 6974,
+      "allocated_bytes": 7168
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/f/7/8/a/8f78a59c750512c5eff98117526033c3ddca4a99c7d75426a1ad4942",
+      "bytes": 1202,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/f/7/8/a/8f78a59c750512c5eff98117526033c3ddca4a99c7d75426a1ad4942.body",
+      "bytes": 1658,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/f/8/e/2/8f8e2fb9a768bac387b5d66f79ccba3d1dedc919074391a1463b0f2b",
+      "bytes": 1285,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/8/f/8/e/2/8f8e2fb9a768bac387b5d66f79ccba3d1dedc919074391a1463b0f2b.body",
+      "bytes": 6725,
+      "allocated_bytes": 7168
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/1/c/e/7/91ce7207f0e2688c725f5948ca7d56a6dfd1afa303f1db238eaf6879",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/1/c/e/7/91ce7207f0e2688c725f5948ca7d56a6dfd1afa303f1db238eaf6879.body",
+      "bytes": 94629,
+      "allocated_bytes": 94720
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/3/d/f/8/93df89e257a3540f92b616cdf4db6752d2b2c3baae5ca79f5499b985",
+      "bytes": 1166,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/3/d/f/8/93df89e257a3540f92b616cdf4db6752d2b2c3baae5ca79f5499b985.body",
+      "bytes": 37461,
+      "allocated_bytes": 37888
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/4/5/2/4/9452417670b2e75527d793717779fce5d54e5f21adb3344c273876fa",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/4/5/2/4/9452417670b2e75527d793717779fce5d54e5f21adb3344c273876fa.body",
+      "bytes": 93680,
+      "allocated_bytes": 93696
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/5/1/4/e/9514ebf3e18f552a366d725da97469f7c961cbc3c3e704d01252710b",
+      "bytes": 1124,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/5/1/4/e/9514ebf3e18f552a366d725da97469f7c961cbc3c3e704d01252710b.body",
+      "bytes": 6624404,
+      "allocated_bytes": 6624768
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/6/1/f/f/961ff7b5d6663e8d3f87391f811a823689e2330d70c5fb5c8e12e233",
+      "bytes": 1177,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/6/1/f/f/961ff7b5d6663e8d3f87391f811a823689e2330d70c5fb5c8e12e233.body",
+      "bytes": 1683,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/7/d/5/b/97d5b0ed2cc6de4d64d58d6c310ed8ac815c42105327632eace46dd7",
+      "bytes": 1236,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/7/d/5/b/97d5b0ed2cc6de4d64d58d6c310ed8ac815c42105327632eace46dd7.body",
+      "bytes": 4670,
+      "allocated_bytes": 5120
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/b/5/1/6/9b51619e20a708f99372afefd7dbe20a1b5e42ae213f02bf27267976",
+      "bytes": 1860,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/b/5/1/6/9b51619e20a708f99372afefd7dbe20a1b5e42ae213f02bf27267976.body",
+      "bytes": 273600,
+      "allocated_bytes": 273920
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/d/6/a/9/9d6a9c4a2ed907744a61ef20b1a3ac69fd72186c7740413c3dc10a47",
+      "bytes": 1129,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/d/6/a/9/9d6a9c4a2ed907744a61ef20b1a3ac69fd72186c7740413c3dc10a47.body",
+      "bytes": 89954,
+      "allocated_bytes": 90112
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/d/d/3/5/9dd3537b0b44d2a5c9be2c1269293a05ccda19b118543f34e3bf7199",
+      "bytes": 1153,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/9/d/d/3/5/9dd3537b0b44d2a5c9be2c1269293a05ccda19b118543f34e3bf7199.body",
+      "bytes": 5232,
+      "allocated_bytes": 5632
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/1/9/5/3/a19537d3cf37c122db841d6fe4cd322bc10d1a558bb00d146b85cb9a",
+      "bytes": 1799,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/1/9/5/3/a19537d3cf37c122db841d6fe4cd322bc10d1a558bb00d146b85cb9a.body",
+      "bytes": 38310,
+      "allocated_bytes": 38400
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/5/d/c/1/a5dc1ca95930809accc470a61fcfa7d7de54a1f5eeec2d5399a0a900",
+      "bytes": 1176,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/5/d/c/1/a5dc1ca95930809accc470a61fcfa7d7de54a1f5eeec2d5399a0a900.body",
+      "bytes": 113517,
+      "allocated_bytes": 113664
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/6/c/2/0/a6c20a7626b1525eeadb07a4c5db75e3002412f1491d06fd6a657028",
+      "bytes": 1174,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/6/c/2/0/a6c20a7626b1525eeadb07a4c5db75e3002412f1491d06fd6a657028.body",
+      "bytes": 6286,
+      "allocated_bytes": 6656
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/7/0/9/4/a7094ed5a4cc16f47a5321a9f38285921c17bacfd72d0b4f42bc4cf5",
+      "bytes": 1150,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/7/0/9/4/a7094ed5a4cc16f47a5321a9f38285921c17bacfd72d0b4f42bc4cf5.body",
+      "bytes": 6299353,
+      "allocated_bytes": 6299648
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/b/8/8/4/ab88486eed92118d56ff29d34b9be4765577b75f34e3abe22759ee07",
+      "bytes": 1195,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/a/b/8/8/4/ab88486eed92118d56ff29d34b9be4765577b75f34e3abe22759ee07.body",
+      "bytes": 155430799,
+      "allocated_bytes": 155430912
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/0/9/3/3/b0933bd76d22bb9f4b547a96163998d15d04cb2f1c17fe2f8b88fb39",
+      "bytes": 1265,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/0/9/3/3/b0933bd76d22bb9f4b547a96163998d15d04cb2f1c17fe2f8b88fb39.body",
+      "bytes": 365750,
+      "allocated_bytes": 366080
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/1/1/9/0/b11909f451f61fb29636217082b1c638b177c59eac335e0200a136e6",
+      "bytes": 1253,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/1/1/9/0/b11909f451f61fb29636217082b1c638b177c59eac335e0200a136e6.body",
+      "bytes": 129956,
+      "allocated_bytes": 130048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/1/f/5/d/b1f5dc01896eee598e8915be35e61304ad2b16363d00711f8576642c",
+      "bytes": 1857,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/1/f/5/d/b1f5dc01896eee598e8915be35e61304ad2b16363d00711f8576642c.body",
+      "bytes": 119498,
+      "allocated_bytes": 119808
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/5/0/1/6/b50161ce80a3ddd3f50977d5414a93660648823b703e10f65f16eeeb",
+      "bytes": 1188,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/5/0/1/6/b50161ce80a3ddd3f50977d5414a93660648823b703e10f65f16eeeb.body",
+      "bytes": 155560,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/6/4/6/1/b6461b457fc7cf1ff1ab6211df4e4735c1428d8fd5cfc80a1c825870",
+      "bytes": 1179,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/6/4/6/1/b6461b457fc7cf1ff1ab6211df4e4735c1428d8fd5cfc80a1c825870.body",
+      "bytes": 1750,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/8/6/2/6/b862637a242a4033f1ba3be874e038f3a95ab29277da4c878f7c162d",
+      "bytes": 1900,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/8/6/2/6/b862637a242a4033f1ba3be874e038f3a95ab29277da4c878f7c162d.body",
+      "bytes": 64599,
+      "allocated_bytes": 65024
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/b/f/e/6/bbfe6b9c7bc8ae99b0804fbdd00a26b3557414c9a92907c370854cf4",
+      "bytes": 1854,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/b/f/e/6/bbfe6b9c7bc8ae99b0804fbdd00a26b3557414c9a92907c370854cf4.body",
+      "bytes": 2535,
+      "allocated_bytes": 2560
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/f/0/f/b/bf0fb61f5fc01a0b0ea1d420442e200443e35e1916bd0efc01f53428",
+      "bytes": 1207,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/b/f/0/f/b/bf0fb61f5fc01a0b0ea1d420442e200443e35e1916bd0efc01f53428.body",
+      "bytes": 193118695,
+      "allocated_bytes": 193118720
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/0/4/0/0/c0400f4849a16bb7ec1db13ba6d964327b0869995ab53c54f6668654",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/0/4/0/0/c0400f4849a16bb7ec1db13ba6d964327b0869995ab53c54f6668654.body",
+      "bytes": 6579,
+      "allocated_bytes": 6656
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/0/b/7/c/c0b7c8f556dc2f24aa2eb52b6f16c9cecfd02048ca00aa0e89b67e98",
+      "bytes": 1123,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/0/b/7/c/c0b7c8f556dc2f24aa2eb52b6f16c9cecfd02048ca00aa0e89b67e98.body",
+      "bytes": 19526099,
+      "allocated_bytes": 19526144
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/0/e/8/5/c0e854830132b4466a4ad702e2f7168f1253a791e391b297676ef2cd",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/0/e/8/5/c0e854830132b4466a4ad702e2f7168f1253a791e391b297676ef2cd.body",
+      "bytes": 18421,
+      "allocated_bytes": 18432
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/1/7/c/a/c17cad264dcca704f757ea4af5217a6adde928f340ca037484428e77",
+      "bytes": 1141,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/1/7/c/a/c17cad264dcca704f757ea4af5217a6adde928f340ca037484428e77.body",
+      "bytes": 954765,
+      "allocated_bytes": 954880
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/2/0/b/0/c20b0dccc240a130d4f4bf6494861d9dfe1df1f2bee4a2bbdcb4bd8c",
+      "bytes": 1181,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/2/0/b/0/c20b0dccc240a130d4f4bf6494861d9dfe1df1f2bee4a2bbdcb4bd8c.body",
+      "bytes": 1684,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/2/7/c/2/c27c2c412ae592c32021669221777985fad891b738fd4b7d28dc219f",
+      "bytes": 1165,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/2/7/c/2/c27c2c412ae592c32021669221777985fad891b738fd4b7d28dc219f.body",
+      "bytes": 1695,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/3/e/8/8/c3e88656ec9b47dda7b25b9c77869d1b29bbfbb6c0ed664eeae43a15",
+      "bytes": 1165,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/3/e/8/8/c3e88656ec9b47dda7b25b9c77869d1b29bbfbb6c0ed664eeae43a15.body",
+      "bytes": 8630,
+      "allocated_bytes": 8704
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/5/0/8/3/c50837a15752f4ba23cc6a2bf8eea64a7b02553b764e138ca6dd2fdf",
+      "bytes": 1155,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/5/0/8/3/c50837a15752f4ba23cc6a2bf8eea64a7b02553b764e138ca6dd2fdf.body",
+      "bytes": 122781,
+      "allocated_bytes": 122880
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/6/f/3/1/c6f3192810e6b78a08fee1da61557cd4bdd93a63331b9d474bca9d38",
+      "bytes": 1157,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/6/f/3/1/c6f3192810e6b78a08fee1da61557cd4bdd93a63331b9d474bca9d38.body",
+      "bytes": 74366,
+      "allocated_bytes": 74752
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/7/3/5/3/c7353d523512e410727b300ebd2fa210e10d5abdc22f129a24cedbdf",
+      "bytes": 1194,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/7/3/5/3/c7353d523512e410727b300ebd2fa210e10d5abdc22f129a24cedbdf.body",
+      "bytes": 60911,
+      "allocated_bytes": 60928
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/7/9/0/7/c790762a57914116c1e8abfd50c4f1c927a01bb8121505343ff10c6e",
+      "bytes": 1161,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/7/9/0/7/c790762a57914116c1e8abfd50c4f1c927a01bb8121505343ff10c6e.body",
+      "bytes": 321922,
+      "allocated_bytes": 322048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/8/4/6/0/c84608549463ae90303a0f39c4b1e01a1717f15e0529931eee51391c",
+      "bytes": 1899,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/8/4/6/0/c84608549463ae90303a0f39c4b1e01a1717f15e0529931eee51391c.body",
+      "bytes": 30279,
+      "allocated_bytes": 30720
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/a/b/2/6/cab26f9a2898ed03d0f1e7f1b9059e6a15247390752564f7635e05d5",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/a/b/2/6/cab26f9a2898ed03d0f1e7f1b9059e6a15247390752564f7635e05d5.body",
+      "bytes": 7488,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97",
+      "bytes": 1857,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97.body",
+      "bytes": 401175,
+      "allocated_bytes": 401408
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/d/5/d/e/cd5de44b899cbe1869765c21b55cffc53c0c0ffa9d3c6f1fd40a42a2",
+      "bytes": 1857,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/d/5/d/e/cd5de44b899cbe1869765c21b55cffc53c0c0ffa9d3c6f1fd40a42a2.body",
+      "bytes": 257343,
+      "allocated_bytes": 257536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/f/0/6/d/cf06de1e2f69cd4de8ffff30e8a1cd02146f3c1c0ca65b57bc144242",
+      "bytes": 1192,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/f/0/6/d/cf06de1e2f69cd4de8ffff30e8a1cd02146f3c1c0ca65b57bc144242.body",
+      "bytes": 12816,
+      "allocated_bytes": 13312
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/f/4/9/5/cf495098d578c1700ab8b6ec9fe59dc06fd2589b3e88f0b74ebc3d2b",
+      "bytes": 1198,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/f/4/9/5/cf495098d578c1700ab8b6ec9fe59dc06fd2589b3e88f0b74ebc3d2b.body",
+      "bytes": 5783,
+      "allocated_bytes": 6144
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/f/4/e/2/cf4e21a9dd3824f2a8d4bd195a4d78f1a473f55ef27b3e262dfa03ce",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/c/f/4/e/2/cf4e21a9dd3824f2a8d4bd195a4d78f1a473f55ef27b3e262dfa03ce.body",
+      "bytes": 16298,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/2/6/5/5/d265540bab8b46490fec1d273e4704a2b9a428dff4459cb638607eeb",
+      "bytes": 1136,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/2/6/5/5/d265540bab8b46490fec1d273e4704a2b9a428dff4459cb638607eeb.body",
+      "bytes": 63619976,
+      "allocated_bytes": 63620096
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/5/d/7/a/d5d7ae30e479ef0cba1bee19d33976732745ef5c16715f9ac3ccf779",
+      "bytes": 1151,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/5/d/7/a/d5d7ae30e479ef0cba1bee19d33976732745ef5c16715f9ac3ccf779.body",
+      "bytes": 200966,
+      "allocated_bytes": 201216
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/5/f/d/c/d5fdc47eaa22ae98050233fce9e1971579bd90b62350f0daa85c011c",
+      "bytes": 1196,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/5/f/d/c/d5fdc47eaa22ae98050233fce9e1971579bd90b62350f0daa85c011c.body",
+      "bytes": 888024302,
+      "allocated_bytes": 888024576
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/6/e/a/6/d6ea6f2d9aeebe046b76563d986a6024cd41587c7b0957c5cb814b67",
+      "bytes": 1170,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/6/e/a/6/d6ea6f2d9aeebe046b76563d986a6024cd41587c7b0957c5cb814b67.body",
+      "bytes": 6134,
+      "allocated_bytes": 6144
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/9/5/7/f/d957f20cf05c8556dc90e038a4a8382dc79a34f0b34b58f600c306c8",
+      "bytes": 1847,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/9/5/7/f/d957f20cf05c8556dc90e038a4a8382dc79a34f0b34b58f600c306c8.body",
+      "bytes": 58321,
+      "allocated_bytes": 58368
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/f/8/5/a/df85ae4f438122ece095d9a4c3459990aad7395e69477272e231000e",
+      "bytes": 1174,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/d/f/8/5/a/df85ae4f438122ece095d9a4c3459990aad7395e69477272e231000e.body",
+      "bytes": 1820,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/0/2/7/6/e0276893d7489dad47ee19221f613ef206616211ff534c1fdcf70652",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/0/2/7/6/e0276893d7489dad47ee19221f613ef206616211ff534c1fdcf70652.body",
+      "bytes": 30046,
+      "allocated_bytes": 30208
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/0/b/4/f/e0b4f4d1d5b8bb8b844f230fb9255eeabd73b4bd6598e826c4219d4f",
+      "bytes": 1161,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/0/b/4/f/e0b4f4d1d5b8bb8b844f230fb9255eeabd73b4bd6598e826c4219d4f.body",
+      "bytes": 44614,
+      "allocated_bytes": 45056
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/0/6/c/e106c860fe66155447d95810c58ecc3a39b35b2ed9285340d276f297",
+      "bytes": 1154,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/0/6/c/e106c860fe66155447d95810c58ecc3a39b35b2ed9285340d276f297.body",
+      "bytes": 1647772,
+      "allocated_bytes": 1648128
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/2/0/7/e12076457302106d0d1749a4e0e68df68e2d4cddf2b89fae453ed5b2",
+      "bytes": 1124,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/2/0/7/e12076457302106d0d1749a4e0e68df68e2d4cddf2b89fae453ed5b2.body",
+      "bytes": 38612244,
+      "allocated_bytes": 38612480
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/a/1/0/e1a102a58d5f97b4d2a7ffd62157f43e68a5808f81e4779f2eb95e89",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/a/1/0/e1a102a58d5f97b4d2a7ffd62157f43e68a5808f81e4779f2eb95e89.body",
+      "bytes": 7349,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/e/3/5/e1e353c2468471571780f9a97348e73888d6231894c139b9466648d0",
+      "bytes": 1279,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/1/e/3/5/e1e353c2468471571780f9a97348e73888d6231894c139b9466648d0.body",
+      "bytes": 3544,
+      "allocated_bytes": 3584
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/2/0/7/4/e207426cbcf220918fdf354826064190a066f96cd6ad8830f1f11fdc",
+      "bytes": 1899,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/2/0/7/4/e207426cbcf220918fdf354826064190a066f96cd6ad8830f1f11fdc.body",
+      "bytes": 15878,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/3/0/e/0/e30e0a7ab019a92a6c1c986de8844c4b850e98f20e04072fd04b4f64",
+      "bytes": 1854,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/3/0/e/0/e30e0a7ab019a92a6c1c986de8844c4b850e98f20e04072fd04b4f64.body",
+      "bytes": 7578,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/3/4/7/2/e3472991c55ba2fbaddced5931d34182eca51c3c130aba12041f2914",
+      "bytes": 1218,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/3/4/7/2/e3472991c55ba2fbaddced5931d34182eca51c3c130aba12041f2914.body",
+      "bytes": 22187,
+      "allocated_bytes": 22528
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/4/3/a/7/e43a7769dc80cabbca909e73a4b2b8c1f6156700cc1c2f7e0a4c003e",
+      "bytes": 1860,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/4/3/a/7/e43a7769dc80cabbca909e73a4b2b8c1f6156700cc1c2f7e0a4c003e.body",
+      "bytes": 7384,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/4/c/f/2/e4cf2e155058bd0f4a8b316535197e8d2e1e17e44865b05f095765e1",
+      "bytes": 1178,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/4/c/f/2/e4cf2e155058bd0f4a8b316535197e8d2e1e17e44865b05f095765e1.body",
+      "bytes": 1695,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/5/7/6/d/e576dd221a042e92db276835704da92b4cc323af96bdb1c9ec840090",
+      "bytes": 1124,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/5/7/6/d/e576dd221a042e92db276835704da92b4cc323af96bdb1c9ec840090.body",
+      "bytes": 52620365,
+      "allocated_bytes": 52620800
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/8/1/0/6/e810629acc67899d5736303672ca84a9dcd1f499eb7fabee16a130d7",
+      "bytes": 1232,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/8/1/0/6/e810629acc67899d5736303672ca84a9dcd1f499eb7fabee16a130d7.body",
+      "bytes": 750767,
+      "allocated_bytes": 751104
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/c/d/1/3/ecd13ed82750fa9cc9103a0674a9cf4a7e1605e937bb98097f964997",
+      "bytes": 1304,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/c/d/1/3/ecd13ed82750fa9cc9103a0674a9cf4a7e1605e937bb98097f964997.body",
+      "bytes": 10463,
+      "allocated_bytes": 10752
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/d/2/5/d/ed25d1bb38edf83d84e0a08c7e2111da8cb788eddb019df7a96d3213",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/d/2/5/d/ed25d1bb38edf83d84e0a08c7e2111da8cb788eddb019df7a96d3213.body",
+      "bytes": 33553,
+      "allocated_bytes": 33792
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/d/4/9/1/ed491fb7849257dcb5a28ab5e88816705bed4897be1158f823eb4628",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/d/4/9/1/ed491fb7849257dcb5a28ab5e88816705bed4897be1158f823eb4628.body",
+      "bytes": 6352,
+      "allocated_bytes": 6656
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/e/6/1/9/ee61934ca89b359dd1c7322dd42eb2cff9943416c2a1418ea9eda385",
+      "bytes": 1142,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/e/6/1/9/ee61934ca89b359dd1c7322dd42eb2cff9943416c2a1418ea9eda385.body",
+      "bytes": 10248621,
+      "allocated_bytes": 10248704
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/f/9/7/2/ef972325787b204c69e9d20caca3180df86faf712455518090c5414a",
+      "bytes": 1855,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/e/f/9/7/2/ef972325787b204c69e9d20caca3180df86faf712455518090c5414a.body",
+      "bytes": 7649,
+      "allocated_bytes": 7680
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/2/1/f/4/f21f442d06ae72e19190f1c6b617a093f7a8e01d4efd337676f98871",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/2/1/f/4/f21f442d06ae72e19190f1c6b617a093f7a8e01d4efd337676f98871.body",
+      "bytes": 15846,
+      "allocated_bytes": 15872
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/2/d/8/f/f2d8f330a46a96c4ba5fd7549ac380f5bf1103a0b12d272ffcb6c096",
+      "bytes": 1129,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/2/d/8/f/f2d8f330a46a96c4ba5fd7549ac380f5bf1103a0b12d272ffcb6c096.body",
+      "bytes": 4559686,
+      "allocated_bytes": 4559872
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/5/0/1/7/f50179594e0f2b96254749d12ddeb6a9359a16ed9b78d41a4e0d9b07",
+      "bytes": 1204,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/5/0/1/7/f50179594e0f2b96254749d12ddeb6a9359a16ed9b78d41a4e0d9b07.body",
+      "bytes": 2019,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/5/2/e/f/f52efb990e0b7b34fd423bcdc114bf2075643b0be8a8e0360ad899d4",
+      "bytes": 1859,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/5/2/e/f/f52efb990e0b7b34fd423bcdc114bf2075643b0be8a8e0360ad899d4.body",
+      "bytes": 22485,
+      "allocated_bytes": 22528
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/5/4/8/8/f5488e4b9d9e12795b3ae821fc5d4edda1a99f24a19fa19ab7f92883",
+      "bytes": 1857,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/5/4/8/8/f5488e4b9d9e12795b3ae821fc5d4edda1a99f24a19fa19ab7f92883.body",
+      "bytes": 91895,
+      "allocated_bytes": 92160
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/9/9/b/3/f99b3487d2b9c55edcd311aeafa35cbf852ab2cc5c3f5d1a1a08e2b5",
+      "bytes": 1277,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/9/9/b/3/f99b3487d2b9c55edcd311aeafa35cbf852ab2cc5c3f5d1a1a08e2b5.body",
+      "bytes": 4811,
+      "allocated_bytes": 5120
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/b/7/2/c/fb72c7b08277f1e40fcfcaf977eecd5d5949cfbcce4c1932dcbb13ec",
+      "bytes": 1856,
+      "allocated_bytes": 2048
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/b/7/2/c/fb72c7b08277f1e40fcfcaf977eecd5d5949cfbcce4c1932dcbb13ec.body",
+      "bytes": 21074,
+      "allocated_bytes": 21504
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/d/4/c/8/fd4c815ff44e7e307f78a47ee51dbe82d1c9a1af1b7ca5a85f83d90e",
+      "bytes": 1196,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/d/4/c/8/fd4c815ff44e7e307f78a47ee51dbe82d1c9a1af1b7ca5a85f83d90e.body",
+      "bytes": 2690,
+      "allocated_bytes": 3072
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/e/1/c/a/fe1ca1e21c9f20d94b78f2f1ffaa4f52c862765a094b92306e6d0c07",
+      "bytes": 1312,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/e/1/c/a/fe1ca1e21c9f20d94b78f2f1ffaa4f52c862765a094b92306e6d0c07.body",
+      "bytes": 3310,
+      "allocated_bytes": 3584
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/e/6/0/a/fe60a2fb3b0b70a8fdcbb10eb129ced72374ce9dcef6a7bf7f98801a",
+      "bytes": 1150,
+      "allocated_bytes": 1536
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/http-v2/f/e/6/0/a/fe60a2fb3b0b70a8fdcbb10eb129ced72374ce9dcef6a7bf7f98801a.body",
+      "bytes": 20543,
+      "allocated_bytes": 20992
+    },
+    {
+      "path": "/data/run01/scxi717/.cache/pip/selfcheck/9b3b846b3cc71a52fdbd722e75b0829c10c4bf37640e379cbcd3137d",
+      "bytes": 118,
+      "allocated_bytes": 512
+    }
+  ],
+  "before_df": "Filesystem                   1B-blocks         Used   Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 808197382144 50796077056  95% /data\n",
+  "after_df": "Filesystem                   1B-blocks         Used   Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 789635629056 69357830144  92% /data\n",
+  "queue_was_empty": true,
+  "scientific_outputs_deleted": false,
+  "installed_conda_environments_deleted": false,
+  "unique_raw_data_deleted": false
+}

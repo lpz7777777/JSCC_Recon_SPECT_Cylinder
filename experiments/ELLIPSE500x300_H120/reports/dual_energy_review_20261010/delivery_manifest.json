@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "date": "2026-10-10",
+  "files": {
+    "cleanup_acceptance.json": {
+      "bytes": 1825,
+      "sha256": "f804f8758395138994a067bed1169defebf2da64f49ae1bd58bac8aa6877b5db"
+    },
+    "dual_energy_nema_research_report_20261010.pdf": {
+      "bytes": 2472277,
+      "sha256": "5377cf73d309cc30d87d0bbee0d3ae87a99e971473a8130eaccd0d952ae29d97"
+    },
+    "endpoint_native_metrics.csv": {
+      "bytes": 4969,
+      "sha256": "37ffc5874e294b64bbe72d919fd8eddcc53a22e853d5c0d4d5d9ed26592b8107"
+    },
+    "local_cleanup_acceptance.json": {
+      "bytes": 79858,
+      "sha256": "df318e7de588f7f10e4d3ea5df0bd56e03fdb3bc930486a1d741e82bfc29e829"
+    },
+    "local_cleanup_plan.json": {
+      "bytes": 8054,
+      "sha256": "eccd3999e606c801e9bb0dc8224d52f42d1cf795b7d1851c4d11bf21a9b76ddc"
+    },
+    "local_storage_inventory.json": {
+      "bytes": 218747,
+      "sha256": "afa034b854a503fbba80ee91589255f55218ea2c34ef93dc7de67ddea4f0d344"
+    },
+    "README.md": {
+      "bytes": 4551,
+      "sha256": "19d742b5c74ca9f7848d2533fdbac92fade10d51213973ec735ab089494ade83"
+    },
+    "redundant_transfer_acceptance.json": {
+      "bytes": 48080,
+      "sha256": "008af36d232d36725c8937aaab284222dd89e9d268897288ce6a565359cb09ec"
+    },
+    "remote_cleanup_acceptance.json": {
+      "bytes": 61754,
+      "sha256": "50df493b232e2c0d7e2b005e2b39da8c90dc0a04086f8a302d51d8f8a76696cd"
+    },
+    "remote_storage_inventory.json": {
+      "bytes": 48577,
+      "sha256": "2cb793a8d2b741e9aec42a83822126420d541428321809c018b1f100c2ee2932"
+    },
+    "report_visual_acceptance.json": {
+      "bytes": 12973,
+      "sha256": "0b4c0c7e233de217314fadd40cc4c580be0d55a365cb8ce6c09e00cffe048305"
+    },
+    "result_catalog.json": {
+      "bytes": 2257,
+      "sha256": "27e79403c6105cf30f6a057b3189a112a205b8a0ff4e85312bd89f48a6a2424d"
+    },
+    "scientific_sources.json": {
+      "bytes": 6433,
+      "sha256": "922381c43c1f99f43b6fce908f582302b40dee5945eff48d915b6907f8767c4f"
+    },
+    "sphere_cnr_peak_and_final.csv": {
+      "bytes": 7743,
+      "sha256": "46c4d8ad4dc0120db33abc7ad440dbf2c03c034918523293dfd8159466f5639e"
+    },
+    "storage_retention_plan.csv": {
+      "bytes": 1359,
+      "sha256": "a37f82a5cbd607a0b29e2eace28f0ae0b22da12cdc40f6d81b17c3ae496e1177"
+    },
+    "figures/ehe_dose_noise.png": {
+      "bytes": 209060,
+      "sha256": "b31fd8116879aeebc172f94b0d9a7c2261e60f2948cc95b97802ce0ac6d3113a"
+    },
+    "figures/gallery_0_0.png": {
+      "bytes": 295726,
+      "sha256": "1cab8ac412c36a35a01cf85a04155956c1ff391541857b2c031ca9ff9831f816"
+    },
+    "figures/gallery_1_0.png": {
+      "bytes": 296902,
+      "sha256": "8a09f75da9fcf2525ffd898bad2b3e0c46adee7d88fe3b3a0bd142c271c83168"
+    },
+    "figures/gallery_2_0.png": {
+      "bytes": 240182,
+      "sha256": "1cc2a16525064075502db1d53ec427761f6547db363d26e9f8000ebbf2f21516"
+    },
+    "figures/gallery_3_0.png": {
+      "bytes": 237782,
+      "sha256": "0e587dacd3a7a6b06918f33c435a668779a6667fdfd21c409f2035431bee0b85"
+    },
+    "figures/gallery_4_0.png": {
+      "bytes": 173597,
+      "sha256": "142b5bcaadac4b18c74fd08beb57171d40b2beaa293c53edf0b5f6f85365dd0b"
+    },
+    "figures/gallery_4_1.png": {
+      "bytes": 181650,
+      "sha256": "2d916d62a5131f6c3a2450b26727948effe60e1639c539d0bdcdaf722514a4c2"
+    },
+    "figures/large_sphere_trajectories.png": {
+      "bytes": 279304,
+      "sha256": "d9133796d0290fa6d9fb45d3a04f3b8efca2e717517ff14ad348c8fe7ee97b70"
+    }
+  },
+  "delivery_tools_sha256": {
+    "tools/research/build_dual_energy_report.py": "bb897726b5d8bf2e088628372120dd1efef58d50f718535fbba6eada8647c64c",
+    "tools/research/check_redundant_transfer.py": "96d022fa054f0ed63cbdea93b775585a8e03ef13f8bf80566f4e57c068f54a74",
+    "tools/research/cleanup_completed_reconstruction.py": "d839828cc50f4cfefba756f4e70ea44d3fa90dfd80e2bf11f82f5d4c8f53888d",
+    "tools/research/inventory_reconstruction_storage.py": "8a88e6c4c6ce076e1b9b41b3701ec418d984bba0132e9fb3c0f1d6b792a95752"
+  },
+  "formal_algorithms_changed": false,
+  "formal_results_deleted": false,
+  "baseline_verification": {
+    "passed": true,
+    "code_SHA_count": 113,
+    "evidence_SHA_count": 48,
+    "artifact_SHA_counts": [
+      14,
+      9
+    ],
+    "verification_method": "Existing verify_dual_energy_baseline.py successfully executed after local cleanup; optional raw checks not invoked"
+  },
+  "automation": "PAUSED",
+  "no_new_computational_jobs": true,
+  "scratch_preview_cleanup": {
+    "removed": false,
+    "path": "tmp/pdfs/dual_energy_20261010",
+    "reason": "Automatic tool policy rejected recursive deletion and bounded enumerated file deletion; ignored previews retained, not part of Git payload"
+  }
+}

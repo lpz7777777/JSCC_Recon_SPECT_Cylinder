@@ -1,0 +1,7 @@
+path,label,allocated_bytes,allocated_GiB,decision,next_condition,deleted
+/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/List,旧能量List,61454272000,57.234,候选，未删除,逐案例确认备份和恢复用途后迁出；不与近期观测混删,False
+/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/Factors,历史响应,39569120256,36.852,候选，未删除,逐能量和几何确认本地备份、引用关系后迁出,False
+/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne,其他lpz旧工程,337122245632,313.97,候选，未删除,先确认项目用途及完整备份；目录不是本轮近期结果,False
+/data/run01/scxi717/zxc/SCSPECT_EXP,zxc工程,240893246464,224.349,候选，未删除,先确认目录归属及其他使用者，不由本轮自动删除,False
+/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/FactorsCalibrated,JSCC标定矩阵,16755925504,15.605,保护,完整矩阵和自身S为生产输入,False
+/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200,EHE原始输运与响应,55124245504,51.338,保护,原12计算块、完整转换响应、原始观测和验收；不按年龄删除,False

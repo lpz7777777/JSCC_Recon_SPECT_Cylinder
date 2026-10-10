@@ -1,0 +1,168 @@
+{
+  "tracked_scripts": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/ehe_5e10_finalize.py",
+      "bytes": 5394,
+      "sha256": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/ehe_forward_poisson_5e10_finalize.py",
+      "bytes": 5378,
+      "sha256": "eb138308e16f3e1de64b8d490ca322103f7f75de567641a906ec98daca1dc2ec",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/render_ehe_5e10_reviewed.py",
+      "bytes": 4049,
+      "sha256": "a8977f52351bde1e884039eb7e13f99098c560372022a6ae1de21fbf03c52300",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/review_ehe_forward_poisson_5e10_layout.py",
+      "bytes": 2742,
+      "sha256": "d7342ad46677b9fe57add2c29f6a59df0b57959da93f2089b7196b8d113fe79b",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/launch_er13_fwhm511_sum350.ps1",
+      "bytes": 1102,
+      "sha256": "d56d8ff5c47e4c052a1064df53d835c00f4430b65bd928f81aa5971ceaa90312",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/monitor_full_sensid_and_compton_validation.ps1",
+      "bytes": 2274,
+      "sha256": "edf3ebdfa671c44ee8f67a4e6e685be0714b251e6722937a2803c69e75d57022",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/run_full_sensid_and_compton_validation.ps1",
+      "bytes": 4522,
+      "sha256": "46e2aed9f44444d79ed46e1a7260e05c8a4124b464717cf7f78f83b27dd68e8c",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    },
+    {
+      "path": "tools/runners/historical/2026-07-compton-validation/watch_and_run_jscc_compton_validation.ps1",
+      "bytes": 2010,
+      "sha256": "3805145e8e037c9509eef9a2441273e731c05548f9499979483270129f5b92e1",
+      "remaining_callers": [],
+      "restore_commit": "176f403eb123408f58a74b9f88fb1a6e271a56f8",
+      "reason": "Completed one-time postprocessing/layout or obsolete July controller; scientific producer, solver, plots and verifiers retained"
+    }
+  ],
+  "generated_scripts": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/checkpoint_pilot3_resource.py",
+      "bytes": 1315,
+      "sha256": "0e6fab210f4572b54c4679a92cb49784ee3250dd9aceae4e96e5291996a708dc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/checkpoint_pilot_resource.py",
+      "bytes": 1448,
+      "sha256": "7800095c13c0652cd46c1e8f7fb35b617e9c410c14674497e4b5de5b1aa88811"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_array_completed.py",
+      "bytes": 502,
+      "sha256": "8d29464ee1523f0a40d53052471936f78da2546e369e26b221d0abfbde8fbaf3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_completed_stages.py",
+      "bytes": 1809,
+      "sha256": "45458cf571bf21ef37802c7ae9df11907ff5bf5d5583a4cba3481c3bb86bc6bc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_final_accounting.py",
+      "bytes": 2914,
+      "sha256": "0d250a49d3eb2fa756085e9c04e37d3beb7b0d92af44dab644e5e8743bc209d2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/check_formal_progress.py",
+      "bytes": 1753,
+      "sha256": "6858459b9a88b8d041d56c2dab0c5ad196e8708313f40733da3bde0f3e31c63b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compare_allocator_pilots.py",
+      "bytes": 1993,
+      "sha256": "783e693681d29461a5a21eca5dee8b657e729b099c08161f85c2876f059dcda5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/finalize_nema_5e9_report.py",
+      "bytes": 14464,
+      "sha256": "c6bdbd2790d5089fae7283276acaad04c53ffbd8e2279cf96e738cd36943cb33"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/monitor_pilot.py",
+      "bytes": 533,
+      "sha256": "f6824ac758214dde18bfe03c9ab359ad41b14469616cd8917b00fca37164f3f7"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_1432_progress_docs.py",
+      "bytes": 3493,
+      "sha256": "8e0f7bd9258d35b7732dccfb85804808a64ac64df3810a4e5cf9ceab9c595936"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_1502_progress_docs.py",
+      "bytes": 3345,
+      "sha256": "ee1d440e4fadc5bf8348d8597db75c99413e1f45c062703ec39531eccc94e13e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_1532_progress_docs.py",
+      "bytes": 5704,
+      "sha256": "e08c6f62e00c2ef2ef4fb41aa99bf2dec0e3d12a7b6532a73e4aa1ddc623c76a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_checkpoint_docs.py",
+      "bytes": 3971,
+      "sha256": "dfc1ac93e22993657086de22c20f70de85d3a3b5fcc8c0e2e3a80de3a61c89a3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_formal_docs.py",
+      "bytes": 1486,
+      "sha256": "11920575ce482d22392f34b473130ab1300ca858ecd98600441a0f5ac9050934"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_joint_progress_docs.py",
+      "bytes": 2484,
+      "sha256": "33fc9cb970045cdce20347484905f22f1b6811dd69d96c463fdc88155208c56c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_normal_progress_docs.py",
+      "bytes": 3361,
+      "sha256": "2eb40b3fac1baa9e68ac249f5f978a66eba10ae4dfa11a4c5d1f33daf8fa81b4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_pass_docs.py",
+      "bytes": 2102,
+      "sha256": "38049c1e9f31791648dc044e74bdbd0dfcff718865970d927a7d256e4ac29333"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_progress_docs.py",
+      "bytes": 1920,
+      "sha256": "6baed29390661780b3b2fb7eac721227362e638a151b2f463860555d6cca5c52"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/update_progress_journal.py",
+      "bytes": 3700,
+      "sha256": "f41f623eb12e68416b9e0fc17fb772596e28f462ed6d106e4d811ba9df7eaef2"
+    }
+  ],
+  "retained_historical_code_archive": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\historical_process_scripts_20261010.tar.gz",
+  "archive_sha256": "a1ac0ca855fcdfc881c1f520471db4c53664801866a5c40022b0817ee47df3fd",
+  "deletion_started": false
+}

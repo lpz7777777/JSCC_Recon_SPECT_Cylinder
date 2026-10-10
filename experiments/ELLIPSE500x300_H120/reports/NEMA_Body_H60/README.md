@@ -1,3 +1,9 @@
+# NEMA H60 双能研究结果与体模定义
+
+2026-10-10：最新五组主结果已完成。先阅读[研究报告](../dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf)、[近期结果总入口](../../README.md)和[18类图集及全部曲线](ehe_forward_poisson_5e10_200/RESULTS.md)。EHE0–200与JSCC0–10000各自比较，不能同迭代等同收敛。
+
+下面保留原几何说明及早期实验记录；其日期只表示当时状态。manifest.json的preview状态描述真值生成阶段，正式输运/重建以各主组最终验收为准。本次整理前原字节另存[历史快照](HISTORY_20261010.md)。
+
 # NEMA Body Phantom：标准圆弧截面、60 mm 双能研究版
 
 2026-10-02：[Compton/JSCC局部尖峰算法研究](spike_research/README.md)已补充原始极坐标与体积加权诊断、1e9/5e9对照、参考文献及MAP-JSCC实施方案。研究没有改变既有正式结果；目前尚不能把边界尖峰归因于单一原因。

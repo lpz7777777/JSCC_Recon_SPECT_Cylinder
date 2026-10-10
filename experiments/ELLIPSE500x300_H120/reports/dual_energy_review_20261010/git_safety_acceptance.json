@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "scope": "Changed staged payload excluding this receipt, plus outgoing branch history; final receipt separately checked before commit",
+  "base": "origin/codex/ellipse500x300-h120",
+  "audit": {
+    "checked_blobs": 33,
+    "total_blob_bytes": 4976494,
+    "largest_blobs": [
+      [
+        2472277,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf"
+        ]
+      ],
+      [
+        296902,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_1_0.png"
+        ]
+      ],
+      [
+        295726,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_0_0.png"
+        ]
+      ],
+      [
+        279304,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/large_sphere_trajectories.png"
+        ]
+      ],
+      [
+        240182,
+        [
+          "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_2_0.png"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "staged_byte_sha256": {
+    ".gitattributes": "cbc414a2b1ee54bf3ab12caff8bc8b82796bbb87e7872ae91298f6aaf3427f4c",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/storage_retention_plan.csv": "a37f82a5cbd607a0b29e2eace28f0ae0b22da12cdc40f6d81b17c3ae496e1177",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/redundant_transfer_acceptance.json": "008af36d232d36725c8937aaab284222dd89e9d268897288ce6a565359cb09ec",
+    "tools/research/cleanup_completed_reconstruction.py": "d839828cc50f4cfefba756f4e70ea44d3fa90dfd80e2bf11f82f5d4c8f53888d",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_3_0.png": "0e587dacd3a7a6b06918f33c435a668779a6667fdfd21c409f2035431bee0b85",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/result_catalog.json": "27e79403c6105cf30f6a057b3189a112a205b8a0ff4e85312bd89f48a6a2424d",
+    "tools/research/build_dual_energy_report.py": "bb897726b5d8bf2e088628372120dd1efef58d50f718535fbba6eada8647c64c",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_2_0.png": "1cc2a16525064075502db1d53ec427761f6547db363d26e9f8000ebbf2f21516",
+    "tools/research/check_redundant_transfer.py": "96d022fa054f0ed63cbdea93b775585a8e03ef13f8bf80566f4e57c068f54a74",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/remote_cleanup_acceptance.json": "50df493b232e2c0d7e2b005e2b39da8c90dc0a04086f8a302d51d8f8a76696cd",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/report_visual_acceptance.json": "0b4c0c7e233de217314fadd40cc4c580be0d55a365cb8ce6c09e00cffe048305",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/large_sphere_trajectories.png": "d9133796d0290fa6d9fb45d3a04f3b8efca2e717517ff14ad348c8fe7ee97b70",
+    "experiments/ELLIPSE500x300_H120/HISTORY_20261010.md": "8244448ce1bff900cf38db37620b030327341ca0c399da4c5dc3f62aed2ed829",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/delivery_manifest.json": "19c369b4e513f35776b5809b349189e0a873a976dd12cf098f595431560afe11",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf": "5377cf73d309cc30d87d0bbee0d3ae87a99e971473a8130eaccd0d952ae29d97",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_0_0.png": "1cab8ac412c36a35a01cf85a04155956c1ff391541857b2c031ca9ff9831f816",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/local_cleanup_plan.json": "eccd3999e606c801e9bb0dc8224d52f42d1cf795b7d1851c4d11bf21a9b76ddc",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/remote_storage_inventory.json": "2cb793a8d2b741e9aec42a83822126420d541428321809c018b1f100c2ee2932",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/scientific_sources.json": "922381c43c1f99f43b6fce908f582302b40dee5945eff48d915b6907f8767c4f",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/local_storage_inventory.json": "afa034b854a503fbba80ee91589255f55218ea2c34ef93dc7de67ddea4f0d344",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/local_cleanup_acceptance.json": "df318e7de588f7f10e4d3ea5df0bd56e03fdb3bc930486a1d741e82bfc29e829",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_1_0.png": "8a09f75da9fcf2525ffd898bad2b3e0c46adee7d88fe3b3a0bd142c271c83168",
+    "tools/research/inventory_reconstruction_storage.py": "8a88e6c4c6ce076e1b9b41b3701ec418d984bba0132e9fb3c0f1d6b792a95752",
+    "experiments/ELLIPSE500x300_H120/README.md": "2c01137a5df2c8541e225b2a2a6c44e64f2de78409c9eb8cc32b8d25dde23c0e",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_4_1.png": "2d916d62a5131f6c3a2450b26727948effe60e1639c539d0bdcdaf722514a4c2",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/README.md": "19d742b5c74ca9f7848d2533fdbac92fade10d51213973ec735ab089494ade83",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/endpoint_native_metrics.csv": "37ffc5874e294b64bbe72d919fd8eddcc53a22e853d5c0d4d5d9ed26592b8107",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/HISTORY_20261010.md": "311708f7714ff248ddf402d026834d63228f4d30cf78f3b6594e2a5e34e602c4",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/gallery_4_0.png": "142b5bcaadac4b18c74fd08beb57171d40b2beaa293c53edf0b5f6f85365dd0b",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/README.md": "db3583b906c8e746cb026d143ae4e8fa0229678f932079ab017a56b4e3d0e6bc",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/sphere_cnr_peak_and_final.csv": "46c4d8ad4dc0120db33abc7ad440dbf2c03c034918523293dfd8159466f5639e",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/cleanup_acceptance.json": "f804f8758395138994a067bed1169defebf2da64f49ae1bd58bac8aa6877b5db",
+    "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/figures/ehe_dose_noise.png": "b31fd8116879aeebc172f94b0d9a7c2261e60f2948cc95b97802ce0ac6d3113a"
+  },
+  "raw_matrices_archives_build_binaries_or_credentials_staged": false
+}

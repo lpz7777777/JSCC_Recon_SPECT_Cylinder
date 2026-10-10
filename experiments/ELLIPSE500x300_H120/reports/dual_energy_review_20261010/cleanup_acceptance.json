@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "utc": "2026-10-10T05:36:49.352590+00:00",
+  "report_summary": "本地已清理8份过时的一次性程序、归档后移除19份历史辅助脚本及491份Python缓存，共518个文件；移除6386573字节，保留22677字节代码归档及Git恢复依据。远端已删除SHA核对一致且本地备份保留的14.60 GB重复传输包和4.07 GB pip下载缓存，共17.39 GiB逻辑文件；df可用空间实际由47.31升至64.59 GiB，使用率由95%降至92%。正式矩阵、原始观测、完整图像历史、冻结发布和conda环境均保留。",
+  "local_removed_files": 518,
+  "local_removed_bytes": 6384427,
+  "local_retained_code_archive_bytes": 20145,
+  "remote_deleted_logical_bytes": 18668018015,
+  "remote_deleted_allocated_bytes": 18668104192,
+  "filesystem_available_delta_bytes": 18561753088,
+  "before": {
+    "filesystem": "JuiceFS:juicefs-hdd-n56r4",
+    "capacity_bytes": 858993459200,
+    "used_bytes": 808197382144,
+    "available_bytes": 50796077056,
+    "used_percent": "95%"
+  },
+  "after": {
+    "filesystem": "JuiceFS:juicefs-hdd-n56r4",
+    "capacity_bytes": 858993459200,
+    "used_bytes": 789635629056,
+    "available_bytes": 69357830144,
+    "used_percent": "92%"
+  },
+  "protected_scientific_assets_deleted": false,
+  "algorithm_changed": false,
+  "remote_jobs_were_empty": true,
+  "evidence_sha256": {
+    "local_cleanup_acceptance.json": "df318e7de588f7f10e4d3ea5df0bd56e03fdb3bc930486a1d741e82bfc29e829",
+    "remote_cleanup_acceptance.json": "50df493b232e2c0d7e2b005e2b39da8c90dc0a04086f8a302d51d8f8a76696cd",
+    "redundant_transfer_acceptance.json": "008af36d232d36725c8937aaab284222dd89e9d268897288ce6a565359cb09ec",
+    "storage_retention_plan.csv": "a37f82a5cbd607a0b29e2eace28f0ae0b22da12cdc40f6d81b17c3ae496e1177"
+  }
+}

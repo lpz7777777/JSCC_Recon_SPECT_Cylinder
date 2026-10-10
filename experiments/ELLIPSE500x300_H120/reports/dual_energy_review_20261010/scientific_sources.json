@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "csv_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\reference_native_metrics.csv": "58bd0416d7b1c3bdc229ef034d5bc03deb8e93b1190cf32521a89d4cd5dbb691",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\reference_sphere_metrics.csv": "c4d72d3c9c87bc3b2236189386bb2709eadfd73ef0598397d7621ce9850bf622",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_native_metrics.csv": "5eb6606bcf3707bef37ad39ea18c5a2e423b370548eca617d4203ae91017f319",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_sphere_metrics.csv": "a8cb09113b3b51dfb38ec98346e78f015f99ee075a19615a1b8c0435510019b8",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\comparison_report.json": "20312148ad077668aa7ef78d3093ac08dc89d44987c5c295b3e70d75ea02e5ab"
+  },
+  "histories_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "f751f2faf1330013200738c2c77d83e7fd033e955079f85f07411448d49d595d",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "337523e925dca872b69628221b2613a8bd2a8fb0ac02363019d0db1b09ff1f7b",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\results\\formal\\Image_440SinglePlus218Single_history.float32": "202335008d358f90f966ce718cf8f57c6c469732f90f3fd5e86941c179b7b6f1",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e9_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "15dc209f6326f1707d65f1f1d9687c6e147d863257b445fb52ab5018e147a9fa",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e9_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "63504b2db745e7eb6dd20e41b35982cc2ca3bade5e717dbb785e6dedaad7aa10",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e9_200\\results\\formal\\Image_440SinglePlus218Single_history.float32": "b65e946d6bc1f9a80868e5005220030a57a61f2433ecb34923bbaf903d0dd61d",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e10_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "7519df28140899aed8341700d1fd5c2ebff5d5825a7726a4aea1a71dcec58b19",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e10_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "dcd8e3b389950e542c8fba6d4c1ce94f36d8997f7a2265de44a3eb6e8678d0c0",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e10_200\\results\\formal\\Image_440SinglePlus218Single_history.float32": "5095c2bb3352442d839780ad7c14143120871244f964fbf0cba47d975d98ad7c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e10_200\\results\\formal\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "d1063029e8fc2d111b46f1b56fc0fe59814e261b5deb03ef21bfd8812f0af32c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e10_200\\results\\formal\\Image_440_SinglePhoton_history.float32": "eeadec024cb34078fe73ba52b848218bb13cd59f44657f62962a80930c5e1035",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_forward_poisson_5e10_200\\results\\formal\\Image_440SinglePlus218Single_history.float32": "29b494c034fba69642aaca02a5b0e86f184211b4a00dc791db1acc03e55d91e9",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_218_SinglePhoton_CrossTalkCorrected_history.float32": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440_SinglePhoton_history.float32": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440SinglePlus218Single_history.float32": "02ed5ce4cd50f60272e2c918383bed8fa325a111dba909fffae8a3b56350f931",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440_ComptonOnly_history.float32": "f05db3be000b4cf56e70f160cf958483b5ef161b1d03c09d1a6d2fde09bd915c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440_SinglePlusCompton_history.float32": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af",
+    "experiments\\ELLIPSE500x300_H120\\generated\\compton_energy_probability_v5_5e9_full10000\\formal_results\\1669255\\continuous_energy\\Image_440SingleComptonPlus218Single_history.float32": "20c1461c37cde7de156a98fb29070d1ad938bccd32630eb22bf76ce02c8e7881"
+  },
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "reconstruction_run": false,
+  "transport_run": false,
+  "endpoint_rows": 18,
+  "sphere_rows": 72,
+  "own_iteration_ranges": true,
+  "crop": 0,
+  "smoothing": 0,
+  "fitted_gain": false,
+  "display_range": [
+    0,
+    10
+  ],
+  "mip_z_mm": [
+    -36,
+    36
+  ],
+  "native_metrics_z_mm": [
+    -60,
+    60
+  ],
+  "figures": {
+    "ehe_dose_noise.png": "b31fd8116879aeebc172f94b0d9a7c2261e60f2948cc95b97802ce0ac6d3113a",
+    "gallery_0_0.png": "1cab8ac412c36a35a01cf85a04155956c1ff391541857b2c031ca9ff9831f816",
+    "gallery_1_0.png": "8a09f75da9fcf2525ffd898bad2b3e0c46adee7d88fe3b3a0bd142c271c83168",
+    "gallery_2_0.png": "1cc2a16525064075502db1d53ec427761f6547db363d26e9f8000ebbf2f21516",
+    "gallery_3_0.png": "0e587dacd3a7a6b06918f33c435a668779a6667fdfd21c409f2035431bee0b85",
+    "gallery_4_0.png": "142b5bcaadac4b18c74fd08beb57171d40b2beaa293c53edf0b5f6f85365dd0b",
+    "gallery_4_1.png": "2d916d62a5131f6c3a2450b26727948effe60e1639c539d0bdcdaf722514a4c2",
+    "large_sphere_trajectories.png": "d9133796d0290fa6d9fb45d3a04f3b8efca2e717517ff14ad348c8fe7ee97b70"
+  }
+}

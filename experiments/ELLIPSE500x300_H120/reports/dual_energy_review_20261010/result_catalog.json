@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-10",
+  "main_completed_studies": [
+    {
+      "study": "compton_energy_probability_v5_5e9_full10000",
+      "description": "JSCC实际5e9，六路10000",
+      "formal_job": 1669255,
+      "entry": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\compton_energy_probability_v5_5e9_full10000\\ACCEPTANCE.md",
+      "formal_acceptance_sha256": "89d2a9061e03daa202989355c090d5a9aab9cb49aa23d96db1b9b58d328d3587",
+      "iterations": 10000
+    },
+    {
+      "study": "ehe_spect_5e9_200",
+      "description": "EHE实际Geant4 5e9，三路200",
+      "formal_job": 1679415,
+      "entry": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e9_200\\RESULTS.md",
+      "formal_acceptance_sha256": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+      "iterations": 200
+    },
+    {
+      "study": "ehe_forward_poisson_5e9_200",
+      "description": "EHE期望5e9，矩阵前投影加Poisson，三路200",
+      "formal_job": 1680255,
+      "entry": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e9_200\\README.md",
+      "formal_acceptance_sha256": "0d3e4e1cb39f2ec62ba47c63594586134e28b3b5ea26e8e0c196c5fa76b3dfbc",
+      "iterations": 200
+    },
+    {
+      "study": "ehe_spect_5e10_200",
+      "description": "EHE实际Geant4 5e10，三路200",
+      "formal_job": 1681346,
+      "entry": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e10_200\\RESULTS.md",
+      "formal_acceptance_sha256": "61c6d2bd20e5a1bef97a3481adf63cfd10c99c5c004a2c710bce6c2c28fca62e",
+      "iterations": 200
+    },
+    {
+      "study": "ehe_forward_poisson_5e10_200",
+      "description": "EHE期望5e10，矩阵前投影加Poisson，三路200",
+      "formal_job": 1683357,
+      "entry": "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\RESULTS.md",
+      "formal_acceptance_sha256": "dcec91f9825229f368c9035ce2549334e56e08c45a130026875798cf944838c3",
+      "iterations": 200
+    }
+  ],
+  "scientific_source_manifest_sha256": "922381c43c1f99f43b6fce908f582302b40dee5945eff48d915b6907f8767c4f",
+  "automation": "compton-v5 PAUSED",
+  "reconstruction_launched": false
+}
