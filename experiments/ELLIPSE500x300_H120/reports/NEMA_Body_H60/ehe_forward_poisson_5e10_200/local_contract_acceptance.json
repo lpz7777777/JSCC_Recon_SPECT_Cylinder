@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "tests": 4,
+  "command": "python -X utf8 experiments/ELLIPSE500x300_H120/test_ehe_forward_poisson_5e10.py",
+  "source_sha256": "24ea9430fac57efedca94a889d80eb5e08dc8d19789785b3a909b3bdd08457f5",
+  "release_key": "2d77c4a81e952d5e",
+  "actual_full_input_validation": false,
+  "timestamp_epoch": 1791605735.4638886
+}

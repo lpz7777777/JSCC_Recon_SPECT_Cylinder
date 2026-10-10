@@ -38,3 +38,6 @@ experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/** -text
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/** -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/** -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/response_preservation_1672966/scontrol_before.txt -text whitespace=cr-at-eol,-blank-at-eol
+
+# Preserve independent5e10 matrix-Poisson evidence and scientific figures.
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/** -text whitespace=cr-at-eol

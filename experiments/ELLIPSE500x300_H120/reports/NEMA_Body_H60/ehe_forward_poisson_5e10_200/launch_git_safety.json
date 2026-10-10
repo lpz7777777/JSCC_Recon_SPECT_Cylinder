@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "scope": "New matrix-Poisson5e10 launch/code/proofs only; unchanged size/credential-pattern audit over changed-index/outgoing blobs",
+  "audit": {
+    "checked_blobs": 15,
+    "total_blob_bytes": 57002,
+    "largest_blobs": [
+      [
+        14911,
+        [
+          "experiments/ELLIPSE500x300_H120/plot_ehe_forward_poisson_5e10.py"
+        ]
+      ],
+      [
+        9346,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_forward_poisson_5e10_data.py"
+        ]
+      ],
+      [
+        8084,
+        [
+          "experiments/ELLIPSE500x300_H120/ehe_forward_poisson_5e10_workflow.py"
+        ]
+      ],
+      [
+        6942,
+        [
+          "experiments/ELLIPSE500x300_H120/verify_ehe_forward_poisson_5e10_figures.py"
+        ]
+      ],
+      [
+        4528,
+        [
+          "experiments/ELLIPSE500x300_H120/test_ehe_forward_poisson_5e10.py"
+        ]
+      ]
+    ],
+    "findings": []
+  },
+  "blob_identity": {
+    "experiments/ELLIPSE500x300_H120/test_ehe_forward_poisson_5e10.py": {
+      "git_blob_oid": "dbdcc09994efaa80cd68aebaf8332b351d0b54e7",
+      "git_sha256": "24ea9430fac57efedca94a889d80eb5e08dc8d19789785b3a909b3bdd08457f5",
+      "local_sha256": "24ea9430fac57efedca94a889d80eb5e08dc8d19789785b3a909b3bdd08457f5",
+      "exact_bytes": true,
+      "bytes": 4528
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/generate_validation_job.json": {
+      "git_blob_oid": "3c4e474151c946b507d80900ef56ff989c021a6b",
+      "git_sha256": "60db4562a5076218a6cc33d83f7c0a6390c9ce55f389f5251249c33952db50d5",
+      "local_sha256": "60db4562a5076218a6cc33d83f7c0a6390c9ce55f389f5251249c33952db50d5",
+      "exact_bytes": true,
+      "bytes": 615
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/generate_validation_submission_intent.json": {
+      "git_blob_oid": "e947b492819b488bd4edeeaefafa6ccdf70a116a",
+      "git_sha256": "d31468a20e8fd39d56276792f867ffcd1274fa16489ad0f1960c5ddc26cbcc20",
+      "local_sha256": "d31468a20e8fd39d56276792f867ffcd1274fa16489ad0f1960c5ddc26cbcc20",
+      "exact_bytes": true,
+      "bytes": 189
+    },
+    "experiments/ELLIPSE500x300_H120/plot_ehe_forward_poisson_5e10.py": {
+      "git_blob_oid": "2bda705995c518a43a49043e9b6b6a6783bcea35",
+      "git_sha256": "09275092bea7b5d8457c866f60b6181510896801e646cff5283f61bd68ed1134",
+      "local_sha256": "09275092bea7b5d8457c866f60b6181510896801e646cff5283f61bd68ed1134",
+      "exact_bytes": true,
+      "bytes": 14911
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/science_reuse_acceptance.json": {
+      "git_blob_oid": "4ad777b69a5af068ce34c61e6430a493157ec6a9",
+      "git_sha256": "499b76b57abb606c8e3fdcae606d8b2be44cc764821893e6f6c5b143269e3add",
+      "local_sha256": "499b76b57abb606c8e3fdcae606d8b2be44cc764821893e6f6c5b143269e3add",
+      "exact_bytes": true,
+      "bytes": 2071
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/RUNBOOK.md": {
+      "git_blob_oid": "364279a814d26992f6937c685dcab98e017a548c",
+      "git_sha256": "f8266783fccbdeb028b41ca6d6023bfb4c3775efe4503ec9bb8b87d2172ee4eb",
+      "local_sha256": "f8266783fccbdeb028b41ca6d6023bfb4c3775efe4503ec9bb8b87d2172ee4eb",
+      "exact_bytes": true,
+      "bytes": 932
+    },
+    "experiments/ELLIPSE500x300_H120/ehe_forward_poisson_5e10_workflow.py": {
+      "git_blob_oid": "e15a110695e96db5036b3632b6508dee9730f2b2",
+      "git_sha256": "cea17e453ded2f72a3dbacfaabbc4f3173cc38b1511d4130b13e5a399ad4887c",
+      "local_sha256": "cea17e453ded2f72a3dbacfaabbc4f3173cc38b1511d4130b13e5a399ad4887c",
+      "exact_bytes": true,
+      "bytes": 8084
+    },
+    ".gitattributes": {
+      "git_blob_oid": "2726c4e154d4925f7720c21a7242588e65fb7a08",
+      "git_sha256": "ae9e76d9f116d47119fd878eeae5a11f5116fe3b31661fe2ae48ba2b5ed67d53",
+      "local_sha256": "b6dec5849d776e9c9badd382516495c69a8e972e44594bd13a82441505cde424",
+      "exact_bytes": false,
+      "bytes": 3613
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/README.md": {
+      "git_blob_oid": "c1999f1be8fe64863915c9a5d754b15bbf2d365b",
+      "git_sha256": "0c8e203343c8787d0e01f1f93057c2740fb73e10e1dd1e620dcbdebcdc53d96d",
+      "local_sha256": "0c8e203343c8787d0e01f1f93057c2740fb73e10e1dd1e620dcbdebcdc53d96d",
+      "exact_bytes": true,
+      "bytes": 2410
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/one_time_pipeline_registration.json": {
+      "git_blob_oid": "38026cdafd2d3aed8883697df0fce646ad1abda0",
+      "git_sha256": "e6be75915316812eda34558889bfe960791e6ded80140a61dc731e3203df29b0",
+      "local_sha256": "e6be75915316812eda34558889bfe960791e6ded80140a61dc731e3203df29b0",
+      "exact_bytes": true,
+      "bytes": 634
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/freeze.json": {
+      "git_blob_oid": "5c337c791eb22610b393185d654378b7c318c770",
+      "git_sha256": "5f96319b5197063cbd4ea6caa848865f23ec55426b4f3a4e0ca5f2c063eb5cee",
+      "local_sha256": "5f96319b5197063cbd4ea6caa848865f23ec55426b4f3a4e0ca5f2c063eb5cee",
+      "exact_bytes": true,
+      "bytes": 2226
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/local_contract_acceptance.json": {
+      "git_blob_oid": "dda7779189e629a37344c8a7703bd3afc33db982",
+      "git_sha256": "75f7970470e9730231a1a40ef2631fb5550840423ffd6aeee91564d18fdd6354",
+      "local_sha256": "75f7970470e9730231a1a40ef2631fb5550840423ffd6aeee91564d18fdd6354",
+      "exact_bytes": true,
+      "bytes": 346
+    },
+    "experiments/ELLIPSE500x300_H120/verify_ehe_forward_poisson_5e10_figures.py": {
+      "git_blob_oid": "8679ea16d1b5674cb57791c651f8bbb21cc2df58",
+      "git_sha256": "1146bbfce952d9c84c7e410804e62659206bc26fa9443cd18605069299a0b362",
+      "local_sha256": "1146bbfce952d9c84c7e410804e62659206bc26fa9443cd18605069299a0b362",
+      "exact_bytes": true,
+      "bytes": 6942
+    },
+    "experiments/ELLIPSE500x300_H120/ehe_forward_poisson_5e10_data.py": {
+      "git_blob_oid": "aefcc9f643714bf5430f06ee0608c4761f6f8c1b",
+      "git_sha256": "bb53258c279df40b3f4a94dbd6601bfdb3f7112786504b56df158ad271a0b1fd",
+      "local_sha256": "bb53258c279df40b3f4a94dbd6601bfdb3f7112786504b56df158ad271a0b1fd",
+      "exact_bytes": true,
+      "bytes": 9346
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/deployment.json": {
+      "git_blob_oid": "a46790fa45d140a505341f46aa0efdaa3b647cc8",
+      "git_sha256": "38e68c0c4cb31883919bde9a28045e5d44f78bd017a44d030965967ac3da968c",
+      "local_sha256": "38e68c0c4cb31883919bde9a28045e5d44f78bd017a44d030965967ac3da968c",
+      "exact_bytes": true,
+      "bytes": 155
+    }
+  },
+  "original_scientific_releases_preserved": true,
+  "self_receipt": "Second scan includes this receipt without circular self-hash"
+}

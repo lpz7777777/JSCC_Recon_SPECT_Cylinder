@@ -1,0 +1,43 @@
+{
+  "study": "ehe_forward_poisson_5e10_200",
+  "release_key": "2d77c4a81e952d5e",
+  "payload_dir": "payload",
+  "root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200/releases/2d77c4a81e952d5e",
+  "sha256": {
+    "config.json": "41fc5727b1df0e2b50da1cae84f0c068d8f6d41d34360df7f37d270de71f0050",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_forward_poisson_data.py": "bb53258c279df40b3f4a94dbd6601bfdb3f7112786504b56df158ad271a0b1fd",
+    "ehe_gpu_pipeline.py": "f764712eee34de0329f821316cb13b9fd114183bad9b401c7c226f95f9d86f64",
+    "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
+    "run_ehe_forward_poisson.py": "ec57773a1df90c32e62ab25ba01234afd6b9d0c7fdb0d4eed27c82124c228003",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "verify_ehe_forward_poisson.py": "7ced3301d2fef8cbac52b3f664c6970d5835ca6477aba8e39efef5dcc78714f4",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4"
+  },
+  "response_root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses_conversion_b02df58a9d3fd48c",
+  "budget": {
+    "integrals_mm3": {
+      "218": 3218760.703125,
+      "440": 3405284.296875
+    },
+    "expected_primary_photons": {
+      "218": 14690389934.091362,
+      "440": 35309610065.908646
+    },
+    "density_gamma_per_mm3": {
+      "218": 4563.989463344975,
+      "440": 10369.063780757446
+    },
+    "expected_emitted_photons": 50000000000.00001
+  },
+  "original_response_release_key": "74e129c4460163c5",
+  "original_reconstruction_release_key": "064404727f0e22b1",
+  "preregistered_noise_seeds": {
+    "A218": 34100101,
+    "A440": 34100102,
+    "C440to218": 34100103
+  },
+  "original_matrix_poisson_release_key": "a73d3e0f89c133d8"
+}
