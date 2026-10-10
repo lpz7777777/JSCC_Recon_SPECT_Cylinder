@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "Full index and base..HEAD at initial stage snapshot; final new-byte snapshot separately checked in new_payload_security_acceptance.json",
+  "checked_blobs": 2662,
+  "total_blob_bytes": 118861058,
+  "largest_blobs": [
+    [
+      2472277,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf"
+      ]
+    ],
+    [
+      2037092,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/comparison_reviewed/overall_mip72_18_routes.png"
+      ]
+    ],
+    [
+      2036176,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/comparison/overall_mip72_18_routes.png"
+      ]
+    ],
+    [
+      1734313,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_full_trajectories/overall_mip72.png"
+      ]
+    ],
+    [
+      1724926,
+      [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_full_trajectories/overall_comparison.pdf"
+      ]
+    ]
+  ],
+  "findings": []
+}

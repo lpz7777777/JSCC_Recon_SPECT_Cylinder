@@ -1,0 +1,12 @@
+{
+  "job": 15705111,
+  "stage": "transport_pilot",
+  "host": "maty",
+  "nodes": 1,
+  "tasks": 1,
+  "release": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/transport_releases/dc23f1c14e3e036c",
+  "limit_seconds": 600,
+  "walltime_minutes": 15,
+  "script_sha256": "f5a63b706325f096a5fe9297df4b6d52fd9f99e83dc9b0fa992440e3d56a2fed",
+  "submitted_epoch": 1791618702.2343936
+}

@@ -1,0 +1,16 @@
+{
+  "release": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/transport_array_releases/bd18503c61de2012",
+  "simulation": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/source_registry",
+  "sha256": {
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "jscc_5e10_array.py": "23748d7f3740aa16b20a26d0bdc4fbf3736fae38be56d582f2cc8c036381f8b0",
+    "jscc_5e10_common.py": "fe55c0c6999134bc38125daa68e0a707e9047237f3de6f99b00ff905a97a04f4",
+    "jscc_5e10_transport.py": "ecb52aecd0e06b111ca6f667a4e3b95a6057a550b3ccd84339637550834feca4",
+    "release_manifest.json": "bb53fc512ca3b0ac26b12a3e4e7fb15dc89b3acf8208dde806044c48b79ad5d3",
+    "test_jscc_5e10_array.py": "d47ff4bd374fe6a367594a575184d18ce1ba3b21695deed546130d191b612bd3",
+    "transport_config.json": "2433899aefa988888549e37f30b04055ba6c8e52f011e7a532886569ea0cf39f"
+  },
+  "actual_identity_evidence": "ARRAY_RELEASE_SOURCE_BINARY_SHA_PASSED\n",
+  "actual_linux_tests_sha256": "7840a07df168b7f8810ccee78394ab063503e9642c63c76f0f8180c288337697",
+  "source_registry_reused_read_only": true
+}

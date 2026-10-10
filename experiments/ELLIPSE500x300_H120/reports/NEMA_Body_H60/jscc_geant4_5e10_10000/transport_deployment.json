@@ -1,0 +1,12 @@
+{
+  "release": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/transport_releases/dc23f1c14e3e036c",
+  "simulation": "/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/source_registry",
+  "binary_evidence": "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6  /WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/transport_releases/dc23f1c14e3e036c/gamma01\n4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb  /WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/transport_releases/dc23f1c14e3e036c/CrystalMatrix.txt\n",
+  "sha256": {
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "jscc_5e10_common.py": "fe55c0c6999134bc38125daa68e0a707e9047237f3de6f99b00ff905a97a04f4",
+    "jscc_5e10_transport.py": "eee723f66dde1621c9e2bc731384941a6e09c8f97f1de4a59960b81d14552ad2",
+    "release_manifest.json": "c8d21e8db1087d2e981ee4826473886837d6f8783152caaf12338ef60adf79e1",
+    "transport_config.json": "2433899aefa988888549e37f30b04055ba6c8e52f011e7a532886569ea0cf39f"
+  }
+}

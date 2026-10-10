@@ -1,0 +1,357 @@
+{
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/science_releases/7be093113d485805",
+  "original_controller_timeout_seconds": 60,
+  "matching_tar_processes": [],
+  "files": [
+    {
+      "name": "__pycache__/compton_event_response.cpython-312.pyc",
+      "exists": true,
+      "size": 29214,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/compton_sparse_ops.cpython-312.pyc",
+      "exists": true,
+      "size": 21226,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/detector_csv.cpython-312.pyc",
+      "exists": true,
+      "size": 2895,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/geometry.cpython-312.pyc",
+      "exists": true,
+      "size": 11046,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/jscc_5e10_common.cpython-312.pyc",
+      "exists": true,
+      "size": 8008,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/jscc_5e10_compton_mlem.cpython-312.pyc",
+      "exists": true,
+      "size": 1866,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/jscc_5e10_contract.cpython-312.pyc",
+      "exists": true,
+      "size": 11234,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/process_list_plane_sparse.cpython-312.pyc",
+      "exists": true,
+      "size": 5599,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/run_reconstruction.cpython-312.pyc",
+      "exists": true,
+      "size": 45005,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/single_checkpoint_mlem.cpython-312.pyc",
+      "exists": true,
+      "size": 2948,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/test_jscc_5e10.cpython-312.pyc",
+      "exists": true,
+      "size": 15565,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/torch_active_operator.cpython-312.pyc",
+      "exists": true,
+      "size": 21265,
+      "sha_matches": true
+    },
+    {
+      "name": "__pycache__/validate_factors.cpython-312.pyc",
+      "exists": true,
+      "size": 6677,
+      "sha_matches": true
+    },
+    {
+      "name": "baseline_contract.json",
+      "exists": true,
+      "size": 126547,
+      "sha_matches": true
+    },
+    {
+      "name": "calibration/calibration_gate.json",
+      "exists": true,
+      "size": 1675,
+      "sha_matches": true
+    },
+    {
+      "name": "compton_energy_probability_v5.py",
+      "exists": true,
+      "size": 16614,
+      "sha_matches": true
+    },
+    {
+      "name": "compton_event_response.py",
+      "exists": true,
+      "size": 18993,
+      "sha_matches": true
+    },
+    {
+      "name": "compton_geometry_run_contract.py",
+      "exists": true,
+      "size": 1997,
+      "sha_matches": true
+    },
+    {
+      "name": "compton_sparse_ops.py",
+      "exists": true,
+      "size": 15784,
+      "sha_matches": true
+    },
+    {
+      "name": "config.json",
+      "exists": true,
+      "size": 984,
+      "sha_matches": true
+    },
+    {
+      "name": "continuous_energy_Sensi_full",
+      "exists": true,
+      "size": 528160,
+      "sha_matches": true
+    },
+    {
+      "name": "detector_csv.py",
+      "exists": true,
+      "size": 1777,
+      "sha_matches": true
+    },
+    {
+      "name": "energy_5e9_v5_contract.py",
+      "exists": true,
+      "size": 6599,
+      "sha_matches": true
+    },
+    {
+      "name": "energy_full10000_v5_contract.py",
+      "exists": true,
+      "size": 6588,
+      "sha_matches": true
+    },
+    {
+      "name": "geometry.py",
+      "exists": true,
+      "size": 6216,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_common.py",
+      "exists": true,
+      "size": 3646,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_compton_mlem.py",
+      "exists": true,
+      "size": 1031,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_contract.py",
+      "exists": true,
+      "size": 6340,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_reconstruction_workflow.py",
+      "exists": true,
+      "size": 29400,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_runtime.py",
+      "exists": true,
+      "size": 3111,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_selection.py",
+      "exists": true,
+      "size": 7041,
+      "sha_matches": true
+    },
+    {
+      "name": "jscc_5e10_verify_stage.py",
+      "exists": true,
+      "size": 3522,
+      "sha_matches": true
+    },
+    {
+      "name": "prepare_energy_5e9_v5.py",
+      "exists": true,
+      "size": 9756,
+      "sha_matches": true
+    },
+    {
+      "name": "process_list_global_audit_v4.py",
+      "exists": true,
+      "size": 22871,
+      "sha_matches": true
+    },
+    {
+      "name": "process_list_plane_sparse.py",
+      "exists": true,
+      "size": 5120,
+      "sha_matches": true
+    },
+    {
+      "name": "run_energy_5e9_v5.py",
+      "exists": true,
+      "size": 12092,
+      "sha_matches": true
+    },
+    {
+      "name": "run_energy_full10000_v5.py",
+      "exists": true,
+      "size": 19195,
+      "sha_matches": true
+    },
+    {
+      "name": "run_energy_preflight_v5.py",
+      "exists": true,
+      "size": 14381,
+      "sha_matches": true
+    },
+    {
+      "name": "run_jscc_5e10.py",
+      "exists": true,
+      "size": 15028,
+      "sha_matches": true
+    },
+    {
+      "name": "run_reconstruction.py",
+      "exists": true,
+      "size": 33057,
+      "sha_matches": true
+    },
+    {
+      "name": "single_checkpoint_mlem.py",
+      "exists": true,
+      "size": 2051,
+      "sha_matches": true
+    },
+    {
+      "name": "test_compton_energy_probability_v5.py",
+      "exists": true,
+      "size": 7909,
+      "sha_matches": true
+    },
+    {
+      "name": "test_compton_geometry_run_contract.py",
+      "exists": true,
+      "size": 5487,
+      "sha_matches": true
+    },
+    {
+      "name": "test_energy_5e9_formal_v5.py",
+      "exists": true,
+      "size": 4637,
+      "sha_matches": true
+    },
+    {
+      "name": "test_energy_5e9_v5.py",
+      "exists": true,
+      "size": 2549,
+      "sha_matches": true
+    },
+    {
+      "name": "test_energy_formal_v5.py",
+      "exists": true,
+      "size": 8343,
+      "sha_matches": true
+    },
+    {
+      "name": "test_energy_full10000_v5.py",
+      "exists": true,
+      "size": 4510,
+      "sha_matches": true
+    },
+    {
+      "name": "test_energy_preflight_v5.py",
+      "exists": true,
+      "size": 7453,
+      "sha_matches": true
+    },
+    {
+      "name": "test_jscc_5e10.py",
+      "exists": true,
+      "size": 6986,
+      "sha_matches": true
+    },
+    {
+      "name": "torch_active_operator.py",
+      "exists": true,
+      "size": 13984,
+      "sha_matches": true
+    },
+    {
+      "name": "transfer_training_summary.json",
+      "exists": true,
+      "size": 108601,
+      "sha_matches": true
+    },
+    {
+      "name": "validate_factors.py",
+      "exists": true,
+      "size": 4693,
+      "sha_matches": true
+    },
+    {
+      "name": "verify_energy_5e9_v5.py",
+      "exists": true,
+      "size": 9299,
+      "sha_matches": true
+    },
+    {
+      "name": "verify_energy_full10000_v5.py",
+      "exists": true,
+      "size": 11766,
+      "sha_matches": true
+    },
+    {
+      "name": "verify_energy_preflight_v5.py",
+      "exists": true,
+      "size": 9596,
+      "sha_matches": true
+    },
+    {
+      "name": "verify_first_scatter.py",
+      "exists": true,
+      "size": 8116,
+      "sha_matches": true
+    },
+    {
+      "name": "verify_jscc_5e10.py",
+      "exists": true,
+      "size": 9949,
+      "sha_matches": true
+    },
+    {
+      "name": "whole_geometry.npz",
+      "exists": true,
+      "size": 2541077,
+      "sha_matches": true
+    }
+  ],
+  "checked_epoch": 1791620944.0303848,
+  "all_files_sha_match": true
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "study": "jscc_geant4_5e10_10000",
+  "pilot": true,
+  "index": 0,
+  "view": 1,
+  "worker": 0,
+  "seed": 35100001,
+  "photons": 100000,
+  "primary_counts": [
+    29651,
+    70349,
+    0
+  ],
+  "counts": {
+    "218": 247,
+    "440": 95
+  },
+  "resource": {
+    "elapsed_seconds": 16.023736318573356,
+    "rss_peak_bytes": 112578560,
+    "host_allocated_bytes": 174143938560,
+    "rss_fraction": 0.0006464684382983097,
+    "gpu_used_peak_bytes": 0,
+    "gpu_total_bytes": 0,
+    "gpu_used_fraction": 0
+  },
+  "binary_sha256": "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6",
+  "crystal_sha256": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+  "registered_macro_sha256": "a3e512f8e4fdeb0ba4f71ae746687436058000cc236e3719848d476329bb639e",
+  "actual_macro_sha256": "b0a8d2520a999620e20a3a8282894d28b28f91549f61c2c22b60939bafba775c",
+  "allocation_job": "15705111",
+  "started_epoch": 1791618048.4239647,
+  "finished_epoch": 1791618064.4637156,
+  "files": {
+    "CntStat_218.csv": "60feeca5cbe5a2056f218f282ed8f3b9e3d92d79ce7859cb336f49d15a33dbe2",
+    "CntStat_440.csv": "b9edb927bedd47b1137c5b0c9c7d849588e5152548c9e19fc16562a83f2091c9",
+    "PrimaryCount.csv": "c0c7980213eed17d0631fa819a39a034c4ea284f5054b97df62a5f398c91433e",
+    "List.csv": "e6921207615a240c7279f50c05bc2885f8e16784c63a93dd48a5e1a215732dac",
+    "run.mac": "b0a8d2520a999620e20a3a8282894d28b28f91549f61c2c22b60939bafba775c",
+    "CrystalMatrix.txt": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+    "allocation.json": "af368de856afc1c0ed5e08b14ce655839f328960f388822f54896c294e3e6640",
+    "console.log": "07cb12e5c45eebdf541526ca0915f6d93e3d45a680c7bb24dda29e4756f9a288"
+  },
+  "accounting": "15705111|COMPLETED|0:0||00:00:17|billing=1,cpu=1,node=1|ibc11b11n35\n15705111.batch|COMPLETED|0:0|0|00:00:17|cpu=1,mem=0,node=1|ibc11b11n35\n15705111.extern|COMPLETED|0:0|0|00:00:17|billing=1,cpu=1,node=1|ibc11b11n35\n15705111.0|COMPLETED|0:0|0|00:00:17|cpu=1,mem=0,node=1|ibc11b11n35\n",
+  "slurm_completed": true
+}

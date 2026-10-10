@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "local_array_tests_sha256": "cf4db91c5c38abac8106b65f57af89d1553e1b454b0079a965a19557f2d0acfa",
+  "linux_array_tests_sha256": "7840a07df168b7f8810ccee78394ab063503e9642c63c76f0f8180c288337697",
+  "science_preparation_sha256": "fd9ca9b060775d19c8f8e1f75cda2f8a0f4a521545b57f7f64327bccb1d3081d",
+  "launch_script_sha256": {
+    "prepared_8x4_validation.sh": "bdd2a7ba379678883f0b364e237cb240c6b054e40142a2db17d0e876a96ece48",
+    "transport_array.sh": "47cab16ddb8fe94b30ab1c04b1fb42cf8f1dd59bde3d11d42ad04e8df25ab749",
+    "transport_pilot.sh": "f5a63b706325f096a5fe9297df4b6d52fd9f99e83dc9b0fa992440e3d56a2fed",
+    "transport_superseded_15705120.sh": "8cc06dfd7e1463007c64c436942df4968ea63ae4aef7c66634a739d5f3edc9c9"
+  },
+  "original_pilot_executed_source_sha256": "eee723f66dde1621c9e2bc731384941a6e09c8f97f1de4a59960b81d14552ad2",
+  "new_sources_sha256": {
+    "jscc_5e10_workflow.py": "8df25a5c8156a4a86c9fab0d9e195af82f0cbb43aa71ddbcdb9acacaa0b13090",
+    "jscc_5e10_reconstruction_workflow.py": "32561f7b0f3221270e1d7655ee303b81497f2b4c29b70b0966c5bf113a2f5bbf",
+    "jscc_5e10_array.py": "23748d7f3740aa16b20a26d0bdc4fbf3736fae38be56d582f2cc8c036381f8b0",
+    "jscc_5e10_transport.py": "ecb52aecd0e06b111ca6f667a4e3b95a6057a550b3ccd84339637550834feca4",
+    "test_jscc_5e10_array.py": "d47ff4bd374fe6a367594a575184d18ce1ba3b21695deed546130d191b612bd3"
+  },
+  "current_transport_job": 15708389,
+  "original_transport_cancelled": 15705120,
+  "scope": "Prepared pipeline, actual pilot, unique independent transport start and CPU metadata/unit identity; complete-input validation and actual reconstruction still required"
+}

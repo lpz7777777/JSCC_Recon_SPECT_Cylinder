@@ -54,3 +54,11 @@ experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/** -text whit
 experiments/ELLIPSE500x300_H120/nema_roi_policy.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reconstruction_output_policy.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/test_nema_current_policy.py -text whitespace=cr-at-eol
+
+# Preserve new independent JSCC5e10 executed sources, launch and acceptance bytes.
+experiments/ELLIPSE500x300_H120/jscc_5e10_*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/jscc_5e10_reconstruction_workflow.py -text whitespace=cr-at-eol,-blank-at-eof
+experiments/ELLIPSE500x300_H120/run_jscc_5e10.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/verify_jscc_5e10.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/test_jscc_5e10*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/** -text whitespace=cr-at-eol

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "job": 15708389,
+  "observed_state_counts": {
+    "RUNNING": 1000
+  },
+  "queue_state_summary": "   1000 RUNNING\n",
+  "worker0_actual_allocation": "JobId=15708392 ArrayJobId=15708389 ArrayTaskId=0 ArrayTaskThrottle=1000 JobName=JSCC5e10_worker\n   UserId=maty(10016) GroupId=users(10000) MCS_label=N/A\n   Priority=1 Nice=0 Account=users QOS=defaultqos\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:04:43 TimeLimit=09:05:00 TimeMin=N/A\n   SubmitTime=2026-10-10T16:27:18 EligibleTime=2026-10-10T16:27:19\n   AccrueTime=2026-10-10T16:27:19\n   StartTime=2026-10-10T16:27:37 EndTime=2026-10-11T01:32:37 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-10T16:27:37 Scheduler=Main\n   Partition=cnmix AllocNode:Sid=ibc12b01n05:61509\n   ReqNodeList=(null) ExcNodeList=(null)\n   NodeList=ibc11b11n15\n   BatchHost=ibc11b11n15\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   TRES=cpu=1,node=1,billing=1\n   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=0 MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/transport_array.sh\n   WorkDir=/tmp\n   StdErr=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/transport.15708389_0.err\n   StdIn=/dev/null\n   StdOut=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/transport.15708389_0.out\n   Power=\n   \n\n",
+  "freeze_sha256": "be5f40f4ce94dfd5a66e7cf10a283f036a7b6793dbd592b028ff4a7f19372f1f",
+  "submission_script_sha256": "47cab16ddb8fe94b30ab1c04b1fb42cf8f1dd59bde3d11d42ad04e8df25ab749",
+  "accounting_sha256": "5a51b265b4ff23d01b1f720f0321334b7750f532d6f4a21fc4e255cac4961523",
+  "checked_epoch": 1791621800.56804,
+  "scope": "Actual independent allocation and start only; full 5e10 successful-exit/dose/SHA collection is still required",
+  "actual_completion_accepted": false
+}

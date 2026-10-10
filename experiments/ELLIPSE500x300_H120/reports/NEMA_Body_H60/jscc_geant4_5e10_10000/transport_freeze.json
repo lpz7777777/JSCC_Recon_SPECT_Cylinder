@@ -1,0 +1,37 @@
+{
+  "release_key": "dc23f1c14e3e036c",
+  "sha256": {
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "jscc_5e10_common.py": "fe55c0c6999134bc38125daa68e0a707e9047237f3de6f99b00ff905a97a04f4",
+    "jscc_5e10_transport.py": "eee723f66dde1621c9e2bc731384941a6e09c8f97f1de4a59960b81d14552ad2",
+    "release_manifest.json": "c8d21e8db1087d2e981ee4826473886837d6f8783152caaf12338ef60adf79e1",
+    "transport_config.json": "2433899aefa988888549e37f30b04055ba6c8e52f011e7a532886569ea0cf39f"
+  },
+  "source_registry_sha256": {
+    "jobs.json": "126580168ba3014d0759ea700d1992e7b79a17edb63e86e108aa0366f16a1652",
+    "macros/NEMA_Body_H60_v01.mac": "a3e512f8e4fdeb0ba4f71ae746687436058000cc236e3719848d476329bb639e",
+    "macros/NEMA_Body_H60_v02.mac": "350c06248965f2e4c99c4170325083f9b715e720124f3440905b94ed9aaf2703",
+    "macros/NEMA_Body_H60_v03.mac": "17f92c3837b7d5105ac0e57cd07d0161e511e5068b411608b9066f157cbd1d89",
+    "macros/NEMA_Body_H60_v04.mac": "89d7da71787eb01eedb0478ac8c2229f2d1977feb9f43766b802964e346747fe",
+    "macros/NEMA_Body_H60_v05.mac": "42a71a9e1a7291ef6ec5ac615c02913862f10d4e2c168529c7f97b42e01c82fb",
+    "macros/NEMA_Body_H60_v06.mac": "ff9281c3d1e46f0cf36b723c4813d9c60092b747b4cfcd0f2d42644d37d85e7b",
+    "macros/NEMA_Body_H60_v07.mac": "086dc45db120db154bdb3353a50ccdcc0604ea88c7a37723e9af330bf5350ac5",
+    "macros/NEMA_Body_H60_v08.mac": "6702b22145346915e6c2ee55fc4f3350edd77ae21c87e6d21c5bc5e180814a90",
+    "macros/NEMA_Body_H60_v09.mac": "3356ff749603bb99907fe97b7e55adbdc5361e62b00b462eb048d2f050945e37",
+    "macros/NEMA_Body_H60_v10.mac": "e5e2b60c8ddc84f8466964f7ba90300ac91f0848b89941c094f81a83e4e6a7c4",
+    "macros/NEMA_Body_H60_v11.mac": "d1d060f53184656dfd2b493eab1e64b3a9e59a9e1557284b2165ef1c82f0ba14",
+    "macros/NEMA_Body_H60_v12.mac": "f20c7b3146940554f73e021bb70ea20db57180ce79848d7fb735a2a157bcbebc",
+    "macros/NEMA_Body_H60_v13.mac": "cde1279bc44b718bcc7ce34409a764c0489768182d1d7faba189da0512e73014",
+    "macros/NEMA_Body_H60_v14.mac": "3f8324f243c4093d49ef5220142c938cf34ad52ef02ec4c2680678fe656b89a6",
+    "macros/NEMA_Body_H60_v15.mac": "af91f472ba8de72f9020f44645209e54a08f37d8ccde887bf372972ef7c18005",
+    "macros/NEMA_Body_H60_v16.mac": "d53efca6f86ef64da3b10142e2a78391465b4839bb2e273962345e62ffaa2b45",
+    "macros/NEMA_Body_H60_v17.mac": "d9eb67a49b36e14a45f17b0436ddf839499d3db466898557229cdf250284b41d",
+    "macros/NEMA_Body_H60_v18.mac": "d9a47433c93e5cb6067d73a9ce017ccc797c397c6dbe1ba12c714deae0028f53",
+    "macros/NEMA_Body_H60_v19.mac": "017fac59019ded766fd4bab864181e3efa462f54df95f9b627a12de131766977",
+    "macros/NEMA_Body_H60_v20.mac": "d3c0c5c086e11ca015ab045e99eb2afcec9537bafc3b2aaaba2ba0fe9efabc69"
+  },
+  "binary_sha256": "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6",
+  "crystal_sha256": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+  "workers": 1000,
+  "total_primary_photons": 50000000000
+}

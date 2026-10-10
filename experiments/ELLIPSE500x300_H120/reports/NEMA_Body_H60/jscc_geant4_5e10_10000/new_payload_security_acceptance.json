@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "base_commit": "d998370",
+  "scope": "Every new/changed staged blob; existing baseline blobs are not newly uploaded",
+  "auditor_source_sha256": "96753b472febc4049f4e3ae4da05e8247d0a87d29d269582ece9ce5866491c61",
+  "checked_blobs": 54,
+  "total_blob_bytes": 952059,
+  "findings": [],
+  "files": {
+    ".gitattributes": {
+      "bytes": 5133,
+      "sha256": "062314cbc0c3d6332aaf7a6bde35046787a8363640b5c45f0f9a1593834901c2"
+    },
+    ".gitignore": {
+      "bytes": 3023,
+      "sha256": "5c70c8656528f10fe684d05078b1d8bdb0dab67913cb626eab7739b76d1e6cd6"
+    },
+    "experiments/ELLIPSE500x300_H120/AGENTS.md": {
+      "bytes": 3424,
+      "sha256": "51e9f37a7851ca734061aeee14a1518a23a7aecfd6cef51a889763db4419644f"
+    },
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 4871,
+      "sha256": "9430103c52bf51725e500054053b8e972f8aa41a23475f04478c01fee33d276b"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_array.py": {
+      "bytes": 2971,
+      "sha256": "23748d7f3740aa16b20a26d0bdc4fbf3736fae38be56d582f2cc8c036381f8b0"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_common.py": {
+      "bytes": 3646,
+      "sha256": "fe55c0c6999134bc38125daa68e0a707e9047237f3de6f99b00ff905a97a04f4"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_compton_mlem.py": {
+      "bytes": 1031,
+      "sha256": "b66c901a18c14de42c9732848558beec55ac19df617321288a1cf081d93bf533"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_contract.py": {
+      "bytes": 6340,
+      "sha256": "4fe6a3f2cea4afe5d07a6ddc8e6a5289a93a26a8f22d790f9e9826eebd0cc5b8"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_reconstruction_workflow.py": {
+      "bytes": 29400,
+      "sha256": "32561f7b0f3221270e1d7655ee303b81497f2b4c29b70b0966c5bf113a2f5bbf"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_runtime.py": {
+      "bytes": 3111,
+      "sha256": "eb0f03b30264ab8e8d6888d6a3739034e8ab5f7bc3ddd79085d4bd817ed53527"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_selection.py": {
+      "bytes": 7041,
+      "sha256": "12fdef0f807fa30faea287d0831059107978f39289d9c1257b369bcdfe6c9108"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_transport.py": {
+      "bytes": 8587,
+      "sha256": "ecb52aecd0e06b111ca6f667a4e3b95a6057a550b3ccd84339637550834feca4"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_verify_stage.py": {
+      "bytes": 3522,
+      "sha256": "63ebd424a84daf37c2395a91fe2d05e3b963846ce43bef7cf538cd61afe70e15"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_workflow.py": {
+      "bytes": 24486,
+      "sha256": "8df25a5c8156a4a86c9fab0d9e195af82f0cbb43aa71ddbcdb9acacaa0b13090"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md": {
+      "bytes": 4582,
+      "sha256": "0c7705f2203c1c5c5784425e8a1723f2d23a792ff726ff0beda9a14998e92d40"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md": {
+      "bytes": 3487,
+      "sha256": "52d14759b02d7911aa7441d0cc758dd6d8fba6fef8e3a7a5af6437b866edbeae"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md": {
+      "bytes": 5980,
+      "sha256": "2de489c885760232231a4c3abb9705da59599be65c8fb67d76f12f559e8cda01"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/git_staged_identity_acceptance.json": {
+      "bytes": 14158,
+      "sha256": "49c9a3a33e34d468f64d294b4fb246531200579d9c0326fd74d41a996b6ec91e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/prepared_8x4_validation.sh": {
+      "bytes": 2867,
+      "sha256": "bdd2a7ba379678883f0b364e237cb240c6b054e40142a2db17d0e876a96ece48"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/transport_array.sh": {
+      "bytes": 1321,
+      "sha256": "47cab16ddb8fe94b30ab1c04b1fb42cf8f1dd59bde3d11d42ad04e8df25ab749"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/transport_pilot.sh": {
+      "bytes": 1255,
+      "sha256": "f5a63b706325f096a5fe9297df4b6d52fd9f99e83dc9b0fa992440e3d56a2fed"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/transport_superseded_15705120.sh": {
+      "bytes": 1237,
+      "sha256": "8cc06dfd7e1463007c64c436942df4968ea63ae4aef7c66634a739d5f3edc9c9"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/linux_contract_tests.txt": {
+      "bytes": 1011,
+      "sha256": "0f21155a0b40c17bc7082f7d668630a8baa38211103733a7ed658ae7caf8ce4e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/local_contract_tests.txt": {
+      "bytes": 1537,
+      "sha256": "c06c65a462cd199851ed42407f6cbee4dcdf1a9eb1f68b934a34b2e6ab733cea"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/orchestration_acceptance.json": {
+      "bytes": 1650,
+      "sha256": "ce2bc86e9e6623fd6352b1a90609f0b17e84132b770a0e06aba8cdae3293ffbb"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/science_deployment_timeout_diagnosis.json": {
+      "bytes": 7829,
+      "sha256": "7a2bea25a40df5380d39b731ba9cd2ef1e2ded8d81fd87d9e74e3ce3cb2cd6d0"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/science_preparation.json": {
+      "bytes": 8286,
+      "sha256": "fd9ca9b060775d19c8f8e1f75cda2f8a0f4a521545b57f7f64327bccb1d3081d"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_15705120_cancel_intent.json": {
+      "bytes": 1970,
+      "sha256": "128207cfad2e2098dbf252d1452a08283750c46cee01b4c99dcca89227126044"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_15705120_cancellation.json": {
+      "bytes": 422,
+      "sha256": "2f1b05d0f8eda0198655cf041840200aafeb4cb3e9103aae8003d2f2501d8f08"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_accounting.json": {
+      "bytes": 661507,
+      "sha256": "5a51b265b4ff23d01b1f720f0321334b7750f532d6f4a21fc4e255cac4961523"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_deployment.json": {
+      "bytes": 1332,
+      "sha256": "0b1757730d4b9fa31ce0afa4ebb5c0650aacdbd68258b5e3f2a8a91bbeb915a3"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_freeze.json": {
+      "bytes": 3707,
+      "sha256": "be5f40f4ce94dfd5a66e7cf10a283f036a7b6793dbd592b028ff4a7f19372f1f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_linux_tests.txt": {
+      "bytes": 370,
+      "sha256": "7840a07df168b7f8810ccee78394ab063503e9642c63c76f0f8180c288337697"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_local_tests.txt": {
+      "bytes": 503,
+      "sha256": "cf4db91c5c38abac8106b65f57af89d1553e1b454b0079a965a19557f2d0acfa"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_start_acceptance.json": {
+      "bytes": 2402,
+      "sha256": "a6948bb0be9ccb1b07713c715daa8980894667014a8beeff64cbf31899b2fbc9"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_start_observation.json": {
+      "bytes": 4450,
+      "sha256": "0715d854e2b5dd8b1c53987c3bdbec2ace809dd924e22eb35c443b21c8eae3ae"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_submission_intent.json": {
+      "bytes": 273,
+      "sha256": "f454f2a05625ee4b6da39e4cd071cebe060f1c2d2715031950a2a5ad8bfd79ca"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_deployment.json": {
+      "bytes": 1505,
+      "sha256": "a17f44643d3f78f7d1eb89ba5594832973ecf94d37966a034ca10250ab972ec2"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_freeze.json": {
+      "bytes": 2967,
+      "sha256": "fbe096d84e8b8a7754a237636bf7c4500b8d303f3349a8b73a82c15e43aee056"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_job.json": {
+      "bytes": 1162,
+      "sha256": "3d0e0eb3c44f76f7e3cd1a52980718f6c3c473a3e883640ce67ca2a9dec48091"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_latest_status.json": {
+      "bytes": 57100,
+      "sha256": "e472b08e29e1779e3ba0a838a58ce0e2b5c42d90874e99d4d86b282c881a5258"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot/allocation.json": {
+      "bytes": 3307,
+      "sha256": "af368de856afc1c0ed5e08b14ce655839f328960f388822f54896c294e3e6640"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot/receipt.json": {
+      "bytes": 1732,
+      "sha256": "e6e88fbd312c06b79b9232537b627af5ff941d062202a977ddf70489369394d3"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot_acceptance.json": {
+      "bytes": 2065,
+      "sha256": "4bffcd50cb9dd287d882f3b26c3f4610464ae4a2f0930c0aff6abf484ad7bbc9"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot_job.json": {
+      "bytes": 494,
+      "sha256": "187823bd39de8807b111e729b987e3285397c37ee5b536a50c8e04cbd4812575"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot_latest_status.json": {
+      "bytes": 382,
+      "sha256": "632e3c620afd848013dc4c220caa38953a9e689caa9689d680a106c9e7a0abe5"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot_sources/jscc_5e10_transport.py": {
+      "bytes": 7791,
+      "sha256": "eee723f66dde1621c9e2bc731384941a6e09c8f97f1de4a59960b81d14552ad2"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot_submission_intent.json": {
+      "bytes": 237,
+      "sha256": "2dc33b76277a0cd8cbc684c00ded99b9adbf44ef73bf5d1d1a3afc77bf2ae7a2"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_submission_intent.json": {
+      "bytes": 235,
+      "sha256": "2cb8d3ad944b83dbe56aa91056def52c3d13304c15129cfc90c6bdbe01c22eb2"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_superseded_15705120.json": {
+      "bytes": 495,
+      "sha256": "daa5b2afa8d9eeff93d6d8c3cf01b144c4e6dd9339a3b274f297a85e0d21b85b"
+    },
+    "experiments/ELLIPSE500x300_H120/run_jscc_5e10.py": {
+      "bytes": 15028,
+      "sha256": "c3a306a0621d9b7e589cc2d3f41ed117423574de8f743d8799f40ae96bf6caa2"
+    },
+    "experiments/ELLIPSE500x300_H120/test_jscc_5e10.py": {
+      "bytes": 6986,
+      "sha256": "0cca23e277846ea75e1f1217b926fd5e9a47e2af3b4f76ababd91b7ebf097d06"
+    },
+    "experiments/ELLIPSE500x300_H120/test_jscc_5e10_array.py": {
+      "bytes": 1902,
+      "sha256": "d47ff4bd374fe6a367594a575184d18ce1ba3b21695deed546130d191b612bd3"
+    },
+    "experiments/ELLIPSE500x300_H120/verify_jscc_5e10.py": {
+      "bytes": 9949,
+      "sha256": "7aa585665711a19f78a0371526eef1a3e6b2b340157ed7078cc41e57bb02a3c9"
+    }
+  }
+}

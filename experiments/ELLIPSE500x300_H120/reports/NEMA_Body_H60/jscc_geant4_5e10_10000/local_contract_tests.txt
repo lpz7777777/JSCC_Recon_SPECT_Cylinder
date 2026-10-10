@@ -1,0 +1,16 @@
+test_32_gpu_ids_and_conservative_aggregate_node_memory (test_jscc_5e10.JSCC5e10Tests.test_32_gpu_ids_and_conservative_aggregate_node_memory) ... ok
+test_checkpoint_preserves_history_and_rejects_corruption (test_jscc_5e10.JSCC5e10Tests.test_checkpoint_preserves_history_and_rejects_corruption) ... ok
+test_cuda_launcher_uses_four_local_ranks_and_no_explicit_mem (test_jscc_5e10.JSCC5e10Tests.test_cuda_launcher_uses_four_local_ranks_and_no_explicit_mem) ... ok
+test_formal_entry_has_no_joint_solver_call (test_jscc_5e10.JSCC5e10Tests.test_formal_entry_has_no_joint_solver_call) ... ok
+test_only_three_channels_and_independent_modes (test_jscc_5e10.JSCC5e10Tests.test_only_three_channels_and_independent_modes) ... ok
+test_real_dose_and_all_independent_worker_seeds_required (test_jscc_5e10.JSCC5e10Tests.test_real_dose_and_all_independent_worker_seeds_required) ... ok
+test_shared_numerical_sample_precedes_rank_partitioning (test_jscc_5e10.JSCC5e10Tests.test_shared_numerical_sample_precedes_rank_partitioning) ... ok
+test_single_and_fixed_background_mlem_match_original_exactly (test_jscc_5e10.JSCC5e10Tests.test_single_and_fixed_background_mlem_match_original_exactly) ... ok
+test_standalone_compton_matches_original_branch_and_all_saved_iterations (test_jscc_5e10.JSCC5e10Tests.test_standalone_compton_matches_original_branch_and_all_saved_iterations) ... JSCC_COMPTON_ITERATION 50 100
+JSCC_COMPTON_ITERATION 100 100
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.695s
+
+OK

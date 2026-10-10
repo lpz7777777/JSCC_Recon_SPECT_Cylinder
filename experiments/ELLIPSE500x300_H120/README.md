@@ -2,7 +2,9 @@
 
 2026-10-10最新规则：后续不再计算218与440的跨能量叠加图。球ROI采用中心距球面至少1.5 mm的体素；所有球统一使用Phantom内部完整背景体素，排除六球、肺插入物和边界。[新规则、重算指标及12条独立路线图表](reports/nema_interior_roi_20261010/README.md)为当前分析入口。
 
-五组主要NEMA H60研究均已实际完成、独立验收和严格取回。当前没有待继续的本地推进器，compton-v5保持暂停。JSCC既有六路10000次作为历史实现回归基准；EHE实际输运与模型加噪声是四个独立研究组。
+最新新增授权实验：[JSCC实际5e10、三路10000次](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md)。启动检查15705111已实际COMPLETED/0:0；用户改为独立CPU调度后，未启动的18节点15705120已取消，唯一新输运数组15708389为1000worker、每worker1节点1核，可共享节点、最高并行1000，完成后统一收集。GPU优先8节点×4卡。正式仅保留218 corrected、440 single、440 Compton三路；原模型和MLEM保持，完整输入validation10通过后继续formal10000/save50。该实验尚未交付；新 `jscc-5e10` 每15分钟推进，旧compton-v5保持暂停。
+
+此前五组主要NEMA H60研究均已实际完成、独立验收和严格取回，旧推进器已退出，compton-v5保持暂停。新增JSCC5e10独立研究仍在推进。JSCC既有六路10000次作为历史实现回归基准；EHE实际输运与模型加噪声是四个独立研究组。
 
 - [历史研究报告 PDF：旧ROI与叠加图定义](reports/dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf)
 - [整理目录及存储清理说明](reports/dual_energy_review_20261010/README.md)
@@ -27,7 +29,7 @@ EHE 5e10全4π、一事件一光子；输运15684979复用首次13个成功worke
 
 ## 方法历史与固定基准
 
-- [JSCC完整流程历史基准](../../docs/DUAL_ENERGY_BASELINE.md)：原六路入口及冻结发布只读保留；新任务应另行冻结四路输出合同，不沿用六路入口提交。
+- [JSCC完整流程历史基准](../../docs/DUAL_ENERGY_BASELINE.md)：原六路入口及冻结发布只读保留；新任务应按用户选择的路线另行冻结输出合同，不沿用六路入口提交。
 - [截至10月7日的方法研究回顾](../../docs/DUAL_ENERGY_RESEARCH_REVIEW.md)，包括密度基底、首散射、稳定几何、连续核、绑定/Huber及未完成精细场。
 - [5e9两核2000对照](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/ACCEPTANCE.md)；[ideal1e9两核2000](reports/NEMA_Body_H60/compton_energy_probability_v5/ACCEPTANCE.md)不是纯剂量对照。
 - [体模定义与几何真值](reports/NEMA_Body_H60/README.md)。
