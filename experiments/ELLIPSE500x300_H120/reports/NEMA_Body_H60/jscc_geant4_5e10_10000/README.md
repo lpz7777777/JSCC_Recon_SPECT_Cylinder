@@ -1,5 +1,15 @@
 # JSCC实际5e10：218 corrected / 440 single / 440 Compton
 
+
+## 最新实际状态：4090分批方案等待持久缓存空间
+
+1686694已实际全COMPLETED/0:0（3分23秒），24GPU身份、小块无损往返和80%资源余量通过；整体存储门控未通过。6/8节点/tmp空间不足；1686708只读挂载检查证实/tmp位于当前作业jobcontainer，不能据此承诺验证与正式作业之间复用。此前9b5938545ad3d6c7发布中的/tmp固定节点复用方案已被实际证据否决，原发布及日志保留，不能继续该入口advance或提交validation/formal。
+
+完整响应1530759784160字节（约1.53 TB），现有工作盘约66 GB可用。/ssd全卷空闲不等于账户配额：/ssd/scxi717属于root/0700，scxi717不可读写，目录实际配额仅1 GiB；home也只有1 GiB。已请求用户在平台开通可写、至少2 TiB持久SSD目录并提供路径。需要新独立存储修复冻结和实际I/O验证，不能修改旧发布或重新筛选/模拟。
+
+当前例行入口仅 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_storage_status.py`，只读核对六项PID、账户SSD配额/访问和原5090自然状态。自动任务继续ACTIVE，资源未变化时保持安静，不反复执行旧probe/取回。原1685272仍PENDING且job JSON SHA保持；未提交完整输入验证或正式重建。详见报告目录 `STREAMING_STORAGE_HOLD.md`、`streaming_4090_8x3_probe_resource_acceptance.json` 与 `streaming_4090_8x3_storage_diagnosis.json`。
+
+
 2026-10-10，用户明确授权完成完整模拟、重建、严格取回、科学/视觉QA和研究报告，并在计算等待期间定时推进。独立实验尚未交付。
 
 2026-10-10 22:28上海最新：独立8节点×2张5090筛选恢复 **1686507** 已完整COMPLETED/0:0，Slurm共8分48秒。完整54631328行原List对应原条件接受4860953事件，q筛选移除11866、选中 **4849087**；20视角和16rank均完成。原日志/manifest/实际allocation已严格SHA取回。GPU实测峰值占设备容量22.7224%，PyTorch reserved20.1500%；节点保守汇总RSS5.24975%、退出后Slurm MaxRSS8.28643%，分母均为实际设备/AllocTRES。独立全行验收及完整严格取回已实际通过，见 [严格验收](selection_5090_8x2_monitor_repair_acceptance.json) 和 [筛选资源证书](selection_5090_8x2_monitor_repair_resource_acceptance.json)。
@@ -40,3 +50,17 @@ GPU重建采用8节点×4卡、32进程，每节点32CPU，通过Slurm自动分�
 
 
 2026-10-10 22:06上海最新：独立8×2张5090恢复试跑 **1686507** 已实际RUNNING，8节点/16rank/16GPU、每节点16CPU及自动252000MiB。原1686450在筛选前因GPU UUID监控匹配失败完全退出；原4090试跑1686107也自行在同一检查处FAILED并完全退出，原5090主作业1685272仍PENDING(Priority)。原两项作业及登记均未改动或取消。新独立冻结75e6ca22ffb21fa4只修复完整CUDA UUID与nvidia-smi GPU-字符串的身份匹配并记录两种实际身份，原筛选科学代码及资源合同与失败8×2试跑逐字节一致。7项本地及实际Linux检查、64份发布成员SHA通过；实际16rank启动日志已逐一证明原CUDA UUID→GPU-UUID唯一匹配，尚未形成完整筛选/内存验收。见 [恢复登记](selection_5090_8x2_monitor_repair_job.json)、[原失败证据](selection_5090_8x2_trial_failure_1686450/failure_acceptance.json)、[实际启动身份](selection_5090_8x2_monitor_repair_startup_identity_acceptance.json)。正式重建继续按实际事件数和完整响应内存余量决定，筛选占用不能替代全部Compton响应的主存证书。
+
+
+## 2026-10-10 最新用户授权：复用筛选、4090 8×3分批响应
+
+用户明确要求复用已完成筛选，将Compton事件响应改成分批载入，用8节点×3张4090推进三路重建，原5090作业保持不动。新的独立入口为 `jscc_5e10_4090_streaming.py status/advance`，登记前缀 `streaming_4090_8x3`。它取代此前后续正式拓扑待选的限制；不调用旧32卡advance、修改旧selection_job或取消1685272。旧FAILED4090/8×2试跑仅保存原证据。
+
+复用1686507/1686546已验收的全部4,849,087事件及40份索引/原行缓存，按24rank重新分区，原数据/SHA保持。新响应存储仅无损压缩完整float32字节，每块最多32事件，节点本地/tmp写入、fsync和完整SHA读回；迭代按原顺序还原当前块调用原事件权重及未正则MLEM。原v5物理、全120mm/78920活动单元、全部20view、矩阵/S、三路和固定本次440末图背景均不改，不丢事件或生成跨能量和。原科学函数调用与检查点AST逐一一致；本地6项测试实际通过，100迭代全部保存历史与常驻内存及原Compton分支逐值一致。该CPU测试不是完整输入GPU资源证书。
+
+4090每节点18CPU/3GPU，自动预计180000MiB/节点，无显式mem；真实24rank/8host/3唯一GPU、UUID/RSS/Slurm MaxRSS/显存均保留20%余量。共享盘约66.6GB可用，完整响应不写共享盘。先实际8×3节点存储/设备/无损小块probe，节点本地盘磁盘余量保护；样本压缩预算不是全部缓存容量保证。成功退出、严格日志/资源/数值证明后进入全输入三路validation10，验证全部响应块/事件、原前向/转置/S及历史回归；独立只读验收、严格取回及新24卡authority通过后直接唯一formal10000/save50。正式固定验收节点以复用相同SHA本地缓存，不重新生成成功缓存；缺失、部分或失败保留并诊断，仅有界修复。实际吞吐和时限据验证实测，不能保证ETA。
+
+定时任务已更新为新入口；检查原五项控制器PID及新增 `streaming_4090_8x3_registration.json`，任一实际存活不并行提交/推进/取回。完整三路数值、科学/视觉QA、报告和安全Git交付之前保持ACTIVE。原5090作业自然状态只读检查，若自行失败保存完整退出和原日志，不借新授权修改它。
+
+
+最新实际登记：独立streaming预检 **1686694** 已提交gpu_4090，8节点/24GPU、每节点18CPU，无显式mem，30分钟有界时限（不是ETA）。发布 **9b5938545ad3d6c7** 全部成员远端SHA和Linux导入通过，本地与实际Linux各6项测试通过。预检尚需真实退出及存储/资源/无损数值验收；validation10与formal10000尚未提交。主5090 1685272仍PENDING，原job JSON SHA b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1未改；新推进器已complete/exit0。定时任务保持ACTIVE且仅按新独立登记推进，不重复probe提交或旧筛选。

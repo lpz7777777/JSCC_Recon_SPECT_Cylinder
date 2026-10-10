@@ -60,5 +60,7 @@ experiments/ELLIPSE500x300_H120/jscc_5e10_*.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/jscc_5e10_reconstruction_workflow.py -text whitespace=cr-at-eol,-blank-at-eof
 experiments/ELLIPSE500x300_H120/run_jscc_5e10.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/verify_jscc_5e10.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/run_jscc_5e10_streaming.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/verify_jscc_5e10_streaming.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/test_jscc_5e10*.py -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/** -text whitespace=cr-at-eol

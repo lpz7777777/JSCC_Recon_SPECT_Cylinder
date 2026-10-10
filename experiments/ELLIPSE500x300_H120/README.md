@@ -1,5 +1,15 @@
 # 218与440 keV双能重建 近期结果总入口
 
+
+## 最新实际状态：4090分批方案等待持久缓存空间
+
+1686694已实际全COMPLETED/0:0（3分23秒），24GPU身份、小块无损往返和80%资源余量通过；整体存储门控未通过。6/8节点/tmp空间不足；1686708只读挂载检查证实/tmp位于当前作业jobcontainer，不能据此承诺验证与正式作业之间复用。此前9b5938545ad3d6c7发布中的/tmp固定节点复用方案已被实际证据否决，原发布及日志保留，不能继续该入口advance或提交validation/formal。
+
+完整响应1530759784160字节（约1.53 TB），现有工作盘约66 GB可用。/ssd全卷空闲不等于账户配额：/ssd/scxi717属于root/0700，scxi717不可读写，目录实际配额仅1 GiB；home也只有1 GiB。已请求用户在平台开通可写、至少2 TiB持久SSD目录并提供路径。需要新独立存储修复冻结和实际I/O验证，不能修改旧发布或重新筛选/模拟。
+
+当前例行入口仅 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_storage_status.py`，只读核对六项PID、账户SSD配额/访问和原5090自然状态。自动任务继续ACTIVE，资源未变化时保持安静，不反复执行旧probe/取回。原1685272仍PENDING且job JSON SHA保持；未提交完整输入验证或正式重建。详见报告目录 `STREAMING_STORAGE_HOLD.md`、`streaming_4090_8x3_probe_resource_acceptance.json` 与 `streaming_4090_8x3_storage_diagnosis.json`。
+
+
 2026-10-10最新规则：后续不再计算218与440的跨能量叠加图。球ROI采用中心距球面至少1.5 mm的体素；所有球统一使用Phantom内部完整背景体素，排除六球、肺插入物和边界。[新规则、重算指标及12条独立路线图表](reports/nema_interior_roi_20261010/README.md)为当前分析入口。
 
 最新新增授权实验：[JSCC实际5e10、三路10000次](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md)。启动检查15705111已实际COMPLETED/0:0；用户改为独立CPU调度后，未启动的18节点15705120已取消，唯一新输运数组15708389为1000worker、每worker1节点1核，可共享节点、最高并行1000，完成后统一收集。GPU优先8节点×4卡。正式仅保留218 corrected、440 single、440 Compton三路；原模型和MLEM保持，完整输入validation10通过后继续formal10000/save50。该实验尚未交付；新 `jscc-5e10` 每15分钟推进，旧compton-v5保持暂停。
@@ -53,3 +63,6 @@ EHE 5e10全4π、一事件一光子；输运15684979复用首次13个成功worke
 
 
 2026-10-10 22:06 JSCC5e10最新8×2筛选试跑：恢复作业1686507实际RUNNING；旧8×2 1686450和4090 1686107在UUID监控处失败、证据保留，主5090 1685272仍排队且未修改。恢复只修正设备身份字符串，原科学计算与阈值保持；实际16GPU启动身份通过，完整事件筛选/内存结论待退出验收。详情见reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md及最新selection_5090_8x2_monitor_repair_job.json。
+
+
+最新用户授权：JSCC实际5e10复用已验收筛选，改为8节点×3张4090、Compton响应节点本地盘无损32事件分批读取，原5090作业1685272保持不动。新的streaming_4090_8x3独立登记和预检→完整输入validation10→authority→formal10000→严格QA流程详见新实验README；既有原响应/观测与科学模型不改。

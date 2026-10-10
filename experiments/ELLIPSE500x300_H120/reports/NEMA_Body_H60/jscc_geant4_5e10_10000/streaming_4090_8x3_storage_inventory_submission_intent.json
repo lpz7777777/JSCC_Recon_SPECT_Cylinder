@@ -1,0 +1,10 @@
+{
+  "command": "sbatch --parsable -p gpu_4090 --qos=gpugpu -N8 -n8 --ntasks-per-node=1 --cpus-per-task=1 --gres=gpu:1 --time=10 --nodelist=wqd10naf05g4,wqd10naf05g5,wqd10nba07g3,wqd10nba07g4,wqd10nba07g5,wqd10nba07g6,wqd10nba07g7,wqd10nba07g8 --chdir=/tmp --job-name=JSCC5e10_storage_inventory --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_storage_inventory.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_storage_inventory.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/storage_inspection/streaming_4090_8x3_storage_inventory/inventory.sh",
+  "sha256": {
+    "inventory.py": "2a62d2e717e67ed6d8a09feedb54f71ec74c6f1e83104e9c8929a456a7f8db67",
+    "inventory.sh": "4db99e59eb186fc61aa7f4e896cb22027d7a90548b058c2334505e56bcde2788"
+  },
+  "release_key": "73bc97811836cd26",
+  "resolved": true,
+  "job": 1686708
+}

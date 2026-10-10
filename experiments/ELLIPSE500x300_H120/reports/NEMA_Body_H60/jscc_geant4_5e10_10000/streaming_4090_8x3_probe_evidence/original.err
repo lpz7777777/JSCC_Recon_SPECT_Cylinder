@@ -1,0 +1,121 @@
+cuda-12.9 loaded successful
+1: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+1:   warnings.warn(  # warn only once
+1: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+1:   warnings.warn(  # warn only once
+1: [rank5]:[W1010 23:38:19.636688638 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 5]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+1: [rank4]:[W1010 23:38:19.636727482 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 4]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+1: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+1:   warnings.warn(  # warn only once
+6: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+6:   warnings.warn(  # warn only once
+1: [rank3]:[W1010 23:38:19.660933508 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 3]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+6: [rank19]:[W1010 23:38:19.045226013 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 19]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+4: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+4:   warnings.warn(  # warn only once
+7: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+7:   warnings.warn(  # warn only once
+4: [rank12]:[W1010 23:38:19.059733482 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 12]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+3: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+3:   warnings.warn(  # warn only once
+7: [rank21]:[W1010 23:38:19.826269091 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 21]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+6: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+6:   warnings.warn(  # warn only once
+3: [rank11]:[W1010 23:38:19.823035968 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 11]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+7: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+7:   warnings.warn(  # warn only once
+6: [rank20]:[W1010 23:38:19.084306713 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 20]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+7: [rank23]:[W1010 23:38:19.834066877 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 23]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+6: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+6:   warnings.warn(  # warn only once
+6: [rank18]:[W1010 23:38:19.102081787 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 18]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+7: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+7:   warnings.warn(  # warn only once
+7: [rank22]:[W1010 23:38:19.856955167 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 22]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+3: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+3:   warnings.warn(  # warn only once
+3: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+3:   warnings.warn(  # warn only once
+3: [rank10]:[W1010 23:38:19.857966024 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 10]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+3: [rank9]:[W1010 23:38:19.858098653 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 9]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+4: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+4:   warnings.warn(  # warn only once
+4: [rank13]:[W1010 23:38:19.119102508 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 13]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+4: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+4:   warnings.warn(  # warn only once
+4: [rank14]:[W1010 23:38:19.124872322 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 14]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+0: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+0:   warnings.warn(  # warn only once
+0: [rank1]:[W1010 23:38:33.219016867 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+0: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+0:   warnings.warn(  # warn only once
+0: [rank2]:[W1010 23:38:33.237220694 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+0: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+0:   warnings.warn(  # warn only once
+0: [rank0]:[W1010 23:38:33.242708284 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+5: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+5:   warnings.warn(  # warn only once
+5: [rank16]:[W1010 23:40:07.268058388 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 16]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+2: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+2:   warnings.warn(  # warn only once
+2: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+2:   warnings.warn(  # warn only once
+5: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+5:   warnings.warn(  # warn only once
+5: [rank17]:[W1010 23:40:07.280873145 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 17]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+5: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+5:   warnings.warn(  # warn only once
+2: [rank7]:[W1010 23:40:07.352146020 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 7]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+2: [rank8]:[W1010 23:40:07.352146090 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 8]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+5: [rank15]:[W1010 23:40:07.310658946 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 15]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+2: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+2:   warnings.warn(  # warn only once
+2: [rank6]:[W1010 23:40:07.365235915 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 6]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+0: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+0:   warnings.warn(  # warn only once
+0: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+0:   warnings.warn(  # warn only once
+0: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+0:   warnings.warn(  # warn only once
+3: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+3:   warnings.warn(  # warn only once
+5: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+5:   warnings.warn(  # warn only once
+3: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+3:   warnings.warn(  # warn only once
+2: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+2:   warnings.warn(  # warn only once
+4: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+4:   warnings.warn(  # warn only once
+1: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+1:   warnings.warn(  # warn only once
+3: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+3:   warnings.warn(  # warn only once
+4: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+4:   warnings.warn(  # warn only once
+1: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+1:   warnings.warn(  # warn only once
+1: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+1:   warnings.warn(  # warn only once
+4: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+4:   warnings.warn(  # warn only once
+6: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+6:   warnings.warn(  # warn only once
+5: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+5:   warnings.warn(  # warn only once
+6: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+6:   warnings.warn(  # warn only once
+6: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+6:   warnings.warn(  # warn only once
+5: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+5:   warnings.warn(  # warn only once
+2: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+2:   warnings.warn(  # warn only once
+2: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+2:   warnings.warn(  # warn only once
+7: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+7:   warnings.warn(  # warn only once
+7: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+7:   warnings.warn(  # warn only once
+7: /data/home/scxi717/.conda/envs/torch/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+7:   warnings.warn(  # warn only once

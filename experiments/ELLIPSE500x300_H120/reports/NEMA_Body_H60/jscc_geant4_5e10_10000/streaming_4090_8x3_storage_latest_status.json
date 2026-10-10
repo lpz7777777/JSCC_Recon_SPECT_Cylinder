@@ -1,0 +1,31 @@
+{
+  "resource_available": false,
+  "storage": {
+    "path": "/ssd/scxi717",
+    "owner_uid": 0,
+    "mode": "0o700",
+    "account_uid": 1721,
+    "readable": false,
+    "writable": false,
+    "quota_exposed_total_bytes": 1073741824,
+    "quota_exposed_available_bytes": 1073741824
+  },
+  "minimum_quota_bytes": 2199023255552,
+  "required_available_bytes": 1930629599384,
+  "full_uncompressed_response_bytes": 1530759784160,
+  "selected_events": 4849087,
+  "actual_primary_photons": 50000000000,
+  "source_selection_acceptance_sha256": "a397134612b2d63c27b178f9cb99c614e5a08ce8b8ac4a21340f24c8f0ccff71",
+  "initial_probe_job": 1686694,
+  "initial_probe_freeze": "9b5938545ad3d6c7",
+  "initial_probe_storage_passed": false,
+  "initial_probe_resources_passed": true,
+  "inspection_source_sha256": "a50c62e15b18d4ca2d53cb373d0ccdd97343f8f6a63c54041f49091a1d22af08",
+  "monitor_source_sha256": "ba8263822c603a623bae4681a40a186e6533a410c9d0e635c8726aaab2e19551",
+  "original_5090_registry_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+  "original_5090_accounting": "1685272|PENDING|0:0\n",
+  "original_5090_untouched": true,
+  "read_only": true,
+  "validation_or_formal_submit_permitted": false,
+  "next_step": "Await writable persistent SSD quota; preserve all completed stages"
+}

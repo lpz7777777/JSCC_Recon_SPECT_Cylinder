@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "job": 1686708,
+  "read_only_cpu_inventory": true,
+  "records": 8,
+  "evidence_sha256": {
+    "accounting.txt": "d39a133a4b5c2a32d8beaeb7dd6e573d26372bcc8d27e556e0358e9e0f456d27",
+    "inventory.json": "e1e8e7435d5649461a33755ca72613218ec437d42552fde88405fc48ca26b635",
+    "inventory.py": "2a62d2e717e67ed6d8a09feedb54f71ec74c6f1e83104e9c8929a456a7f8db67",
+    "inventory.sh": "4db99e59eb186fc61aa7f4e896cb22027d7a90548b058c2334505e56bcde2788",
+    "original.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original.out": "86e0c3d763a6d3b1fec89c864fdb96f9e8c499163869f5f10fca913cd6127c98"
+  },
+  "accounting": "1686708|COMPLETED|0:0|00:00:00||billing=8,cpu=8,gres/gpu=8,mem=80000M,node=8|wqd10naf05g[4-5],wqd10nba07g[3-8]\n1686708.batch|COMPLETED|0:0|00:00:00|332K|cpu=1,gres/gpu=1,mem=10000M,node=1|wqd10naf05g4\n1686708.extern|COMPLETED|0:0|00:00:00|0|billing=8,cpu=8,gres/gpu=8,mem=80000M,node=8|wqd10naf05g[4-5],wqd10nba07g[3-8]\n1686708.0|COMPLETED|0:0|00:00:00|888K|cpu=8,gres/gpu=8,mem=80000M,node=8|wqd10naf05g[4-5],wqd10nba07g[3-8]\n",
+  "job_private_tmp_not_reusable_between_jobs": true,
+  "shared_ssd_capacity_is_not_user_quota": true
+}

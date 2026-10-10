@@ -1,0 +1,28 @@
+1: JSCC_GPU_UUID_IDENTITY 5 a49387ee-8ce1-2ff4-b309-ba73e50cd37f GPU-a49387ee-8ce1-2ff4-b309-ba73e50cd37f 2.8.0+cu128
+1: JSCC_GPU_UUID_IDENTITY 4 d7ee436f-4fb4-47d9-6eb3-09d8aa20af0b GPU-d7ee436f-4fb4-47d9-6eb3-09d8aa20af0b 2.8.0+cu128
+6: JSCC_GPU_UUID_IDENTITY 19 1601af0c-518f-1bac-5626-6cda9ef6fe11 GPU-1601af0c-518f-1bac-5626-6cda9ef6fe11 2.8.0+cu128
+1: JSCC_GPU_UUID_IDENTITY 3 dcc6841d-91d7-8e88-b1b3-8b0f19af918a GPU-dcc6841d-91d7-8e88-b1b3-8b0f19af918a 2.8.0+cu128
+7: JSCC_GPU_UUID_IDENTITY 21 54b52355-338e-1b06-5e7c-eb11c36b98c4 GPU-54b52355-338e-1b06-5e7c-eb11c36b98c4 2.8.0+cu128
+4: JSCC_GPU_UUID_IDENTITY 12 0ee9ef5f-72a8-9ff5-b798-a6f0dc603a8d GPU-0ee9ef5f-72a8-9ff5-b798-a6f0dc603a8d 2.8.0+cu128
+3: JSCC_GPU_UUID_IDENTITY 11 f70b76c8-144a-b82b-d3c5-8c91794935cd GPU-f70b76c8-144a-b82b-d3c5-8c91794935cd 2.8.0+cu128
+6: JSCC_GPU_UUID_IDENTITY 20 ee0f584a-3a0d-1576-816b-aa72a7e99273 GPU-ee0f584a-3a0d-1576-816b-aa72a7e99273 2.8.0+cu128
+7: JSCC_GPU_UUID_IDENTITY 23 92b27fb2-acb4-0e04-778e-f4bd7e441140 GPU-92b27fb2-acb4-0e04-778e-f4bd7e441140 2.8.0+cu128
+6: JSCC_GPU_UUID_IDENTITY 18 27d9fa42-e49e-7214-7ec1-50c15a812060 GPU-27d9fa42-e49e-7214-7ec1-50c15a812060 2.8.0+cu128
+7: JSCC_GPU_UUID_IDENTITY 22 7f8219b0-1331-f6ef-2105-e0786dbad6b8 GPU-7f8219b0-1331-f6ef-2105-e0786dbad6b8 2.8.0+cu128
+3: JSCC_GPU_UUID_IDENTITY 10 b4d15760-2592-97d4-68c2-785ac3737c44 GPU-b4d15760-2592-97d4-68c2-785ac3737c44 2.8.0+cu128
+3: JSCC_GPU_UUID_IDENTITY 9 49b179c9-aa2e-f7b1-b8f4-003aebf8a19e GPU-49b179c9-aa2e-f7b1-b8f4-003aebf8a19e 2.8.0+cu128
+4: JSCC_GPU_UUID_IDENTITY 13 ae160d4a-99f7-0f1b-06fd-4e5f4fac1899 GPU-ae160d4a-99f7-0f1b-06fd-4e5f4fac1899 2.8.0+cu128
+4: JSCC_GPU_UUID_IDENTITY 14 1dd09b94-c311-4991-21e7-30d98c2d5b89 GPU-1dd09b94-c311-4991-21e7-30d98c2d5b89 2.8.0+cu128
+0: JSCC_GPU_UUID_IDENTITY 1 c4e9b4fc-9481-cddf-a135-73520e889c18 GPU-c4e9b4fc-9481-cddf-a135-73520e889c18 2.8.0+cu128
+0: JSCC_GPU_UUID_IDENTITY 0 086911f1-1f1b-b9b8-5c57-565d152fcc05 GPU-086911f1-1f1b-b9b8-5c57-565d152fcc05 2.8.0+cu128
+0: JSCC_GPU_UUID_IDENTITY 2 e4369f10-a466-a4c5-1b02-9f8e75f59672 GPU-e4369f10-a466-a4c5-1b02-9f8e75f59672 2.8.0+cu128
+2: JSCC_GPU_UUID_IDENTITY 8 0d2cc24f-6cf9-f7fb-5bf6-d30465b2df70 GPU-0d2cc24f-6cf9-f7fb-5bf6-d30465b2df70 2.8.0+cu128
+5: JSCC_GPU_UUID_IDENTITY 16 ae1b5f9e-367f-072e-96e3-2fe27988487f GPU-ae1b5f9e-367f-072e-96e3-2fe27988487f 2.8.0+cu128
+2: JSCC_GPU_UUID_IDENTITY 7 58726e79-3f06-2298-5730-7afc64022eec GPU-58726e79-3f06-2298-5730-7afc64022eec 2.8.0+cu128
+5: JSCC_GPU_UUID_IDENTITY 17 4a540f08-e306-bd45-a07e-16b8669ba215 GPU-4a540f08-e306-bd45-a07e-16b8669ba215 2.8.0+cu128
+5: JSCC_GPU_UUID_IDENTITY 15 aeb83501-1183-075a-94c3-5027e3e31bd4 GPU-aeb83501-1183-075a-94c3-5027e3e31bd4 2.8.0+cu128
+2: JSCC_GPU_UUID_IDENTITY 6 aa8cec52-d9cf-6abb-d0ef-7bd5f32b7945 GPU-aa8cec52-d9cf-6abb-d0ef-7bd5f32b7945 2.8.0+cu128
+0: STREAMING_PROBE_COMPLETE [{"node": "wqd10naf05g4", "dense_bytes": 191342487040, "available_bytes": 345956352000, "observed_sample_storage_ratio": 0.9147381248416118, "worst_case_capacity_passed": true, "sample_budget_with_fourfold_margin": 717292940374.0, "guarded_full_cache_attempt_permitted": true, "sample_is_not_complete_cache_capacity_certificate": true}, {"node": "wqd10naf05g5", "dense_bytes": 191345012480, "available_bytes": 1352567119872, "observed_sample_storage_ratio": 0.9090319904650279, "worst_case_capacity_passed": true, "sample_budget_with_fourfold_margin": 712934819425.0, "guarded_full_cache_attempt_permitted": true, "sample_is_not_complete_cache_capacity_certificate": true}, {"node": "wqd10nba07g3", "dense_bytes": 191344381120, "available_bytes": 54013239296, "observed_sample_storage_ratio": 0.9146714037949822, "worst_case_capacity_passed": false, "sample_budget_with_fourfold_margin": 717248803933.25, "guarded_full_cache_attempt_permitted": false, "sample_is_not_complete_cache_capacity_certific
+0: ate": true}, {"node": "wqd10nba07g4", "dense_bytes": 191346590880, "available_bytes": 76996878336, "observed_sample_storage_ratio": 0.9112881319690826, "worst_case_capacity_passed": false, "sample_budget_with_fourfold_margin": 714667378630.75, "guarded_full_cache_attempt_permitted": false, "sample_is_not_complete_cache_capacity_certificate": true}, {"node": "wqd10nba07g5", "dense_bytes": 191343749760, "available_bytes": 170180370432, "observed_sample_storage_ratio": 0.9145868640712114, "worst_case_capacity_passed": false, "sample_budget_with_fourfold_margin": 717181789394.5, "guarded_full_cache_attempt_permitted": false, "sample_is_not_complete_cache_capacity_certificate": true}, {"node": "wqd10nba07g6", "dense_bytes": 191345012480, "available_bytes": 48238473216, "observed_sample_storage_ratio": 0.9114304834009123, "worst_case_capacity_passed": false, "sample_budget_with_fourfold_margin": 714770578068.0, "guarded_full_cache_attempt_permitted": false, "sample_is_not_complete_cache_capacity_certificate": true}
+0: , {"node": "wqd10nba07g7", "dense_bytes": 191344381120, "available_bytes": 177003339776, "observed_sample_storage_ratio": 0.9108522673276735, "worst_case_capacity_passed": false, "sample_budget_with_fourfold_margin": 714325722718.25, "guarded_full_cache_attempt_permitted": false, "sample_is_not_complete_cache_capacity_certificate": true}, {"node": "wqd10nba07g8", "dense_bytes": 191348169280, "available_bytes": 188398129152, "observed_sample_storage_ratio": 0.9127293659718703, "worst_case_capacity_passed": false, "sample_budget_with_fourfold_margin": 715776242091.25, "guarded_full_cache_attempt_permitted": false, "sample_is_not_complete_cache_capacity_certificate": true}]
+JSCC5E10_STREAMING_COMPLETED probe

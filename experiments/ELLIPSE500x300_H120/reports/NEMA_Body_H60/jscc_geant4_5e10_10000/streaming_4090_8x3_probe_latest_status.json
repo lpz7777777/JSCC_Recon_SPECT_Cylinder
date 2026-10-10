@@ -1,0 +1,6 @@
+{
+  "job": 1686694,
+  "accounting": "1686694|COMPLETED|0:0||00:03:23|billing=144,cpu=144,gres/gpu=24,mem=1440000M,node=8|wqd10naf05g[4-5],wqd10nba07g[3-8]\n1686694.batch|COMPLETED|0:0|5960K|00:03:23|cpu=18,gres/gpu=3,mem=180000M,node=1|wqd10naf05g4\n1686694.extern|COMPLETED|0:0|0|00:03:23|billing=144,cpu=144,gres/gpu=24,mem=1440000M,node=8|wqd10naf05g[4-5],wqd10nba07g[3-8]\n1686694.0|COMPLETED|0:0|7886332K|00:03:21|cpu=144,gres/gpu=24,mem=1440000M,node=8|wqd10naf05g[4-5],wqd10nba07g[3-8]\n",
+  "queue": "",
+  "checked_epoch": 1791647085.829069
+}

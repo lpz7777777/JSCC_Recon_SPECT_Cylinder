@@ -1,0 +1,570 @@
+[
+  {
+    "node": "wqd10naf05g4",
+    "epoch": 1791647129.5828562,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "ext4",
+        "source": "/dev/sda3",
+        "total_bytes": 938034139136,
+        "free_bytes": 345369337856,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3777138688,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684614",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1684614]",
+        "total_bytes": 938034139136,
+        "free_bytes": 345369337856,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1685581",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1685581]",
+        "total_bytes": 938034139136,
+        "free_bytes": 345369337856,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 938034139136,
+        "free_bytes": 345369337856,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "ext4",
+        "free_bytes": 345369337856,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10naf05g5",
+    "epoch": 1791647129.610748,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "ext4",
+        "source": "/dev/sda3",
+        "total_bytes": 1881982115840,
+        "free_bytes": 1352009674752,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3777138688,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1681473",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1681473]",
+        "total_bytes": 1881982115840,
+        "free_bytes": 1352009674752,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1686509",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1686509]",
+        "total_bytes": 1881982115840,
+        "free_bytes": 1352009674752,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1686510",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1686510]",
+        "total_bytes": 1881982115840,
+        "free_bytes": 1352009674752,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1686511",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1686511]",
+        "total_bytes": 1881982115840,
+        "free_bytes": 1352009674752,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "ext4",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 1881982115840,
+        "free_bytes": 1352009674752,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "ext4",
+        "free_bytes": 1352009674752,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10nba07g3",
+    "epoch": 1791647129.5921075,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "xfs",
+        "source": "/dev/sda3",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3649093632,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1641926",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1641926]",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684499",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684499]",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1685361",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1685361]",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1685594",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1685594]",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1686399",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686399]",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 473933496320,
+        "free_bytes": 53213184000,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "xfs",
+        "free_bytes": 53213184000,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10nba07g4",
+    "epoch": 1791647129.599547,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "xfs",
+        "source": "/dev/sda3",
+        "total_bytes": 593874984960,
+        "free_bytes": 76368986112,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3649101824,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1681476",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1681476]",
+        "total_bytes": 593874984960,
+        "free_bytes": 76368986112,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684409",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684409]",
+        "total_bytes": 593874984960,
+        "free_bytes": 76368986112,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684979",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684979]",
+        "total_bytes": 593874984960,
+        "free_bytes": 76368986112,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 593874984960,
+        "free_bytes": 76368986112,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "xfs",
+        "free_bytes": 76368986112,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10nba07g5",
+    "epoch": 1791647129.5992937,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "xfs",
+        "source": "/dev/sda3",
+        "total_bytes": 473933496320,
+        "free_bytes": 169584136192,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3649101824,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1641929",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1641929]",
+        "total_bytes": 473933496320,
+        "free_bytes": 169584136192,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1681038",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1681038]",
+        "total_bytes": 473933496320,
+        "free_bytes": 169584136192,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 473933496320,
+        "free_bytes": 169584136192,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "xfs",
+        "free_bytes": 169584136192,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10nba07g6",
+    "epoch": 1791647129.6001775,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "xfs",
+        "source": "/dev/sda3",
+        "total_bytes": 473933496320,
+        "free_bytes": 47811858432,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3649101824,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1683956",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1683956]",
+        "total_bytes": 473933496320,
+        "free_bytes": 47811858432,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684393",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684393]",
+        "total_bytes": 473933496320,
+        "free_bytes": 47811858432,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684599",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684599]",
+        "total_bytes": 473933496320,
+        "free_bytes": 47811858432,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1685353",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1685353]",
+        "total_bytes": 473933496320,
+        "free_bytes": 47811858432,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 473933496320,
+        "free_bytes": 47811858432,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "xfs",
+        "free_bytes": 47811858432,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10nba07g7",
+    "epoch": 1791647129.5852754,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "xfs",
+        "source": "/dev/sda3",
+        "total_bytes": 473933496320,
+        "free_bytes": 176426561536,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3649101824,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1681477",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1681477]",
+        "total_bytes": 473933496320,
+        "free_bytes": 176426561536,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1683956",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1683956]",
+        "total_bytes": 473933496320,
+        "free_bytes": 176426561536,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684288",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684288]",
+        "total_bytes": 473933496320,
+        "free_bytes": 176426561536,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 473933496320,
+        "free_bytes": 176426561536,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "xfs",
+        "free_bytes": 176426561536,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  },
+  {
+    "node": "wqd10nba07g8",
+    "epoch": 1791647129.6738703,
+    "local_mounts": [
+      {
+        "target": "/",
+        "fstype": "xfs",
+        "source": "/dev/sda3",
+        "total_bytes": 593874984960,
+        "free_bytes": 187808768000,
+        "writable": false
+      },
+      {
+        "target": "/boot",
+        "fstype": "ext4",
+        "source": "/dev/sda2",
+        "total_bytes": 4143677440,
+        "free_bytes": 3775442944,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1683956",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1683956]",
+        "total_bytes": 593874984960,
+        "free_bytes": 187808768000,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684282",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684282]",
+        "total_bytes": 593874984960,
+        "free_bytes": 187808768000,
+        "writable": false
+      },
+      {
+        "target": "/jobcontainer/1684803",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1684803]",
+        "total_bytes": 593874984960,
+        "free_bytes": 187808768000,
+        "writable": false
+      },
+      {
+        "target": "/tmp",
+        "fstype": "xfs",
+        "source": "/dev/sda3[/jobcontainer/1686708/.1686708/_tmp]",
+        "total_bytes": 593874984960,
+        "free_bytes": 187808768000,
+        "writable": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "/tmp",
+        "fstype": "xfs",
+        "free_bytes": 187808768000,
+        "writable": true
+      },
+      {
+        "path": "/ssd",
+        "fstype": "fuse.juicefs",
+        "free_bytes": 97024058818560,
+        "writable": false
+      }
+    ],
+    "read_only": true
+  }
+]

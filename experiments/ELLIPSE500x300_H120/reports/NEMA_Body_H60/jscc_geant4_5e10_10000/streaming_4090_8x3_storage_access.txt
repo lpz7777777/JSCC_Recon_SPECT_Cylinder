@@ -1,0 +1,18 @@
+drwx------ 2 root root 4096 Dec 30  2025 /ssd/scxi717
+Filesystem                  Type          1B-blocks  Used  Available Use% Mounted on
+JuiceFS:juicefs-shared-nvme fuse.juicefs 1073741824     0 1073741824   0% /ssd
+NOT_WRITABLE
+drwxr-x--- 7 scxi717 scxi717 4096 Oct  5 16:30 /data/home/scxi717
+Filesystem                Type          1B-blocks     Used  Available Use% Mounted on
+JuiceFS:juicefs-hdd-n56r4 fuse.juicefs 1073741824 13946880 1059794944   2% /data
+WRITABLE
+drwx------ 8 scxi717 scxi717 4096 Feb  4  2026 /data/run01/scxi717
+Filesystem                Type            1B-blocks         Used   Available Use% Mounted on
+JuiceFS:juicefs-hdd-n56r4 fuse.juicefs 858993459200 792606846976 66386612224  93% /data
+WRITABLE
+/usr/bin/quota
+Disk quotas for user scxi717 (uid 1721): 
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+main.vast1.bz1.paratera.com:/hpc1/fs1/slurm-vast
+                     0K   1024M   1024M               1       0       0        
+1685272|PENDING|(Priority)

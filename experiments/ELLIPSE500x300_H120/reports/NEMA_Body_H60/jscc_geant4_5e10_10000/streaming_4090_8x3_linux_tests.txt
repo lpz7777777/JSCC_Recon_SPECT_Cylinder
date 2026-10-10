@@ -1,0 +1,15 @@
+test_24_rank_identity_and_aggregate_memory_are_measured (test_jscc_5e10_streaming.StreamingTests) ... ok
+test_encoded_corruption_and_truncated_records_rejected (test_jscc_5e10_streaming.StreamingTests) ... ok
+test_exact_zero_and_small_float32_values_survive_repeated_replay (test_jscc_5e10_streaming.StreamingTests) ... ok
+test_full_saved_trajectory_matches_resident_and_original_compton (test_jscc_5e10_streaming.StreamingTests) ... JSCC_COMPTON_ITERATION 50 100
+JSCC_COMPTON_ITERATION 100 100
+JSCC_COMPTON_ITERATION 50 100
+JSCC_COMPTON_ITERATION 100 100
+ok
+test_missing_or_extra_event_counts_and_file_sha_rejected (test_jscc_5e10_streaming.StreamingTests) ... ok
+test_partial_cache_never_overwritten_and_disk_reserve_guard (test_jscc_5e10_streaming.StreamingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.178s
+
+OK

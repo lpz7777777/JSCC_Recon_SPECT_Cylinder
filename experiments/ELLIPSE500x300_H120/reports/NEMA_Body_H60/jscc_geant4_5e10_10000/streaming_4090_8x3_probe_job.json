@@ -1,0 +1,23 @@
+{
+  "job": 1686694,
+  "stage": "streaming_4090_8x3_probe",
+  "mode": "probe",
+  "host": "gpu",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/streaming_releases/9b5938545ad3d6c7",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_1686694",
+  "allocation": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/allocations/streaming_4090_8x3_probe_1686694.txt",
+  "nodes": 8,
+  "gpus_per_node": 3,
+  "world_size": 24,
+  "partition": "gpu_4090",
+  "cpus_per_node": 18,
+  "explicit_mem_parameter": false,
+  "walltime_minutes": 30,
+  "phase_limit_seconds": 600,
+  "prepare_limit_seconds": 1200,
+  "total_limit_seconds": 1620,
+  "script_sha256": "3587a24033c11de228686c6cf5b3ef5145656c9401b1331e65f4a3b8b4c7fc2d",
+  "submitted_epoch": 1791646819.028082,
+  "cache_nodes": null,
+  "submit_scontrol": "JobId=1686694 JobName=JSCC5e10_stream_probe\n   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A\n   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*\n   JobState=PENDING Reason=Priority Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A\n   SubmitTime=2026-10-10T23:37:40 EligibleTime=2026-10-10T23:37:40\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-10T23:37:40 Scheduler=Main\n   Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:181931\n   ReqNodeList=(null) ExcNodeList=wqd10nba06g6\n   NodeList=\n   NumNodes=8-8 NumCPUs=144 NumTasks=8 CPUs/Task=18 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=144,mem=1440000M,node=8,billing=144,gres/gpu=24\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*\n   MinCPUsNode=18 MinMemoryCPU=10000M MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/streaming_releases/9b5938545ad3d6c7/launch_probe.sh\n   WorkDir=/tmp\n   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_probe.1686694.err\n   StdIn=/dev/null\n   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_probe.1686694.out\n   TresPerNode=gres/gpu:3\n   TresPerTask=cpu=18\n   \n\n"
+}

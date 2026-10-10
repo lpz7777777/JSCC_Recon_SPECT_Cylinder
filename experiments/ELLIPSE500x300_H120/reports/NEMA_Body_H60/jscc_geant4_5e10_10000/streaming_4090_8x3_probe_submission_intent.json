@@ -1,0 +1,9 @@
+{
+  "stage": "probe",
+  "script_sha256": "3587a24033c11de228686c6cf5b3ef5145656c9401b1331e65f4a3b8b4c7fc2d",
+  "command": "sbatch --parsable -p gpu_4090 --qos=gpugpu -N8 -n8 --ntasks-per-node=1 --cpus-per-task=18 --gres=gpu:3 --time=30 --exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10_stream_probe --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_probe.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_probe.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/streaming_releases/9b5938545ad3d6c7/launch_probe.sh",
+  "test_only": "",
+  "started_epoch": 1791646818.3507295,
+  "resolved": true,
+  "registered_job": 1686694
+}

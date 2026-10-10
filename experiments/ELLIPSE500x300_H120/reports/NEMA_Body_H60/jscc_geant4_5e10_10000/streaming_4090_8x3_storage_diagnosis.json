@@ -1,0 +1,115 @@
+{
+  "status": "STORAGE_HOLD",
+  "overall_probe_passed": false,
+  "probe_job": 1686694,
+  "probe_slurm_completed_exit_zero": true,
+  "resources_sample_passed": true,
+  "probe_resource_acceptance_sha256": "145015f85cdd734b82ef580f8373375d2a337d12513a432b46ae73f17a03ac7e",
+  "failed_node_storage_budgets": [
+    {
+      "node": "wqd10nba07g3",
+      "dense_bytes": 191344381120,
+      "available_bytes": 54013239296,
+      "observed_sample_storage_ratio": 0.9146714037949822,
+      "worst_case_capacity_passed": false,
+      "sample_budget_with_fourfold_margin": 717248803933.25,
+      "guarded_full_cache_attempt_permitted": false,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    },
+    {
+      "node": "wqd10nba07g4",
+      "dense_bytes": 191346590880,
+      "available_bytes": 76996878336,
+      "observed_sample_storage_ratio": 0.9112881319690826,
+      "worst_case_capacity_passed": false,
+      "sample_budget_with_fourfold_margin": 714667378630.75,
+      "guarded_full_cache_attempt_permitted": false,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    },
+    {
+      "node": "wqd10nba07g5",
+      "dense_bytes": 191343749760,
+      "available_bytes": 170180370432,
+      "observed_sample_storage_ratio": 0.9145868640712114,
+      "worst_case_capacity_passed": false,
+      "sample_budget_with_fourfold_margin": 717181789394.5,
+      "guarded_full_cache_attempt_permitted": false,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    },
+    {
+      "node": "wqd10nba07g6",
+      "dense_bytes": 191345012480,
+      "available_bytes": 48238473216,
+      "observed_sample_storage_ratio": 0.9114304834009123,
+      "worst_case_capacity_passed": false,
+      "sample_budget_with_fourfold_margin": 714770578068.0,
+      "guarded_full_cache_attempt_permitted": false,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    },
+    {
+      "node": "wqd10nba07g7",
+      "dense_bytes": 191344381120,
+      "available_bytes": 177003339776,
+      "observed_sample_storage_ratio": 0.9108522673276735,
+      "worst_case_capacity_passed": false,
+      "sample_budget_with_fourfold_margin": 714325722718.25,
+      "guarded_full_cache_attempt_permitted": false,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    },
+    {
+      "node": "wqd10nba07g8",
+      "dense_bytes": 191348169280,
+      "available_bytes": 188398129152,
+      "observed_sample_storage_ratio": 0.9127293659718703,
+      "worst_case_capacity_passed": false,
+      "sample_budget_with_fourfold_margin": 715776242091.25,
+      "guarded_full_cache_attempt_permitted": false,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    }
+  ],
+  "successful_node_storage_budgets": [
+    {
+      "node": "wqd10naf05g4",
+      "dense_bytes": 191342487040,
+      "available_bytes": 345956352000,
+      "observed_sample_storage_ratio": 0.9147381248416118,
+      "worst_case_capacity_passed": true,
+      "sample_budget_with_fourfold_margin": 717292940374.0,
+      "guarded_full_cache_attempt_permitted": true,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    },
+    {
+      "node": "wqd10naf05g5",
+      "dense_bytes": 191345012480,
+      "available_bytes": 1352567119872,
+      "observed_sample_storage_ratio": 0.9090319904650279,
+      "worst_case_capacity_passed": true,
+      "sample_budget_with_fourfold_margin": 712934819425.0,
+      "guarded_full_cache_attempt_permitted": true,
+      "sample_is_not_complete_cache_capacity_certificate": true
+    }
+  ],
+  "node_storage_failed_count": 6,
+  "job_private_tmp_confirmed": true,
+  "storage_inventory_job": 1686708,
+  "storage_inventory_acceptance_sha256": "e6fae0d0cd949913fcc572df72bdca3b778bec0842608c5ddb0257ba3d7b5654",
+  "source_inventory_bytes_sha256": {
+    "accounting.txt": "d39a133a4b5c2a32d8beaeb7dd6e573d26372bcc8d27e556e0358e9e0f456d27",
+    "inventory.json": "e1e8e7435d5649461a33755ca72613218ec437d42552fde88405fc48ca26b635",
+    "inventory.py": "2a62d2e717e67ed6d8a09feedb54f71ec74c6f1e83104e9c8929a456a7f8db67",
+    "inventory.sh": "4db99e59eb186fc61aa7f4e896cb22027d7a90548b058c2334505e56bcde2788",
+    "original.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original.out": "86e0c3d763a6d3b1fec89c864fdb96f9e8c499163869f5f10fca913cd6127c98"
+  },
+  "ssd_account_status_sha256": "ebcbcdc3f2965bf97ed0209039a4374c922f2264ebe48bae5ec5aa109d07830a",
+  "all_completed_scientific_outputs_preserved": true,
+  "original_5090_registry_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+  "original_5090_untouched": true,
+  "full_response_bytes": 1530759784160,
+  "minimum_persistent_ssd_available_bytes": 1930629599384,
+  "validation_formal_submitted": false,
+  "initial_frozen_tmp_formal_reuse_plan_invalid": true,
+  "bounded_persistent_storage_repair_required": true,
+  "no_new_physics_or_rescreening_authorized_by_this_diagnosis": true,
+  "minimum_persistent_ssd_quota_bytes": 2199023255552
+}

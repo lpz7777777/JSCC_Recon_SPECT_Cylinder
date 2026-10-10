@@ -1,0 +1,15 @@
+{
+  "job": 1686708,
+  "stage": "streaming_4090_8x3_storage_inventory",
+  "host": "gpu",
+  "read_only_cpu_inventory": true,
+  "reserved_gpus": 8,
+  "nodes": 8,
+  "cpus": 8,
+  "walltime_minutes": 10,
+  "source_sha256": {
+    "inventory.py": "2a62d2e717e67ed6d8a09feedb54f71ec74c6f1e83104e9c8929a456a7f8db67",
+    "inventory.sh": "4db99e59eb186fc61aa7f4e896cb22027d7a90548b058c2334505e56bcde2788"
+  },
+  "original_5090_untouched": true
+}

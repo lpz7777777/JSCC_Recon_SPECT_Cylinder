@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "scope": "24 actual GPUs and per-rank 32-event full-active-grid sample; NOT complete-input or storage acceptance",
+  "job": 1686694,
+  "actual_all_completed_exit_zero": true,
+  "world_size": 24,
+  "nodes": 8,
+  "gpus_per_node": 3,
+  "actual_allocated_bytes_node": 188743680000,
+  "node_conservative_sum_peak_rss_bytes": {
+    "wqd10naf05g4": 21262364672,
+    "wqd10naf05g5": 21371170816,
+    "wqd10nba07g3": 21344190464,
+    "wqd10nba07g4": 21335265280,
+    "wqd10nba07g5": 21370458112,
+    "wqd10nba07g6": 21342896128,
+    "wqd10nba07g7": 21382574080,
+    "wqd10nba07g8": 21261578240
+  },
+  "node_max_rss_fraction": 0.11328895399305555,
+  "gpu_max_used_fraction": 0.5200392427600741,
+  "gpu_max_reserved_fraction": 0.49474946404563785,
+  "slurm_maxrss_bytes": 8075603968,
+  "slurm_maxrss_is_step_task_max_not_node_aggregate": true,
+  "accounting_columns": [
+    "JobID",
+    "State",
+    "ExitCode",
+    "Elapsed",
+    "MaxRSS",
+    "AllocTRES",
+    "NodeList"
+  ],
+  "all_sample_roundtrips_byte_exact": true,
+  "full_input_validation_passed": false,
+  "storage_passed": false,
+  "probe_evidence_sha256": {
+    "accounting.txt": "7466fefe7f25afa2f3a24962bc10505f2c0fc1ec6d5847d9e8e0f2475ce576d7",
+    "allocation.txt": "ab566af5f42893ee38c5a350ea9547a308723baed42911b077f65dd7cc894ae6",
+    "original.err": "0371014e23a48cfdf6b20cbd9cc63f7e2a6de6a4660467aa060d35a42726dee5",
+    "original.out": "c0bca9ec3ecd685ed19db5c7c66f564e260ffa43a9a58fcd35ce37c745f21947",
+    "probe.json": "2bd1d09d35b9c7c31c279b577043db80cf501498abbf7fb61975cc92458a9327"
+  },
+  "frozen_release": "9b5938545ad3d6c7",
+  "contract_sha256": "3f22d06c31f6bc36956f2fab8b88a1f599542b6c3886f22a5188b17a6104e5c8"
+}

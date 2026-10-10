@@ -1,0 +1,30 @@
+JobId=1686694 JobName=JSCC5e10_stream_probe
+   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A
+   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2026-10-10T23:37:40 EligibleTime=2026-10-10T23:37:40
+   AccrueTime=2026-10-10T23:37:40
+   StartTime=2026-10-10T23:37:57 EndTime=2026-10-11T00:07:57 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-10T23:37:57 Scheduler=Backfill
+   Partition=gpu_4090 AllocNode:Sid=wqd10nbf05c05:181931
+   ReqNodeList=(null) ExcNodeList=wqd10nba06g6
+   NodeList=wqd10naf05g[4-5],wqd10nba07g[3-8]
+   BatchHost=wqd10naf05g4
+   NumNodes=8 NumCPUs=144 NumTasks=8 CPUs/Task=18 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=144,mem=1440000M,node=8,billing=144,gres/gpu=24
+   AllocTRES=cpu=144,mem=1440000M,node=8,billing=144,gres/gpu=24
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   MinCPUsNode=18 MinMemoryCPU=10000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/streaming_releases/9b5938545ad3d6c7/launch_probe.sh
+   WorkDir=/tmp
+   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_probe.1686694.err
+   StdIn=/dev/null
+   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/streaming_4090_8x3_probe.1686694.out
+   TresPerNode=gres/gpu:3
+   TresPerTask=cpu=18
+   
+

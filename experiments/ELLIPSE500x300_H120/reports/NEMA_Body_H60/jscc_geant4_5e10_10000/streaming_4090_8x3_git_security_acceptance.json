@@ -1,0 +1,228 @@
+{
+  "passed": true,
+  "scope": "Only explicit streaming implementation, actual probe/storage evidence and documents; no arrays, responses, archives, binaries or credentials",
+  "checked_files": 43,
+  "unique_blobs": 43,
+  "unique_blob_bytes": 312194,
+  "findings": [],
+  "files": {
+    ".gitattributes": {
+      "bytes": 5308,
+      "sha256": "4d84ea44a28e460069389c835f37d0e1856b14e7421ad8388f4eb3fd5a1796b3",
+      "git_blob": "c97963c6e0b0b946f0679de802965d11327fede4"
+    },
+    "experiments/ELLIPSE500x300_H120/AGENTS.md": {
+      "bytes": 11901,
+      "sha256": "d1cd857060339e55d97c159f5a14f95bdae7ddb5c3fc9f70aa0cd37be685bf67",
+      "git_blob": "65c88e4c02e88308c1874a559c4e66fdf3dc2d16"
+    },
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 9453,
+      "sha256": "939a5c02ecf9271dc9ffb823d699161366e9e9208f10fa222a581172fb22767a",
+      "git_blob": "28adf86384ef79f0754f973ffd7d19c5ae312042"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_4090_storage_status.py": {
+      "bytes": 3382,
+      "sha256": "ba8263822c603a623bae4681a40a186e6533a410c9d0e635c8726aaab2e19551",
+      "git_blob": "de51fafe4febc4a4106edff8d89d99f873b3c543"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_4090_streaming.py": {
+      "bytes": 25271,
+      "sha256": "8c513bb184f73ac1a66a6621826870f69a5aec74db2b83114ee9362f19b57f1c",
+      "git_blob": "608927d27a48a00bdc280ea77dcb506f0744ce5c"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_streaming_cache.py": {
+      "bytes": 7388,
+      "sha256": "861ac4d241c948c1c3f992dec673b8eba80892cacbb18ae08ac1d89a9e675580",
+      "git_blob": "734cef7bc39d2c93440263904034a6790f7a5330"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_streaming_contract.py": {
+      "bytes": 6524,
+      "sha256": "cbe5f718a9506c10e8b1233aa86dc646dad73e3e4ac50218e38b86c471de02f6",
+      "git_blob": "0eedaa32d51605a2be5ee86fd87e0704afb6f8c9"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_streaming_probe.py": {
+      "bytes": 5458,
+      "sha256": "435ee32a42c36d78825b0dde88a23ad1317155d6ac27739a740771f287936c90",
+      "git_blob": "8ce504d3fcdf30cedb883fc525e7a3f792d6c491"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_streaming_runtime.py": {
+      "bytes": 3417,
+      "sha256": "affc379a6ae51c63f84f72ff48a955a82af1682dc81dd0aa91202f9c3249d39f",
+      "git_blob": "161a2ad6e4b5faad097a6e9134e697678db0b8b6"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_streaming_verify_stage.py": {
+      "bytes": 3542,
+      "sha256": "a75ccfdf7b3e5675950eef9a9767822ee58cfc242710e91c32b271eba4c94b8b",
+      "git_blob": "49ca2ca7ccac531eb9c32e72537744b51a2dc468"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md": {
+      "bytes": 10840,
+      "sha256": "ef15deb8026fdf00219bb5f9d631161a6b0327f6a03a7b6b2de7683eadfd18f7",
+      "git_blob": "8bf02c528c4ac7a200bd5ee1b006868396b01ce2"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md": {
+      "bytes": 13902,
+      "sha256": "897d74a9077cf0149747db55340ed732ef371021d140dc7fc37e75c2cd9ec3b0",
+      "git_blob": "7864620ad90cb7046dde700ecaf4c9c38584f63b"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md": {
+      "bytes": 26519,
+      "sha256": "a957234ba83a179e8c26c381c9e15575ed9e30ffb203e8e5fd8067ba5780a860",
+      "git_blob": "adda1b5761803cafb3b50f65f432d2cff5e60442"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/STREAMING_STORAGE_HOLD.md": {
+      "bytes": 3676,
+      "sha256": "82514e620043617d83629ffd04e30e96ca920fb54596cebd47ad53650265477d",
+      "git_blob": "216f7cc42a24585e4dbd56d3c38e7ac160a2806e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_deployment.json": {
+      "bytes": 12147,
+      "sha256": "95fcd6b0f8ecf0ef7b7b42ebdc433ed9fee6d0db826aa833940b488cdca580b0",
+      "git_blob": "76c117a0ef5ff404437f5645cf601f568fbae4df"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_freeze.json": {
+      "bytes": 12689,
+      "sha256": "377e3316e2bcf667f539ed0f05503f4983874d42f8ab4bcca2b2a84b818e9ed7",
+      "git_blob": "1d3c9217cd3789f537349f8de4a0cac00f7064b8"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_identity_acceptance.json": {
+      "bytes": 6092,
+      "sha256": "8491b193ac157b63fd4fbb7e2182088c377b8ed7e57a2012d57eb836cadf5159",
+      "git_blob": "20e7506ea3d7bd73342ff08753376e12659b0849"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_linux_tests.txt": {
+      "bytes": 872,
+      "sha256": "cca2b70e5e219dc5ec01d3d0d73d1ce6e0776cc4f510a3bb45214c9585fd1457",
+      "git_blob": "063845497f20608159c50de44cd51f4f061403dd"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_local_tests.txt": {
+      "bytes": 1245,
+      "sha256": "7bf1e6e151af2dc044062ea6eaa545bc43fcc6311562fc81203dc1e6a05538dd",
+      "git_blob": "8714d38d86d40aa4b38858c36a814193bdb181bf"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_evidence/accounting.txt": {
+      "bytes": 457,
+      "sha256": "7466fefe7f25afa2f3a24962bc10505f2c0fc1ec6d5847d9e8e0f2475ce576d7",
+      "git_blob": "a89cb9af4ad37778dae5954c14a43f4b46ded788"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_evidence/allocation.txt": {
+      "bytes": 1853,
+      "sha256": "ab566af5f42893ee38c5a350ea9547a308723baed42911b077f65dd7cc894ae6",
+      "git_blob": "4efbf9a0fd8c8a71f467ec734270afa92d354869"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_evidence/original.err": {
+      "bytes": 20744,
+      "sha256": "0371014e23a48cfdf6b20cbd9cc63f7e2a6de6a4660467aa060d35a42726dee5",
+      "git_blob": "73307038eba176ba6bfd6ef1867a6be25add538e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_evidence/original.out": {
+      "bytes": 5620,
+      "sha256": "c0bca9ec3ecd685ed19db5c7c66f564e260ffa43a9a58fcd35ce37c745f21947",
+      "git_blob": "519fcce3c1db94116748705d4a5a01ab8b9f7078"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_evidence/probe.json": {
+      "bytes": 37945,
+      "sha256": "2bd1d09d35b9c7c31c279b577043db80cf501498abbf7fb61975cc92458a9327",
+      "git_blob": "d6371e7822a5377ac7bf212d6c0f9e11fc9f8672"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_job.json": {
+      "bytes": 2876,
+      "sha256": "70458ab4ac69acd632a068f6e4c91c91de9b51ee27bcbc1f06e0234af1b7e2c5",
+      "git_blob": "ede25b81c556e983b4af1f0f1310f2c35c2fd603"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_latest_status.json": {
+      "bytes": 551,
+      "sha256": "276c3e96dde95a6b83addf660c7c12daefb9983993cb82fa401c4085a8a4fb50",
+      "git_blob": "ccb02014402c53beb4151caf573286768c7f0f74"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_resource_acceptance.json": {
+      "bytes": 1706,
+      "sha256": "145015f85cdd734b82ef580f8373375d2a337d12513a432b46ae73f17a03ac7e",
+      "git_blob": "126e73836160dcacabd07c22a33a97e8fd5fa8d9"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_probe_submission_intent.json": {
+      "bytes": 990,
+      "sha256": "51f73ad70eb19bec54788d9d66e1e6e8fc411ed17a18ab39127d57310cc3d6f6",
+      "git_blob": "4aeb8d6d8656430ff19451be0a7a56cdc52bfa92"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_access.txt": {
+      "bytes": 1041,
+      "sha256": "3b718e43e24f0b6608231909c46d1e3ac5605c124ed17d0d2d1084d6a10bb882",
+      "git_blob": "38485fa7a302a6baa05495d8123cc7800747f3f9"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_diagnosis.json": {
+      "bytes": 4974,
+      "sha256": "7aa0c75ddf632fe365acf8c7ca272cf9dbe57850fd4a716684ebba14e4a50a3f",
+      "git_blob": "cf373f44ac2f7996c57ab436f91c39f03904239a"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_acceptance.json": {
+      "bytes": 1202,
+      "sha256": "e6fae0d0cd949913fcc572df72bdca3b778bec0842608c5ddb0257ba3d7b5654",
+      "git_blob": "c666dfe7187b9872a1660be2225a490396846549"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_evidence/accounting.txt": {
+      "bytes": 431,
+      "sha256": "d39a133a4b5c2a32d8beaeb7dd6e573d26372bcc8d27e556e0358e9e0f456d27",
+      "git_blob": "1f03e3ffba99e92394461b04acc288a944bbdeae"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_evidence/inventory.json": {
+      "bytes": 14489,
+      "sha256": "e1e8e7435d5649461a33755ca72613218ec437d42552fde88405fc48ca26b635",
+      "git_blob": "9dc0092242e4b417f1aa4e3a2a2baf0244a748f5"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_evidence/inventory.py": {
+      "bytes": 1062,
+      "sha256": "2a62d2e717e67ed6d8a09feedb54f71ec74c6f1e83104e9c8929a456a7f8db67",
+      "git_blob": "e9f1971d4375a186a3c0c64d808c95ff0407c1d1"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_evidence/inventory.sh": {
+      "bytes": 399,
+      "sha256": "4db99e59eb186fc61aa7f4e896cb22027d7a90548b058c2334505e56bcde2788",
+      "git_blob": "bf7b32f259757b27f09e82c47c2bd516bf00b0f3"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_evidence/original.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_evidence/original.out": {
+      "bytes": 10394,
+      "sha256": "86e0c3d763a6d3b1fec89c864fdb96f9e8c499163869f5f10fca913cd6127c98",
+      "git_blob": "624a86e48bcb5693e4001cbc7fdea5ea6b0e114a"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_job.json": {
+      "bytes": 435,
+      "sha256": "0c7149c66fd46f0148ace797a594e0f1399f52defadeae2c00478f5a7e0e57de",
+      "git_blob": "1ef63aa0fc7c042e1f249aa545e5419ab6c3325f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_inventory_submission_intent.json": {
+      "bytes": 1182,
+      "sha256": "ea89e9ae6f08b63d7ffac04e133689aa8dd9b97ca51b520f1e0f86633a73db5b",
+      "git_blob": "6e55f7299471283bf7b68d584e61ec2c20d168ff"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_latest_status.json": {
+      "bytes": 1307,
+      "sha256": "ebcbcdc3f2965bf97ed0209039a4374c922f2264ebe48bae5ec5aa109d07830a",
+      "git_blob": "52c267da45d1e01323844efc660008a633a27f23"
+    },
+    "experiments/ELLIPSE500x300_H120/run_jscc_5e10_streaming.py": {
+      "bytes": 17207,
+      "sha256": "d51301262d3bcbbecf70a2a32c68f69bc8d20d0e425c82bf871c8d068ecbbe0d",
+      "git_blob": "224abe759b122bb5d2c0d0a00aa3b7be4237ef76"
+    },
+    "experiments/ELLIPSE500x300_H120/test_jscc_5e10_streaming.py": {
+      "bytes": 4905,
+      "sha256": "47ecb313e0f9814aef06405c5e9f318aa0bb7f3be025838f3f9e65d47418bfd3",
+      "git_blob": "3140302ade791f820684106eecb69b615c44d9fd"
+    },
+    "experiments/ELLIPSE500x300_H120/verify_jscc_5e10_streaming.py": {
+      "bytes": 10798,
+      "sha256": "02e4f6c4b59d2e9863b8221d6597d233f1fe5338b0e793600a355a56b6ada48c",
+      "git_blob": "4f7c2cf4913e2cc1e9d52888a0b5125418b81de6"
+    }
+  },
+  "full_experiment_delivery_complete": false,
+  "storage_gate": "HOLD",
+  "original_5090_untouched": true
+}
