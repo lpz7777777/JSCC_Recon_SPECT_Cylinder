@@ -6,10 +6,10 @@
 
 完整输入10次验证及独立全行/20视角源前投影与算子/转置/S验收后，唯一正式200次。440先200，218再200，218固定加性背景必须来自本组自身最终440200图；保存的生成真实串窗分量仅为诊断，不作重建背景。全1初值、原MLEM、无正则化；两阶段40个atomic/fsync检查点、三路各20帧，第三路为同迭代两能gamma密度和。
 
-新冻结与独立验证发布、新结果目录与旧5e9/Geant4完全分开；完整矩阵、源、坐标、旋转、体积和代码SHA闭合。源数据适配仅改变study名称和严格剂量常量，求解/前投影表达式没有改变。见freeze.json/science_reuse_acceptance.json。当前生成/验证/正式及图像交付尚待实际成功证据，4项身份/故障拒绝测试通过不能替代实际执行。
+新冻结与独立验证发布、新结果目录与旧5e9/Geant4完全分开；完整矩阵、源、坐标、旋转、体积和代码SHA闭合。源数据适配仅改变study名称和严格剂量常量，求解/前投影表达式没有改变。见freeze.json/science_reuse_acceptance.json。实际生成+validation10、独立验证、formal200、独立正式验证均COMPLETED/0:0，130份正式文件严格取回；九图科学与直接视觉QA通过。见[完整结果和18类对比](RESULTS.md)。4项小型合同测试及实际完整执行均已通过。
 
 单GPU逐视角，无显式mem参数；实际GPU reserved/RSS/Slurm MaxRSS对AllocTRES保留20%余量，仅排除已确认故障wqd10nba06g6。账户50作业仅等待空位。出现失败/部分输出保留并停止，不自动覆盖或重复提交。
 
-完成后使用实际三维真值ROI、crop0/no smoothing/no fitted gain，固定实际源密度尺度，加入EHE0–200与JSCC0–10000的完整曲线和广泛对比。各自迭代范围保持；同列不代表同收敛。矩阵自生数据不独立校准物理响应，Geant4计数另列。单噪声实现不宣称机制份额或真实设备性能。
+本次图集使用实际三维真值ROI、crop0/no smoothing/no fitted gain，固定实际源密度尺度，加入EHE0–200与JSCC0–10000的完整曲线和广泛对比。各自迭代范围保持；同列不代表同收敛。矩阵自生数据不独立校准物理响应，Geant4计数另列。单噪声实现不宣称机制份额或真实设备性能。
 
-一次有界本地控制器继续本次授权工作；compton-v5定时任务仍暂停。先读generated/ehe_forward_poisson_5e10_200/controller.json，活跃时禁止第二个advance/fetch/submit。已完成阶段不得重复计算。
+一次有界本地控制器和后处理器均已实际正常退出，登记complete/exit0；compton-v5定时任务仍暂停。先读generated/ehe_forward_poisson_5e10_200/controller.json，活跃时禁止第二个advance/fetch/submit。已完成阶段不得重复计算。

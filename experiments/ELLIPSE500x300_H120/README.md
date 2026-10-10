@@ -62,3 +62,7 @@ python -X utf8 tools/baseline/verify_dual_energy_baseline.py
 ## 2026-10-10 EHE actual5e10 completion
 
 Independent full4π actual5e10/1000worker transport and original sequential MLEM200 are complete, independently accepted and strictly fetched. Scientific and direct visual QA passed for the15-route comparison; EHE0–200/JSCC0–10000 retain separate axes. Read [results](reports/NEMA_Body_H60/ehe_spect_5e10_200/RESULTS.md). Existing physical discrepancy and human continuation policy remain explicit; no physical calibration claim. compton-v5 remains paused; no active controller or repeat stage is needed.
+
+## 2026-10-10 EHE新期望5e10矩阵-Poisson200完成
+
+完整系统矩阵前投影+三独立Poisson新种子、完整输入10次、原MLEM200和独立全行/20view验收严格取回已经完成，九图科学数字/直接视觉QA通过。新218/440窗210,419/119,538，本次固定218背景来自自身最终440200。18类总图与完整曲线保留EHE0–200/JSCC0–10000各自迭代范围；查看[完整结果](reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/RESULTS.md)。5e10是期望发射gamma剂量，未重跑Geant4或响应；既有所有组保持只读。两次一次性有界控制器均正常退出，compton-v5继续暂停。

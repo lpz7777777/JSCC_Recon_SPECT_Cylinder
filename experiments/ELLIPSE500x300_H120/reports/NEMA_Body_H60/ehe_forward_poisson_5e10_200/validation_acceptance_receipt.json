@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "authority_sha256": "0727777a6c5ce8ae0a27f261ba11efc52bc089cd4aa280f0494f193f5bd27fa1",
+  "elapsed_seconds": 215.60928672738373,
+  "allocation": {
+    "job": "1683326",
+    "scontrol": "JobId=1683326 JobName=ehe_fp_validation_acceptance\n   UserId=scxi717(1721) GroupId=scxi717(1721) MCS_label=N/A\n   Priority=1 Nice=0 Account=scxi717 QOS=gpugpu WCKey=*\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:03 TimeLimit=00:50:00 TimeMin=N/A\n   SubmitTime=2026-10-10T12:21:38 EligibleTime=2026-10-10T12:21:38\n   AccrueTime=2026-10-10T12:21:38\n   StartTime=2026-10-10T12:21:39 EndTime=2026-10-10T13:11:39 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-10T12:21:39 Scheduler=Main\n   Partition=gpu_5090 AllocNode:Sid=wqd10nbf05c05:2874374\n   ReqNodeList=(null) ExcNodeList=wqd10nba06g6\n   NodeList=wqd10nah04g5\n   BatchHost=wqd10nah04g5\n   NumNodes=1 NumCPUs=6 NumTasks=1 CPUs/Task=6 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=6,mem=94500M,node=1,billing=6,gres/gpu=1\n   AllocTRES=cpu=6,mem=94500M,node=1,billing=6,gres/gpu=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=6 MinMemoryCPU=15750M MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200/scripts/validation_acceptance.sh\n   WorkDir=/data/home/scxi717\n   StdErr=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200/logs/validation_acceptance_1683326.log\n   StdIn=/dev/null\n   StdOut=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200/logs/validation_acceptance_1683326.log\n   TresPerNode=gres/gpu:1\n   TresPerTask=cpu=6\n   \n\n",
+    "host_allocated_bytes": 99090432000,
+    "denominator_kind": "actual Slurm AllocTRES",
+    "imaging_allocation_certificate": true
+  },
+  "rss_peak_bytes": 3090735104,
+  "host_fraction": 0.031191054894179893,
+  "gpu_calculation": false,
+  "imaging_resource_certificate": false
+}

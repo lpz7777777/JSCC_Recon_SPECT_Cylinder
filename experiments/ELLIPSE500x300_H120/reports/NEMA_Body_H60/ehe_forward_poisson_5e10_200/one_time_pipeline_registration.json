@@ -13,6 +13,41 @@
   "stderr": "watch_stderr.log",
   "recurring_automation": false,
   "compton_v5": "PAUSED",
-  "postprocessing": "In current chat after strict formal authority; final scientific/visual QA still pending",
-  "launch_evidence_epoch": 1791606001.8921337
+  "postprocessing": "Registered bounded read-only helper waits for strict formal authority; no advance/fetch/submit",
+  "launch_evidence_epoch": 1791606001.8921337,
+  "postprocessor": {
+    "pid": 50456,
+    "status": "running",
+    "started_epoch": 1791606177.060918,
+    "source_sha256": "eb138308e16f3e1de64b8d490ca322103f7f75de567641a906ec98daca1dc2ec",
+    "bounded_hours": 8.0,
+    "advance_fetch_submit": false,
+    "recurring_automation": false
+  },
+  "postprocess_exec_session": 65832,
+  "postprocess_stdout": "postprocess_stdout.log",
+  "postprocess_stderr": "postprocess_stderr.log",
+  "actual_controller": {
+    "pid": 52960,
+    "status": "complete",
+    "started_epoch": 1791605736.5547504,
+    "workflow_sha256": "cea17e453ded2f72a3dbacfaabbc4f3173cc38b1511d4130b13e5a399ad4887c",
+    "bounded_hours": 8.0,
+    "recurring_automation": false,
+    "exit_code": 0,
+    "finished_epoch": 1791606815.3944588
+  },
+  "actual_postprocessor": {
+    "pid": 50456,
+    "status": "complete",
+    "started_epoch": 1791606177.060918,
+    "source_sha256": "eb138308e16f3e1de64b8d490ca322103f7f75de567641a906ec98daca1dc2ec",
+    "bounded_hours": 8.0,
+    "advance_fetch_submit": false,
+    "recurring_automation": false,
+    "exit_code": 0,
+    "finished_epoch": 1791606871.107502
+  },
+  "status": "complete",
+  "final_report": "RESULTS.md"
 }

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "expected_emitted_photons": 50000000000,
+  "transport_performed": false,
+  "data_kind": "matrix_forward_plus_independent_Poisson",
+  "formal_job": 1683357,
+  "formal_verification_job": 1683369,
+  "frames_per_channel": 20,
+  "atomic_checkpoints": 40,
+  "counts_sha256": "ddc4f9925a9445a9c27f116c8ba4f4a2881d760d14db4dc5a7fa05e84255cdd0",
+  "formal_authority_sha256": "dcec91f9825229f368c9035ce2549334e56e08c45a130026875798cf944838c3",
+  "artifact_manifest_sha256": "d6ca9b27e520caed9cd830110865457446259cb17f319261a1cb006b4a943f90",
+  "scientific_qa_sha256": "c3537d26c7abb3728d8a7b13b72795c7d33e1dbb6e65f69285eb69b08bd4539a",
+  "visual_qa": "Pending direct inspection of all nine actual exported scientific figures",
+  "final_delivery": false,
+  "physical_calibration_claim": false,
+  "postprocessing_source_sha256": "eb138308e16f3e1de64b8d490ca322103f7f75de567641a906ec98daca1dc2ec"
+}

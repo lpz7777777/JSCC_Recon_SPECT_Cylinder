@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "method": "Direct viewing of all nine original exported PNGs and the one caption-reviewed total atlas through view_image",
+  "figures": {
+    "cnr_full_trajectories.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\cnr_full_trajectories.png",
+      "sha256": "c43586d88071f4560259a5e9ef11f48337b12f7d04292942b3153446e6d165a7"
+    },
+    "crc_full_trajectories.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\crc_full_trajectories.png",
+      "sha256": "82bd9c07036593e74aa34192227efc5f32848966185e2090a8a53a2b872066e3"
+    },
+    "density_noise_curves.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\density_noise_curves.png",
+      "sha256": "8580343f53f254f0f652bc9e2d170f3d2541c471bfa605631e4f5f9cca0d320b"
+    },
+    "integral_position_curves.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\integral_position_curves.png",
+      "sha256": "4fb16362009b7f470d80441868328e129959f1cb07e011ec7bbad474d612020c"
+    },
+    "overall_mip72_18_routes.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison_reviewed\\overall_mip72_18_routes.png",
+      "sha256": "cb23f8a390ec395cf171dcb94c451246116a1b5304bd51c5dcbe58601783f105"
+    },
+    "synthetic_axial.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_axial.png",
+      "sha256": "221e92999cef3bdc2edfc2d1b5c1f410b32f5d221bbac1a8e8800d7a0783fb46"
+    },
+    "synthetic_coronal.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_coronal.png",
+      "sha256": "94a4aedacd25930238d0b5fb0ae7ca72d5cd7e0e650838887c21bae04aed6393"
+    },
+    "synthetic_mip72.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_mip72.png",
+      "sha256": "c98f859a4a91baeb9d4d43e36676d7b88ef1e0e0c855d8005a731e70fcd8dc28"
+    },
+    "synthetic_sagittal.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_sagittal.png",
+      "sha256": "ee9686c0689cce187bf41334b5ca25d934950efdc9893e09cf2b619e62f2e60a"
+    }
+  },
+  "original_exported_figures_sha256": {
+    "cnr_full_trajectories.png": "c43586d88071f4560259a5e9ef11f48337b12f7d04292942b3153446e6d165a7",
+    "crc_full_trajectories.png": "82bd9c07036593e74aa34192227efc5f32848966185e2090a8a53a2b872066e3",
+    "density_noise_curves.png": "8580343f53f254f0f652bc9e2d170f3d2541c471bfa605631e4f5f9cca0d320b",
+    "integral_position_curves.png": "4fb16362009b7f470d80441868328e129959f1cb07e011ec7bbad474d612020c",
+    "overall_mip72_18_routes.png": "1eb0c9cf935728269704ebf57a5eb2eb787b26b52b0b33fe73609854c6531335",
+    "synthetic_axial.png": "221e92999cef3bdc2edfc2d1b5c1f410b32f5d221bbac1a8e8800d7a0783fb46",
+    "synthetic_coronal.png": "94a4aedacd25930238d0b5fb0ae7ca72d5cd7e0e650838887c21bae04aed6393",
+    "synthetic_mip72.png": "c98f859a4a91baeb9d4d43e36676d7b88ef1e0e0c855d8005a731e70fcd8dc28",
+    "synthetic_sagittal.png": "ee9686c0689cce187bf41334b5ca25d934950efdc9893e09cf2b619e62f2e60a"
+  },
+  "caption_only_layout_sha256": "9ac887758d57859d2fa8495be059631ceef3f831003c90dc97833ecce40869ac",
+  "checked": [
+    "Truth/image row identity and orientation",
+    "Complete iteration labels and independent0-200/0-10000 axes",
+    "No clipped row names, titles, legends or color bars",
+    "Fixed emitted-source density0-10 gray_r, crop0, no smoothing or fitted gain",
+    "72mm MIP versus120mm native metrics distinguished",
+    "Raw late-iteration noise/small-sphere weakness visible without cosmetic changes"
+  ],
+  "scientific_quality_limits": [
+    "10mm218 sphere remains weak",
+    "CRC rises while many CNR curves fall after earlier peaks",
+    "Caption correction qualifies only the new synthetic group; prior Geant4/JSCC data unchanged"
+  ],
+  "numerical_acceptance_sha256": "c3537d26c7abb3728d8a7b13b72795c7d33e1dbb6e65f69285eb69b08bd4539a"
+}

@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "complete": true,
+  "study": "ehe_forward_poisson_5e10_200",
+  "expected_emitted_photons": 50000000000,
+  "data_kind": "matrix_forward_plus_independent_Poisson",
+  "transport_performed": false,
+  "physical_calibration_claim": false,
+  "iterations": 200,
+  "frames_per_channel": 20,
+  "atomic_checkpoints": 40,
+  "strict_formal_files": 130,
+  "window_counts": {
+    "218": 210419,
+    "440": 119538
+  },
+  "noise_seeds": {
+    "A218": 34100101,
+    "A440": 34100102,
+    "C440to218": 34100103
+  },
+  "fixed_cross_background_total": 74944.0705459863,
+  "counts_sha256": "ddc4f9925a9445a9c27f116c8ba4f4a2881d760d14db4dc5a7fa05e84255cdd0",
+  "formal_job": 1683357,
+  "independent_formal_acceptance_job": 1683369,
+  "proof_sha256": {
+    "freeze.json": "5f96319b5197063cbd4ea6caa848865f23ec55426b4f3a4e0ca5f2c063eb5cee",
+    "science_reuse_acceptance.json": "499b76b57abb606c8e3fdcae606d8b2be44cc764821893e6f6c5b143269e3add",
+    "generation_summary.json": "ddc4f9925a9445a9c27f116c8ba4f4a2881d760d14db4dc5a7fa05e84255cdd0",
+    "validation_summary.json": "0727777a6c5ce8ae0a27f261ba11efc52bc089cd4aa280f0494f193f5bd27fa1",
+    "validation_acceptance_receipt.json": "8d4a27bc40fa18d0b7dea00066d131390b1bfc8adcdefb5c32689b68c7c32eac",
+    "validation_acceptance_sacct.json": "94f1bf6cf858c82a817a8ed92ba00bab4b74ef1dab3b88a15208c6e721e869ba",
+    "formal_summary.json": "dcec91f9825229f368c9035ce2549334e56e08c45a130026875798cf944838c3",
+    "formal_acceptance_receipt.json": "dc33babb44c838818449912ef48e1ec0d4c4343e78ad405a48c854ef5e35cc77",
+    "formal_acceptance_sacct.json": "4a3c4f943060cb1fa9ed22efca63294faab73adfa3b1cbb7b0ce45aba4448323",
+    "scientific_figure_acceptance.json": "c3537d26c7abb3728d8a7b13b72795c7d33e1dbb6e65f69285eb69b08bd4539a",
+    "visual_figure_acceptance.json": "79acc8a67e54a1a74d79e7074e62bdb6d58d88750596cd0e7a73dd1e85d14b85",
+    "comparison_context_reuse.json": "61561bcacfc241dc4f4c437c4d87777ebadffee64be8d53795e9aabc7a4a350f",
+    "one_time_pipeline_registration.json": "6fc15f6dc9b8c5c7a6015ef2bbe4c52df3241530a42e8247e93f8a2f9d19b7e5",
+    "RESULTS.md": "caae11bbb20a9f18f3ced9b62ac83db1241d045aedccc5f9e6ace3695115a7d0",
+    "README.md": "332364fe2037e14e2d11fc3a447718a915d7182e3b367c2dd7f7383130404f0a",
+    "RUNBOOK.md": "ba565fc071e7159bc9d918cfe753956af4e8736b03dc5bcd3d367f0cee0194cf"
+  },
+  "artifact_manifest_sha256": "d6ca9b27e520caed9cd830110865457446259cb17f319261a1cb006b4a943f90",
+  "reviewed_layout_sha256": "9ac887758d57859d2fa8495be059631ceef3f831003c90dc97833ecce40869ac",
+  "figures": {
+    "cnr_full_trajectories.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\cnr_full_trajectories.png",
+      "sha256": "c43586d88071f4560259a5e9ef11f48337b12f7d04292942b3153446e6d165a7"
+    },
+    "crc_full_trajectories.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\crc_full_trajectories.png",
+      "sha256": "82bd9c07036593e74aa34192227efc5f32848966185e2090a8a53a2b872066e3"
+    },
+    "density_noise_curves.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\density_noise_curves.png",
+      "sha256": "8580343f53f254f0f652bc9e2d170f3d2541c471bfa605631e4f5f9cca0d320b"
+    },
+    "integral_position_curves.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\integral_position_curves.png",
+      "sha256": "4fb16362009b7f470d80441868328e129959f1cb07e011ec7bbad474d612020c"
+    },
+    "overall_mip72_18_routes.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison_reviewed\\overall_mip72_18_routes.png",
+      "sha256": "cb23f8a390ec395cf171dcb94c451246116a1b5304bd51c5dcbe58601783f105"
+    },
+    "synthetic_axial.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_axial.png",
+      "sha256": "221e92999cef3bdc2edfc2d1b5c1f410b32f5d221bbac1a8e8800d7a0783fb46"
+    },
+    "synthetic_coronal.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_coronal.png",
+      "sha256": "94a4aedacd25930238d0b5fb0ae7ca72d5cd7e0e650838887c21bae04aed6393"
+    },
+    "synthetic_mip72.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_mip72.png",
+      "sha256": "c98f859a4a91baeb9d4d43e36676d7b88ef1e0e0c855d8005a731e70fcd8dc28"
+    },
+    "synthetic_sagittal.png": {
+      "path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_forward_poisson_5e10_200\\comparison\\synthetic_sagittal.png",
+      "sha256": "ee9686c0689cce187bf41334b5ca25d934950efdc9893e09cf2b619e62f2e60a"
+    }
+  },
+  "controller_exit": {
+    "workflow": {
+      "pid": 52960,
+      "status": "complete",
+      "started_epoch": 1791605736.5547504,
+      "workflow_sha256": "cea17e453ded2f72a3dbacfaabbc4f3173cc38b1511d4130b13e5a399ad4887c",
+      "bounded_hours": 8.0,
+      "recurring_automation": false,
+      "exit_code": 0,
+      "finished_epoch": 1791606815.3944588
+    },
+    "postprocess": {
+      "pid": 50456,
+      "status": "complete",
+      "started_epoch": 1791606177.060918,
+      "source_sha256": "eb138308e16f3e1de64b8d490ca322103f7f75de567641a906ec98daca1dc2ec",
+      "bounded_hours": 8.0,
+      "advance_fetch_submit": false,
+      "recurring_automation": false,
+      "exit_code": 0,
+      "finished_epoch": 1791606871.107502
+    }
+  },
+  "automation": "compton-v5 remains PAUSED",
+  "git_scope": "Reviewed code, small proof/report/CSV/PNG blobs only; final_git_safety.json records precommit audit separately"
+}
