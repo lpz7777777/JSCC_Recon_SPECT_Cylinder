@@ -1,0 +1,13 @@
+{
+  "stage": "selection_5090_8x2_monitor_repair_verification",
+  "source_job": 1686507,
+  "script_sha256": "db779613963d167058a4a5633bbd0b17fa27b35e586b8c8e2d8aaf2b0e7f041e",
+  "preserved_records": {
+    "selection_job.json": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+    "selection_4090_trial_job.json": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1"
+  },
+  "scheduler_test_only": "sbatch: Job 1686545 to start at 2032-03-16T05:53:10 using 8 processors on nodes wqd10nbj02g1 in partition gpu_5090\n",
+  "started_epoch": 1791642048.8351595,
+  "resolved": true,
+  "registered_job": 1686546
+}

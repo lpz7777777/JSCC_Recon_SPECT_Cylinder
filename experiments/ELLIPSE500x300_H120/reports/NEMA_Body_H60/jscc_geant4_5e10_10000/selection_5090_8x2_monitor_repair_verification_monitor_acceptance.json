@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "automation_id": "jscc-5e10",
+  "status": "ACTIVE",
+  "interval_minutes": 15,
+  "prompt_sha256": "17aa2ece2e691e09f15a80d99c553db561f0b4ccd6f904c580e4ea80d999d897",
+  "target_thread_id": "01a0d253-7edd-7f50-9efb-fc5225acbe46",
+  "source_job": 1686507,
+  "verification_job": 1686546,
+  "strict_selection_delivered": true,
+  "strict_acceptance_sha256": "a397134612b2d63c27b178f9cb99c614e5a08ce8b8ac4a21340f24c8f0ccff71",
+  "guard_registration_names": [
+    "advance",
+    "selection_4090_trial",
+    "selection_5090_8x2_trial",
+    "selection_5090_8x2_monitor_repair",
+    "selection_5090_8x2_monitor_repair_verification"
+  ],
+  "normal_waiting_quiet": true,
+  "whole_study_not_delivered": true,
+  "production_topology_changed": false
+}

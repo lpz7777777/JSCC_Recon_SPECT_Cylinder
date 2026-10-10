@@ -1,0 +1,29 @@
+{
+  "study": "jscc_geant4_5e10_10000",
+  "source_job": 1686507,
+  "selection_manifest_sha256": "d7a464df7abf738369eaabf2d724fa4e7eee5e9a559a7961985f8ea95f7244ee",
+  "completion_acceptance_sha256": "befb415a129316c5552547dc58a397f3014c80b2117e5e9b255c3040b64538f1",
+  "selected_events": 4849087,
+  "active_cells": 78920,
+  "response_dtype": "float32",
+  "full_event_response_bytes": 1530759784160,
+  "nodes": 8,
+  "event_response_bytes_per_node": 191344973020.0,
+  "original_conservative_overhead_bytes_per_rank": 17179869184,
+  "trial_8x2": {
+    "expected_allocated_bytes_node": 264241152000,
+    "retained_20percent_budget_bytes": 211392921600.0,
+    "conservative_total_bytes_node": 225704711388.0,
+    "conservative_budget_passed": false
+  },
+  "production_8x4": {
+    "expected_allocated_bytes_node": 528482304000,
+    "retained_20percent_budget_bytes": 422785843200.0,
+    "conservative_total_bytes_node": 260064449756.0,
+    "conservative_budget_passed": true
+  },
+  "selection_resources_are_not_full_response_memory_certificate": true,
+  "scope": "Preliminary actual-selection-count-based budget following original production formula. Uniform division and conservative legacy overhead; no full response preparation measured. Independent all-row acceptance pending. 32-card allocation here is expected policy, not an actual running reconstruction allocation.",
+  "formal_topology_changed": false,
+  "validation_or_formal_submitted": false
+}

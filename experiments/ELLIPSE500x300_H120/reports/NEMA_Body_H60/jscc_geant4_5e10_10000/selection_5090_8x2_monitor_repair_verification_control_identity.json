@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "job": 1686546,
+  "source_job": 1686507,
+  "executed_control_sha256": {
+    "jscc_5e10_8x2_selection_verification.py": "6a8bb7c024d7d7be0a69ba5360f2f31cacfe2f1b257d513435e69025bb4d36bb",
+    "jscc_5e10_selection_parts.py": "fe0077152508d9f460095f26d374b6aa6f1cd85f234f50cbe30f360661b7a3e6",
+    "jscc_5e10_verify_stage.py": "758b1a77fd20c1221fd32f756277d3261eb5f6c0cfa1b2ac268d725a50d3a2d9",
+    "test_jscc_5e10_selection_parts.py": "c46c1fee866888b38a92957b2efbbc707891a76109533942613b7fcfe113fdd7"
+  },
+  "verification_freeze_sha256": "5378e02f0dc5901befaf24c65f36f1b8399f50a89934e961b5b7ddc279050db3",
+  "root_controller_unchanged_sha256": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca",
+  "selection_compute_release_unmodified": true,
+  "scope": "Frozen execution/control bytes and Linux checks; complete-row acceptance pending."
+}

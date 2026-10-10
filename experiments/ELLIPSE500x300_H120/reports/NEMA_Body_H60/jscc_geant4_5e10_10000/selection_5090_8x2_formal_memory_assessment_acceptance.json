@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scope": "Selection event count now independently accepted; preliminary conservative budget unchanged. No complete response/cache memory measured.",
+  "selection_acceptance_sha256": "a397134612b2d63c27b178f9cb99c614e5a08ce8b8ac4a21340f24c8f0ccff71",
+  "preliminary_budget_sha256": "2083ce1a14f1bb806f582f87fc71db6ebfd421cd142718e3a3c2d1dea0bf93e7",
+  "actual_event_count": 4849087,
+  "actual_response_bytes_if_dense": 1530759784160,
+  "trial_8x2_conservative_budget_passed": false,
+  "production_8x4_conservative_budget_passed": true,
+  "not_a_full_response_memory_certificate": true,
+  "formal_topology_changed": false,
+  "production_registry_replaced": false
+}

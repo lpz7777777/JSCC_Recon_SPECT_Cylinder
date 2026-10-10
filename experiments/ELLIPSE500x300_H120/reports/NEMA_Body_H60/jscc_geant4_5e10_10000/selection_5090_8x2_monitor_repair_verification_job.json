@@ -1,0 +1,22 @@
+{
+  "job": 1686546,
+  "stage": "selection_5090_8x2_monitor_repair_verification",
+  "host": "gpu",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/verification_releases/4b595d58a50e48e2",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/acceptance_selection_5090_8x2_monitor_repair_1686507",
+  "source_job": 1686507,
+  "source_accounting": "1686507|COMPLETED|0:0||00:08:48|billing=128,cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n1686507.batch|COMPLETED|0:0|6296K|00:08:48|cpu=16,gres/gpu=2,mem=252000M,node=1|wqd10nah09g4\n1686507.extern|COMPLETED|0:0|0|00:08:48|billing=128,cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n1686507.0|COMPLETED|0:0|487100K|00:00:06|cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n1686507.1|COMPLETED|0:0|21382968K|00:08:40|cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n",
+  "script_sha256": "db779613963d167058a4a5633bbd0b17fa27b35e586b8c8e2d8aaf2b0e7f041e",
+  "verification_freeze_sha256": "5378e02f0dc5901befaf24c65f36f1b8399f50a89934e961b5b7ddc279050db3",
+  "read_only_verification": true,
+  "nodes": 1,
+  "reserved_gpus": 1,
+  "cpus_per_node": 8,
+  "explicit_mem_parameter": false,
+  "source_world_size": 16,
+  "mode": "selection",
+  "preserved_records": {
+    "selection_job.json": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+    "selection_4090_trial_job.json": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1"
+  }
+}

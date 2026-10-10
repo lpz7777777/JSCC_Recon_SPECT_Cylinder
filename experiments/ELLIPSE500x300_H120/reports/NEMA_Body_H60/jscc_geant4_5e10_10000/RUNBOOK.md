@@ -106,3 +106,26 @@ python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_workflow.py advance
 - 新唯一恢复1686507，冻结75e6ca22ffb21fa4、64份声明成员及原56份非改动成员SHA闭合；完整selection.py和16rank资源contract.py与旧试跑字节相同。7项本地/实际Linux检查通过。新恢复目录独立，原1686450没有完成的筛选阶段可复用；没有重做Geant4/响应。
 - 推进时四个PID登记都要检查：advance_registration、selection_4090_trial_registration、selection_5090_8x2_trial_registration、selection_5090_8x2_monitor_repair_registration。status助手自动优先读取最新monitor_repair_job，不再repair/submit。旧FAILED4090仅保存证据，不能让其status异常阻止新的试跑监测；原主作业继续不动。
 - 新试跑完整退出后，匹配16rank的独立只读验证发布核对全部20view/原始行/选中缓存/SHA及实际分配、逐设备/逐节点RSS和退出后Slurm MaxRSS。先保留原结果再验收，不用原32rank验证器直接声称通过。依据实际事件数和完整响应实测保留20%余量，再决定正式拓扑；目前未提交validation10或formal10000。
+
+
+## 2026-10-10 22:23上海：8×2完整筛选退出，独立验收已提交
+
+唯一有界UUID恢复1686507已完整COMPLETED/0:0，root/batch/extern和0/1步骤均成功，Slurm共8分48秒；实际8节点/16GPU、每节点16CPU和自动252000MiB。原List54631328行，原条件接受4860953，稳定float64全圆q≤3移除11866，选中4849087事件；不使用源真值筛选。完整20view/16rank收据及数组均保留原输出。
+
+selection_5090_8x2_monitor_repair_completion_1686507保存原完整out/err、allocation、selection_manifest、sacct及严格SHA。匹配冻结16rank verify_topology检查通过，实际GPU used最大22.7224%、reserved20.1500%、逐节点保守汇总RSS5.24975%、退出Slurm MaxRSS8.28643%；这是完整筛选资源观察，不是全响应CPU缓存或重建资源证书。completion_acceptance的all_row_acceptance仍为false。
+
+独立只读验收1686546、verification freeze4b595d58a50e48e2使用原16rank资源合同，源64声明成员中63份逐字复用，独立verify_stage仅增加执行收据/数组闭合和源作业身份绑定；原source发布没有被改写。8项本地及真实Linux测试覆盖完整闭合、缺失收据、重签SHA后的分区间隙/计数矛盾、缓存差异、数组SHA变化、raw总数不符、执行q自检失败。验收作业1节点8CPU、保留1GPU获得自动126000MiB主存，但实际核验为CPU只读；不把这一作业配额当成16GPU重建资源证书。读取全部20view原始CSV、逐值比较所有选中缓存，归档320收据及640数组和原最终40数组、manifest及分配身份。真实成功退出后严格SHA取回完整1003成员，不能以Slurm退出替代验收。
+
+```powershell
+python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_8x2_selection_verification.py status
+python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_8x2_selection_verification.py fetch
+```
+
+推进前现在检查5份PID登记：advance、selection_4090_trial、selection_5090_8x2_trial、selection_5090_8x2_monitor_repair、selection_5090_8x2_monitor_repair_verification（均加_registration.json）。任一实际存活时不并行submit/advance/fetch；不要再submit本试跑或已登记验收。原1685272仍PENDING，原4090已FAILED，原job JSON SHA与用户保留要求一致，未取消或修改请求；旧失败输出/源发布继续保留。
+
+初步完整响应预算：4849087×78920×4=1530759784160字节，平均178.2039 GiB/节点。按原生产预算每rank16 GiB保守开销，8×2需210.2039 GiB，超过246.09375 GiB实际自动分配的80%预算196.875 GiB。8×4预期政策配额的80%为393.75 GiB，对应保守242.2039 GiB；这些是预算、均分近似和政策预计值，不是完整响应内存实测。筛选RSS不能替代完整缓存开销，不自动放行16GPU正式重建、不改主selection_job。新试跑严格验收只记录独立结果；原validation10/strict authority/formal10000门槛不变，目前均未提交。
+
+
+2026-10-10 22:28补充：1686546已实际COMPLETED/0:0、Slurm2分24秒，诊断125.04301974秒。320执行收据及640分区数组、20view最终索引/选中缓存与54631328行原List闭合，所有4849087选中缓存逐值一致。完整1003成员及141201888字节归档、原源/验收日志、实际allocation均严格远端前后/本地SHA取回。selection_5090_8x2_monitor_repair_acceptance.json是真实完整验收，不以先前completion_acceptance代替；后者all_row_acceptance=false保持为原历史初步证据。实际16个唯一GPU UUID及PyTorch原UUID/规范GPU-字符串闭合，resource_acceptance单独保存。
+
+内存评估的原初步JSON保持历史字节，新增formal_memory_assessment_acceptance将实际完整验收事件数与相同预算绑定；没有生成完整Compton响应或提交重建。新helper fetch已complete/exit0、无本地推进器存活。不要重复计算/验收/取回此阶段，不修改或取消原主1685272/原4090登记，不自动让16卡试跑替代主生产selection。后续仍需正式拓扑的完整响应内存验证、完整输入validation10/strict authority及唯一formal10000，整个实验尚未交付，jscc-5e10继续ACTIVE。

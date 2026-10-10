@@ -1,0 +1,15 @@
+READ_ONLY_VERIFICATION_SHA_IMPORT_PASS
+
+test_collection_total_rejected (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_complete_closure (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_counts_rejected_even_with_new_hash (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_executed_q_failure_rejected (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_missing_receipt_rejected (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_partition_bytes_change_rejected (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_rank_gap_rejected_even_with_new_hash (test_jscc_5e10_selection_parts.PartsTest) ... ok
+test_selected_cache_change_rejected (test_jscc_5e10_selection_parts.PartsTest) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.068s
+
+OK

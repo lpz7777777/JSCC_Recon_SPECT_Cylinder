@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "job": 1686507,
+  "world_size": 16,
+  "nodes": 8,
+  "gpus_per_node": 2,
+  "selection_acceptance_sha256": "a397134612b2d63c27b178f9cb99c614e5a08ce8b8ac4a21340f24c8f0ccff71",
+  "selection_manifest_sha256": "d7a464df7abf738369eaabf2d724fa4e7eee5e9a559a7961985f8ea95f7244ee",
+  "source_allocation_sha256": "9140283c0042cd154b02d033a50c9a3a31886a2747330f75166fb3f721f1a97c",
+  "unique_device_uuids": [
+    "GPU-0c979e7e-167c-ed77-a8aa-9ca232f76bb8",
+    "GPU-331022d2-1189-487c-cdb5-2a2590f36eab",
+    "GPU-41009505-7684-bc74-9b06-c6b9d5c9d89d",
+    "GPU-55d4f248-af2b-1d1b-241f-f97fc5e7c977",
+    "GPU-5a669d58-8a36-27d3-1593-177f68310a41",
+    "GPU-5d3de7a1-82d7-14fa-7619-59548deb4e4f",
+    "GPU-62356ad6-da14-d78f-cf45-34fbf1d708bc",
+    "GPU-63667013-6794-206b-bc9e-80f12382ec26",
+    "GPU-64e4e774-7149-2afb-d173-e4f009ec2b96",
+    "GPU-65161eff-fe33-3a74-165f-3a736de4278c",
+    "GPU-684bcf60-03ca-538d-8d0c-cae7b2c973a6",
+    "GPU-c7e048d4-a14e-eb6a-3563-57e3e6c5db1c",
+    "GPU-cf37b479-d3c3-b763-b0d5-a28cb3485088",
+    "GPU-e5cb8a1c-4aed-647b-e9f4-df8866c53023",
+    "GPU-f0138ddb-ff2f-6707-f807-2aa1dc2d63c5",
+    "GPU-f402df43-d278-6368-7cbb-79c2a7313394"
+  ],
+  "raw_and_canonical_uuids_close": true,
+  "metrics": {
+    "actual_allocated_bytes_node": 264241152000,
+    "slurm_maxrss_bytes": 21896159232,
+    "slurm_rss_fraction": 0.08286430431547619,
+    "max_node_aggregate_rss_fraction": 0.05249748883928571,
+    "max_gpu_used_fraction": 0.2272242422354929,
+    "max_gpu_reserved_fraction": 0.20149956788152948
+  },
+  "slurm_accounting": "1686507|COMPLETED|0:0||00:08:48|billing=128,cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n1686507.batch|COMPLETED|0:0|6296K|00:08:48|cpu=16,gres/gpu=2,mem=252000M,node=1|wqd10nah09g4\n1686507.extern|COMPLETED|0:0|0|00:08:48|billing=128,cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n1686507.0|COMPLETED|0:0|487100K|00:00:06|cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n1686507.1|COMPLETED|0:0|21382968K|00:08:40|cpu=128,gres/gpu=16,mem=2016000M,node=8|wqd10nah09g[4-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj02g1,wqd10nbj03g3,wqd10nbj06g[2,4]\n",
+  "scope": "Completed full-input selection only; not full Compton response/cache or MLEM resource certificate.",
+  "cpu_read_only_verification_not_gpu_certificate": true,
+  "full_compton_response_memory_certificate": false
+}
