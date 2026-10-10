@@ -1,0 +1,22 @@
+{
+  "job": 1685272,
+  "stage": "selection",
+  "host": "gpu",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/kernel_releases/2a67b816bf25eb7a",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/selection_1685272",
+  "allocation": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/allocations/selection_1685272.txt",
+  "nodes": 8,
+  "gpus_per_node": 4,
+  "world_size": 32,
+  "partition": "gpu_5090",
+  "cpus_per_node": 32,
+  "explicit_mem_parameter": false,
+  "walltime_minutes": 240,
+  "phase_limit_seconds": 3600,
+  "launch_control_repair_key": "ce90d678eb32757f",
+  "launch_control_repair_sha256": "e13981a77d3a5e98d5a66f487a54e76a002d5994efd164d5c67fe9142d20535f",
+  "prepare_limit_seconds": 10800,
+  "total_limit_seconds": 14220,
+  "script_sha256": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173",
+  "submitted_epoch": 1791625700.510579
+}

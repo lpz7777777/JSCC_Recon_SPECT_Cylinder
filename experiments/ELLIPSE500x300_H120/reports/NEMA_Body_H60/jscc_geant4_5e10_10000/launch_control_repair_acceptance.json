@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f",
+  "freeze_sha256": "e13981a77d3a5e98d5a66f487a54e76a002d5994efd164d5c67fe9142d20535f",
+  "linux_guard_tests_sha256": "1079c2a70120dbf11ede97dd5f0004e5a5cebfde5c2a9b92548d5d5f874f0790",
+  "scheduler_test_only": {
+    "compute": "sbatch: Job 1685259 to start at 2034-12-11T18:05:36 using 256 processors on nodes wqd10nah09g1,wqd10nah10g[2,5],wqd10nbj01g3,wqd10nbj03g3,wqd10nbj04g4,wqd10nbl11g5,wqd10nbm09g5 in partition gpu_5090\n",
+    "verification": "sbatch: Job 1685260 to start at 2034-12-02T12:05:54 using 8 processors on nodes wqd10nbj04g1 in partition gpu_5090\n"
+  },
+  "full_payload_sha_evidence": "LAUNCH_CONTROL_FULL_SHA_PASSED\n",
+  "no_compute_job_created_by_tests": true,
+  "original_gpu_kernel_unmodified": true
+}

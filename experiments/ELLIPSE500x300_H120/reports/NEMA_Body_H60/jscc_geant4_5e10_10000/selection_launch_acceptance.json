@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "job": 1685272,
+  "registered_once": true,
+  "scheduler_submit_scontrol_sha256": "e52c8e9c78aebf5795b4bf78d2d654415ed2e0672132416234050e1c8455391e",
+  "actual_launch_sha256": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173",
+  "original_science_release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/kernel_releases/2a67b816bf25eb7a",
+  "repair_freeze_sha256": "e13981a77d3a5e98d5a66f487a54e76a002d5994efd164d5c67fe9142d20535f",
+  "repair_acceptance_sha256": "5bbc525b7070ea4159886fbea69cb6dfd9dbe320e0b9f3f678b6dfc61ec56b3a",
+  "gpu_torch_build_read_only_sha256": "166d58b6818edfb8a68adc9885a9bcbcf40aa148d87d0f4a65a445ff3b507ae7",
+  "actual_full_input_selection_and_resource_acceptance_still_required": true
+}

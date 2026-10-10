@@ -1,0 +1,32 @@
+{
+  "release_key": "ce90d678eb32757f",
+  "sha256": {
+    "jscc_5e10_reconstruction_workflow.py": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca",
+    "launch_partition_policy.txt": "14f5bebf945a500b3c654e5f06c8147520fd3799f6731f6510f8bd2bed181073",
+    "original_controller.py": "32561f7b0f3221270e1d7655ee303b81497f2b4c29b70b0966c5bf113a2f5bbf",
+    "selection_quota_test.sh": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173",
+    "selection_rejected_cpu40.sh": "72292d5d290dba798e889656468bab0215d7c59279d246b9568b9cdee25c77bf",
+    "test_jscc_5e10_launch.py": "b5093d33b3863f7d7e2dbb1dff9263a7488e7497920e3ca8bdf3b11981e66f09"
+  },
+  "old_controller_sha256": "32561f7b0f3221270e1d7655ee303b81497f2b4c29b70b0966c5bf113a2f5bbf",
+  "new_controller_sha256": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca",
+  "science_preparation_sha256": "fd9ca9b060775d19c8f8e1f75cda2f8a0f4a521545b57f7f64327bccb1d3081d",
+  "kernel_freeze_sha256": "35d6084b2e5ecb61b89e60d701e804ac9af2b739bd3305b3fff6aa2be3874f1a",
+  "kernel_deployment_sha256": "0a35f7efbf78353c517bbce0c4483831be7deb196bc4baaf868bf27dfc082658",
+  "transport_acceptance_sha256": "e90428cbf1fb8f0974977ed1d0e65472f032ac8b7bf8644af7b839c0e54b2ba3",
+  "rejection_acceptance_sha256": "f7e9163e99cf36e7f9685c286eb2f90a8af4a416500e3f7a12c5fecd16520278",
+  "local_tests_sha256": "a0c393bf9f13468c40cd68429bae7a95895fe51f5965eb2aaf5e4af08db29b47",
+  "scope": "Local launch controller only; original scientific payloads, input, operators, MLEM, CUDA kernels, S, windows, thresholds and eight-node/four-GPU topology remain unchanged.",
+  "compute_partition": "gpu_5090",
+  "compute_cpus_per_node": 32,
+  "omp_threads_per_rank": 8,
+  "compute_gpus_per_node": 4,
+  "nodes": 8,
+  "world_size": 32,
+  "expected_auto_memory_mib_per_node": 504000,
+  "verification_partition": "gpu_5090",
+  "verification_cpus": 8,
+  "verification_reserved_gpus": 1,
+  "explicit_mem_parameter": false,
+  "actual_memory_and_80_percent_resource_verification_still_required": true
+}

@@ -1,0 +1,163 @@
+{
+  "passed": true,
+  "base_commit": "43b53db641df01dd03ad66d2855bc658638b2676",
+  "scope": "All new or changed staged blobs for strict 5e10 transport delivery and scheduler-only repair/selection submission. The already audited baseline scientific inputs are unchanged. These two proof files are excluded only from their own self-reference.",
+  "auditor_source_sha256": "96753b472febc4049f4e3ae4da05e8247d0a87d29d269582ece9ce5866491c61",
+  "checked_blobs": 38,
+  "total_blob_bytes": 1270661,
+  "findings": [],
+  "files": {
+    "experiments/ELLIPSE500x300_H120/AGENTS.md": {
+      "bytes": 4013,
+      "sha256": "11843ef9ce7b6fa698a3f18292622584912d9363149e041a878fcb481ccd63d5"
+    },
+    "experiments/ELLIPSE500x300_H120/README.md": {
+      "bytes": 5970,
+      "sha256": "7bf48fc6a352fdf012615c78f70ef95c0e86738e9914b692f65f7afd09693692"
+    },
+    "experiments/ELLIPSE500x300_H120/jscc_5e10_reconstruction_workflow.py": {
+      "bytes": 30642,
+      "sha256": "41a4e36f62db5e4e2dd2c6785489a0f0aa986ac514733c32e0a3430682fcb0ca"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md": {
+      "bytes": 4762,
+      "sha256": "b4835959efdb5592134f884581fd2ac896c7a160b6fba546ba9aae9353e60e79"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md": {
+      "bytes": 4875,
+      "sha256": "eb58b4d871f2fc89781ff26a313807c2088383d339427a62ac38a516d2fb0012"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md": {
+      "bytes": 10905,
+      "sha256": "f7e3c8107b4aa93fae9f39221fea7cec7a025d6dd3105bdb87163e9f75782e3b"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/collection_15709588.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/collection_15709588.out": {
+      "bytes": 323,
+      "sha256": "76a4ae13b8a8e0e863ca5502441a6c9fe5bce3e2f2295577c75f68d444a358e1"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/collection_job.json": {
+      "bytes": 188,
+      "sha256": "0fe3cac880140bd67d48b1515ed89e7ba34d1ba6f6025d59fc936b0ed9a1ec9f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/collection_latest_status.json": {
+      "bytes": 314,
+      "sha256": "0bce8425c03c63a4c8fe613c39840a7ae5a2b13ab77d3ff7e60fa9488a3ecbeb"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/collection_submission_intent.json": {
+      "bytes": 165,
+      "sha256": "ec37aeaa217aa01d3b1b55106cd22439fb176087c4bdd4bb9e60a12bb0523b9e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/gpu_torch_build_read_only.txt": {
+      "bytes": 112,
+      "sha256": "166d58b6818edfb8a68adc9885a9bcbcf40aa148d87d0f4a65a445ff3b507ae7"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/kernel_deployment.json": {
+      "bytes": 6961,
+      "sha256": "0a35f7efbf78353c517bbce0c4483831be7deb196bc4baaf868bf27dfc082658"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/kernel_freeze.json": {
+      "bytes": 6664,
+      "sha256": "35d6084b2e5ecb61b89e60d701e804ac9af2b739bd3305b3fff6aa2be3874f1a"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_control_linux_tests.txt": {
+      "bytes": 551,
+      "sha256": "1079c2a70120dbf11ede97dd5f0004e5a5cebfde5c2a9b92548d5d5f874f0790"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_control_local_tests.txt": {
+      "bytes": 2220,
+      "sha256": "a0c393bf9f13468c40cd68429bae7a95895fe51f5965eb2aaf5e4af08db29b47"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_control_repair_acceptance.json": {
+      "bytes": 949,
+      "sha256": "5bbc525b7070ea4159886fbea69cb6dfd9dbe320e0b9f3f678b6dfc61ec56b3a"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_control_repair_freeze.json": {
+      "bytes": 2054,
+      "sha256": "e13981a77d3a5e98d5a66f487a54e76a002d5994efd164d5c67fe9142d20535f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_partition_policy.txt": {
+      "bytes": 1746,
+      "sha256": "14f5bebf945a500b3c654e5f06c8147520fd3799f6731f6510f8bd2bed181073"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/selection_1685272.sh": {
+      "bytes": 2828,
+      "sha256": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/selection_rejected_cpu40.sh": {
+      "bytes": 2829,
+      "sha256": "72292d5d290dba798e889656468bab0215d7c59279d246b9568b9cdee25c77bf"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/remote_contract_tests.txt": {
+      "bytes": 1012,
+      "sha256": "8cc2eba035862ebdd88d89a64055ec48313b2c52567305c7e7fbb209a5f55dbf"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_1685272_submit_scontrol.txt": {
+      "bytes": 1721,
+      "sha256": "e52c8e9c78aebf5795b4bf78d2d654415ed2e0672132416234050e1c8455391e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_cpu40_rejected_submission_intent.json": {
+      "bytes": 152,
+      "sha256": "e85b2d6fb96d14280f68de8ff36d3299fa5d31be4965a8b250e17d5f3146ad26"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_cpu40_rejection.txt": {
+      "bytes": 136,
+      "sha256": "037383a4a86f26ce12daf79d31dd0c3b4dcaafab9a4f9dff58ad5d13d3e0ef0f"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_cpu40_rejection_acceptance.json": {
+      "bytes": 756,
+      "sha256": "f7e9163e99cf36e7f9685c286eb2f90a8af4a416500e3f7a12c5fecd16520278"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_job.json": {
+      "bytes": 1174,
+      "sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_latest_status.json": {
+      "bytes": 193,
+      "sha256": "f100844f158238ba133e007bf54de9ac19483c208ebee9f306a4fd63bc265568"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_launch_acceptance.json": {
+      "bytes": 852,
+      "sha256": "3da7d45c5410170a691e85a83a6c468f37a57fae967461cc9e3afec6c1a48f7a"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_submission_intent.json": {
+      "bytes": 202,
+      "sha256": "56a98821cda7c67aba2a1cfc9dca7ec0cdb1b1ef889237c427540140b534fd2e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_acceptance.json": {
+      "bytes": 409812,
+      "sha256": "e90428cbf1fb8f0974977ed1d0e65472f032ac8b7bf8644af7b839c0e54b2ba3"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_accounting.json": {
+      "bytes": 684499,
+      "sha256": "33203f2936a7976de6329e9ebed5fd6fbf5f1efda83e1485d47289a46dd1bd2b"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_exit_acceptance.json": {
+      "bytes": 403,
+      "sha256": "49630bb58b5499ecfc83937eff2b723369ddc73666636a723d0e4f231beea0d4"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_array_timing.txt": {
+      "bytes": 71890,
+      "sha256": "ef89aac20619bf0eee1ba47aedca9e4f7405cc286471fa762a66fe2bdcb7a2c6"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_latest_status.json": {
+      "bytes": 213,
+      "sha256": "257bd666dbd672a509cccb617854cfdace5c62344dc82ce6c53f9a5242b7d43e"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_measurement.json": {
+      "bytes": 4934,
+      "sha256": "0d47547dbcb726662361e5c38bbfb2c3ca24a7d088d5dc012254f799f9d470ee"
+    },
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot_latest_status.json": {
+      "bytes": 381,
+      "sha256": "3a217a3c7da97a3349a5e8e379c2b57d6b17045b0a3a55c44b79856f1851e693"
+    },
+    "experiments/ELLIPSE500x300_H120/test_jscc_5e10_launch.py": {
+      "bytes": 3260,
+      "sha256": "b5093d33b3863f7d7e2dbb1dff9263a7488e7497920e3ca8bdf3b11981e66f09"
+    }
+  }
+}

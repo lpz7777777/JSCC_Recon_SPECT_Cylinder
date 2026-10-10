@@ -10,6 +10,18 @@ NEW_SOURCES=('jscc_5e10_common.py','jscc_5e10_contract.py','jscc_5e10_runtime.py
     'jscc_5e10_selection.py','jscc_5e10_compton_mlem.py','run_jscc_5e10.py',
     'verify_jscc_5e10.py','jscc_5e10_verify_stage.py','test_jscc_5e10.py','jscc_5e10_reconstruction_workflow.py')
 
+def verify_prepared_controller_repair(name, original_sha):
+    """Allow only the separately frozen local scheduler controller revision."""
+    if name!='jscc_5e10_reconstruction_workflow.py':
+        raise ValueError('A scientific source changed; a launch-only repair cannot authorize it: '+name)
+    proof=read(REPORT/'launch_control_repair_freeze.json')
+    verify_files(DATA/'launch_control_repair_payload',proof['sha256'])
+    if (proof['old_controller_sha256']!=original_sha or
+        proof['new_controller_sha256']!=digest(HERE/name) or
+        proof['science_preparation_sha256']!=digest(REPORT/'science_preparation.json') or
+        proof['kernel_freeze_sha256']!=digest(REPORT/'kernel_freeze.json')):
+        raise ValueError('Frozen scheduler-only repair identity differs')
+
 def baseline_payload(target):
     cfg=read(BASELINE/'contract.json')
     accepted=read(HERE/'reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/formal_freeze.json')
@@ -30,7 +42,7 @@ def prepare_science():
     if proof_path.exists():
         proof=read(proof_path);verify_files(DATA/'science_payload',proof['sha256'])
         for n,sha in proof['new_sources_sha256'].items():
-            if digest(HERE/n)!=sha:raise ValueError('Prepared science source changed; diagnose and freeze a separate bounded repair before use: '+n)
+            if digest(HERE/n)!=sha:verify_prepared_controller_repair(n,sha)
         return
     target=DATA/'science_payload';target.mkdir(exist_ok=False);baseline_payload(target)
     import subprocess,sys
@@ -123,7 +135,7 @@ module load cuda/12.9
 module load miniforge3/25.11.0-1
 [[ "$SLURM_NNODES" == 8 && "$SLURM_NTASKS" == 8 ]]
 export JSCC_PROJECT_ROOT='''+q(release)+''' PYTHONUNBUFFERED=1
-export OMP_NUM_THREADS=10 OPENBLAS_NUM_THREADS=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export NCCL_SOCKET_IFNAME=bond0 TORCH_ELASTIC_WORKER_IDENTICAL=1
 export JSCC_PHASE_SECONDS='''+str(phase_seconds)+''' JSCC_PREPARE_SECONDS='''+str(prepare_seconds)+'''
 export JSCC_MASTER_ADDR=$(scontrol show hostname "$SLURM_JOB_NODELIST" | head -n1)
@@ -167,24 +179,27 @@ def submit_gpu(stage):
     total=minutes*60-180;intent=REPORT/(stage+'_submission_intent.json')
     if intent.exists():raise ValueError('Unresolved '+stage+' submission intent; inspect scheduler, do not duplicate')
     script=launcher(stage,release,phase,prep,total);local=DATA/(stage+'.sh');local.write_bytes(script.encode())
-    remote=GPU_BASE+'/'+stage+'.sh'
+    repair=read(REPORT/'launch_control_repair_freeze.json')
+    remote=GPU_BASE+'/launch_control_releases/'+repair['release_key']+'/'+stage+'.sh'
     with connection('gpu') as c:
         queue=command(c,"squeue -h -u scxi717 -o '%i|%j|%T'")
         if len(queue.splitlines())>=50:
             write(REPORT/(stage+'_submission_wait.json'),dict(reason='account_50_job_limit',other_jobs_untouched=True));return False
         if any('|JSCC5e10_' in line for line in queue.splitlines()):raise ValueError('An existing study GPU job is still active; inspect registered stage')
+        command(c,'test ! -e '+q(remote)+' && mkdir -p '+q(remote.rsplit('/',1)[0]))
         with c.open_sftp() as s:s.put(str(local),remote)
         if command(c,'sha256sum '+q(remote)).split()[0]!=digest(local):raise ValueError('Launch bytes differ')
         command(c,'bash -n '+q(remote))
         write(intent,dict(stage=stage,script_sha256=digest(local),started_epoch=time.time()))
-        line=(f'sbatch --parsable -p gpu_4090 --qos=gpugpu -N 8 -n 8 --ntasks-per-node=1 --cpus-per-task=40 --gres=gpu:4 '
+        line=(f'sbatch --parsable -p gpu_5090 --qos=gpugpu -N 8 -n 8 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4 '
               f'--time={minutes} --exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10_{stage} '
               '--output='+q(GPU_BASE+'/logs/'+stage+'.%j.out')+' --error='+q(GPU_BASE+'/logs/'+stage+'.%j.err')+' '+q(remote))
         job=command(c,line,timeout=60).split(';')[0].strip()
         if not job.isdigit():raise ValueError('Ambiguous submit outcome; preserve intent and inspect queue')
     write(path,dict(job=int(job),stage=stage,host='gpu',release=release,output=GPU_BASE+'/'+stage+'_'+job,
         allocation=GPU_BASE+'/allocations/'+stage+'_'+job+'.txt',nodes=8,gpus_per_node=4,world_size=32,
-        cpus_per_node=40,explicit_mem_parameter=False,walltime_minutes=minutes,phase_limit_seconds=phase,
+        partition='gpu_5090',cpus_per_node=32,explicit_mem_parameter=False,walltime_minutes=minutes,phase_limit_seconds=phase,
+        launch_control_repair_key=repair['release_key'],launch_control_repair_sha256=digest(REPORT/'launch_control_repair_freeze.json'),
         prepare_limit_seconds=prep,total_limit_seconds=total,script_sha256=digest(local),submitted_epoch=time.time()))
     write(intent,dict(read(intent),resolved=True,registered_job=int(job)))
     print('REGISTERED_8X4_GPU_JOB',stage,job,flush=True);return True
@@ -223,7 +238,7 @@ def submit_verification(stage):
 set -euo pipefail
 source /etc/profile.d/modules.sh
 module load miniforge3/25.11.0-1
-export OMP_NUM_THREADS=10 OPENBLAS_NUM_THREADS=10 JSCC_PROJECT_ROOT='''+q(release)+'''
+export OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8 JSCC_PROJECT_ROOT='''+q(release)+'''
 cd '''+q(release)+'''
 timeout --signal=TERM --kill-after=60s 6900s '''+q(GPU_PYTHON)+' -u '+q(release+'/jscc_5e10_verify_stage.py')+' '+' '.join(q(x) for x in args)+'\n'
         local=DATA/(stage+'_verification.sh');local.write_bytes(script.encode());remote=GPU_BASE+'/'+local.name
@@ -233,13 +248,15 @@ timeout --signal=TERM --kill-after=60s 6900s '''+q(GPU_PYTHON)+' -u '+q(release+
         if intent.exists():raise ValueError('Unresolved verification submission intent; inspect queue')
         write(intent,dict(stage=stage+'_verification',script_sha256=digest(local),source_job=job['job']))
         # One reserved GPU obtains real automatic memory TRES; verifier uses CPU only.
-        line=(f'sbatch --parsable -p gpu_4090 --qos=gpugpu -N1 -n1 --cpus-per-task=12 --gres=gpu:1 --time=120 '
+        line=(f'sbatch --parsable -p gpu_5090 --qos=gpugpu -N1 -n1 --cpus-per-task=8 --gres=gpu:1 --time=120 '
               '--exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10_'+stage+'_verify '
               '--output='+q(GPU_BASE+'/logs/'+stage+'_verification.%j.out')+' --error='+q(GPU_BASE+'/logs/'+stage+'_verification.%j.err')+' '+q(remote))
         number=command(c,line,timeout=60).split(';')[0].strip()
         if not number.isdigit():raise ValueError('Ambiguous verification submission')
     write(path,dict(job=int(number),stage=stage+'_verification',host='gpu',release=release,output=output,
-        source_job=job['job'],source_accounting=acc,script_sha256=digest(local),read_only_verification=True))
+        source_job=job['job'],source_accounting=acc,script_sha256=digest(local),read_only_verification=True,
+        partition='gpu_5090',cpus_per_node=8,reserved_gpus=1,explicit_mem_parameter=False,
+        launch_control_repair_sha256=digest(REPORT/'launch_control_repair_freeze.json')))
     write(intent,dict(read(intent),resolved=True,registered_job=int(number)))
     print('REGISTERED_READ_ONLY_ACCEPTANCE_JOB',stage,number,flush=True);return True
 
@@ -312,7 +329,7 @@ def freeze_production():
     # Reject before allocating: CPU resident compact rows plus conservative old measured overhead.
     event_bytes=m['accepted_events']*78920*4
     minimum_expected_memory_per_node=event_bytes/8+4*(16<<30)
-    expected_auto_allocation=40*10000*(1<<20)
+    expected_auto_allocation=32*15750*(1<<20)
     if minimum_expected_memory_per_node>.8*expected_auto_allocation:raise MemoryError('Actual accepted event set does not fit the conservative 8x4 memory budget')
     dst=DATA/'production_payload';shutil.copytree(DATA/'kernel_payload',dst)
     for name in ('selections','selected_rows'):shutil.copytree(selection/name,dst/name)

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "rejected_before_job_created": true,
+  "no_selection_job_registered": true,
+  "queue": "",
+  "accounting": "",
+  "original_submission_intent_sha256": "e85b2d6fb96d14280f68de8ff36d3299fa5d31be4965a8b250e17d5f3146ad26",
+  "original_launch_sha256": "72292d5d290dba798e889656468bab0215d7c59279d246b9568b9cdee25c77bf",
+  "original_advance_registration": {
+    "pid": 33808,
+    "status": "complete",
+    "started_epoch": 1791624403.3327603,
+    "exit_code": 1,
+    "finished_epoch": 1791625073.034936
+  },
+  "error_sha256": "037383a4a86f26ce12daf79d31dd0c3b4dcaafab9a4f9dff58ad5d13d3e0ef0f",
+  "scheduler_policy_sha256": "14f5bebf945a500b3c654e5f06c8147520fd3799f6731f6510f8bd2bed181073",
+  "scientific_kernel_and_input_preserved": true
+}

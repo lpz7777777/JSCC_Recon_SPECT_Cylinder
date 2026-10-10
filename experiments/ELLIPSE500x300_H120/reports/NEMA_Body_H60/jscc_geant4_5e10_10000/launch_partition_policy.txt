@@ -1,0 +1,28 @@
+PartitionName=gpu_4090
+   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=gpu
+   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED MaxCPUsPerSocket=UNLIMITED
+   Nodes=wqd10nae09g[3-4],wqd10naf04g1,wqd10naf05g[2-6,8],wqd10naf06g[1-3],wqd10naf13g[1,7-8],wqd10nah05g4,wqd10nba06g[1-8],wqd10nba07g[1,3-8],wqd10nba08g[2-4],wqd10nba10g8
+   PriorityJobFactor=1 PriorityTier=1000 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=3312 TotalNodes=35 SelectTypeParameters=NONE
+   JobDefaults=DefCpuPerGPU=6
+   DefMemPerCPU=10000 MaxMemPerCPU=10000
+   TRES=cpu=3312,mem=18025000M,node=35,billing=3312,gres/gpu=280
+
+
+PartitionName=gpu_5090
+   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=gpu
+   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED MaxCPUsPerSocket=UNLIMITED
+   Nodes=wqd10naf02g[1-3],wqd10nah04g5,wqd10nah08g[2-5],wqd10nah09g[1,3-5],wqd10nah10g[1-5],wqd10nah11g1,wqd10naj09g5,wqd10nbj01g[1,3],wqd10nbj02g[1-2,4-5],wqd10nbj03g[1-5],wqd10nbj04g[1,3-5],wqd10nbj05g[2-4],wqd10nbj06g[1-4],wqd10nbk07g[2-3],wqd10nbl09g4,wqd10nbl11g5,wqd10nbm09g5,wqd10nbn06g3
+   PriorityJobFactor=1 PriorityTier=1000 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=6016 TotalNodes=47 SelectTypeParameters=NONE
+   JobDefaults=DefCpuPerGPU=8
+   DefMemPerCPU=15750 MaxMemPerCPU=15750
+   TRES=cpu=6016,mem=48410000M,node=47,billing=6016,gres/gpu=376
+
+

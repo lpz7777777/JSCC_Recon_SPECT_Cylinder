@@ -1,0 +1,9 @@
+test_changed_scientific_freeze_or_repair_payload_is_rejected (test_jscc_5e10_launch.LaunchRepairIdentityTests) ... ok
+test_exact_frozen_local_controller_repair_is_accepted (test_jscc_5e10_launch.LaunchRepairIdentityTests) ... ok
+test_scientific_source_change_cannot_use_launch_repair (test_jscc_5e10_launch.LaunchRepairIdentityTests) ... ok
+test_wrong_original_or_tampered_controller_is_rejected (test_jscc_5e10_launch.LaunchRepairIdentityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 7.442s
+
+OK

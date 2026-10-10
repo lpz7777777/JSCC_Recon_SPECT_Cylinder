@@ -4,7 +4,7 @@
 2. 1000×50000000=50000000000实际初级；50worker/视角，独立种子35100101–35101100；35100001启动检查100000光子单独保留。按最新用户要求每worker独立申请1节点、1核，节点可共享，数组0–999%1000，最高并行1000；GPU方案不变。全部1000个实际子作业及batch/extern/0步骤COMPLETED/0:0，收据SLURM_JOB_ID与实际accounting、scontrol父ArrayJobId/TaskId及1节点1CPU一致后统一收集。每worker初级能量总数、窗口10496-bin完整计数、原List、实际二进制/源宏/探测器/日志/分配/收据SHA必须闭合。注册218初级期望份额0.29380779868182727，正式源混合5SE身份检查不放宽。
 3. 复用1669255已验收完整A218、A440、C440→218及其坐标、旋转、体积、活动域；完整120mm、132040全圆点、78920活动单元、10496bin、20view。连续能量v5、稳定float64全圆q≤3事件选择、匹配自身S和原非正则MLEM字节保持。不得换核、重新训练、使用旧计数代替新观测或丢失已选择事件。
 4. 三路正式输出仅 `440_SinglePhoton`、`218_SinglePhoton_CrossTalkCorrected`、`440_ComptonOnly`。全1初值，无正则化；440 single完成后生成本次C前投影固定加性背景，随后218 corrected；最后仅Compton原分支。正式10000/save50，每路200帧/200atomic-fsync检查点，共600。不得生成生产联合图或跨能量相加图。
-5. 优先8节点×4GPU：Slurm8父任务、每父任务torchrun4子进程，LOCAL_RANK绑定本地独立卡，NCCL bond0。每节点40CPU，禁止显式mem。32rank身份/8host/4唯一GPU UUID必须实际闭合。每节点四进程峰RSS之和、实际Slurm MaxRSS和每GPU峰reserved/实际采样used均≤实际AllocTRES/显存80%；CPU只读验收不能代替GPU计算资源证书。
+5. 优先8节点×4GPU：Slurm8父任务、每父任务torchrun4子进程，LOCAL_RANK绑定本地独立卡，NCCL bond0。当前gpu_5090每节点32CPU，按每CPU15750MiB自动分配（预期504000MiB/节点），禁止显式mem；实际分配仍逐作业核对。只读CPU验收申请同队列1节点8CPU/1GPU配额但不执行GPU核。32rank身份/8host/4唯一GPU UUID必须实际闭合。每节点四进程峰RSS之和、实际Slurm MaxRSS和每GPU峰reserved/实际采样used均≤实际AllocTRES/显存80%；CPU只读验收不能代替GPU计算资源证书。
 6. 新事件筛选基于本次原生List；32rank原字节区间/原始行/已接受行索引闭合，每已选择原始行逐值与缓存一致。不依赖真值选择事件。CPU事件行完整保存，32事件分批转入GPU，不按缩小数据量降低内存。
 7. 完整输入32GPU validation10/save10：全部20view、全部探测行原完整矩阵前向/转置/自身S实际L2≤1e-5；原440/218 MLEM和原Compton分支末图≤1e-5、保存历史逐值一致。所有事件使用同一新输入。独立只读验收、Slurm成功完整退出和严格取回后生成本次authority；直接提交唯一formal10000/save50，不再次问批准。
 8. 运行失败或部分目录保留，先诊断，完全退出后冻结有界修复，仅补缺失/失败阶段。成功阶段需完整SHA/算法身份才复用，不覆盖原发布/结果，不取消其他项目。未解析的submission intent禁止重复sbatch，活PID禁止并行advance/fetch/submit。

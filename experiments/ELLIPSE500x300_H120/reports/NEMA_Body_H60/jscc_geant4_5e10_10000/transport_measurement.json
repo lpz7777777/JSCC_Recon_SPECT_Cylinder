@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "study": "jscc_geant4_5e10_10000",
+  "job": 15708389,
+  "collection_job": 15709588,
+  "total_primary_photons": 50000000000,
+  "source_solid_angle": "4pi",
+  "dose_multiplier": 1,
+  "workers": 1000,
+  "photons_per_worker": 50000000,
+  "seed_min_max": [
+    35100101,
+    35101100
+  ],
+  "actual_scheduler_start": "2026-10-10T16:27:37",
+  "actual_scheduler_last_end": "2026-10-10T17:00:13",
+  "actual_worker_batch_wall_seconds": 1956.0,
+  "scheduler_worker_elapsed_seconds_min_max": [
+    1539,
+    1955
+  ],
+  "worker_program_elapsed_seconds_min_max": [
+    1537.0657105073333,
+    1948.9956026803702
+  ],
+  "primary_counts": [
+    14690247248,
+    35309752752,
+    0
+  ],
+  "primary218_fraction": 0.29380494496,
+  "registered_primary218_fraction": 0.29380779868182727,
+  "primary218_binomial_standard_deviations": -1.4008883413450048,
+  "window_counts": {
+    "218": 123180986,
+    "440": 53642922
+  },
+  "raw_list_rows": 54631328,
+  "remote_verified_worker_members": 8000,
+  "strict_local_input_members": 47,
+  "cpu_peak_process_rss_bytes_min_max": [
+    114556928,
+    116744192
+  ],
+  "cpu_resource_denominator": "Actual node MemAvailable recorded at each worker start; maty memory TRES is not a GPU imaging allocation certificate.",
+  "cpu_max_process_fraction_of_start_memavailable": 0.001008413074552167,
+  "provenance_sha256": {
+    "transport_acceptance.json": "e90428cbf1fb8f0974977ed1d0e65472f032ac8b7bf8644af7b839c0e54b2ba3",
+    "transport_array_exit_acceptance.json": "49630bb58b5499ecfc83937eff2b723369ddc73666636a723d0e4f231beea0d4",
+    "transport_array_timing.txt": "ef89aac20619bf0eee1ba47aedca9e4f7405cc286471fa762a66fe2bdcb7a2c6",
+    "collection_latest_status.json": "0bce8425c03c63a4c8fe613c39840a7ae5a2b13ab77d3ff7e60fa9488a3ecbeb",
+    "collection_15709588.out": "76a4ae13b8a8e0e863ca5502441a6c9fe5bce3e2f2295577c75f68d444a358e1",
+    "collection_15709588.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "local_worker_receipts_sha256": "6ce6c4d66d45056ff25c79f0e9cc8069f59033ac5e1c1bcf6bafd8984d65617c",
+  "source_registry_sha256": {
+    "jobs.json": "126580168ba3014d0759ea700d1992e7b79a17edb63e86e108aa0366f16a1652",
+    "macros/NEMA_Body_H60_v01.mac": "a3e512f8e4fdeb0ba4f71ae746687436058000cc236e3719848d476329bb639e",
+    "macros/NEMA_Body_H60_v02.mac": "350c06248965f2e4c99c4170325083f9b715e720124f3440905b94ed9aaf2703",
+    "macros/NEMA_Body_H60_v03.mac": "17f92c3837b7d5105ac0e57cd07d0161e511e5068b411608b9066f157cbd1d89",
+    "macros/NEMA_Body_H60_v04.mac": "89d7da71787eb01eedb0478ac8c2229f2d1977feb9f43766b802964e346747fe",
+    "macros/NEMA_Body_H60_v05.mac": "42a71a9e1a7291ef6ec5ac615c02913862f10d4e2c168529c7f97b42e01c82fb",
+    "macros/NEMA_Body_H60_v06.mac": "ff9281c3d1e46f0cf36b723c4813d9c60092b747b4cfcd0f2d42644d37d85e7b",
+    "macros/NEMA_Body_H60_v07.mac": "086dc45db120db154bdb3353a50ccdcc0604ea88c7a37723e9af330bf5350ac5",
+    "macros/NEMA_Body_H60_v08.mac": "6702b22145346915e6c2ee55fc4f3350edd77ae21c87e6d21c5bc5e180814a90",
+    "macros/NEMA_Body_H60_v09.mac": "3356ff749603bb99907fe97b7e55adbdc5361e62b00b462eb048d2f050945e37",
+    "macros/NEMA_Body_H60_v10.mac": "e5e2b60c8ddc84f8466964f7ba90300ac91f0848b89941c094f81a83e4e6a7c4",
+    "macros/NEMA_Body_H60_v11.mac": "d1d060f53184656dfd2b493eab1e64b3a9e59a9e1557284b2165ef1c82f0ba14",
+    "macros/NEMA_Body_H60_v12.mac": "f20c7b3146940554f73e021bb70ea20db57180ce79848d7fb735a2a157bcbebc",
+    "macros/NEMA_Body_H60_v13.mac": "cde1279bc44b718bcc7ce34409a764c0489768182d1d7faba189da0512e73014",
+    "macros/NEMA_Body_H60_v14.mac": "3f8324f243c4093d49ef5220142c938cf34ad52ef02ec4c2680678fe656b89a6",
+    "macros/NEMA_Body_H60_v15.mac": "af91f472ba8de72f9020f44645209e54a08f37d8ccde887bf372972ef7c18005",
+    "macros/NEMA_Body_H60_v16.mac": "d53efca6f86ef64da3b10142e2a78391465b4839bb2e273962345e62ffaa2b45",
+    "macros/NEMA_Body_H60_v17.mac": "d9eb67a49b36e14a45f17b0436ddf839499d3db466898557229cdf250284b41d",
+    "macros/NEMA_Body_H60_v18.mac": "d9a47433c93e5cb6067d73a9ce017ccc797c397c6dbe1ba12c714deae0028f53",
+    "macros/NEMA_Body_H60_v19.mac": "017fac59019ded766fd4bab864181e3efa462f54df95f9b627a12de131766977",
+    "macros/NEMA_Body_H60_v20.mac": "d3c0c5c086e11ca015ab045e99eb2afcec9537bafc3b2aaaba2ba0fe9efabc69"
+  },
+  "binary_sha256": "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6",
+  "crystal_sha256": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+  "collection_sha256": "94202773e0a3e08c7a889409eba56897d56e5104e224bcbf7aaab9c08235cdf8",
+  "archive_sha256": "51972f9b4314da5efa10fe332dc7470d6fe825963db6b4a8e8f92ee1d97811a9",
+  "no_primary_tagged_window_counts_available": true,
+  "caveat": "Observed window totals and raw List rows are transport measurements, not selected-event counts or a response/Compton calibration certificate. No measured 440-to-218 mechanism fraction is inferred from untagged JSCC window totals."
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "job": 15708389,
+  "workers": 1000,
+  "all_worker_and_batch_extern_srun_steps_completed_zero": true,
+  "all_worker_allocations_one_node_one_cpu": true,
+  "accounting_sha256": "33203f2936a7976de6329e9ebed5fd6fbf5f1efda83e1485d47289a46dd1bd2b",
+  "strict_photon_seed_source_file_collection_still_required": true,
+  "collection_job": 15709588,
+  "checked_epoch": 1791624145.5577755
+}
