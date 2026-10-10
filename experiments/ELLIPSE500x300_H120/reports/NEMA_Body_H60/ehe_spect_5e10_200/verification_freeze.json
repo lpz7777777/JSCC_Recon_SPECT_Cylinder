@@ -1,0 +1,13 @@
+{
+  "key": "0f4feb0acdfbe177",
+  "files": {
+    "ehe_5e10_archive_input.py": "dfe49c0110b91508fbc8775a9714cc971ca7d6204cad67fa0b3a9215bf62f60c",
+    "ehe_5e10_transport.py": "e0fe56bb72d462e7231acfaaa5c3321fd169b5e167612f5fc3e561fce7a7d367",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_slurm_status.py": "25ab63dbd9fef453a25dedbbcb7c3adcc32de7a0b395e9ad52b8f41c96851734",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "verify_ehe_5e10.py": "b1590362a90ef4410da7bc4bae04ee33f0c570e44f622e77d16da14c3a061255"
+  },
+  "root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/verification_releases/0f4feb0acdfbe177",
+  "payload_dir": "verification_payload"
+}

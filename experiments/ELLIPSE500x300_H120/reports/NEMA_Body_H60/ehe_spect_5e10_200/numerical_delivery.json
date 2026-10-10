@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "actual_primary_photons": 50000000000,
+  "transport_job": 15684979,
+  "formal_job": 1681346,
+  "formal_verification_job": 1681349,
+  "frames_per_channel": 20,
+  "atomic_checkpoints": 40,
+  "counts_sha256": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8",
+  "formal_authority_sha256": "61c6d2bd20e5a1bef97a3481adf63cfd10c99c5c004a2c710bce6c2c28fca62e",
+  "artifact_manifest_sha256": "7554c58fa919882c44ffdec40e638956ce68f41f42b4d457d2b2dd2f3c8d7b6f",
+  "scientific_qa_sha256": "a79e30c12a5ff003e114adce5399410777d43e29a66a3cffa62c1b9057e4027c",
+  "visual_qa": "Pending direct inspection of all nine actual figures",
+  "final_delivery": false,
+  "physical_calibration_claim": false,
+  "postprocessing_source_sha256": "d6ef8ead78020d03a4a303dc535ff9b95d22b298c0124b3499f954b6b9444f69"
+}

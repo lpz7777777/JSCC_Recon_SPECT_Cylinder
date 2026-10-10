@@ -1,0 +1,266 @@
+{
+  "passed": true,
+  "scope": "Read-only reuse of accepted same-matrix/source-geometry context; no new matrix computation",
+  "new_formal_factor_sha256": {
+    "A218": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+    "A440": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+    "C440to218": "c73c0ec4fc9382aceb55228410a852da20b68a8be8bcf8675eaf9fa6c6a9db4a"
+  },
+  "original_formal_summary_sha256": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+  "original_comparison_report_sha256": "645c0204cab2ed3a09920444b4683fad484209cc87ffcc19479bec795291dccf",
+  "original_projection_truncation_sha256": "cca8c3bf09054435dbfe7248210fdb317b864fc3aefc35aa437907993f44967a",
+  "sensitivity_comparison": {
+    "A218": {
+      "EHE": {
+        "density_response_mm3": {
+          "min": 0.0002546484838395712,
+          "max": 0.0019169073487815917,
+          "mean": 0.0013028014061467726,
+          "median": 0.001421478304591717,
+          "p90": 0.0017356632054464478,
+          "p99": 0.0019026426195808957
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 2.383245075165819e-06,
+          "max": 9.471272428382887e-06,
+          "mean": 7.4231188932257164e-06,
+          "median": 8.29712908980256e-06,
+          "p90": 9.340368637840502e-06,
+          "p99": 9.386872809359473e-06
+        }
+      },
+      "JSCC": {
+        "matrix_sha256": "3b37c9148cfb3cb510ce1d99981d8192d63fb50ff0270df6ce9b38daeb301f8a",
+        "density_response_mm3": {
+          "min": 0.17981554189877472,
+          "max": 1.778512854878653,
+          "mean": 1.1177547277160451,
+          "median": 1.1277689182288895,
+          "p90": 1.4227510113408788,
+          "p99": 1.6574941813351471
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 0.005296713200849348,
+          "max": 0.008949475092343787,
+          "mean": 0.006188434048304494,
+          "median": 0.005983981291141414,
+          "p90": 0.007218142080279595,
+          "p99": 0.008397615732556967
+        }
+      }
+    },
+    "A440": {
+      "EHE": {
+        "density_response_mm3": {
+          "min": 8.988947539650957e-05,
+          "max": 0.0007090772407841729,
+          "mean": 0.00048180271708139045,
+          "median": 0.0005076335317246161,
+          "p90": 0.0006234964881290273,
+          "p99": 0.0007030184181237576
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 1.0267778558270028e-06,
+          "max": 3.495526036419482e-06,
+          "mean": 2.74110204414532e-06,
+          "median": 2.9813173086078294e-06,
+          "p90": 3.448743186183262e-06,
+          "p99": 3.4763496179382986e-06
+        }
+      },
+      "JSCC": {
+        "matrix_sha256": "e5966782fe4e38f7324e56122e92d378d2307f215a8ce8afa36f6e3342542d38",
+        "density_response_mm3": {
+          "min": 0.04746042855666417,
+          "max": 0.47878804931010566,
+          "mean": 0.2981270297504099,
+          "median": 0.3000915750832348,
+          "p90": 0.38435528634181537,
+          "p99": 0.4458075761002533
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 0.0013982934383303305,
+          "max": 0.0024092610351725665,
+          "mean": 0.0016492601722258647,
+          "median": 0.0015946847419881735,
+          "p90": 0.0019468245657769667,
+          "p99": 0.0022678137566826064
+        }
+      }
+    },
+    "C440to218": {
+      "EHE": {
+        "density_response_mm3": {
+          "min": 5.4736803920847615e-05,
+          "max": 0.0004459821208479765,
+          "mean": 0.000298920459894281,
+          "median": 0.0003169911040033196,
+          "p90": 0.00039122488330196604,
+          "p99": 0.0004421612317291268
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 6.147301214810622e-07,
+          "max": 2.198618753449792e-06,
+          "mean": 1.7017980026044773e-06,
+          "median": 1.8394494413481056e-06,
+          "p90": 2.1684756742322163e-06,
+          "p99": 2.1861173940894313e-06
+        }
+      },
+      "JSCC": {
+        "matrix_sha256": "5b5a296880056f748fc5cafa9c97f9caf350daf681d66a79c0a99005b03b9959",
+        "density_response_mm3": {
+          "min": 0.03436022685000921,
+          "max": 0.3304869662360602,
+          "mean": 0.21237497349463766,
+          "median": 0.21437571174586764,
+          "p90": 0.2700866782263347,
+          "p99": 0.3105722809364465
+        },
+        "cell_volume_normalized_detection_probability": {
+          "min": 0.0010124171461960143,
+          "max": 0.0016630101180099058,
+          "mean": 0.0011760034332993102,
+          "median": 0.001140335633901813,
+          "p90": 0.0013646610676961944,
+          "p99": 0.0015686304113744509
+        }
+      }
+    }
+  },
+  "projection_truncation": {
+    "rows": [
+      {
+        "view": 1,
+        "angle_deg": 0,
+        "geometric_outside_detector_fraction_218": 0.030045919120311737,
+        "geometric_outside_detector_fraction_440": 0.028400162234902382
+      },
+      {
+        "view": 2,
+        "angle_deg": 18,
+        "geometric_outside_detector_fraction_218": 0.0241033174097538,
+        "geometric_outside_detector_fraction_440": 0.02278306521475315
+      },
+      {
+        "view": 3,
+        "angle_deg": 36,
+        "geometric_outside_detector_fraction_218": 0.0229708943516016,
+        "geometric_outside_detector_fraction_440": 0.021712670102715492
+      },
+      {
+        "view": 4,
+        "angle_deg": 54,
+        "geometric_outside_detector_fraction_218": 0.010191810317337513,
+        "geometric_outside_detector_fraction_440": 0.009633556939661503
+      },
+      {
+        "view": 5,
+        "angle_deg": 72,
+        "geometric_outside_detector_fraction_218": 0.0,
+        "geometric_outside_detector_fraction_440": 0.0
+      },
+      {
+        "view": 6,
+        "angle_deg": 90,
+        "geometric_outside_detector_fraction_218": 0.0,
+        "geometric_outside_detector_fraction_440": 0.0
+      },
+      {
+        "view": 7,
+        "angle_deg": 108,
+        "geometric_outside_detector_fraction_218": 0.0,
+        "geometric_outside_detector_fraction_440": 0.0
+      },
+      {
+        "view": 8,
+        "angle_deg": 126,
+        "geometric_outside_detector_fraction_218": 0.010191810317337513,
+        "geometric_outside_detector_fraction_440": 0.009633556939661503
+      },
+      {
+        "view": 9,
+        "angle_deg": 144,
+        "geometric_outside_detector_fraction_218": 0.0229708943516016,
+        "geometric_outside_detector_fraction_440": 0.021712670102715492
+      },
+      {
+        "view": 10,
+        "angle_deg": 162,
+        "geometric_outside_detector_fraction_218": 0.0241033174097538,
+        "geometric_outside_detector_fraction_440": 0.02278306521475315
+      },
+      {
+        "view": 11,
+        "angle_deg": 180,
+        "geometric_outside_detector_fraction_218": 0.030045919120311737,
+        "geometric_outside_detector_fraction_440": 0.028400162234902382
+      },
+      {
+        "view": 12,
+        "angle_deg": 198,
+        "geometric_outside_detector_fraction_218": 0.0241033174097538,
+        "geometric_outside_detector_fraction_440": 0.02278306521475315
+      },
+      {
+        "view": 13,
+        "angle_deg": 216,
+        "geometric_outside_detector_fraction_218": 0.0229708943516016,
+        "geometric_outside_detector_fraction_440": 0.021712670102715492
+      },
+      {
+        "view": 14,
+        "angle_deg": 234,
+        "geometric_outside_detector_fraction_218": 0.010191810317337513,
+        "geometric_outside_detector_fraction_440": 0.009633556939661503
+      },
+      {
+        "view": 15,
+        "angle_deg": 252,
+        "geometric_outside_detector_fraction_218": 0.0,
+        "geometric_outside_detector_fraction_440": 0.0
+      },
+      {
+        "view": 16,
+        "angle_deg": 270,
+        "geometric_outside_detector_fraction_218": 0.0,
+        "geometric_outside_detector_fraction_440": 0.0
+      },
+      {
+        "view": 17,
+        "angle_deg": 288,
+        "geometric_outside_detector_fraction_218": 0.0,
+        "geometric_outside_detector_fraction_440": 0.0
+      },
+      {
+        "view": 18,
+        "angle_deg": 306,
+        "geometric_outside_detector_fraction_218": 0.010191810317337513,
+        "geometric_outside_detector_fraction_440": 0.009633556939661503
+      },
+      {
+        "view": 19,
+        "angle_deg": 324,
+        "geometric_outside_detector_fraction_218": 0.0229708943516016,
+        "geometric_outside_detector_fraction_440": 0.021712670102715492
+      },
+      {
+        "view": 20,
+        "angle_deg": 342,
+        "geometric_outside_detector_fraction_218": 0.0241033174097538,
+        "geometric_outside_detector_fraction_440": 0.02278306521475315
+      }
+    ],
+    "meaning": "orthographic source activity outside detector face; not the measured photon rejection probability",
+    "detector_face_mm": [
+      272,
+      136
+    ]
+  },
+  "unknown_joint_categories": 446,
+  "limits": [
+    "Sensitivity is original model S and S/cell-volume, not newly measured path efficiency",
+    "Geometric source coverage is not measured photon rejection probability",
+    "Legacy JSCC primary-tagged cross fraction unavailable"
+  ]
+}

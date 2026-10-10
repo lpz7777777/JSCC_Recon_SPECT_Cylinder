@@ -1,0 +1,953 @@
+{
+  "passed": true,
+  "inputs_sha256": {
+    "ehe_native_iteration_metrics.csv": "76bafcc2ca93bc883a20d477e224a098b531c167eac6e65e251e475e594e553f",
+    "ehe_sphere_iteration_metrics.csv": "3d77a30174031281c1aeacc821efa78122741142e1db8378212ca8e9bbc88daa",
+    "jscc_native_iteration_metrics.csv": "58bc014f9012b132a01d4995bce71e865142e0dd9cfb42a44b98408a586eb30a",
+    "jscc_sphere_iteration_metrics.csv": "16676538a85c366a7b7b6dc58f4fdf2ff4f382a57c2dc0a8cccaab2a5c07028a",
+    "truth_npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "truth_manifest": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+    "whole_geometry": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "EHE_formal_summary": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c",
+    "JSCC_verification": "fb3f899da8664708d9f1693e4d44f88fb8ce7598d67967cdef069f181a1ff728",
+    "accepted_comparison_report": "645c0204cab2ed3a09920444b4683fad484209cc87ffcc19479bec795291dccf",
+    "synthetic_formal_summary": "0d3e4e1cb39f2ec62ba47c63594586134e28b3b5ea26e8e0c196c5fa76b3dfbc",
+    "synthetic_collection": "d638f8fb5146910dd282b27c12bb239005019745f3c4aa0f7f9e7329fd30665c",
+    "plotting_source": "b8770de7efa65dc7066ef6b93bc438b700b4da436473803d7467a19d8d1199cf",
+    "prior_plotting_source": "59edddeb66296ba9ec3d2fadccc1e911f838b7183635d923d16d290109ef28c5",
+    "synthetic_histories": {
+      "440_SinglePhoton": "63504b2db745e7eb6dd20e41b35982cc2ca3bade5e717dbb785e6dedaad7aa10",
+      "218_SinglePhoton_CrossTalkCorrected": "15dc209f6326f1707d65f1f1d9687c6e147d863257b445fb52ab5018e147a9fa",
+      "440SinglePlus218Single": "b65e946d6bc1f9a80868e5005220030a57a61f2433ecb34923bbaf903d0dd61d"
+    },
+    "new_transport_formal_summary": "61c6d2bd20e5a1bef97a3481adf63cfd10c99c5c004a2c710bce6c2c28fca62e",
+    "new_transport_collection": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8",
+    "new_source_angular_audit": "1109c956b1ffb7ed5abe8999fddfe8a7a9b449eaa553a06be8de10fcd677b717",
+    "new_plotting_source": "2756fe0c796042d85d68771c63fa70b5cc49a048aad0759863dd335efbbf68bc",
+    "new_transport_histories": {
+      "440_SinglePhoton": "dcd8e3b389950e542c8fba6d4c1ce94f36d8997f7a2265de44a3eb6e8678d0c0",
+      "218_SinglePhoton_CrossTalkCorrected": "7519df28140899aed8341700d1fd5c2ebff5d5825a7726a4aea1a71dcec58b19",
+      "440SinglePlus218Single": "5095c2bb3352442d839780ad7c14143120871244f964fbf0cba47d975d98ad7c"
+    }
+  },
+  "density_scales": {
+    "EHE": {
+      "218": 456.39950822493626,
+      "440": 1036.9058469627134,
+      "sum": 1493.3053551876496
+    },
+    "JSCC": {
+      "218": 456.4035256096357,
+      "440": 1036.9020496292537,
+      "sum": 1493.3055752388896
+    },
+    "EHE matrix+Poisson": {
+      "218": 456.3989463344975,
+      "440": 1036.9063780757442,
+      "sum": 1493.3053244102416
+    },
+    "EHE Geant4 5e10": {
+      "218": 4563.984444925511,
+      "440": 10369.068524294238,
+      "sum": 14933.052969219749
+    }
+  },
+  "actual_source_dose": 50000000000,
+  "primary_counts": [
+    14690373781,
+    35309626219,
+    0
+  ],
+  "dose_kind": "Actual full-4pi transported primary photons; no hemisphere multiplier",
+  "windows": {
+    "218": 232888,
+    "440": 118846
+  },
+  "tagged_counts": {
+    "CntStat_218": 232888,
+    "CntStat_440": 118846,
+    "CntStat_218_from218": 132562,
+    "CntStat_218_from440": 100326,
+    "CntStat_440_from218": 0,
+    "CntStat_440_from440": 118846
+  },
+  "data_kind": "Geant4_transport",
+  "actual_cross_fraction": 0.4307907663769709,
+  "fixed_cross_background_total": 74485.17436169833,
+  "fixed_cross_background_source": "This 5e10 acquisition own final440 single200",
+  "physical_calibration_claim": false,
+  "nodes": {
+    "EHE Geant4 5e10": [
+      0,
+      10,
+      20,
+      50,
+      100,
+      150,
+      200
+    ],
+    "EHE matrix+Poisson": [
+      0,
+      10,
+      20,
+      50,
+      100,
+      150,
+      200
+    ],
+    "EHE": [
+      0,
+      10,
+      20,
+      50,
+      100,
+      150,
+      200
+    ],
+    "JSCC": [
+      0,
+      500,
+      1000,
+      2500,
+      5000,
+      7500,
+      10000
+    ]
+  },
+  "transport_native_rows": 63,
+  "transport_sphere_rows": 252,
+  "routes": [
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "label": "218 corrected single"
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "label": "440 single"
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "label": "dual single sum"
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "label": "218 corrected single"
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "label": "440 single"
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "label": "dual single sum"
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "label": "218 corrected single"
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "label": "218 corrected single"
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "label": "440 single"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "label": "440 single"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "label": "440 SC Compton"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "label": "440 JSCC"
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "label": "dual single sum"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "label": "dual single sum"
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "label": "440 JSCC + 218 single"
+    }
+  ],
+  "source_roi": "Existing H60 3D truth and authoritative fractional 3D sphere masks",
+  "crop": 0,
+  "smoothing_sigma": 0,
+  "fitted_gain": false,
+  "display_range": [
+    0,
+    10
+  ],
+  "colormap": "gray_r",
+  "mip_z_mm": [
+    -36,
+    36
+  ],
+  "metrics_z_mm": [
+    -60,
+    60
+  ],
+  "display_clipping": [
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 20,
+      "display_grid_pixels_above10": 64
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 50,
+      "display_grid_pixels_above10": 548
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 100,
+      "display_grid_pixels_above10": 1422
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 150,
+      "display_grid_pixels_above10": 2102
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 200,
+      "display_grid_pixels_above10": 2586
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 20,
+      "display_grid_pixels_above10": 70
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 50,
+      "display_grid_pixels_above10": 545
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 100,
+      "display_grid_pixels_above10": 1455
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 150,
+      "display_grid_pixels_above10": 2220
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440_SinglePhoton",
+      "iteration": 200,
+      "display_grid_pixels_above10": 2772
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 20,
+      "display_grid_pixels_above10": 3
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 50,
+      "display_grid_pixels_above10": 192
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 100,
+      "display_grid_pixels_above10": 612
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 150,
+      "display_grid_pixels_above10": 1066
+    },
+    {
+      "system": "EHE matrix+Poisson",
+      "channel": "440SinglePlus218Single",
+      "iteration": 200,
+      "display_grid_pixels_above10": 1493
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 20,
+      "display_grid_pixels_above10": 30
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 50,
+      "display_grid_pixels_above10": 478
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 100,
+      "display_grid_pixels_above10": 1543
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 150,
+      "display_grid_pixels_above10": 2364
+    },
+    {
+      "system": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 200,
+      "display_grid_pixels_above10": 2984
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 1000,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 2500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 5000,
+      "display_grid_pixels_above10": 24
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 7500,
+      "display_grid_pixels_above10": 46
+    },
+    {
+      "system": "JSCC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 10000,
+      "display_grid_pixels_above10": 60
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 10,
+      "display_grid_pixels_above10": 1
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 20,
+      "display_grid_pixels_above10": 106
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 50,
+      "display_grid_pixels_above10": 516
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 100,
+      "display_grid_pixels_above10": 1335
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 150,
+      "display_grid_pixels_above10": 2057
+    },
+    {
+      "system": "EHE",
+      "channel": "440_SinglePhoton",
+      "iteration": 200,
+      "display_grid_pixels_above10": 2626
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 1000,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 2500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 5000,
+      "display_grid_pixels_above10": 72
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 7500,
+      "display_grid_pixels_above10": 124
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePhoton",
+      "iteration": 10000,
+      "display_grid_pixels_above10": 162
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 1000,
+      "display_grid_pixels_above10": 2
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 2500,
+      "display_grid_pixels_above10": 67
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 5000,
+      "display_grid_pixels_above10": 571
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 7500,
+      "display_grid_pixels_above10": 1264
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_ComptonOnly",
+      "iteration": 10000,
+      "display_grid_pixels_above10": 1948
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 1000,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 2500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 5000,
+      "display_grid_pixels_above10": 60
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 7500,
+      "display_grid_pixels_above10": 133
+    },
+    {
+      "system": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "iteration": 10000,
+      "display_grid_pixels_above10": 179
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 20,
+      "display_grid_pixels_above10": 2
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 50,
+      "display_grid_pixels_above10": 165
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 100,
+      "display_grid_pixels_above10": 532
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 150,
+      "display_grid_pixels_above10": 966
+    },
+    {
+      "system": "EHE",
+      "channel": "440SinglePlus218Single",
+      "iteration": 200,
+      "display_grid_pixels_above10": 1338
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 1000,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 2500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 5000,
+      "display_grid_pixels_above10": 12
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 7500,
+      "display_grid_pixels_above10": 40
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SinglePlus218Single",
+      "iteration": 10000,
+      "display_grid_pixels_above10": 65
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 1000,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 2500,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 5000,
+      "display_grid_pixels_above10": 6
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 7500,
+      "display_grid_pixels_above10": 38
+    },
+    {
+      "system": "JSCC",
+      "channel": "440SingleComptonPlus218Single",
+      "iteration": 10000,
+      "display_grid_pixels_above10": 57
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 20,
+      "display_grid_pixels_above10": 61
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 50,
+      "display_grid_pixels_above10": 152
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 100,
+      "display_grid_pixels_above10": 175
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 150,
+      "display_grid_pixels_above10": 198
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440_SinglePhoton",
+      "iteration": 200,
+      "display_grid_pixels_above10": 222
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 20,
+      "display_grid_pixels_above10": 6
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 50,
+      "display_grid_pixels_above10": 52
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 100,
+      "display_grid_pixels_above10": 78
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 150,
+      "display_grid_pixels_above10": 110
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "iteration": 200,
+      "display_grid_pixels_above10": 156
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 0,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 10,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 20,
+      "display_grid_pixels_above10": 0
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 50,
+      "display_grid_pixels_above10": 10
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 100,
+      "display_grid_pixels_above10": 26
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 150,
+      "display_grid_pixels_above10": 33
+    },
+    {
+      "system": "EHE Geant4 5e10",
+      "channel": "440SinglePlus218Single",
+      "iteration": 200,
+      "display_grid_pixels_above10": 38
+    }
+  ],
+  "zero_iteration": "SHA-bound all-ones initialization; sums two; not a saved frame",
+  "cnr_peaks": [
+    {
+      "channel": "440_SinglePhoton",
+      "diameter_mm": 13,
+      "peak_cnr_iteration": 50,
+      "peak_cnr": 2.274655955757942,
+      "final200_cnr": 1.6504331183141503,
+      "final200_crc": 0.11635409364074685
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "diameter_mm": 22,
+      "peak_cnr_iteration": 60,
+      "peak_cnr": 4.555224539817211,
+      "final200_cnr": 3.7655877154594695,
+      "final200_crc": 0.3236852062013361
+    },
+    {
+      "channel": "440_SinglePhoton",
+      "diameter_mm": 37,
+      "peak_cnr_iteration": 50,
+      "peak_cnr": 9.912307346718926,
+      "final200_cnr": 7.409585043752333,
+      "final200_crc": 0.5954571604396617
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "diameter_mm": 10,
+      "peak_cnr_iteration": 60,
+      "peak_cnr": 2.3878282138980533,
+      "final200_cnr": 2.1769254688768083,
+      "final200_crc": 0.15122012890453881
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "diameter_mm": 17,
+      "peak_cnr_iteration": 60,
+      "peak_cnr": 5.407709795844187,
+      "final200_cnr": 4.023037669931607,
+      "final200_crc": 0.357826240512416
+    },
+    {
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "diameter_mm": 28,
+      "peak_cnr_iteration": 50,
+      "peak_cnr": 9.167962191134237,
+      "final200_cnr": 6.415202192928643,
+      "final200_crc": 0.5380066913186298
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 10,
+      "peak_cnr_iteration": 200,
+      "peak_cnr": 2.0141973851547395,
+      "final200_cnr": 2.0141973851547395,
+      "final200_crc": 0.38397602188214386
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 13,
+      "peak_cnr_iteration": 50,
+      "peak_cnr": 2.1370710705198057,
+      "final200_cnr": 1.460362931372521,
+      "final200_crc": 0.11483321354059192
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 17,
+      "peak_cnr_iteration": 50,
+      "peak_cnr": 3.1724495194115176,
+      "final200_cnr": 1.7688077718836848,
+      "final200_crc": 0.4375718401504648
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 22,
+      "peak_cnr_iteration": 60,
+      "peak_cnr": 4.442126040356835,
+      "final200_cnr": 3.4087444821027786,
+      "final200_crc": 0.31737512058506195
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 28,
+      "peak_cnr_iteration": 20,
+      "peak_cnr": 5.333274196392044,
+      "final200_cnr": 2.6514925442738906,
+      "final200_crc": 0.6074587637043437
+    },
+    {
+      "channel": "440SinglePlus218Single",
+      "diameter_mm": 37,
+      "peak_cnr_iteration": 40,
+      "peak_cnr": 9.785011474665641,
+      "final200_cnr": 6.883231743633016,
+      "final200_crc": 0.6273323801654919
+    }
+  ],
+  "limits": [
+    "Existing response discrepancy is preserved; user continued original method; no new physical calibration claimed",
+    "5e10 versus 5e9 includes a tenfold dose difference; not an isolated algorithm comparison",
+    "Model-Poisson data are a distinct generated realization and not Geant4 observations",
+    "EHE218 background budget is own440200; JSCC218 background budget is prior44010000",
+    "Materials, detector coverage, truncation and response approximations differ",
+    "Each system retains its full iteration range; same iteration or column is not equal convergence",
+    "CNR peaks are descriptive for one acquisition; not a fitted stopping policy or device-performance estimate"
+  ]
+}

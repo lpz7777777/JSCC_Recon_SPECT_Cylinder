@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "native_scalar_identities_checked": 441,
+  "independent_float64_background_scalar_checks": 189,
+  "independent_float64_sphere_roi_scalar_checks": 996,
+  "roi_metric_tolerance": 1e-06,
+  "native_rows": 63,
+  "sphere_rows": 252,
+  "zero_peak_undefined": true,
+  "zero_cnr_undefined": true,
+  "figures": {
+    "cnr_full_trajectories.png": {
+      "width": 2280,
+      "height": 2550,
+      "sha256": "0b207a087b91d2803dadf8726df4c0bdf20ab83a93f53e11174bd7ad838f9e3b"
+    },
+    "crc_full_trajectories.png": {
+      "width": 2280,
+      "height": 2550,
+      "sha256": "a59f49982126439e99ed2d0f95e17046170695682a6e8ca7d8386a99c6b7db92"
+    },
+    "density_noise_curves.png": {
+      "width": 3120,
+      "height": 2388,
+      "sha256": "5fe58ad355c3a0b0f61c54de9510c23a8a666bd2ee7a7cc55b2aed839bcd4288"
+    },
+    "integral_position_curves.png": {
+      "width": 3120,
+      "height": 2064,
+      "sha256": "2d892ceed33460bed2b8391661fc7ca7b5e9e7f555e6cf83b02ae296312f0828"
+    },
+    "overall_mip72_15_routes.png": {
+      "width": 2880,
+      "height": 4488,
+      "sha256": "67f155ee242686988474e97a6ee334bf6873365e6c0505ddb894a0b51f866b1f"
+    },
+    "transport_axial.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "e55b79a22c70b1e438ae8f7867c1b57860f0b54badef0ce367a2308eaec22f52"
+    },
+    "transport_coronal.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "66ea25052b9b689e47adeb9bf55c68c08e95b1681515d2c1850059fc21a130dc"
+    },
+    "transport_mip72.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "d0e02262086a4e34a30a38d637767221d8faef89ab19cc31692b2de4be8428d1"
+    },
+    "transport_sagittal.png": {
+      "width": 2880,
+      "height": 1032,
+      "sha256": "9391cf12d5813cfad63cde7475e12237c9a07182515f028f747cb4bbf5bba34f"
+    }
+  },
+  "qa_source_sha256": "eb455cf5162cd38efcdbfd2a601a9295517cdd23b365b933fa43e0f7ee034289",
+  "artifact_manifest_sha256": "7554c58fa919882c44ffdec40e638956ce68f41f42b4d457d2b2dd2f3c8d7b6f",
+  "visual_review": "Pending direct viewing of every scientific figure"
+}

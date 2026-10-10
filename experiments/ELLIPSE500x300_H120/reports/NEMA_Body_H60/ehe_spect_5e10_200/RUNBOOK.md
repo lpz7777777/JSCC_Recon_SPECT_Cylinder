@@ -1,4 +1,26 @@
-# Execution registry and continuation
+# Execution registry: completed delivery
+
+Latest 2026-10-10 authority supersedes all earlier pending snapshots below.
+The independent actual5e10 acquisition and original MLEM200 are complete:
+transport15684979,validation1681331,independent validation1681343,
+formal1681346,independent formal1681349 all actually COMPLETED/0:0.
+Full-worker/input/all-row/all-view/S/background acceptance and strict fetch
+passed.40 checkpoints/three20-frame histories and all nine final scientific
+figures passed numerical and direct visual review. Read RESULTS.md and
+final_delivery.json; visual_figure_acceptance.json selects the two corrected
+layout galleries. No scientific arrays,matrices,windows or algorithms changed.
+
+Current generated controller.json and postprocess_registration.json are
+complete/exit0, with owned PIDs36496/31452 exited. Do not start advance/fetch/
+submit or rerun any accepted stage. compton-v5 remains PAUSED.
+Execution/numerical delivery preserves the prior response discrepancy and
+human continuation policy; it is not physical calibration PASS.
+
+The following entries preserve chronological historical snapshots, including
+statements of pending work before actual completion. They are not current
+submission authorization or current running-job state.
+
+# Historical execution registry and continuation
 
 ## Current immutable inputs
 

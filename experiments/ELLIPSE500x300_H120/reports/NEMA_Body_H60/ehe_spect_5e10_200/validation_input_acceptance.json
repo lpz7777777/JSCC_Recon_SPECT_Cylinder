@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "status": "complete",
+  "job": "1681331",
+  "hostname": "wqd10naf02g1",
+  "release_key": "7ace84c81c85b6a8",
+  "program": "run_ehe_5e10_reconstruction.py",
+  "program_sha256": "f023205614292fa8a039321ac56c35e9a3815107fd2109ce98d20f0de9770d60",
+  "bootstrap_sha256": "dfe49c0110b91508fbc8775a9714cc971ca7d6204cad67fa0b3a9215bf62f60c",
+  "archive_sha256": "2987088d3a44f20c48def92ffa37883f337663548fe34360327124e44bffeeae",
+  "collection_sha256": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8",
+  "scratch": {
+    "device": "/dev/sda2",
+    "mount": "/tmp",
+    "filesystem": "ext4",
+    "path": "/tmp",
+    "free_bytes": 82772082688,
+    "required_bytes": 955284509
+  },
+  "full_worker_verification": "Original target completed successfully, including all1000 worker verification",
+  "scientific_code_unchanged": true,
+  "shared_partial_counts_reused": false,
+  "stage_seconds": 5.4077626103535295,
+  "temporary_counts": "/tmp/ehe5e10_1681331_f95c51_l/counts",
+  "elapsed_seconds": 429.0536111667752,
+  "receipt_sha256": "34e8490a874f9b20a403dcbc7f285d6683fe8ab3bee1fefad00d5453a20c1ca7"
+}

@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "reviewed_at": "2026-10-10T03:48:49.976813+00:00",
+  "method": "Direct viewing of all nine original exported figures and both layout-only replacements",
+  "skill": "reconstruction-result-visualizer; explicit user 3D truth/crop0/no smoothing/no fitted-gain contract overrides generic 2D catalog defaults",
+  "original_scientific_qa_sha256": "a79e30c12a5ff003e114adce5399410777d43e29a66a3cffa62c1b9057e4027c",
+  "layout_acceptance_sha256": "17a12c1d6105bc9aac41ba03a13d5570060fbbfcf77b2067efe933ae341933f6",
+  "figures": {
+    "transport_axial.png": {
+      "path": "comparison/transport_axial.png",
+      "sha256": "e55b79a22c70b1e438ae8f7867c1b57860f0b54badef0ce367a2308eaec22f52",
+      "width": 2880,
+      "height": 1032,
+      "directly_viewed": true,
+      "observation": "All three routes, truth and 0/10/20/50/100/150/200 columns inspected. Fixed gray_r scale and complete extent. Larger hot spheres resolve; background spots grow with iterations; small spheres remain limited."
+    },
+    "transport_coronal.png": {
+      "path": "comparison_reviewed/transport_coronal.png",
+      "sha256": "4d1c4b20ec6953fcf1c51d76484b0ad6fcaf8cff81615fb03e3f5f5d4651c236",
+      "width": 2839,
+      "height": 780,
+      "directly_viewed": true,
+      "observation": "Original row labels clipped. Replacement directly inspected: all three horizontal labels, title, 8 columns and fixed colorbar visible; original scientific planes and extent retained."
+    },
+    "transport_sagittal.png": {
+      "path": "comparison_reviewed/transport_sagittal.png",
+      "sha256": "87b18c77a401c2f6c1740868873885c4ee45213c862dc398c04c65c425cca49c",
+      "width": 2839,
+      "height": 802,
+      "directly_viewed": true,
+      "observation": "Original row labels clipped. Replacement directly inspected: labels, title, all 8 columns and colorbar visible. Authoritative x=-1.5 plane intersects no hot sphere; absence of hot spheres in its truth is consistent."
+    },
+    "transport_mip72.png": {
+      "path": "comparison/transport_mip72.png",
+      "sha256": "d0e02262086a4e34a30a38d637767221d8faef89ab19cc31692b2de4be8428d1",
+      "width": 2880,
+      "height": 1032,
+      "directly_viewed": true,
+      "observation": "Complete three-route 72mm MIP inspected. No filtering or gain fitting. Background peaks rise at late iterations; fixed display ceiling is explicit."
+    },
+    "overall_mip72_15_routes.png": {
+      "path": "comparison/overall_mip72_15_routes.png",
+      "sha256": "67f155ee242686988474e97a6ee334bf6873365e6c0505ddb894a0b51f866b1f",
+      "width": 2880,
+      "height": 4488,
+      "directly_viewed": true,
+      "observation": "All 15 routes inspected with each row actual iteration labels. EHE0-200 and JSCC0-10000 remain distinct. Model-Poisson acquisition is separately labelled, all truth columns retained; no equal-convergence claim."
+    },
+    "cnr_full_trajectories.png": {
+      "path": "comparison/cnr_full_trajectories.png",
+      "sha256": "0b207a087b91d2803dadf8726df4c0bdf20ab83a93f53e11174bd7ad838f9e3b",
+      "width": 2280,
+      "height": 2550,
+      "directly_viewed": true,
+      "observation": "All 15 panels inspected, full saved iterations and sphere legends visible. Single-energy 5e10 CNR maxima occur at50-60; later noise penalizes CNR. Init undefined; no stopping policy fitted."
+    },
+    "crc_full_trajectories.png": {
+      "path": "comparison/crc_full_trajectories.png",
+      "sha256": "a59f49982126439e99ed2d0f95e17046170695682a6e8ca7d8386a99c6b7db92",
+      "width": 2280,
+      "height": 2550,
+      "directly_viewed": true,
+      "observation": "All15 panels inspected; common vertical scale includes negative and >1 values; no clipping or selective omission of unfavorable results."
+    },
+    "density_noise_curves.png": {
+      "path": "comparison/density_noise_curves.png",
+      "sha256": "5fe58ad355c3a0b0f61c54de9510c23a8a666bd2ee7a7cc55b2aed839bcd4288",
+      "width": 3120,
+      "height": 2388,
+      "directly_viewed": true,
+      "observation": "All7 metrics and4 systems inspected. Physical gamma density units and separate x ranges; full120mm/native metrics retained. Tenfold dose difference is explicit."
+    },
+    "integral_position_curves.png": {
+      "path": "comparison/integral_position_curves.png",
+      "sha256": "2d892ceed33460bed2b8391661fc7ca7b5e9e7f555e6cf83b02ae296312f0828",
+      "width": 3120,
+      "height": 2064,
+      "directly_viewed": true,
+      "observation": "All6 metrics and4 systems inspected. Integral/recovery, |z|>30 leakage and peak positions visible. Uniform-init peak omitted; late peak movement retained."
+    }
+  },
+  "physical_calibration_claim": false,
+  "limits": [
+    "Existing response discrepancy is preserved; user continued original method; no new physical calibration claimed",
+    "5e10 versus 5e9 includes a tenfold dose difference; not an isolated algorithm comparison",
+    "Model-Poisson data are a distinct generated realization and not Geant4 observations",
+    "EHE218 background budget is own440200; JSCC218 background budget is prior44010000",
+    "Materials, detector coverage, truncation and response approximations differ",
+    "Each system retains its full iteration range; same iteration or column is not equal convergence",
+    "CNR peaks are descriptive for one acquisition; not a fitted stopping policy or device-performance estimate"
+  ],
+  "original_pngs_preserved": true
+}
