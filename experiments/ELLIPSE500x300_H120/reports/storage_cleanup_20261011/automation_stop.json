@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-11T05:14:11.668139+00:00",
+  "human_request": "停止定时任务，检查并清理重建超算空间",
+  "changed_automation": "jscc-5e10",
+  "applied_status": "PAUSED",
+  "all_current_automations": [
+    {
+      "id": "c48",
+      "name": "C48复杂体模实验推进",
+      "status": "PAUSED"
+    },
+    {
+      "id": "compton-v5",
+      "name": "EHE SPECT 5e9与JSCC对比推进",
+      "status": "PAUSED"
+    },
+    {
+      "id": "detail-history",
+      "name": "detail_history 扩容推进",
+      "status": "PAUSED"
+    },
+    {
+      "id": "jscc-5e10",
+      "name": "JSCC 5e10三路模拟重建推进",
+      "status": "PAUSED"
+    },
+    {
+      "id": "late-history-2000",
+      "name": "late_history_2000 实验推进",
+      "status": "PAUSED"
+    },
+    {
+      "id": "nema-1e9",
+      "name": "验收 NEMA 1e9 六路重建",
+      "status": "PAUSED"
+    },
+    {
+      "id": "nema-5e9-3",
+      "name": "NEMA 5e9 3σ事件删除对照验收",
+      "status": "PAUSED"
+    },
+    {
+      "id": "nrmse",
+      "name": "NRMSE 后续实验推进",
+      "status": "PAUSED"
+    }
+  ],
+  "compute_jobs_cancelled": false
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "current_tool_sha256": "7185b44f181af63cbc82995573ea2a5e5e5ee52a4de0cfb391bcc843e3761a4b",
+  "executions": [
+    {
+      "mode": "prove",
+      "actual_remote_code_sha256": "2c1c9f4f16f802a45255d6fdaf298361bbd3ce9a07eb29279fc24cd104290d8d",
+      "reproduced": true
+    },
+    {
+      "mode": "apply",
+      "actual_remote_code_sha256": "6d2cacd02fa4fe3dc4b45ca748788943c557847cf488c51113f6afdfa88a11b7",
+      "reproduced": true
+    }
+  ]
+}

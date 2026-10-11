@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-11T05:20:49.118897+00:00",
+  "failed_guard_expression": "Command=(S+)",
+  "reason": "Escaped regex token did not match Slurm Command; fail closed before hashing or deletion",
+  "repair": "Parse whitespace-separated Slurm key=value fields and compare exact Command path",
+  "original_job": "1685272 remains PENDING; unchanged",
+  "deletion_started": false
+}

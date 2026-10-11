@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "all_deleted_paths_absent": true,
+  "excluded_paths_preserved": 1207,
+  "df": "Filesystem                   1B-blocks         Used    Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 741395582976 117597876224  87% /data\n",
+  "legacy_du": "256000\t/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/Factors\n57201285120\t/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/List\n",
+  "queue": "JOBID STATE NODELIST(REASON)\n1685272 PENDING (Priority)\n",
+  "original_accounting": "1685272|PENDING|0:0\n",
+  "utc": "2026-10-11T05:41:39.466301+00:00",
+  "local_backups_still_present": 431,
+  "journal_matches_acceptance": true
+}

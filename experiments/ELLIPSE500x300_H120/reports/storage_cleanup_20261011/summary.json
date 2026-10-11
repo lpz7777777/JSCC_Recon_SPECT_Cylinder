@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "before": {
+    "total": 858993459200,
+    "used": 792606846976,
+    "free": 66386612224,
+    "percent": "93%"
+  },
+  "after": {
+    "total": 858993459200,
+    "used": 741395582976,
+    "free": 117597876224,
+    "percent": "87%"
+  },
+  "actual_free_increase_bytes": 51211264000,
+  "deleted_files": 429,
+  "deleted_logical_bytes": 51211352294,
+  "deleted_allocated_bytes": 51211449344,
+  "categories": [
+    {
+      "label": "旧Factors远端副本",
+      "files": 291,
+      "bytes": 39568800301,
+      "GiB": 36.85131697077304
+    },
+    {
+      "label": "旧List远端副本",
+      "files": 130,
+      "bytes": 4252956303,
+      "GiB": 3.960874213837087
+    },
+    {
+      "label": "重复传输归档",
+      "files": 8,
+      "bytes": 7389595690,
+      "GiB": 6.8820972833782434
+    }
+  ],
+  "protected_files": 1739,
+  "protected_metadata_unchanged": true,
+  "preserved_excluded_files": 1207,
+  "strict_fetch_sha_passed": true,
+  "automation_status": "PAUSED",
+  "original_5090_job": "1685272 PENDING(Priority); unchanged",
+  "validation10_or_formal10000_submitted": false,
+  "experiment_delivered": false,
+  "ssd_total_quota_bytes": 1073741824,
+  "ssd_writable": false,
+  "full_response_bytes": 1530759784160
+}

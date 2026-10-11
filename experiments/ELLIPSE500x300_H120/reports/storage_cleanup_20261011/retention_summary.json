@@ -1,0 +1,37 @@
+{
+  "local_missing_or_size_different": {
+    "files": 1205,
+    "bytes": 57200744714
+  },
+  "same_size_sha_different": [
+    {
+      "path": "Factors/511keV_RotateNum10_WrongPos/Sensi_d",
+      "bytes": 92800,
+      "allocated_bytes": 93184,
+      "sha256": "1a000407a1620cd578ff39a9b3f8c351e629db96e1fbf6b4d000eeb7dcff2d55",
+      "identical": false
+    },
+    {
+      "path": "Factors/511keV_RotateNum10_WrongPos/Sensi_d_2",
+      "bytes": 92800,
+      "allocated_bytes": 93184,
+      "sha256": "737d7e78a9c9a876fe11a92315e96e718bbaea30b752944086a93655bef66fe6",
+      "identical": false
+    }
+  ],
+  "protected_metadata_before": {
+    "files": 1739,
+    "bytes": 19832548410,
+    "metadata_sha256": "b0b6588ea76637e5b7d5faf903e71306cc0c3371dda048cb0ef97e61eca1d8f0"
+  },
+  "preserved_paths": [
+    "experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000",
+    "experiments/ELLIPSE500x300_H120/generated/FactorsCalibrated",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200",
+    "all reconstruction results and immutable releases",
+    "installed conda environments",
+    "/data/run01/scxi717/zxc",
+    "other lpz project"
+  ],
+  "only_exact_sha_local_backed_files_eligible": true
+}

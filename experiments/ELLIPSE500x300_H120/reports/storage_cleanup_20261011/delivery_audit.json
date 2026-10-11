@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "source_parent_commit": "f858388d888461556d89e7bf0ad629a75d631ce5",
+  "nonself_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 5487,
+      "sha256": "d1c02b85920dc35b221fe99ac86bd3a27ef5929aa9faf1a340e681c4b52a5ba9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/AGENTS.md",
+      "bytes": 12551,
+      "sha256": "b073704fb005457138d47dc9d5aeeff826a653095ff8b64fe7e3a547abc7baee"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/README.md",
+      "bytes": 10103,
+      "sha256": "840bf6a0ebae66e67bb69646cbde6f5d7a5e02cc47e0c42cea1b0959521c7ee1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+      "bytes": 11488,
+      "sha256": "a18b9bf8bd34494d6de42410b6f7bac188c675f1a9251c6b5db764f224d5ba36"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+      "bytes": 14550,
+      "sha256": "8e6418262dac819cbd9de73c3855797222e1b198dcb6cd8415b5da48b8f86c9d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md",
+      "bytes": 27167,
+      "sha256": "45e07823c1c643c191038f1d53e0d746fe8e8bc657ddbc74a303bdcd8423e996"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/STREAMING_STORAGE_HOLD.md",
+      "bytes": 3737,
+      "sha256": "10d80dfa2655da9136be1fa9613eb1583aa71eea7e75390dba628b303d577031"
+    },
+    {
+      "path": "tools/research/cleanup_redundant_gpu_storage.py",
+      "bytes": 12012,
+      "sha256": "7185b44f181af63cbc82995573ea2a5e5e5ee52a4de0cfb391bcc843e3761a4b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/automation_stop.json",
+      "bytes": 1198,
+      "sha256": "dac19657beb506c30e27e59d45d5fada0c480d9ba952a23365f9b97f7ca77d71"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/candidate_plan.json",
+      "bytes": 536367,
+      "sha256": "83d436b5ddf718df07b7efce6bb2c861155f43ab0deb26df6d70e111e888b00a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/cleanup_acceptance.json",
+      "bytes": 139843,
+      "sha256": "bb88be3fd510339ce0ace19072715d1a08fe7af464bcbf46d0f526901a6256b9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/deletion_journal.jsonl",
+      "bytes": 117445,
+      "sha256": "33bee3eab73492be8d29c7b02ff2d79f8b3f7d7db756d681a90a60441ddd2c62"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/executed_code_identity.json",
+      "bytes": 463,
+      "sha256": "560a365d84fbc915f08cae269712f38ad5ffeaa0a859cd7b19f1bb6da8eafca0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/execution_apply.json",
+      "bytes": 283,
+      "sha256": "b8dac82b98595d8653bdb98bb3e1f6d70050003e3d55a4c0d94003f66d8e3d91"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/execution_prove.json",
+      "bytes": 283,
+      "sha256": "64e771dd28ebea7fb787f7c6d7176932947aaf3af2c7c55643495c0be62fbd34"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/execution_prove_rejected_guard.json",
+      "bytes": 283,
+      "sha256": "84b4820f55d7e9cf97f16632ff53583c0ebc938839af4b4c6ef1fff1cf6056dd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/fetch_apply.json",
+      "bytes": 240,
+      "sha256": "ad938710d43ad36981915e674e9736295e29ba5d9477d7787609a64ec6baf5ef"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/fetch_prove.json",
+      "bytes": 130,
+      "sha256": "f19b8fc2894ed9458bd3f4ba112cbbb8ea3f1a02ce8a0946dcf3a7106b38e7f9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/file_inventory.json",
+      "bytes": 327191,
+      "sha256": "33970e07b6986813beb38a6a8c5f5149de792687dda4329bbcefed741e62ec52"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/guard_parser_repair.json",
+      "bytes": 376,
+      "sha256": "44621b1bb22c1b238535c36b42a68c16505f2a72c00a248d948312b00741bae6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/inventory_after.json",
+      "bytes": 720,
+      "sha256": "f29eec6d3fcf93834177c8a3d316bbe04ce79667e61b891c403eab2fe2d8ff7b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/inventory_before.json",
+      "bytes": 34292,
+      "sha256": "653ec43af9cdbf7fa8f7fae7979e552b82bf003f59f9b0f3d403c68de2a39682"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/README.md",
+      "bytes": 3006,
+      "sha256": "ae063731a81ed52b2312340b86306994ca268b2745ea2be8d25ac9311b786b41"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/remote_proof.json",
+      "bytes": 112237,
+      "sha256": "eb4be163e05300c3577ec99b61c7480d19927db52bcfffe3c7b980e0f47b027b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/retention_summary.json",
+      "bytes": 1210,
+      "sha256": "ba80bc4c39aef2c91a9abcf6a91dda602b318a08fd93d8ca571fcb318cb31bfd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/summary.json",
+      "bytes": 1239,
+      "sha256": "e029ded2333e87be07041532d0c53462c630d8d1e605849f5cad509e3c131032"
+    }
+  ],
+  "nonself_file_count": 26,
+  "nonself_bytes": 1373901,
+  "maximum_file_bytes": 536367,
+  "utf8_only": true,
+  "binaries_matrices_arrays_archives_credentials_excluded": true,
+  "actual_cleanup_passed": true,
+  "automation_paused": true
+}
