@@ -1,0 +1,10 @@
+{
+  "stage": "selection_5090_8x4_monitor_repair",
+  "job_name": "JSCC5e10Repair5090x4",
+  "command": "sbatch --parsable -p gpu_5090 --qos=gpugpu -N8 -n8 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4 --time=240 --exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10Repair5090x4 --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/selection_5090_8x4_monitor_repair.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/selection_5090_8x4_monitor_repair.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/primary_selection_repair_releases/c49ad9c3a38589e6/selection.sh",
+  "script_sha256": "38d111637ccc805277fcac8398bb43699ae351bb4df7825d6e988cdecd69e4ff",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/primary_selection_repair_releases/c49ad9c3a38589e6",
+  "started_epoch": 1791715412.5785422,
+  "resolved": true,
+  "registered_job": 1688717
+}

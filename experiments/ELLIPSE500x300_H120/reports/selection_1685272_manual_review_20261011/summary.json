@@ -1,0 +1,20 @@
+{
+  "job": 1685272,
+  "stage": "selection",
+  "state": "FAILED",
+  "exit_code": "15:0",
+  "worker_step_exit_code": "1:0",
+  "elapsed_seconds": 33,
+  "start_Asia_Shanghai": "2026-10-11 14:52:00",
+  "end_Asia_Shanghai": "2026-10-11 14:52:33",
+  "all_steps_terminal": true,
+  "four_visible_gpu_nodes": 8,
+  "failure": "Allocated GPU UUID missing from measured memory evidence",
+  "failure_stage": "setup / DeviceMonitor.sample before output directory creation",
+  "output_directory_exists": false,
+  "strict_downloads": 5,
+  "original_registry_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+  "new_job_submitted": false,
+  "original_job_modified": false,
+  "inspection": "inspection_103105.json"
+}

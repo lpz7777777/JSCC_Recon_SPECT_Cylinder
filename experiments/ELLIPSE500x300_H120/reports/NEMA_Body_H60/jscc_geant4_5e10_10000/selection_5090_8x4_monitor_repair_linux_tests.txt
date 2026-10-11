@@ -1,0 +1,25 @@
+REPAIRED_32GPU_SOURCE_SHA_IMPORT_PASS
+test_actual_monitor_rejects_missing_or_ambiguous_device (test_jscc_5e10_gpu_uuid.GPUIdentity) ... ok
+test_actual_monitor_selects_uuid_not_ordinal (test_jscc_5e10_gpu_uuid.GPUIdentity) ... JSCC_GPU_UUID_IDENTITY 0 12345678-9abc-def0-1234-56789abcdef0 GPU-12345678-9abc-def0-1234-56789abcdef0 2.8.0+cu128
+ok
+test_full_uuid_only (test_jscc_5e10_gpu_uuid.GPUIdentity) ... ok
+test_selection_and_contract_are_byte_unchanged_by_monitor_repair (test_jscc_5e10_gpu_uuid.GPUIdentity) ... ok
+test_all_original_scientific_members_and_input_bindings_unchanged (test_jscc_5e10_5090_8x4_monitor_repair.PrimaryMonitorRepair) ... ok
+test_only_original_selection_entry_and_isolated_outputs_launched (test_jscc_5e10_5090_8x4_monitor_repair.PrimaryMonitorRepair) ... ok
+test_original_32_gpu_setup_and_resource_collection_unchanged (test_jscc_5e10_5090_8x4_monitor_repair.PrimaryMonitorRepair) ... ok
+test_32_gpu_ids_and_conservative_aggregate_node_memory (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_checkpoint_preserves_history_and_rejects_corruption (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_cuda_launcher_uses_four_local_ranks_and_no_explicit_mem (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_formal_entry_has_no_joint_solver_call (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_only_three_channels_and_independent_modes (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_real_dose_and_all_independent_worker_seeds_required (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_shared_numerical_sample_precedes_rank_partitioning (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_single_and_fixed_background_mlem_match_original_exactly (test_jscc_5e10.JSCC5e10Tests) ... ok
+test_standalone_compton_matches_original_branch_and_all_saved_iterations (test_jscc_5e10.JSCC5e10Tests) ... JSCC_COMPTON_ITERATION 50 100
+JSCC_COMPTON_ITERATION 100 100
+ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.353s
+
+OK

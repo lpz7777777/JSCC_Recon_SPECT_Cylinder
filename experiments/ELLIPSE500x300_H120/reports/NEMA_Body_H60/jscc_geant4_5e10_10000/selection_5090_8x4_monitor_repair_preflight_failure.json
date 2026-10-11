@@ -1,0 +1,10 @@
+{
+  "cause": "Local test import required SSH workflow dependency in frozen payload",
+  "failure_before_connection_and_scheduler": true,
+  "slurm_submissions": 0,
+  "retained_payload": "generated\\jscc_geant4_5e10_10000\\selection_5090_8x4_monitor_repair_kernel_payload.preflight_failed_import_dependency",
+  "failed_controller_sha256": "99cd25685aa8c66a0923ea3176780b17621b8149c71a410ffc2143c3f61e41c6",
+  "failed_test_log_sha256": "a36eb7884d38a32dd02cf86aee37db918198e48299fbfd4ec061998610683ba1",
+  "bounded_fix": "Use stdlib shell quoting; import SSH connection inside submit/status only",
+  "successful_release_key": "c49ad9c3a38589e6"
+}

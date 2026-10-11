@@ -1,0 +1,20 @@
+{
+  "scope": "Local submitted-resource parser only; accept exact pending 8-8 range and reject other topology",
+  "deployed_release_key": "c49ad9c3a38589e6",
+  "deployed_release_unchanged": true,
+  "deployed_controller_sha256": "1d8fe75c656676ffac1fbbc9d5f2222cf14bb105764f280322d074819ed075e0",
+  "current_controller_sha256": "39f01c1769f7b82ae610f180fee05476a2fef6156e9da99c5cbc65f5e4aa711f",
+  "current_test_source_sha256": "84bc7971b1366eff9e98d181fcd0ac0b1fa92272abd7b93abf397e47c43067b8",
+  "test_log_sha256": "784dccc2003442e6e886c1f4e603992fd6f5380d2daba8238a318817bb04049c",
+  "original_submit_scontrol_sha256": "f90a5be1810d40f2eb706f8875a216f09e5f33ca9e0e6bc4ebb098e276c8db67",
+  "recovered_acceptance_sha256": "593df6db7304596e9e9082edcef1b79069ad834f33cfaf0feee1cf80ce2ca8e4",
+  "active_job": 1688717,
+  "extra_submit_or_deploy_count": 0,
+  "preserved_sources": {
+    "inspect_primary_repair_submission.py": "80ff3c85eb5b0efbf5d53f07241eea7cbb4eeb11c79c63f022977ed078f0324e",
+    "jscc_5e10_5090_8x4_monitor_repair.py": "1d8fe75c656676ffac1fbbc9d5f2222cf14bb105764f280322d074819ed075e0",
+    "jscc_5e10_gpu_uuid.py": "84f6807c9766b885f1179ad5f4823880a528439bd6ca865e0b979f59742c6a75",
+    "jscc_5e10_runtime.py": "2545941427afc16f7e2ab1a9c2271f52076ca14806412f43ea5bb07640e713cd",
+    "test_jscc_5e10_5090_8x4_monitor_repair.py": "9ff79e1c54845933beedea5a9f9edfd43b57d2f0588d6cebfd77e2cd8dcd5e66"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "job": 1688717,
+  "stage": "selection_5090_8x4_monitor_repair",
+  "host": "gpu",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/primary_selection_repair_releases/c49ad9c3a38589e6",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_1688717",
+  "allocation": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/allocations/selection_5090_8x4_monitor_repair_1688717.txt",
+  "repaired_job": 1685272,
+  "nodes": 8,
+  "gpus_per_node": 4,
+  "world_size": 32,
+  "cpus_per_node": 32,
+  "partition": "gpu_5090",
+  "explicit_mem_parameter": false,
+  "walltime_minutes": 240,
+  "phase_limit_seconds": 3600,
+  "prepare_limit_seconds": 10800,
+  "total_limit_seconds": 14220,
+  "freeze_sha256": "401590d85b9167beac8e380eb7ef1d2acaef1a8a68cdeb1c244b8d01df319eed",
+  "script_sha256": "38d111637ccc805277fcac8398bb43699ae351bb4df7825d6e988cdecd69e4ff",
+  "preserved_records": {
+    "selection_job.json": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+    "selection_4090_trial_job.json": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1",
+    "selection_5090_8x2_trial_job.json": "e4719f6586347b3bda51818853465765cc7b1ee400b3a4cb699635fc0f2057da",
+    "selection_5090_8x2_monitor_repair_job.json": "1ad2ab9eb6f562a9c217767c0ad65b0a0da4c0bef2d816a33a228a427b66d3fe",
+    "selection_5090_8x2_monitor_repair_verification_job.json": "9aa011a38f28c6f7f3d62df34a652227392b70e134126d30ddf3e487c2d2ee38",
+    "streaming_4090_8x3_freeze.json": "377e3316e2bcf667f539ed0f05503f4983874d42f8ab4bcca2b2a84b818e9ed7"
+  },
+  "submitted_epoch": 1791715412.9256084
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "freeze_sha256": "401590d85b9167beac8e380eb7ef1d2acaef1a8a68cdeb1c244b8d01df319eed",
+  "scheduler_test_only": "sbatch: Job 1688716 to start at 2032-03-19T20:08:17 using 256 processors on nodes wqd10nah04g5,wqd10nah10g1,wqd10nah11g1,wqd10nbj01g3,wqd10nbj03g[1,3],wqd10nbj04g5,wqd10nbm09g5 in partition gpu_5090\nsbatch:   Preempts: 10271\n",
+  "script_sha256": "38d111637ccc805277fcac8398bb43699ae351bb4df7825d6e988cdecd69e4ff",
+  "linux_tests_sha256": "83083f951410192ffa727c23c0e123e0966992a7211ca95a59a25e1f15cf488c",
+  "gpu_execution_verified": false,
+  "no_explicit_mem": true
+}

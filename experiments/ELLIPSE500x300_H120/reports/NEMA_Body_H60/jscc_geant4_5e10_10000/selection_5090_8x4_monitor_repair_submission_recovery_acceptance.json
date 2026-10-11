@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "job": 1688717,
+  "checked_epoch": 1791715638.2931736,
+  "remote_utc": "2026-10-11T10:44:39Z",
+  "actual_state": "PENDING",
+  "accounting": "1688717|PENDING|0:0|00:00:00||Unknown|Unknown\n",
+  "queue": "1688717|JSCC5e10Repair5090x4|PENDING|0:00|(Priority)\n",
+  "local_false_alarm": "Pending scontrol NumNodes=8-8 was compared with exact string 8",
+  "repaired_pending_range_parser": true,
+  "additional_submissions": 0,
+  "original_controller_exit_code": 1,
+  "original_registration_preserved": true,
+  "job_record_sha256": "4274ee5de92a4422e14f9683e1e59909b879707bc65fdb27e4566f19ba514515",
+  "freeze_sha256": "401590d85b9167beac8e380eb7ef1d2acaef1a8a68cdeb1c244b8d01df319eed",
+  "actual_scontrol_sha256": "b407e92b8412f2a88aaf483cc7a0e6f90dfe91c8d0120e4313134a4e4d82f5d8",
+  "controller_before_sha256": "1d8fe75c656676ffac1fbbc9d5f2222cf14bb105764f280322d074819ed075e0",
+  "controller_after_sha256": "39f01c1769f7b82ae610f180fee05476a2fef6156e9da99c5cbc65f5e4aa711f",
+  "controller_test_sha256": "784dccc2003442e6e886c1f4e603992fd6f5380d2daba8238a318817bb04049c",
+  "preserved_records": {
+    "selection_job.json": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+    "selection_4090_trial_job.json": "09c042772b3dba4b91527e7e96dd8961f09efaf8a1aac1c773a69d8cb8a010f1",
+    "selection_5090_8x2_trial_job.json": "e4719f6586347b3bda51818853465765cc7b1ee400b3a4cb699635fc0f2057da",
+    "selection_5090_8x2_monitor_repair_job.json": "1ad2ab9eb6f562a9c217767c0ad65b0a0da4c0bef2d816a33a228a427b66d3fe",
+    "selection_5090_8x2_monitor_repair_verification_job.json": "9aa011a38f28c6f7f3d62df34a652227392b70e134126d30ddf3e487c2d2ee38",
+    "streaming_4090_8x3_freeze.json": "377e3316e2bcf667f539ed0f05503f4983874d42f8ab4bcca2b2a84b818e9ed7"
+  },
+  "registrations": {
+    "advance": {
+      "record": {
+        "pid": 7632,
+        "status": "complete",
+        "started_epoch": 1791639366.253791,
+        "exit_code": 0,
+        "finished_epoch": 1791639369.6260526
+      },
+      "pid_alive": false
+    },
+    "selection_4090_trial": {
+      "record": {
+        "pid": 34976,
+        "status": "complete",
+        "started_epoch": 1791633557.029724,
+        "exit_code": 0,
+        "finished_epoch": 1791633569.529719
+      },
+      "pid_alive": false
+    },
+    "selection_5090_8x2_trial": {
+      "record": {
+        "pid": 43576,
+        "status": "complete",
+        "started_epoch": 1791639874.9138951,
+        "exit_code": 0,
+        "finished_epoch": 1791639955.1751478
+      },
+      "pid_alive": false
+    },
+    "selection_5090_8x2_monitor_repair": {
+      "record": {
+        "pid": 23940,
+        "status": "complete",
+        "started_epoch": 1791640783.5367856,
+        "exit_code": 0,
+        "finished_epoch": 1791640927.2233956
+      },
+      "pid_alive": false
+    },
+    "selection_5090_8x2_monitor_repair_verification": {
+      "record": {
+        "pid": 52772,
+        "action": "fetch",
+        "status": "complete",
+        "started_epoch": 1791642290.223122,
+        "exit_code": 0,
+        "finished_epoch": 1791642329.7830312
+      },
+      "pid_alive": false
+    },
+    "streaming_4090_8x3": {
+      "record": {
+        "pid": 3400,
+        "action": "storage_inventory",
+        "status": "complete",
+        "started_epoch": 1791647280.0998867,
+        "exit_code": 0,
+        "finished_epoch": 1791647283.3713045
+      },
+      "pid_alive": false
+    },
+    "selection_5090_8x4_monitor_repair": {
+      "record": {
+        "pid": 52008,
+        "status": "complete",
+        "started_epoch": 1791715241.7411041,
+        "exit_code": 1,
+        "finished_epoch": 1791715413.2617302
+      },
+      "pid_alive": false
+    }
+  },
+  "submitted_topology_verified": true,
+  "gpu_execution_acceptance_pending": true,
+  "observed_logs": {
+    "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/selection_5090_8x4_monitor_repair.1688717.out": {
+      "exists": false
+    },
+    "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/selection_5090_8x4_monitor_repair.1688717.err": {
+      "exists": false
+    }
+  },
+  "automations_remain_paused": true,
+  "validation_or_formal_submitted": false,
+  "read_only": true
+}

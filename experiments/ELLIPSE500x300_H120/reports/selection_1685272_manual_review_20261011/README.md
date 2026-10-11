@@ -1,0 +1,11 @@
+# 原5090主作业1685272：人工只读查看结果
+
+2026-10-11人工检查确认：原筛选作业1685272已FAILED，上海时间14:52:00开始、14:52:33结束，实际运行33秒。主作业/batch退出15:0，正式worker步骤1685272.1退出1:0；GPU可见性检查步骤1685272.0为COMPLETED/0:0。全部步骤已退出，账户队列为空。此前清理时的RUNNING是当时的自然调度状态。
+
+8个节点分别输出FOUR_VISIBLE_GPUS。随后原冻结2a67b816bf25eb7a的jscc_5e10_runtime.py在setup→DeviceMonitor.sample中报错：`Allocated GPU UUID missing from measured memory evidence`。原监控将PyTorch设备UUID字符串直接与nvidia-smi完整UUID字符串比较；本次原发布仍未含此前独立试跑75e6ca22ffb21fa4的UUID规范化修复。保留原发布及原作业登记，没有修改或重试。
+
+失败发生在初始化，jscc_5e10_selection.py的输出目录创建位于setup返回之后；远端selection_1685272实际不存在，没有新筛选缓存、资源完成收据或重建图像。已有1686507及1686546验收的4,849,087事件与40份缓存继续保留，本次没有重算或重复取回这些科学结果。完整输入validation10及formal10000仍未登记。
+
+原selection_job.json SHA仍为b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1；启动脚本SHA仍为cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173。错误/标准输出日志、实际分配、实际执行runtime及selection源码共5个小文件已逐件严格SHA下载，见strict_log_download.json。本次仅查看结果，定时任务继续暂停，没有提交作业或恢复实验。
+
+完整错误日志见[selection.1685272.err](selection.1685272.err)，摘要见[summary.json](summary.json)，原始会计与远端只读查看见inspection JSON。GPU可见性记录见[selection.1685272.out](selection.1685272.out)。
