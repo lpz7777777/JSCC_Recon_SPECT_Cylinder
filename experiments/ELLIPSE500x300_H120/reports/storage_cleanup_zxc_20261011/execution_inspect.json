@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-11T06:50:48.598131+00:00",
+  "mode": "inspect",
+  "source_commit": "f748efbe09fe1c03209009b68bd82aed64eb4b1b",
+  "remote_code_sha256": "53d8a144b93b0d0bd625f5718a8c9a0f424e9cacff556776b62a499ba1b821f6",
+  "tool_sha256": "cebfe5fddc2af1e28e709290c167dd557bb056949b09d46f5e25d3d2ad6c3e0d",
+  "controller_pids_live": [],
+  "result": "{\"file\": \"inspection.json\", \"sha256\": \"eeb67d535e8191d58b9666556f5eaed8bafd877f407f3ad64d68e61b428adfe2\", \"result\": {\"utc\": \"2026-10-11T06:48:05.126949+00:00\", \"target\": {\"path\": \"/data/run01/scxi717/zxc\", \"resolved\": \"/data/run01/scxi717/zxc\", \"uid\": 1721, \"gid\": 1721, \"mode\": \"0o40755\", \"device\": 46, \"inode\": 183750173}, \"allocated_bytes\": 226918653952, \"children\": [{\"name\": \"SCSPECT_EXP\", \"mode\": \"0o40755\", \"uid\": 1721, \"symlink\": false}], \"disk\": {\"raw\": \"Filesystem                   1B-blocks         Used    Available Use% Mounted on\\nJuiceFS:juicefs-hdd-n56r4 858993459200 727362682880 131630776320  85% /data\", \"total_bytes\": 858993459200, \"used_bytes\": 727362682880, \"available_bytes\": 131630776320, \"use_percent\": \"85%\"}, \"queue\": {\"ids\": [\"1685272\"], \"jobs\": [{\"id\": \"1685272\", \"state\": \"PENDING\", \"reason\": \"Priority\", \"command\": \"/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh\", \"workdir\": \"/tmp\", \"script_sha256\": \"cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173\"}]}, \"protected\": {\"files\": 1739, \"bytes\": 19832548410, \"metadata_sha256\": \"31936e784d7995a23a741908c9819bfbb15e26e1505821e77501a77cc68b4002\"}, \"read_only\": true}}\n",
+  "strict_downloads": [
+    {
+      "file": "inspection.json",
+      "sha256": "eeb67d535e8191d58b9666556f5eaed8bafd877f407f3ad64d68e61b428adfe2",
+      "bytes": 1416
+    }
+  ]
+}

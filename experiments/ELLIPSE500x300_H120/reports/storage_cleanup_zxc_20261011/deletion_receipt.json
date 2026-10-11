@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-11T06:51:44.848134+00:00",
+  "target": "/data/run01/scxi717/zxc",
+  "exists": false,
+  "elapsed_seconds": 199.0804411387071,
+  "allocated_bytes_before": 226918653952,
+  "disk_before": {
+    "raw": "Filesystem                   1B-blocks         Used    Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 727362686976 131630772224  85% /data",
+    "total_bytes": 858993459200,
+    "used_bytes": 727362686976,
+    "available_bytes": 131630772224,
+    "use_percent": "85%"
+  },
+  "disk_samples_after": [
+    {
+      "utc": "2026-10-11T06:51:44.848076+00:00",
+      "raw": "Filesystem                   1B-blocks         Used    Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 691615268864 167378190336  81% /data",
+      "total_bytes": 858993459200,
+      "used_bytes": 691615268864,
+      "available_bytes": 167378190336,
+      "use_percent": "81%"
+    }
+  ],
+  "available_bytes_increase": 35747418112,
+  "protected_before": {
+    "files": 1739,
+    "bytes": 19832548410,
+    "metadata_sha256": "31936e784d7995a23a741908c9819bfbb15e26e1505821e77501a77cc68b4002"
+  },
+  "protected_after": {
+    "files": 1739,
+    "bytes": 19832548410,
+    "metadata_sha256": "31936e784d7995a23a741908c9819bfbb15e26e1505821e77501a77cc68b4002"
+  },
+  "queue_before": {
+    "ids": [
+      "1685272"
+    ],
+    "jobs": [
+      {
+        "id": "1685272",
+        "state": "PENDING",
+        "reason": "Priority",
+        "command": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh",
+        "workdir": "/tmp",
+        "script_sha256": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173"
+      }
+    ]
+  },
+  "queue_after": {
+    "ids": [
+      "1685272"
+    ],
+    "jobs": [
+      {
+        "id": "1685272",
+        "state": "PENDING",
+        "reason": "Priority",
+        "command": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh",
+        "workdir": "/tmp",
+        "script_sha256": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173"
+      }
+    ]
+  },
+  "no_job_mutation": true
+}

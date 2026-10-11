@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-11T06:54:25.732729+00:00",
+  "mode": "apply",
+  "source_commit": "f748efbe09fe1c03209009b68bd82aed64eb4b1b",
+  "remote_code_sha256": "53d8a144b93b0d0bd625f5718a8c9a0f424e9cacff556776b62a499ba1b821f6",
+  "tool_sha256": "cebfe5fddc2af1e28e709290c167dd557bb056949b09d46f5e25d3d2ad6c3e0d",
+  "controller_pids_live": [],
+  "result": "Deleting authorized directory /data/run01/scxi717/zxc\n{\"file\": \"deletion_receipt.json\", \"sha256\": \"0eb8f7145dde6bcebfb2ee8d7b9c07267140cc6754d0fb238a58b25e65c64e21\", \"result\": {\"utc\": \"2026-10-11T06:51:44.848134+00:00\", \"target\": \"/data/run01/scxi717/zxc\", \"exists\": false, \"elapsed_seconds\": 199.0804411387071, \"allocated_bytes_before\": 226918653952, \"disk_before\": {\"raw\": \"Filesystem                   1B-blocks         Used    Available Use% Mounted on\\nJuiceFS:juicefs-hdd-n56r4 858993459200 727362686976 131630772224  85% /data\", \"total_bytes\": 858993459200, \"used_bytes\": 727362686976, \"available_bytes\": 131630772224, \"use_percent\": \"85%\"}, \"disk_samples_after\": [{\"utc\": \"2026-10-11T06:51:44.848076+00:00\", \"raw\": \"Filesystem                   1B-blocks         Used    Available Use% Mounted on\\nJuiceFS:juicefs-hdd-n56r4 858993459200 691615268864 167378190336  81% /data\", \"total_bytes\": 858993459200, \"used_bytes\": 691615268864, \"available_bytes\": 167378190336, \"use_percent\": \"81%\"}], \"available_bytes_increase\": 35747418112, \"protected_before\": {\"files\": 1739, \"bytes\": 19832548410, \"metadata_sha256\": \"31936e784d7995a23a741908c9819bfbb15e26e1505821e77501a77cc68b4002\"}, \"protected_after\": {\"files\": 1739, \"bytes\": 19832548410, \"metadata_sha256\": \"31936e784d7995a23a741908c9819bfbb15e26e1505821e77501a77cc68b4002\"}, \"queue_before\": {\"ids\": [\"1685272\"], \"jobs\": [{\"id\": \"1685272\", \"state\": \"PENDING\", \"reason\": \"Priority\", \"command\": \"/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh\", \"workdir\": \"/tmp\", \"script_sha256\": \"cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173\"}]}, \"queue_after\": {\"ids\": [\"1685272\"], \"jobs\": [{\"id\": \"1685272\", \"state\": \"PENDING\", \"reason\": \"Priority\", \"command\": \"/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh\", \"workdir\": \"/tmp\", \"script_sha256\": \"cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173\"}]}, \"no_job_mutation\": true}}\n",
+  "strict_downloads": [
+    {
+      "file": "deletion_intent.json",
+      "sha256": "3183385cd226196975174e84e4771009de74f566bd3089f25662fa73dfba8505",
+      "bytes": 1519
+    },
+    {
+      "file": "deletion_receipt.json",
+      "sha256": "0eb8f7145dde6bcebfb2ee8d7b9c07267140cc6754d0fb238a58b25e65c64e21",
+      "bytes": 2345
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "path": "tools/research/delete_authorized_zxc.py",
+      "bytes": 7641,
+      "sha256": "cebfe5fddc2af1e28e709290c167dd557bb056949b09d46f5e25d3d2ad6c3e0d"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 5586,
+      "sha256": "c85501cab2bc3e68dbdd2009c11f6eb6598ad3598317c931e44cff62fc165aab"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/AGENTS.md",
+      "bytes": 12817,
+      "sha256": "9ff8a91ebb372a4d79667db5770708299284010265f3add95b834ae67747621f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/README.md",
+      "bytes": 10411,
+      "sha256": "da3a35fa72c0f20cbfd05d5f9496101f67f47d194bf05abc8ea6120ff65b7840"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+      "bytes": 14856,
+      "sha256": "965199d9ac46d1a4ae8057c2b7326fda2109fda3118b6c5ff5a779c1b846bb81"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+      "bytes": 11794,
+      "sha256": "a046d95239d20ecf3c4b0548ab8a14026208d99d1f790ce119dfcc72314fe51a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md",
+      "bytes": 27473,
+      "sha256": "20e7dc370822d6f2a5788d701bc4285a1b26458a21a1193d41331d82a243b924"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/STREAMING_STORAGE_HOLD.md",
+      "bytes": 3961,
+      "sha256": "fd34d3467b4556b4186fa552ed2c562d1021b0bc6a147a29f37166b33b820a25"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/deletion_intent.json",
+      "bytes": 1519,
+      "sha256": "3183385cd226196975174e84e4771009de74f566bd3089f25662fa73dfba8505"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/deletion_receipt.json",
+      "bytes": 2345,
+      "sha256": "0eb8f7145dde6bcebfb2ee8d7b9c07267140cc6754d0fb238a58b25e65c64e21"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/execution_apply.json",
+      "bytes": 3048,
+      "sha256": "7130de1adaf90948aa86f1d67e3515f252f70eaa708d96101577cd20d0661edb"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/execution_inspect.json",
+      "bytes": 1960,
+      "sha256": "c375ad91717684e6a34343fdbe7ab0c1bebc356d0776b58487b507391ae20244"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/inspection.json",
+      "bytes": 1416,
+      "sha256": "eeb67d535e8191d58b9666556f5eaed8bafd877f407f3ad64d68e61b428adfe2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/README.md",
+      "bytes": 2627,
+      "sha256": "2a7f9a6773817e2ca3aa8c9dffee1d688fb7ff97027001e048d4988a8c6f4a09"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/verification_after.json",
+      "bytes": 1014,
+      "sha256": "46c0956db629238e6ecca8a91945427b550d1794f7f2d0d723798f88c7938dc7"
+    }
+  ],
+  "total_bytes": 108468,
+  "excludes": "Arrays, matrices, event responses, archives, binary files, credentials",
+  "no_experiment_completion_claim": true
+}

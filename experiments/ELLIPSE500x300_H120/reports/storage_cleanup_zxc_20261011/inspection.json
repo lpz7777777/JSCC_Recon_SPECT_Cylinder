@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-11T06:48:05.126949+00:00",
+  "target": {
+    "path": "/data/run01/scxi717/zxc",
+    "resolved": "/data/run01/scxi717/zxc",
+    "uid": 1721,
+    "gid": 1721,
+    "mode": "0o40755",
+    "device": 46,
+    "inode": 183750173
+  },
+  "allocated_bytes": 226918653952,
+  "children": [
+    {
+      "name": "SCSPECT_EXP",
+      "mode": "0o40755",
+      "uid": 1721,
+      "symlink": false
+    }
+  ],
+  "disk": {
+    "raw": "Filesystem                   1B-blocks         Used    Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 727362682880 131630776320  85% /data",
+    "total_bytes": 858993459200,
+    "used_bytes": 727362682880,
+    "available_bytes": 131630776320,
+    "use_percent": "85%"
+  },
+  "queue": {
+    "ids": [
+      "1685272"
+    ],
+    "jobs": [
+      {
+        "id": "1685272",
+        "state": "PENDING",
+        "reason": "Priority",
+        "command": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/launch_control_releases/ce90d678eb32757f/selection.sh",
+        "workdir": "/tmp",
+        "script_sha256": "cd52567de1cd0f9e5485e0b51f240f866d9f5e781c112a5254b29880c6dbe173"
+      }
+    ]
+  },
+  "protected": {
+    "files": 1739,
+    "bytes": 19832548410,
+    "metadata_sha256": "31936e784d7995a23a741908c9819bfbb15e26e1505821e77501a77cc68b4002"
+  },
+  "read_only": true
+}

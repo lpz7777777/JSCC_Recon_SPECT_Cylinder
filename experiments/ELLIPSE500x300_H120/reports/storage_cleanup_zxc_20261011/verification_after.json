@@ -1,0 +1,45 @@
+{
+  "remote": {
+    "utc": "2026-10-11T06:52:11.189080+00:00",
+    "target_exists": false,
+    "df": "Filesystem                   1B-blocks         Used    Available Use% Mounted on\nJuiceFS:juicefs-hdd-n56r4 858993459200 500323569664 358669889536  59% /data\n",
+    "statvfs_available_bytes": 358669889536,
+    "original_job": "1685272|RUNNING|None\n"
+  },
+  "automations": [
+    {
+      "id": "c48",
+      "status": "PAUSED"
+    },
+    {
+      "id": "compton-v5",
+      "status": "PAUSED"
+    },
+    {
+      "id": "detail-history",
+      "status": "PAUSED"
+    },
+    {
+      "id": "jscc-5e10",
+      "status": "PAUSED"
+    },
+    {
+      "id": "late-history-2000",
+      "status": "PAUSED"
+    },
+    {
+      "id": "nema-1e9",
+      "status": "PAUSED"
+    },
+    {
+      "id": "nema-5e9-3",
+      "status": "PAUSED"
+    },
+    {
+      "id": "nrmse",
+      "status": "PAUSED"
+    }
+  ],
+  "original_5090_registry_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
+  "read_only": true
+}
