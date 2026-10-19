@@ -1,0 +1,166 @@
+{
+  "all_geometry_checks_passed": true,
+  "energies": {
+    "218": {
+      "rod_count": 163,
+      "total_hot_volume_mm3": 680468.9687675491,
+      "minimum_rod_surface_gap_mm": 4.014524148120406,
+      "outermost_rod_surface_radius_mm": 134.90549021859403,
+      "minimum_envelope_margin_mm": 5.094509781405975,
+      "fov_containment": "analytic: radius 140 < ellipse minimum semiaxis 150; height 60 < 120",
+      "groups": [
+        {
+          "diameter_mm": 6,
+          "rod_count": 66,
+          "nearest_neighbor_pitch_mm": 11.999999999999993,
+          "legacy_grid_rods_with_no_cell_center": 47,
+          "legacy_grid_centers_per_rod_min_max": [
+            0,
+            1
+          ]
+        },
+        {
+          "diameter_mm": 8,
+          "rod_count": 36,
+          "nearest_neighbor_pitch_mm": 15.999999999999995,
+          "legacy_grid_rods_with_no_cell_center": 8,
+          "legacy_grid_centers_per_rod_min_max": [
+            0,
+            3
+          ]
+        },
+        {
+          "diameter_mm": 10,
+          "rod_count": 21,
+          "nearest_neighbor_pitch_mm": 19.999999999999986,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            1,
+            3
+          ]
+        },
+        {
+          "diameter_mm": 12,
+          "rod_count": 15,
+          "nearest_neighbor_pitch_mm": 23.99999999999999,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            1,
+            4
+          ]
+        },
+        {
+          "diameter_mm": 14,
+          "rod_count": 15,
+          "nearest_neighbor_pitch_mm": 27.99999999999999,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            2,
+            5
+          ]
+        },
+        {
+          "diameter_mm": 16,
+          "rod_count": 10,
+          "nearest_neighbor_pitch_mm": 31.999999999999993,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    "440": {
+      "rod_count": 73,
+      "total_hot_volume_mm3": 664635.3417934566,
+      "minimum_rod_surface_gap_mm": 4.065125189341597,
+      "outermost_rod_surface_radius_mm": 134.90549021859403,
+      "minimum_envelope_margin_mm": 5.094509781405975,
+      "fov_containment": "analytic: radius 140 < ellipse minimum semiaxis 150; height 60 < 120",
+      "groups": [
+        {
+          "diameter_mm": 18,
+          "rod_count": 6,
+          "nearest_neighbor_pitch_mm": 36.0,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            4,
+            5
+          ]
+        },
+        {
+          "diameter_mm": 20,
+          "rod_count": 6,
+          "nearest_neighbor_pitch_mm": 39.99999999999999,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            4,
+            7
+          ]
+        },
+        {
+          "diameter_mm": 10,
+          "rod_count": 21,
+          "nearest_neighbor_pitch_mm": 19.999999999999986,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            1,
+            3
+          ]
+        },
+        {
+          "diameter_mm": 12,
+          "rod_count": 15,
+          "nearest_neighbor_pitch_mm": 23.99999999999999,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            1,
+            4
+          ]
+        },
+        {
+          "diameter_mm": 14,
+          "rod_count": 15,
+          "nearest_neighbor_pitch_mm": 27.99999999999999,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            2,
+            5
+          ]
+        },
+        {
+          "diameter_mm": 16,
+          "rod_count": 10,
+          "nearest_neighbor_pitch_mm": 31.999999999999993,
+          "legacy_grid_rods_with_no_cell_center": 0,
+          "legacy_grid_centers_per_rod_min_max": [
+            2,
+            4
+          ]
+        }
+      ]
+    }
+  },
+  "existing_reconstruction_grid_is_not_validated_for_fine_rods": true,
+  "existing_grid_radial_step_mm": 6.0,
+  "max_ring_center_arc_step_inside_envelope_mm": 11.309733552923255,
+  "recommended_transverse_grid_pitch_mm": 1.0,
+  "recommendation_is_design_choice_not_measured_resolution": true,
+  "shared_diameters_mm": [
+    10,
+    12,
+    14,
+    16
+  ],
+  "shared_groups_geometry_identical": true,
+  "equal_emission_density_total_event_ratio_N440_over_N218": 0.9767313019390582,
+  "source_files_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "experiments\\ELLIPSE500x300_H120\\geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "Geant4Sim\\GenPhan_HotRodPhantom_Rotate_3D.m": "69b63901b9c18558ce06dd457921ef364e7878b916751d9327120a46250a7ea8"
+  },
+  "source_files_unchanged_after_generation": true,
+  "generator_sha256": "8ed822cc271f668a1f3c6b019609d465bfbc0143eba474ea0915bda47dfc2780",
+  "structural_reference": "https://pure.tudelft.nl/ws/portalfiles/portal/46265516/Borghi_2018_Phys._Med._Biol._63_155006.pdf"
+}

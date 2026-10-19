@@ -1,0 +1,17 @@
+{
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "dataset": "JSCC_440",
+  "nodes": 1,
+  "gpus_per_node": 4,
+  "world_size": 4,
+  "accepted_events": 0,
+  "collection_sha256": "d98b5dd1a246f8aeccf8db60d888128e3ef30359e7afcfea273f4170e959cbd4",
+  "release_sha256": "1881df0b3ba38bf704856b2ac533278301656afdf5413cf2e85e1f638526315f",
+  "channels": [
+    "440_SinglePhoton",
+    "440_SinglePlusCompton"
+  ],
+  "iterations": 10000,
+  "save_step": 50,
+  "response_storage": "CPU resident lossless float32; no disk response cache"
+}

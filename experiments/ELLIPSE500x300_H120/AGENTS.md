@@ -1,62 +1,48 @@
-# 当前用户约定（2026-10-11）
+# 当前实验执行约定
 
-## 2026-10-11 最新人工授权：UUID修复后独立重新提交1688717
+本文件只保留当前有效规则。2026-10-19整理前原文和全部历史人工授权按原字节保存在[history/AGENTS_20261019.md](history/AGENTS_20261019.md)；不得把其中较早ACTIVE/RUNNING/PENDING描述当成当前状态。当前导航见[双能入口](../../docs/ac225/README.md)、[状态快照](../../docs/ac225/CURRENT_STATUS.md)和各研究合同。
 
-用户在确认原5090主1685272自然FAILED后明确要求修正bug并重新提交。已冻结独立UUID监控修复c49ad9c3a38589e6并于18:40:54上海唯一提交1688717，保持原8节点×4张5090、32rank、32CPU/节点和原科学输入/筛选。最新实际状态PENDING(Priority)；本地及真实Linux各16项检查通过，实际GPU启动与完整筛选验收待运行。原1685272及成功1686507/1686546的发布/登记/输出和SHA继续保留，历史“不重新提交主失败任务”的限制仅对这一次独立修复按最新用户授权解除。
+## 科学与数据边界
 
-定时任务继续PAUSED，不恢复自动推进；完整validation10/formal10000和authority均未提交。4090持久缓存仍STORAGE_HOLD，不因本次筛选提交解除。本地提交后资源核对器误读Slurm的NumNodes=8-8，已独立修正并只读核对原登记任务，无重复提交或修改远端发布。后续只读状态入口为jscc_5e10_5090_8x4_monitor_repair.py status，不调用旧advance。下文状态均按各段记录时间阅读。
+- 当前几何500×300×120mm、20view、132040原点/78920活动单元；原生径向6mm、z间距3mm。不得用裁剪或跨能量合成替代完整域验收。
+- 剂量按每组合同为实际gamma初级数或模型期望数，不是Ac225衰变数，不假称完整衰变链或符合模拟。
+- SC是单光子；JSCC可以指探头或同440 keV的SC+Compton求解，按实际channel解释。
+- 后续不生成、计算、绘制或加入比较任何218/440跨能量求和图。历史六路只读，不恢复退休路线。
+- 原事件权重、v5连续核、匹配自身S、原MLEM、全1初值、无正则和科学源码SHA保持；改变模型或求解需独立版本及相应验证，不能覆盖旧证明。
+- 实际Geant4与前投影+Poisson组分开登记，EHE物理响应HOLD和未判定类别保留；执行/数值通过不代表物理或分辨率认证。
+- 科学真值来自原NEMA truth_3mm.npz/manifest或本次Derenzo SHA绑定解析JSON。无平滑、无单图亮度拟合；显示采样/色标/MIP范围须披露。
 
-[独立修复与提交证据](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_README.md)。
+## 当前授权实验
 
-## 2026-10-11 18:28上海人工只读检查：原1685272已失败退出
+| 研究 | 当前合同 |
+|---|---|
+| NEMA JSCC实际5e10 | 440 single、218 corrected、440 Compton三路，10000/save50；固定218背景只取本次最终440 single |
+| Derenzo JSCC单能各5e9 | 440 single、440 SC+Compton、218 single，10000/save50；纯218背景零 |
+| Derenzo EHE单能各5e9 | 440 single、218 single，200/save1 |
+| NEMA既有5e9/EHE各组 | 已完成历史参考，按当前输出/ROI规则分析，不重新输运或恢复旧求和路线 |
 
-原5090主1685272于14:52:00自然开始、14:52:33 FAILED退出（33秒，主15:0、worker1:0），全部步骤已终止，账户队列为空。8节点各4GPU可见性检查通过，但旧发布GPU UUID监控在setup阶段报错，selection_1685272输出目录未创建。原请求/发布/登记及已验收1686507/1686546科学结果保持，完整错误日志/分配/源码严格SHA取回。定时任务继续PAUSED，本次只查看，没有修复、重试或提交。见[人工结果检查](reports/selection_1685272_manual_review_20261011/README.md)。下方清理时的RUNNING是当时状态。
+Derenzo采用20261015_equal_regions设计，218棒径6/8/10/12/14/16、114根；440棒径10/12/14/16/18/20、53根。用户明确本轮复用现有矩阵，不新建细网格；不能据粗网格图像宣布6mm分辨率。四组各200×25M实际全4π光子，启动检查不计正式剂量。
 
-## 2026-10-11 最新人工指令：停止定时推进并清理超算空间
+## 既有作业与控制
 
-用户要求停止定时任务并清理重建超算空间。`jscc-5e10`及其余现有定时任务均PAUSED；下文历史ACTIVE及每15分钟推进规则不再生效。首次清理429个SHA相同的远端重复副本后，用户另明确要求删除`/data/run01/scxi717/zxc`；该目录已实际删除并独立确认不存在，原删除范围限制对这个明确授权路径不再适用。原5090主1685272于2026-10-11 06:52 UTC只读检查时已由调度器自然进入RUNNING，没有修改、取消或重新提交。当前5e10输入、标定矩阵、冻结发布、结果和验收证据保留，没有提交新计算。见[本轮清理记录](reports/storage_cleanup_20261011/README.md)。
+- 定时任务继续PAUSED。独立Derenzo一次性流程与既有NEMA流程的并行例外保留，不代表可以开启重复控制器。
+- 推进前检查该研究全部registration的PID实际进程身份；Windows可能复用旧PID。当前恢复入口`resume_reconstruction_controllers_20261019.py`保留原14/21天截止，只修复过期PID和已知只读SSH通道超时分类。
+- 活控制器旁不并行advance/fetch/submit。Derenzo登记在`generated/derenzo_equal_regions_mono_5e9_20261016/controller_registration.json`；NEMA登记在`generated/jscc_geant4_5e10_10000/*registration.json`。
+- Derenzo当前链：JSCC440 validation1713939→验收1713940→暂挂formal1713943；其余三组已有formal_acceptance。以实际新证据为准，不从此段推断实时Slurm状态。
+- NEMA5e10的32GPU完整验证1704559/验收1704566已成功并严格取回、生成authority；10000次按实测估计54.87h，原48h总/24h阶段gate不满足，1704572仍暂挂。恢复控制器已按门槛退出，后续须独立执行方案修复，不绕过gate或虚称后台仍在推进。
+- 原1685272及旧4090/8x2失败、1688717修复、1686507/1686546成功筛选的源码/请求/登记/输出保留；不得复活失败UUID试跑、重复成功筛选或旧阶段取回来代替推进。
+- 旧4090 streaming的/tmp跨作业复用不成立，STORAGE_HOLD不解除；不调用旧advance绕过门控，不写满共享盘，不据全卷空闲代替目录配额。
+- 失败/OOM/挂载/通信/磁盘/超时须确认完整退出，保留旧发布与成功输出；仅有界补缺，不重复成功科学计算。实际sbatch意图不明先核对，不重投。
+- 完整验证、独立验收和严格SHA取回通过才可生成本组authority并放行对应正式任务。正式时限从实测求解吞吐估算，准备只计一次，不承诺ETA；保留20%实际CPU/GPU/内存余量。
 
-最新明确路径删除见[zxc清理记录](reports/storage_cleanup_zxc_20261011/README.md)。
+## NEMA当前评价
 
-## 最新实际状态：4090分批方案等待持久缓存空间
+球ROI使用体素中心距球面至少1.5mm的全部3mm体素、等权均值；不使用分数体积权重或额外内缩。它不保证体素立方体完全在球内；若为空则不可计算，不扩大ROI。全部球共享Phantom腔体内完整背景，排除六球、肺和所有接触边界。以`nema_roi_policy.py`、`reconstruction_output_policy.py`和`reports/nema_interior_roi_20261010/README.md`为准。
 
-1686694已实际全COMPLETED/0:0（3分23秒），24GPU身份、小块无损往返和80%资源余量通过；整体存储门控未通过。6/8节点/tmp空间不足；1686708只读挂载检查证实/tmp位于当前作业jobcontainer，不能据此承诺验证与正式作业之间复用。此前9b5938545ad3d6c7发布中的/tmp固定节点复用方案已被实际证据否决，原发布及日志保留，不能继续该入口advance或提交validation/formal。
+EHE0–200和JSCC0–10000分别展示，不把同迭代或同图列当成同收敛。数值完成后仍需科学/视觉QA与报告，Git提交不能代替实验交付。
 
-完整响应1530759784160字节（约1.53 TB），2026-10-11删除zxc并等待配额刷新后工作盘约358.67 GB可用（334.04 GiB，59%使用率，800 GiB配额）。/ssd全卷空闲不等于账户配额：/ssd/scxi717属于root/0700，scxi717不可读写，目录实际配额仅1 GiB；home也只有1 GiB。已请求用户在平台开通可写、至少2 TiB持久SSD目录并提供路径。需要新独立存储修复冻结和实际I/O验证，不能修改旧发布或重新筛选/模拟。
+## 目录整理与Git
 
-当前例行入口仅 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_storage_status.py`，只读核对六项PID、账户SSD配额/访问和原5090自然状态。定时任务已PAUSED，例行检查停止。原1685272已自然RUNNING且job JSON SHA保持；未提交完整输入验证或正式重建。详见报告目录 `STREAMING_STORAGE_HOLD.md`、`streaming_4090_8x3_probe_resource_acceptance.json` 与 `streaming_4090_8x3_storage_diagnosis.json`。
+2026-10-19用户明确要求整理工程并提交推送。当前采用统一导航与分类索引，科学代码、generated数据、冻结发布、作业登记及远端路径保持原位；此次整理不提交新科学作业、不取消或修改原任务。
 
-
-- 最新明确授权：完成独立JSCC实际Geant4 5e10及10000次重建，优先8节点×4卡，只保留218 corrected、440 single、440 Compton三路。该实验为 `jscc_geant4_5e10_10000`，独立种子35100101–35101100，1000×5000万实际4π光子；启动检查35100001的100000光子不计入正式剂量。以其 `CONTRACT.md`、最新阶段登记及验收为准。当前实验三路合同优先于下文历史四路默认规则，不计算生产联合图或跨能量相加图。
-- 用户最新CPU调度要求：独立worker每作业1节点、1核，可共享节点，数组0–999%1000，完成后统一严格收集。旧18节点15705120未运行且已实际取消；新15708389以最新登记为准。原源、1000worker×50M、种子和Geant4二进制保持，CPU控制修订另冻transport_array_freeze，不覆盖旧发布。GPU仍8节点×4卡。
-- 2026-10-10 17:46最新：完整5e10输运15708389/收集15709588已成功退出且严格SHA取回。原GPU4090请求40CPU被每卡6核配额拒绝、未创建selection作业；单独启动控制冻结ce90d678eb32757f保留失败intent/脚本和原科学发布。GPU计算改gpu_5090、每节点32CPU/4卡、8节点不变，自动预期504000MiB/节点、无显式mem；只读验收8CPU/1GPU配额但仅CPU计算。最新launch_control_repair_freeze/acceptance允许只对绑定原/新SHA的本地协调器作配额修复，其他科学源码不得变化；实际80%资源门槛不变。
-- `jscc-5e10`为用户授权的新定时推进任务，每15分钟推进本实验；等待计算期间保持ACTIVE，科学/视觉QA、报告和安全Git交付实际完成后暂停。旧compton-v5不恢复。旧实验只读，不重复使用旧计数代替新观测。
-- 推进前读 `generated/jscc_geant4_5e10_10000/advance_registration.json`；登记PID仍活跃时不并行advance/fetch/submit。先完整输入32GPU validation10并严格取回生成本次authority，随后直接唯一formal10000/save50。失败保留旧发布和部分输出，诊断后有界补缺；不取消其他项目。
-- 2026-10-10 20:00上海用户新增授权：保持5090主筛选1685272不动，另提交4090独立完整输入筛选试跑。唯一试跑1686107，8节点×4卡、每节点24CPU、自动预期240000MiB、无显式mem；单独selection_4090_trial_job/freeze/launch_acceptance和输出目录，原科学kernel及5e10观测不变。这是用户明确允许的并行筛选例外，不是第二套生产重建。每轮同时读取该登记，并运行 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_trial.py status`；另外先检查generated中的selection_4090_trial_registration.json，任一提交/推进PID存活时不并行advance/fetch/submit。不重复试跑submit，不取消或改动主作业，不以试跑退出状态替代完整资源/逐行筛选验收，不自动替换生产selection_job。后续重建仍由主流程完整输入验收和实际内存门槛决定；不得把4090筛选能运行当成完整Compton重建内存证明。
-
-- 后续不生成、计算、绘制或纳入比较任何218与440 keV跨能量相加图像，包括 `440SinglePlus218Single` 和 `440SingleComptonPlus218Single`。用户所写218+400按本工程218/440双能解释。440的Single+Compton联合重建仍保留，它不是跨能量叠加。
-- EHE保留440单光子和218串扰校正单光子；JSCC保留这两路以及440 Compton、440 Single+Compton。218求解中的固定440→218前投影加性背景仍必须保留。
-- 球ROI使用中心距球面至少1.5 mm的全部3 mm体素，等权求均值，不使用分数球体积权重，不再额外内缩。用户在确认严格完整体素会使10 mm球ROI为空之后，明确选择对全部球采用这一规则。它不保证体素角完全位于球内，不得称为完全消除部分容积效应。若ROI为空，指标标记不可计算，不能偷偷扩大ROI。
-- 所有球使用同一个背景掩膜：体素完整位于Phantom活动腔体内部，并且与全部六个球、中央零活度肺插入物及其边界均不相交。包含所有合格层和位置，不再使用每球局部背景。接触区域表面的体素也排除。
-- 具体实现和验收以 `nema_roi_policy.py`、`reconstruction_output_policy.py` 及最新 `reports/nema_interior_roi_20261010/README.md` 为准。真值必须来自本工程现有3D真值和登记球心。
-- 旧六路JSCC和三路EHE的冻结发布、作业登记、数组及验收记录属于历史结果，只读保留。旧比较/报告脚本用于理解历史定义；新的对比使用 `tools/research/analyze_nema_interior_roi.py`，不能重新运行旧脚本产生叠加图或旧ROI指标。新JSCC入口按当前用户明确选择的路线冻结独立合同及匹配验证器，不能沿用历史六路合同提交。
-- 先前ROI规则变更本身未授权新增计算；随后新增的JSCC5e10实验按上方最新授权独立推进。compton-v5保持暂停。
-
-- 最新用户新增并行例外：独立8×2张5090完整输入筛选1686450，16rank、每节点16CPU/自动252000MiB、无显式mem，原1685272/1686107均保持不动。最新登记selection_5090_8x2_trial_job/freeze/identity_acceptance及独立输出为准。每轮先检查advance_registration.json、selection_4090_trial_registration.json、selection_5090_8x2_trial_registration.json；任一PID存活不并行advance/fetch/submit。另运行 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_5090_8x2_trial.py status`。不重复trial submit，不自动采用试跑结果替换主selection_job；完整退出/16rank真实资源/全部原行与缓存/SHA独立验收后才评估后续方案。原生产32卡冻结未改，正式拓扑以用户后续选择与完整输入验证为准，筛选占用不是全部Compton事件响应的内存证明。
-
-- 2026-10-10 22:06最新有界恢复：1686450和1686107实际在GPU UUID监控处FAILED、已完全退出并保留原证据；原主1685272仍PENDING、原两项作业/登记没有修改或取消。新增独立monitor_repair冻结75e6ca22ffb21fa4及唯一恢复1686507实际RUNNING，仅修正完整CUDA/NVIDIA UUID字符串并捕获实际身份，原科学筛选及80%资源合同不变。四个PID（再加selection_5090_8x2_monitor_repair_registration.json）任一仍活不并行advance/fetch/submit；status助手自动优先最新恢复登记。不重复repair/submit，不覆盖旧发布/登记；只有完整筛选和匹配16rank的严格全行/资源验收才能评估后续正式内存，不能直接提交16GPU正式重建。
-
-- 2026-10-10 22:23最新：1686507已COMPLETED/0:0、8分48秒、4849087选中事件，原完整结果保留。独立只读验收1686546已登记（匹配16rank发布4b595d58a50e48e2），使用 `jscc_5e10_8x2_selection_verification.py status/fetch`，不要重复submit或源筛选。五个PID增加selection_5090_8x2_monitor_repair_verification_registration.json，任一活跃不并行推进/取回/提交。原32GPU主1685272和原4090保持不动；不自动替换production selection或进入16GPU formal。筛选实际资源不是全部Compton响应内存证明：实际事件响应平均178.2039 GiB/节点，按原每rank16 GiB保守开销，8×2需210.2039 GiB超出196.875 GiB的80%预算；完整响应尚未实测。仅严格验收通过后记录结论并按用户后续拓扑选择及原完整输入validation10/authority门槛推进。
-
-- 2026-10-10 22:28该试跑已完整交付：只读验收1686546实际COMPLETED/0:0、2分24秒，全部20view选中缓存逐值等于原始CSV，320收据/640分区数组/最终40数组闭合；1003成员及141201888字节归档/原日志严格SHA取回通过。selection_5090_8x2_monitor_repair_acceptance/resource_acceptance及formal_memory_assessment_acceptance为最新证据；不重复试跑/验收/取回，不自动替换主production登记。正式拓扑仍未改变，完整响应内存未实测，validation10/formal10000未提交。原两项作业保持不动，正常等待安静；仅需要处理的故障/实质里程碑/最终交付通知。
-
-
-## 2026-10-10 最新用户授权：复用筛选、4090 8×3分批响应
-
-用户明确要求复用已完成筛选，将Compton事件响应改成分批载入，用8节点×3张4090推进三路重建，原5090作业保持不动。新的独立入口为 `jscc_5e10_4090_streaming.py status/advance`，登记前缀 `streaming_4090_8x3`。它取代此前后续正式拓扑待选的限制；不调用旧32卡advance、修改旧selection_job或取消1685272。旧FAILED4090/8×2试跑仅保存原证据。
-
-复用1686507/1686546已验收的全部4,849,087事件及40份索引/原行缓存，按24rank重新分区，原数据/SHA保持。新响应存储仅无损压缩完整float32字节，每块最多32事件，节点本地/tmp写入、fsync和完整SHA读回；迭代按原顺序还原当前块调用原事件权重及未正则MLEM。原v5物理、全120mm/78920活动单元、全部20view、矩阵/S、三路和固定本次440末图背景均不改，不丢事件或生成跨能量和。原科学函数调用与检查点AST逐一一致；本地6项测试实际通过，100迭代全部保存历史与常驻内存及原Compton分支逐值一致。该CPU测试不是完整输入GPU资源证书。
-
-4090每节点18CPU/3GPU，自动预计180000MiB/节点，无显式mem；真实24rank/8host/3唯一GPU、UUID/RSS/Slurm MaxRSS/显存均保留20%余量。共享盘约66.6GB可用，完整响应不写共享盘。先实际8×3节点存储/设备/无损小块probe，节点本地盘磁盘余量保护；样本压缩预算不是全部缓存容量保证。成功退出、严格日志/资源/数值证明后进入全输入三路validation10，验证全部响应块/事件、原前向/转置/S及历史回归；独立只读验收、严格取回及新24卡authority通过后直接唯一formal10000/save50。正式固定验收节点以复用相同SHA本地缓存，不重新生成成功缓存；缺失、部分或失败保留并诊断，仅有界修复。实际吞吐和时限据验证实测，不能保证ETA。
-
-定时任务已更新为新入口；检查原五项控制器PID及新增 `streaming_4090_8x3_registration.json`，任一实际存活不并行提交/推进/取回。完整三路数值、科学/视觉QA、报告和安全Git交付之前保持ACTIVE。原5090作业自然状态只读检查，若自行失败保存完整退出和原日志，不借新授权修改它。
+提交仅限审核的小型文本源码/配置/几何/说明/证据；排除矩阵、事件响应、原始数组、完整历史、归档、PNG/PDF/SVG等新媒体、编译二进制和敏感凭据。历史已跟踪媒体不重写。归档前后SHA、原说明字节及Git审计保存在`docs/organization/20261019/`。不要覆盖预先存在的工作区改动。

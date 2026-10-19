@@ -1,0 +1,27 @@
+{
+  "source_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+    "experiments\\ELLIPSE500x300_H120\\geometry.py": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+    "experiments\\ELLIPSE500x300_H120\\build_whole_cell_geometry_v4.py": "1690594c3e70e948e0e85ccd92acf5fa2b5f60c9a030bee57ec5f252e350778a",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_spect_5e9_200\\payload\\whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "Geant4Sim\\Geant4Code\\CrystalMatrix.txt": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+    "Geant4Sim\\Geant4Code\\src\\DetectorConstruction.cc": "42edc6e62b126cf5621a888d4f28d590e61c1ada08ba54e11dfefea869a60a2b",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e9_200\\geometry_evidence\\raw\\EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e9_200\\geometry_evidence\\raw\\EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\ehe_spect_5e9_200\\geometry_evidence\\raw\\EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39"
+  },
+  "full_grid_points": 132040,
+  "active_cells": 78920,
+  "active_membership": "cell centre lies in ellipse; retain entire cell",
+  "actual_jscc_crystals_per_plane": [
+    512,
+    768,
+    1024,
+    8192
+  ],
+  "common_front_face_distance_mm": 298.5,
+  "front_distance_definition": "FOV centre to first JSCC crystal front / EHE lead front",
+  "figure2": "exploded spacing illustrative; material cell patterns and counts are actual",
+  "dimensions_order": "JSCC crystal: x,y,z; EHE detector face: x,z and thickness y",
+  "no_simulation_or_reconstruction": true
+}

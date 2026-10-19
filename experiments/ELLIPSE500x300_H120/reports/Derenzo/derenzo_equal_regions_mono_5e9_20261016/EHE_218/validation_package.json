@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "dataset": "EHE_218",
+  "mode": "validation",
+  "files": {
+    "Image_218_SinglePhoton_active.float32": "3991facc2532d92aa1bea1a002a3fe5e9cd122673f93b3909e52db89a3b1606e",
+    "Image_218_SinglePhoton_full.float32": "2e386a87eab19f3cd6f548c6990dc2efc3988db9ce821f701f60c20d6b838565",
+    "Image_218_SinglePhoton_history.float32": "3991facc2532d92aa1bea1a002a3fe5e9cd122673f93b3909e52db89a3b1606e",
+    "S_single.float32": "44c67ec99ddca4a50be60bb53a1816223546d1edfc329dd2a23b754069d641a3",
+    "checkpoints/218_SinglePhoton/checkpoint_000010/Image_218_SinglePhoton_active.float32": "3991facc2532d92aa1bea1a002a3fe5e9cd122673f93b3909e52db89a3b1606e",
+    "checkpoints/218_SinglePhoton/checkpoint_000010/Image_218_SinglePhoton_full.float32": "2e386a87eab19f3cd6f548c6990dc2efc3988db9ce821f701f60c20d6b838565",
+    "checkpoints/218_SinglePhoton/checkpoint_000010/manifest.json": "7484cd3c5099fa1d65ee07671d43f6896bdaeb52f5ba2f39574288dd4f6e5205",
+    "progress.json": "e07087c94bdc66b1f493e5f5b920a3cf63c065455d751b1da63fb891149c0f43",
+    "run_manifest.json": "21dded3ae23f7af82f6dffd4e26ecd9e06a9c3f41a5fe37009e036327ea7696f",
+    "verification.json": "fd46356ab39bff4d347d01aae31e0c89fc3ac5cfbe86c7279b439c9d19b7c2c6",
+    "allocation.txt": "e1d0d10669d995f564ee4ad2a1860e6ee31227c15da2984ce6331293f63dce75"
+  },
+  "archive_sha256": "437a77a59361f106e95dd9e0dbe181b2d779ccbcc2cdf6e2d2e8c019088a504a",
+  "archive_bytes": 1563341
+}

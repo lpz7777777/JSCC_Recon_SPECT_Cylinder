@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "strict_fetch_passed": true,
+  "dataset": "JSCC_218",
+  "stage": "validation",
+  "source_job": 1705505,
+  "verification_job": 1705507,
+  "local_result": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\validation_accepted",
+  "remote_result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation",
+  "archive_sha256": "2864814000bbb0b437f12562503cf82c49417bafe5177351cfe1bb7384ec6040",
+  "all_files_sha256": {
+    "Image_218_SinglePhoton_active.float32": "a5ce2c1f8c3dbcf1f4830829d2d16f7606b46f60af93d0335b13b6735b8491a3",
+    "Image_218_SinglePhoton_full.float32": "60fcc3e49712c27fe03b4e6ca895e429c1b59ba667b9230668370fc6969751d1",
+    "Image_218_SinglePhoton_history.float32": "a5ce2c1f8c3dbcf1f4830829d2d16f7606b46f60af93d0335b13b6735b8491a3",
+    "S_single.float32": "77b7ed6710a11d9326e2087c88876184896431f58b5563fff269f6757b114a91",
+    "checkpoints/218_SinglePhoton/checkpoint_000010/Image_218_SinglePhoton_active.float32": "a5ce2c1f8c3dbcf1f4830829d2d16f7606b46f60af93d0335b13b6735b8491a3",
+    "checkpoints/218_SinglePhoton/checkpoint_000010/Image_218_SinglePhoton_full.float32": "60fcc3e49712c27fe03b4e6ca895e429c1b59ba667b9230668370fc6969751d1",
+    "checkpoints/218_SinglePhoton/checkpoint_000010/manifest.json": "5a1c14d86c3fd2bff1620fddf742c30c16a58947491462bcb627ec491c84d243",
+    "progress.json": "46595e5eaf4c6c5b7e679f4a25f6355c02b9fda59b1918a61b9a209f74b8a75a",
+    "run_manifest.json": "03082c18eaf5577b59bec5baeca75c9356cf75d6101a4730cd7c4a95951dd0a6",
+    "verification.json": "238d27be918ada3bd13842bf23e38819a19bc44cea8bec9e358fd7b352463ce5",
+    "allocation.txt": "b59cb785ece18338a4de786e376f782daec4d2ca34924811b164207ff14800a0"
+  },
+  "source_accounting": "1705505|COMPLETED|0:0||00:02:13|billing=32,cpu=32,gres/gpu=4,mem=504000M,node=1\n1705505.batch|COMPLETED|0:0|6148K|00:02:13|cpu=32,gres/gpu=4,mem=504000M,node=1\n1705505.extern|COMPLETED|0:0|0|00:02:13|billing=32,cpu=32,gres/gpu=4,mem=504000M,node=1\n1705505.0|COMPLETED|0:0|10211144K|00:02:12|cpu=32,gres/gpu=4,mem=504000M,node=1\n",
+  "verification_accounting": "1705507|COMPLETED|0:0\n1705507.batch|COMPLETED|0:0\n1705507.extern|COMPLETED|0:0\n",
+  "verification_sha256": "238d27be918ada3bd13842bf23e38819a19bc44cea8bec9e358fd7b352463ce5",
+  "logs_sha256": {
+    "validation.err": "19e824eadcba24b28dd74378e092c85cc541f3d70daf909d23a93b9b8b427725",
+    "validation.out": "bab88d333e096c77c0a6db5181b1bb35eaee6e530c8d49df27c6c80d3d74d2d0",
+    "validation_verify.err": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+    "validation_verify.out": "70d326b81100bf1e6987e399cf22d8c00e714378b63b2c64a2c226aebe7d21c3"
+  }
+}

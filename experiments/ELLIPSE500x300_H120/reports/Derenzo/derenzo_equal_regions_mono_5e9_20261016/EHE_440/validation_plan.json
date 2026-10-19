@@ -1,0 +1,16 @@
+{
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "dataset": "EHE_440",
+  "nodes": 1,
+  "gpus_per_node": 1,
+  "world_size": 1,
+  "accepted_events": 0,
+  "collection_sha256": "aa06a17e1514f482195b209f17a673ddeb0b5a0def8b989ef0b0ab365ec177a7",
+  "release_sha256": "1881df0b3ba38bf704856b2ac533278301656afdf5413cf2e85e1f638526315f",
+  "channels": [
+    "440_SinglePhoton"
+  ],
+  "iterations": 200,
+  "save_step": 1,
+  "response_storage": "CPU resident lossless float32; no disk response cache"
+}

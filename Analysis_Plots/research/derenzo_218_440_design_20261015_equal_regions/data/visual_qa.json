@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "visually_inspected_pngs": {
+    "derenzo_218keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    },
+    "derenzo_440_218_design.png": {
+      "pixel_size": [
+        5280,
+        3060
+      ]
+    },
+    "derenzo_440keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    }
+  },
+  "checks": [
+    "All six dashed equilateral regions are visibly equal in size and separated.",
+    "All regions and rod clusters are shifted outward, exposing the FOV center.",
+    "Requested rod diameters are correctly labeled.",
+    "Center clearance, region dimensions, counts, pitch and height are legible.",
+    "No labels or annotations are clipped or overlap."
+  ]
+}

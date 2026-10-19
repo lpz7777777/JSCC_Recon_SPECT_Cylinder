@@ -1,0 +1,23 @@
+{
+  "rank_count": 32,
+  "unique_gpu_count": 32,
+  "node_count": 8,
+  "ranks_per_node": {
+    "wqd10nah09g1": 4,
+    "wqd10nah09g3": 4,
+    "wqd10nah09g4": 4,
+    "wqd10nah09g5": 4,
+    "wqd10nbj03g1": 4,
+    "wqd10nbj04g4": 4,
+    "wqd10nbj06g4": 4,
+    "wqd10nbm09g5": 4
+  },
+  "max_gpu_measured_fraction": 0.22716195488838886,
+  "max_gpu_reserved_fraction": 0.2013749931873214,
+  "max_node_sum_peak_rss_fraction": 0.05221065848214286,
+  "accepted_events": 4849087,
+  "is_formal_reconstruction": false,
+  "full_independent_selection_acceptance_performed_this_check": false,
+  "all_resource_fractions_within_80_percent": true,
+  "error_indicator_lines": []
+}

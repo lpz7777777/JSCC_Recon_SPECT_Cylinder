@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "visually_inspected_pngs": {
+    "derenzo_218keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    },
+    "derenzo_440_218_design.png": {
+      "pixel_size": [
+        5280,
+        3060
+      ]
+    },
+    "derenzo_440keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    }
+  },
+  "checks": [
+    "Each energy has six sectors with six rods each (1+2+3).",
+    "Diameter labels match the requested six diameters for each energy.",
+    "No clipping or overlapping labels.",
+    "Shared 10/12/14/16 mm groups retain identical coordinates across energies.",
+    "All retained rod positions are exact subsets of the previous design."
+  ]
+}

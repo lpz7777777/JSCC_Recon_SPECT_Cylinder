@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "image_pixels": [
+    5400,
+    2850
+  ],
+  "png_sha256": "cb1c1d7fa41d929610bc84e3015f764c53bb16ac8546ab4d4217e10dea2125d5",
+  "inspection": "Final PNG visually inspected: six three-dimensional spheres visible; correct 440/218 allocation; readable sphere diameters; separate analytic z=0 diagrams; no clipped or overlapping labels.",
+  "blue_440_hot_diameters_mm": [
+    13,
+    22,
+    37
+  ],
+  "teal_218_hot_diameters_mm": [
+    10,
+    17,
+    28
+  ],
+  "cold_regions": "Opposite-energy spheres and central lung cylinder are zero in each map."
+}

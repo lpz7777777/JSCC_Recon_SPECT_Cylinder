@@ -1,0 +1,6 @@
+{
+  "job": 1704559,
+  "accounting": "1704559|COMPLETED|0:0||00:39:12|billing=256,cpu=256,gres/gpu=32,mem=3937.50G,node=8|wqd10nah09g[1,4],wqd10nah10g1,wqd10nbj01g3,wqd10nbj03g3,wqd10nbj04g[1,3],wqd10nbj06g4\n1704559.batch|COMPLETED|0:0|17348K|00:39:12|cpu=32,gres/gpu=4,mem=504000M,node=1|wqd10nah09g1\n1704559.extern|COMPLETED|0:0|0|00:39:12|billing=256,cpu=256,gres/gpu=32,mem=3937.50G,node=8|wqd10nah09g[1,4],wqd10nah10g1,wqd10nbj01g3,wqd10nbj03g3,wqd10nbj04g[1,3],wqd10nbj06g4\n1704559.0|COMPLETED|0:0|565500K|00:00:37|cpu=256,gres/gpu=32,mem=3937.50G,node=8|wqd10nah09g[1,4],wqd10nah10g1,wqd10nbj01g3,wqd10nbj03g3,wqd10nbj04g[1,3],wqd10nbj06g4\n1704559.1|COMPLETED|0:0|211467416K|00:38:32|cpu=256,gres/gpu=32,mem=3937.50G,node=8|wqd10nah09g[1,4],wqd10nah10g1,wqd10nbj01g3,wqd10nbj03g3,wqd10nbj04g[1,3],wqd10nbj06g4\n",
+  "queue": "",
+  "checked_epoch": 1792383210.4930809
+}

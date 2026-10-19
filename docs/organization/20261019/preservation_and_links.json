@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-19T13:11:49.416629+08:00",
+  "protected_files": 1377,
+  "protected_files_changed": [],
+  "archives": [
+    {
+      "path": "docs/history/PROJECT_README_20261019.md",
+      "passed": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/README_20261019.md",
+      "passed": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/AGENTS_20261019.md",
+      "passed": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/README_20261019.md",
+      "passed": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/RUNBOOK_20261019.md",
+      "passed": true
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/CONTRACT_20261019.md",
+      "passed": true
+    }
+  ],
+  "canonical_documents": 33,
+  "canonical_document_paths": [
+    "Analysis_Plots/README.md",
+    "Analysis_Plots/research/README.md",
+    "Analysis_Plots/research/advisor_progress_20261014/README.md",
+    "Analysis_Plots/research/derenzo_218_440_design_20261014/README.md",
+    "Analysis_Plots/research/derenzo_218_440_design_20261015/README.md",
+    "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/README.md",
+    "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/README.md",
+    "Analysis_Plots/research/nema_structure_20261014/README.md",
+    "README.md",
+    "docs/DUAL_ENERGY_RESEARCH_REVIEW.md",
+    "docs/README.md",
+    "docs/RESEARCH_STRATEGY.md",
+    "docs/ac225/CURRENT_STATUS.md",
+    "docs/ac225/DATA_POLICY.md",
+    "docs/ac225/DIRECTORY_MAP.md",
+    "docs/ac225/EXPERIMENTS.md",
+    "docs/ac225/OPERATIONS.md",
+    "docs/ac225/README.md",
+    "docs/ac225/SCIENCE_CONVENTIONS.md",
+    "docs/ac225/SOURCE_INDEX.md",
+    "docs/history/README.md",
+    "docs/organization/20261019/README.md",
+    "experiments/ELLIPSE500x300_H120/AGENTS.md",
+    "experiments/ELLIPSE500x300_H120/README.md",
+    "experiments/ELLIPSE500x300_H120/history/README.md",
+    "experiments/ELLIPSE500x300_H120/reports/Derenzo/README.md",
+    "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/README.md",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/README.md",
+    "experiments/ELLIPSE500x300_H120/reports/README.md"
+  ],
+  "local_links_checked": 260,
+  "broken_links": [],
+  "frozen_scientific_sources_or_job_records_moved": false,
+  "large_data_scanned_or_moved": false,
+  "historical_verbatim_archives_checked_by_sha_not_rebased_links": true,
+  "catalog_experiments": 33,
+  "catalog_components": 15,
+  "catalog_indexed_sources": 1251,
+  "catalog_indexed_directories": 88,
+  "read_only_query_tests_passed": 6,
+  "original_receipt_log_whitespace_preserved_by_gitattributes": true
+}

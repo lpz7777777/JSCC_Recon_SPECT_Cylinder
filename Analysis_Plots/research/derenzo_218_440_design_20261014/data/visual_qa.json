@@ -1,0 +1,31 @@
+{
+  "visually_inspected_pngs": {
+    "derenzo_218keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    },
+    "derenzo_440_218_design.png": {
+      "pixel_size": [
+        5280,
+        3060
+      ]
+    },
+    "derenzo_440keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    }
+  },
+  "passed": true,
+  "checks": [
+    "Both monoenergy maps show only their own rods.",
+    "All six diameter labels are legible and outside the envelope.",
+    "Common 8/10/12/16 mm groups visibly share position and scale.",
+    "No title, legend, label, or footer clipping.",
+    "Diameter, center pitch, height, and emission contrast are explicit.",
+    "Design is clearly labeled as not a reconstruction result."
+  ]
+}

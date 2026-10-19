@@ -1,0 +1,347 @@
+{
+  "protocol": "derenzo-source-density-no-fit-full120-v1",
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "created_at": "2026-10-19T12:36:30.567665+08:00",
+  "datasets": [
+    "JSCC_218",
+    "EHE_218",
+    "EHE_440"
+  ],
+  "all_input_hashes_verified": true,
+  "accepted_input_files_checked": 1824,
+  "inputs_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\gpu_payload\\whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "Analysis_Plots\\research\\derenzo_218_440_design_20261015_equal_regions\\data\\derenzo_218keV_geometry.json": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+    "Analysis_Plots\\research\\derenzo_218_440_design_20261015_equal_regions\\data\\derenzo_440keV_geometry.json": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+    "experiments\\ELLIPSE500x300_H120\\reports\\Derenzo\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\formal_acceptance.json": "c4f3c2c415bdff7c9a2c6c871b55c06f146a763622ef7b9d448ef580be12993b",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\input\\collection.json": "1984f017c7ab85bf13d85e7e5127910cb41c1c91ac28603c7050909f7ae7950e",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\formal_accepted\\Image_218_SinglePhoton_active.float32": "b7d654df9e5402bfa8fa392a525a54713e8236d4b5c4201ebbd777886f93d3c8",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\formal_accepted\\Image_218_SinglePhoton_full.float32": "fc467029cc9a3b002fa00dcee14cb4897562236d74f27fd2f5daf10c21d3b9c2",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\formal_accepted\\Image_218_SinglePhoton_history.float32": "30adaa1363e48e0623fcd8e5055b7e230a598730055ebaaf36d3089a4b31cb89",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\formal_accepted\\run_manifest.json": "1092abd4ce2c2978d0426602e5c766f15fb14c00d21d1adea63f6c94144b94bd",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\JSCC_218\\formal_accepted\\verification.json": "de03a3a987dc1de21d5281dd72133f8c8ab17315372f70e0dc02d4f5d125da34",
+    "experiments\\ELLIPSE500x300_H120\\reports\\Derenzo\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\formal_acceptance.json": "070eb2d4ac55757a653d37c4c47cc0cc3115954f2e105ecacf7118466a297112",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\input\\collection.json": "2328c3ccc222a86b7859234d10c0900507a5ed21f9cd6d3a936cb51e26157ac5",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\formal_accepted\\Image_218_SinglePhoton_active.float32": "4706a485b16a04de917218c249eb841d642d2a17c7f5920fe973855900c109fc",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\formal_accepted\\Image_218_SinglePhoton_full.float32": "dd3cfccd38cf31d8f69d1c180ca7f3745bc278ac1cf860e201b6fd32eab92bc6",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\formal_accepted\\Image_218_SinglePhoton_history.float32": "da4fe1af3271ccd4920a9da6020366875639c3812f716bc694021a5fd08d2c80",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\formal_accepted\\run_manifest.json": "0aa50c35bbdd2a0829461777972309773984fcf9a0a49c969b662073a6307659",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_218\\formal_accepted\\verification.json": "f73c19689f7c88fc79cffb7933ff9d7cfce1798777cdc89c7abb979c1971a640",
+    "experiments\\ELLIPSE500x300_H120\\reports\\Derenzo\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\formal_acceptance.json": "65902498dea4c2a7260e9ae87284e201aa3603d41c44e9b7acb60fddd7ca2ad7",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\input\\collection.json": "aa06a17e1514f482195b209f17a673ddeb0b5a0def8b989ef0b0ab365ec177a7",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\formal_accepted\\Image_440_SinglePhoton_active.float32": "97a44e34fe532606710b69826cd6668c345265e5b26e4b1d145f04cb3a495658",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\formal_accepted\\Image_440_SinglePhoton_full.float32": "440725d0d1fb818842b872760a1d8254983f161f8adf98a1bc1302d3a25d45b8",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\formal_accepted\\Image_440_SinglePhoton_history.float32": "383e3c844157760633cf9d89feedc30c9ab94cb47d5d72e17b859339b1f40aeb",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\formal_accepted\\run_manifest.json": "0c7e60850c07c0d2e6e6e432318857b5a138b4203a2f9bd314417440465c3416",
+    "experiments\\ELLIPSE500x300_H120\\generated\\derenzo_equal_regions_mono_5e9_20261016\\EHE_440\\formal_accepted\\verification.json": "c17d32e0cf4dd940250ad8a995c390f282eb6a190f8a5a0071af9ed654cd1f11"
+  },
+  "authoritative_truth": {
+    "218": {
+      "subsamples_per_axis": 24,
+      "analytic_hot_volume_mm3": 464076.0667882842,
+      "sampled_hot_volume_mm3": 463976.24948544195,
+      "relative_volume_error": -0.0002150882365752338,
+      "source_geometry_sha256": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+      "rod_count": 114,
+      "nominal_rod_emitted_density_gamma_mm3": 10774.09579555208,
+      "diameters_mm": [
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ]
+    },
+    "440": {
+      "subsamples_per_axis": 24,
+      "analytic_hot_volume_mm3": 507995.5320854695,
+      "sampled_hot_volume_mm3": 507915.00010946766,
+      "relative_volume_error": -0.00015852890609346915,
+      "source_geometry_sha256": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+      "rod_count": 53,
+      "nominal_rod_emitted_density_gamma_mm3": 9842.606251817895,
+      "diameters_mm": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ]
+    }
+  },
+  "native_grid": {
+    "full_points": 132040,
+    "active_points": 78920,
+    "radial_pitch_mm": 6,
+    "z_pitch_mm": 3
+  },
+  "display_grid": {
+    "shape_zyx": [
+      40,
+      100,
+      168
+    ],
+    "xy_pitch_mm": 3,
+    "extent_xy_mm": [
+      -252.0,
+      252.0,
+      -150.0,
+      150.0
+    ],
+    "field_ellipse_diameters_mm": [
+      500,
+      300
+    ],
+    "raster_extension_x_mm": 2,
+    "ellipse_display_mask_applied": false,
+    "unmasked_boundary_interpolation_visible": true,
+    "z_centers_mm": [
+      -58.5,
+      -55.5,
+      -52.5,
+      -49.5,
+      -46.5,
+      -43.5,
+      -40.5,
+      -37.5,
+      -34.5,
+      -31.5,
+      -28.5,
+      -25.5,
+      -22.5,
+      -19.5,
+      -16.5,
+      -13.5,
+      -10.5,
+      -7.5,
+      -4.5,
+      -1.5,
+      1.5,
+      4.5,
+      7.5,
+      10.5,
+      13.5,
+      16.5,
+      19.5,
+      22.5,
+      25.5,
+      28.5,
+      31.5,
+      34.5,
+      37.5,
+      40.5,
+      43.5,
+      46.5,
+      49.5,
+      52.5,
+      55.5,
+      58.5
+    ],
+    "central_slice_z_mm": 1.5,
+    "axial_mip_all_40_slices": true,
+    "origin": "lower",
+    "x_right_y_up": true,
+    "negative_barycentric_roundoff_cleanup": [
+      {
+        "label": "JSCC_218_final",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "JSCC_218_iter100",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "JSCC_218_iter500",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "JSCC_218_iter1000",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "JSCC_218_iter2000",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "JSCC_218_iter5000",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "JSCC_218_iter10000",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_final",
+        "minimum_before_cleanup": -1.0818024144587588e-41,
+        "negative_samples": 2,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_iter2",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_iter10",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_iter20",
+        "minimum_before_cleanup": -3.051981532190436e-38,
+        "negative_samples": 1,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_iter40",
+        "minimum_before_cleanup": -1.4688642777547467e-28,
+        "negative_samples": 12,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_iter100",
+        "minimum_before_cleanup": -2.0742300128628807e-39,
+        "negative_samples": 15,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_218_iter200",
+        "minimum_before_cleanup": -1.0818024144587588e-41,
+        "negative_samples": 2,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_final",
+        "minimum_before_cleanup": -1.496137799899557e-15,
+        "negative_samples": 33,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_iter2",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_iter10",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_iter20",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_iter40",
+        "minimum_before_cleanup": 0.0,
+        "negative_samples": 0,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_iter100",
+        "minimum_before_cleanup": -1.3327991956641491e-16,
+        "negative_samples": 6,
+        "absolute_zero_tolerance": 1e-08
+      },
+      {
+        "label": "EHE_440_iter200",
+        "minimum_before_cleanup": -1.496137799899557e-15,
+        "negative_samples": 33,
+        "absolute_zero_tolerance": 1e-08
+      }
+    ],
+    "xy_operator": "Existing analyze_nema_result.xy_interpolator: barycentric linear; no z interpolation"
+  },
+  "intensity": {
+    "scale": "native image / (actual monoenergy primaries / exact analytic hot volume)",
+    "fitted_gain": false,
+    "per_frame_normalization": false,
+    "actual_primaries_each": 5000000000,
+    "truth_rod_density": 1,
+    "primary_display_range": [
+      0,
+      2
+    ],
+    "unclipped_display_range": [
+      0,
+      9
+    ],
+    "raw_values_unchanged": true,
+    "smoothing_sigma_pixels": 0,
+    "crop_pixels": 0,
+    "colormap": "gray_r"
+  },
+  "final_summary": [
+    {
+      "dataset": "JSCC_218",
+      "source_job": 1705508,
+      "iterations": 10000,
+      "nominal_rod_emitted_density_gamma_mm3": 10774.09579555208,
+      "mip_max": 1.2752490043640137,
+      "mip_fraction_above_display2": 0.0,
+      "native_emission_integral_ratio": 0.9981692761272178,
+      "native_peak_over_nominal_rod_density": 1.479638934135437,
+      "native_fraction_above_display2": 0.0,
+      "native_source_z_leak_fraction": 0.0268294166182017
+    },
+    {
+      "dataset": "EHE_218",
+      "source_job": 1705512,
+      "iterations": 200,
+      "nominal_rod_emitted_density_gamma_mm3": 10774.09579555208,
+      "mip_max": 5.013046741485596,
+      "mip_fraction_above_display2": 0.015178571428571428,
+      "native_emission_integral_ratio": 1.0842939377804217,
+      "native_peak_over_nominal_rod_density": 5.9953107833862305,
+      "native_fraction_above_display2": 0.002090724784591992,
+      "native_source_z_leak_fraction": 0.028168193029370243
+    },
+    {
+      "dataset": "EHE_440",
+      "source_job": 1705580,
+      "iterations": 200,
+      "nominal_rod_emitted_density_gamma_mm3": 9842.606251817895,
+      "mip_max": 8.87330436706543,
+      "mip_fraction_above_display2": 0.05708333333333333,
+      "native_emission_integral_ratio": 1.1440442713187307,
+      "native_peak_over_nominal_rod_density": 10.561990737915039,
+      "native_fraction_above_display2": 0.00446021287379625,
+      "native_source_z_leak_fraction": 0.0845985260960621
+    }
+  ],
+  "limitations": [
+    "6-mm radial basis limits interpretation of the minimum 6-mm rods.",
+    "EHE existing response has physical calibration limitations; these data are not a new absolute activity calibration.",
+    "Different iteration budgets and equal gallery columns do not imply matched convergence.",
+    "Only completed strictly delivered Derenzo formal results included; no NEMA5e10 validation preview is represented as formal."
+  ],
+  "skill_overrides": [
+    "New Derenzo geometry absent from packaged truth catalog: use SHA-bound authoritative analytic rod geometry.",
+    "Formal run_manifest and strict acceptance replace legacy reconstruction_metadata schema.",
+    "Prior scientific preferences override generic smoothing, crop3 and truth-fit gain defaults.",
+    "Independent Analysis_Plots output preserves immutable accepted result directories."
+  ],
+  "script_sha256": "c9a57d80c7a56097527be20543f19e513301fcc5f8926f08ce0ad04456e6e80b",
+  "projection_archive_sha256": "0e74f2c06a313007473aeaa902f5beca9da595e888d17e9b0d6946f966ffc960"
+}

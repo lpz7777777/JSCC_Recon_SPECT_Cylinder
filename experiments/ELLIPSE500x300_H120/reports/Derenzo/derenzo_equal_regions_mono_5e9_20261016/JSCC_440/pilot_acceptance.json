@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "job": 15896136,
+  "receipt": {
+    "passed": true,
+    "study": "derenzo_equal_regions_mono_5e9_20261016",
+    "dataset": "JSCC_440",
+    "pilot": true,
+    "index": 0,
+    "view": 1,
+    "worker": 0,
+    "seed": 46100100,
+    "photons": 100000,
+    "primary_counts": [
+      0,
+      100000,
+      0
+    ],
+    "counts": {
+      "218": 129,
+      "440": 152
+    },
+    "binary_sha256": "9de76827814a6ce6f1fa273cbdfc8b353f9fc98bf489507ce5ff94d400fd91e6",
+    "registered_macro_sha256": "7724538cca201c9e4a3929548a2615017f07289766eae245a691b11d9c8845b4",
+    "actual_macro_sha256": "d47a662703d147603465a47b8f93ec357de6c4f1c132a3ce9f8ddd961fba015b",
+    "allocation_job": "15896136",
+    "array_job": null,
+    "array_task": -1,
+    "resource": {
+      "elapsed_seconds": 12.518593342974782,
+      "rss_peak_bytes": 112304128,
+      "host_allocated_bytes": 156592869376,
+      "rss_fraction": 0.0007171726812818218,
+      "gpu_used_peak_bytes": 0,
+      "gpu_total_bytes": 0,
+      "gpu_used_fraction": 0
+    },
+    "started_epoch": 1792122619.0154445,
+    "finished_epoch": 1792122631.544465,
+    "files": {
+      "source.mac": "d47a662703d147603465a47b8f93ec357de6c4f1c132a3ce9f8ddd961fba015b",
+      "allocation.json": "993ddc88e662fb260a5a73a2448b43535fe1c43014675437642446619ab156fe",
+      "transport.log": "a41954fddab9cfaccf79172bdafaca1fad780ed88eb7f4c841222f443bb0684d",
+      "CntStat_218.csv": "6bc401057fdd449d3d515ff5a9d85d24293fd8880949bdf3f80a2286956cb051",
+      "CntStat_440.csv": "b80ff9cae7f0ce3a19d4d5b76082955b5ed53863699350512a469dc1ab058881",
+      "PrimaryCount.csv": "5b6c16e1fdddfe6a302fa03f6c5ba21cd57bfc118b772a36b3b56efec0740a23",
+      "CrystalMatrix.txt": "4f36ae7b95cfbac647885538bd64d09c991162ae1aa4c5eb46f11e65ab1292fb",
+      "List.csv": "57bc0145b21c335669c7dc725647a8f7c3189b3a7f2898982aca6ad0d6487281"
+    }
+  },
+  "accounting": "15896136|COMPLETED|0:0\n15896136.batch|COMPLETED|0:0\n15896136.extern|COMPLETED|0:0\n15896136.0|COMPLETED|0:0\n",
+  "strict_small_fetch": true,
+  "pilot_excluded_from_formal_dose": true
+}

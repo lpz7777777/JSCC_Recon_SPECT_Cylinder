@@ -123,3 +123,22 @@ known_hosts*
 
 # Original JSCC pilot macro remains local/remote; its receipt preserves the SHA.
 /experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_pilot/run.mac
+
+# Research figures are reproducible local artifacts; retain scripts, geometry
+# parameters, small metrics and SHA manifests instead of new media blobs.
+/Analysis_Plots/**/figures/
+
+# Headerless scientific arrays must never be accidentally staged.
+*.float32
+*.float64
+*.int32
+*.int64
+*.uint32
+*.uint64
+
+# Live controller output stays local; commit dated status/acceptance snapshots.
+/experiments/ELLIPSE500x300_H120/reports/Derenzo/**/latest_progress.json
+/experiments/ELLIPSE500x300_H120/reports/Derenzo/**/connection_wait.json
+/experiments/ELLIPSE500x300_H120/reports/Derenzo/**/manual_progress_latest.json
+/experiments/ELLIPSE500x300_H120/reports/Derenzo/**/recovery_20261019/derenzo_resume.out
+/experiments/ELLIPSE500x300_H120/reports/Derenzo/**/recovery_20261019/derenzo_resume.err

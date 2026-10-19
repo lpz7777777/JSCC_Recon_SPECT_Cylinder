@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "visual_review": "Regenerated PNG actually opened and inspected at1969x1280 display (original6000x3900). Both SC rows now show single-photon histories with clear SC labels;440 JSCC joint row unchanged. Quantity subtitle says total dual-energy primary gamma photons. All35 panels visible, no overlapping or clipped text.",
+  "figure_sha256": "267ecc42d223da1e26276f27f0365de9bf56605ed5f3d5e2c8accab2accd1f6f",
+  "nomenclature_authority": "User explicit definition2026-10-14: SC means single-photon imaging. Historical repository SC Compton label is overridden for this requested figure.",
+  "SC_channels": {
+    "440": "440_SinglePhoton",
+    "218": "218_SinglePhoton_CrossTalkCorrected"
+  },
+  "SC440_checkpoint_directory": "checkpoints_440_single (actual observed directory)",
+  "JSCC_channel": "440_SinglePlusCompton",
+  "218_label": "SC · 单光子校正",
+  "EHE_projection_kind": "Geant4_transport only",
+  "dose_definition": "Total218+440 keV primary gamma photons across20 views; not Ac225 decay count or a separate per-window count.",
+  "selected_frames": 28,
+  "all_selected_frames_match_independent_checkpoint_bytes": true,
+  "display_warning": "MIP displayed with fixed0–10 limit; over-range pixels saturate black and are counted per panel. No arrays were clipped or fitted.",
+  "scientific_limit": "EHE physical calibration has not passed; shown as research-progress output, not a validated system superiority claim."
+}

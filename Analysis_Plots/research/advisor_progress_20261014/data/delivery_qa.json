@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "three_figures": {
+    "01_imaging_scene.png": {
+      "pixels": [
+        4320,
+        2400
+      ],
+      "sha256": "81663e0b90ddc51466cb518c3a69cef4cc5936082ddd706604f24ac2d55746c5"
+    },
+    "02_detector_design.png": {
+      "pixels": [
+        4320,
+        2400
+      ],
+      "sha256": "49bc2d6a78e237dd873e01b76ff44d2c79452a76f97c063f6b6f98e9974f2194"
+    },
+    "03_nema_mip_iterations.png": {
+      "pixels": [
+        6000,
+        3900
+      ],
+      "sha256": "267ecc42d223da1e26276f27f0365de9bf56605ed5f3d5e2c8accab2accd1f6f"
+    }
+  },
+  "visual_inspection": "All three rendered PNGs inspected; corrected EHE rear-plane occlusion, NaI dimension wording, and removed a redundant central label. No overlapping or clipped labels.",
+  "geometry_sources_unchanged": true,
+  "figure3_scientific_qa_passed": true,
+  "figures_1_2_script_sha256": "78e7c8b178b5603a3072e82781b79223adfc78595a8d9b1e960b4407e7f86638",
+  "limitations": [
+    "Schematic exploded spacing is illustrative; numeric dimensions and element patterns are source-derived.",
+    "218 keV has corrected single-photon reconstruction, no independent SC/JSCC joint channel.",
+    "EHE physical calibration remains incomplete; these images document progress, not a validated superiority claim.",
+    "MIP uses the central 72 mm with full XY field, gray_r 0-10 display saturation, no smoothing or per-image fitted gains."
+  ],
+  "SC_revision": {
+    "definition": "Single-photon imaging per user correction 2026-10-14",
+    "440_channel": "440_SinglePhoton",
+    "218_channel": "218_SinglePhoton_CrossTalkCorrected",
+    "raw_frames_changed_from_previous_figure": 4,
+    "all_28_checkpoint_byte_matches": true,
+    "revised_PNG_visually_inspected": true
+  },
+  "photon_budget_revision": "5e9 and5e10 are actual primary gamma totals across both energies and all20views, not Ac225 parent decay counts."
+}

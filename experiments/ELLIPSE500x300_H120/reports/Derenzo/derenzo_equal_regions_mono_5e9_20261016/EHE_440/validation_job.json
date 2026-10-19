@@ -1,0 +1,34 @@
+{
+  "job": 1705578,
+  "stage": "validation",
+  "dataset": "EHE_440",
+  "host": "gpu",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation",
+  "allocation": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/allocations/EHE_440_validation_1705578.txt",
+  "plan_stage": "validation",
+  "plan": {
+    "study": "derenzo_equal_regions_mono_5e9_20261016",
+    "dataset": "EHE_440",
+    "nodes": 1,
+    "gpus_per_node": 1,
+    "world_size": 1,
+    "accepted_events": 0,
+    "collection_sha256": "aa06a17e1514f482195b209f17a673ddeb0b5a0def8b989ef0b0ab365ec177a7",
+    "release_sha256": "1881df0b3ba38bf704856b2ac533278301656afdf5413cf2e85e1f638526315f",
+    "channels": [
+      "440_SinglePhoton"
+    ],
+    "iterations": 200,
+    "save_step": 1,
+    "response_storage": "CPU resident lossless float32; no disk response cache"
+  },
+  "plan_remote": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/plans/EHE_440_validation.json",
+  "plan_sha256": "327c752d73cd4d6d2c704b3dcad686f8f2d4456c229febc5526302f7ded35b46",
+  "script_sha256": "6855c261127a28bdd6078ca6ceca7f4b6ca36bb9094fe78cb7aa1aef354b1539",
+  "nodes": 1,
+  "gpus_per_node": 1,
+  "dependency": null,
+  "held": false,
+  "walltime_minutes": 240,
+  "submitted_epoch": 1792128528.351291
+}

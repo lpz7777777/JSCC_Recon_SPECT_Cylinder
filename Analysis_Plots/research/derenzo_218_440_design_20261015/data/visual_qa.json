@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "visually_inspected_pngs": {
+    "derenzo_218keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    },
+    "derenzo_440_218_design.png": {
+      "pixel_size": [
+        5280,
+        3060
+      ]
+    },
+    "derenzo_440keV_design.png": {
+      "pixel_size": [
+        3450,
+        3150
+      ]
+    }
+  },
+  "checks": [
+    "Requested diameters match geometry and all figure labels.",
+    "Shared 10/12/14/16 mm groups have identical coordinates in both designs.",
+    "No clipping or overlapping labels.",
+    "Diameter, center pitch, envelope, height and emission contrast are legible."
+  ]
+}

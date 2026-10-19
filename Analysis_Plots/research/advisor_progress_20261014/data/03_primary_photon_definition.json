@@ -1,0 +1,76 @@
+{
+  "definition": "Actual transported primary gamma photons, summed over 218 and 440 keV and all 20 views; one gamma per event; isotropic full 4pi.",
+  "not_parent_Ac225_decay_count": true,
+  "not_detected_event_count": true,
+  "not_per_energy_or_per_view_count": true,
+  "SC_label_authority": "User explicit correction on 2026-10-14: SC denotes single-photon imaging.",
+  "SC_440_channel": "440_SinglePhoton",
+  "SC_218_channel": "218_SinglePhoton_CrossTalkCorrected",
+  "JSCC_440_channel": "440_SinglePlusCompton",
+  "actual_primary_counts_energy_order_keV": [
+    218,
+    440,
+    "other"
+  ],
+  "actual_primary_counts": {
+    "JSCC_5e9_collection": [
+      1469053733,
+      3530946267,
+      0
+    ],
+    "EHE_5e9_collection": [
+      1469040802,
+      3530959198,
+      0
+    ],
+    "EHE_5e10_collection": [
+      14690373781,
+      35309626219,
+      0
+    ]
+  },
+  "configured_yield_weights": {
+    "218": 0.114,
+    "440": 0.259
+  },
+  "expected_primary_energy_fraction": {
+    "218": 0.29380779868182727,
+    "440": 0.7061922013181728
+  },
+  "sampling_weight": "relative_activity_concentration * cuboid_volume * configured_gamma_yield, normalized across both energy source maps",
+  "parent_decay_conversion": "No single parent-decay normalization defined in this two-map source simulation; energy source maps intentionally differ. Do not relabel the photon budget as Ac225 decays.",
+  "evidence": {
+    "source_jobs": {
+      "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/Simulation_5e9/jobs.json",
+      "sha256": "4fafc624c97dcac7b91c26ce0635fc66956da8986fc146b2c1aa23af65adc212"
+    },
+    "source_preparation": {
+      "path": "experiments/ELLIPSE500x300_H120/prepare_nema_simulation.py",
+      "sha256": "4a3faaf0463d05517514034bc15c1224f77944a6d69d2595d9a138c65ab29c78"
+    },
+    "source_generator": {
+      "path": "Geant4Sim/Geant4Code/src/PrimaryGeneratorAction.cc",
+      "sha256": "21a0a1ee1c743f76c786c7f3f44dd1a68d2d4e9b9807f29731f2170f7ea1d89e"
+    },
+    "source_config": {
+      "path": "experiments/ELLIPSE500x300_H120/config.json",
+      "sha256": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334"
+    },
+    "phantom_config": {
+      "path": "experiments/ELLIPSE500x300_H120/nema_body_h60_config.json",
+      "sha256": "883bdca4cc006c7841d9e8818b015b5d4ddf7e42b1c79a39467d9d7bafd84216"
+    },
+    "JSCC_5e9_collection": {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_payload/transport_collection.json",
+      "sha256": "719772f6e151c07c128811d870fb8d79c8d5a390bc3330de6ec24f4b77d46032"
+    },
+    "EHE_5e9_collection": {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport/collection.json",
+      "sha256": "54146b05e864c12963ef6531223ac1cd60d86d86497f408aa26486885caff94a"
+    },
+    "EHE_5e10_collection": {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/counts/collection.json",
+      "sha256": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8"
+    }
+  }
+}

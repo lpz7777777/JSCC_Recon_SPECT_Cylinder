@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "experiments\\ELLIPSE500x300_H120\\nema_body_h60_config.json": "883bdca4cc006c7841d9e8818b015b5d4ddf7e42b1c79a39467d9d7bafd84216",
+    "experiments\\ELLIPSE500x300_H120\\reports\\NEMA_Body_H60\\manifest.json": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+    "experiments\\ELLIPSE500x300_H120\\generated\\NEMA_Body_H60\\truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "experiments\\ELLIPSE500x300_H120\\make_nema_body_h60.py": "c326f7a51165ca5fc3902ad67b0ffe4043df14ec6b726980f24e8c25cc3981ce"
+  },
+  "original_sources_unchanged": true,
+  "source_arrays_reproduced_exactly": true,
+  "geometry": {
+    "body_dimensions_mm": [
+      300,
+      230,
+      60
+    ],
+    "lung_diameter_mm": 51,
+    "sphere_center_ring_radius_mm": 57,
+    "spheres": [
+      {
+        "diameter_mm": 10.0,
+        "angle_deg": 0.0,
+        "hot_energy_keV": 218,
+        "center_mm": [
+          57.0,
+          0.0,
+          0.0
+        ],
+        "sampled_volume_mm3": 524.8125,
+        "analytic_volume_mm3": 523.5987755982989,
+        "relative_volume_error": 0.002318042856983782
+      },
+      {
+        "diameter_mm": 13.0,
+        "angle_deg": 60.0,
+        "hot_energy_keV": 440,
+        "center_mm": [
+          28.500000000000007,
+          49.363448015713,
+          0.0
+        ],
+        "sampled_volume_mm3": 1147.7109375,
+        "analytic_volume_mm3": 1150.3465099894624,
+        "relative_volume_error": -0.0022911118228946536
+      },
+      {
+        "diameter_mm": 17.0,
+        "angle_deg": 120.0,
+        "hot_energy_keV": 218,
+        "center_mm": [
+          -28.499999999999986,
+          49.363448015713004,
+          0.0
+        ],
+        "sampled_volume_mm3": 2571.1171875,
+        "analytic_volume_mm3": 2572.440784514442,
+        "relative_volume_error": -0.0005145296336497296
+      },
+      {
+        "diameter_mm": 22.0,
+        "angle_deg": 180.0,
+        "hot_energy_keV": 440,
+        "center_mm": [
+          -57.0,
+          6.980486755139913e-15,
+          0.0
+        ],
+        "sampled_volume_mm3": 5569.59375,
+        "analytic_volume_mm3": 5575.279762570686,
+        "relative_volume_error": -0.0010198613904290887
+      },
+      {
+        "diameter_mm": 28.0,
+        "angle_deg": 240.0,
+        "hot_energy_keV": 218,
+        "center_mm": [
+          -28.500000000000025,
+          -49.363448015713,
+          0.0
+        ],
+        "sampled_volume_mm3": 11489.765625,
+        "analytic_volume_mm3": 11494.040321933855,
+        "relative_volume_error": -0.00037190551051902165
+      },
+      {
+        "diameter_mm": 37.0,
+        "angle_deg": 300.0,
+        "hot_energy_keV": 440,
+        "center_mm": [
+          28.500000000000007,
+          -49.363448015713,
+          0.0
+        ],
+        "sampled_volume_mm3": 26520.75,
+        "analytic_volume_mm3": 26521.84878038063,
+        "relative_volume_error": -4.142925290506749e-05
+      }
+    ]
+  },
+  "activity": {
+    "background": 1,
+    "own_energy_hot_sphere": 10,
+    "opposite_energy_sphere": 0,
+    "lung": 0
+  },
+  "cross_section": "Analytic geometry at z=0, not MIP and not a reconstructed image",
+  "source_truth_spacing_mm": 3,
+  "energy_maps_are_separate": true,
+  "no_cross_energy_sum": true,
+  "three_dimensional_spheres": true,
+  "body_attenuation_model": false,
+  "off_canvas_text": [],
+  "script_sha256": "50d02cdacb61b68f14226d8ac73ad8fe67c51b7734b4682be9f854d6434947fc",
+  "outputs_sha256": {
+    "png": "cb1c1d7fa41d929610bc84e3015f764c53bb16ac8546ab4d4217e10dea2125d5",
+    "pdf": "b9a2ee7fac4c609b7ae9e1c9fe0b605c39b4847c716bc6cc3d57450ae1e5cbb9",
+    "svg": "fa18e7c65f1e16b88d4d6eed8ed84d34afee182993ae9e60548e4a408d9abb80"
+  }
+}

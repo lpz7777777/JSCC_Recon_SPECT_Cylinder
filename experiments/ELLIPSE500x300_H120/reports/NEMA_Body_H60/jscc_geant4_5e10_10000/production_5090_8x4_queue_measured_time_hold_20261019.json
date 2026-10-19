@@ -1,0 +1,25 @@
+{
+  "checked_epoch": 1792383325.1354864,
+  "study": "jscc_geant4_5e10_10000",
+  "validation_job": 1704559,
+  "verification_job": 1704566,
+  "formal_job": 1704572,
+  "validation_science_passed": true,
+  "strict_fetch_passed": true,
+  "validation_acceptance_sha256": "c77d17b606cf283d81240263c4cc7fefb238709af7c08ef6f21669690509538c",
+  "authority_sha256": "b27c7a780d69cdba5cc307b9c2ded7abbbfdf4d934f4d943e88330803d0063d3",
+  "measured_ten_iteration_phase_seconds": {
+    "440_single": 2.492667297832668,
+    "218_corrected": 1.4549357127398252,
+    "440_compton": 191.49774200562388
+  },
+  "measured_preparation_seconds": 1598.9228883944452,
+  "estimated_10000_total_seconds": 197542.82187125925,
+  "estimated_10000_total_hours": 54.87300607534979,
+  "required_margin_walltime_minutes": 4969,
+  "current_gate_max_minutes": 2880,
+  "current_gate_max_phase_seconds": 86400,
+  "formal_still_held": true,
+  "release_gate_published": false,
+  "reason": "Original launch gate rejects actual measured total/phase duration. No gate bypass, new science submission or frozen release overwrite."
+}

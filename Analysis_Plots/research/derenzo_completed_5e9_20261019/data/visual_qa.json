@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "images_inspected": [
+    "final_mip.png",
+    "iteration_mip_gallery.png",
+    "final_central_slices.png"
+  ],
+  "source_hashes_unchanged_after_render": true,
+  "archive_script_sha256_matches": true,
+  "expected_png_count": 8,
+  "expected_pdf_count": 8,
+  "png_decode_passed": true,
+  "figure_dimensions": {
+    "final_central_slices.png": [
+      3190,
+      1595
+    ],
+    "final_mip.png": [
+      3190,
+      1595
+    ],
+    "final_mip_unclipped.png": [
+      3190,
+      1595
+    ],
+    "iteration_mip_gallery.png": [
+      4180,
+      1958
+    ],
+    "iterations_EHE_218.png": [
+      4180,
+      814
+    ],
+    "iterations_EHE_440.png": [
+      4180,
+      814
+    ],
+    "iterations_JSCC_218.png": [
+      4180,
+      814
+    ],
+    "native_convergence.png": [
+      3080,
+      1430
+    ]
+  },
+  "labels_actual_iterations_and_energy": true,
+  "all_three_routes_single_photon": true,
+  "colorscale_primary_0_to_2_saturation_disclosed": true,
+  "unclipped_supplement_vmax": 9,
+  "truth_from_sha_bound_analytic_rod_geometry": true,
+  "no_gaussian_filter_or_fitted_gain": true,
+  "no_reflection_rotation_or_cross_energy_sum": true,
+  "boundary_interpolation_preserved": true,
+  "observations": [
+    "JSCC218 shows six source regions and some larger rods; minimum rods remain grid limited.",
+    "Both EHE reconstructions show strong peripheral artifacts, visible without masking or fitted brightness."
+  ],
+  "independent_review": {
+    "passed": true,
+    "reviewer": "derenzo_visual_audit",
+    "artifact_sha256_members_checked": 27,
+    "actual_images_viewed": [
+      "final_mip.png",
+      "iteration_mip_gallery.png",
+      "final_central_slices.png"
+    ],
+    "substantive_scientific_or_layout_errors": false,
+    "EHE_artifacts_are_observations_not_diagnosed_cause": true
+  }
+}

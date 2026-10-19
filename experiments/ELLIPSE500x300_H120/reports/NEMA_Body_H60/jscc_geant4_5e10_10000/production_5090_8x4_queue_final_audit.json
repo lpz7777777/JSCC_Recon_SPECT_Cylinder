@@ -1,0 +1,30 @@
+{
+  "checked_epoch": 1792086336.8759909,
+  "registered_jobs": {
+    "validation": 1704559,
+    "validation_verification": 1704566,
+    "formal": 1704572
+  },
+  "prior_job_records_unchanged": true,
+  "authority_not_yet_issued": true,
+  "controller_pid": 27920,
+  "controller_start_confirmed": true,
+  "current_sources_sha256": {
+    "jscc_5e10_5090_production_queue.py": "be9ec0296a7f12c949bf75211141d7f3f20d3b29dcf633136769582f8fc82a1b",
+    "jscc_5e10_formal_queue_gate.py": "dc16ac95ac216e2628b9d388d2bbb2dffe43f316ef8daf6ac1418e4bcb8b1965",
+    "test_jscc_5e10_formal_queue_gate.py": "b844bb0c66f257dcd68f6e2babc3e10e0752ed4042de49224f43103f2dbdeae0",
+    "test_jscc_5e10_queue_controller.py": "1ca3abe648191a5cd7bb8e2dd72df98f8c8706ea13d7c50e4d0424e883e045e1"
+  },
+  "small_records_sha256": {
+    "production_freeze.json": "3f557deb8d5022474dfabf0ad7a213ed96ccbe3d6840c076370dd8cd8e40b7f7",
+    "production_deployment.json": "a96cd56b7cd913d6f7de7daf2d42ed1aba67cbcae6aeea70ea36c1c70bf03937",
+    "production_5090_8x4_queue_submission.json": "f3631e8a43ef0d165bd2f6c00d2d3f016db35d9b6c327590911348f458819dec",
+    "production_5090_8x4_queue_latest_status.json": "b671898cae97970db896146a27186f19f206e43b5979acde038462571c3b5b0b",
+    "production_5090_8x4_queue_watch_freeze.json": "4ea15e0c28b3640ab7b637cb34842c63382e0e6722b694b5503b905ed2581c45",
+    "validation_job.json": "1f0df84c99f56d0e494775571e2f5ee5fc86146a42e50f2a420168b1aca94726",
+    "validation_verification_job.json": "281d605163dddbd689f71181fb82e89d727351c597c9f2f21dca68ddeafb39e8",
+    "formal_job.json": "c63a89e5cc0ab8aa342692552ad41eaa592d27d0c527728efa1e8f51d3824ff6"
+  },
+  "large_arrays_or_response_files_added_to_git": false,
+  "git_commit_or_push_performed": false
+}

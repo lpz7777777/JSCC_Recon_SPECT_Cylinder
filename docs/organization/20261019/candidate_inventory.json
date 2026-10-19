@@ -1,0 +1,1473 @@
+{
+  "policy": "Explicit small-text candidates only; source/params/docs/receipts; no media or runtime arrays",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 7165
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 3810
+    },
+    {
+      "path": "Analysis_Plots/README.md",
+      "bytes": 1503
+    },
+    {
+      "path": "Analysis_Plots/research/README.md",
+      "bytes": 959
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/README.md",
+      "bytes": 607
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_panel_metadata.csv",
+      "bytes": 12861
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_primary_photon_definition.json",
+      "bytes": 3143
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_scientific_qa.json",
+      "bytes": 26237
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_visual_qa.json",
+      "bytes": 1457
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/delivery_qa.json",
+      "bytes": 1940
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/geometry_sources.json",
+      "bytes": 2008
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/delivery_manifest.json",
+      "bytes": 3110
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/scripts/plot_01_02_geometry.py",
+      "bytes": 15070
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/scripts/plot_03_nema_mip.py",
+      "bytes": 17552
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/使用说明.txt",
+      "bytes": 1236
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/README.md",
+      "bytes": 497
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/artifact_sha256.json",
+      "bytes": 1802
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_218keV_geometry.json",
+      "bytes": 127643
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_218keV_rods.csv",
+      "bytes": 32694
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_440keV_geometry.json",
+      "bytes": 43798
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_440keV_rods.csv",
+      "bytes": 10977
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/geometry_qa.json",
+      "bytes": 5424
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/visual_qa.json",
+      "bytes": 787
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/design_notes_zh.txt",
+      "bytes": 4135
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/scripts/design_derenzo.py",
+      "bytes": 19163
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/README.md",
+      "bytes": 497
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/artifact_sha256.json",
+      "bytes": 1802
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_218keV_geometry.json",
+      "bytes": 74324
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_218keV_rods.csv",
+      "bytes": 18905
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_440keV_geometry.json",
+      "bytes": 34571
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_440keV_rods.csv",
+      "bytes": 8580
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/geometry_qa.json",
+      "bytes": 5490
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/visual_qa.json",
+      "bytes": 671
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/design_notes_zh.txt",
+      "bytes": 4144
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/scripts/design_derenzo.py",
+      "bytes": 19642
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/README.md",
+      "bytes": 552
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/artifact_sha256.json",
+      "bytes": 1802
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_218keV_geometry.json",
+      "bytes": 57173
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_218keV_rods.csv",
+      "bytes": 13207
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_440keV_geometry.json",
+      "bytes": 30247
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_440keV_rods.csv",
+      "bytes": 6225
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/geometry_qa.json",
+      "bytes": 8572
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/visual_qa.json",
+      "bytes": 759
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/design_notes_zh.txt",
+      "bytes": 5174
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/scripts/design_derenzo.py",
+      "bytes": 24977
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/README.md",
+      "bytes": 497
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/artifact_sha256.json",
+      "bytes": 1802
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_218keV_geometry.json",
+      "bytes": 18270
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_218keV_rods.csv",
+      "bytes": 4287
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_440keV_geometry.json",
+      "bytes": 18302
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_440keV_rods.csv",
+      "bytes": 4313
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/geometry_qa.json",
+      "bytes": 5840
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/visual_qa.json",
+      "bytes": 739
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/design_notes_zh.txt",
+      "bytes": 4300
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/scripts/design_derenzo.py",
+      "bytes": 20948
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/README.txt",
+      "bytes": 1735
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/artifact_sha256.json",
+      "bytes": 2797
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/displayed_iterations.csv",
+      "bytes": 966
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/final_summary.csv",
+      "bytes": 673
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/metadata.json",
+      "bytes": 14647
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/native_iteration_metrics.csv",
+      "bytes": 51419
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/scientific_qa.json",
+      "bytes": 545
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/visual_qa.json",
+      "bytes": 1887
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/scripts/plot_derenzo_completed.py",
+      "bytes": 25266
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/README.md",
+      "bytes": 547
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/data/source_and_scientific_qa.json",
+      "bytes": 3860
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/data/visual_qa.json",
+      "bytes": 591
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/scripts/plot_nema_structure.py",
+      "bytes": 9882
+    },
+    {
+      "path": "README.md",
+      "bytes": 3236
+    },
+    {
+      "path": "docs/DUAL_ENERGY_RESEARCH_REVIEW.md",
+      "bytes": 18339
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1368
+    },
+    {
+      "path": "docs/RESEARCH_STRATEGY.md",
+      "bytes": 5537
+    },
+    {
+      "path": "docs/ac225/CURRENT_STATUS.md",
+      "bytes": 2980
+    },
+    {
+      "path": "docs/ac225/DATA_POLICY.md",
+      "bytes": 1561
+    },
+    {
+      "path": "docs/ac225/DIRECTORY_MAP.md",
+      "bytes": 3369
+    },
+    {
+      "path": "docs/ac225/EXPERIMENTS.md",
+      "bytes": 5464
+    },
+    {
+      "path": "docs/ac225/OPERATIONS.md",
+      "bytes": 2455
+    },
+    {
+      "path": "docs/ac225/README.md",
+      "bytes": 2091
+    },
+    {
+      "path": "docs/ac225/SCIENCE_CONVENTIONS.md",
+      "bytes": 2887
+    },
+    {
+      "path": "docs/ac225/SOURCE_INDEX.md",
+      "bytes": 2492
+    },
+    {
+      "path": "docs/ac225/catalog.json",
+      "bytes": 21263
+    },
+    {
+      "path": "docs/ac225/source_index.json",
+      "bytes": 266797
+    },
+    {
+      "path": "docs/ac225/status_snapshot.json",
+      "bytes": 4292
+    },
+    {
+      "path": "docs/history/PROJECT_README_20261019.md",
+      "bytes": 69658
+    },
+    {
+      "path": "docs/history/README.md",
+      "bytes": 462
+    },
+    {
+      "path": "docs/organization/20261019/README.md",
+      "bytes": 2258
+    },
+    {
+      "path": "docs/organization/20261019/before.json",
+      "bytes": 212708
+    },
+    {
+      "path": "docs/organization/20261019/preservation_and_links.json",
+      "bytes": 1223
+    },
+    {
+      "path": "docs/organization/20261019/staged_audit.json",
+      "bytes": 35
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/AGENTS.md",
+      "bytes": 5476
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/README.md",
+      "bytes": 1971
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_common.py",
+      "bytes": 4655
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_gate.py",
+      "bytes": 2596
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_reconstruction.py",
+      "bytes": 19607
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_transport.py",
+      "bytes": 10346
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_verify.py",
+      "bytes": 11065
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_workflow.py",
+      "bytes": 38553
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/AGENTS_20261019.md",
+      "bytes": 21938
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/README.md",
+      "bytes": 474
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/README_20261019.md",
+      "bytes": 11643
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/jscc_5e10_5090_production_queue.py",
+      "bytes": 21992
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/jscc_5e10_formal_queue_gate.py",
+      "bytes": 2903
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/README.md",
+      "bytes": 984
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/collection_job.json",
+      "bytes": 654
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/collection_submission_intent.json",
+      "bytes": 1022
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json",
+      "bytes": 93207
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_job.json",
+      "bytes": 1594
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal.err",
+      "bytes": 299
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal.out",
+      "bytes": 9210
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal_verify.out",
+      "bytes": 42
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_package.json",
+      "bytes": 91849
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_release.json",
+      "bytes": 2018
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_release_intent.json",
+      "bytes": 328
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_submission_intent.json",
+      "bytes": 996
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_submitted_scontrol.txt",
+      "bytes": 1646
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_verify_job.json",
+      "bytes": 1626
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_verify_submission_intent.json",
+      "bytes": 1015
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_verify_submitted_scontrol.txt",
+      "bytes": 1672
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/input_deployment.json",
+      "bytes": 451
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/allocation.json",
+      "bytes": 1975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/receipt.json",
+      "bytes": 2443
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/source.mac",
+      "bytes": 9768
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot_acceptance.json",
+      "bytes": 2807
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot_job.json",
+      "bytes": 649
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot_submission_intent.json",
+      "bytes": 971
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_acceptance.json",
+      "bytes": 4068
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_job.json",
+      "bytes": 657
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_package.json",
+      "bytes": 3051
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_submission_intent.json",
+      "bytes": 1006
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_acceptance.json",
+      "bytes": 2889
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_job.json",
+      "bytes": 1603
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation.err",
+      "bytes": 299
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation.out",
+      "bytes": 162
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation_verify.out",
+      "bytes": 46
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_package.json",
+      "bytes": 1505
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_plan.json",
+      "bytes": 501
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_plan_deployment.json",
+      "bytes": 289
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_submission_intent.json",
+      "bytes": 975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_submitted_scontrol.txt",
+      "bytes": 1659
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_verify_job.json",
+      "bytes": 1639
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_verify_submission_intent.json",
+      "bytes": 1032
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_verify_submitted_scontrol.txt",
+      "bytes": 1687
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/collection_job.json",
+      "bytes": 654
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/collection_submission_intent.json",
+      "bytes": 1022
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json",
+      "bytes": 93208
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_job.json",
+      "bytes": 1594
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal.err",
+      "bytes": 299
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal.out",
+      "bytes": 9210
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal_verify.out",
+      "bytes": 42
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_package.json",
+      "bytes": 91849
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_release.json",
+      "bytes": 2044
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_release_intent.json",
+      "bytes": 326
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_submission_intent.json",
+      "bytes": 995
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_submitted_scontrol.txt",
+      "bytes": 1647
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_verify_job.json",
+      "bytes": 1627
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_verify_submission_intent.json",
+      "bytes": 1016
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_verify_submitted_scontrol.txt",
+      "bytes": 1672
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/input_deployment.json",
+      "bytes": 451
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/allocation.json",
+      "bytes": 1975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/receipt.json",
+      "bytes": 2442
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/source.mac",
+      "bytes": 4721
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot_acceptance.json",
+      "bytes": 2806
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot_job.json",
+      "bytes": 649
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot_submission_intent.json",
+      "bytes": 971
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_acceptance.json",
+      "bytes": 4072
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_job.json",
+      "bytes": 654
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_package.json",
+      "bytes": 3051
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_submission_intent.json",
+      "bytes": 1006
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_acceptance.json",
+      "bytes": 2889
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_job.json",
+      "bytes": 1602
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation.err",
+      "bytes": 299
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation.out",
+      "bytes": 162
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation_verify.out",
+      "bytes": 46
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_package.json",
+      "bytes": 1505
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_plan.json",
+      "bytes": 501
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_plan_deployment.json",
+      "bytes": 289
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_submission_intent.json",
+      "bytes": 975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_submitted_scontrol.txt",
+      "bytes": 1648
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_verify_job.json",
+      "bytes": 1638
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_verify_submission_intent.json",
+      "bytes": 1032
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_verify_submitted_scontrol.txt",
+      "bytes": 1688
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/collection_job.json",
+      "bytes": 656
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/collection_submission_intent.json",
+      "bytes": 1026
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json",
+      "bytes": 93216
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_job.json",
+      "bytes": 1602
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal.err",
+      "bytes": 1112
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal.out",
+      "bytes": 10253
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal_verify.out",
+      "bytes": 43
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_package.json",
+      "bytes": 91850
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_release.json",
+      "bytes": 2029
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_release_intent.json",
+      "bytes": 328
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_submission_intent.json",
+      "bytes": 1001
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_submitted_scontrol.txt",
+      "bytes": 1656
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_verify_job.json",
+      "bytes": 1635
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_verify_submission_intent.json",
+      "bytes": 1020
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_verify_submitted_scontrol.txt",
+      "bytes": 1676
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/input_deployment.json",
+      "bytes": 452
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/allocation.json",
+      "bytes": 1979
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/receipt.json",
+      "bytes": 1727
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/source.mac",
+      "bytes": 9768
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot_acceptance.json",
+      "bytes": 2077
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot_job.json",
+      "bytes": 651
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot_submission_intent.json",
+      "bytes": 975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_acceptance.json",
+      "bytes": 5851
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_job.json",
+      "bytes": 659
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_package.json",
+      "bytes": 4785
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_submission_intent.json",
+      "bytes": 1010
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_acceptance.json",
+      "bytes": 2899
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_job.json",
+      "bytes": 1611
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation.err",
+      "bytes": 1112
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation.out",
+      "bytes": 516
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation_verify.out",
+      "bytes": 47
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_package.json",
+      "bytes": 1506
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_plan.json",
+      "bytes": 505
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_plan_deployment.json",
+      "bytes": 290
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_submission_intent.json",
+      "bytes": 980
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_submitted_scontrol.txt",
+      "bytes": 1669
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_verify_job.json",
+      "bytes": 1647
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_verify_submission_intent.json",
+      "bytes": 1036
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_verify_submitted_scontrol.txt",
+      "bytes": 1691
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/collection_job.json",
+      "bytes": 655
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/collection_submission_intent.json",
+      "bytes": 1026
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_job.json",
+      "bytes": 1638
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_submission_intent.json",
+      "bytes": 1000
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_submitted_scontrol.txt",
+      "bytes": 1657
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/input_deployment.json",
+      "bytes": 452
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/allocation.json",
+      "bytes": 1979
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/receipt.json",
+      "bytes": 1729
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/source.mac",
+      "bytes": 4721
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot_acceptance.json",
+      "bytes": 2079
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot_job.json",
+      "bytes": 651
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot_submission_intent.json",
+      "bytes": 975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_acceptance.json",
+      "bytes": 28967
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_job.json",
+      "bytes": 1637
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection.err",
+      "bytes": 2196
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection.out",
+      "bytes": 2836
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection_verify.err",
+      "bytes": 28
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection_verify.out",
+      "bytes": 997
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_package.json",
+      "bytes": 27581
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_plan.json",
+      "bytes": 534
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_plan_deployment.json",
+      "bytes": 289
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_submission_intent.json",
+      "bytes": 975
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_submitted_scontrol.txt",
+      "bytes": 1666
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_verify_job.json",
+      "bytes": 1673
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_verify_submission_intent.json",
+      "bytes": 1032
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_verify_submitted_scontrol.txt",
+      "bytes": 1688
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_acceptance.json",
+      "bytes": 5856
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_job.json",
+      "bytes": 659
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_package.json",
+      "bytes": 4785
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_submission_intent.json",
+      "bytes": 1009
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_job.json",
+      "bytes": 1646
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_plan.json",
+      "bytes": 539
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_plan_deployment.json",
+      "bytes": 290
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_submission_intent.json",
+      "bytes": 980
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_submitted_scontrol.txt",
+      "bytes": 1670
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_verify_job.json",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_verify_submission_intent.json",
+      "bytes": 1036
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_verify_submitted_scontrol.txt",
+      "bytes": 1692
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md",
+      "bytes": 6779
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/controller_freeze.json",
+      "bytes": 1299
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/cpu_latest_status.json",
+      "bytes": 933
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/ehe_factor_reuse_metadata.json",
+      "bytes": 3103
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/gpu_deployment.json",
+      "bytes": 1367
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/gpu_freeze.json",
+      "bytes": 13084
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/gpu_linux_tests.txt",
+      "bytes": 1167
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/launch_syntax_acceptance.json",
+      "bytes": 396
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/manual_progress_20261019.json",
+      "bytes": 18109
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/JSCC_440_controller_failure_archived.json",
+      "bytes": 200
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/JSCC_440_controller_failure_original.json",
+      "bytes": 200
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/derenzo_controller_registration.json",
+      "bytes": 81
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/latest_scheduler_status.json",
+      "bytes": 485
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/launches.json",
+      "bytes": 189
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/nema_production_5090_8x4_queue_registration.json",
+      "bytes": 140
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/nema_resume.err",
+      "bytes": 1139
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/nema_resume.out",
+      "bytes": 102
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/preserved_identity_acceptance.json",
+      "bytes": 326
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/recovery_authorization_and_identity.json",
+      "bytes": 7178
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/resume_reconstruction_controllers_20261019.py",
+      "bytes": 4589
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_common.py",
+      "bytes": 4655
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_gate.py",
+      "bytes": 2596
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_reconstruction.py",
+      "bytes": 19607
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_transport.py",
+      "bytes": 10346
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_verify.py",
+      "bytes": 11065
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_workflow.py",
+      "bytes": 38553
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/test_derenzo_campaign.py",
+      "bytes": 4521
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/test_derenzo_campaign_controller.py",
+      "bytes": 3474
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/submission_audit.json",
+      "bytes": 1592
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/transport_deployment.json",
+      "bytes": 414
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/transport_freeze.json",
+      "bytes": 11515
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/README.md",
+      "bytes": 6290
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+      "bytes": 4571
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+      "bytes": 2570
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md",
+      "bytes": 2741
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/formal_authority.json",
+      "bytes": 4462
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/formal_job.json",
+      "bytes": 1253
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/formal_submission_intent.json",
+      "bytes": 1242
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/CONTRACT_20261019.md",
+      "bytes": 16302
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/README.md",
+      "bytes": 505
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/README_20261019.md",
+      "bytes": 20728
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/RUNBOOK_20261019.md",
+      "bytes": 32091
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/production_5090_8x4_queue_formal.sh",
+      "bytes": 3723
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/production_5090_8x4_queue_validation.sh",
+      "bytes": 2875
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/production_5090_8x4_queue_validation_verification.sh",
+      "bytes": 1938
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/SHA256SUMS.json",
+      "bytes": 739
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/read_only_findings.json",
+      "bytes": 680
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_5090_8x4_monitor_repair.1688717.err",
+      "bytes": 27656
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_5090_8x4_monitor_repair.1688717.out",
+      "bytes": 29143
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_5090_8x4_monitor_repair_1688717.txt",
+      "bytes": 1916
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_manifest.json",
+      "bytes": 77246
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/status.json",
+      "bytes": 35311
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/storage_status.json",
+      "bytes": 1411
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_controller_freeze.json",
+      "bytes": 601
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_final_audit.json",
+      "bytes": 1777
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_formal_scontrol.txt",
+      "bytes": 1607
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_latest_status.json",
+      "bytes": 5672
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_linux_tests.txt",
+      "bytes": 1747
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_local_tests.txt",
+      "bytes": 2504
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_measured_time_hold_20261019.json",
+      "bytes": 1087
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_poll_error.json",
+      "bytes": 170
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_preflight_env_failure.txt",
+      "bytes": 9338
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_preflight_recovery.json",
+      "bytes": 536
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_5090_production_queue.py",
+      "bytes": 21206
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_5090_production_queue_preflight_recovery.py",
+      "bytes": 21465
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_formal_queue_gate.py",
+      "bytes": 2903
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/test_jscc_5e10_formal_queue_gate.py",
+      "bytes": 2665
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/watch_jscc_5e10_5090_production_queue.py",
+      "bytes": 21992
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/watch_test_jscc_5e10_queue_controller.py",
+      "bytes": 1673
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_submission.json",
+      "bytes": 418
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_validation_scontrol.txt",
+      "bytes": 1608
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_validation_verification_scontrol.txt",
+      "bytes": 1661
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_watch_freeze.json",
+      "bytes": 687
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_deployment.json",
+      "bytes": 11493
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_freeze.json",
+      "bytes": 20629
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_latest_status.json",
+      "bytes": 1257
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_latest_status.json",
+      "bytes": 1411
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_acceptance.json",
+      "bytes": 5713
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_job.json",
+      "bytes": 1254
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_latest_status.json",
+      "bytes": 879
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation.err",
+      "bytes": 8700
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation.out",
+      "bytes": 25392
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation_verification.err",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation_verification.out",
+      "bytes": 408
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_package.json",
+      "bytes": 3744
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_submission_intent.json",
+      "bytes": 1211
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification.json",
+      "bytes": 413504
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_deployment.json",
+      "bytes": 9737
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_freeze.json",
+      "bytes": 9774
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_job.json",
+      "bytes": 1319
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_latest_status.json",
+      "bytes": 383
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_submission_intent.json",
+      "bytes": 1226
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/README.md",
+      "bytes": 1107
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/resume_reconstruction_controllers_20261019.py",
+      "bytes": 4589
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_derenzo_campaign.py",
+      "bytes": 4521
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_derenzo_campaign_controller.py",
+      "bytes": 3474
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_jscc_5e10_formal_queue_gate.py",
+      "bytes": 2665
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_jscc_5e10_queue_controller.py",
+      "bytes": 1673
+    },
+    {
+      "path": "tests/test_project_index.py",
+      "bytes": 2138
+    },
+    {
+      "path": "tools/audit_git_delivery.py",
+      "bytes": 3831
+    },
+    {
+      "path": "tools/project_index.py",
+      "bytes": 3839
+    },
+    {
+      "path": "tools/research/build_project_catalog.py",
+      "bytes": 20873
+    },
+    {
+      "path": "tools/research/plot_derenzo_completed.py",
+      "bytes": 25266
+    }
+  ]
+}

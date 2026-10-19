@@ -1,0 +1,62 @@
+{
+  "checked_epoch": 1792124680.466004,
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "cpu_jobs": {
+    "JSCC_440": {
+      "transport": 15896149,
+      "collection": 15896184
+    },
+    "JSCC_218": {
+      "transport": 15896219,
+      "collection": 15896254
+    },
+    "EHE_440": {
+      "transport": 15896272,
+      "collection": 15896290
+    },
+    "EHE_218": {
+      "transport": 15896342,
+      "collection": 15896376
+    }
+  },
+  "cpu_status": {
+    "JSCC_440": {
+      "worker_states": {
+        "COMPLETED": 200
+      },
+      "collection": "15896184|COMPLETED|0:0"
+    },
+    "JSCC_218": {
+      "worker_states": {
+        "COMPLETED": 200
+      },
+      "collection": "15896254|COMPLETED|0:0"
+    },
+    "EHE_440": {
+      "worker_states": {
+        "RUNNING": 200
+      },
+      "collection": "15896290|PENDING|0:0"
+    },
+    "EHE_218": {
+      "worker_states": {
+        "RUNNING": 200
+      },
+      "collection": "15896376|PENDING|0:0"
+    }
+  },
+  "original_design_sha256": "7be71d46b829b9fe24e783164038d3157125eb3d81239ed8a40f5a9e6a783f0c",
+  "macro_archive_sha256": {
+    "218": "c6dffe7a97b612891837ab3861a469d9169c4a7fbbe52daabb1c12c6c016c94e",
+    "440": "6e52a9697789d2d85173a1ead79d2490a72d0054c924afe7b155d8813275abf3"
+  },
+  "controller_pid": 33296,
+  "controller_source_identity_passed": true,
+  "original_nema_5e10_three_job_records_unchanged": true,
+  "local_source_and_scientific_tests": 4,
+  "local_controller_tests": 3,
+  "actual_linux_tests": 10,
+  "bash_variants": 13,
+  "git_commit_or_push_performed": false,
+  "large_arrays_added_to_git": false
+}

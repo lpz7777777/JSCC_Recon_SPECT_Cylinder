@@ -1,0 +1,11 @@
+{
+  "stage": "validation",
+  "script_sha256": "51e33dfc326f594c94c23b635afcf8ec4cec324edca2467e65545707a944dd86",
+  "command": "sbatch --parsable -p gpu_5090 --qos=gpugpu --nodes=8 --ntasks=8 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4 --time=240 --exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10_validation --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/validation.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/validation.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/queued_production_launch/ffe08f48be856816/validation.sh",
+  "dependencies": [],
+  "held": false,
+  "resolved": true,
+  "started_epoch": 1792085710.8184896,
+  "test_only": "sbatch: Job 1704558 to start at 2121-11-18T21:55:04 using 256 processors on nodes wqd10naf02g1,wqd10nah09g[1,3-4],wqd10nbj01g3,wqd10nbl09g4,wqd10nbl11g5,wqd10nbm09g5 in partition gpu_5090\n",
+  "registered_job": 1704559
+}

@@ -75,3 +75,21 @@ experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011
 experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011/selection_1685272.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_partition_policy.txt -text whitespace=cr-at-eol,-blank-at-eof
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_*scontrol.txt -text whitespace=cr-at-eol,-blank-at-eol
+
+# Preserve newly delivered Derenzo execution sources and evidence SHA identities.
+experiments/ELLIPSE500x300_H120/derenzo_*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/test_derenzo*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/resume_reconstruction_controllers_20261019.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/Derenzo/** -text whitespace=cr-at-eol,-blank-at-eol
+Analysis_Plots/**/scripts/*.py -text whitespace=cr-at-eol
+Analysis_Plots/**/data/*.json -text whitespace=cr-at-eol
+Analysis_Plots/**/data/*.csv -text whitespace=cr-at-eol
+docs/history/** -text whitespace=cr-at-eol
+docs/organization/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/history/** -text whitespace=cr-at-eol
+
+# Literal scheduler/Torch logs retain whitespace because receipts bind bytes.
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/*.err -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_*scontrol.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/*.err -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

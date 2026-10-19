@@ -1,5 +1,8 @@
 # NEMA H60 双能研究结果与体模定义
 
+<!-- organized-navigation-20261019 -->
+当前实验状态与分组请先看[双能索引](../../../../docs/ac225/EXPERIMENTS.md)和[当前状态](../../../../docs/ac225/CURRENT_STATUS.md)。本页后续为原体模定义与带日期历史；历史合成预览只读保留，不作为后续输出。
+
 2026-10-10最新ROI/输出约定：后续停止218与440相加图像。球体素中心距球面至少1.5 mm，统一背景使用活动腔体内完整体素，排除所有球、肺插入物及边界。[新定义及12条独立路线的重算结果](../nema_interior_roi_20261010/README.md)为当前CNR/CRC入口。EHE0–200与JSCC0–10000各自比较，不能同迭代等同收敛。
 
 五组主结果已完成，[旧研究报告](../dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf)、[历史18类图集及全部曲线](ehe_forward_poisson_5e10_200/RESULTS.md)保留当时的分数ROI/局部背景及叠加图，不能与新指标混用。[近期结果总入口](../../README.md)列出全部验收来源。

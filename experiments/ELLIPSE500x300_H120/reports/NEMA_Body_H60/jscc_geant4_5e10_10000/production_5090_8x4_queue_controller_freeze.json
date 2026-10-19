@@ -1,0 +1,10 @@
+{
+  "sources_sha256": {
+    "jscc_5e10_5090_production_queue.py": "6f4e79045e1571b3f7a7ab93054457368ff29d98de8a64d8c0650f2da157ad0c",
+    "jscc_5e10_formal_queue_gate.py": "dc16ac95ac216e2628b9d388d2bbb2dffe43f316ef8daf6ac1418e4bcb8b1965",
+    "test_jscc_5e10_formal_queue_gate.py": "b844bb0c66f257dcd68f6e2babc3e10e0752ed4042de49224f43103f2dbdeae0"
+  },
+  "manual_request": "2026-10-16 formal reconstruction queue",
+  "automations_remain_paused": true,
+  "watcher_scope": "one bounded controller; release only this formal job after strict full validation fetch; never resubmit computation"
+}

@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "dataset": "EHE_218",
+  "pilot": true,
+  "index": 0,
+  "view": 1,
+  "worker": 0,
+  "seed": 46400100,
+  "photons": 100000,
+  "primary_counts": [
+    100000,
+    0,
+    0
+  ],
+  "counts": {
+    "218": 1,
+    "440": 0
+  },
+  "binary_sha256": "a49fbdef69b187df2cfebfb481c7974394d00264ab2d4aeb4cc83e65eeacb882",
+  "registered_macro_sha256": "f4f931ca1c0e9160de58b3a50682b0eacf3c84db26cf28b73e07d8ebac900639",
+  "actual_macro_sha256": "4f2b545e2470796e274da2b4e25d9251527478ce41dc28475385712ed3bd164c",
+  "allocation_job": "15896140",
+  "array_job": null,
+  "array_task": -1,
+  "resource": {
+    "elapsed_seconds": 11.517507795244455,
+    "rss_peak_bytes": 106004480,
+    "host_allocated_bytes": 156257165312,
+    "rss_fraction": 0.0006783975620467705,
+    "gpu_used_peak_bytes": 0,
+    "gpu_total_bytes": 0,
+    "gpu_used_fraction": 0
+  },
+  "started_epoch": 1792122630.0630596,
+  "finished_epoch": 1792122641.6026502,
+  "files": {
+    "source.mac": "4f2b545e2470796e274da2b4e25d9251527478ce41dc28475385712ed3bd164c",
+    "allocation.json": "2c4d6568931f9384134608aed299ccb939b9e17f1bebf5981a92cbe50b507a64",
+    "transport.log": "d8ae2d65d044b6e50ec6a6bb2a88182d5d36056965b6af13cba29c00e20f7732",
+    "CntStat_218.csv": "6a5ff263c13db1d4c759a3a4e324f0110c16a6035147dad271bee3f902c99e34",
+    "CntStat_440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_218_from218.csv": "6a5ff263c13db1d4c759a3a4e324f0110c16a6035147dad271bee3f902c99e34",
+    "CntStat_218_from440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440_from218.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "CntStat_440_from440.csv": "98a3d6b5f480a59b0a6b1bd3d9f2902cdf8e09f405d5d6cf3caaa342d188b33d",
+    "TransportSummary.json": "2e8ab7e4ae51bceeb76b29445bbfddefdedb91d5a2a22e50add73b7208679287",
+    "TransportTiming.json": "59dc30005238afc863d938dfdac58b6d4fb449a71ec9c974103922afebcb8a74",
+    "EHE_MultiUnionAudit.json": "6002e8e54c5fead3cc271c78061911ba41465a04e244801127448db325a6cec3",
+    "EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+    "EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+    "EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39"
+  }
+}

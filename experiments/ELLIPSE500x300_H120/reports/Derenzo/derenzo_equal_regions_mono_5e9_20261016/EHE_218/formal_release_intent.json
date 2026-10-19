@@ -1,0 +1,14 @@
+{
+  "job": 1705512,
+  "authority_sha256": "4c50615dd3d28673d2df2182843644dd70bc6d8d354bb60fac225ae34873316d",
+  "limits": {
+    "phase": 1800,
+    "prepare": 1800,
+    "minutes": 120,
+    "total": 7020,
+    "measured_phase_seconds": {
+      "218_SinglePhoton": 4.497511848807335
+    },
+    "measured_prepare_seconds": 0.0
+  }
+}

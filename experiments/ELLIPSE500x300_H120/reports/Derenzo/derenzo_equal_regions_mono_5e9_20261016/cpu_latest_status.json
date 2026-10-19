@@ -1,0 +1,48 @@
+{
+  "checked_epoch": 1792124680.3512046,
+  "jobs": {
+    "JSCC_440": {
+      "transport": 15896149,
+      "collection": 15896184
+    },
+    "JSCC_218": {
+      "transport": 15896219,
+      "collection": 15896254
+    },
+    "EHE_440": {
+      "transport": 15896272,
+      "collection": 15896290
+    },
+    "EHE_218": {
+      "transport": 15896342,
+      "collection": 15896376
+    }
+  },
+  "status": {
+    "JSCC_440": {
+      "worker_states": {
+        "COMPLETED": 200
+      },
+      "collection": "15896184|COMPLETED|0:0"
+    },
+    "JSCC_218": {
+      "worker_states": {
+        "COMPLETED": 200
+      },
+      "collection": "15896254|COMPLETED|0:0"
+    },
+    "EHE_440": {
+      "worker_states": {
+        "RUNNING": 200
+      },
+      "collection": "15896290|PENDING|0:0"
+    },
+    "EHE_218": {
+      "worker_states": {
+        "RUNNING": 200
+      },
+      "collection": "15896376|PENDING|0:0"
+    }
+  },
+  "read_only": true
+}

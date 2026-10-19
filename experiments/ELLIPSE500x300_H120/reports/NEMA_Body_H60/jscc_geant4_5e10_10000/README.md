@@ -1,79 +1,33 @@
-# JSCC实际5e10：218 corrected / 440 single / 440 Compton
+# NEMA JSCC实际5e10：三路10000次研究
 
-## 2026-10-11 最新人工授权：UUID修复后独立重新提交1688717
+当前仅440单光子、218串窗校正单光子和440 Compton三路。研究未完成正式交付：**完整32GPU validation10及独立验收已通过并严格取回；正式10000次受实测时长门槛阻断**。
 
-用户在确认原5090主1685272自然FAILED后明确要求修正bug并重新提交。已冻结独立UUID监控修复c49ad9c3a38589e6并于18:40:54上海唯一提交1688717，保持原8节点×4张5090、32rank、32CPU/节点和原科学输入/筛选。最新实际状态PENDING(Priority)；本地及真实Linux各16项检查通过，实际GPU启动与完整筛选验收待运行。原1685272及成功1686507/1686546的发布/登记/输出和SHA继续保留，历史“不重新提交主失败任务”的限制仅对这一次独立修复按最新用户授权解除。
+## 当前阶段（2026-10-19）
 
-定时任务继续PAUSED，不恢复自动推进；完整validation10/formal10000和authority均未提交。4090持久缓存仍STORAGE_HOLD，不因本次筛选提交解除。本地提交后资源核对器误读Slurm的NumNodes=8-8，已独立修正并只读核对原登记任务，无重复提交或修改远端发布。后续只读状态入口为jscc_5e10_5090_8x4_monitor_repair.py status，不调用旧advance。下文状态均按各段记录时间阅读。
+| 阶段 | 作业 | 证据/状态 |
+|---|---:|---|
+| 实际5e10 Geant4输运/收集 | 15708389 / 15709588 | 已严格交付；1000×50M、20view、全4π |
+| 筛选/逐原行独立验收 | 1686507 / 1686546 | 已严格交付；4849087事件、40数组，复用不重算 |
+| 完整输入32GPU validation10 | 1704559 | 10月19日06:39上海COMPLETED/0:0 |
+| 独立验证验收 | 1704566 | 06:44上海COMPLETED/0:0，已严格取回 |
+| 正式10000/save50 | 1704572 | 已登记，仍暂挂，正式尚未开始 |
 
-[独立修复与提交证据](selection_5090_8x4_monitor_repair_README.md)。
+[实测时长阻断](production_5090_8x4_queue_measured_time_hold_20261019.json)：按实测吞吐外推三路约54.87小时，准备只计一次；留1.5倍余量需4969分钟。现有启动gate的48小时总/24小时阶段上限不足，恢复控制器按门槛退出。这不是平台最大时限声明，也不是ETA；后续须独立执行时限或分段方案修复，不能直接绕过旧gate。
 
-## 2026-10-11 最新人工指令：停止定时推进并清理超算空间
+## 首选文件
 
-用户要求停止定时任务并清理重建超算空间。`jscc-5e10`及其余现有定时任务均PAUSED；下文历史ACTIVE及每15分钟推进规则不再生效。首次清理429个SHA相同的远端重复副本后，用户另明确要求删除`/data/run01/scxi717/zxc`；该目录已实际删除并独立确认不存在，原删除范围限制对这个明确授权路径不再适用。原5090主1685272于2026-10-11 06:52 UTC只读检查时已由调度器自然进入RUNNING，没有修改、取消或重新提交。当前5e10输入、标定矩阵、冻结发布、结果和验收证据保留，没有提交新计算。见[本轮清理记录](../../storage_cleanup_20261011/README.md)。
+| 查什么 | 文件 |
+|---|---|
+| 科学输入、路由和验收条件 | [CONTRACT.md](CONTRACT.md) |
+| 当前操作和禁止重复提交的条件 | [RUNBOOK.md](RUNBOOK.md) |
+| 原验证完整取回 | [validation_acceptance.json](validation_acceptance.json) |
+| 本次32GPU authority | [formal_authority.json](formal_authority.json) |
+| 正式请求 | [formal_job.json](formal_job.json) |
+| 当前生产冻结/部署 | [production_freeze.json](production_freeze.json)、[production_deployment.json](production_deployment.json) |
+| 旧4090存储方案的拒绝依据 | [STREAMING_STORAGE_HOLD.md](STREAMING_STORAGE_HOLD.md) |
+| 原UUID修复与1688717证据 | [原修复记录](selection_5090_8x4_monitor_repair_README.md) |
+| 全部旧时序 | [history/README.md](history/README.md) |
 
-最新明确路径删除见[zxc清理记录](../../storage_cleanup_zxc_20261011/README.md)。
+当前生产冻结ffe08f48be856816，8节点×4张5090，完整float32事件响应CPU常驻、逐32事件转GPU；科学模型保持v5、原MLEM、全1/无正则、完整120mm/78920活动单元。它不依赖旧4090失败的/tmp持久缓存方案，不写1.53TB共享盘响应。
 
-## 最新实际状态：4090分批方案等待持久缓存空间
-
-1686694已实际全COMPLETED/0:0（3分23秒），24GPU身份、小块无损往返和80%资源余量通过；整体存储门控未通过。6/8节点/tmp空间不足；1686708只读挂载检查证实/tmp位于当前作业jobcontainer，不能据此承诺验证与正式作业之间复用。此前9b5938545ad3d6c7发布中的/tmp固定节点复用方案已被实际证据否决，原发布及日志保留，不能继续该入口advance或提交validation/formal。
-
-完整响应1530759784160字节（约1.53 TB），2026-10-11删除zxc并等待配额刷新后工作盘约358.67 GB可用（334.04 GiB，59%使用率，800 GiB配额）。/ssd全卷空闲不等于账户配额：/ssd/scxi717属于root/0700，scxi717不可读写，目录实际配额仅1 GiB；home也只有1 GiB。已请求用户在平台开通可写、至少2 TiB持久SSD目录并提供路径。需要新独立存储修复冻结和实际I/O验证，不能修改旧发布或重新筛选/模拟。
-
-当前例行入口仅 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_storage_status.py`，只读核对六项PID、账户SSD配额/访问和原5090自然状态。自动任务继续ACTIVE，资源未变化时保持安静，不反复执行旧probe/取回。原1685272仍PENDING且job JSON SHA保持；未提交完整输入验证或正式重建。详见报告目录 `STREAMING_STORAGE_HOLD.md`、`streaming_4090_8x3_probe_resource_acceptance.json` 与 `streaming_4090_8x3_storage_diagnosis.json`。
-
-
-2026-10-10，用户明确授权完成完整模拟、重建、严格取回、科学/视觉QA和研究报告，并在计算等待期间定时推进。独立实验尚未交付。
-
-2026-10-10 22:28上海最新：独立8节点×2张5090筛选恢复 **1686507** 已完整COMPLETED/0:0，Slurm共8分48秒。完整54631328行原List对应原条件接受4860953事件，q筛选移除11866、选中 **4849087**；20视角和16rank均完成。原日志/manifest/实际allocation已严格SHA取回。GPU实测峰值占设备容量22.7224%，PyTorch reserved20.1500%；节点保守汇总RSS5.24975%、退出后Slurm MaxRSS8.28643%，分母均为实际设备/AllocTRES。独立全行验收及完整严格取回已实际通过，见 [严格验收](selection_5090_8x2_monitor_repair_acceptance.json) 和 [筛选资源证书](selection_5090_8x2_monitor_repair_resource_acceptance.json)。
-
-独立只读验收 **1686546** 使用匹配16rank的冻结发布4b595d58a50e48e2，实际COMPLETED/0:0、Slurm2分24秒（诊断125.043秒），读取全部20view原始CSV并逐值核对选中缓存，闭合320份执行收据及对应数组/SHA；完整1003成员、141201888字节归档和原日志已经严格SHA取回。仅CPU检查、独立输出，源科学发布75e6ca22ffb21fa4未改；16个实际唯一GPU身份和原UUID转换全部闭合。8项本地和实际Linux损坏拒绝检查通过。不重提筛选/验收、不重复取回已交付阶段，不重算事件权重或响应。
-
-实际选中事件的完整78920单元float32响应为1530759784160字节，平均每节点178.2039 GiB。沿用原生产预算每rank16 GiB保守开销后，8×2需210.2039 GiB，超过自动246.09375 GiB的80%预算196.875 GiB；8×4对应242.2039 GiB/393.75 GiB预算。后者配额是政策预计值，前者开销是保守预算，都不是完整响应实际内存证书。**筛选可运行不表示16GPU完整Compton重建已获放行**；未提交validation10/formal10000，不自动更换production selection登记。见 [初步内存评估](selection_5090_8x2_formal_memory_assessment.json)。原5090主1685272仍PENDING，原4090 1686107终态FAILED及其证据保留，两项登记和请求没有修改或取消。
-
-启动检查 **15705111** 已实际COMPLETED/0:0：100000光子，种子35100001，初级218/440为29651/70349，窗口218/440为247/95，97条原生List记录；实际程序16.023736秒。原JSCC可执行文件及10496-bin探测器SHA与既有验收逐字节一致，未重新编译、改变材料或探测结构。这个小剂量检查只证明实际启动和输出身份，不作为物理校准。
-
-完整输运当前唯一数组 **15708389**：1000独立worker各5000万光子，每个子作业申请1节点、1核，可与其他子作业共享节点，数组0–999%1000。最高同时运行1000个，实际启动数由空闲资源决定。种子35100101–35101100，20视角每视角50worker；总剂量目标5e10，4π发射、倍数1。用户修改调度前的18节点15705120当时PENDING、零worker/零正式光子，随后已实际取消并保存证据。新独立CPU控制发布不改原源、二进制、物理和硬时限，不重复pilot；完成后按1000个实际子SLURM_JOB_ID及父ArrayJobId/TaskId绑定统一收集。最新squeue/sacct及 `transport_latest_status.json` 为运行事实，排队时间不能保证。
-
-2026-10-10 17:22上海核验：上述1000个子作业及batch/extern/srun步骤已全部COMPLETED/0:0，详见 [完整退出证据](transport_array_exit_acceptance.json)。唯一统一收集15709588已实际运行，正在核对全部worker原始SHA、光子数/种子/宏和20视角计数；完整5e10科学输入验收尚待收集及严格取回，不以退出状态替代实际计数闭合。未提交GPU重建。
-
-2026-10-10 17:33上海：完整收集15709588已实际COMPLETED/0:0，1000worker、实际4π **50000000000**初级光子、新种子/20视角/8000个worker成员及47份本地输入成员SHA闭合，[严格输运验收](transport_acceptance.json)和[实际计数与时间](transport_measurement.json)已保存。初级218/440为14690247248/35309752752，实测窗口218/440为123180986/53642922，原List54631328行。整批模拟16:27:37–17:00:13，32分36秒，收集另4分；已同步新GPU输入，筛选/validation10/formal10000尚待实际交付。
-
-GPU重建采用8节点×4卡、32进程，每节点32CPU，通过Slurm自动分配内存；使用gpu_5090（当前4090每卡6核上限不足原40核请求，5090每卡8核、自动504000MiB/节点），唯一排除已确认故障wqd10nba06g6。计划原MLEM10000次、save50，三路各200帧及各200个atomic/fsync检查点。218固定Poisson加性背景来自本次440 single的10000次末图。事件响应完整保存于各进程CPU内存，迭代以32事件一批送入本地GPU；不把全部事件响应常驻GPU。
-
-连续能量v5响应、匹配Compton灵敏度和三个完整系统矩阵复用已交付JSCC基准1669255的冻结科学字节。新输运观测、新事件筛选、新验证和新图像独立登记。正式不计算Single+Compton联合求解，不计算跨能量相加图。validation10中原联合实现只作为检查其Compton分支数值/保存历史一致的10次参考，联合参考图不保存、不作为实验输出。
-
-- [合同与验收要求](CONTRACT.md)
-- [运行簿及恢复规则](RUNBOOK.md)
-- [实际启动检查](transport_pilot_acceptance.json)
-- [完整输运唯一登记](transport_job.json)
-- [CPU冻结](transport_freeze.json)与[发布证据](transport_deployment.json)
-- [独立CPU调度冻结](transport_array_freeze.json)、[实际发布与Linux检查](transport_array_deployment.json)及[旧排队作业取消证据](transport_15705120_cancellation.json)
-
-后续按顺序：完整输运严格收集/取回 → 完整原事件筛选 → 完整输入32GPU validation10 → 独立只读验收/严格取回authority → 唯一formal10000/save50 → 独立验收/完整取回 → 实际3mm真值、新ROI三路全200帧科学/视觉QA → 报告、SHA和安全Git提交推送。全部实际交付后才暂停新的 `jscc-5e10` 自动任务；旧研究继续只读。
-
-原EHE串窗响应偏差保持原结论；本实验执行验收不解释为EHE偏差消失。后续比较JSCC 0–10000和EHE 0–200各自轨迹，同迭代或同列不表示同收敛。新三路指标使用球内中心距边界至少1.5mm、统一全体模内部背景并排除所有球/肺/边界；无平滑、无按观测亮度拟合，原生120mm域和显示中央72mm分别陈述。
-
-2026-10-10 17:48上海：配额启动修复后唯一8节点×4GPU5090事件筛选 **1685272** 已实际提交，最新selection_job/selection_latest_status及selection_launch_acceptance为准。4小时是有界Slurm上限，不是预计耗时；排队和完整输入GPU资源/数值验收尚待实际发生。
-
-2026-10-10 20:00上海：用户明确要求保持原作业不动，另用4090队列试一次。独立完整输入筛选 **1686107** 已提交gpu_4090，仍为8节点×4GPU，每节点24CPU，按配额自动请求240000MiB/节点，不指定mem；原5090主作业1685272及登记/科学发布/输入保持。两项启动隔离检查、真实bash/scheduler test-only和上传SHA通过，但实际计算和资源验收尚待发生。4090空闲卡分散，提交时仍PENDING(Priority)；4小时是上限，不是ETA。新作业只进行原事件筛选，不模拟新光子、不重新计算响应、不提交第二套重建。见 [独立登记](selection_4090_trial_job.json) 与 [启动冻结](selection_4090_trial_freeze.json)。
-
-
-2026-10-10 21:47上海用户新增授权：保留5090主筛选1685272及4090试跑1686107，另提交独立8节点×2张5090完整输入事件筛选 **1686450**。每节点16CPU、16rank、按配额自动252000MiB/节点，无显式mem。原20view/54631328原List/全部132040点/10496bin/稳定float64全圆q≤3和矩阵科学字节保持；独立试跑发布1516a532adb59f94仅适配16进程身份、资源验收和最终全行汇总。首次登记的排队快照保存在state_at_submission.json，后续真实状态以下方最新登记为准；上限4小时不是ETA。正式重建仍未提交，按实际筛选事件数及后续完整响应内存验证决定，不凭筛选RSS放行Compton重建。
-
-
-2026-10-10 22:06上海最新：独立8×2张5090恢复试跑 **1686507** 已实际RUNNING，8节点/16rank/16GPU、每节点16CPU及自动252000MiB。原1686450在筛选前因GPU UUID监控匹配失败完全退出；原4090试跑1686107也自行在同一检查处FAILED并完全退出，原5090主作业1685272仍PENDING(Priority)。原两项作业及登记均未改动或取消。新独立冻结75e6ca22ffb21fa4只修复完整CUDA UUID与nvidia-smi GPU-字符串的身份匹配并记录两种实际身份，原筛选科学代码及资源合同与失败8×2试跑逐字节一致。7项本地及实际Linux检查、64份发布成员SHA通过；实际16rank启动日志已逐一证明原CUDA UUID→GPU-UUID唯一匹配，尚未形成完整筛选/内存验收。见 [恢复登记](selection_5090_8x2_monitor_repair_job.json)、[原失败证据](selection_5090_8x2_trial_failure_1686450/failure_acceptance.json)、[实际启动身份](selection_5090_8x2_monitor_repair_startup_identity_acceptance.json)。正式重建继续按实际事件数和完整响应内存余量决定，筛选占用不能替代全部Compton响应的主存证书。
-
-
-## 2026-10-10 最新用户授权：复用筛选、4090 8×3分批响应
-
-用户明确要求复用已完成筛选，将Compton事件响应改成分批载入，用8节点×3张4090推进三路重建，原5090作业保持不动。新的独立入口为 `jscc_5e10_4090_streaming.py status/advance`，登记前缀 `streaming_4090_8x3`。它取代此前后续正式拓扑待选的限制；不调用旧32卡advance、修改旧selection_job或取消1685272。旧FAILED4090/8×2试跑仅保存原证据。
-
-复用1686507/1686546已验收的全部4,849,087事件及40份索引/原行缓存，按24rank重新分区，原数据/SHA保持。新响应存储仅无损压缩完整float32字节，每块最多32事件，节点本地/tmp写入、fsync和完整SHA读回；迭代按原顺序还原当前块调用原事件权重及未正则MLEM。原v5物理、全120mm/78920活动单元、全部20view、矩阵/S、三路和固定本次440末图背景均不改，不丢事件或生成跨能量和。原科学函数调用与检查点AST逐一一致；本地6项测试实际通过，100迭代全部保存历史与常驻内存及原Compton分支逐值一致。该CPU测试不是完整输入GPU资源证书。
-
-4090每节点18CPU/3GPU，自动预计180000MiB/节点，无显式mem；真实24rank/8host/3唯一GPU、UUID/RSS/Slurm MaxRSS/显存均保留20%余量。共享盘约66.6GB可用，完整响应不写共享盘。先实际8×3节点存储/设备/无损小块probe，节点本地盘磁盘余量保护；样本压缩预算不是全部缓存容量保证。成功退出、严格日志/资源/数值证明后进入全输入三路validation10，验证全部响应块/事件、原前向/转置/S及历史回归；独立只读验收、严格取回及新24卡authority通过后直接唯一formal10000/save50。正式固定验收节点以复用相同SHA本地缓存，不重新生成成功缓存；缺失、部分或失败保留并诊断，仅有界修复。实际吞吐和时限据验证实测，不能保证ETA。
-
-定时任务已更新为新入口；检查原五项控制器PID及新增 `streaming_4090_8x3_registration.json`，任一实际存活不并行提交/推进/取回。完整三路数值、科学/视觉QA、报告和安全Git交付之前保持ACTIVE。原5090作业自然状态只读检查，若自行失败保存完整退出和原日志，不借新授权修改它。
-
-
-最新实际登记：独立streaming预检 **1686694** 已提交gpu_4090，8节点/24GPU、每节点18CPU，无显式mem，30分钟有界时限（不是ETA）。发布 **9b5938545ad3d6c7** 全部成员远端SHA和Linux导入通过，本地与实际Linux各6项测试通过。预检尚需真实退出及存储/资源/无损数值验收；validation10与formal10000尚未提交。主5090 1685272仍PENDING，原job JSON SHA b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1未改；新推进器已complete/exit0。定时任务保持ACTIVE且仅按新独立登记推进，不重复probe提交或旧筛选。
+实际大数据在`generated/jscc_geant4_5e10_10000/`，本目录保存小型登记、代码快照与验收。全工程查询见[双能入口](../../../../../docs/ac225/README.md)。定时任务仍暂停；Git提交不代表实验完成。

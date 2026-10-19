@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "protocol": "derenzo-source-density-no-fit-full120-v1",
+  "all_accepted_input_sha256_pass": true,
+  "history_bytes_and_indices_pass": true,
+  "native_full_active_history_final_exact_match": true,
+  "finite_nonnegative_outside_zero_pass": true,
+  "source_dose_and_geometry_identity_pass": true,
+  "truth_volume_closure_pass": true,
+  "final_snapshot_display_exact_match": true,
+  "all_unclipped_panels_below_vmax": true,
+  "metadata_sha256": "7b7393fc441959ffbbe7bc54a7b87dac4645f38994578c34e84f76e2cd2e24f2"
+}

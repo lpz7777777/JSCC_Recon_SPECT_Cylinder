@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "jscc_5e10_5090_production_queue.py": "be9ec0296a7f12c949bf75211141d7f3f20d3b29dcf633136769582f8fc82a1b",
+    "test_jscc_5e10_queue_controller.py": "1ca3abe648191a5cd7bb8e2dd72df98f8c8706ea13d7c50e4d0424e883e045e1"
+  },
+  "scope": "One manual-request controller: read-only polls every 300 seconds up to 14 days; after complete validation/verification, strict fetch, measured limits and authority, release only formal job 1704572; then exit. No resubmission or recurring automation.",
+  "formal_job": 1704572,
+  "validation_job": 1704559,
+  "verification_job": 1704566,
+  "controller_tests_passed": 2,
+  "poll_timeout_retry_only_before_fetch": true
+}

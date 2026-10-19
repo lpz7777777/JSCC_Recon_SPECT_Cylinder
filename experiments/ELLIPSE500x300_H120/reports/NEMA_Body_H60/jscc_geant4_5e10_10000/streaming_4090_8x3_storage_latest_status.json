@@ -23,7 +23,7 @@
   "inspection_source_sha256": "a50c62e15b18d4ca2d53cb373d0ccdd97343f8f6a63c54041f49091a1d22af08",
   "monitor_source_sha256": "ba8263822c603a623bae4681a40a186e6533a410c9d0e635c8726aaab2e19551",
   "original_5090_registry_sha256": "b593beff14a554d3e28a9219da26ea58748f1f58be1c2e3c7d028419b5c5efe1",
-  "original_5090_accounting": "1685272|PENDING|0:0\n",
+  "original_5090_accounting": "1685272|FAILED|15:0\n1685272.batch|FAILED|15:0\n1685272.extern|COMPLETED|0:0\n1685272.0|COMPLETED|0:0\n1685272.1|FAILED|1:0\n",
   "original_5090_untouched": true,
   "read_only": true,
   "validation_or_formal_submit_permitted": false,

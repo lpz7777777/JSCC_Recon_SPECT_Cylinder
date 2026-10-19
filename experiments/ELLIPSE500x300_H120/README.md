@@ -1,81 +1,24 @@
-# 218与440 keV双能重建 近期结果总入口
+# ELLIPSE500x300_H120：218/440 keV研究入口
 
-## 2026-10-11 最新人工授权：UUID修复后独立重新提交1688717
+当前三维几何：椭圆500×300mm、完整高度120mm、20view。NEMA体模主体H60；独立Derenzo两种能量也为H60。源、模型、观测、求解和验收按各研究合同区分。
 
-用户在确认原5090主1685272自然FAILED后明确要求修正bug并重新提交。已冻结独立UUID监控修复c49ad9c3a38589e6并于18:40:54上海唯一提交1688717，保持原8节点×4张5090、32rank、32CPU/节点和原科学输入/筛选。最新实际状态PENDING(Priority)；本地及真实Linux各16项检查通过，实际GPU启动与完整筛选验收待运行。原1685272及成功1686507/1686546的发布/登记/输出和SHA继续保留，历史“不重新提交主失败任务”的限制仅对这一次独立修复按最新用户授权解除。
+| 查找任务 | 入口 |
+|---|---|
+| 全工程双能索引 | [225Ac/218/440导航](../../docs/ac225/README.md) |
+| 最新带日期状态 | [状态快照](../../docs/ac225/CURRENT_STATUS.md) |
+| NEMA实际JSCC5e10 | [README](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md)、[合同](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md) |
+| 已完成NEMA5e9 v5历史基准 | [正式验收](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/ACCEPTANCE.md) |
+| NEMA各EHE组与体模真值 | [NEMA目录](reports/NEMA_Body_H60/README.md) |
+| Derenzo四组独立单能5e9 | [Derenzo目录](reports/Derenzo/README.md) |
+| 当前球ROI与统一背景 | [当前分析](reports/nema_interior_roi_20261010/README.md) |
+| 所有小型证据分类 | [reports目录](reports/README.md) |
+| 代码按职责查询 | [源码索引](../../docs/ac225/SOURCE_INDEX.md) |
+| 执行约束 | [AGENTS.md](AGENTS.md) |
 
-定时任务继续PAUSED，不恢复自动推进；完整validation10/formal10000和authority均未提交。4090持久缓存仍STORAGE_HOLD，不因本次筛选提交解除。本地提交后资源核对器误读Slurm的NumNodes=8-8，已独立修正并只读核对原登记任务，无重复提交或修改远端发布。后续只读状态入口为jscc_5e10_5090_8x4_monitor_repair.py status，不调用旧advance。下文状态均按各段记录时间阅读。
+在仓库根可运行`python tools/project_index.py list --topic nema`或`show nema-jscc-5e10`。查询不会运行生产脚本。
 
-[独立修复与提交证据](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_README.md)。
+本目录的顶层源码与generated数据保留既有路径，避免破坏导入、运行中任务和SHA合同。当前目录分层及Git保留策略见[目录图](../../docs/ac225/DIRECTORY_MAP.md)和[数据规则](../../docs/ac225/DATA_POLICY.md)。
 
-## 2026-10-11 最新人工指令：停止定时推进并清理超算空间
+旧六路JSCC和EHE三路只读保留；新的实验不生成218/440求和图。SC表示单光子；同440能量的SC+Compton与跨能量相加不同。实际gamma发射数不是Ac225衰变数。
 
-用户要求停止定时任务并清理重建超算空间。`jscc-5e10`及其余现有定时任务均PAUSED；下文历史ACTIVE及每15分钟推进规则不再生效。首次清理429个SHA相同的远端重复副本后，用户另明确要求删除`/data/run01/scxi717/zxc`；该目录已实际删除并独立确认不存在，原删除范围限制对这个明确授权路径不再适用。原5090主1685272于2026-10-11 06:52 UTC只读检查时已由调度器自然进入RUNNING，没有修改、取消或重新提交。当前5e10输入、标定矩阵、冻结发布、结果和验收证据保留，没有提交新计算。见[本轮清理记录](reports/storage_cleanup_20261011/README.md)。
-
-最新明确路径删除见[zxc清理记录](reports/storage_cleanup_zxc_20261011/README.md)。
-
-## 最新实际状态：4090分批方案等待持久缓存空间
-
-1686694已实际全COMPLETED/0:0（3分23秒），24GPU身份、小块无损往返和80%资源余量通过；整体存储门控未通过。6/8节点/tmp空间不足；1686708只读挂载检查证实/tmp位于当前作业jobcontainer，不能据此承诺验证与正式作业之间复用。此前9b5938545ad3d6c7发布中的/tmp固定节点复用方案已被实际证据否决，原发布及日志保留，不能继续该入口advance或提交validation/formal。
-
-完整响应1530759784160字节（约1.53 TB），2026-10-11删除zxc并等待配额刷新后工作盘约358.67 GB可用（334.04 GiB，59%使用率，800 GiB配额）。/ssd全卷空闲不等于账户配额：/ssd/scxi717属于root/0700，scxi717不可读写，目录实际配额仅1 GiB；home也只有1 GiB。已请求用户在平台开通可写、至少2 TiB持久SSD目录并提供路径。需要新独立存储修复冻结和实际I/O验证，不能修改旧发布或重新筛选/模拟。
-
-当前例行入口仅 `python -X utf8 experiments/ELLIPSE500x300_H120/jscc_5e10_4090_storage_status.py`，只读核对六项PID、账户SSD配额/访问和原5090自然状态。自动任务继续ACTIVE，资源未变化时保持安静，不反复执行旧probe/取回。原1685272仍PENDING且job JSON SHA保持；未提交完整输入验证或正式重建。详见报告目录 `STREAMING_STORAGE_HOLD.md`、`streaming_4090_8x3_probe_resource_acceptance.json` 与 `streaming_4090_8x3_storage_diagnosis.json`。
-
-
-2026-10-10最新规则：后续不再计算218与440的跨能量叠加图。球ROI采用中心距球面至少1.5 mm的体素；所有球统一使用Phantom内部完整背景体素，排除六球、肺插入物和边界。[新规则、重算指标及12条独立路线图表](reports/nema_interior_roi_20261010/README.md)为当前分析入口。
-
-最新新增授权实验：[JSCC实际5e10、三路10000次](reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md)。启动检查15705111已实际COMPLETED/0:0；用户改为独立CPU调度后，未启动的18节点15705120已取消，唯一新输运数组15708389为1000worker、每worker1节点1核，可共享节点、最高并行1000，完成后统一收集。GPU优先8节点×4卡。正式仅保留218 corrected、440 single、440 Compton三路；原模型和MLEM保持，完整输入validation10通过后继续formal10000/save50。该实验尚未交付；新 `jscc-5e10` 每15分钟推进，旧compton-v5保持暂停。
-
-2026-10-10 22:28上海：该实验完整实际5e10输运和严格输入早已交付；新增8×2张5090独立事件筛选1686507成功退出，用时8分48秒、选中4849087事件，实际筛选资源保留20%余量。匹配16rank的独立只读全行验收1686546成功退出，完整1003成员/全选中缓存/原日志严格SHA取回通过；原主1685272和4090 1686107保持不动。当前8×2完整Compton响应保守内存预算超过80%门槛，不直接提交16GPU正式重建；详细证据与后续阶段以新实验README为准。
-
-17:22上海最新里程碑：15708389全部1000个子作业与步骤已实际COMPLETED/0:0，唯一收集15709588正在核对完整worker/源/计数/SHA。实际5e10输入闭合与严格取回仍待完成，尚未提交GPU重建。
-
-此前五组主要NEMA H60研究均已实际完成、独立验收和严格取回，旧推进器已退出，compton-v5保持暂停。新增JSCC5e10独立研究仍在推进。JSCC既有六路10000次作为历史实现回归基准；EHE实际输运与模型加噪声是四个独立研究组。
-
-- [历史研究报告 PDF：旧ROI与叠加图定义](reports/dual_energy_review_20261010/dual_energy_nema_research_report_20261010.pdf)
-- [整理目录及存储清理说明](reports/dual_energy_review_20261010/README.md)
-- [当前球ROI末帧指标](reports/nema_interior_roi_20261010/sphere_endpoint_metrics.csv)与[当前热球CNR峰值及末帧](reports/nema_interior_roi_20261010/hot_sphere_cnr_peak_and_final.csv)
-- [历史18类完整图集和曲线](reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/RESULTS.md)，其中叠加图只读保留，不作为后续比较路线。
-
-## 已完成的主结果
-
-| 实验 | 正式作业 | 末迭代 |
-|---|---:|---:|
-| [JSCC实际5e9，六路10000](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/ACCEPTANCE.md) | 1669255 | 10000 |
-| [EHE实际Geant4 5e9，三路200](reports/NEMA_Body_H60/ehe_spect_5e9_200/RESULTS.md) | 1679415 | 200 |
-| [EHE期望5e9，矩阵前投影加Poisson，三路200](reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/README.md) | 1680255 | 200 |
-| [EHE实际Geant4 5e10，三路200](reports/NEMA_Body_H60/ehe_spect_5e10_200/RESULTS.md) | 1681346 | 200 |
-| [EHE期望5e10，矩阵前投影加Poisson，三路200](reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/RESULTS.md) | 1683357 | 200 |
-
-比较保留EHE 0–200、JSCC 0–10000各自范围；同迭代或同图列不表示同收敛。真值为工程现有3mm三维球源，完整重建域为120mm，当前球/背景ROI位于H60体模内部，MIP图示中央72mm；crop0、无平滑、固定发射源密度尺度，无单图亮度拟合。旧报告的分数球ROI和局部背景CNR/CRC不能与本次重算指标混用。
-
-EHE 5e10全4π、一事件一光子；输运15684979复用首次13个成功worker后补齐987个，总实际5e10。旧15683333失败及恢复证据保留。[源发射角核验](reports/NEMA_Body_H60/ehe_spect_5e10_200/SOURCE_ANGLE.md)说明宏的/xcat/angle只旋转源位置，不限半球，剂量倍数1。
-
-原EHE物理审计仍有响应偏差和逐bin统计不足，[HOLD报告](reports/NEMA_Body_H60/ehe_spect_5e9_200/PHYSICAL_HOLD.md)保留。用户随后明确要求继续原方法，正式重建已完成；不得把执行验收或模型自生数据解释为该物理偏差已消失。
-
-## 方法历史与固定基准
-
-- [JSCC完整流程历史基准](../../docs/DUAL_ENERGY_BASELINE.md)：原六路入口及冻结发布只读保留；新任务应按用户选择的路线另行冻结输出合同，不沿用六路入口提交。
-- [截至10月7日的方法研究回顾](../../docs/DUAL_ENERGY_RESEARCH_REVIEW.md)，包括密度基底、首散射、稳定几何、连续核、绑定/Huber及未完成精细场。
-- [5e9两核2000对照](reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/ACCEPTANCE.md)；[ideal1e9两核2000](reports/NEMA_Body_H60/compton_energy_probability_v5/ACCEPTANCE.md)不是纯剂量对照。
-- [体模定义与几何真值](reports/NEMA_Body_H60/README.md)。
-
-## 数据和代码保留规则
-
-正式响应、观测、完整图像历史、冻结发布、科学诊断与验收证据保留。一次性文档/标题修补器及过时控制器已清出当前源码，恢复提交和逐文件SHA见清理记录；通用工作流、求解器、科学绘图和验证器保留。本次没有新增模拟、响应或重建，也不恢复已经停止的旧研究。
-
-[本次整理前README原字节](HISTORY_20261010.md)、[10月7日快照](HISTORY_20261007.md)及[更早记录](HISTORY.md)包含当时RUNNING/PENDING语句，应按记录时间阅读。
-
-2026-10-10 17:33上海：独立JSCC5e10的1000×50M实际4π输运已全部完成、唯一collection15709588成功退出并严格SHA取回；窗口218/440=123180986/53642922、原List54631328行。整批模拟32分36秒，不含排队和4分钟收集。新输入GPU同步和8×4事件筛选准备继续，三路完整输入验证/10000正式重建/QA尚未交付；见reports/NEMA_Body_H60/jscc_geant4_5e10_10000/transport_measurement.json。
-
-2026-10-10 17:46上海：GPU4090的40CPU/4GPU启动请求被每卡6核配额拒绝，未运行科学作业。独立启动控制修复ce90d678eb32757f保持8节点×4GPU，改gpu_5090每节点32CPU、自动预期504000MiB；本地13项/实际Linux4项及真实scheduler test-only通过，原科学kernel、5e10输入和原失败证据保留。下一步唯一事件筛选，实际资源与科学验证仍待完整运行。
-
-
-2026-10-10 21:47上海用户新增授权：保留5090主筛选1685272及4090试跑1686107，另提交独立8节点×2张5090完整输入事件筛选 **1686450**。每节点16CPU、16rank、按配额自动252000MiB/节点，无显式mem。原20view/54631328原List/全部132040点/10496bin/稳定float64全圆q≤3和矩阵科学字节保持；独立试跑发布1516a532adb59f94仅适配16进程身份、资源验收和最终全行汇总。当前PENDING(Resources)，原两项PENDING(Priority)；上限4小时不是ETA。正式重建仍未提交，按实际筛选事件数及后续完整响应内存验证决定，不凭筛选RSS放行Compton重建。
-
-
-2026-10-10 22:06 JSCC5e10最新8×2筛选试跑：恢复作业1686507实际RUNNING；旧8×2 1686450和4090 1686107在UUID监控处失败、证据保留，主5090 1685272仍排队且未修改。恢复只修正设备身份字符串，原科学计算与阈值保持；实际16GPU启动身份通过，完整事件筛选/内存结论待退出验收。详情见reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md及最新selection_5090_8x2_monitor_repair_job.json。
-
-
-最新用户授权：JSCC实际5e10复用已验收筛选，改为8节点×3张4090、Compton响应节点本地盘无损32事件分批读取，原5090作业1685272保持不动。新的streaming_4090_8x3独立登记和预检→完整输入validation10→authority→formal10000→严格QA流程详见新实验README；既有原响应/观测与科学模型不改。
+[整理前README](history/README_20261019.md)、[整理前AGENTS](history/AGENTS_20261019.md)及[更早历史](HISTORY_20261010.md)保留当时排队/运行语句，不应作为当前状态。

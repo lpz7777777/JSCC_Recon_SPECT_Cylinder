@@ -1,0 +1,7 @@
+{
+  "command": "sbatch --parsable -p cnmix -N1 -n1 --ntasks-per-node=1 --cpus-per-task=1 --chdir=/tmp --time=240 --array=0-199%200 --job-name=DR5e9_EHE_218_transport --output=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/logs/EHE_218_transport.%A_%a.out --error=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/logs/EHE_218_transport.%A_%a.err /WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/scripts/EHE_218_transport.sh",
+  "script_sha256": "389f7bb491a4a6d56bfb160315ea5ef37eb970194045c511e4e09f2fea21adff",
+  "resolved": true,
+  "started_epoch": 1792123372.7778926,
+  "registered_job": 15896342
+}

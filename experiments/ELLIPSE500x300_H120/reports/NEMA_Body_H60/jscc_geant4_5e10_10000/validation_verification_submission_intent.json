@@ -1,0 +1,13 @@
+{
+  "stage": "validation_verification",
+  "script_sha256": "d249c1d088ff4e1f391308901bb669686708ad89c5514add6713d1de11d7c059",
+  "command": "sbatch --parsable -p gpu_5090 --qos=gpugpu --nodes=1 --ntasks=1 --cpus-per-task=8 --gres=gpu:1 --time=120 --exclude=wqd10nba06g6 --chdir=/tmp --job-name=JSCC5e10_validation_verification --dependency=afterok:1704559 --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/validation_verification.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/logs/validation_verification.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000/queued_production_launch/ffe08f48be856816/validation_verification.sh",
+  "dependencies": [
+    1704559
+  ],
+  "held": false,
+  "resolved": true,
+  "started_epoch": 1792086097.6667721,
+  "test_only": "sbatch: Job 1704562 to start at 2121-11-16T03:45:55 using 8 processors on nodes wqd10nbl11g5 in partition gpu_5090\n",
+  "registered_job": 1704566
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\resume_reconstruction_controllers_20261019.py", line 108, in <module>
+    run(parser.parse_args().mode)
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\resume_reconstruction_controllers_20261019.py", line 97, in run
+    if advance():
+       ^^^^^^^^^
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\jscc_5e10_5090_production_queue.py", line 292, in advance_release
+    authority=read(REPORT/'formal_authority.json'); limits=measured_limits(authority)
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\experiments\ELLIPSE500x300_H120\jscc_5e10_formal_queue_gate.py", line 19, in measured_limits
+    raise ValueError('Measured reconstruction exceeds the bounded 48-hour budget')
+ValueError: Measured reconstruction exceeds the bounded 48-hour budget

@@ -1,0 +1,19 @@
+{
+  "study": "derenzo_equal_regions_mono_5e9_20261016",
+  "sha256": {
+    "derenzo_campaign_common.py": "eec2c8598ace1ccce0b2bd36938cb3a3625197b72e46b10ade3460bc391573bf",
+    "derenzo_campaign_gate.py": "f4e8231a209110d7cdfe37deffef5e2b8281e341f79d57aaf601e555296b26f5",
+    "derenzo_campaign_reconstruction.py": "7dfdf0fa0d39afd7508e3134b930a42a4416e909eb56e5084bcb0b892e5f9ebf",
+    "derenzo_campaign_transport.py": "820fa85df69a1043be6d902965eba59370893cd9221a706f480750a348a5fc6c",
+    "derenzo_campaign_verify.py": "e754906b34805a4e1f31954b02e60c693a943689a23418f226cd8aa3f5865d79",
+    "derenzo_campaign_workflow.py": "7c1d03a17171c571320afdf0ad39d68462e1afbc497916cd15d3f65dc02efa97",
+    "test_derenzo_campaign.py": "f949ee2f94bc1fa107b1877934f10189d631db6b2e646ee7071d368477dddae4",
+    "test_derenzo_campaign_controller.py": "19ae18e8a4a74e1b7873e95e6f98f18e2fdbfd0632ea4b610a3f257a3f010310"
+  },
+  "local_source_tests_passed": 4,
+  "local_controller_tests_passed": 3,
+  "actual_linux_science_tests_passed": 10,
+  "bash_launch_variants_passed": 13,
+  "recurring_automations_remain_paused": true,
+  "scope": "One finite 21-day controller for these four independent datasets only; no retry of failed scientific jobs; strict collection/transfer/validation/authority before formal release"
+}

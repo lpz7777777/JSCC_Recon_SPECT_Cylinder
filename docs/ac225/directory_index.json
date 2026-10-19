@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-10-19T13:10:49.801628+08:00",
+  "directories": [
+    {
+      "path": "Analysis_Plots",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Auxiliary_Studies",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "CntStat",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "Factors",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "Geant4Sim",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "GenProj",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "List",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "Reproduction",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "Results",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "distributed",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "docs",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/Diagnostics",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/GalleryFrames",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/Geometry",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/HistorySelected",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_upload_5e9",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/PilotInputs",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/PointQA",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/PointScan",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/PointSelectedCntStat",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/RemoteResults",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/Simulation",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/SpikeAblation",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/TransportCounts",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/XCAT_1e9",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/XCAT_1e9_fullx",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/baseline_validation_tmp",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/collections",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/response_mismatch_cut3_v1",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_followup_20261004",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_global_audit_v4",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_research",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/iteration_galleries",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "experiments/FOV120",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "tests",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    },
+    {
+      "path": "tmp",
+      "local_only": true,
+      "role": "local-runtime-data"
+    },
+    {
+      "path": "tools",
+      "local_only": false,
+      "role": "source-report-or-artifact-directory"
+    }
+  ],
+  "note": "Shallow directory inventory only; ignored runtime arrays are not scanned or moved."
+}

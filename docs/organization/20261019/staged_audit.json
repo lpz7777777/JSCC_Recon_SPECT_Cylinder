@@ -1,0 +1,2221 @@
+{
+  "passed": true,
+  "audited_at": "2026-10-19T13:12:12.946752+08:00",
+  "base_head": "1c0bf7ac42479fa22ea9ad4e672ac12a8eb6613b",
+  "staged_nonself_files": 368,
+  "total_nonself_bytes": 3721037,
+  "max_file_bytes": 413504,
+  "excluded_self": "docs/organization/20261019/staged_audit.json",
+  "scope": "Exact staged blobs; UTF-8 small text only; no new arrays/media/archives/credentials",
+  "errors": [],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 7906,
+      "sha256": "18ae7cbef6192f004364bde76799cd0eef12591d671f5edb699cf549c6a7c8e9",
+      "git_blob": "1ff9bbfba68c85ba5d12d7c9727238bf2588cc60"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 3810,
+      "sha256": "df9eaf0b68f9b8b57718c5cf2be601137596be2546f034072910841ce9fb1536",
+      "git_blob": "7216bbba563d203ee38bdd8efee0469e640ea0d4"
+    },
+    {
+      "path": "Analysis_Plots/README.md",
+      "bytes": 1488,
+      "sha256": "e09708e1a7bc0d95013be39d9e3e5954efe0044425d6006e4faae76062439e28",
+      "git_blob": "c476aecad6823d2e94a8c8ce0a13561265b6d927"
+    },
+    {
+      "path": "Analysis_Plots/research/README.md",
+      "bytes": 944,
+      "sha256": "baec988a8492e5f2f37a2fb26f2f5a8e88e60aee266e41b3c253828e2c5abfdb",
+      "git_blob": "874ea0b6d55984430d96dae6a8f3a2ac7fe155e1"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/README.md",
+      "bytes": 602,
+      "sha256": "1d413f8d56413b4c20b4a69f89b6d73f56f86ac1c29fc8ad6b022f235ebdbfeb",
+      "git_blob": "3a4850ffca35e35f3e02d297727bfa33e6e7436a"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_panel_metadata.csv",
+      "bytes": 12861,
+      "sha256": "aa20e0df5a7c9316206a10124756d2fc0fd1094fdc789948ab205dae70e5300a",
+      "git_blob": "8dd5d8da7354fd20aae8e54d8975f802fea3f484"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_primary_photon_definition.json",
+      "bytes": 3143,
+      "sha256": "8d6e42b0fe4cae70e6ea224c4dc88d9adbba138da25f81b02b32279c1e2ae9e3",
+      "git_blob": "dd3050fcbfc20678ca3b7477b142c4563ba74ffa"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_scientific_qa.json",
+      "bytes": 26237,
+      "sha256": "b5f64fee8efc093e689c99f6e9e3c0c28cc8859288bacc69d277696790342d45",
+      "git_blob": "d296521764012d4cd00230bf38052f1f58038792"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/03_visual_qa.json",
+      "bytes": 1457,
+      "sha256": "fd84be75889c3b1e0af7c6c9f410956baa90dff73afc121d166fcb18be752e5c",
+      "git_blob": "9f21633d5b96849f8a07cc54fb5ab2e1edb348a6"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/delivery_qa.json",
+      "bytes": 1940,
+      "sha256": "6e97b1b0264fa2b47dd6ebb5c78eea40d6bfd0aff45d39c57214ded8891b0b61",
+      "git_blob": "36c9518055697529e4fe8620355cb81db3f19b5d"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data/geometry_sources.json",
+      "bytes": 2008,
+      "sha256": "79a9ecfe5d3a7f3908b300bd07115d2e43a2b4ffadb77c4840ddf0591fee0fab",
+      "git_blob": "796888b7ed8cefa371b489815f0bac861f0c34d9"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/delivery_manifest.json",
+      "bytes": 3027,
+      "sha256": "f75eb6075aa9a77496de24e5301c57547c0b997b74614d7ff0f45383ad758093",
+      "git_blob": "6bdcbda8664d09b1d1d412f540b920f7bc6170fc"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/scripts/plot_01_02_geometry.py",
+      "bytes": 15070,
+      "sha256": "78e7c8b178b5603a3072e82781b79223adfc78595a8d9b1e960b4407e7f86638",
+      "git_blob": "3ac902b1b83129ab6f63e00532b91fffe1ccfd41"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/scripts/plot_03_nema_mip.py",
+      "bytes": 17552,
+      "sha256": "3240bb005b0b1e5dc428ba91068db4bd0ddb2ca868f5ed4e66d72b0c6eaa5bc3",
+      "git_blob": "8dc1ded926560301b070e6f540619530d745c9b0"
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/使用说明.txt",
+      "bytes": 1218,
+      "sha256": "d780ba3642cf4eae41f8f099af6ac826592c7c72a17e213ba770a007e90cadca",
+      "git_blob": "cdbe29fdeae8cb51b6be6a6c9b6c4306c2551efd"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/README.md",
+      "bytes": 492,
+      "sha256": "f09baa9f758583c334c3bb954c9f05bd8a7e3ac770a68f4aea7bd197c17a07e5",
+      "git_blob": "8ffb9a67b3a579becbdbf30e65ab7e1873c7c3db"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/artifact_sha256.json",
+      "bytes": 1802,
+      "sha256": "29572ce2e136c32d43a93b339787638da8cc15a0088b11b246b52ae62520cd57",
+      "git_blob": "ea1071f142e5682a15df08ea27331fabfb409fcf"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_218keV_geometry.json",
+      "bytes": 127643,
+      "sha256": "2bc9beac5c572bede6c52bc2ff21a9db39db49e15e208ecdb95b477863f779a7",
+      "git_blob": "55f23dd7ceddc8a646c096e1c149c85ed9802241"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_218keV_rods.csv",
+      "bytes": 32694,
+      "sha256": "d42fbaedd9e74441e688d96d9617762ff805ada3291a4d78f75aaccf60131ceb",
+      "git_blob": "ad9e76aaca0cc5d3524e17f3bce177629464283d"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_440keV_geometry.json",
+      "bytes": 43798,
+      "sha256": "a6ec1a72ab36447499e397955b1cd924d2f401a549068d4a04cf38faa0549560",
+      "git_blob": "78444f3fd8b690f9a9d886e2fceb15b597aa7b00"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/derenzo_440keV_rods.csv",
+      "bytes": 10977,
+      "sha256": "9b66e77f85e0996d138109aedfb6416409c3593ee2e38fa6cb66bdb47147b7dd",
+      "git_blob": "b23a2adef1f301d7bd0f8119a2945e8a19cfed49"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/geometry_qa.json",
+      "bytes": 5424,
+      "sha256": "776154e3571e7844a675f3173cfb709dc474dc2c5fa2a8e89ebb41e4b62f929a",
+      "git_blob": "1d6586e9e5a2bdee8f8b197f9ec9e94a38306b93"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data/visual_qa.json",
+      "bytes": 787,
+      "sha256": "bb4f7a3c38c04825158fef5943b985c2ed834d8575e4b0d5d0f014cc78264d6e",
+      "git_blob": "ae5bbbc36407d0f5e4fb2bb6965b8dee71fe0620"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/design_notes_zh.txt",
+      "bytes": 4083,
+      "sha256": "88f83a2ca70bad59ecf8570b7472e01bdcdee6bc7616877f65d05215542e6426",
+      "git_blob": "e4d6445610e40cb7f04bc1f81d74079c2d0b19d5"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/scripts/design_derenzo.py",
+      "bytes": 19163,
+      "sha256": "dafa4e4fa1c50f5a3d41c43b7f75d0323cf2f66748614982bccc5dbad1a48210",
+      "git_blob": "b15036e99549cc4c6490e6cf0066be733554a2f4"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/README.md",
+      "bytes": 492,
+      "sha256": "f09baa9f758583c334c3bb954c9f05bd8a7e3ac770a68f4aea7bd197c17a07e5",
+      "git_blob": "8ffb9a67b3a579becbdbf30e65ab7e1873c7c3db"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/artifact_sha256.json",
+      "bytes": 1802,
+      "sha256": "bf8d2e02c0eb00a155dc24de81cf53727f16d910b0a57617ba3fbd6d0c41ddc2",
+      "git_blob": "0cc2eec2293663cada626153c96226430e471e35"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_218keV_geometry.json",
+      "bytes": 74324,
+      "sha256": "b3bdd85aa09e58973cba5054dee18b0836b9381f3cfc255e8f838f0125ba6d12",
+      "git_blob": "d6031f5a3d69a7ef41c5b0507ffe41dc69aaad59"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_218keV_rods.csv",
+      "bytes": 18905,
+      "sha256": "39a1fe888699270e43dadb1ea552d6fc33d67c7000bc26859bff898845e4afdb",
+      "git_blob": "f026bb08aaf8110dada8583a2204b300d725110a"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_440keV_geometry.json",
+      "bytes": 34571,
+      "sha256": "5586ce454f4e18a760078d1e647f4e85bcce97b0989e25e09814116ffdc14280",
+      "git_blob": "4b3322f6ab42c33a5fdae71e64d110b1b5225536"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/derenzo_440keV_rods.csv",
+      "bytes": 8580,
+      "sha256": "4c91625a1f1065d2326c0c9bb810f73d7f594ab7a449de2958f759706cd65db5",
+      "git_blob": "5ae33d8ada3bad2f7ad8907f16fdc30389d0747b"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/geometry_qa.json",
+      "bytes": 5490,
+      "sha256": "b571130ef1b83dca9488153bef7b9282df2772b698f0887d105de3cbef7b3656",
+      "git_blob": "a16f66d3bbf8d9dd125895e4615a60ab9e38284a"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data/visual_qa.json",
+      "bytes": 671,
+      "sha256": "96e0698795fb9e339eb022c127230f0bc2f2725c0c196c737d3c3e8ad1f14ba8",
+      "git_blob": "0e295761e9ce0745cfb162a92ee1c47cafa31da6"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/design_notes_zh.txt",
+      "bytes": 4092,
+      "sha256": "80545fa99549e56b4c5098e155b50ae3344419ddb21e72ff345ae9cf52b8018b",
+      "git_blob": "860094671f44a8572366a0ad65cca9e7ac08dd12"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/scripts/design_derenzo.py",
+      "bytes": 19642,
+      "sha256": "8ed822cc271f668a1f3c6b019609d465bfbc0143eba474ea0915bda47dfc2780",
+      "git_blob": "556676f25bad1cf114dc3f7c61b18d90d0c2fbe9"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/README.md",
+      "bytes": 547,
+      "sha256": "29dcb23a0c8603b1745cd2b17423484eac840b3def9bedc79b8dba1af808404f",
+      "git_blob": "9c60b9e6c4a88b3e61cbdd78f29810b7efb8cdee"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/artifact_sha256.json",
+      "bytes": 1802,
+      "sha256": "9d5f7c8c1aaa05c02a9e77e55547faef69c152dd9ecb83edad7067b1e535d1c4",
+      "git_blob": "024f2d4fce9b71d9d049cb092a7b607df2938428"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_218keV_geometry.json",
+      "bytes": 57173,
+      "sha256": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+      "git_blob": "4c24c870093ef420730bec4f0f0baf8fce271e2b"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_218keV_rods.csv",
+      "bytes": 13207,
+      "sha256": "806e119d1eead8b424ddf607c9bfa854751aea99dcf4a11e4c2ec68e9126922a",
+      "git_blob": "2e9a0c99c80f4af77a9f73e9d4f3521da028e52e"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_440keV_geometry.json",
+      "bytes": 30247,
+      "sha256": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+      "git_blob": "df1cd56d436a1f14362baafff07749adc98af926"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_440keV_rods.csv",
+      "bytes": 6225,
+      "sha256": "0e7817f2ba18a7b4f776808b7936a82401cd18f88d67a4ed8fa7c626f8a7b6eb",
+      "git_blob": "4673f1ac545a42fb53feb6f721eaf28aafaea56a"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/geometry_qa.json",
+      "bytes": 8572,
+      "sha256": "535a9c704893b282c1c15ee8ee4f13719e8c35240f8b7db5e90685df18474679",
+      "git_blob": "cfcb785aff7373a6f0b3d57982bd3f98382b64e9"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/visual_qa.json",
+      "bytes": 759,
+      "sha256": "8f0d31b0b8909e892109d68f51b9b4fcb0b4b7ec4939fe9a218aae302229871e",
+      "git_blob": "32eab9e1e824309111f76bc7fcb6f54ebe26f235"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/design_notes_zh.txt",
+      "bytes": 5114,
+      "sha256": "bfc4ee98a54c61e27c5e5898fdf97d9db82943b757e10513d41451d2b79fd70a",
+      "git_blob": "59ec8ad73c4dc49264d8cfa56c0dbb7dee7eef83"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/scripts/design_derenzo.py",
+      "bytes": 24977,
+      "sha256": "a6de6d26e7072b223e85dd6a2ffe52c3883a4371bdbd1f428b1f122526c29204",
+      "git_blob": "2162664988931fa8c4bbce50e8a89065dc8502d1"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/README.md",
+      "bytes": 492,
+      "sha256": "f09baa9f758583c334c3bb954c9f05bd8a7e3ac770a68f4aea7bd197c17a07e5",
+      "git_blob": "8ffb9a67b3a579becbdbf30e65ab7e1873c7c3db"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/artifact_sha256.json",
+      "bytes": 1802,
+      "sha256": "872c2c2fe6a0e2dbb3523e762fc0be91b5469375fed26a4d5567054064aa3803",
+      "git_blob": "76f53dd7b7e2a247411ab3acb8d9df686f2fd053"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_218keV_geometry.json",
+      "bytes": 18270,
+      "sha256": "758cff4892dd4723a6c0bdf81efeb67310e279c7d5ae4ee99392b271da2e2e06",
+      "git_blob": "312c97bc7cc23dedd7f6bee82a9b33be3a3bfeb4"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_218keV_rods.csv",
+      "bytes": 4287,
+      "sha256": "4831d2d79b119f47b6660df4d0d3eb5d98ef7d654b595497bb128bef3f2ac59c",
+      "git_blob": "3b7b60b207a161125325164692fdc44f23a14cda"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_440keV_geometry.json",
+      "bytes": 18302,
+      "sha256": "79fbbe68dd7e8399dd4e60271271c26e0cba51ea03ff0de5e15df4d936eb8e95",
+      "git_blob": "582b82392323d86a5a1935b99457aac27cd2604e"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/derenzo_440keV_rods.csv",
+      "bytes": 4313,
+      "sha256": "7cddfd88619459bf82f200c4caef0315dfd3407ba238cbd1b50c859380420dea",
+      "git_blob": "d6b61a0a2a006a563abd411f508216fe810609e5"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/geometry_qa.json",
+      "bytes": 5840,
+      "sha256": "3adec4d13c33ba798e809e12d89bad92a2f2a6cf684b7515efbb44f4feb3e517",
+      "git_blob": "98bc52c2c1b582135fb2f3e5f2c0db4dcd1086db"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data/visual_qa.json",
+      "bytes": 739,
+      "sha256": "b8877602d6b93ba4b4999a0233d5d2ee36ee150b89c031db2b7417270fcbf90c",
+      "git_blob": "47b8e6ef4b4a860d96b2ca4c7db8d002a10e5e5d"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/design_notes_zh.txt",
+      "bytes": 4247,
+      "sha256": "0aa3e1a745f587a2e4ddd2558aa597bf78fd23fb94e43fe25c404fc6340711e4",
+      "git_blob": "e42901addc19da6e3cf68c3429971d9c9f583a0e"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/scripts/design_derenzo.py",
+      "bytes": 20948,
+      "sha256": "09a5243fee669a4a5e4d8ec0f8417995841f439bd705ebd03296f33dd63d1966",
+      "git_blob": "45f2436499f30c2a02cf1970fcd59ef90a614f47"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/README.txt",
+      "bytes": 1720,
+      "sha256": "ed0acc938726b9c2be129d54bb5c871200bed76285c2c95a1ebc0e6199b84cf5",
+      "git_blob": "2b5ab459f5770c7f01badb24bb3c6c0d2bca7086"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/artifact_sha256.json",
+      "bytes": 2797,
+      "sha256": "632009764d8e10a65921a6e296e017b64a147a87bd1fd727ed4e6f4f65792b37",
+      "git_blob": "3cf75b5f31d5f6b786615b1ab81c6143ac12deb8"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/displayed_iterations.csv",
+      "bytes": 966,
+      "sha256": "182d4dc0356c2aed8d4560330406b991d2aecc7e3f40e9e6ca0bd63295f8f431",
+      "git_blob": "bfb9e26a25479091635b0182f009b5d697d0a828"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/final_summary.csv",
+      "bytes": 673,
+      "sha256": "8626290b93e4009e507c861eddfce916efd490acedea9a09d419d0677302ebc1",
+      "git_blob": "d9c2e18fbc9d2bb4c447c8fc0a15c69b8b292526"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/metadata.json",
+      "bytes": 14647,
+      "sha256": "7b7393fc441959ffbbe7bc54a7b87dac4645f38994578c34e84f76e2cd2e24f2",
+      "git_blob": "8061db059cd1d76814e9c1e5c4c3890ffe30d8d2"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/native_iteration_metrics.csv",
+      "bytes": 51419,
+      "sha256": "98f06e4661d705d43e4cb90d11cd33c8cd26d65c490eb54d11d68098b9fe3bc9",
+      "git_blob": "5b56b5a00158b37f21e89a701309a336eff61b13"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/scientific_qa.json",
+      "bytes": 545,
+      "sha256": "16b75fa5d904dbddd079b4e2d6f8ed0334df63415c0f5d806bd5df6b589cdbd5",
+      "git_blob": "074ae38c50cd5d3d27e2286937b3f85a5671bfcc"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/visual_qa.json",
+      "bytes": 1887,
+      "sha256": "4440a932fe188d573f96f4f53e7d502361af9649ffef07899c4ccc546d44d73c",
+      "git_blob": "385e96a89fab505cf248252a4d6ef7610c7cfbc9"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/scripts/plot_derenzo_completed.py",
+      "bytes": 25266,
+      "sha256": "c9a57d80c7a56097527be20543f19e513301fcc5f8926f08ce0ad04456e6e80b",
+      "git_blob": "4fa09a408daa35096f0474b9b429cfbe85a82ae3"
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/README.md",
+      "bytes": 542,
+      "sha256": "8cfdc21c2200accdb18622b1b4224572cb131b34caf694a0a2c4651692f34ebb",
+      "git_blob": "9c8fa5f3d19b3ce09fd6ed6f7e28549909779177"
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/data/source_and_scientific_qa.json",
+      "bytes": 3860,
+      "sha256": "66af47024c8b1f6df8d2df448256e038c773308e5e8c730a5ffd69bf28b75177",
+      "git_blob": "4c71f076f062d1287a3df75705e98811d6a125ee"
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/data/visual_qa.json",
+      "bytes": 591,
+      "sha256": "888f11b871674cc052fb50f0c44b147d7596e2dd12064d87ed4e14f8d9954b0e",
+      "git_blob": "03233b0672b8c8f9cf606298feb75e9e06aaf99c"
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/scripts/plot_nema_structure.py",
+      "bytes": 9882,
+      "sha256": "50d02cdacb61b68f14226d8ac73ad8fe67c51b7734b4682be9f854d6434947fc",
+      "git_blob": "5cb20ec3f3e89128f5b9db261541740f0dec5b1f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3242,
+      "sha256": "398cfb9c3aedd40ffe50c1a71631118d48f5737929631428d826cf6f26381d8e",
+      "git_blob": "f6732498c71650f4daf3d7f79ad22663df062cac"
+    },
+    {
+      "path": "docs/DUAL_ENERGY_RESEARCH_REVIEW.md",
+      "bytes": 18339,
+      "sha256": "734730177473e967ecc41b38ac2cf972028f9a1f482ba087b0ca0c625864d422",
+      "git_blob": "846a56592d843661dc2a5d41077e990880433276"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1352,
+      "sha256": "b7276c6caa4ee398cb0838675ec475f2cc3d1f5103a54de0ccc409d156a6b476",
+      "git_blob": "363e3a21b43704a0f74e10c0d1c0763b851d39e2"
+    },
+    {
+      "path": "docs/RESEARCH_STRATEGY.md",
+      "bytes": 5757,
+      "sha256": "c955dccd40c6ed42b74b03f9734ef6f68d873e4efabafc01341901c4a930b6b6",
+      "git_blob": "7dd295b6b9d6ce49e6ccc808bfad553d63ce4a76"
+    },
+    {
+      "path": "docs/ac225/CURRENT_STATUS.md",
+      "bytes": 2942,
+      "sha256": "f90ca7c3e32c0139ab4d3d22e989863e6c53ad1960662af47e718207822f4835",
+      "git_blob": "a73419f9ebee0d2d286698080f332624ba6b8c9a"
+    },
+    {
+      "path": "docs/ac225/DATA_POLICY.md",
+      "bytes": 1544,
+      "sha256": "1a6937e75a48a3ba8014bd8f5aa15d36e3c5bd3704633727d10181c63bd7b563",
+      "git_blob": "9505af0dee8c9255773cb0260acbf159f80b9869"
+    },
+    {
+      "path": "docs/ac225/DIRECTORY_MAP.md",
+      "bytes": 3549,
+      "sha256": "522ed9c62838be9190c2b429f7b797fcdeb84331d8820a68d0f2a797eb9be529",
+      "git_blob": "a79c303511ee85e637539ead80541bbbe6ea899d"
+    },
+    {
+      "path": "docs/ac225/EXPERIMENTS.md",
+      "bytes": 7945,
+      "sha256": "7d7532bbe86fe49015a6b8d4ba27c43f4641d06ac6ff7065ede3513a5b9bb5f4",
+      "git_blob": "a4c4a5476e41d41f30b0037c991e345d6e7032b0"
+    },
+    {
+      "path": "docs/ac225/OPERATIONS.md",
+      "bytes": 2472,
+      "sha256": "5e030bdb0b730be2f196d02f0fd0676db9c3cb282d06cf7e0711ef9b6d96fa67",
+      "git_blob": "0a0ca4733c3467f04c4a16a1dd539bb8c84dd3b0"
+    },
+    {
+      "path": "docs/ac225/README.md",
+      "bytes": 2111,
+      "sha256": "8fba907fc618e2bf26cfeae112700789e5f1ebe4bda1fa4b7b95a7429067af57",
+      "git_blob": "27454458233843e403f9b59be93130db7c6877e0"
+    },
+    {
+      "path": "docs/ac225/SCIENCE_CONVENTIONS.md",
+      "bytes": 2852,
+      "sha256": "0e151a9f406cb96ced59c6ee29a08429b55fa694d56d78fbaef305ecfec070c4",
+      "git_blob": "599e5227fd58a60975708f0494621e09fe35ceaf"
+    },
+    {
+      "path": "docs/ac225/SOURCE_INDEX.md",
+      "bytes": 2446,
+      "sha256": "230c1192c37b9742ae0db35e52b97e2a6849a60353aa4b701384da50c20ee9b8",
+      "git_blob": "05c364813960641197fe45eaf7650961e8339352"
+    },
+    {
+      "path": "docs/ac225/catalog.json",
+      "bytes": 27110,
+      "sha256": "f03b4ef46b60932dc1301239bae7d0e0da57f1d9c023cf066a7099464bbc8eb0",
+      "git_blob": "690cd1f770b479073d8c6dc73b425769b35ee87f"
+    },
+    {
+      "path": "docs/ac225/directory_index.json",
+      "bytes": 14071,
+      "sha256": "4cd3648f290bb8f2f29f7bcaa4a06769525653ca3a62d1f4232814b75b377cf2",
+      "git_blob": "3431a469f8728ad1c4441b759f793a9d14a3a212"
+    },
+    {
+      "path": "docs/ac225/source_index.json",
+      "bytes": 260519,
+      "sha256": "2a1412be416d729bce16ce9f1ca1f128cfdce7a55622a9c1cdb1e4acd2b4f2fa",
+      "git_blob": "1a0c6cdc1f7964aba93b2d28fe32e8a807f1648d"
+    },
+    {
+      "path": "docs/ac225/status_snapshot.json",
+      "bytes": 4172,
+      "sha256": "7692bc630c050fed7b48a528eff96bb256b391280ced5e436ac7bd96d42327c7",
+      "git_blob": "7174a7912c78ff4b641f904275e29c94f3c4ec1d"
+    },
+    {
+      "path": "docs/history/PROJECT_README_20261019.md",
+      "bytes": 69658,
+      "sha256": "3933b15b97b71dcdefef56cd0ec3ac0b6c694c9dd7e7fbde09abc4037318a2d8",
+      "git_blob": "48ed3eacb057decb8425ac3aac310007f46adec8"
+    },
+    {
+      "path": "docs/history/README.md",
+      "bytes": 462,
+      "sha256": "f189b4dfe4c55af8bab58641d680a4bf64cd8cc2c27abe99a4f29bd6b1a00467",
+      "git_blob": "be1c55addec16e2d807944d64fd067eef4bdabd1"
+    },
+    {
+      "path": "docs/organization/20261019/README.md",
+      "bytes": 2449,
+      "sha256": "9ff4ddcb2124ec563601514651d998ec32e48b6632d9f0649b68191a02cfbd9f",
+      "git_blob": "2b5479bf3bace59f7cdea5bdd3b980fcc6660316"
+    },
+    {
+      "path": "docs/organization/20261019/before.json",
+      "bytes": 212708,
+      "sha256": "541d2502e2fe2b726e8eadbf3cd9a7f01b290f6fee586bdbbe2b7256a19d58c6",
+      "git_blob": "12846f53ad884cab5f23564166df25b3b65a5e51"
+    },
+    {
+      "path": "docs/organization/20261019/candidate_inventory.json",
+      "bytes": 58347,
+      "sha256": "e232be0e3193ca556921b995295284e44de11551aa58d3d340d5d27e85d58605",
+      "git_blob": "fa2343fab58627fcfb394cbb33b586c9301e5a0c"
+    },
+    {
+      "path": "docs/organization/20261019/preservation_and_links.json",
+      "bytes": 3357,
+      "sha256": "48b41a59696cb56b5c3d4b2eda2c7917134334344a764223f8a55e3346d7a44b",
+      "git_blob": "4be208fbf336b3f4c0b043eaf181022e22d42d96"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/AGENTS.md",
+      "bytes": 5428,
+      "sha256": "4e2f8d98bceac2e36c2e44368c2bf1feff9b0c5f96c526fdb15f6cfb13a5327f",
+      "git_blob": "c986aecf7edb13b9e88bea13615e5f969dd95921"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/README.md",
+      "bytes": 1947,
+      "sha256": "ec9a790160bfa27735f45e397f8c4a2f43eb6eb0a84e3d02c58f39c7b8fab534",
+      "git_blob": "d48aa6284f5c11d8c71e0465718299d6d250f48e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_common.py",
+      "bytes": 4655,
+      "sha256": "eec2c8598ace1ccce0b2bd36938cb3a3625197b72e46b10ade3460bc391573bf",
+      "git_blob": "aa72a5c9fa4bf317f2780f7176a167b868a8c261"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_gate.py",
+      "bytes": 2596,
+      "sha256": "f4e8231a209110d7cdfe37deffef5e2b8281e341f79d57aaf601e555296b26f5",
+      "git_blob": "f77a44dba6e176720552cf1d80988e5671d49bcc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_reconstruction.py",
+      "bytes": 19607,
+      "sha256": "7dfdf0fa0d39afd7508e3134b930a42a4416e909eb56e5084bcb0b892e5f9ebf",
+      "git_blob": "c653a6a5eb0472e09307d5ee400006d0d7933310"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_transport.py",
+      "bytes": 10346,
+      "sha256": "820fa85df69a1043be6d902965eba59370893cd9221a706f480750a348a5fc6c",
+      "git_blob": "963ffe3057f224a5882c72fac8b433fdc2f2d9e1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_verify.py",
+      "bytes": 11065,
+      "sha256": "e754906b34805a4e1f31954b02e60c693a943689a23418f226cd8aa3f5865d79",
+      "git_blob": "2619021448aa9a9e8892c28c86a4808222d6b8ba"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/derenzo_campaign_workflow.py",
+      "bytes": 38553,
+      "sha256": "7c1d03a17171c571320afdf0ad39d68462e1afbc497916cd15d3f65dc02efa97",
+      "git_blob": "602f1e980523f727ecaa802e76eeea384daf8801"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/AGENTS_20261019.md",
+      "bytes": 21938,
+      "sha256": "d010550eaef028b0a4c37f14d63649d726d2b523c8f3b43c286bbbd3f9026da1",
+      "git_blob": "0ffdfe0dc2cadb083c8c3b506140c8407fe6a550"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/README.md",
+      "bytes": 474,
+      "sha256": "3c633fdf85fb3a2c5f222e3eff958ebf45d241f267a77898d5c398eaa9567cf6",
+      "git_blob": "89e0a6a39874ee239b62a5ace74383f3e80bfd28"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/history/README_20261019.md",
+      "bytes": 11643,
+      "sha256": "ecd1305030f84a894f6570ffc3725b701639ea52e42650f1d530c97f9a59bfe4",
+      "git_blob": "286d265d656b17cc841901d6f8404a7955a6ef1f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/jscc_5e10_5090_production_queue.py",
+      "bytes": 21992,
+      "sha256": "be9ec0296a7f12c949bf75211141d7f3f20d3b29dcf633136769582f8fc82a1b",
+      "git_blob": "71cb8c15d04e56753963edd4f1edfc697dee11f8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/jscc_5e10_formal_queue_gate.py",
+      "bytes": 2903,
+      "sha256": "dc16ac95ac216e2628b9d388d2bbb2dffe43f316ef8daf6ac1418e4bcb8b1965",
+      "git_blob": "79d8490ff3e0ff4847331235c12ea781a362c40e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/README.md",
+      "bytes": 984,
+      "sha256": "299823f9c535012798ea8cf5e0de4090a0078487dcb20cf0ce0e6aebbd66730c",
+      "git_blob": "b2af710c24c42732d359e8551c29fdd9cea4f852"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/collection_job.json",
+      "bytes": 654,
+      "sha256": "598ada1c7a0d7388aacab857eddb8a9aa103825675547c5a20bbc49aaba94fb1",
+      "git_blob": "004d0dded1deb9481180a67ab550a187c4b65bf4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/collection_submission_intent.json",
+      "bytes": 1022,
+      "sha256": "ca0089c795483359332459f4ee2e0d8412367ff042df0a63939b91d3560b2c9f",
+      "git_blob": "bfde822125757440a0b4270f498a55d1ad962950"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json",
+      "bytes": 93207,
+      "sha256": "070eb2d4ac55757a653d37c4c47cc0cc3115954f2e105ecacf7118466a297112",
+      "git_blob": "46e3ea7bf21f446e1c318fe5daebf53b7a5b9a58"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_job.json",
+      "bytes": 1594,
+      "sha256": "982f6d879eb8e95f59bd37dcd2d86231c797f22bbbf84d9ce6412abc4eea0e89",
+      "git_blob": "d2f9e931f36081300d0180cc6a14937a9ce2583c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal.err",
+      "bytes": 299,
+      "sha256": "217f44b319dff26f3cb6134856414703e817acf84d8d2ce1da8d06f5c4b5464b",
+      "git_blob": "8042d8326d11374fc4aea92b88d9551990496824"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal.out",
+      "bytes": 9210,
+      "sha256": "c094bf3be1b29db7f91915a4727085156081d7045e64ee25002d45f711947040",
+      "git_blob": "09484294878f64583d92738ae987e87293b31c14"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_logs/formal_verify.out",
+      "bytes": 42,
+      "sha256": "1bd828c7e0af246d6a176699e0fa4542be1c3beb23d63b0b054fcdf110b2e4cd",
+      "git_blob": "82fe4436677f78eb4b723c25560b0725c764654b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_package.json",
+      "bytes": 91849,
+      "sha256": "f1f61a970c4fd0556b69e4ab188a44efc0dc470f23c47910d69d89b596ac1fff",
+      "git_blob": "663dc3f118ecc71ef5d2f22136f542d67e5cc27a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_release.json",
+      "bytes": 2018,
+      "sha256": "c9c55ccaddaf2ecaae9b47df0c06b880ddba6e0a44246233fc2556e8d20c1ece",
+      "git_blob": "07f5bb055092dc811ba620373128c89a7b245325"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_release_intent.json",
+      "bytes": 328,
+      "sha256": "936af56da63c719922fde0cdc88b6d01ab6b088c971e09caefe9765ffbbbb7c8",
+      "git_blob": "e1a5b2993960f14bfce551565f9b673e233d9335"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_submission_intent.json",
+      "bytes": 996,
+      "sha256": "b1aa5972dd3f043962533cf735a16f0832f5eda5fc5bed511ed458707c36e2fe",
+      "git_blob": "92fa2ca4b8fa9990f10c84310588acdcd7145f73"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_submitted_scontrol.txt",
+      "bytes": 1646,
+      "sha256": "e0cfbbdcc2e8911b9a4889a74cbb6166b85ff0902a21bd436e6a9d86cbde967b",
+      "git_blob": "69934d41e6735b0a644a31f6240fb572af16f37e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_verify_job.json",
+      "bytes": 1626,
+      "sha256": "dd1ea1afa2689c35c8a00f695970f69f9aeb79f4b10265f92d5561a8eda99a02",
+      "git_blob": "338283e7c6ec5a5705d24b1d1c7404c56bdd98e4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_verify_submission_intent.json",
+      "bytes": 1015,
+      "sha256": "3ed85d0820fe04f183cff29464595f3de05fd7b8768024318dabb81404c12418",
+      "git_blob": "7c4b9e0e68cf71ffc06ed7a7299db532ca009843"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_verify_submitted_scontrol.txt",
+      "bytes": 1672,
+      "sha256": "cdaf57cf7df186a0e22e3bc5a3a834e022efa9aa9cf4df6f5d3d51d980ec3e28",
+      "git_blob": "a38f6a06ac98316832a2961dba16f12647445a07"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/input_deployment.json",
+      "bytes": 451,
+      "sha256": "deddb544db82fc89b487200d5b9d5f972f879c5bc04f1fc9df8bfe1643e54803",
+      "git_blob": "5978202d52f6f8eb33b112e2411f2bbcfa50bd7c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/allocation.json",
+      "bytes": 1975,
+      "sha256": "2c4d6568931f9384134608aed299ccb939b9e17f1bebf5981a92cbe50b507a64",
+      "git_blob": "8115adbc54aaa2b08a6dd7122f5d1292f4969610"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/receipt.json",
+      "bytes": 2443,
+      "sha256": "2f52317945693ca5b9774ec1829513ed5e2b59d9db23d93e36a0a0298201ee7a",
+      "git_blob": "49839a6ace73907cd04a9d844dfcf21cfd9085a3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/source.mac",
+      "bytes": 9768,
+      "sha256": "4f2b545e2470796e274da2b4e25d9251527478ce41dc28475385712ed3bd164c",
+      "git_blob": "600e1b9f5ec8901d03ca346aeb44056c44c330d9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot_acceptance.json",
+      "bytes": 2807,
+      "sha256": "e52796d4586e9ff4aeac2e4c521f804b923ad9ddf70ed0b14a4b21304e9871a6",
+      "git_blob": "8c583f728cf54c433ec6202e5c78b6976396a1c2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot_job.json",
+      "bytes": 649,
+      "sha256": "f67232325c1cac4ff2846cedddeaffd9ba3cc11af80f637a9dd1d8f7d21dee62",
+      "git_blob": "8fffa315b91a63dd762d03019159c41d645bc759"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot_submission_intent.json",
+      "bytes": 971,
+      "sha256": "ac4bc5139ebb7e7666890dea97efba47b9e1faa4f5baf4878cea359570177863",
+      "git_blob": "c9014e594c6f99f91091f87c8dc08b8496a76adc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_acceptance.json",
+      "bytes": 4068,
+      "sha256": "f81dcfc0ae944687de234bde31423c14889bf295e00f32da108b46b1a08acddb",
+      "git_blob": "9125d9a6de6e12cedcc60f7c7f5e4bb3b14523d2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_job.json",
+      "bytes": 657,
+      "sha256": "50c71405cb173b45437ffe87ca9d2a299676987c3f412c8af4c26b0543d940dc",
+      "git_blob": "5dac8d2a6131d9c6379c7ba99180542dc90a9182"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_package.json",
+      "bytes": 3051,
+      "sha256": "3e000f2fc5154aae7e42730014b68e07a245a42db9922df1e649f14761a0e50f",
+      "git_blob": "6391259982c085457b2eecc12bb77050121911dc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/transport_submission_intent.json",
+      "bytes": 1006,
+      "sha256": "0de4477f696c4b618ef5e164d9597377fc0d876150879739349e31f40f47fefc",
+      "git_blob": "e92e96176f01f3cfc520ea73b6b89e12e5fb0e81"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_acceptance.json",
+      "bytes": 2889,
+      "sha256": "68916081fd5b0b54b24a4222ace017be8dfb95de8cfdd5ac297ea64f70ed211d",
+      "git_blob": "41e916c70fdf2e9c6fc8fdc2f8f8f69fc3a8bdb8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_job.json",
+      "bytes": 1603,
+      "sha256": "2f117f49d8cc6f9e4e1bc994ddbba2a8a98c42a8d88b1becda1a57dd6e30465d",
+      "git_blob": "9808edcea16f41c474ed0b16e617396d2572ee89"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation.err",
+      "bytes": 299,
+      "sha256": "217f44b319dff26f3cb6134856414703e817acf84d8d2ce1da8d06f5c4b5464b",
+      "git_blob": "8042d8326d11374fc4aea92b88d9551990496824"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation.out",
+      "bytes": 162,
+      "sha256": "9b87d8b01820d62c6586c7ed942778b4ce304c2b7d0f6c2b96c415a2a611773d",
+      "git_blob": "f0e13f1a7b6f6a5f094c130ee81aedf7fbe47419"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_logs/validation_verify.out",
+      "bytes": 46,
+      "sha256": "431780f7054d8c8083c6191e82bba669ba10592373389627e813bb80e408fe2b",
+      "git_blob": "a173471c96ac7aada16db9ab01030367d912de45"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_package.json",
+      "bytes": 1505,
+      "sha256": "0cd48f9f0c8b3ae98331ba81089034adfaa7792e6641ff8ddd6eb1f094806796",
+      "git_blob": "eaed4e8e781ddc73556e87f43b54313672acda54"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_plan.json",
+      "bytes": 501,
+      "sha256": "c03ef3ad28959a67e7a23dcec52b6922b0f5e8c6afabaf3a05fe73a3bae0b5a7",
+      "git_blob": "ef5898bb8d836fff4d590a4debf30e9ffcc6805e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_plan_deployment.json",
+      "bytes": 289,
+      "sha256": "8562f0743a1cae5e298f0895696ef96bb7a1d7282bcc6799836c0f23b9e75b70",
+      "git_blob": "3647078a006a471161042e33861b8bc955f10fc7"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_submission_intent.json",
+      "bytes": 975,
+      "sha256": "6ca2d0d34cff8d50e77264c31d998dd393adaa2dfa923d1eae3f8afac997b65d",
+      "git_blob": "082387f09457354c488638b07c3c2edcfb3ecd40"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_submitted_scontrol.txt",
+      "bytes": 1659,
+      "sha256": "ab32d780504d2d9bbdfb52b9befebc5842143989f3b00e9ab2c613ea01662b24",
+      "git_blob": "58cf8decc56506b1287fd2afac67c694623007cd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_verify_job.json",
+      "bytes": 1639,
+      "sha256": "eb29f50cd8713f022b12d1f760e0603200e6eaae53a3412904df4b5b5bc56a1c",
+      "git_blob": "4cd7f8e530b1802df80272b6f4896ba48ee9a575"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_verify_submission_intent.json",
+      "bytes": 1032,
+      "sha256": "c818c0252d13c655edf18a17d8579d1e1685725ecb0df88bf86429aa4753227a",
+      "git_blob": "8823ce7a054dde5ff95227a2b4f286fed2556204"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/validation_verify_submitted_scontrol.txt",
+      "bytes": 1687,
+      "sha256": "c2b6c9d514783b29d912d02e2ac402713336c65e85f7aab1098c0518cef9e365",
+      "git_blob": "8f1fc7b949bcf5d77df15aeddbc44293b8a31b10"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/collection_job.json",
+      "bytes": 654,
+      "sha256": "34de62add6f66f393e61f7b5df5b68c2693e8fcf9ecac586567710813b17009e",
+      "git_blob": "a38ae81a0f57295a80bdc65126549098d00a6053"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/collection_submission_intent.json",
+      "bytes": 1022,
+      "sha256": "09cceb5b3af1bac79af78344f26647d740af0b00303a6e18c604f5743e15be90",
+      "git_blob": "47fe3efc3d5b28328afcd4af84db2656c93d49ff"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json",
+      "bytes": 93208,
+      "sha256": "65902498dea4c2a7260e9ae87284e201aa3603d41c44e9b7acb60fddd7ca2ad7",
+      "git_blob": "1f84d37e69b291a0761d42b06d0d11ae8fb80704"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_job.json",
+      "bytes": 1594,
+      "sha256": "5549645d8e768baadfe7e1b523aaa0f7052b2560bbda0db36326891129b7f0b8",
+      "git_blob": "6adc4857045dee9ef24f9245eab3d33bd5b10f9a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal.err",
+      "bytes": 299,
+      "sha256": "217f44b319dff26f3cb6134856414703e817acf84d8d2ce1da8d06f5c4b5464b",
+      "git_blob": "8042d8326d11374fc4aea92b88d9551990496824"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal.out",
+      "bytes": 9210,
+      "sha256": "4121a21d5506047029b44b4b3f0d1a8f4f977d1063fc57880cd8c100b94ee817",
+      "git_blob": "db5233f27945d0629b5e040542fa95c73724b42f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_logs/formal_verify.out",
+      "bytes": 42,
+      "sha256": "5821a114b5c41cd500ad1917975a997de9b81e609a5f0ca704fd430dff0bf903",
+      "git_blob": "d61476bc1e68e1317d891dda6b27860739c0db8a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_package.json",
+      "bytes": 91849,
+      "sha256": "56c5bad0ffb8fdd8662de2c2c8831577ad490a122d1f5e4a792f85100d9c04d5",
+      "git_blob": "f4821e045829e613ffe8512889607de000652628"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_release.json",
+      "bytes": 2044,
+      "sha256": "c10a5bfe9427524c215f7a645a527165dcaec5c2ee4582a1fe035aafd9c195f0",
+      "git_blob": "892a1374454272679c1aa5f15a22d78887999c19"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_release_intent.json",
+      "bytes": 326,
+      "sha256": "c99eada6dabdcee86212c13521020b36c414c6786189bd8f666c58c576a3fb98",
+      "git_blob": "3a561b43ae17c06b609775efe4dce523b69e6af9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_submission_intent.json",
+      "bytes": 995,
+      "sha256": "9d469fbdf506612848b125bbb2fb28aaa8577d63165e8d8d21571c3db67d7a2e",
+      "git_blob": "8419f1697e4de4e15f3f42eb6e9eb55a615931a3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_submitted_scontrol.txt",
+      "bytes": 1647,
+      "sha256": "ec94fdfdc96c76138cb82d10c621ad2469e78347323988273a1b7e84fddb39ff",
+      "git_blob": "b5bb47c9f9fef5255fc91bf48bc2c3ac4e6c2513"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_verify_job.json",
+      "bytes": 1627,
+      "sha256": "1e118af33344b5bd02af792bed5bcc673f60c57329b9cb372be5d34281582dfb",
+      "git_blob": "0b981d3e9f6f9bd362d58ce477be22f56b05ff35"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_verify_submission_intent.json",
+      "bytes": 1016,
+      "sha256": "b48d212336d52fab75db595e99253a8dc0acb3fe893915d2a5ab0cf5f68466ee",
+      "git_blob": "e80ae3bd4d409eaef3e83c305024b5d02316430f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_verify_submitted_scontrol.txt",
+      "bytes": 1672,
+      "sha256": "5531527a77d4a8054511a6d469746f46bc2734f8982661395d0388bed91d7a60",
+      "git_blob": "7f4bea6e8d06700ffccd7bd5b4f5d80e7bb52389"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/input_deployment.json",
+      "bytes": 451,
+      "sha256": "fbe21f6f4d45a5dcb2930853739cf43593a2d29d7b5bb190bb6da2beaa529cb5",
+      "git_blob": "cb12234e05f490e0c7208e3cee20fa6ee0bae89d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/allocation.json",
+      "bytes": 1975,
+      "sha256": "b77fa0a60e8b158ffa2d275dfed2ce5f585a824dbb01e92c947f938ef6b55bf9",
+      "git_blob": "5573722b6e50e57e582cf2259ef5227f508861fa"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/receipt.json",
+      "bytes": 2442,
+      "sha256": "44c0082cb00a976472efa59f2047b854279ae01a6ca19098d31aac5df178ecb9",
+      "git_blob": "e4bae4a743be0f5aa224ed4a3009a36408c5068d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/source.mac",
+      "bytes": 4721,
+      "sha256": "d47a662703d147603465a47b8f93ec357de6c4f1c132a3ce9f8ddd961fba015b",
+      "git_blob": "49bc5f0957df3e88b92ab375efe974b78fed6f00"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot_acceptance.json",
+      "bytes": 2806,
+      "sha256": "d0233c3db077648cdbc04ad18a53e896f1f0289587ebc3285cc0e2662133913d",
+      "git_blob": "2369e5cfdb2a6c33954f872ac0847f8299fefe8e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot_job.json",
+      "bytes": 649,
+      "sha256": "3b7e2cadb443fa6b9e875646a90bc4f54f0d2b9b76f0e7bc04d4a378fe2947ef",
+      "git_blob": "5a8de0501c362045ffe170530a7558f400df584c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot_submission_intent.json",
+      "bytes": 971,
+      "sha256": "2c28b241e3877509f2dc97b58534b0c5f536db089b7d4a9f03ccdda85bb579fb",
+      "git_blob": "6344770c96c17a7fdb083717a5df5dc34ae1d4c9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_acceptance.json",
+      "bytes": 4072,
+      "sha256": "69fdbe0bc03f00e83d10cb7c3c74300ccac3a49c4864c35b43215e0092248204",
+      "git_blob": "37fe2394de3f9f90b38e8ed90d4dd2bafdd21fbb"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_job.json",
+      "bytes": 654,
+      "sha256": "fe9e6c82338d08af688b86c448ab0804f81e51a34c2be48a2f89560fe8fdc9f1",
+      "git_blob": "32bc409cade6533e1704d01826530bb179f2a37e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_package.json",
+      "bytes": 3051,
+      "sha256": "fffca50c118a727755fae08342480f7c5be85a91acad47a513b6ddf54fa329a3",
+      "git_blob": "533f75acce921923ed8f32e11470b1cf8f0bbc3b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/transport_submission_intent.json",
+      "bytes": 1006,
+      "sha256": "c5d1c427f07ca67439c7b2019f04952406a0411b2aaef015ae2e7083e6625b5c",
+      "git_blob": "05ec353c8761402b1ab60b23ccacbc4a38a5cdfd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_acceptance.json",
+      "bytes": 2889,
+      "sha256": "b6622d5eaf14694a85cac494fd889e35ec2fa1d9e15fee7cf2191a3b1aa2b88f",
+      "git_blob": "b81300e9cc55facd36950e5b667dccdc56ccb07d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_job.json",
+      "bytes": 1602,
+      "sha256": "e3b2b292cb0099cf697aa57a45a7c2ed8392203f320bd6e9d690e2ca5b2de221",
+      "git_blob": "130685a622b81d0492e81cc31a323509a1aaa042"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation.err",
+      "bytes": 299,
+      "sha256": "217f44b319dff26f3cb6134856414703e817acf84d8d2ce1da8d06f5c4b5464b",
+      "git_blob": "8042d8326d11374fc4aea92b88d9551990496824"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation.out",
+      "bytes": 162,
+      "sha256": "22e6d23f100f6cd07f506ac97e7e13c9cbebf7f0d4b7bbaac869fc2bcd463590",
+      "git_blob": "0bbfc34f79df573450c9827b0bb8f656a43e4a64"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_logs/validation_verify.out",
+      "bytes": 46,
+      "sha256": "b29da2bc88b78af5df774623c5b4795a6d284cb7e7064bd613950d498db070d8",
+      "git_blob": "567c9275d72abb49e1efb252f77d135c94f9dd7d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_package.json",
+      "bytes": 1505,
+      "sha256": "47ecca18a628187a313c30f90e692453fd3470c497e554660b0fe0335991d6b5",
+      "git_blob": "0bfe8d46e69b77ef98939838e2e7a1fd97758923"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_plan.json",
+      "bytes": 501,
+      "sha256": "327c752d73cd4d6d2c704b3dcad686f8f2d4456c229febc5526302f7ded35b46",
+      "git_blob": "fcb6353c7156489e61121b7939768948649c11a1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_plan_deployment.json",
+      "bytes": 289,
+      "sha256": "f28d886108e81a87cb5202f03ad06c96b6b382b0f0c7b565983d086a99f77fda",
+      "git_blob": "ce2d13b1dbc03e7f132e475f71f7ac32b4012385"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_submission_intent.json",
+      "bytes": 975,
+      "sha256": "44e9a941b69fb5418816af424e64e784e26cef4d3c3c849ffc495afcb0a430f9",
+      "git_blob": "ed856f40ac7fb9e44ef6f9b273ef38cb93915fff"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_submitted_scontrol.txt",
+      "bytes": 1648,
+      "sha256": "eba3e6c7d5fba9d7f6c3668e25b88d2d8b453f7de69258cecad6688a88154acb",
+      "git_blob": "f6b2a1e9cd8a5c1cde6f4817ba1603dfd59d57e9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_verify_job.json",
+      "bytes": 1638,
+      "sha256": "e74d680f5b3580b9facfa869b21faf0ca3edb1d998e5e0005fd0a3e2d019fec8",
+      "git_blob": "32dd1960432fc6260d2ddc1defbb1b68aed05f27"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_verify_submission_intent.json",
+      "bytes": 1032,
+      "sha256": "6d532b88d424e9e6d074b5d433528699dfd84b06fe05f326738196b6d4055ec4",
+      "git_blob": "76c4768c7ade657de44c29335f2d883fd27d4c85"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/validation_verify_submitted_scontrol.txt",
+      "bytes": 1688,
+      "sha256": "d76741edc93d317515c578a67269a2d69d40ee9296a787ca0fcbf45713c36f1b",
+      "git_blob": "b361ebc6ff4a860f8f92592e1e5dcd33641e80f4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/collection_job.json",
+      "bytes": 656,
+      "sha256": "b0a59ac69109fdcbe1eb782e360e00583fc05c78dbcef27421fb09920579fd1a",
+      "git_blob": "35a37393613dbdaf0c640c12f7cef1ff2f98cbce"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/collection_submission_intent.json",
+      "bytes": 1026,
+      "sha256": "dbbb8f8d2cffbd0838a2f109643482e28e6a93299207ff16068b1e4bc67ab77a",
+      "git_blob": "8e4daf4f1a5abfa900e3683da147780b8e6f18c4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json",
+      "bytes": 93216,
+      "sha256": "c4f3c2c415bdff7c9a2c6c871b55c06f146a763622ef7b9d448ef580be12993b",
+      "git_blob": "e7f3defdc24bf282878029c75cb1b4c42510ca12"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_job.json",
+      "bytes": 1602,
+      "sha256": "83f07f668d4b63aff8d36db1fe277c72d291ed62560cda07846339293bab4494",
+      "git_blob": "9f884d28e2cd1ac3fb4babaf8f19aa930714fe27"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal.err",
+      "bytes": 1112,
+      "sha256": "19e824eadcba24b28dd74378e092c85cc541f3d70daf909d23a93b9b8b427725",
+      "git_blob": "48ac98ab8c8a99600419bc7c2182380470bd51de"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal.out",
+      "bytes": 10253,
+      "sha256": "f75fd97199c4d33dcb1862689e8c2191530b2dde3acaa2f248b6620888da8f41",
+      "git_blob": "9817a52a17ddf8116bbb8f9f9346673257a45e9a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_logs/formal_verify.out",
+      "bytes": 43,
+      "sha256": "d7d8b46badf8671f6e3727ee700fdf8a0a941f8387babbcc51cc5d377d4c405c",
+      "git_blob": "a72aa7b3e4f731ce2d5505782b5e5e1116fa5b42"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_package.json",
+      "bytes": 91850,
+      "sha256": "b7f427c807d4b73af5be8b4e1a6a747eb5f9d2c7656b89d6d13f253eaac6ccaf",
+      "git_blob": "c111a77d282720a23804eab15cdff51658bb14cf"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_release.json",
+      "bytes": 2029,
+      "sha256": "d62d7c9d9f72b0395ac5f44e3d0a2583189cbc1999633109b8c448a3d1f8c950",
+      "git_blob": "085aee7edf8530c5013459ce34c57f9769e3b56a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_release_intent.json",
+      "bytes": 328,
+      "sha256": "f57ab307492256aa8ad607b146e7e89b91421367530316fa056727c039869e8d",
+      "git_blob": "2440c2ad112aa5cd3025e2db2e76a5d45dca0989"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_submission_intent.json",
+      "bytes": 1001,
+      "sha256": "56e6c113069e45433bda66e69ad6767753f04bba5a4ae1750b6886a5d1fd7210",
+      "git_blob": "b62711a0f4df409537dfa0f6adc2f04fc8b01a8b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_submitted_scontrol.txt",
+      "bytes": 1656,
+      "sha256": "46e0c775af6ac1e2b3a68e9dbeffe9f9cbf8508b55f065ab471866cfcc242ea0",
+      "git_blob": "3894e4d61e9512afac1303a4bf389e071c85e045"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_verify_job.json",
+      "bytes": 1635,
+      "sha256": "1742fac904f94a0d7686efd8a40833c8d78cfef3804a653b946cd70a27cfd69e",
+      "git_blob": "19da988d3e753ab5e211364ffb9d094686e7c8a3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_verify_submission_intent.json",
+      "bytes": 1020,
+      "sha256": "a568324d98bfd0f5475e496cb19f9c5fe02d21666f5bfb32cb75f6f54e4d4bd0",
+      "git_blob": "9d50c11e38922168b2a8c3c64a78d48c35423a21"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_verify_submitted_scontrol.txt",
+      "bytes": 1676,
+      "sha256": "e307af1e8016538b16a838eb5fb2f70d43eb1f05701c0d0a7ef896d5c3a8b7ea",
+      "git_blob": "9a841f3e4a074e37739f42f7e55152155a04542d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/input_deployment.json",
+      "bytes": 452,
+      "sha256": "9dc08be173fc8d730bca611d3630a106bd94db56540eb6bd921db027b2a5382c",
+      "git_blob": "386a14773da5106e8d7a15d21d02ecaca39632dc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/allocation.json",
+      "bytes": 1979,
+      "sha256": "5a19e5c748350182907b6178791cef49eb39f50674017082cb0850970b897eda",
+      "git_blob": "4d951f9865f7ce4d22a47d406c286b5af8bf588e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/receipt.json",
+      "bytes": 1727,
+      "sha256": "442dc21b8f95e5e568ad3905910920d08385e55ac89411b626d562e83d83a959",
+      "git_blob": "aad3c4b4971e03b432146446c68822289e92171a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/source.mac",
+      "bytes": 9768,
+      "sha256": "4f2b545e2470796e274da2b4e25d9251527478ce41dc28475385712ed3bd164c",
+      "git_blob": "600e1b9f5ec8901d03ca346aeb44056c44c330d9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot_acceptance.json",
+      "bytes": 2077,
+      "sha256": "ede48fb1d7a6561fc5586d4c5206ef50b823c36e43f98bb15220fd2c00d1ed2e",
+      "git_blob": "b0136ffdbf2c692454ed180bf6230a0388ee5aec"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot_job.json",
+      "bytes": 651,
+      "sha256": "1402a9526bc6524a7e118f41f4a07f661a8617493b580be8b5e36e4bc5be047e",
+      "git_blob": "c55cb4683adffe4e06d5f7ffa2f131c2ffdbfe2a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot_submission_intent.json",
+      "bytes": 975,
+      "sha256": "9ba588b9ff12a31fb1d06d33c5028c7772e02d3f93e9cb8e0807f3840c9f95cd",
+      "git_blob": "af19e73f50b75049ee4333bc93b4ced712e60702"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_acceptance.json",
+      "bytes": 5851,
+      "sha256": "4377387a2306163f1fc52c6400aaee16fddc7ce2968a4c3a533db09ffeae5326",
+      "git_blob": "b8451187f3dc36abe18a470ad10c8515e8a5c20a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_job.json",
+      "bytes": 659,
+      "sha256": "e1d34de47436a9f5ecbaa6d077eb84f07dbc5060f87cfade457bc4ed5aa4df12",
+      "git_blob": "3e8ce592916367f86e7be27a23fdb3c59368ac08"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_package.json",
+      "bytes": 4785,
+      "sha256": "d114aa666bd1f1295910454ba1a042e2e738c7cb8f6268b557c90d267647f7ac",
+      "git_blob": "a7ec4201b1a51e8cce1104edffff7c49d7aa8ae6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/transport_submission_intent.json",
+      "bytes": 1010,
+      "sha256": "af15b6226438dcf606333c06d83e214d4401de1e41a94b94faed3f856244d6d4",
+      "git_blob": "40967bd68c01896063ffb26186286243aa0b748d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_acceptance.json",
+      "bytes": 2899,
+      "sha256": "5194a90fa02a8429d55130aa2dafc5d703ac8222528be5ad9d7b563d0a71414e",
+      "git_blob": "b058d832563a05123c0e1bec995e87d784c54098"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_job.json",
+      "bytes": 1611,
+      "sha256": "221c346d786741342d86d6452321c2822a3c3498ee7872a1f5d9bd4b780cf103",
+      "git_blob": "37b64471262e4f0682d69c467abfaedeceaf5876"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation.err",
+      "bytes": 1112,
+      "sha256": "19e824eadcba24b28dd74378e092c85cc541f3d70daf909d23a93b9b8b427725",
+      "git_blob": "48ac98ab8c8a99600419bc7c2182380470bd51de"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation.out",
+      "bytes": 516,
+      "sha256": "bab88d333e096c77c0a6db5181b1bb35eaee6e530c8d49df27c6c80d3d74d2d0",
+      "git_blob": "ceb9c06a639b01a76391ad15c99b8bca0aab0ddd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_logs/validation_verify.out",
+      "bytes": 47,
+      "sha256": "70d326b81100bf1e6987e399cf22d8c00e714378b63b2c64a2c226aebe7d21c3",
+      "git_blob": "ce01924ff10f9d7a056dad6a60e0f476bc0a46bf"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_package.json",
+      "bytes": 1506,
+      "sha256": "23be56d996a15e336894bcbf759d66aa2a2099319bca3cadbb39d5f5e5bf80a8",
+      "git_blob": "6b757d54b688e783c082739f61b363510a33dc88"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_plan.json",
+      "bytes": 505,
+      "sha256": "508200434a73e857544f55b0cc6abe04b98bf50b30b54beb0b27006dffb3e57e",
+      "git_blob": "ce77077d6527a28adad79ec1641ad4411ae4d6ca"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_plan_deployment.json",
+      "bytes": 290,
+      "sha256": "4a7bfed19906ec1ef3f71ba398ab99ca480c1bd8feedcb416c52858306c9f539",
+      "git_blob": "ee158d14b2cb1a87a8408c4dc18fb413c7423dc2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_submission_intent.json",
+      "bytes": 980,
+      "sha256": "a5293d4612e28cc0b4030e04ba23138b618aaf0bbee30d8afacf21ab596d6908",
+      "git_blob": "fdeb1bf4f054307322960fec0ea666e330eaf74d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_submitted_scontrol.txt",
+      "bytes": 1669,
+      "sha256": "2d0b6b82a4efd178182dcea1efe03095458def051e622596191609726fc8c3c9",
+      "git_blob": "fe703cca60fea562d608b935c98e60af011866fc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_verify_job.json",
+      "bytes": 1647,
+      "sha256": "0548cb53b4c4703ce982b5a701ee9af4786b8b289546cb618595bcd6ef715740",
+      "git_blob": "50d6fe2e60b0092780417c13ad537f4e58f28d66"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_verify_submission_intent.json",
+      "bytes": 1036,
+      "sha256": "1ae883bf5d2b1223441980cd71ddbaca3a50e2441ff6d9fecc10fd13af78f3c8",
+      "git_blob": "b159b9f63b0f6e9ddb9775857f962fdc7266d558"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/validation_verify_submitted_scontrol.txt",
+      "bytes": 1691,
+      "sha256": "e4518e26ee2c7eaa1b401c4dc82c0cfe8510385d295eeb8eaaeb2bf4d5533112",
+      "git_blob": "c8a6a51abd181c0ed0880a5f1f1f81b0fd5f7030"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/collection_job.json",
+      "bytes": 655,
+      "sha256": "1c4a1f83b251550e0237540c638a80593de79e89e74864066ca57f18b8a6e324",
+      "git_blob": "496a806405e3983e057136c059af071ce59268bf"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/collection_submission_intent.json",
+      "bytes": 1026,
+      "sha256": "84db3840e1bc57b9da8b91f98d81c0c0158ab4249144e1af248e83cec2423277",
+      "git_blob": "c0562b01078931cb491f5eb6ee56991fdf613d13"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_job.json",
+      "bytes": 1638,
+      "sha256": "aba5d17e652e74a3b626da90dcde574c597669a8efc0db546466f21e7c80b4eb",
+      "git_blob": "62e5b2055a41cf0ab6ee403277bb30f9f86bdba5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_submission_intent.json",
+      "bytes": 1000,
+      "sha256": "615c51c29ba879f5af432d9933f0636626370f77e4d0fd3e225caa4f8c3e68e3",
+      "git_blob": "a23669f3148e9bda98b8f1d14ef59c3f2705d206"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_submitted_scontrol.txt",
+      "bytes": 1657,
+      "sha256": "e3b227cdf6d46e93235ff50bcb06df91ee0f16b63c94e2359e1c2fc3863d61e3",
+      "git_blob": "1c8a59c06d1283e1bfdc797d5f9607b1834bcf9e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/input_deployment.json",
+      "bytes": 452,
+      "sha256": "a822234ee801b45b2506a1dd40532435b02aa279ec88592d40d9c727e43f6887",
+      "git_blob": "9ef6e11aa785ef76317e4b53cece1eb30faedf9d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/allocation.json",
+      "bytes": 1979,
+      "sha256": "993ddc88e662fb260a5a73a2448b43535fe1c43014675437642446619ab156fe",
+      "git_blob": "92c91a84fe9dc1fb463ea2ed59845b57f9c8e96e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/receipt.json",
+      "bytes": 1729,
+      "sha256": "40048681f072c0eb9cce763629c20d297a263634f1b8f0b29ba2cec0440ae5eb",
+      "git_blob": "281855052fcc667acfabb87cc2f5e9fc9bfab8aa"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/source.mac",
+      "bytes": 4721,
+      "sha256": "d47a662703d147603465a47b8f93ec357de6c4f1c132a3ce9f8ddd961fba015b",
+      "git_blob": "49bc5f0957df3e88b92ab375efe974b78fed6f00"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot_acceptance.json",
+      "bytes": 2079,
+      "sha256": "900de57d202b3e08076bbb1cc1d4930bc6980e7fc3626e79f2c613bae6aa468b",
+      "git_blob": "bd9d37193356b55646b595c13cc7348253962875"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot_job.json",
+      "bytes": 651,
+      "sha256": "df231262fecfb0cdfd9cfea68505334ce9f34202edc07f5c82a61ca8e45eccef",
+      "git_blob": "f19fb132773299e66c43458a2a987ec71610ba4b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot_submission_intent.json",
+      "bytes": 975,
+      "sha256": "ea1a54365ffcaf21d21bef9979a3e4e8acfdb33ff16a17c77dcbf9ed73e0159e",
+      "git_blob": "2908ff903ac41366870662302c87de53df0533c5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_acceptance.json",
+      "bytes": 28967,
+      "sha256": "502d13570de7ae82ac78eab89b109cab5e584b7f08e70685e8b527b3861e9c8f",
+      "git_blob": "4be755d629c8ea1702188496d392864e7f01c725"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_job.json",
+      "bytes": 1637,
+      "sha256": "c2c58b4955294841ab22358d36e077e21c04c6e134be1b09bf81604f207ff54b",
+      "git_blob": "a28efc792fb145890da3261f46f23fa95e8437be"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection.err",
+      "bytes": 2196,
+      "sha256": "bf82f9ced87bec1a27483ef674585ad4b8d1315cdcfadf5b021f3437e80015f8",
+      "git_blob": "7a6f80b36e5e9cea90666544e74981628e303e78"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection.out",
+      "bytes": 2836,
+      "sha256": "434753f51431b7c70163d02ee8e3fb2625539864d2dddcad640abd35a82bb18f",
+      "git_blob": "45be738382af3bcd5071b238abf8571fa4328319"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection_verify.err",
+      "bytes": 28,
+      "sha256": "3df162d168315cb89a922791becf745493faf7d81a20d222a8b0d322eab85a59",
+      "git_blob": "cff8214d9b7efe04f05d62cd8006ae4dc2ea23d4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_logs/selection_verify.out",
+      "bytes": 997,
+      "sha256": "8574cdbd736cf5d203145875ab63a42124583c8858f5150da5352a0e46aaaa78",
+      "git_blob": "13a738f6ab8dea6301503afad5907e509f4f727e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_package.json",
+      "bytes": 27581,
+      "sha256": "770bd51c107dc1d4200890369ad9145a2ccbd67c54b627de5e79a3c61475e0e5",
+      "git_blob": "2b694e927431962b5766705df69680fd4b447eb4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_plan.json",
+      "bytes": 534,
+      "sha256": "a923795ccf4fa92c46b1e0cf7503df29400410cc9ba15727f46d1ff02fb1d617",
+      "git_blob": "d3144c97d35d0fa316794f812e4ba23f208ebc5c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_plan_deployment.json",
+      "bytes": 289,
+      "sha256": "071e31df9ceb104ef7a0afffb7e89da1ffeb84320e960a4d9de54c36c0cee3e2",
+      "git_blob": "118a4f2647dabb31ec6fd7768b70febc5fa42cfb"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_submission_intent.json",
+      "bytes": 975,
+      "sha256": "5800e22e8a21e0d252f91090126520bdb8ffa72c8e33463fbf4e0427b61a1203",
+      "git_blob": "7176d5a04f5237e113abfbaab2de5703acfce02e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_submitted_scontrol.txt",
+      "bytes": 1666,
+      "sha256": "65806eae15f0c78f9343d5c752a511d3058f0957c7c024ff77f9095260ee5336",
+      "git_blob": "bf5428ce8c5cc8bcfcec0e7b2e3d57b463186652"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_verify_job.json",
+      "bytes": 1673,
+      "sha256": "b3ae3568196e21a919ec90b4816c570426dcb8e831ac272e89beffbec6dbb4ca",
+      "git_blob": "b2a56ca9db10654b167cdbaec5237256bef60906"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_verify_submission_intent.json",
+      "bytes": 1032,
+      "sha256": "e04a94669831c74029124669501f9071f624a2710fe6c477fb7ec0ee879f0f61",
+      "git_blob": "06dc4a80510bc06a84799c559339d975475a3b14"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/selection_verify_submitted_scontrol.txt",
+      "bytes": 1688,
+      "sha256": "e4bba525bd2a97977e9f8d056a368371e977128ffadbbcefe11e8bc35b1af6a6",
+      "git_blob": "da05c820c386af6d6afa67db7551f2aae1750467"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_acceptance.json",
+      "bytes": 5856,
+      "sha256": "7e5cb6ad1fae6815aa92f6c15ebe5d58eb89f3091a7db263393ecd5f0d9f09eb",
+      "git_blob": "58e27bc58d9444bbc3c841538df8aa6c201a0066"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_job.json",
+      "bytes": 659,
+      "sha256": "e2b50f7311243657a8bfae013ae25601049406704bf408d0508690d97f76436a",
+      "git_blob": "0460b2b38795ad056e975996c20ef4aba635ca4a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_package.json",
+      "bytes": 4785,
+      "sha256": "737d6ef68d53f7d787c8caf1039e44afbcb04e9e764415d997a354046c51d7de",
+      "git_blob": "5f66c2385848f3ec78a86654e9e1b1ac6d1ad9cd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/transport_submission_intent.json",
+      "bytes": 1009,
+      "sha256": "a8986af570796eef63768f717e4846ec44ab8a2b0f274af4317d13dcf3e53cf9",
+      "git_blob": "51a7b6d6f520cb5e3b3a8aa822329a179a2aef62"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_job.json",
+      "bytes": 1646,
+      "sha256": "7ce16826e99db1d2524b2f9ddeddcef33e22cfd679f2864ea12146029fbabc7a",
+      "git_blob": "8266e38efb733ffb9d520e1f4242acd508956fb5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_plan.json",
+      "bytes": 539,
+      "sha256": "e94fa91a3d2ab519424f5593f7c38e5cc5f8132e37a9102fc971cc4094ed6ad9",
+      "git_blob": "9b2dfe93588e67d5701dc22049a5fa7e39d28d38"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_plan_deployment.json",
+      "bytes": 290,
+      "sha256": "f08f2ff139ca914bf02cc4f5e8c64f015b511619aca3a7837a084cd426c7599a",
+      "git_blob": "a6ae8ce0ea6542246c7731e6dafef5e2f5b44b50"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_submission_intent.json",
+      "bytes": 980,
+      "sha256": "20ca7317767ecc146dcd0944396d4be895591d907c9ce59c340c0246b3f73c54",
+      "git_blob": "a85f17ea0ffb9cad22dfed4e50daf373f3b8999f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_submitted_scontrol.txt",
+      "bytes": 1670,
+      "sha256": "62241e0efd96c2fff417b780ced2e1c27a6ff051b4ebb3d9121096dbc2287128",
+      "git_blob": "d6cc0425d01f6864912e2e03ed49b66a959c4b7d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_verify_job.json",
+      "bytes": 1683,
+      "sha256": "13df023243962d0f6b3d015c69dccce610d4d8132d4c088d090442c137a918cc",
+      "git_blob": "d9f5469477d812e989238acc74c43da4b8da193c"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_verify_submission_intent.json",
+      "bytes": 1036,
+      "sha256": "8ab17a0b4962d1a777a0a22954ce1cd1bf4e243edbf941b0fddec7025dc57aea",
+      "git_blob": "38d65d2aeffc3e6a40838ccc3311650bc3268c58"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/validation_verify_submitted_scontrol.txt",
+      "bytes": 1692,
+      "sha256": "b89e49525428d5ffc4920aca67e6acc04664c22ebf3b2f76e5e156ea9c760bee",
+      "git_blob": "eb4e84d691269c7976f8230ef3b91f2d2ac0c2a3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md",
+      "bytes": 6779,
+      "sha256": "321b9736a9c4d33918c5595a636d732e21444b6d88776a8e560398cb594826dc",
+      "git_blob": "f68bed0c76bad6802b00dfb7e482b27497223ed9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/controller_freeze.json",
+      "bytes": 1299,
+      "sha256": "059c410635871281383749eaa640be6b5feb05faba51ec5296b5dfe60dfd82cc",
+      "git_blob": "8d7d23bcdc8f129253dc754db940ce6816d4a815"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/cpu_latest_status.json",
+      "bytes": 933,
+      "sha256": "0f71b5a364556afdf9cee897b88850e66ca7246c6cbdb1272c5050949ce363ed",
+      "git_blob": "c015b991ba812699d0d5339f3d0f5b870e2b835a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/ehe_factor_reuse_metadata.json",
+      "bytes": 3103,
+      "sha256": "d3459186a14652b76f7503a438434027cfc2c7dfb954da12984d410e6a95ae15",
+      "git_blob": "83d82849185d6352632db2d0c5bf5acb6517a37b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/gpu_deployment.json",
+      "bytes": 1367,
+      "sha256": "d1a0827d8da257a13e3a6f806b3cae2eb05a73ad31508af7037f863edb1ea514",
+      "git_blob": "6503b1c8dfb5fd9dc0a524e3dbb27f5cbf095ab0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/gpu_freeze.json",
+      "bytes": 13084,
+      "sha256": "c1145df23dbffb1cf190547cc59e779e4fe343546988dfe4c6466ac36d757fa7",
+      "git_blob": "ce4d44ef93188af8775a5f9dc529158ee8ff2462"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/gpu_linux_tests.txt",
+      "bytes": 1167,
+      "sha256": "b9dbba60a48583ace751f5c888de3bf143f95d8daa2966906484151a4073f9e1",
+      "git_blob": "a17deb2668926784d2b12f2845be4acd04fc3ab4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/launch_syntax_acceptance.json",
+      "bytes": 396,
+      "sha256": "1b132d33c02f842697c7545af575f8a77e213be523fc56f033d71186136c32b3",
+      "git_blob": "6e15f6074b0eb83a99b41526d0c3c1000e9aed34"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/manual_progress_20261019.json",
+      "bytes": 18109,
+      "sha256": "d2c32a428764e1c1d6ade7dd4f4fbd09c1a62b73c223a34689f797a4e8791d0c",
+      "git_blob": "cce0e8f1eae5b0be2f7b22da1d99f81058a0156d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/JSCC_440_controller_failure_archived.json",
+      "bytes": 200,
+      "sha256": "0926b676900d4eb2f5dbe9c3ce539c41dee7d48e0ae4eca3a41c8dad602aacd7",
+      "git_blob": "3749857cbf1c26f07246477eb82ab7fcc78f6361"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/JSCC_440_controller_failure_original.json",
+      "bytes": 200,
+      "sha256": "0926b676900d4eb2f5dbe9c3ce539c41dee7d48e0ae4eca3a41c8dad602aacd7",
+      "git_blob": "3749857cbf1c26f07246477eb82ab7fcc78f6361"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/derenzo_controller_registration.json",
+      "bytes": 81,
+      "sha256": "2687aae2678f501af7950299c23f281b5aab16016c56795f377e430feebe010c",
+      "git_blob": "58b7479294741adb3b87665a1f3f2f63a400cd24"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/latest_scheduler_status.json",
+      "bytes": 485,
+      "sha256": "7768d3bb34d2cddcdaa833107f68f2dd251178d22131916ab9538235fdf0534e",
+      "git_blob": "ec7986f0db4a2955cff893042f7408a820f1517e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/launches.json",
+      "bytes": 189,
+      "sha256": "146e040dbff9d2e39f90147bd267ff1dd80f5c946b072a22f626c8c6271e6787",
+      "git_blob": "633f01ca727b7a921aafc822a64c219b0722b740"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/nema_production_5090_8x4_queue_registration.json",
+      "bytes": 140,
+      "sha256": "bb2bcaaef15f50494bde5db34233034d6a0d017c76bf49d7d4918ecb30ee02a7",
+      "git_blob": "79d3778cfcfee3273a862148f79c56db2c0a0833"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/nema_resume.err",
+      "bytes": 1139,
+      "sha256": "d007541b7c1ee7c197d6597e86e16ed0344207bb37319f50d62328b5b0618717",
+      "git_blob": "ddfee64a926091738eb15735b7df33683d17e4f1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/nema_resume.out",
+      "bytes": 102,
+      "sha256": "2292c48cd0f836da09579a87f3361fbda7b19693cb111d33006c25c0182dbf68",
+      "git_blob": "c88d94c58979a47a97eaa0c13f29c30938061c9d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/preserved_identity_acceptance.json",
+      "bytes": 326,
+      "sha256": "ba737e299c76d812041b0cb36763108f9f51b99c01c54ebc4507fa1b67610b68",
+      "git_blob": "a72fadeacc0e50103a6fc2c1f554d3a6d11da549"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/recovery_authorization_and_identity.json",
+      "bytes": 7178,
+      "sha256": "447b3c4fbeaa55f57a0304d4adb0695d64c2b523e19e9b39081264c3a8ed5c24",
+      "git_blob": "c1868aade082c4708b313e7d8e9a077c26dc29b4"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/resume_reconstruction_controllers_20261019.py",
+      "bytes": 4589,
+      "sha256": "0ef51b84de65bee4f9fab0fc44e620d71b833dbd477f1300075a16a621b255c2",
+      "git_blob": "85077b03ce15e1f397a75c7d8dbb5efdbfc6f40f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_common.py",
+      "bytes": 4655,
+      "sha256": "eec2c8598ace1ccce0b2bd36938cb3a3625197b72e46b10ade3460bc391573bf",
+      "git_blob": "aa72a5c9fa4bf317f2780f7176a167b868a8c261"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_gate.py",
+      "bytes": 2596,
+      "sha256": "f4e8231a209110d7cdfe37deffef5e2b8281e341f79d57aaf601e555296b26f5",
+      "git_blob": "f77a44dba6e176720552cf1d80988e5671d49bcc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_reconstruction.py",
+      "bytes": 19607,
+      "sha256": "7dfdf0fa0d39afd7508e3134b930a42a4416e909eb56e5084bcb0b892e5f9ebf",
+      "git_blob": "c653a6a5eb0472e09307d5ee400006d0d7933310"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_transport.py",
+      "bytes": 10346,
+      "sha256": "820fa85df69a1043be6d902965eba59370893cd9221a706f480750a348a5fc6c",
+      "git_blob": "963ffe3057f224a5882c72fac8b433fdc2f2d9e1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_verify.py",
+      "bytes": 11065,
+      "sha256": "e754906b34805a4e1f31954b02e60c693a943689a23418f226cd8aa3f5865d79",
+      "git_blob": "2619021448aa9a9e8892c28c86a4808222d6b8ba"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_workflow.py",
+      "bytes": 38553,
+      "sha256": "7c1d03a17171c571320afdf0ad39d68462e1afbc497916cd15d3f65dc02efa97",
+      "git_blob": "602f1e980523f727ecaa802e76eeea384daf8801"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/test_derenzo_campaign.py",
+      "bytes": 4521,
+      "sha256": "f949ee2f94bc1fa107b1877934f10189d631db6b2e646ee7071d368477dddae4",
+      "git_blob": "9d4fa43e1aa06ef1f6d9f0896e1eba39255c9784"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/test_derenzo_campaign_controller.py",
+      "bytes": 3474,
+      "sha256": "19ae18e8a4a74e1b7873e95e6f98f18e2fdbfd0632ea4b610a3f257a3f010310",
+      "git_blob": "e901c158e8a08658903dc3e4215346fefe72cc99"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/submission_audit.json",
+      "bytes": 1592,
+      "sha256": "a1ff6d98a70a7aef1a088b55f35e1863a394a0f3854f71221646de5cbb0b6b11",
+      "git_blob": "0e3e3c8fd20fe1e5a768cfaaf5446312e093fff6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/transport_deployment.json",
+      "bytes": 414,
+      "sha256": "d0505634eb019d044126b6687836a4d79d86c04021e06e2cac733f2ed0da0bb0",
+      "git_blob": "7d705307005e727d9d3b6b455ff20ec5a1eed206"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/transport_freeze.json",
+      "bytes": 11515,
+      "sha256": "f497b3f9afa54bf791cfee6023830a883f72e0fe5f982848117a9e00dc6ac54e",
+      "git_blob": "761ab5b5728457cb61f33ebd2a049c044821e4e0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/README.md",
+      "bytes": 6239,
+      "sha256": "c5a2a26a69dc401061904b1f554d55337304926a11be9fbfeaa0b315c0bbf08b",
+      "git_blob": "990abb4ceab2843f5b2bea3294198c2b19406841"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+      "bytes": 4571,
+      "sha256": "46ad795afbd567d5fbaf52c75c60c209ee50c0ac8c76da7a1d5136802d94c1f2",
+      "git_blob": "ea1b02ad098fa493dc0b7e4d18c853193fbf143b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+      "bytes": 2570,
+      "sha256": "3597fe060f80d7ea69e44ab8118b2efc5a43a2bcd119ec4fc2059a832f356c25",
+      "git_blob": "683b18aaee35d75c5e4ed830e8546ae133b19b8f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md",
+      "bytes": 2741,
+      "sha256": "f620bdb01b77bc99f302ad25006a9c75fcea014d99f0a3d163108a59a617b0da",
+      "git_blob": "232846de170c9eb7df146385649a144045ae71f5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/formal_authority.json",
+      "bytes": 4462,
+      "sha256": "f21fbcd56ae39f020af73387d3eaa3bcc035a726ae66f013301d4e704e5ec43e",
+      "git_blob": "cd17a635cf8d7df1070fbb7bd014e1993e85eee6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/formal_job.json",
+      "bytes": 1253,
+      "sha256": "c63a89e5cc0ab8aa342692552ad41eaa592d27d0c527728efa1e8f51d3824ff6",
+      "git_blob": "871ad933b9cd2ea953f6a3e21cc7510dbcff4db8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/formal_submission_intent.json",
+      "bytes": 1242,
+      "sha256": "a7f225b676e114a613b8543b8419a1d5fb5871903aff994b3b4ffd29e38a17e3",
+      "git_blob": "ab727f88723d3ffb5acf573df7468cd73d71f028"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/CONTRACT_20261019.md",
+      "bytes": 16302,
+      "sha256": "c86431a8b7ac8f9be704370957e9347080417fa21fccc25a28e394b9054fcd48",
+      "git_blob": "8a68d326d76762ad8def5b05d67d27b30786eb44"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/README.md",
+      "bytes": 505,
+      "sha256": "349124b38713f7867c375b08ae26cda99a43b2fabaff8430eeef81a14072e65a",
+      "git_blob": "454422230b97ad5dc44381f1a54979955de625a5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/README_20261019.md",
+      "bytes": 20728,
+      "sha256": "29b34048c4f919d150c3966202386846c35f807e967082cb490c37c507d5eb01",
+      "git_blob": "3dbf6c0adbd52801124da668d610901f93bb3538"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/history/RUNBOOK_20261019.md",
+      "bytes": 32091,
+      "sha256": "5e7fbc8b417ac248a4faf54735527f0033f499f6ef03bf19fabd010602a2e4d4",
+      "git_blob": "f7990ae50e5b522ee99f896cc0e86b61309eef29"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/production_5090_8x4_queue_formal.sh",
+      "bytes": 3723,
+      "sha256": "55a80edcb0920f95188b0f36bb3361d5661839845f0863e701cf70fde6525702",
+      "git_blob": "fbc2dda0ffa3b10b871c9c7575a4b481b9be8f3e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/production_5090_8x4_queue_validation.sh",
+      "bytes": 2875,
+      "sha256": "51e33dfc326f594c94c23b635afcf8ec4cec324edca2467e65545707a944dd86",
+      "git_blob": "5899520cd9e3e0553cb2fb118893a232bbd016fa"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/launch_scripts/production_5090_8x4_queue_validation_verification.sh",
+      "bytes": 1938,
+      "sha256": "d249c1d088ff4e1f391308901bb669686708ad89c5514add6713d1de11d7c059",
+      "git_blob": "b75734c6f332d38195579aba95b4cf5d2deae585"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/SHA256SUMS.json",
+      "bytes": 739,
+      "sha256": "b5c271755bced873c2a7221d3f7f6cbf664a44f859ce0002962c29deece6ccc4",
+      "git_blob": "4b8db3b340ee9bcf63c57866984f7aba8b38c8f0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/read_only_findings.json",
+      "bytes": 680,
+      "sha256": "e8442246a4941bf180d3f934fb2dccf4791cc45ded04835b4336337da9df7b1c",
+      "git_blob": "1e7e65804ae4c9b2e1233d7c880d67fc317ef70e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_5090_8x4_monitor_repair.1688717.err",
+      "bytes": 27656,
+      "sha256": "8f81eb06fb35cdcd2b75b6acd64c1bbbfb7c0d6f817c9115f5f294c075126176",
+      "git_blob": "002429641367977d0205ac0ad21c2fd1a5c5af6e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_5090_8x4_monitor_repair.1688717.out",
+      "bytes": 29143,
+      "sha256": "34204ccba62663bb69d7356efb22cedba7752eb93cbba736182a53a9285ff8d8",
+      "git_blob": "989f1a7de17b28da9a2f040449df407e6d4d6977"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_5090_8x4_monitor_repair_1688717.txt",
+      "bytes": 1916,
+      "sha256": "f2dff73e586f6e903d49f56c43baa4a1ee2f8aa57df9495c54b4b1a2c4c8006d",
+      "git_blob": "a364773f45e95276d50bd1c149e30f7386f72eb9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/selection_manifest.json",
+      "bytes": 77246,
+      "sha256": "cd88a1026fd9ff443e51736e77e33ade9ab97704f8d8b5d40db392b6ff89aa16",
+      "git_blob": "e8b2155d8c231a774b56b89d53068b7b80a6acf0"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/status.json",
+      "bytes": 35311,
+      "sha256": "812fbe9d5cd26c6568c2757bd6172ab4a5ca5a8ada5b5e0b5d8470b0683b3a13",
+      "git_blob": "18b3038055a5ebce0c76cf7d4e1946f45c19bfcc"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/manual_status_20261016_011532/storage_status.json",
+      "bytes": 1411,
+      "sha256": "5ffc41aa92d82b96f0793900aaaf457e2af71fb0a11f983e4688e9dcd34ed09f",
+      "git_blob": "b7e58008395b0f9358d99faf298a08b638bebec2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_controller_freeze.json",
+      "bytes": 601,
+      "sha256": "f56ee59f0fb53dd8426bc0fd5650aaf7abc5ebfd3e17d1f3f7448335648bf5c7",
+      "git_blob": "3100ee59a9fa9c3578a25b5b685e148d4d5eeb6a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_final_audit.json",
+      "bytes": 1777,
+      "sha256": "53b36d2178efe0704339c330782a9288e7af03b5b29169b0d9a695267f36f3f7",
+      "git_blob": "f883174d04d80ec33ba19e848034053a76c4e5ab"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_formal_scontrol.txt",
+      "bytes": 1607,
+      "sha256": "70b88cfaa18daa12585bf1150c61a79b087f65a5b0c4534b7b9632bc79012d88",
+      "git_blob": "6881c26ca4eaa85b93ef0744fc365b04bca1781a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_latest_status.json",
+      "bytes": 5672,
+      "sha256": "b671898cae97970db896146a27186f19f206e43b5979acde038462571c3b5b0b",
+      "git_blob": "c1fdaa20c0afc21c75f41394a93d0116cb80d43b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_linux_tests.txt",
+      "bytes": 1747,
+      "sha256": "81a9098de196ddb241b604b62639b5b783cdf54ecd36b60afa95edcec59abe98",
+      "git_blob": "fd4e98da71f43a768b6d602561c4836060b1827a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_local_tests.txt",
+      "bytes": 2504,
+      "sha256": "957c6800a44255a41d004daf81e85aa75b9ea39febd71dc9eb801d3877bbd0ee",
+      "git_blob": "1dd07c9e093544557247d2fd6cfd9a2c2acae9f5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_measured_time_hold_20261019.json",
+      "bytes": 1087,
+      "sha256": "131c1f9a1f82f7b1b6d07478f195faa27e3f86b4a817b8fe97e23fe8567ce560",
+      "git_blob": "1630889b1e3934e5788dd489e0fe79a7bb337d15"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_poll_error.json",
+      "bytes": 170,
+      "sha256": "d7885d28ca637804e019332f0f864347f32cba467e04a2f00fd2438fd90e6339",
+      "git_blob": "824e7a180ad5f0eeb3f641da7862f8c61efb4864"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_preflight_env_failure.txt",
+      "bytes": 9338,
+      "sha256": "d4f5b1fe749af2a4b72603bf1a719ed3c306633972c2feda8f7cdd5792c06107",
+      "git_blob": "9293b074f89366607cf12aaf83ed32ee5693a179"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_preflight_recovery.json",
+      "bytes": 536,
+      "sha256": "632aa0d22c89820a312f93a0c635a2d5e06fbe9280a1fb59b7d0c03f482a1987",
+      "git_blob": "954f9695e36fe0921391c790a83b50f60a70c1a1"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_5090_production_queue.py",
+      "bytes": 21206,
+      "sha256": "6f4e79045e1571b3f7a7ab93054457368ff29d98de8a64d8c0650f2da157ad0c",
+      "git_blob": "0e305d35dbee992ff2db5d0b559b08331945df16"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_5090_production_queue_preflight_recovery.py",
+      "bytes": 21465,
+      "sha256": "69997f3d6f610f7ee3bf9572a934af3dfc96d6e09fbefc0f6dbd00d69d67e7c0",
+      "git_blob": "ec9613ddb5367fb990849ef6ce2daa019f42aaaa"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_formal_queue_gate.py",
+      "bytes": 2903,
+      "sha256": "dc16ac95ac216e2628b9d388d2bbb2dffe43f316ef8daf6ac1418e4bcb8b1965",
+      "git_blob": "79d8490ff3e0ff4847331235c12ea781a362c40e"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/test_jscc_5e10_formal_queue_gate.py",
+      "bytes": 2665,
+      "sha256": "b844bb0c66f257dcd68f6e2babc3e10e0752ed4042de49224f43103f2dbdeae0",
+      "git_blob": "e2244eb779657286302b0cb1897a1981f9d8c487"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/watch_jscc_5e10_5090_production_queue.py",
+      "bytes": 21992,
+      "sha256": "be9ec0296a7f12c949bf75211141d7f3f20d3b29dcf633136769582f8fc82a1b",
+      "git_blob": "71cb8c15d04e56753963edd4f1edfc697dee11f8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/watch_test_jscc_5e10_queue_controller.py",
+      "bytes": 1673,
+      "sha256": "1ca3abe648191a5cd7bb8e2dd72df98f8c8706ea13d7c50e4d0424e883e045e1",
+      "git_blob": "87a04cf2970eebd718979ac8e52ffe5b841ea2d5"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_submission.json",
+      "bytes": 418,
+      "sha256": "f3631e8a43ef0d165bd2f6c00d2d3f016db35d9b6c327590911348f458819dec",
+      "git_blob": "1697c9a0edecaf98bb67e9717f1375f529074f86"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_validation_scontrol.txt",
+      "bytes": 1608,
+      "sha256": "74721bff9110804c219daf4d70e2eca6a4dc7b0f60f47d845df24d78f5ce3fec",
+      "git_blob": "e206281eaa68d0642a2a04d665668f64779fee20"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_validation_verification_scontrol.txt",
+      "bytes": 1661,
+      "sha256": "4e5d9139a7c5e1e2c0203d39581cdc3538be04b122b5d9f6e42bf06c27190d9d",
+      "git_blob": "5c459acb47b609ce409b8c08d5640a55bd0fadfd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_watch_freeze.json",
+      "bytes": 687,
+      "sha256": "4ea15e0c28b3640ab7b637cb34842c63382e0e6722b694b5503b905ed2581c45",
+      "git_blob": "edbcb6185c9e61c26bc375a284e277fcbe4b9e6a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_deployment.json",
+      "bytes": 11493,
+      "sha256": "a96cd56b7cd913d6f7de7daf2d42ed1aba67cbcae6aeea70ea36c1c70bf03937",
+      "git_blob": "84fffb47a74c4b940370416edb22f54193ad8d53"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_freeze.json",
+      "bytes": 20629,
+      "sha256": "3f557deb8d5022474dfabf0ad7a213ed96ccbe3d6840c076370dd8cd8e40b7f7",
+      "git_blob": "72523ff541a9526b340d2e8cec62d35259d4adfd"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_latest_status.json",
+      "bytes": 1257,
+      "sha256": "df4743c08edfd7b7aaddc38703c95fede61dd87ecf5b2adaaefd54c6d1bc860b",
+      "git_blob": "c83243c5cf3664b24a25d0d4e641c04c4c16b6d8"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/streaming_4090_8x3_storage_latest_status.json",
+      "bytes": 1411,
+      "sha256": "5ffc41aa92d82b96f0793900aaaf457e2af71fb0a11f983e4688e9dcd34ed09f",
+      "git_blob": "b7e58008395b0f9358d99faf298a08b638bebec2"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_acceptance.json",
+      "bytes": 5713,
+      "sha256": "c77d17b606cf283d81240263c4cc7fefb238709af7c08ef6f21669690509538c",
+      "git_blob": "d07d8a7831343ac242e163c4de50aa7337395fc9"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_job.json",
+      "bytes": 1254,
+      "sha256": "1f0df84c99f56d0e494775571e2f5ee5fc86146a42e50f2a420168b1aca94726",
+      "git_blob": "140ee752bad67809af5f18b57af6e4a1e194199a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_latest_status.json",
+      "bytes": 879,
+      "sha256": "4398c460beb2fc1d87720b7d15045edcb59c6535d72464699769fa17f696450a",
+      "git_blob": "1d567bde8089bd60955a1c1500da56c4cd7a531f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation.err",
+      "bytes": 8700,
+      "sha256": "63f145be1a6dc067bf4e1adbfeea2bee47a858190a6f792cfbc1648ce32ba729",
+      "git_blob": "aab310328ce41a6a23a442fa3c6aebcc0d5aaa2f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation.out",
+      "bytes": 25392,
+      "sha256": "50bcb866ff0ce1d1e20f6252973d5ec55d1e2f12c9cdcdc077e26fd1b6867abe",
+      "git_blob": "fb47f29c6ef4f00e003e5e8743aad3487d28f078"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation_verification.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_logs/validation_verification.out",
+      "bytes": 408,
+      "sha256": "efc8782a5a0ad6c8f1c6d0de227e64282ca43ad5574023f91aa3059795b6e3c6",
+      "git_blob": "702c95e85d4dff5f742510ea9b05fabc88632683"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_package.json",
+      "bytes": 3744,
+      "sha256": "d6c0d5435fce09b961d136be6adab1adca052a6ab496351e99de1ed1e160019a",
+      "git_blob": "8051574604c2597394766857986ae05eb7290799"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_submission_intent.json",
+      "bytes": 1211,
+      "sha256": "0056105a7beb9d938461355ad4ed37eda7f31d5866a719c8cd2063a944f04727",
+      "git_blob": "fe18d73d3194c06c5ce596e2f5552f71a018ba5d"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification.json",
+      "bytes": 413504,
+      "sha256": "cf68da1e1e422b15d6e03914460b0ba61a871943cad9f7b7486bc9b19bc7164f",
+      "git_blob": "91d82ae3074715613bf1efd6893b90bab55c5737"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_deployment.json",
+      "bytes": 9737,
+      "sha256": "0a5e061b9feb2acf1039a46893644a05fde7f5a5357e90eab6809a234837b56d",
+      "git_blob": "a62462657ae16d5562cf9de7b6094d8458a485bb"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_freeze.json",
+      "bytes": 9774,
+      "sha256": "f9cc8f1f849f0c3de6a82d30c5ee9d1ae1cfd93088a910e7e7d8c8713c071650",
+      "git_blob": "8086eac226926429b7a8ae91884e3d10c4b68da6"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_job.json",
+      "bytes": 1319,
+      "sha256": "281d605163dddbd689f71181fb82e89d727351c597c9f2f21dca68ddeafb39e8",
+      "git_blob": "2fee3717647a2486030a87ace01555bb2a1efd6a"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_latest_status.json",
+      "bytes": 383,
+      "sha256": "cbb93e2b6574d1410467640b10a512b4f8311ee0985800024cb347ac3c0b3c39",
+      "git_blob": "d40dfa071f2de47404a4f6b66b8be6a3db0b3af3"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_verification_submission_intent.json",
+      "bytes": 1226,
+      "sha256": "d1d03e6dc7e2e8338dc65a89a0dae0edbfa376524aefb5dd040f0a57651b569e",
+      "git_blob": "7bae9dc64d334e5808c585c65a6b24a3f4a3371b"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/README.md",
+      "bytes": 1095,
+      "sha256": "7065924b5a468ea538926d41870159ab90a8927b518da17205c0a79449ff12f0",
+      "git_blob": "ebbfb90b356d7a19b814c3c84914fb2a2539f401"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/resume_reconstruction_controllers_20261019.py",
+      "bytes": 4589,
+      "sha256": "0ef51b84de65bee4f9fab0fc44e620d71b833dbd477f1300075a16a621b255c2",
+      "git_blob": "85077b03ce15e1f397a75c7d8dbb5efdbfc6f40f"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_derenzo_campaign.py",
+      "bytes": 4521,
+      "sha256": "f949ee2f94bc1fa107b1877934f10189d631db6b2e646ee7071d368477dddae4",
+      "git_blob": "9d4fa43e1aa06ef1f6d9f0896e1eba39255c9784"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_derenzo_campaign_controller.py",
+      "bytes": 3474,
+      "sha256": "19ae18e8a4a74e1b7873e95e6f98f18e2fdbfd0632ea4b610a3f257a3f010310",
+      "git_blob": "e901c158e8a08658903dc3e4215346fefe72cc99"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_jscc_5e10_formal_queue_gate.py",
+      "bytes": 2665,
+      "sha256": "b844bb0c66f257dcd68f6e2babc3e10e0752ed4042de49224f43103f2dbdeae0",
+      "git_blob": "e2244eb779657286302b0cb1897a1981f9d8c487"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/test_jscc_5e10_queue_controller.py",
+      "bytes": 1673,
+      "sha256": "1ca3abe648191a5cd7bb8e2dd72df98f8c8706ea13d7c50e4d0424e883e045e1",
+      "git_blob": "87a04cf2970eebd718979ac8e52ffe5b841ea2d5"
+    },
+    {
+      "path": "tests/test_project_index.py",
+      "bytes": 2354,
+      "sha256": "af8455079e15530e01a22a58d8d54b901a025ea9218d6f90ccd2e046b6937e04",
+      "git_blob": "7227b1837cf9b77c32feb564a2b9e390411b8513"
+    },
+    {
+      "path": "tools/audit_git_delivery.py",
+      "bytes": 3942,
+      "sha256": "7a2114d5f17715eb09bd6ab93afb30e89332b86433de2d8001b825c1223a73c5",
+      "git_blob": "3721f0d897144f5c9f55d7e1c1541e9117ecea77"
+    },
+    {
+      "path": "tools/project_index.py",
+      "bytes": 4591,
+      "sha256": "6917384f7520ab8ba8cb3ac5b0f0d0ea4d2a8d03f6aded63a2c4dd652636b955",
+      "git_blob": "58ba7ce291bf63c9ab719a4b2adc84f6e793c8f5"
+    },
+    {
+      "path": "tools/research/build_project_catalog.py",
+      "bytes": 23275,
+      "sha256": "f32b7cdc08f273d57b11a12a6f37148a7b5bf4ce923da7e5bdc44cb0388a581e",
+      "git_blob": "2943d4a89aa5403b6a98e59e8f8c6dd96fcab435"
+    },
+    {
+      "path": "tools/research/plot_derenzo_completed.py",
+      "bytes": 25266,
+      "sha256": "c9a57d80c7a56097527be20543f19e513301fcc5f8926f08ce0ad04456e6e80b",
+      "git_blob": "4fa09a408daa35096f0474b9b429cfbe85a82ae3"
+    }
+  ]
+}

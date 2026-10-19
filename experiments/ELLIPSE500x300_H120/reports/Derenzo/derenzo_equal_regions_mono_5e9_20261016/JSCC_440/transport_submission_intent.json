@@ -1,0 +1,7 @@
+{
+  "command": "sbatch --parsable -p cnmix -N1 -n1 --ntasks-per-node=1 --cpus-per-task=1 --chdir=/tmp --time=240 --array=0-199%200 --job-name=DR5e9_JSCC_440_transport --output=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/logs/JSCC_440_transport.%A_%a.out --error=/WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/logs/JSCC_440_transport.%A_%a.err /WORK/maty_work/lpz/20250307_JSCCGC_32x64_4layer_SPECT_225Ac/JSCC_SPECT/ELLIPSE500x300_H120_20260928/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/scripts/JSCC_440_transport.sh",
+  "script_sha256": "80e34615986b0973aca6e608e96469ac4c896ccc934d20171a625ddd5d3fc69f",
+  "resolved": true,
+  "started_epoch": 1792123328.708608,
+  "registered_job": 15896149
+}

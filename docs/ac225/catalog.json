@@ -1,0 +1,740 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-10-19T13:10:49.801628+08:00",
+  "snapshot_semantics": "local evidence only; no automatic job action",
+  "convention": "Ac225 label denotes separately documented218/440gamma proxy fields, not full decay-chain events",
+  "cross_energy_image_sums_currently_authorized": false,
+  "experiments": [
+    {
+      "id": "nema-jscc-5e10",
+      "title": "NEMA JSCC 5e10：完整验证通过，正式时长阻断",
+      "topic": "nema ac225 jscc 218 440",
+      "status": "formal-held-time",
+      "data_kind": "actual-Geant4-dual-energy-proxy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/CONTRACT.md",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/RUNBOOK.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_acceptance.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_measured_time_hold_20261019.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000"
+      ],
+      "figures": [],
+      "jobs": {
+        "validation": 1704559,
+        "verification": 1704566,
+        "formal": 1704572
+      },
+      "channels": [
+        "440_SinglePhoton",
+        "218_SinglePhoton_CrossTalkCorrected",
+        "440_ComptonOnly"
+      ],
+      "iterations": 10000,
+      "save_step": 50,
+      "complete_formal": false
+    },
+    {
+      "id": "nema-jscc-5e9-v5",
+      "title": "NEMA JSCC 5e9 连续核v5：历史10000次正式基准",
+      "topic": "nema ac225 jscc 218 440",
+      "status": "delivered-historical",
+      "data_kind": "actual-Geant4-dual-energy-proxy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/ACCEPTANCE.md",
+        "docs/DUAL_ENERGY_BASELINE.md"
+      ],
+      "evidence": [],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy"
+      ],
+      "figures": [],
+      "jobs": {
+        "formal": 1669255
+      },
+      "iterations": 10000,
+      "save_step": 50,
+      "note": "历史六路含已退休跨能量求和；后续仅采用获授权的分能量通道和当前ROI。"
+    },
+    {
+      "id": "nema-ehe-g4-5e9",
+      "title": "NEMA EHE 5e9：实际Geant4",
+      "topic": "nema ac225 ehe 218 440 g4",
+      "status": "delivered",
+      "data_kind": "actual-Geant4-dual-energy-proxy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/RESULTS.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal"
+      ],
+      "figures": [],
+      "jobs": {
+        "formal": 1679415
+      },
+      "iterations": 200,
+      "channels": [
+        "440_SinglePhoton",
+        "218_SinglePhoton_CrossTalkCorrected"
+      ],
+      "note": "原物理响应HOLD保留；执行验收不代表物理偏差消失。历史求和只读，不进入新比较。"
+    },
+    {
+      "id": "nema-ehe-poisson-5e9",
+      "title": "NEMA EHE 5e9：矩阵前投影+Poisson参考",
+      "topic": "nema ac225 ehe 218 440 poisson",
+      "status": "reference-only",
+      "data_kind": "matrix-forward-plus-Poisson",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/README.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/formal_summary.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200/results/formal"
+      ],
+      "figures": [],
+      "jobs": {
+        "formal": 1680255
+      },
+      "iterations": 200,
+      "channels": [
+        "440_SinglePhoton",
+        "218_SinglePhoton_CrossTalkCorrected"
+      ],
+      "note": "原物理响应HOLD保留；执行验收不代表物理偏差消失。历史求和只读，不进入新比较。"
+    },
+    {
+      "id": "nema-ehe-g4-5e10",
+      "title": "NEMA EHE 5e10：实际Geant4",
+      "topic": "nema ac225 ehe 218 440 g4",
+      "status": "delivered",
+      "data_kind": "actual-Geant4-dual-energy-proxy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/RESULTS.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/formal_summary.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/results/formal"
+      ],
+      "figures": [],
+      "jobs": {
+        "formal": 1681346
+      },
+      "iterations": 200,
+      "channels": [
+        "440_SinglePhoton",
+        "218_SinglePhoton_CrossTalkCorrected"
+      ],
+      "note": "原物理响应HOLD保留；执行验收不代表物理偏差消失。历史求和只读，不进入新比较。"
+    },
+    {
+      "id": "nema-ehe-poisson-5e10",
+      "title": "NEMA EHE 5e10：矩阵前投影+Poisson参考",
+      "topic": "nema ac225 ehe 218 440 poisson",
+      "status": "reference-only",
+      "data_kind": "matrix-forward-plus-Poisson",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/RESULTS.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/formal_summary.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200/results/formal"
+      ],
+      "figures": [],
+      "jobs": {
+        "formal": 1683357
+      },
+      "iterations": 200,
+      "channels": [
+        "440_SinglePhoton",
+        "218_SinglePhoton_CrossTalkCorrected"
+      ],
+      "note": "原物理响应HOLD保留；执行验收不代表物理偏差消失。历史求和只读，不进入新比较。"
+    },
+    {
+      "id": "derenzo-jscc-218",
+      "title": "Derenzo JSCC 218 keV：独立单能5e9",
+      "topic": "derenzo monoenergy jscc 218",
+      "status": "delivered",
+      "data_kind": "actual-Geant4-monoenergy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/JSCC_218"
+      ],
+      "figures": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/figures/final_mip.png"
+      ],
+      "jobs": {
+        "validation": 1705505,
+        "validation_verify": 1705507,
+        "formal": 1705508,
+        "formal_verify": 1706056
+      },
+      "channels": [
+        "218_SinglePhoton"
+      ],
+      "iterations": 10000,
+      "save_step": 50,
+      "note": "每个探头/能量独立5e9 gamma；两个源不是同一次225Ac衰变链，218背景为零。"
+    },
+    {
+      "id": "derenzo-jscc-440",
+      "title": "Derenzo JSCC 440 keV：独立单能5e9",
+      "topic": "derenzo monoenergy jscc 440",
+      "status": "formal-registered",
+      "data_kind": "actual-Geant4-monoenergy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_job.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/JSCC_440"
+      ],
+      "figures": [],
+      "jobs": {
+        "selection": 1705543,
+        "selection_verify": 1705544,
+        "validation": 1713939,
+        "validation_verify": 1713940,
+        "formal": 1713943
+      },
+      "channels": [
+        "440_SinglePhoton",
+        "440_SinglePlusCompton"
+      ],
+      "iterations": 10000,
+      "save_step": 50,
+      "note": "每个探头/能量独立5e9 gamma；两个源不是同一次225Ac衰变链，218背景为零。"
+    },
+    {
+      "id": "derenzo-ehe-218",
+      "title": "Derenzo EHE 218 keV：独立单能5e9",
+      "topic": "derenzo monoenergy ehe 218",
+      "status": "delivered",
+      "data_kind": "actual-Geant4-monoenergy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_218"
+      ],
+      "figures": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/figures/final_mip.png"
+      ],
+      "jobs": {
+        "validation": 1705509,
+        "validation_verify": 1705510,
+        "formal": 1705512,
+        "formal_verify": 1705779
+      },
+      "channels": [
+        "218_SinglePhoton"
+      ],
+      "iterations": 200,
+      "save_step": 1,
+      "note": "每个探头/能量独立5e9 gamma；两个源不是同一次225Ac衰变链，218背景为零。"
+    },
+    {
+      "id": "derenzo-ehe-440",
+      "title": "Derenzo EHE 440 keV：独立单能5e9",
+      "topic": "derenzo monoenergy ehe 440",
+      "status": "delivered",
+      "data_kind": "actual-Geant4-monoenergy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_440"
+      ],
+      "figures": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/figures/final_mip.png"
+      ],
+      "jobs": {
+        "validation": 1705578,
+        "validation_verify": 1705579,
+        "formal": 1705580,
+        "formal_verify": 1705853
+      },
+      "channels": [
+        "440_SinglePhoton"
+      ],
+      "iterations": 200,
+      "save_step": 1,
+      "note": "每个探头/能量独立5e9 gamma；两个源不是同一次225Ac衰变链，218背景为零。"
+    },
+    {
+      "id": "derenzo-design-selected",
+      "title": "Derenzo等面积区域：实际输运采用的唯一设计",
+      "topic": "derenzo phantom geometry 218 440",
+      "status": "design-selected",
+      "data_kind": "authoritative-analytic-geometry",
+      "entries": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/design_notes_zh.txt"
+      ],
+      "evidence": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_218keV_geometry.json",
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_440keV_geometry.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/macros"
+      ],
+      "figures": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/figures/derenzo_440_218_design.png"
+      ],
+      "note": "218：6/8/10/12/14/16mm，共114棒；440：10/12/14/16/18/20mm，共53棒。"
+    },
+    {
+      "id": "derenzo-completed-figures",
+      "title": "Derenzo已完成三组的真值、MIP、切片和迭代图",
+      "topic": "derenzo visualization figures 218 440",
+      "status": "analysis-complete",
+      "data_kind": "derived-from-strictly-delivered-results",
+      "entries": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/README.txt",
+        "tools/research/plot_derenzo_completed.py"
+      ],
+      "evidence": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/scientific_qa.json",
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/visual_qa.json"
+      ],
+      "local_data": [],
+      "figures": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/figures/final_mip.png",
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/figures/iteration_mip_gallery.png"
+      ]
+    },
+    {
+      "id": "nema-current-roi",
+      "title": "NEMA当前1.5mm内缩球中心ROI及统一完整背景",
+      "topic": "nema roi analysis",
+      "status": "analysis-complete",
+      "data_kind": "current-evaluation-policy",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/README.md",
+        "experiments/ELLIPSE500x300_H120/nema_roi_policy.py",
+        "experiments/ELLIPSE500x300_H120/reconstruction_output_policy.py"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/scientific_acceptance.json"
+      ],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "nema-source-truth",
+      "title": "NEMA H60球体、肺、218/440空间分布",
+      "topic": "nema truth phantom geometry 218 440",
+      "status": "authoritative-source",
+      "data_kind": "analytic-3D-source",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/README.md"
+      ],
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/manifest.json"
+      ],
+      "local_data": [
+        "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz"
+      ],
+      "figures": [
+        "Analysis_Plots/research/nema_structure_20261014/figures/nema_structure_218_440.png"
+      ]
+    },
+    {
+      "id": "compton-v5-legacy",
+      "title": "440连续材料能量核：legacy独立校准及2000次配对",
+      "topic": "calibration compton 440 v5",
+      "status": "accepted-reference",
+      "data_kind": "independent-calibration",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/CALIBRATION_ACCEPTANCE.md",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/ACCEPTANCE.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "compton-v5-ideal",
+      "title": "ideal 1e9连续核对照；与legacy剂量实验分开",
+      "topic": "calibration compton 440 v5 ideal",
+      "status": "historical-reference",
+      "data_kind": "paired-physics-study",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/ACCEPTANCE.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "first-scatter-v2",
+      "title": "首散射事件定义配对研究",
+      "topic": "compton diagnostics first scatter",
+      "status": "historical-reference",
+      "data_kind": "paired-event-definition-study",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/ACCEPTANCE.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "event-physics-audit",
+      "title": "全局事件算子、测度及物理响应审计",
+      "topic": "physics audit numerical stability",
+      "status": "accepted-diagnostic",
+      "data_kind": "physics-and-numerical-audit",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_global_audit_v4/REPORT.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "spike-ablation",
+      "title": "边界绑定、Huber和尖峰历史消融",
+      "topic": "nema regularization ablation",
+      "status": "stopped-historical",
+      "data_kind": "historical-ablation",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "response-cut3-old",
+      "title": "旧response mismatch门控：保留历史身份",
+      "topic": "compton q gate response mismatch",
+      "status": "retired-reference",
+      "data_kind": "historical-selection",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "fine-response-v3",
+      "title": "已停止精细响应场与清理证明",
+      "topic": "compton fine response geometry",
+      "status": "stopped-not-complete",
+      "data_kind": "incomplete-physics-study",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/STOP_AND_CLEANUP_20261005.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": []
+    },
+    {
+      "id": "advisor-progress",
+      "title": "成像场景、JSCC/EHE设计及既有NEMA结果说明图",
+      "topic": "figures advisor nema design",
+      "status": "presentation-reference",
+      "data_kind": "derived-presentation",
+      "entries": [
+        "Analysis_Plots/research/advisor_progress_20261014/使用说明.txt"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [
+        "Analysis_Plots/research/advisor_progress_20261014/figures/01_imaging_scene.png",
+        "Analysis_Plots/research/advisor_progress_20261014/figures/02_detector_design.png",
+        "Analysis_Plots/research/advisor_progress_20261014/figures/03_nema_mip_iterations.png"
+      ]
+    },
+    {
+      "id": "history-5e9",
+      "title": "5e9：历史研究/诊断目录",
+      "topic": "nema historical 5e9",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/ACCEPTANCE.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-nema-body-h60-1e9-1643142",
+      "title": "NEMA_Body_H60_1e9_1643142：历史研究/诊断目录",
+      "topic": "nema historical NEMA_Body_H60_1e9_1643142",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-nema-body-h60-5e9-1644876",
+      "title": "NEMA_Body_H60_5e9_1644876：历史研究/诊断目录",
+      "topic": "nema historical NEMA_Body_H60_5e9_1644876",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-nema-body-h60-5e9-bind-f010-formal-1651956-0",
+      "title": "NEMA_Body_H60_5e9_bind_f010_formal_1651956_0：历史研究/诊断目录",
+      "topic": "nema historical NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-nema-body-h60-5e9-huber-weak-formal-1651956-1",
+      "title": "NEMA_Body_H60_5e9_huber_weak_formal_1651956_1：历史研究/诊断目录",
+      "topic": "nema historical NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-process-list-audit",
+      "title": "process_list_audit：历史研究/诊断目录",
+      "topic": "nema historical process_list_audit",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-process-list-followup-20261004",
+      "title": "process_list_followup_20261004：历史研究/诊断目录",
+      "topic": "nema historical process_list_followup_20261004",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_followup_20261004/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-spike-research",
+      "title": "spike_research：历史研究/诊断目录",
+      "topic": "nema historical spike_research",
+      "status": "historical-see-evidence",
+      "data_kind": "historical-study-or-diagnostic",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_research/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "按原验收和记录时间阅读；目录存在不代表新阶段完成，也不授权恢复。"
+    },
+    {
+      "id": "history-derenzo-218-440-design-20261014",
+      "title": "derenzo_218_440_design_20261014：未采用的历史设计",
+      "topic": "derenzo design historical geometry",
+      "status": "design-not-selected",
+      "data_kind": "historical-geometry-design",
+      "entries": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261014/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "不是本轮输运真值；无对应新模拟完成声明。"
+    },
+    {
+      "id": "history-derenzo-218-440-design-20261015",
+      "title": "derenzo_218_440_design_20261015：未采用的历史设计",
+      "topic": "derenzo design historical geometry",
+      "status": "design-not-selected",
+      "data_kind": "historical-geometry-design",
+      "entries": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261015/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "不是本轮输运真值；无对应新模拟完成声明。"
+    },
+    {
+      "id": "history-derenzo-218-440-design-20261015-sparse36",
+      "title": "derenzo_218_440_design_20261015_sparse36：未采用的历史设计",
+      "topic": "derenzo design historical geometry",
+      "status": "design-not-selected",
+      "data_kind": "historical-geometry-design",
+      "entries": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/README.md"
+      ],
+      "evidence": [],
+      "local_data": [],
+      "figures": [],
+      "note": "不是本轮输运真值；无对应新模拟完成声明。"
+    }
+  ],
+  "components": [
+    {
+      "id": "experiment-ellipse",
+      "title": "当前500×300×120mm三维实验",
+      "entries": [
+        "experiments/ELLIPSE500x300_H120/README.md"
+      ]
+    },
+    {
+      "id": "simulation-jscc",
+      "title": "JSCC Geant4输运",
+      "entries": [
+        "Geant4Sim/Geant4Code/README.md"
+      ]
+    },
+    {
+      "id": "simulation-ehe",
+      "title": "EHE Geant4输运",
+      "entries": [
+        "Geant4Sim/Geant4Code_EHE/README.md"
+      ]
+    },
+    {
+      "id": "source-measure",
+      "title": "极坐标体积测度与密度单位",
+      "entries": [
+        "GenProj/POLAR_SOURCE_MEASURE.md",
+        "GenProj/README.md"
+      ]
+    },
+    {
+      "id": "reproduction",
+      "title": "历史通用复现入口",
+      "entries": [
+        "Reproduction/README.md"
+      ]
+    },
+    {
+      "id": "local-compatibility",
+      "title": "根目录历史本地重建接口",
+      "entries": [
+        "main_local_multi_energy_cntstat.py"
+      ]
+    },
+    {
+      "id": "legacy-results",
+      "title": "旧60mm本地结果目录说明",
+      "entries": [
+        "Results/README.md"
+      ]
+    },
+    {
+      "id": "research-strategy",
+      "title": "与平面信息响应/系统优化工程的桥接",
+      "entries": [
+        "docs/RESEARCH_STRATEGY.md"
+      ]
+    },
+    {
+      "id": "remote-access",
+      "title": "超算连接规范；凭据位于工程外",
+      "entries": [
+        "docs/REMOTE_COMPUTE_ACCESS.md"
+      ]
+    },
+    {
+      "id": "matrix-engine",
+      "title": "CUDA系统矩阵与参数引擎",
+      "entries": [
+        "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ReadMe.md"
+      ]
+    },
+    {
+      "id": "factor-conversion",
+      "title": "密度基底因子转换与标定",
+      "entries": [
+        "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/GenFactors/README.md"
+      ]
+    },
+    {
+      "id": "compton-sensitivity",
+      "title": "Compton密度基底灵敏度",
+      "entries": [
+        "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md"
+      ]
+    },
+    {
+      "id": "event-order-study",
+      "title": "独立事件顺序研究",
+      "entries": [
+        "Auxiliary_Studies/EventOrderInference_Experiment/README.md"
+      ]
+    },
+    {
+      "id": "historical-fov120",
+      "title": "另一代FOV120几何实验",
+      "entries": [
+        "experiments/FOV120/README.md"
+      ]
+    },
+    {
+      "id": "distributed-interfaces",
+      "title": "通用历史分布式接口",
+      "entries": [
+        "distributed/dual_energy_compton_slurm"
+      ]
+    }
+  ]
+}

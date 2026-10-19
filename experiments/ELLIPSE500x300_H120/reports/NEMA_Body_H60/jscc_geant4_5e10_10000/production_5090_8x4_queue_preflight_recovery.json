@@ -1,0 +1,9 @@
+{
+  "old_controller_sha256": "6f4e79045e1571b3f7a7ab93054457368ff29d98de8a64d8c0650f2da157ad0c",
+  "new_controller_sha256": "69997f3d6f610f7ee3bf9572a934af3dfc96d6e09fbefc0f6dbd00d69d67e7c0",
+  "recovery_scope": "Reuse SHA-identical upload after sbatch --test-only timeout; increase preflight bound to 180 seconds. Never retry an unresolved actual submission intent.",
+  "registered_validation_job": 1704559,
+  "verification_submission_intent_exists": false,
+  "formal_job_exists": false,
+  "checked_epoch": 1792085948.7612343
+}

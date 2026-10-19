@@ -1,0 +1,84 @@
+{
+  "files": {
+    "figures/01_imaging_scene.pdf": {
+      "sha256": "7eb42182c2115f2545a53cc37075b534e0ac6f09214b8f122cdb228297a5314d",
+      "bytes": 257928
+    },
+    "figures/01_imaging_scene.png": {
+      "sha256": "81663e0b90ddc51466cb518c3a69cef4cc5936082ddd706604f24ac2d55746c5",
+      "bytes": 977976
+    },
+    "figures/01_imaging_scene.svg": {
+      "sha256": "0b7072ca71b244849c6ee98f5501e235b9559d7a1d3a997bd4b1186a51c3a5d5",
+      "bytes": 1400962
+    },
+    "figures/02_detector_design.pdf": {
+      "sha256": "4ac616a98998b54b5459192325d2c60cdc9f2084d5918f53edee9ae5b9925384",
+      "bytes": 334533
+    },
+    "figures/02_detector_design.png": {
+      "sha256": "49bc2d6a78e237dd873e01b76ff44d2c79452a76f97c063f6b6f98e9974f2194",
+      "bytes": 1299148
+    },
+    "figures/02_detector_design.svg": {
+      "sha256": "c1424fbb400f1984042258eba1cf1b98fc00d65d874de99f67bae5f42a136343",
+      "bytes": 1448764
+    },
+    "figures/03_nema_mip_iterations.pdf": {
+      "sha256": "48985986787c09d03f5cc0a53e0ef392bb16a9799d60e8769855cbfa81871aed",
+      "bytes": 498832
+    },
+    "figures/03_nema_mip_iterations.png": {
+      "sha256": "267ecc42d223da1e26276f27f0365de9bf56605ed5f3d5e2c8accab2accd1f6f",
+      "bytes": 1033084
+    },
+    "figures/03_nema_mip_iterations.svg": {
+      "sha256": "3960b5cf5546e3897a8ef1665640af7b6a05a4b8bb96508fc7c67e6d46129b40",
+      "bytes": 796706
+    },
+    "scripts/plot_01_02_geometry.py": {
+      "sha256": "78e7c8b178b5603a3072e82781b79223adfc78595a8d9b1e960b4407e7f86638",
+      "bytes": 15070
+    },
+    "scripts/plot_03_nema_mip.py": {
+      "sha256": "3240bb005b0b1e5dc428ba91068db4bd0ddb2ca868f5ed4e66d72b0c6eaa5bc3",
+      "bytes": 17552
+    },
+    "data/03_displayed_mips.npz": {
+      "sha256": "352280d6fcb5bde49ba4e1af58162c77040dd41ca2890ff03f32b668cad3c69f",
+      "bytes": 1402567
+    },
+    "data/03_panel_metadata.csv": {
+      "sha256": "aa20e0df5a7c9316206a10124756d2fc0fd1094fdc789948ab205dae70e5300a",
+      "bytes": 12861
+    },
+    "data/03_primary_photon_definition.json": {
+      "sha256": "8d6e42b0fe4cae70e6ea224c4dc88d9adbba138da25f81b02b32279c1e2ae9e3",
+      "bytes": 3143
+    },
+    "data/03_scientific_qa.json": {
+      "sha256": "b5f64fee8efc093e689c99f6e9e3c0c28cc8859288bacc69d277696790342d45",
+      "bytes": 26237
+    },
+    "data/03_truth_arrays.npz": {
+      "sha256": "f5a49a0453675b5c2d659e2febc0254c6f6ba8792a514f34ce521a5663e53420",
+      "bytes": 53689
+    },
+    "data/03_visual_qa.json": {
+      "sha256": "fd84be75889c3b1e0af7c6c9f410956baa90dff73afc121d166fcb18be752e5c",
+      "bytes": 1457
+    },
+    "data/delivery_qa.json": {
+      "sha256": "6e97b1b0264fa2b47dd6ebb5c78eea40d6bfd0aff45d39c57214ded8891b0b61",
+      "bytes": 1940
+    },
+    "data/geometry_sources.json": {
+      "sha256": "79a9ecfe5d3a7f3908b300bd07115d2e43a2b4ffadb77c4840ddf0591fee0fab",
+      "bytes": 2008
+    },
+    "使用说明.txt": {
+      "sha256": "d17dbdae1352bf62e19679f7d3a5860fe1389c3a69b63dc5304ed5b0b68eccb0",
+      "bytes": 1236
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "script_sha256": "a9e7e4b1f1e68db442eb358139b191508beb0f5f39c76a8742035a24c1248f03",
+  "command": "sbatch --parsable -p gpu_5090 --qos=gpugpu -N1 -n1 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4 --time=2880 --exclude=wqd10nba06g6 --chdir=/tmp --dependency=afterok:1713940 --hold --job-name=DR5e9_JSCC_440_formal --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/logs/JSCC_440_formal.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/logs/JSCC_440_formal.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/scripts/JSCC_440_GPU_formal.sh",
+  "resolved": true,
+  "started_epoch": 1792383299.510559,
+  "registered_job": 1713943
+}
