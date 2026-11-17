@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "shared_input_sha_matches": {
+    "collections/NEMA_Body_H60_5e9.json": true,
+    "CntStat/218keV_RotateNum20_Geant4JSCC/CntStat_NEMA_Body_H60_5e9.csv": true,
+    "CntStat/440keV_RotateNum20_Geant4JSCC/CntStat_NEMA_Body_H60_5e9.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/1.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/2.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/3.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/4.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/5.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/6.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/7.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/8.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/9.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/10.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/11.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/12.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/13.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/14.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/15.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/16.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/17.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/18.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/19.csv": true,
+    "List/218-440keV_RotateNum20_Geant4JSCC/List_NEMA_Body_H60_5e9/20.csv": true
+  },
+  "shared_geometry": true,
+  "matched_original_440_matrix": true,
+  "common_background_voxels": 97604,
+  "roi_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "compared_frames": [
+    {
+      "flow": "new",
+      "iteration": 100,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "new",
+      "iteration": 500,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "new",
+      "iteration": 1000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "new",
+      "iteration": 2000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "new",
+      "iteration": 5000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "new",
+      "iteration": 10000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "old",
+      "iteration": 100,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "old",
+      "iteration": 500,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "old",
+      "iteration": 1000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "old",
+      "iteration": 2000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 0,
+      "interpolation_min_before_roundoff_correction": 0.0
+    },
+    {
+      "flow": "old",
+      "iteration": 5000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 7,
+      "interpolation_min_before_roundoff_correction": -6.103547355029715e-12
+    },
+    {
+      "flow": "old",
+      "iteration": 10000,
+      "native_finite_nonnegative": true,
+      "outside_zero": true,
+      "interpolation_negative_count": 20,
+      "interpolation_min_before_roundoff_correction": -7.025850387587518e-12
+    }
+  ],
+  "independent_physics_validation": false
+}

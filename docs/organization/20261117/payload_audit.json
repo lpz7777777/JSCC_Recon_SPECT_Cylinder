@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "scope": "staged-changes-only",
+  "changed_files": 674,
+  "blobs_checked": 639,
+  "total_blob_bytes": 7867697,
+  "largest_blobs": [
+    {
+      "bytes": 828673,
+      "oid": "7cd9176c7971ec6a5c35924581d1a0867138979a",
+      "paths": [
+        "docs/ac225/source_index.json"
+      ]
+    },
+    {
+      "bytes": 594930,
+      "oid": "4c98c7376fae373b3f6e92b46b7911f243f70e02",
+      "paths": [
+        "Analysis_Plots/research/nema_jscc5e10_20261026/data/metadata.json"
+      ]
+    },
+    {
+      "bytes": 352863,
+      "oid": "eb3627a4fb9db59e857c20e4f230416d6281549e",
+      "paths": [
+        "docs/ac225/source_dependencies.csv"
+      ]
+    },
+    {
+      "bytes": 228118,
+      "oid": "cb8757bd3273fb7471e3b4ba6b669609b2182d4a",
+      "paths": [
+        "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/data/metadata.json"
+      ]
+    },
+    {
+      "bytes": 227215,
+      "oid": "bf6d2d22edd676106b8a7dbf7ae92bb4567d87da",
+      "paths": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/data/metadata.json"
+      ]
+    },
+    {
+      "bytes": 212575,
+      "oid": "1d156413da190d09be3dbcd686da0efc40c5e5f8",
+      "paths": [
+        "Analysis_Plots/results/REPORT.html"
+      ]
+    },
+    {
+      "bytes": 206864,
+      "oid": "d7462f0c3c72802cad6a6e1d95eded565cf9b913",
+      "paths": [
+        "docs/ac225/directory_index.json"
+      ]
+    },
+    {
+      "bytes": 187947,
+      "oid": "49dfc404fadcdb725457881963f8f725c8ee1a20",
+      "paths": [
+        "docs/organization/20261117/git_candidates.csv"
+      ]
+    },
+    {
+      "bytes": 177702,
+      "oid": "f4c8d401a89596b7e2a2c2504632c13806eed880",
+      "paths": [
+        "docs/ac225/INDEX.html"
+      ]
+    },
+    {
+      "bytes": 170600,
+      "oid": "4469b22a92f9d6b0a6e4b2627988ac03a2bdad21",
+      "paths": [
+        "docs/ac225/code/shared-or-legacy-source/README.md"
+      ]
+    }
+  ],
+  "findings": []
+}

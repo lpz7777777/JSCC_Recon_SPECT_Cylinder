@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-29T12:42:52.493684+08:00",
+  "local_query_time": "2026-10-29T12:45:22.381059+08:00",
+  "time_basis": "remote UTC converted to Asia/Shanghai; local controller clock differs",
+  "job": 1740189,
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "all_slurm_steps_completed": true,
+  "start_time": "2026-10-27T04:17:57+08:00",
+  "end_time": "2026-10-29T02:59:15+08:00",
+  "elapsed": "1-22:41:18",
+  "progress": {
+    "phase": "complete",
+    "iteration": 10000,
+    "limit": 10000,
+    "contract_sha256": "c07fdadff9aa40b8498283216dd4c37df3c6ecb474602866a99bff54b8a9eb6f",
+    "updated_epoch": 1793213946.7300055
+  },
+  "checkpoints": {
+    "count": 200,
+    "latest": "checkpoint_010000",
+    "latest_mtime": 1793213942.953303,
+    "partial": []
+  },
+  "run_manifest_present": true,
+  "complete_formal": true,
+  "full_result_retrieved": true,
+  "strict_transfer_in_progress": false,
+  "log_notes": "24 end-of-run PyTorch device-id UserWarnings; no failure in all Slurm steps",
+  "source_directory": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261029_124522",
+  "source_sha256": {
+    "slurm.txt": "72a1a512c1bb50f0a861855aa02332bef77592094c9b3fce5b2a8d9030ade51c",
+    "queue.txt": "72a1a512c1bb50f0a861855aa02332bef77592094c9b3fce5b2a8d9030ade51c",
+    "accounting.txt": "ccea79d346382ce24be6a9cd226371d719e235088ca14b7c5f6ec59d0b48a9a1",
+    "runtime.json": "6794ec9870d02fa5be096002ed3e4740e2b68017939233cdeda33ba34e929a75"
+  },
+  "remote_read_only": true,
+  "local_consistency_passed": true,
+  "visualization_status": "complete",
+  "local_result": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\nema_joint5e10_formal_1740189_20261029\\result",
+  "strict_transfer_sha256": "9c27e596b1eb20ca7435174fa5e804e771662bd70f4127340860ba3e5c1763c7",
+  "numerical_check_sha256": "e047091a8af430f1a32b7b38242de414fd5068db53ade040c2779c912e1a5414",
+  "visual_report": "Analysis_Plots/research/nema_joint5e10_1740189_20261029/REPORT.html",
+  "result_delivery_sha256": "1f46f8c851cf98b0d7680a2e167a018d155bedb002bba14cea2e820add10b98d"
+}

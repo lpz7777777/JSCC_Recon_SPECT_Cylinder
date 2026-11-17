@@ -1,0 +1,29 @@
+{
+  "id": "actual-Derenzo-5e10-440-SC",
+  "kind": "actual",
+  "phantom": "Derenzo",
+  "dose": "5e10",
+  "energy_keV": 440,
+  "method": "SC",
+  "views": 20,
+  "job": {
+    "parent_formal": 1752461
+  },
+  "channel": "440_SinglePhoton",
+  "matrix": "frozen JSCC study",
+  "status": "component-delivered-parent-failed",
+  "iterations": 10000,
+  "report": "docs/ac225/studies/derenzo/derenzo-jscc-5e10-440-sc.md",
+  "evidence": "experiments/ELLIPSE500x300_H120/generated/derenzo_sc440_5e10_1752461_20261112/strict_transfer.json",
+  "scope_note": "1752461整体失败前已保存440 SC10000次/200帧；后续只补联合，不重算成功SC。",
+  "pointer": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/SC/README.md",
+  "grid": "polar6x3mm",
+  "material": "no-water",
+  "correction": "none",
+  "projection_source": "real-Geant4",
+  "width_percent": 100,
+  "physical_certification": "not-certified",
+  "numerical_qa": "see-original-evidence",
+  "visual_qa": "see-original-evidence",
+  "delivery": "strict-200-frames"
+}

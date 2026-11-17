@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "scope": "Actual13preview layout/source-faithful visual review, not physical or image-quality certification",
+  "reviewed_at": "2026-11-03T10:10:01.255005+08:00",
+  "manual_visual_review_pending": false,
+  "actual_preview_SHA256": {
+    "figures/compare20_60_energy_440_final72mm_preview.png": "7ab26b69017d0c01c654dc31f2ca3002b075a0f3a97d52db61a32e0ac3183a7e",
+    "figures/compare20_60_energy_440_final72mm_unclipped_preview.png": "255194fdaf8bd554dfcf1bdeeb1651762fef84cbe41c2b8c0175cda51f5033b4",
+    "figures/compare20_60_energy_218_final72mm_preview.png": "5c1cc1fd01f5c71b24efdc13b9090a848e1d256db2f00321882abf99623413e5",
+    "figures/compare20_60_energy_218_final72mm_unclipped_preview.png": "c500a5016724f94bcbb8564ad5ee7da5504682f8cbf0c2b7ff519a45867f5513",
+    "figures/compare20_60_final_native_metrics_preview.png": "12c942906a6c0d19db0bbd4d44336ccf269c7e64923d97e4d14e42bc97e7e43c",
+    "figures/four_dose_final_mip_72mm_preview.png": "e879878599641e79bc59d0626f81e35adcc1a75ffb8be0743c92376f231b179b",
+    "figures/four_dose_final_mip_72mm_unclipped_preview.png": "5ad9856f8fc73d3e50d3e013fe2d31f835aa2d42705c37481348c6be84b6db72",
+    "figures/energy_440_four_dose_iterations_72mm_preview.png": "02bfb5eab918f3f607d57c396023b7e64668e6d25cd15997137b04212128cfbc",
+    "figures/energy_440_four_dose_iterations_72mm_unclipped_preview.png": "2cc2a57a31db7f9f0972054d6ddcb08ae154f6dcc990859aebf2be7c65e43c9b",
+    "figures/energy_218_four_dose_iterations_72mm_preview.png": "9f96359fbc9fcefc9ab871c321e97f828418b80012df3aac83119c895a422fd1",
+    "figures/energy_218_four_dose_iterations_72mm_unclipped_preview.png": "a1d5b7c7106d5779d913b8591f8488331e974bec92dff25f79f5bc5181caa5a0",
+    "figures/all200_native_edge_and_source_error_preview.png": "6c2c4aa4a2de1c14304487d150ba0507a868dee7c5bf97d62e4e6a6af75c28ee",
+    "figures/selected6_original3D_ROI_BV_CNR_preview.png": "2b3285fb6d0faef720107fbd72adfb92712a21970fd0e7b7b7b83ffaff675dc2"
+  },
+  "root_reviewed_families": [
+    "compare20_60_energy_440_final72mm",
+    "compare20_60_energy_440_final72mm_unclipped",
+    "compare20_60_energy_218_final72mm",
+    "compare20_60_energy_218_final72mm_unclipped",
+    "compare20_60_final_native_metrics"
+  ],
+  "auxiliary_reviewed_families": [
+    "four_dose_final_mip_72mm",
+    "four_dose_final_mip_72mm_unclipped",
+    "energy_440_four_dose_iterations_72mm",
+    "energy_440_four_dose_iterations_72mm_unclipped",
+    "energy_218_four_dose_iterations_72mm",
+    "energy_218_four_dose_iterations_72mm_unclipped",
+    "all200_native_edge_and_source_error",
+    "selected6_original3D_ROI_BV_CNR"
+  ],
+  "auxiliary_review_sha256": "037ffe6a5f13c30187b34cb71eca2f752e018780150d044cc9675a98d2ebc388",
+  "original_plot_metadata_sha256": "628bd7531e25134db5c643bb26d21735054900fae3732b9da267c7ca39b93f33",
+  "independent_selected_display_qa_sha256": "82b17411417a03c75bc395a9707edc5d8527ba10f8655fda8bf87ca16c15919a",
+  "common_main_color_range": [
+    0,
+    10
+  ],
+  "common_unclipped_range": [
+    0,
+    99.7580032348633
+  ],
+  "checked": [
+    "All13actualpreviews viewed with image tool",
+    "Correctdose/energy/view/iterationlabels",
+    "FullXY andcentral72mm retained; no smoothing orbrightnessfit",
+    "Commonmain0to10scale with saturation disclosed andunclipped companion",
+    "Original20control sourceidentity and sameemission budget",
+    "Real low-count artifacts andresidualblur preserved",
+    "All200nativecurves separate from6actualframeBV-CNR",
+    "Response angularinterpolation approximation disclosed"
+  ],
+  "conclusion": "在相同总期望发射gamma量、200次MLEM下，这一次Poisson实现中，60角的外围ROI重建发射量占比在8个条件均下降，5e11/5e12时约下降49%至78%；5e9/5e10散斑仍然很强。全120mm原生源体积加权NRMSE并未普遍明显改善：440keV在5e9/5e10略升，高两档及218keV四档有所下降。5e12下，440的NRMSE为26.30%→25.53%，218为24.84%→23.07%。本轮同时改变了角采样、同环响应线性插值和独立Poisson实现，且无重复噪声实验；不能把差别单独归因于角度数，不宣布统计显著性或分辨率提升。同200次也不保证同等收敛。",
+  "physical_calibration_passed": false,
+  "image_quality_certification_passed": false,
+  "full1600_history_local_QA": false,
+  "causal_contribution_fraction_estimated": false
+}

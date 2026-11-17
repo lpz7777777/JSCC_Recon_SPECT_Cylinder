@@ -1,0 +1,15 @@
+{
+  "command": "sbatch --parsable -p gpu_5090 --qos=gpugpu -N 8 -n 8 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4 --time=4320 --job-name=DR5e10_JSCC_440_formal --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_mono_5e10_20261030/logs/JSCC_440_formal.%j.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_mono_5e10_20261030/logs/JSCC_440_formal.%j.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_mono_5e10_20261030/scripts/JSCC_440_formal.sh",
+  "dataset": "JSCC_440",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_mono_5e10_20261030/JSCC_440/run",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_mono_5e10_20261030/releases/cb71427a2d8071c3",
+  "nodes": 8,
+  "gpus_per_node": 4,
+  "actual_input_sha256": "fc026f01f6d3c3b0099273c3f09e60d1cd6c9175389b123a435be2b205d49f86",
+  "script_sha256": "1e6fe9c5dc76285bc7e892de35024c200dd6343ced0e2e9dabd3444593fa8a39",
+  "submitted_epoch": 1793351153.5217142,
+  "walltime_minutes": 4320,
+  "full_input_prevalidation_passed": false,
+  "separate_validation_required": false,
+  "job": 1752461
+}

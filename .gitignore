@@ -103,6 +103,22 @@ Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/FileGen
 *.zip
 .pytest_cache/
 
+# Local presentation dependencies and generated media; existing tracked evidence
+# remains tracked. Retain small source, metrics and provenance explicitly.
+node_modules/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.pdf
+*.pptx
+*.mp4
+*.tar
+*.tgz
+*.7z
+*.whl
+
 # Credentials remain outside the repository, including encrypted credentials.
 .ssh/
 .env

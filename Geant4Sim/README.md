@@ -1,3 +1,13 @@
+# Geant4输运工程
+
+[JSCC实现](Geant4Code/README.md)与[EHE实现](Geant4Code_EHE/README.md)使用各自探头/宏和源身份；当前研究的gamma预算、种子和原二进制由合同绑定。
+
+[当前225Ac代码路线](../docs/ac225/CODE_GUIDE.md) · [目录职责](../docs/ac225/DIRECTORY_MAP.md)
+
+真实输运、收集、OpenGATE与矩阵前投影的区别，以及最新HE/Cartesian研究见[完整工作流](../docs/ac225/WORKFLOW.md)。下文FOV120“正在运行”等均为2026年9月历史快照，不作为当前队列指令。探头、准直器、宏与二进制须按具体freeze/部署记录配套，不由文件名选择所谓latest。
+
+## 原组件说明
+
 # Geant4Sim
 
 > 2026-10-07索引：本文保留原阶段/兼容说明。当前完整218/440椭圆基准见[DUAL_ENERGY_BASELINE](../docs/DUAL_ENERGY_BASELINE.md)；旧快照中的任务状态不授权恢复试验，物理/科学限制以当前基准及研究回顾为准。

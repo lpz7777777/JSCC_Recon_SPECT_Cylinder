@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT/'docs/ac225/catalog.json'
 SOURCES = ROOT/'docs/ac225/source_index.json'
 DIRECTORIES = ROOT/'docs/ac225/directory_index.json'
+RESULTS = ROOT/'Analysis_Plots/results/data/current_results.json'
 
 
 def load(path):
@@ -33,7 +34,7 @@ def check(catalog, sources, directories=None):
     if len(ids) != len(set(ids)):
         errors.append('Duplicate experiment ids')
     for item in catalog['experiments']+catalog['components']:
-        for key in ['entries', 'evidence', 'local_data', 'figures']:
+        for key in ['entries', 'evidence', 'code', 'local_data', 'figures']:
             for value in item.get(key, []):
                 try:
                     path = relative_path(value)
@@ -57,7 +58,7 @@ def check(catalog, sources, directories=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
-    for name in ['list', 'show', 'find', 'files', 'dirs', 'check']:
+    for name in ['list', 'show', 'find', 'files', 'dirs', 'results', 'check']:
         command = sub.add_parser(name)
         command.add_argument('--json', action='store_true')
         if name in ['list', 'files', 'dirs']:
@@ -68,10 +69,20 @@ def main():
             command.add_argument('query')
         if name == 'files':
             command.add_argument('--group', default='')
+        if name == 'results':
+            for field in ['phantom','dose','energy','method','grid','material','projection-source','correction']:
+                command.add_argument('--'+field, default='')
+            command.add_argument('--topic', default='')
     args = parser.parse_args()
     catalog, sources, directories = load(CATALOG), load(SOURCES), load(DIRECTORIES)
     if args.command == 'check':
         result = check(catalog, sources, directories)
+    elif args.command == 'results':
+        filters={'phantom':args.phantom,'dose':args.dose,'energy_keV':args.energy,
+                 'method':args.method,'grid':args.grid,'material':args.material,
+                 'projection_source':args.projection_source,'correction':args.correction}
+        result=[r for r in load(RESULTS)['routes'] if matches(r,args.topic) and
+                all(not value or str(r.get(key,'')).casefold()==value.casefold() for key,value in filters.items())]
     elif args.command == 'show':
         found = [item for item in catalog['experiments']+catalog['components'] if item['id'] == args.id]
         if not found:
@@ -96,6 +107,8 @@ def main():
                 print(f"{item['id']:<33} {item['status']:<22} {item['title']}")
             elif args.command == 'dirs':
                 print(f"{item['role']:<35} {item['path']}")
+            elif args.command == 'results':
+                print(f"{item['id']:<42} {item['status']:<30} {item['report']}")
             else:
                 print(f"{item['group']:<22} {item['path']}  {item['purpose']}")
     if args.command == 'check' and not result['passed']:

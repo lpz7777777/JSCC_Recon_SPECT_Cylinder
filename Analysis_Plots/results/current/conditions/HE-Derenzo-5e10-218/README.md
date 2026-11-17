@@ -1,0 +1,34 @@
+# HE-Derenzo-5e10-218
+
+| 条件 | 值 |
+|---|---|
+| phantom | Derenzo |
+| dose | 5e10 |
+| energy_keV | 218 |
+| method | HE |
+| grid | Cartesian4mm |
+| material | no-water |
+| projection_source | real-Geant4 |
+| correction | none |
+| matrix | HE reused 46d438089710a6ce; Cartesian4mm |
+| width_percent | 100 |
+| views | 20 |
+| iterations | 200 |
+| job |  |
+| status | completed-delivered-visualized |
+| delivery | strict-200-frames |
+| numerical_qa | passed |
+| visual_qa | passed |
+| physical_certification | not-certified |
+
+4路800帧严格交付，数值/视觉与14页PowerPoint交付完成。复用HE NEMA响应，没有新响应发射；几何/网格/有限板近似仍未获物理认证。
+
+## 来源
+
+- [report](../../../../../experiments/ELLIPSE500x300_H120/studies/opengate_he_derenzo_20261116/COMPLETED_20261117.md)
+- [evidence](../../../../../experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e10_218/strict_delivery.json)
+- [source](../../../../../experiments/ELLIPSE500x300_H120/generated/opengate_he_derenzo_20261116)
+
+仅为条件指针，不复制数组；提交、计算完成、交付与物理结论分别判断。
+
+[全部结果](../../../REPORT.html)

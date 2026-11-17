@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "study": "opengate_ehe_nema5e10_20261113",
+  "release": "e4917ca0af75a2b5",
+  "created_utc": "2026-11-13T11:46:49.293710+00:00",
+  "files": {
+    "cpu_python.sh": {
+      "bytes": 758,
+      "sha256": "4ce90673b00a8f4f42d430f23b56b89b45c448967e4c6c65e69132baca2ab538"
+    },
+    "inherited_science.json": {
+      "bytes": 2454,
+      "sha256": "64cb2ac9287b50cc2d1b3d3d1e3df74b630ac76ad8fedbfbedfe463cde0b39ca"
+    },
+    "inputs/activity_218.mha": {
+      "bytes": 29435,
+      "sha256": "ea88f8e91d8d723044b86ed216d79e4cb37a6eb5ed9f6a7103288b0d54d1e870"
+    },
+    "inputs/activity_440.mha": {
+      "bytes": 29599,
+      "sha256": "4fd84a181cdb734e87a109700e50102ca0484c3bbc781b8d28b832c17ad8c26f"
+    },
+    "inputs/config.json": {
+      "bytes": 8970,
+      "sha256": "fb58675353d8bba861d71dec281697ff77411a6d00cf87b44c84effb455c4aa6"
+    },
+    "inputs/imaging_jobs.json": {
+      "bytes": 218043,
+      "sha256": "456a9d0c8fda45006e757cd2836df51bf908c661833a3aa136d33f0294568a12"
+    },
+    "inputs/response_jobs.json": {
+      "bytes": 35787,
+      "sha256": "b8cf2f01faa9f8fa7c892830f07fd0a0f77c54f3b680e34846f7aab477dc8c91"
+    },
+    "inputs/truth_3mm.npz": {
+      "bytes": 123700,
+      "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af"
+    },
+    "local_io_common.py": {
+      "bytes": 9848,
+      "sha256": "3ec83a97aefc1766a450132afa7e5eff2a66acfe8a21b884b313625dce50777c"
+    },
+    "opengate_ehe_archive_20261113.py": {
+      "bytes": 6911,
+      "sha256": "cecfa3b60629651bcb475a2172d1205beeddd7b1eb32561a00898fed8f36ddf2"
+    },
+    "opengate_ehe_common_20261113.py": {
+      "bytes": 9437,
+      "sha256": "dff92a4332aaca04ca90d84087831570c3878fcdfb0de99e962b438acc9d8c96"
+    },
+    "opengate_ehe_guard_20261113.py": {
+      "bytes": 3439,
+      "sha256": "a4bfced3d832b5003261334fd4bec30f07efab1e7a3fda035cc3eb9209e931a3"
+    },
+    "opengate_ehe_nema5e10_20261113.py": {
+      "bytes": 27135,
+      "sha256": "d69841b6c97c06fa61ba5fe74d33fb0505ea3b4e0a8d167f236cc6523c009a0f"
+    },
+    "opengate_ehe_nema5e10_archive_20261113.py": {
+      "bytes": 2673,
+      "sha256": "91d48a6c28a5c667d52634e6f500f2fcd162be60a15be7d4c7f43cdd13c5dbdc"
+    },
+    "opengate_ehe_projector_20261113.py": {
+      "bytes": 10254,
+      "sha256": "8f358fe0f5edca24ddcca1ded117d588beb2f833ff104d602afb5abf5c888469"
+    },
+    "opengate_ehe_recon_cpu_20261113.py": {
+      "bytes": 8923,
+      "sha256": "9dfdc5899137ea12e208472ca258014a2e27f2c908521111f3f2ca8ef268c09b"
+    },
+    "opengate_ehe_transport_20261113.py": {
+      "bytes": 14577,
+      "sha256": "46d9b8a8f9955073665fa8ba530a0a52ea969abb993e9c8914bcfebba9b9b37b"
+    }
+  },
+  "payload_relative": "payload",
+  "imaging_total": 50000000000,
+  "workers": 1000,
+  "concurrency": 160,
+  "source_parent_release": "f7231adc45ed8607",
+  "transport_byte_identical_to_corrected_parent": true,
+  "projector_byte_identical_to_parent": true,
+  "reused_response_workers": 88,
+  "imaging_observations_inherited": false,
+  "independent_validation_jobs": false,
+  "reconstruction_CPU_only_change": "accepted input budget 5e9 -> 5e10; numerical loops unchanged",
+  "reconstruction_CPU_parent_sha256": "3ee2725768c254a47c17ead21fce9d9740fc680574c9062efd37a3bdb0a4fe1e"
+}

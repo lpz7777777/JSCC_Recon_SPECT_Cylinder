@@ -1,0 +1,15 @@
+{
+  "reviewed_at": "2026-10-29T13:41:22.459655+08:00",
+  "review_method": "Actual view_image inspection of final corrected3D/front-view comparison and real-hole-axis section previews",
+  "layout_passed": true,
+  "four_side_orange_ring_visible_in_3D_and_planar_views": true,
+  "NaI_face_272x136_and_frame_292x156_labels_correct": true,
+  "real_hole_axis_section_visible": true,
+  "original_gray_NaI_blue_new_Pb_orange_distinguished": true,
+  "front_and_rear_openings_disclosed": true,
+  "proposal_not_new_simulation_disclosed": true,
+  "preview_sha256": {
+    "figures/ehe_shield_before_after_preview.png": "0de7e36ae9aace603933f8e3b4c28858f49655d8cb8b8a841f6feb382291d927",
+    "figures/ehe_shield_sections_preview.png": "60bb439cb8e902402207034f8ca823269fd2214fc14f2834d542788961ab5cf6"
+  }
+}

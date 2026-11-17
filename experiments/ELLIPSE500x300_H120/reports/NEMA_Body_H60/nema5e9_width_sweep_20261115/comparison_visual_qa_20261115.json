@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-15T14:30:33.838657+00:00",
+  "job": "1814153",
+  "complete_frames": 600,
+  "strict_delivery_receipt_sha256": "c4e7ba42fd85851c71c8c86ce8e604aee1dd01b2d23558c14fc03f0f8ebd83ff",
+  "visual_QA_passed": true,
+  "method_revision_QA_sha256": "e699cd9b931b5cac9299f0467c4c4fd7f131590917d81dfea69ed5c934d3c181",
+  "width_study_QA_sha256": "b6d272d5feeeb3701e742accf109cf617c443576a3a87fb2f0cdf2dadafd373e",
+  "finite_controller_pid_19060_absent": true,
+  "new_HPC_actions": false,
+  "physical_calibration_passed": false
+}

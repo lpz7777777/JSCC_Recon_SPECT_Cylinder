@@ -1,0 +1,24 @@
+{
+  "job": 1722760,
+  "stage": "formal",
+  "condition": "NEMA_JSCC_actual5e10_three_channels",
+  "nodes": 8,
+  "gpus_per_node": 2,
+  "channels": [
+    "440_SinglePhoton",
+    "218_SinglePhoton_CrossTalkCorrected",
+    "440_ComptonOnly"
+  ],
+  "iterations": 10000,
+  "save_step": 50,
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/formal_only_20261022_135623/nema/formal",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/formal_only_20261022_135623/science/058be7dda514dada",
+  "contract_sha256": "7c13d435f823b95ffaa68bfe2f689eec37bb6d7075e20130c3960e3e868ba645",
+  "authorization_sha256": "e78d0a0cd7ce351afa2a31d13eb983932fa7070389a4106e9127fbb64da48042",
+  "held": false,
+  "dependency": null,
+  "separate_validation_required": false,
+  "walltime_minutes": 14400,
+  "submitted_epoch": 1792649059.9357994,
+  "script_sha256": "a51bf89b15d7c340da8917ba08126090588c9d621615ed48dc266ba72cb0baf1"
+}

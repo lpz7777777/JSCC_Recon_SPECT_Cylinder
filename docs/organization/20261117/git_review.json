@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "staged_changed_files": 674,
+  "unexpected_staged_files": [],
+  "original_scientific_or_archive_bytes_normalized": [],
+  "frozen_or_archived_blob_SHA_errors": [],
+  "scope": "Reviewed content tree before adding these three small audit records; the final payload scanner also checks the audit records themselves.",
+  "blob_list": "staged_files.csv",
+  "payload_scan": "payload_audit.json",
+  "protected_files_SHA_unchanged": 621,
+  "Cartesian_frozen_files_verified": {
+    "95022158ffedcdd7": 60,
+    "a502c70af71dea0e": 61
+  },
+  "link_checks_passed": 4454,
+  "navigation_browser_filters_passed": true,
+  "scientific_execution": false,
+  "media_or_large_arrays_included": false,
+  "unrelated_preexisting_changes_preserved": true
+}

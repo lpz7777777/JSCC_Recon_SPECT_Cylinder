@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-29T13:27:25.582933+08:00",
+  "method_definitions": {
+    "SC": "单光子成像（JSCC探头）",
+    "JSCC": "同能量SC+Compton联合重建",
+    "EHE": "EHE探头单光子；实际Geant4投影"
+  },
+  "JSCC_is_joint_only_in_result_labels": true,
+  "cross_energy_sum": false,
+  "EHE_projection_source": "actual Geant4 only; forward+Poisson excluded",
+  "groups": [
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "methods": [
+        "SC",
+        "JSCC",
+        "EHE"
+      ],
+      "directory": "Analysis_Plots/results/NEMA/5e9/440keV",
+      "report": "Analysis_Plots/results/NEMA/5e9/440keV/REPORT.html",
+      "main_gallery": "Analysis_Plots/results/NEMA/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata_sha256": "fc97f96b53d7b8ef10369f86abcbcfe256d34a6f06654960bcf21ca705532a43"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "methods": [
+        "SC",
+        "EHE"
+      ],
+      "directory": "Analysis_Plots/results/NEMA/5e9/218keV",
+      "report": "Analysis_Plots/results/NEMA/5e9/218keV/REPORT.html",
+      "main_gallery": "Analysis_Plots/results/NEMA/5e9/218keV/figures/iteration_mip_72mm.png",
+      "metadata_sha256": "a3254ae676c83320bbf5beeec4c1e1a408ef7ebd58a4a8b29b82873a0a899055"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 440,
+      "methods": [
+        "SC",
+        "JSCC",
+        "EHE"
+      ],
+      "directory": "Analysis_Plots/results/NEMA/5e10/440keV",
+      "report": "Analysis_Plots/results/NEMA/5e10/440keV/REPORT.html",
+      "main_gallery": "Analysis_Plots/results/NEMA/5e10/440keV/figures/iteration_mip_72mm.png",
+      "metadata_sha256": "cf806669cd6d4d3574a882f0df401914fea462c65bcfb6a04586baa51a69c9d4"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 218,
+      "methods": [
+        "SC",
+        "EHE"
+      ],
+      "directory": "Analysis_Plots/results/NEMA/5e10/218keV",
+      "report": "Analysis_Plots/results/NEMA/5e10/218keV/REPORT.html",
+      "main_gallery": "Analysis_Plots/results/NEMA/5e10/218keV/figures/iteration_mip_72mm.png",
+      "metadata_sha256": "4cc3b9c4da6a0b9243710455ee1ad415dcc191d21939cea0e76ec881742d77c4"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "methods": [
+        "SC",
+        "JSCC",
+        "EHE"
+      ],
+      "directory": "Analysis_Plots/results/Derenzo/5e9/440keV",
+      "report": "Analysis_Plots/results/Derenzo/5e9/440keV/REPORT.html",
+      "main_gallery": "Analysis_Plots/results/Derenzo/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata_sha256": "e82437dafdfd5b64b5a2c1dfce490e16cbb4166ea1332bc9e80d85471d2eb079"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "methods": [
+        "SC",
+        "EHE"
+      ],
+      "directory": "Analysis_Plots/results/Derenzo/5e9/218keV",
+      "report": "Analysis_Plots/results/Derenzo/5e9/218keV/REPORT.html",
+      "main_gallery": "Analysis_Plots/results/Derenzo/5e9/218keV/figures/iteration_mip_72mm.png",
+      "metadata_sha256": "97e8804ee772e4b6ae2d1acd87d12932e640ce15bd3f9ef82518ba7c1d6b090a"
+    }
+  ],
+  "routes": [
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "SC",
+      "channel": "440_SinglePhoton",
+      "source_job": 1669255,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/Image_440_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/verification.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 1036.9020496292537,
+      "gallery": "Analysis_Plots/results/NEMA/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e9/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "source_job": 1669255,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/Image_440_SinglePlusCompton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/verification.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 1036.9020496292537,
+      "gallery": "Analysis_Plots/results/NEMA/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e9/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "EHE",
+      "channel": "440_SinglePhoton",
+      "source_job": 1679415,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal/Image_440_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json",
+      "saved_frames": 20,
+      "save_step": 10,
+      "selected_iterations": [
+        10,
+        20,
+        40,
+        60,
+        100,
+        200
+      ],
+      "normalization_density": 1036.9058469627134,
+      "gallery": "Analysis_Plots/results/NEMA/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e9/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "SC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "source_job": 1669255,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/Image_218_SinglePhoton_CrossTalkCorrected_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/verification.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 456.4035256096357,
+      "gallery": "Analysis_Plots/results/NEMA/5e9/218keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e9/218keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "source_job": 1679415,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/results/formal/Image_218_SinglePhoton_CrossTalkCorrected_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json",
+      "saved_frames": 20,
+      "save_step": 10,
+      "selected_iterations": [
+        10,
+        20,
+        40,
+        60,
+        100,
+        200
+      ],
+      "normalization_density": 456.39950822493626,
+      "gallery": "Analysis_Plots/results/NEMA/5e9/218keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e9/218keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "SC",
+      "channel": "440_SinglePhoton",
+      "source_job": 1722760,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/result",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/result/Image_440_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/strict_transfer.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 10369.105682131578,
+      "gallery": "Analysis_Plots/results/NEMA/5e10/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e10/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "source_job": 1740189,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/result",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/result/Image_440_SinglePlusCompton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/strict_transfer.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 10369.105682131578,
+      "gallery": "Analysis_Plots/results/NEMA/5e10/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e10/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "EHE",
+      "channel": "440_SinglePhoton",
+      "source_job": 1681346,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/results/formal",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/results/formal/Image_440_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/formal_summary.json",
+      "saved_frames": 20,
+      "save_step": 10,
+      "selected_iterations": [
+        10,
+        20,
+        40,
+        60,
+        100,
+        200
+      ],
+      "normalization_density": 10369.068524294238,
+      "gallery": "Analysis_Plots/results/NEMA/5e10/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e10/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "SC",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "source_job": 1722760,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/result",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/result/Image_218_SinglePhoton_CrossTalkCorrected_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/strict_transfer.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 4563.945133832929,
+      "gallery": "Analysis_Plots/results/NEMA/5e10/218keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e10/218keV/data/metadata.json"
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "EHE",
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "source_job": 1681346,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/results/formal",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200/results/formal/Image_218_SinglePhoton_CrossTalkCorrected_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/formal_summary.json",
+      "saved_frames": 20,
+      "save_step": 10,
+      "selected_iterations": [
+        10,
+        20,
+        40,
+        60,
+        100,
+        200
+      ],
+      "normalization_density": 4563.984444925511,
+      "gallery": "Analysis_Plots/results/NEMA/5e10/218keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/NEMA/5e10/218keV/data/metadata.json"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "SC",
+      "channel": "440_SinglePhoton",
+      "source_job": 1722673,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/result",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/result/Image_440_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/strict_transfer.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 9842.606251817895,
+      "gallery": "Analysis_Plots/results/Derenzo/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/Derenzo/5e9/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "channel": "440_SinglePlusCompton",
+      "source_job": 1722673,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/result",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/result/Image_440_SinglePlusCompton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/strict_transfer.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 9842.606251817895,
+      "gallery": "Analysis_Plots/results/Derenzo/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/Derenzo/5e9/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "EHE",
+      "channel": "440_SinglePhoton",
+      "source_job": 1705580,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_accepted",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_accepted/Image_440_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json",
+      "saved_frames": 200,
+      "save_step": 1,
+      "selected_iterations": [
+        10,
+        20,
+        40,
+        60,
+        100,
+        200
+      ],
+      "normalization_density": 9842.606251817895,
+      "gallery": "Analysis_Plots/results/Derenzo/5e9/440keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/Derenzo/5e9/440keV/data/metadata.json"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "SC",
+      "channel": "218_SinglePhoton",
+      "source_job": 1705508,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_accepted",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_accepted/Image_218_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json",
+      "saved_frames": 200,
+      "save_step": 50,
+      "selected_iterations": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "normalization_density": 10774.09579555208,
+      "gallery": "Analysis_Plots/results/Derenzo/5e9/218keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/Derenzo/5e9/218keV/data/metadata.json"
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "EHE",
+      "channel": "218_SinglePhoton",
+      "source_job": 1705512,
+      "source_directory": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_accepted",
+      "history_path": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_accepted/Image_218_SinglePhoton_history.float32",
+      "source_authority": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json",
+      "saved_frames": 200,
+      "save_step": 1,
+      "selected_iterations": [
+        10,
+        20,
+        40,
+        60,
+        100,
+        200
+      ],
+      "normalization_density": 10774.09579555208,
+      "gallery": "Analysis_Plots/results/Derenzo/5e9/218keV/figures/iteration_mip_72mm.png",
+      "metadata": "Analysis_Plots/results/Derenzo/5e9/218keV/data/metadata.json"
+    }
+  ],
+  "organization_policy": "Canonical figures live under phantom/dose/energy; original frozen arrays, evidence and dated research reports retain original paths; no raw-history copies.",
+  "known_limitations": [
+    "EHE original physical response limitations retained",
+    "Iterations across methods do not imply equal convergence",
+    "Derenzo218 and440 have different source geometries",
+    "5e9/5e10 labels denote gamma primary counts, not Ac225 decays"
+  ]
+}

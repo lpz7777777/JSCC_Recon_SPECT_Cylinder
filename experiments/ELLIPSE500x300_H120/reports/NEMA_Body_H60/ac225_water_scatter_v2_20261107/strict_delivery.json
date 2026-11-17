@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "routes": 8,
+  "checkpoints": 1600,
+  "release_sha256": "1d27e65945bb0b07bf319e802eae95c6c76ffd8dc5444bc543c7618b05a367ee",
+  "receipts": {
+    "EHE_5e9_fixed_mc_scatter_440": "3aa132585772238a14191447332c828ede756024d350a68f580027b43981b188",
+    "EHE_5e9_fixed_mc_scatter_218": "e9a123910b32d747ff5e2315155cbba97e6fc14375398b506af05c3679e5c871",
+    "EHE_5e10_fixed_mc_scatter_440": "68d849899ae59d66d890c17fd488c111e5819a9703209a235d06627a498fa200",
+    "EHE_5e10_fixed_mc_scatter_218": "a1bdd16d689553542052011f443602edb88de4f128e497bc48397490705fcc72",
+    "JSCC_5e9_fixed_mc_scatter_440": "fed745b0d3a2ead7076029ab3749e5e9a336fe77cfa65dfb3e3d0408dd0dcfa7",
+    "JSCC_5e9_fixed_mc_scatter_218": "b051c6b793beadf710a847e10ca1b3762120228ab8794a8ec4b77fbb7e159374",
+    "JSCC_5e10_fixed_mc_scatter_440": "f14609ff4d18355ed0fd555f5420759068a98f3c7ff4d7d0906a18224dfd8cc3",
+    "JSCC_5e10_fixed_mc_scatter_218": "22fddbd54ff9b08c4f32530b3264963d4485d114c968e0d47b4fbd758486c1b4"
+  }
+}

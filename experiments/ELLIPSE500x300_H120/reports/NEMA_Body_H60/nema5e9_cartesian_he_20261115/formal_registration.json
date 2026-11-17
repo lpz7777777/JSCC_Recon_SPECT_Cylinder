@@ -1,0 +1,17 @@
+{
+  "job": "1822462",
+  "time": "2026-11-17T05:39:39.957751+00:00",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/releases/95022158ffedcdd7",
+  "source_freeze": "95022158ffedcdd7",
+  "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/formal_1822462",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "total_GPUs": 8,
+  "routes": [
+    "440_SC",
+    "440_JSCC",
+    "218_SC"
+  ],
+  "iterations": 10000,
+  "save_step": 50
+}

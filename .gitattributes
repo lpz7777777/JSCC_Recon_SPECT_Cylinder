@@ -49,6 +49,22 @@ experiments/ELLIPSE500x300_H120/HISTORY_20261010.md -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/HISTORY_20261010.md -text whitespace=cr-at-eol
 tools/research/*.py -text whitespace=cr-at-eol
 
+# Preserve archived documentation tools exactly as recorded in moves.json.
+tools/legacy/ac225_navigation_20261103/** -text whitespace=cr-at-eol
+
+# New small research sources/receipts remain byte-identical to frozen identities.
+experiments/ELLIPSE500x300_H120/studies/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/*opengate*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/ac225_water*.py -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/ac225_corrections/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_*/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_*/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water*/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/** -text whitespace=cr-at-eol
+experiments/ELLIPSE500x300_H120/reports/EHE/** -text whitespace=cr-at-eol
+Analysis_Plots/research/**/REPORT.html -text whitespace=cr-at-eol
+Analysis_Plots/research/**/README.txt -text whitespace=cr-at-eol
+
 # Current ROI definitions, independent measurements and source-bound QA.
 experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/** -text whitespace=cr-at-eol
 experiments/ELLIPSE500x300_H120/nema_roi_policy.py -text whitespace=cr-at-eol

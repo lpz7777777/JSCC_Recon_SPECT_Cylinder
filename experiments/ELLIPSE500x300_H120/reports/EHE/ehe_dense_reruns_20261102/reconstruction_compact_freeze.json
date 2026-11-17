@@ -1,0 +1,18 @@
+{
+  "key": "dc95e7c06f45f849",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/releases/dc95e7c06f45f849",
+  "files": {
+    "contract.json": "93e6913c024ab2c8655c7ed3ed00edb7567fa856758d6fff163e0a2f41a91421",
+    "ehe_common.py": "c3b3eef4ba8db414b5ff28f5e20ffecaee78e14812329afa678c40317fba3bfe",
+    "ehe_dense_rerun_runtime_20261102.py": "c82a9556fbda32dc5c230b85b61fbc4bc3056e22b6d56478aacb7d81b6e3ba18",
+    "release_manifest.json": "5ccc8f59fec7c8647269a81080d1503743073efd887488574aeee59c4a82d01d",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994",
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4"
+  },
+  "matrix_parent_job": 1749085,
+  "unchanged_helpers": {
+    "torch_active_operator.py": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+    "single_checkpoint_mlem.py": "5df25dbd522e6e6747679eda75301d7cff0a8fd2a1a87a7d95e9e9a20c132994"
+  }
+}

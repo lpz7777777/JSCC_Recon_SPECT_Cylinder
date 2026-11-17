@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "scope": "Visual presentation and source fidelity; not certification of physical model, image quality or resolution",
+  "reviewed_at": "2026-11-02T19:05:53.657031+08:00",
+  "review_method": "Actual view_image inspection of all8 main/unclipped previews; root independently reviewed4main and corrected2overview previews",
+  "inspected_previews_sha256": {
+    "six_results_final_mip_72mm_preview.png": "a143e4d9be5a66844c61a6199c18cf7e612cc4f3dfaf8f5d0bd9e4ef662ce41b",
+    "six_results_final_mip_72mm_unclipped_preview.png": "395d28d4b0952f7b35021b93096e3cb7c8e70b4c5ab007ec13b445fc5db3275c",
+    "nema_5e9_iteration_mip_72mm_preview.png": "c37f72ad8c225cd26b269bc2d1021f7a9810fd1257293ac7ab984507a372725f",
+    "nema_5e9_iteration_mip_72mm_unclipped_preview.png": "64b5f405eaa37eed208fab0b02b0dc460c260e8234053a4319887cb5533155a6",
+    "nema_5e10_iteration_mip_72mm_preview.png": "3fb00ee27c2cf67040c4a859df9f35f1e40a1c1115ac32b35dd53140abbcfa5e",
+    "nema_5e10_iteration_mip_72mm_unclipped_preview.png": "cb411710df3072edc645c6b833854873d20bdfd99ac843cd526e7913f19e2261",
+    "derenzo_5e9_iteration_mip_72mm_preview.png": "bf645a3d67b0a4d7cebdc3a554110bc205ac5034626a4e588bd91dcea50a52ab",
+    "derenzo_5e9_iteration_mip_72mm_unclipped_preview.png": "daea1c414baceaaae6f0cb94564c9a4ca6963a6bab9cdaadb677d4382ac31a72"
+  },
+  "energy_dose_truth_iteration_labels_correct": true,
+  "center72mm_fullXY_no_smoothing_no_fitted_gain": true,
+  "no_off_canvas_text": true,
+  "overview_colorbar_tick_gap_fixed": true,
+  "original_artifacts_preserved": true,
+  "observations": [
+    "Prominent speckle and peripheral high values remain visible, especially5e9 and later iterations",
+    "NEMA5e10 has lower high-value clipping fractions on the same physical density ratio scale; no causal quality-improvement claim",
+    "Individual Derenzo rods are not clearly separated in these rendered results",
+    "Shared unclipped companions retain NEMA0-70.79479217529298 and Derenzo0-8.663682937622072; no image-specific rescaling"
+  ],
+  "physical_calibration_certified": false,
+  "full1200_frame_local_QA_claimed": false
+}

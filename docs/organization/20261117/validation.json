@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "links_checked": 4454,
+  "studies": 74,
+  "condition_routes": 98,
+  "route_kinds": {
+    "actual": 82,
+    "synthetic": 16
+  },
+  "protected_files": 621,
+  "archived_tools": 4,
+  "catalog_check": {
+    "passed": true,
+    "experiments": 74,
+    "indexed_sources": 1778,
+    "indexed_directories": 588,
+    "errors": [],
+    "local_only_missing": [],
+    "status_semantics": "Dated local evidence snapshot; no SSH query or job action"
+  },
+  "errors": [],
+  "no_scientific_runner_imports_or_execution": true,
+  "checked_at": "2026-11-17T07:04:22.203925+00:00",
+  "freeze_and_controller_checks": "protection_final.json",
+  "scientific_recomputations": 0
+}

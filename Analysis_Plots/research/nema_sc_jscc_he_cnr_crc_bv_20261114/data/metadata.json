@@ -1,0 +1,314 @@
+{
+  "study": "nema_sc_jscc_he_cnr_crc_bv_20261114",
+  "created_utc": "2026-11-14T15:43:19.046108+00:00",
+  "source_report": "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/index.html",
+  "source_ROI_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "source_metadata_sha256": "4e4668375e1ffe2091eef858cd4571b9524bd282ac04fbd44eee263d056263e0",
+  "source_truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "source_routes": [
+    {
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "SC",
+      "source_job": 1669255,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "normalization_density": 456.4035256096357,
+      "primary_counts": [
+        1469053733,
+        3530946267,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a"
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "SC",
+      "source_job": 1669255,
+      "channel": "440_SinglePhoton",
+      "normalization_density": 1036.9020496292537,
+      "primary_counts": [
+        1469053733,
+        3530946267,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b"
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "source_job": 1669255,
+      "channel": "440_SinglePlusCompton",
+      "normalization_density": 1036.9020496292537,
+      "primary_counts": [
+        1469053733,
+        3530946267,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af"
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "SC",
+      "source_job": 1722760,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "normalization_density": 4563.945133832929,
+      "primary_counts": [
+        14690247248,
+        35309752752,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "be434694a16cf81efc163b52a59efb3dea99e132e334618eecc14378e2ca1da5"
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "SC",
+      "source_job": 1722760,
+      "channel": "440_SinglePhoton",
+      "normalization_density": 10369.105682131578,
+      "primary_counts": [
+        14690247248,
+        35309752752,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "5341918d2936cc1634efa88a341c0039a85bd99385af03c58d7495cea7526eb3"
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "source_job": 1740189,
+      "channel": "440_SinglePlusCompton",
+      "normalization_density": 10369.105682131578,
+      "primary_counts": [
+        14690247248,
+        35309752752,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "eb94088696bcccc3c355839928ecafb13d207ce731974d71143eaf9deb9ab1a9"
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "218_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "440_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "218_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "440_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    }
+  ],
+  "doses": [
+    "5e9",
+    "5e10"
+  ],
+  "energies_keV": [
+    440,
+    218
+  ],
+  "methods": {
+    "440": [
+      "SC",
+      "JSCC",
+      "HE"
+    ],
+    "218": [
+      "SC",
+      "HE"
+    ]
+  },
+  "sphere_diameters_mm": {
+    "hot": {
+      "440": [
+        13,
+        22,
+        37
+      ],
+      "218": [
+        10,
+        17,
+        28
+      ]
+    },
+    "cold": {
+      "440": [
+        10,
+        17,
+        28
+      ],
+      "218": [
+        13,
+        22,
+        37
+      ]
+    }
+  },
+  "background_voxels": 97604,
+  "background_std_ddof": 1,
+  "sphere_center_margin_mm": 1.5,
+  "views": 20,
+  "BV_definition": "Spatial sample CV across common background voxels; includes nonuniformity/artifacts, not repeated-acquisition noise or standard multi-small-ROI NEMA BV",
+  "figures": [
+    "cnr_bv_440keV",
+    "crc_bv_440keV",
+    "cnr_bv_218keV",
+    "crc_bv_218keV",
+    "cnr_bv_440keV_cold",
+    "crc_bv_440keV_cold",
+    "cnr_bv_218keV_cold",
+    "crc_bv_218keV_cold"
+  ],
+  "main_figures": [
+    "cnr_bv_440keV",
+    "crc_bv_440keV",
+    "cnr_bv_218keV",
+    "crc_bv_218keV"
+  ],
+  "supplemental_cold_figures": [
+    "cnr_bv_440keV_cold",
+    "crc_bv_440keV_cold",
+    "cnr_bv_218keV_cold",
+    "crc_bv_218keV_cold"
+  ],
+  "CRC_is_contrast_recovery_not_absolute_hot_activity_recovery": true,
+  "signed_cold_CNR": true,
+  "all_same_sphere_dose_panels_share_axis_limits": true,
+  "connections": "actual saved iteration order, never BV order",
+  "start_marker": "open circle: SC/JSCC50, HE1",
+  "endpoint_marker": "filled circle: SC/JSCC10000, HE200",
+  "ideal_CRC_percent": 100,
+  "CRC_axis_limits_from_all_actual_points": true,
+  "ideal_reference_line_only_when_inside_axis": true,
+  "SC_JSCC_saved_iterations": "50..10000 step50",
+  "HE_saved_iterations": "1..200 step1",
+  "initial_CNR_empty_rows_retained": 36,
+  "points_file": "data/curve_points.csv",
+  "endpoint_file": "data/endpoint_summary.csv",
+  "script_archive": "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114/scripts/plot_nema_sc_jscc_he_cnr_crc_bv_20261114_3bee7d49419d.py",
+  "numerical_QA_passed": true,
+  "visual_QA_passed": true,
+  "physical_calibration_passed": false,
+  "spatial_resolution_certified": false,
+  "new_image_metrics": false,
+  "new_reconstruction": false,
+  "new_transport": false,
+  "new_HPC_connection": false,
+  "parent_visual_QA_file": "data/parent_visual_qa.json",
+  "parent_formula_audit_file": "data/parent_independent_formula_audit.json",
+  "delivery_status": "completed-curve-comparison-with-model-limitations"
+}

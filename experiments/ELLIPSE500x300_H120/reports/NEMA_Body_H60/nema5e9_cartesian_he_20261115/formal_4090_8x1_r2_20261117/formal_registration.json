@@ -1,0 +1,27 @@
+{
+  "time": "2026-11-17T06:01:37.425263+00:00",
+  "job": "1822534",
+  "release": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/releases/a502c70af71dea0e",
+  "source_freeze": "a502c70af71dea0e",
+  "scientific_parent_freeze": "95022158ffedcdd7",
+  "result": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/formal_1822534",
+  "nodes": 8,
+  "gpus_per_node": 1,
+  "total_GPUs": 8,
+  "GPU": "RTX4090",
+  "partition": "gpu_4090",
+  "allocated_cpus_per_node": 8,
+  "compute_threads_per_rank": 8,
+  "expected_memory_MiB_per_node": 80000,
+  "memory_policy": "platform default; actual allocation checked in formal job",
+  "iterations": 10000,
+  "save_step": 50,
+  "routes": [
+    "440_SC",
+    "440_JSCC",
+    "218_SC"
+  ],
+  "shared_matrices": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/matrices",
+  "parent_5090_job": "1822462",
+  "parent_5090_preserved": true
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "reviewed_at": "2026-10-29T14:04:05.416851+08:00",
+  "review_method": "Actual tool view_image inspection of all seven preview PNGs",
+  "reviewed_png_sha256": {
+    "figures/selected_crystals_preview.png": "e606ab05cad4e971c0d72b9fdd98b55449582b269d5dc5157110f93d4908a560",
+    "figures/response_440_mip120_preview.png": "03a6514f40d794f82f96ac9f3435beb93fd83d625e4820ee739fec2f948e60c0",
+    "figures/response_218_mip120_preview.png": "fdc87f57b5a57627047b5e3d561228180b80988146dd42d41556d627bd176411",
+    "figures/response_440_xy_z1p5_preview.png": "06000905a459a174a858a0583c141c3562ab3ce0d03053f10533c10f8313dfe2",
+    "figures/response_440_xz_y1p5_preview.png": "4fc655b3105c722561bffdff290ed07013d17ce54187e445408aa27e0e95ea0b",
+    "figures/response_218_xy_z1p5_preview.png": "47fae744f854e8a3da1fda26ea2c9b91513c8b231cb6bb61543237f75b691313",
+    "figures/response_218_xz_y1p5_preview.png": "bd9e924af79e7fede85aff285dcc852e505f9da4bbce108c75f859efa28c1102"
+  },
+  "layout_legible_no_overlap_or_clipping": true,
+  "crystal_positions_and_IDs_match_labels": true,
+  "both_energies_use_same_absolute_log_colorbar": true,
+  "full120mm_MIP_and_slice_coordinates_visible": true,
+  "central218keV_XY_upper_edge_crystals_near_white_is_preserved": true,
+  "observations": [
+    "The 440 keV current model shows a much broader low-amplitude response field than 218 keV.",
+    "The XZ plane retains the visible multi-lobed 440 keV pattern; no smoothing or threshold removal was applied.",
+    "The upper-edge crystals are centered at z=66 mm, outside the full FOV z upper boundary=60 mm; central XY and full-z MIP must be distinguished."
+  ],
+  "physical_cause_not_assigned_from_visualization_alone": true
+}

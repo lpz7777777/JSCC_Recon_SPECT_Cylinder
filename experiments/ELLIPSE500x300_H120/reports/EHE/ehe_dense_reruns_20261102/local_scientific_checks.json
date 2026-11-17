@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "runtime": "local_CPU",
+  "cases": [
+    {
+      "seed": 91,
+      "empty_events": false,
+      "joint_100_all_history_values_identical": true,
+      "checkpoint_callback_values_identical": true,
+      "EHE_single_and_additive_100_history_identical": true,
+      "matched_fraction_S_passed": true
+    },
+    {
+      "seed": 92,
+      "empty_events": true,
+      "joint_100_all_history_values_identical": true,
+      "checkpoint_callback_values_identical": true,
+      "EHE_single_and_additive_100_history_identical": true,
+      "matched_fraction_S_passed": true
+    }
+  ],
+  "all_64_embedded_sample_partitions_passed": true,
+  "actual_all_6872376_event_partition_coverage_passed": true,
+  "full_input_GPU_prevalidation_passed": false,
+  "original_joint_AST_identical": true
+}

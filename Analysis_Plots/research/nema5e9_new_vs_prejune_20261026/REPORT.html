@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NEMA 5e9 新旧 Compton 对比</title>
+<style>body{font:17px/1.7 "Microsoft YaHei",sans-serif;max-width:1450px;margin:32px auto;padding:0 24px;color:#243142}img{width:100%}table{border-collapse:collapse}td,th{padding:9px 18px;border:1px solid #ccd4dc}h1{font-size:28px}h2{font-size:22px}</style>
+<h1>NEMA 5e9：新旧流程的 440 keV 纯 Compton 对比</h1>
+<p>新流程 1669255（v5 连续能量核、MLEM）与旧流程适配 1739632（严格角度核、配套 S、OSEM8）。20份原始 List、两份 CntStat 和 collection 共23项 SHA 一致，几何和440矩阵一致。新/旧分别选中483743/484815事件。</p>
+<img src="figures/final_mip72.png"><img src="figures/iteration_mip72.png">
+<h2>第10000次：相同三维 ROI</h2><p>BV=背景标准差/背景均值×100%；CNR=(球均值−背景均值)/背景标准差。这两项不受整体常数倍亮度变化影响。使用全部97604个合格背景体素，排除六球、肺和边界；球ROI按中心距球面≥1.5mm，等权。指标从三维图计算，不能等同MIP二维噪声。</p>
+<table><tr><th>流程</th><th>BV (%)</th><th>CNR 13 mm</th><th>CNR 22 mm</th><th>CNR 37 mm</th><th>体积积分/440发射数</th></tr><tr><td>新流程 v5 · MLEM</td><td>247.186</td><td>-0.355</td><td>3.820</td><td>2.578</td><td>0.999</td></tr><tr><td>旧流程适配 · OSEM8</td><td>712.196</td><td>-0.140</td><td>1.394</td><td>0.865</td><td>0.127</td></tr></table>
+<p>当前旧流程适配结果仍有明显的同心环/斑点，后期背景起伏更大；不能认为恢复旧核就消除了环伪影。流程同时改变了响应、S、筛选、变量/初值及求解，不能凭此对比单独认定是哪一项造成。</p>
+<h2>显示与比较边界</h2><p>两组均转成密度，除以相同的理论440背景发射密度。中心72mm（24层中心−34.5至34.5mm）MIP，完整XY，同一3mm线性插值，gray_r白低黑高，无平滑、无拟合增益。旧版交付density已经除过有效体积，本次未重复除体积、未额外乘8。旧版每个子集除完整S的约定保留，因而总量约为新流程的1/8；这与空间伪影是不同问题。</p>
+<p>固定色阶0–10用于观察结构，超过10会饱和；以下提供两组共同的完整范围色阶，原数组和指标不截断。相同迭代编号不是相同更新次数或收敛程度：旧OSEM8每轮有8次子集更新。本实验是旧流程对当前440 keV/FOV的适配，不能称原历史511 keV结果的精确重放。5e9为218+440初级gamma合计，440实际3530946267个，不是5e9次Ac225衰变。</p>
+<img src="figures/final_mip72_fullrange.png"><img src="figures/iteration_mip72_fullrange.png">
+<p><a href="data/metrics.csv">各迭代指标</a> · <a href="data/sphere_metrics.csv">全部球指标</a> · <a href="data/metadata.json">数据和显示口径</a> · <a href="data/scientific_qa.json">一致性检查</a></p></html>

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "reviewed_figures": [
+    "figures/final_mip72.png",
+    "figures/iteration_mip72.png",
+    "figures/final_mip72_fullrange.png"
+  ],
+  "layout": "Chinese labels, colorbars, titles and iteration order visible; no overlap or missing panels",
+  "observations": "Both final images show concentric spatial artifacts. Historical adaptation has sparse, intense ring-aligned spots. Full-range view exposes 0-10 saturation.",
+  "old_mips_exactly_match_previous_delivery": true,
+  "truth_exactly_matches_previous_delivery": true,
+  "clinical_or_physics_quality_certified": false
+}

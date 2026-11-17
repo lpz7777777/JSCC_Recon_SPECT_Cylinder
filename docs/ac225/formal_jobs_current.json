@@ -1,0 +1,452 @@
+{
+  "schema_version": 3,
+  "generated_at": "2026-11-17T15:04:13.843704+08:00",
+  "read_only": true,
+  "no_automatic_actions": true,
+  "experiments": {
+    "nema-5e10-v5-joint": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-complete-history",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1740189
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/formal_job.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/latest_status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/scheduler_script_check.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261027_135215/status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261028_132132/status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261029_124522/status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/result_delivery.json",
+        "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/strict_transfer.json",
+        "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/numerical_check.json",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data/scientific_qa.json",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data/visual_qa.json",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data/independent_numeric_qa.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-jscc-5e10": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-complete-history",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1722760
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623/final_queue.json",
+        "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623/nema_formal_job.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-jscc-5e9-v5": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-historical-delivery",
+      "visual_status": "reviewed-current-ROI",
+      "jobs": {
+        "formal": 1669255
+      },
+      "evidence": [],
+      "physical_calibration_passed": null
+    },
+    "nema-ehe-g4-5e9": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": {
+        "formal": 1679415
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-ehe-poisson-5e9": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "reference-only",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": {
+        "formal": 1680255
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-ehe-g4-5e10": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": {
+        "formal": 1681346
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-ehe-poisson-5e10": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "reference-only",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": {
+        "formal": 1683357
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-jscc-218": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "validation": 1705505,
+        "validation_verify": 1705507,
+        "formal": 1705508,
+        "formal_verify": 1706056
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-jscc-440": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1722673
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623/final_queue.json",
+        "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022_v3/derenzo/JSCC_440/formal_job.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-ehe-218": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": {
+        "validation": 1705509,
+        "validation_verify": 1705510,
+        "formal": 1705512,
+        "formal_verify": 1705779
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-ehe-440": {
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": {
+        "validation": 1705578,
+        "validation_verify": 1705579,
+        "formal": 1705580,
+        "formal_verify": 1705853
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-ehe-dense-5e9": {
+      "observed_at": "2026-11-03T11:31:24.565093+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          "1761244_0"
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-ehe-dense-5e10": {
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          "1761244_1"
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-ehe-dense-5e9": {
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          "1761244_2",
+          "1761244_3"
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "ehe-dense-matrix": {
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "matrix-identity-bound",
+      "visual_status": "not-an-image-study",
+      "jobs": {
+        "formal_original": 1749085,
+        "missing_block_repair": "1749513_7"
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_surface_20261029/latest_status.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/reconstruction_compact_freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/local_scientific_checks.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "ehe-nema-poisson-20view": {
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-selected-48;remote-all1600",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal_array": 1762238
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102/delivery_selected_strict.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102/final_delivery_qa.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/direct_visual_review.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/independent_selected_display_qa.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "ehe-nema-poisson-60view": {
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-selected-48;remote-all1600",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal_array": 1762460
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_60view_poisson_20261102/delivery_selected_strict.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_60view_poisson_20261102/visual_delivery_summary_20261103.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/direct_visual_review.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/independent_selected_display_qa.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-jscc-5e10-218": {
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "not-yet-indexed-gallery",
+      "jobs": {
+        "formal": 1752710
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_218/formal_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_218/formal_job.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-jscc-5e10-440-sc": {
+      "observed_at": "2026-11-12",
+      "compute_status": "SC-saved10000;parentFAILED",
+      "delivery_status": "strict-delivered",
+      "visual_status": "see-meeting-report",
+      "jobs": {
+        "parent_formal": 1752461
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/failure_1752461_root_cause_20261102.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_440/formal_job.json",
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_sc440_5e10_1752461_20261112/strict_transfer.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-jscc-5e10-440-joint": {
+      "observed_at": "2026-11-12",
+      "compute_status": "FAILED-at-9950",
+      "delivery_status": "strict-partial-199-frames",
+      "visual_status": "reviewed-preview",
+      "jobs": {
+        "formal": 1771220,
+        "parent": 1769020,
+        "historical_64gpu": 1761195
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_continue_20261104/preview_20261112.json",
+        "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/data/metadata.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "derenzo-ehe-dense-5e10": {
+      "observed_at": "2026-11-04",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          1769915
+        ]
+      },
+      "evidence": [
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/data/metadata.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-prejune-compton": {
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1739632
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_8x1_20261026/README.md",
+        "Analysis_Plots/research/nema_prejune_compton_1739632_20261026/data/metadata.json"
+      ],
+      "physical_calibration_passed": null
+    },
+    "nema-cartesian-5090": {
+      "observed_at": "2026-11-17",
+      "compute_status": "FAILED",
+      "delivery_status": "not-delivered",
+      "visual_status": "not-started",
+      "jobs": {
+        "formal": 1822462
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_registration.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/matrix_strict_transfer.json",
+        "docs/organization/20261117/remote_readonly.json",
+        "docs/organization/20261117/remote_logs_readonly.json",
+        "docs/organization/20261117/remote_final_readonly.json",
+        "docs/organization/20261117/remote_logs_final_readonly.json",
+        "docs/organization/20261117/protection_final.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    "nema-cartesian-4090-r2": {
+      "observed_at": "2026-11-17",
+      "compute_status": "FAILED",
+      "delivery_status": "not-delivered",
+      "visual_status": "not-started",
+      "jobs": {
+        "formal": 1822534,
+        "parent_5090": 1822462
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/formal_registration.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/execution_equivalence.json",
+        "docs/organization/20261117/remote_readonly.json",
+        "docs/organization/20261117/remote_logs_readonly.json",
+        "docs/organization/20261117/remote_final_readonly.json",
+        "docs/organization/20261117/remote_logs_final_readonly.json",
+        "docs/organization/20261117/protection_final.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    "nema-width-sweep": {
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1814153,
+        "failed_predecessor": 1813383
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/strict_delivery_1814153.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/comparison_visual_qa_20261115.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/freeze_resume_r5.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    "water-scatter-v2": {
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "see-dated-overview",
+      "jobs": {
+        "440": 1783495,
+        "218": 1783499
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107/frozen_projection_QA.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    "opengate-he-derenzo": {
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "imaging": [
+          16649504,
+          16649586,
+          16649668,
+          16650224
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/controller_exit.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/PPT_delivery_20261117.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e9_218/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e9_440/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e10_218/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e10_440/strict_delivery.json"
+      ],
+      "physical_calibration_passed": false
+    }
+  }
+}

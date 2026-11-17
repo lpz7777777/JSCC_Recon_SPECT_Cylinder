@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "displayed_original_checkpoint_frames": 36,
+  "channels": 6,
+  "every_displayed_member_SHA_verified": true,
+  "every_displayed_full_active_domain_checked": true,
+  "selected_history_byte_identity_proven_by_strict_receipt": true,
+  "all_original_sources_unchanged": true,
+  "actual_Geant4_only": true,
+  "no_reconstruction": true,
+  "no_HPC_jobs": true,
+  "no_smoothing": true,
+  "no_fitted_gain": true,
+  "native_72mm_24layer_MIP_verified": true,
+  "truth_geometry_and_photon_counts_verified": true,
+  "full1200_frame_local_QA_claimed": false,
+  "visual_QA_status": "passed actual image inspection: presentation/source fidelity only",
+  "independent_display_QA": "data/independent_display_qa.json"
+}

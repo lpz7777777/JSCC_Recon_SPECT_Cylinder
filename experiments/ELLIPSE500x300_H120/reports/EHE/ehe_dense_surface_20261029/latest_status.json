@@ -1,0 +1,66 @@
+{
+  "job": 1749085,
+  "queue": "1749085_6|EHE_dense256_218440|RUNNING|19:31:33|wqd10nbj03g1\n1749085_5|EHE_dense256_218440|RUNNING|19:34:06|wqd10nbj03g1\n1749085_4|EHE_dense256_218440|RUNNING|19:34:37|wqd10nah10g1\n1749085_3|EHE_dense256_218440|RUNNING|19:35:38|wqd10nbj05g5\n1749085_2|EHE_dense256_218440|RUNNING|19:35:38|wqd10nbj04g3\n1749085_1|EHE_dense256_218440|RUNNING|19:38:11|wqd10nbj04g3\n1749085_0|EHE_dense256_218440|RUNNING|19:38:11|wqd10naf02g2\n",
+  "accounting": "1749085_0|RUNNING|0:0|19:38:11||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_0.batch|RUNNING|0:0|19:38:11||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_0.extern|RUNNING|0:0|19:38:11||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_1|RUNNING|0:0|19:38:11||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_1.batch|RUNNING|0:0|19:38:11||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_1.extern|RUNNING|0:0|19:38:11||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_2|RUNNING|0:0|19:35:38||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_2.batch|RUNNING|0:0|19:35:38||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_2.extern|RUNNING|0:0|19:35:38||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_3|RUNNING|0:0|19:35:38||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_3.batch|RUNNING|0:0|19:35:38||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_3.extern|RUNNING|0:0|19:35:38||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_4|RUNNING|0:0|19:34:37||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_4.batch|RUNNING|0:0|19:34:37||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_4.extern|RUNNING|0:0|19:34:37||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_5|RUNNING|0:0|19:34:06||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_5.batch|RUNNING|0:0|19:34:06||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_5.extern|RUNNING|0:0|19:34:06||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_6|RUNNING|0:0|19:31:33||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_6.batch|RUNNING|0:0|19:31:33||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_6.extern|RUNNING|0:0|19:31:33||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_7|FAILED|1:0|00:00:10||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_7.batch|FAILED|1:0|00:00:10|33420K|cpu=6,gres/gpu=1,mem=94500M,node=1\n1749085_7.extern|COMPLETED|0:0|00:00:10|0|billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n",
+  "progress": {
+    "completed_blocks": [],
+    "PE_progress": {
+      "A218/slab_0/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1472,
+        "total_rows": 2312,
+        "elapsed_seconds": 70461.861377359
+      },
+      "A218/slab_1/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1808,
+        "total_rows": 2312,
+        "elapsed_seconds": 70526.579139638
+      },
+      "A218/slab_2/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1832,
+        "total_rows": 2312,
+        "elapsed_seconds": 70313.313489561
+      },
+      "A218/slab_3/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1504,
+        "total_rows": 2312,
+        "elapsed_seconds": 70259.970526813
+      },
+      "A440/slab_0/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1452,
+        "total_rows": 2312,
+        "elapsed_seconds": 70341.911671725
+      },
+      "A440/slab_1/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1808,
+        "total_rows": 2312,
+        "elapsed_seconds": 70327.936698329
+      },
+      "A440/slab_2/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1832,
+        "total_rows": 2312,
+        "elapsed_seconds": 70140.990194521
+      },
+      "A440/slab_3/PE_progress.json": {
+        "status": "running",
+        "completed_rows": 1300,
+        "total_rows": 2312,
+        "elapsed_seconds": 60777.687019882
+      }
+    },
+    "completion": null
+  },
+  "checked_epoch": 1793333687.5154104,
+  "bounded_repair": {
+    "job": 1749513,
+    "replaces": "1749085_7",
+    "queue": "1749513_7|EHE_dense256_retry7|RUNNING|16:57:11|wqd10nah09g3\n",
+    "accounting": "1749513_7|RUNNING|0:0|16:57:11||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n1749513_7.batch|RUNNING|0:0|16:57:11||cpu=6,gres/gpu=1,mem=94500M,node=1\n1749513_7.extern|RUNNING|0:0|16:57:11||billing=6,cpu=6,gres/gpu=1,mem=94500M,node=1\n"
+  }
+}

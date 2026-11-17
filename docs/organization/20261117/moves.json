@@ -1,0 +1,26 @@
+[
+  {
+    "source": "tools/research/refresh_ac225_navigation.py",
+    "destination": "tools/legacy/ac225_navigation_20261103/refresh_ac225_navigation.py",
+    "sha256": "14e12a2047b06cb2a464f236b57b86a79951c70f1abe348b6dbbad1307d2e0b4",
+    "reason": "Historical documentation generator; stale status templates and AGENTS writer are retired. No scientific code."
+  },
+  {
+    "source": "tools/research/ac225_navigation_documents.py",
+    "destination": "tools/legacy/ac225_navigation_20261103/ac225_navigation_documents.py",
+    "sha256": "5c458579bd5de7b92a646f028493c54a7c4d463c7bd10a33d6e41cb3d0b766fd",
+    "reason": "Historical documentation generator; stale status templates and AGENTS writer are retired. No scientific code."
+  },
+  {
+    "source": "tools/research/verify_ac225_navigation.py",
+    "destination": "tools/legacy/ac225_navigation_20261103/verify_ac225_navigation.py",
+    "sha256": "aded942bc7ee8e2e079db02b1afab9614d0c4cd042cdf8113d70c29ebbc944e1",
+    "reason": "Historical documentation generator; stale status templates and AGENTS writer are retired. No scientific code."
+  },
+  {
+    "source": "tools/research/prepare_ac225_registry_20261103.py",
+    "destination": "tools/legacy/ac225_navigation_20261103/prepare_ac225_registry_20261103.py",
+    "sha256": "3b67ed1f7c201868beb06b452e805d968df43b685aed72c3f8fbbb8e39efa2a8",
+    "reason": "Historical documentation generator; stale status templates and AGENTS writer are retired. No scientific code."
+  }
+]

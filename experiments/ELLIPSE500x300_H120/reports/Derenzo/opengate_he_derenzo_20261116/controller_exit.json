@@ -1,0 +1,32 @@
+{
+  "pid": 34176,
+  "create_time": 1794835742.5392032,
+  "cmdline": [
+    "C:\\Users\\Lipeize\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-X",
+    "utf8",
+    "-u",
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\studies\\opengate_he_derenzo_20261116\\controller.py"
+  ],
+  "status": "COMPLETED",
+  "started_utc": "2026-11-16T13:29:03.055109+00:00",
+  "deadline_epoch": 1794878943.0541155,
+  "bindings": {
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\studies\\opengate_he_derenzo_20261116\\controller.py": "9304b6cbc603f318f7f3eebc32f11e57b87b6c36fa255ddc5e9f63ab756e562c",
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\studies\\opengate_he_derenzo_20261116\\workflow.py": "256dc4eac5e101b24b27bdfba0cdba03a49b25fecbdba348332865d7b610b97b"
+  },
+  "release": "34a52489b6362ba0",
+  "scope": "four HE Derenzo acquisitions only; strict fetch, local 8-CPU MLEM200/save1, final numerical QA",
+  "recurring_automation": false,
+  "automatic_scientific_resubmission": false,
+  "passed": true,
+  "ended_utc": "2026-11-16T16:39:32.232450+00:00",
+  "completed_routes": [
+    "5e9_218",
+    "5e9_440",
+    "5e10_218",
+    "5e10_440"
+  ],
+  "PPT_replacement_complete": false,
+  "next_step": "Generate HE panels, review rendered PPT, replace the user deck after visual QA"
+}

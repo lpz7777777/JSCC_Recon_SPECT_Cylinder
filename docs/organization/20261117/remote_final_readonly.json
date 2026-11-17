@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-11-17T06:46:18.449670+00:00",
+  "read_only": true,
+  "commands": {
+    "queue": {
+      "command": "squeue -u scxi717 -h -o '%i|%j|%T|%R'",
+      "exit": 0,
+      "stdout": "1820010|CRC40_strong_hybrid_59a3ff53|RUNNING|wqd10naf05g[5,8],wqd10naf06g1,wqd10nba06g[2-3],wqd10nba07g[1-2],wqd10nba08g4\n",
+      "stderr": ""
+    },
+    "accounting": {
+      "command": "sacct -n -P -j 1822462,1822534 --format=JobID,State,ExitCode,Elapsed,AllocTRES,MaxRSS",
+      "exit": 0,
+      "stdout": "1822462|FAILED|15:0|00:27:37|billing=64,cpu=64,gres/gpu=8,mem=1008000M,node=8|\n1822462.batch|FAILED|15:0|00:27:37|cpu=8,gres/gpu=1,mem=126000M,node=1|15276K\n1822462.extern|COMPLETED|0:0|00:27:37|billing=64,cpu=64,gres/gpu=8,mem=1008000M,node=8|0\n1822462.0|FAILED|1:0|00:27:35|cpu=64,gres/gpu=8,mem=1008000M,node=8|5779420K\n1822534|FAILED|15:0|00:01:49|billing=64,cpu=64,gres/gpu=8,mem=625G,node=8|\n1822534.batch|FAILED|15:0|00:01:49|cpu=8,gres/gpu=1,mem=80000M,node=1|6488K\n1822534.extern|COMPLETED|0:0|00:01:49|billing=64,cpu=64,gres/gpu=8,mem=625G,node=8|0\n1822534.0|FAILED|1:0|00:01:48|cpu=64,gres/gpu=8,mem=625G,node=8|5443048K\n",
+      "stderr": ""
+    },
+    "job_1822462": {
+      "command": "scontrol show job -dd 1822462",
+      "exit": 1,
+      "stdout": "",
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n"
+    },
+    "job_1822534": {
+      "command": "scontrol show job -dd 1822534",
+      "exit": 1,
+      "stdout": "",
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n"
+    }
+  },
+  "completed_at": "2026-11-17T06:46:20.299305+00:00"
+}

@@ -1,0 +1,409 @@
+{
+  "passed": true,
+  "scope": "IndependentSciPy48new60viewMIP+8old20viewcomparisonMIP andall288neworiginal3DsphereROIchecks",
+  "selected_original_frames": 48,
+  "old20_comparison_frames": 8,
+  "independent_method": "SciPyLinearNDInterpolator, all40z plusindependent directNumPyROImean/std(ddof1)/CNR, maxoveroriginal24centralz",
+  "maximum_MIP_absolute_difference": 0.0,
+  "maximum_background_mean_std_absolute_difference": 0.0,
+  "checks": [
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 10,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 20,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 40,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 60,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 100,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 200,
+      "MIP_max_abs_error": 0.0,
+      "background_mean_std_max_abs_error": 0.0
+    }
+  ],
+  "old20_comparison_checks": [
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "old20_final_full_source_sha256": "acc81066ae102716d05498f839b10486e9376dd11a596232b8a6c36f15d8e311",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "old20_final_full_source_sha256": "8dc451cd157baa5332fc2bd4536d743f8a232d02581cc7aaa4ef6e3806d75fd3",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "old20_final_full_source_sha256": "f17d70010e99ba332995c1b17ae2cc923d9e50e553879ee4d101afadf9b01263",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "old20_final_full_source_sha256": "17c0f36593e8d5ba6beee0d23abb8d2097a78fc85cb054e1cdccdb94585c9a76",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "old20_final_full_source_sha256": "0f1104115022a12d82be82915f0840198d11aa56be45cce14fd51e984f635043",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "old20_final_full_source_sha256": "f87da755fdaf4929515734182fc4bb52cf032a799bc23d1008eb3f4ce04fb5ad",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "old20_final_full_source_sha256": "bc12b86abecb33c2ccf7529b3498a700b886a9143759fe04a6ad4522188b8df7",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "old20_final_full_source_sha256": "c8493668f134827f8e3d2ecf7ca7f8e202fcb88f7919f3216268f85333764954",
+      "old20_comparison_MIP_max_abs_error": 0.0,
+      "old20_new60_projection_shapes_verified": true
+    }
+  ],
+  "no_reconstruction": true,
+  "no_HPC": true,
+  "full1600_history_local_QA": false,
+  "physical_calibration_passed": false
+}

@@ -1,0 +1,372 @@
+{
+  "study": "opengate_ehe_nema5e9_rotfix_20261113",
+  "generated_utc": "2026-11-12T23:46:57.863036+00:00",
+  "status": "DELIVERED_WITH_PHYSICAL_MODEL_LIMITATIONS",
+  "baseline_job": "1761244_0",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "energies_separate_keV": [
+    218,
+    440
+  ],
+  "actual_total_dual_energy_gamma": 5000000000,
+  "views": 20,
+  "input_sources_file": "data/input_sources_sha256.json",
+  "baseline_normalization": {
+    "218": {
+      "normalization_density": 456.39950822493626,
+      "actual_own_energy_gamma": 1469040802,
+      "definition": "actual own-energy primaries / original own-energy activity integral; no fitted gain"
+    },
+    "440": {
+      "normalization_density": 1036.9058469627134,
+      "actual_own_energy_gamma": 3530959198,
+      "definition": "actual own-energy primaries / original own-energy activity integral; no fitted gain"
+    }
+  },
+  "new_reconstruction_execution": {
+    "execution_kind": "LOCAL_CPU",
+    "CPU_threads": 8,
+    "CUDA_used": false,
+    "versions": {
+      "torch": "2.14.0",
+      "pytomography": "3.4.0",
+      "numpy": "2.4.6",
+      "kornia": "0.9.0"
+    },
+    "gpu_name": null,
+    "reconstruction_slurm_job": null,
+    "scientific_base_release": "7f1354f52bc68cfd",
+    "frozen_execution_record": {
+      "passed": true,
+      "scientific_base_release": "7f1354f52bc68cfd",
+      "execution_only_cpu_release": "3ee2725768c254a4",
+      "io_retry_source_release": "ccec2c1d854bd7bc",
+      "corrected_transport_release": "f7231adc45ed8607",
+      "initial_density": 1.0,
+      "iterations": 200,
+      "channels": [
+        440,
+        218
+      ],
+      "threads": 8,
+      "image_filter": null,
+      "files": {
+        "opengate_ehe_common_20261113.py": {
+          "bytes": 9848,
+          "sha256": "3ec83a97aefc1766a450132afa7e5eff2a66acfe8a21b884b313625dce50777c"
+        },
+        "opengate_ehe_projector_20261113.py": {
+          "bytes": 10254,
+          "sha256": "8f358fe0f5edca24ddcca1ded117d588beb2f833ff104d602afb5abf5c888469"
+        },
+        "opengate_ehe_recon_cpu_20261113.py": {
+          "bytes": 8921,
+          "sha256": "3ee2725768c254a47c17ead21fce9d9740fc680574c9062efd37a3bdb0a4fe1e"
+        }
+      }
+    },
+    "CPU_source_release": "3ee2725768c254a4",
+    "initial_density": 1.0,
+    "fresh_histories": true,
+    "inherited_reconstruction_frames": 0,
+    "actual_resume_used": false,
+    "IO_retry_helper_reuse_is_not_resume": true,
+    "scientific_projector_byte_identity_verified": true,
+    "allocation_sha256": "c9adea8298fd96ca3112b87b2cd9961736f30206247de6378b5f03b981f84bb4",
+    "execution_freeze_sha256": "5db637ebb7bdff82897da3d378f397e3f05645e37615c83fafab65b47f356db5"
+  },
+  "actual_new_scientific_peak_RSS_bytes": 1407266816,
+  "actual_new_scientific_peak_RSS_per_energy": {
+    "218": 1407266816,
+    "440": 1335971840
+  },
+  "strict_delivery_receipt": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_rotfix_20261113/strict_delivery.json",
+  "actual_resume_used": false,
+  "inherited_reconstruction_frames": 0,
+  "corrected_source_gate": {
+    "passed": true,
+    "release": "f7231adc45ed8607",
+    "actual_primary_vertex_check": {
+      "passed": true,
+      "actual_primary_vertex_rotation_verified": true,
+      "records": [
+        {
+          "angle_deg": 0.0,
+          "events": 2000,
+          "expected_centroid_mm": [
+            9.0,
+            3.0,
+            0.0
+          ],
+          "actual_centroid_mm": [
+            9.00871627893114,
+            2.998123583963848,
+            -0.015569026713680118
+          ],
+          "centroid_error_mm": 0.017941266631914126,
+          "phase_space_sha256": "a0f59300307a0768e9089e1c976d547ebe4e4776c6cb4a3770a351a603032a2e"
+        },
+        {
+          "angle_deg": 18.0,
+          "events": 2000,
+          "expected_centroid_mm": [
+            7.63245766353154,
+            5.634322498259988,
+            0.0
+          ],
+          "actual_centroid_mm": [
+            7.654923465199111,
+            5.6147047116261755,
+            0.012073192971953833
+          ],
+          "centroid_error_mm": 0.03217657199756467,
+          "phase_space_sha256": "115792f8bbed5748d4759e39257cce388c5629475c4e10291d7b14d71d18aefe"
+        },
+        {
+          "angle_deg": 90.0,
+          "events": 2000,
+          "expected_centroid_mm": [
+            -2.9999999999999982,
+            9.0,
+            0.0
+          ],
+          "actual_centroid_mm": [
+            -3.00988552542975,
+            9.002107976924822,
+            -0.02485283507179557
+          ],
+          "centroid_error_mm": 0.026829658791041797,
+          "phase_space_sha256": "ff7c8a0b83845b796afc8385fa7ec9b76e4ecac1a1aea7bf058ecf4e4504c6c1"
+        }
+      ],
+      "role": "inline numerical source-coordinate check, not imaging budget",
+      "created_utc": "2026-11-12T23:05:31.737220+00:00"
+    },
+    "inherited_view0_primaries": 250000000,
+    "replaced_nonzero_view_primaries": 4750000000,
+    "reused_GenericSource_response_workers": 88,
+    "source_and_projector_angle_sign": "+theta",
+    "old_MC_angle_sign": "-theta",
+    "old_index_for_corrected_view": [
+      0,
+      19,
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_gate_events_are_separate_from_imaging_budget": true,
+    "freeze_sha256": "bc97c6db8c6f02050dd1280b86a4546e9ed97d86e3f21c414dde44b616a49064",
+    "release_gate_sha256": "a9d29547118eef1c7096476105328bd463730af604d495942fb9f1875bd887c3"
+  },
+  "script_archive": "scripts/plot_opengate_ehe_nema5e9_rotfix_20261113_e7407e5575bc.py",
+  "truth_projection_diagnostic": {
+    "metrics_file": "data/truth_projection_diagnostic_metrics.csv",
+    "spatial_response_validated": false,
+    "four_phase_efficiency": {
+      "A218": {
+        "max_four_phase_efficiency_CV_percent": 8.460230339378978,
+        "gap_mm_at_max": 45,
+        "approximate_single_phase_Poisson_sigma_percent": 3.069304674073464
+      },
+      "A440": {
+        "max_four_phase_efficiency_CV_percent": 5.555788552827401,
+        "gap_mm_at_max": 95,
+        "approximate_single_phase_Poisson_sigma_percent": 3.7648830574892775
+      },
+      "C440to218": {
+        "max_four_phase_efficiency_CV_percent": 8.192044032676987,
+        "gap_mm_at_max": 95,
+        "approximate_single_phase_Poisson_sigma_percent": 4.2854956435548335
+      }
+    }
+  },
+  "old_new_transport_spatial_diagnostic": [
+    {
+      "energy_keV": 218,
+      "baseline_sha256": "b6948d8c170c25d3316054e3cf64c17cd5725b80a96eeec379838f2004ad659a",
+      "old_counts": 22929,
+      "new_counts": 22966,
+      "spatial_relative_l2": 0.10705893157888065,
+      "independent_Poisson_expected_noise_l2": 0.10998054849873784,
+      "pooled_high_count_bins": 253,
+      "diagnostic_Poisson_standardized_difference_RMS": 1.0179552711426667,
+      "source_origin_counts": [
+        13421,
+        9545
+      ],
+      "baseline_layout": "stored[detector,view].T.reshape(20,68,34)",
+      "new_minus_old_total_fraction": 0.0016136770029220315
+    },
+    {
+      "energy_keV": 440,
+      "baseline_sha256": "305da8bc0074893f965fafba798cf6285be63a78e9c72802e33b8abc18cdd435",
+      "old_counts": 12171,
+      "new_counts": 12775,
+      "spatial_relative_l2": 0.14354261509030133,
+      "independent_Poisson_expected_noise_l2": 0.15812917624525255,
+      "pooled_high_count_bins": 254,
+      "diagnostic_Poisson_standardized_difference_RMS": 0.9290572794079703,
+      "source_origin_counts": [
+        0,
+        12775
+      ],
+      "baseline_layout": "stored[detector,view].T.reshape(20,68,34)",
+      "new_minus_old_total_fraction": 0.04962616054555902
+    }
+  ],
+  "boundary_query_diagnostic": {
+    "study": "opengate_ehe_nema5e9_rotfix_20261113",
+    "analysis_only": true,
+    "arrays_modified": false,
+    "physical_calibration_passed": false,
+    "primary_physical_comparison_metrics": [
+      "common interior background BV",
+      "original3D hot-sphere recovery/CNR",
+      "native support-weighted activity bias",
+      "native weighted outer-FOV fraction"
+    ],
+    "global_query_NRMSE_is_primary_physical_comparison": false,
+    "rows": [
+      {
+        "energy_keV": 218,
+        "native_density_peak": 158550.3639387966,
+        "peak_support_fraction": 0.00046342968104371845,
+        "peak_xyz_mm": [
+          182.0,
+          106.0,
+          14.0
+        ],
+        "minimum_positive_support_fraction": 0.00019767541302961086,
+        "native_activity_integral_mm3": 3932610.389912229,
+        "fractional_boundary_activity_fraction": 0.10980360909300342,
+        "linear_query_to_native_activity_integral_ratio": 4.402330543805143,
+        "global_query_NRMSE_diagnostic_only": 350.18399106569785
+      },
+      {
+        "energy_keV": 440,
+        "native_density_peak": 3919.8039412194917,
+        "peak_support_fraction": 0.005111413323733201,
+        "peak_xyz_mm": [
+          -246.0,
+          -34.0,
+          50.0
+        ],
+        "minimum_positive_support_fraction": 0.00019767541302961086,
+        "native_activity_integral_mm3": 3956635.990163444,
+        "fractional_boundary_activity_fraction": 0.1101981617731545,
+        "linear_query_to_native_activity_integral_ratio": 1.4792971347719135,
+        "global_query_NRMSE_diagnostic_only": 12.702360588988071
+      }
+    ],
+    "native_activity_formula": "sum(density_xyz * fraction_xyz * 4**3,dtype=float64)",
+    "query_activity_formula": "sum(linear XYZ concentration query on original 3 mm lattice,dtype=float64)*3**3",
+    "interpretation": "Linear concentration interpolation does not conserve physical-support-weighted activity near tiny-fraction edge cells. Global query NRMSE/outside-body metrics are grid-transfer diagnostics. Use original interior BG/hot ROIs and native weighted integrals/fractions as primary comparisons. Full-range image scales retain all edge outliers, which may make the body and baseline pale."
+  },
+  "primary_comparison_metrics": [
+    "common interior background BV",
+    "original3D hot-sphere recovery/CNR",
+    "native support-weighted activity bias",
+    "native weighted outer-FOV fraction"
+  ],
+  "global_query_NRMSE_is_primary_physical_comparison": false,
+  "new_density_units": "already relative concentration; no division by dose",
+  "selected_actual_iterations": [
+    10,
+    20,
+    40,
+    60,
+    100,
+    200
+  ],
+  "frames_measured": 800,
+  "sphere_rows": 4800,
+  "roi_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "common_background_voxels": 97604,
+  "central_MIP_slab_edges_mm": [
+    -36,
+    36
+  ],
+  "old_MIP_native_layers": 24,
+  "new_MIP_native_layers": 18,
+  "physical_FOV_mm": [
+    500,
+    300,
+    120
+  ],
+  "display_axes_xy_mm": [
+    -252,
+    252,
+    -152,
+    152
+  ],
+  "new_display_note": "Full native XY array, axes show complete physical ellipse including boundary-cell extents; only zero padding outside physical FOV is off-axis",
+  "quantitative_query": "Original 3mm [40,100,168] truth lattice; old polar XY Delaunay; new native 4mm XYZ linear interpolation, outside-grid queries zero",
+  "smoothing": false,
+  "fitted_gain": false,
+  "cross_energy_sum": false,
+  "colormap": "gray_r (white low; black high)",
+  "main_concentration_range": [
+    0,
+    10
+  ],
+  "native_outer_FOV_rule": "(x/250)^2+(y/150)^2 >= 0.8^2",
+  "full_range_common_vmax_by_energy": {
+    "218": 158550.3639387966,
+    "440": 3625.316600259825
+  },
+  "full_range_scale_scope": "One common per-energy maximum over both methods and all selected frames; retained edge outliers may wash out body contrast",
+  "full_range_companions": true,
+  "figures": [
+    "iteration_218kev_72mm",
+    "iteration_218kev_72mm_full_range",
+    "iteration_440kev_72mm",
+    "iteration_440kev_72mm_full_range",
+    "final_truth_ehe_opengate_72mm",
+    "final_truth_ehe_opengate_72mm_full_range",
+    "bv_cnr_trajectories",
+    "activity_bias_and_false_activity",
+    "absolute_sphere_recovery",
+    "observed_projection_counts",
+    "truth_projection_diagnostic",
+    "corrected_source_projection_centroids",
+    "old_new_transport_spatial_diagnostic",
+    "old_new_transport_angular_diagnostic"
+  ],
+  "limitations": [
+    "Platform, response model, and reconstruction grid change together; this is not a single-cause comparison.",
+    "New response: absolute Monte Carlo 2D CDR, depth interpolation and four-phase mean; unmeasured tails, finite-collimator edges and shift dependence are not certified.",
+    "Corrected actual source and projector use +theta. Old MC uses -theta; per-view old/new comparisons explicitly use old index (-v) mod20. Summed20-view maps are unchanged by this permutation.",
+    "Original 3mm source truth and common 3mm query ROIs; new 4mm native density is linearly queried for ROI statistics only.",
+    "Native volume integrals use each grid's own physical-support fractions; common-query integrals are reported separately.",
+    "Linear concentration queries do not conserve support-weighted activity at tiny-fraction outer cells. Global query NRMSE is a grid-sensitive diagnostic, not the primary physical comparison; use interior BG/hot ROIs and native weighted integrals/fractions.",
+    "Full-range panels use one common per-energy scale across compared images; very large partial-support edge concentrations can dominate that scale and make the body and old baseline appear pale.",
+    "BV is spatial background sample CV, not NEMA variability of multiple background-ROI means.",
+    "Equal displayed iteration numbers do not establish equal convergence of the two models.",
+    "Numerical acceptance, delivery, visual inspection and physical calibration are separate decisions; physical calibration remains false.",
+    "The corrected reconstruction executes on LOCAL_CPU with eight threads and PyTorch 2.14 CPU, fresh all-one initialization for both full200-iteration histories. Reusing the I/O retry helper is not continuation of the invalid trial.",
+    "Each 218 fixed background uses its own final440, response and grid; differences in old/new fixed-background totals cannot be attributed solely to the cross-window kernel."
+  ],
+  "saturation_fraction_denominator": "Each complete physical XY display grid including boundary cells, not a phantom-only ROI; pixel sizes differ",
+  "strict_new_delivery_accepted": true,
+  "numerical_data_integrity_passed": true,
+  "visual_QA_passed": true,
+  "image_quality_certified": false,
+  "physical_calibration_passed": false,
+  "visual_QA_record": "data/visual_qa.json",
+  "final_reviewed_utc": "2026-11-12T23:56:06.699799+00:00"
+}

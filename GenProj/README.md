@@ -1,5 +1,7 @@
 # GenProj
 
+本目录属于历史/兼容前投影链，产生矩阵前投影+Poisson数据，不产生真实Geant4输运。当前225Ac研究请先读[完整工作流](../docs/ac225/WORKFLOW.md)及[科学口径](../docs/ac225/SCIENCE_CONVENTIONS.md)。下文旧脚本0.261产额与当前NEMA冻结0.259是不同版本，禁止混用；本次整理不修改历史参数或输出。
+
 Project handoff and the current production/validation boundary:
 `../docs/DEVELOPMENT_HANDOFF.md`.
 

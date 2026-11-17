@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "completed_utc": "2026-11-16T18:03:44.441488+00:00",
+  "user_file": "D:\\Research\\0_Meeting\\SingleMeeting\\2026_H2\\Meeting_LPZ_20261116_225Ac成像结果.pptx",
+  "user_file_sha256": "d87ade3bd9392ef7c5fe4f0e067cb568793803010984009805bcbea4d01c5049",
+  "bytes": 2879841,
+  "source_backup": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\Analysis_Plots\\research\\ac225_results_meeting_he_derenzo_20261116\\source_backup\\Meeting_LPZ_20261116_before_HE_Derenzo.pptx",
+  "source_backup_sha256": "64e25eb8f1c5bfd71b7eb65b97f915b568a997ee1066d177402fb4dbb71f86f5",
+  "HE_routes": 4,
+  "HE_checkpoints": 800,
+  "replaced_result_slides": [
+    11,
+    12,
+    13,
+    14
+  ],
+  "updated_condition_slide": 2,
+  "native_PowerPoint_render_and_visual_QA": true,
+  "scientific_package_qa_sha256": "45bb6dea795f45138313924054145b6d6b639edae2dadcbc53f657dfd7bd4a12",
+  "visual_qa_sha256": "3102a0b50fadc5a68386991bab2f41124c1cf58af1d419fad7923a64e31bd625",
+  "physical_calibration_passed": false
+}

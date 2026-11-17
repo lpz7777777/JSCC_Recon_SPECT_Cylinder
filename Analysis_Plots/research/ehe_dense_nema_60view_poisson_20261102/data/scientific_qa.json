@@ -1,0 +1,413 @@
+{
+  "passed": true,
+  "scope": "Source identity, selected original arrays, numerical display/metrics checks; not independent physical calibration",
+  "routes": 8,
+  "original_saved_local_frames": 48,
+  "remote_history_frames_verified": 1600,
+  "full_history_local_QA": false,
+  "selected_checks": [
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 440,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 0,
+      "energy_keV": 218,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 440,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 1,
+      "energy_keV": 218,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 440,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 2,
+      "energy_keV": 218,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 440,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 10,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 20,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 40,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 60,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 100,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    },
+    {
+      "condition": 3,
+      "energy_keV": 218,
+      "iteration": 200,
+      "remote_native_metric_recheck": true,
+      "finite_nonnegative": true,
+      "full_active_domain_identity": true
+    }
+  ],
+  "actual_views": 60,
+  "all60_angles_and_exposure_verified": true,
+  "independent_60view_source_fold_and_ownS_verified": true,
+  "original20_control_read_only": true,
+  "same_total_expected_gamma20_vs60_verified": true,
+  "all_selected_remote_native_metric_rows_locally_recomputed": true,
+  "source_quadrature_limit_disclosed": true,
+  "original3D_ROI_policy_SHA_verified": true,
+  "no_reconstruction": true,
+  "no_HPC_action": true,
+  "no_smoothing": true,
+  "no_gain_fit": true,
+  "no_cross_energy_image_sum": true,
+  "manual_visual_review_pending": false,
+  "visual_quality_pass_claimed": false,
+  "physical_calibration_passed": false,
+  "direct_preview_layout_review_passed": true,
+  "independent_selected_display_oracle_passed": true,
+  "independent_MIP_and_ROI_max_absolute_difference": 0.0
+}

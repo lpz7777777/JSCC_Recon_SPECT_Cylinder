@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Compton环纹Git历史审计</title><style>body{max-width:1140px;margin:40px auto;padding:0 30px 70px;font:17px/1.8 "Microsoft YaHei",sans-serif;color:#243441;background:#f7f9fc}h1{font-size:34px;line-height:1.35;color:#12394d}h2{font-size:24px;margin-top:44px;color:#155e75}p{margin:15px 0}.eyebrow{color:#65788a;font-size:14px}.lead{font-size:20px}.note{padding:18px 24px;border-left:5px solid #dc8a38;background:#fff8e9;margin:24px 0}table{width:100%;border-collapse:collapse;background:white;font-size:15px}th,td{border:1px solid #d6e0e8;padding:13px 15px;text-align:left;vertical-align:top}th{background:#e7eff4}pre{background:#eaf1f5;padding:20px;overflow:auto;font-size:16px;line-height:1.7}code{font-size:14px;word-break:break-word}img{width:100%;height:auto;background:white;border:1px solid #e0e6eb}.caption{font-size:14px;color:#586977}li{margin-bottom:12px}a{color:#146b91}strong{color:#9a4a1d}@media(max-width:700px){body{padding:0 15px}table{font-size:13px}th,td{padding:8px}h1{font-size:28px}}</style><body>
+<p class="eyebrow">只读历史审计 · 2026-10-26 · 当前正式结果1722760</p>
+<h1>Compton环纹：6月以前与现在，究竟改了什么？</h1>
+<p class="lead">发现了足以改变伪影表现的真实代码差异，但没有找到可证明“旧版同条件无环”的历史重建输出。最值得优先隔离的是：严格分支事件集中度筛选从50降到1、联合与独立重建的区别，以及有限单元响应在不均匀柱坐标网格上的离散误差。</p>
+<div class="note"><b>证据边界</b>　“6月以前”按2026-06-01以前解释，检查了1/3/4/5月可达Git树。当前参照来自实际作业1722760冻结源码及S，不能把10月19日HEAD当作后来实际运行版本。未切换工作区、未执行旧重建、未提交超算任务、未改动已有结果。</div>
+<h2>1. 先核实“以前没有环”的证据</h2>
+<p>旧Git里有脚本、网格和S，但未检出可作为同条件对照的原生重建输出或实际重建PNG。4/5月的忽略规则排除了Figure类目录。已提取并目视查看的旧PNG分别是FOV示意、S对比、Hoffman源图和事件顺序统计，不能当作旧重建无环的证明。</p>
+<p>旧查看器多为SC与SC+Compton（JSCCSD）；当前讨论的是<strong>440 keV ComptonOnly</strong>。有的旧查看器对切片使用σ=0.5像素二维滤波，后续MIP取中央36 mm、逐帧色标，但MIP本身无滤波；有的使用σ=0.01与60 mm范围，不能一概说旧图都被强平滑。旧CNR脚本还有选择最大平均CNR中央切片的路径，与最后10000次MIP也不同。</p>
+<p>旧代码同时存在前投影生成CntStat的路线：Hoffman使用Poisson，普通GenProj使用高斯近似后取整。它们与真实Geant4投影不同；不过具体旧运行输入未随Git保存，不能由脚本存在就推断某一张旧图的来源。详细证据见<a href="historical_visual_evidence.txt">历史图像与显示审计</a>。</p>
+<h2>2. 最明确的变化：事件集中度筛选50 → 1</h2>
+<table><tr><th>时间 / 提交</th><th>实际代码</th><th>可能后果与限制</th></tr>
+<tr><td>4/14 <code>64ff63a</code><br>5/29 <code>d8f83c1</code></td><td>strict与sparse分支使用<br><code>MIN_EVENT_EFFECTIVE_SUPPORT = 50.0</code></td><td>删除响应只集中在很少网格点上的整个事件。原注释已提到热点和短亮线，说明此前也曾处理过不稳定响应。</td></tr>
+<tr><td>7/21 <code>ec96a97</code></td><td><code>50.0 → 1.0</code><br>同一提交还开启第一相互作用点的源侧位置不确定性</td><td>对已归一化非负行，Neff理论上≥1，因此集中度门槛几乎不再排除尖锐事件；但源侧不确定性一般有展宽作用，两项变化不能混为一个效果。</td></tr>
+<tr><td>当前冻结核</td><td>共享设置默认Neff=1；实际v5复用冻结事件，另有既定能量/层/q筛选</td><td>不是“完全没有筛选”，但不是旧Neff≥50策略。不能未经配套S更新直接改成50并称为修复。</td></tr></table>
+<pre>对一条已归一化事件响应 p：
+Neff = 1 / Σⱼ pⱼ²
+均匀铺在100个点上 → Neff=100（旧严格分支保留）
+集中在10个点上    → Neff=10 （旧严格分支删除）</pre>
+<p><strong>与角度跳变的联系：</strong>同样物理宽度的响应落到不同密度的采样点上，Neff会改变。旧阈值相当于一个依赖网格的事件稳定性筛选，可能压低尖峰及网格锁定效应，也可能引入空间选择偏差。它不是正确物理模型的替代品。这是强候选变化，不是已证明的环纹根因。</p>
+<p>本次尚未统计当前4849087个事件中有多少满足Neff&lt;50；完整新旧域的点数也不同。因此“50→1”是已确认的代码差异，实际影响大小仍未知，不能据此推算删除比例或宣称已找到根因。</p>
+<p>关键例外：5月根目录<code>main_plane.py</code>仍导入旧<code>process_list_plane.py</code>，没有这个Neff=50筛选；而<code>distributed/python/main_dist.py</code>及稀疏入口才走strict。必须先确定用户记忆中的旧图来自哪个入口。<a href="source_snapshots/ec96a97_relevant.diff">查看原始提交差分</a>。</p>
+<h2>3. 网格并非新引入，但40视角旧路线与当前不同</h2>
+<img src="figures/git_grid_and_sensitivity.png" alt="历史与当前角度采样及灵敏度形状比较">
+<p class="caption">图左：直接读取Git内coor_polar.csv与本次whole_geometry.npz。4/5月20视角的内25环角度数与当前完全相同，点坐标也在数值精度内一致。旧40视角配置不同。图右仅比较S形状：当前密度基底先除单元体积；取中央60 mm，各曲线除自身25环均值。旧511与当前440 keV、校准方式不同，不能据此比较绝对探测效率或重建质量。</p>
+<table><tr><th>半径</th><th>4/5月20视角 / 当前20视角</th><th>5月40视角Factors</th></tr>
+<tr><td>6–36 mm</td><td>20点/环</td><td>40点/环</td></tr><tr><td>42–72 mm</td><td>40点/环</td><td>40点/环</td></tr><tr><td>78–108 mm</td><td>60点/环</td><td>80点/环</td></tr><tr><td>114–150 mm</td><td>80点/环</td><td>80点/环</td></tr></table>
+<p>5月<code>main_dist.py</code>默认40视角、511 keV、1520点/层；当前是20视角、440 keV、132040全域点/78920活动单元、完整120 mm高度。角度数与视角数的整倍数关系，会改变旋转后采样点落在原角相位上的方式。若旧图来自40或60视角，它本就不是当前20视角网格锁定的对照。</p>
+<p>因此，“旧网格也有过渡”不能排除网格因素；它说明更可能是<strong>旧网格的离散误差与后来模型、事件、求解条件相互作用</strong>，而不是今年才新增这些过渡环。</p>
+<h2>4. 响应与体积：换了基底，也换了核</h2>
+<table><tr><th>步骤</th><th>6月以前可见实现</th><th>当前冻结实现 / 判断</th></tr>
+<tr><td>源单元含义</td><td>点响应A，无显式柱单元体积；未知量自然对应每单元总活度x。若直接当浓度显示，单位有歧义。</td><td>7月20日开始推广B=A·diag(V)，当前未知量为浓度ρ，x=Vρ。当前体积只乘一次，S同步使用同一基底。</td></tr>
+<tr><td>角度/能量核</td><td>能量变为散射角θ；用非对称角度高斯exp[−(β−θ)²/(2σ²)]，乘KN与首晶体A。legacy用Taylor宽度，strict用能量扰动算角宽。</td><td>10月5日后使用材料相关连续能量概率密度h(E₁|β,层)，包含材料展宽、电子能量分辨率和位置不确定性，仍乘KN与B。形状及源位置相对权重改变，不能只按“更宽/更窄”概括。</td></tr>
+<tr><td>能量分辨率与门槛</td><td>所查May入口以10%@662 keV为参考，按平方根缩放；常用511 keV、总能量门槛460 keV；单次沉积下限50 keV。</td><td>当前参考13%@511 keV、入射440 keV、总能量门槛350 keV，沉积下限仍50 keV。即使把旧公式代入440 keV，电子分辨率约12.27%，当前约14.01%，不能断言新核单纯变得更窄。</td></tr>
+<tr><td>有限单元</td><td>A插值到极坐标代表点；K在代表点计算。部分sparse路线粗网格计算K、再插值到细网格；有角度/z stride配置。</td><td>当前也是代表点A×K×V，未部署完整单元内A×K积分。无损32事件分批不等于粗网格插值；不能把二者都称为同一种“分批近似”。</td></tr>
+<tr><td>首晶体响应A</td><td>旧能量Factors与旧系统矩阵；早期MATLAB只把Cartesian点响应线性插到polar。</td><td>7月有V4有限距离/对称采样及层校准变化，9月扩展FOV。仍以SC首晶体响应作Compton联合响应的代理，不是完整两个作用位置与能量的物理联合分布。</td></tr>
+<tr><td>数值与能量扰动</td><td>legacy/strict在函数内部随机加能量噪声，dense版本原位改输入能量列；acos几何。旧任务是否重复加噪无法由代码单独证明。</td><td>7月27日加入clone及already-smeared开关；当前实测能量不再重复扰动。10月稳定双精度几何减少近共线消减/acos问题，不能无证据将修复本身当成恶化原因。</td></tr></table>
+<p><strong>体积加权不是应当撤销的“可疑补丁”。</strong>若点基底与密度基底对应一致，Tρ=Tx·diag(V)，Sρ=Sx·V，同时x₀=Vρ₀，两种表示可以得到等价物理图像。当前审计未发现少乘/多乘V；在39/75/111 mm过渡处，S/V仅改变约0.34%/0.69%/1.09%，与单元体积阶跃不同。真正未解决的是：一个代表点的响应能否代表整个不规则单元。把V乘对不等于把A×K在单元内积分对。</p>
+<h2>5. sensitivity变化很大，但不能混淆“匹配”与“物理正确”</h2>
+<p>旧dense入口优先读取裸<code>Sensi_d</code>，没有文件时用SC sensitivity的比例替代；旧sparse入口可读取同名文件，也可从本次成像事件的响应列和重新构造S，再按SC和事件数全局缩放。Git保存了若干S数值版本，却没有逐任务的核/筛选/生成源绑定，不能确认旧运行用了哪一张以及是否匹配。</p>
+<p>尤其是“从待重建物体自己的事件反投影构造S”不能当成独立探测效率：若Sⱼ∝Σᵢpᵢⱼ且p每行和为1，从全1出发的Compton更新就会倾向于常数。它能在特定路径上人为吸收物体结构或压低不均匀性。这里只确认旧代码有这个分支，<strong>不宣称它被某个旧任务实际启用</strong>。</p>
+<p>当前S来自独立均匀圆源的实际10⁹光子、170247个接受事件，用相同v5核和事件策略构造，按真实初级光子数与支持域体积归一，再20角平均。当前使用S与冻结S一致，无零/极小分母异常；粗分区校准通过。但此S仍是代理核的校准：均匀源闭合并不证明细尺度响应、每类事件及非均匀物体都正确。</p>
+<p>标准List-mode模型中，S应对应源单元发射后被系统接受的总概率；事件行归一化常数若仅依赖事件，会在Tᵢⱼ/(Tᵢρ)中抵消。源位置相关的项或不匹配的S不会抵消。参见原始论文<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2969184/">List-mode likelihood</a>。因此既不能把“行和=1”当成物理完整证明，也不能仅凭行归一化就认定它制造了环纹。</p>
+<h2>6. 求解条件：旧图不一定更少迭代，也不一定只用Compton</h2>
+<p>May根入口默认Compton1000、SC/联合2000，8个OSEM子集；May分布式入口却默认Compton10000、SC/联合20000，同为8子集；另有JSCCSD-only默认2000、16子集。当前是Compton独立、全批MLEM10000、全1初值、无正则。OSEM一轮包含多次子集更新，不能按相同迭代数字等同收敛。</p>
+<p>旧联合求解含SC权重和联合S，可以约束Compton的弱方向；稀疏K插值也可能压低高频变化。当前原生结果的背景不均匀性在后期明显放大，但Git证据不足以把原因说成“以前都只迭代几百次”。</p>
+<h2>7. 因果优先级与下一步</h2>
+<ol>
+<li><strong>优先核实旧路线身份：</strong>找回具体旧任务的Image_JSCCD/JSCCSD、日志、能量、视角、S、入口与实际迭代，统一显示后才有“以前/现在”的质量对照。当前Git只能提供代码候选。</li>
+<li><strong>优先隔离事件筛选：</strong>在同一批原始候选事件上对比Neff≥1/≥50，保持核、网格、求解一致，并对每个筛选策略重新匹配S。量化哪些事件被删、与环数过渡是否相关。Neff依赖网格和体积，不能直接移植阈值后宣布正确。</li>
+<li><strong>优先隔离网格相位和完整单元响应：</strong>同一真实事件，改变基底角相位或对A×K作受控单元积分，S用完全对应的模型。这能判断伪影是否跟随网格，而不是依赖“旧图看起来好”。此前K-only小样本误差较小，不能替代完整A×K测试。</li>
+<li><strong>分开比较联合/独立、角度核/v5：</strong>每次只改变一个因素。10月2日已经提交Compton尖峰诊断，早于10月5日v5；10月6日同事件2000次A/B中，v5使最大密度下降76.63%、峰/背景下降78.76%，背景CV却只改善1.55%。它不是最初所有伪影的唯一来源，也没有解决背景环纹。</li>
+<li><strong>最后检验细尺度物理S与首晶体代理误差：</strong>需要按源位置/事件类别的独立证据；只看S平滑或全局计数闭合不够。稳定几何和无损streaming目前没有证据成为主要嫌疑。</li>
+</ol>
+<div class="note"><b>当前判断：</b>历史差异支持“已有柱坐标过渡＋响应近似/筛选及求解条件改变后，网格相关误差被放大”的解释。尚不能定位唯一坏提交，也没有证据支持直接删除体积因子、换回旧S或退回整个旧版本。这份审计提出因果假设，不把计划中的对照实验写成已完成。</div>
+<h2>8. 可追溯材料</h2>
+<ul><li><a href="source_snapshot_manifest.json">Git原文件的完整commit、blob SHA与SHA-256</a></li>
+<li><a href="data/git_timeline.json">相关提交时间线</a> · <a href="data/audit.json">当前冻结源码身份与网格一致性检查</a></li>
+<li><a href="data/grid_counts.csv">原始每环采样数</a> · <a href="data/sensitivity_shape.csv">S形状数据</a></li>
+<li><a href="source_snapshots/ec96a97_relevant.diff">7月21日筛选/位置宽度差分</a> · <a href="source_snapshots/b39f1dc_relevant.diff">7月27日能量扰动与S归一化差分</a></li>
+<li><a href="../nema_compton_transition_audit_20261026/REPORT.html">前一轮过渡区与体积审计</a> · <a href="../nema_compton_ring_diagnosis_20261026/REPORT.html">当前原生图像环纹诊断</a></li></ul>
+</body></html>

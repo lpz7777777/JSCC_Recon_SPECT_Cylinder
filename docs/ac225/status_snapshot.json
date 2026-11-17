@@ -1,120 +1,1078 @@
 {
-  "snapshot_at": "2026-10-19T13:10:49.801628+08:00",
-  "semantics": "Local acceptance/registration snapshot, not live Slurm",
-  "studies": [
+  "schema_version": 3,
+  "generated_at": "2026-11-17T15:04:13.843704+08:00",
+  "note": "Generation time is not evidence observation time. Unknown stages are not promoted.",
+  "experiments": [
+    {
+      "id": "results-72mm-mip",
+      "title": "2026-10-29方法对比画廊：原EHE矩阵快照",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [
+        "Analysis_Plots/results/data/result_catalog.json",
+        "Analysis_Plots/results/data/source_routes.csv",
+        "Analysis_Plots/results/data/organization_audit.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-5e10-v5-joint",
+      "title": "NEMA实际5e10：新v5流程440 SC+Compton联合重建",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-complete-history",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1740189
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/formal_job.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/latest_status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/scheduler_script_check.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261027_135215/status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261028_132132/status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261029_124522/status.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/result_delivery.json",
+        "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/strict_transfer.json",
+        "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/numerical_check.json",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data/scientific_qa.json",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data/visual_qa.json",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data/independent_numeric_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
     {
       "id": "nema-jscc-5e10",
-      "status": "formal-held-time",
+      "title": "NEMA实际5e10：SC218/440与纯Compton440",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-complete-history",
+      "visual_status": "reviewed",
       "jobs": {
-        "validation": 1704559,
-        "verification": 1704566,
-        "formal": 1704572
+        "formal": 1722760
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/validation_acceptance.json": "c77d17b606cf283d81240263c4cc7fefb238709af7c08ef6f21669690509538c",
-        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_measured_time_hold_20261019.json": "131c1f9a1f82f7b1b6d07478f195faa27e3f86b4a817b8fe97e23fe8567ce560"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623/final_queue.json",
+        "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623/nema_formal_job.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "nema-jscc-5e9-v5",
-      "status": "delivered-historical",
+      "title": "NEMA JSCC 5e9 连续核v5：历史10000次正式基准",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-historical-delivery",
+      "visual_status": "reviewed-current-ROI",
       "jobs": {
         "formal": 1669255
       },
-      "evidence_sha256": {}
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "nema-ehe-g4-5e9",
-      "status": "delivered",
+      "title": "NEMA原EHE矩阵 5e9：实际Geant4",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
       "jobs": {
         "formal": 1679415
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json": "b318e2b5891b52a158d4b238480fada6c200483d1c8734cee76984f01278377c"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "nema-ehe-poisson-5e9",
-      "status": "reference-only",
+      "title": "NEMA EHE 5e9：矩阵前投影+Poisson参考",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "reference-only",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
       "jobs": {
         "formal": 1680255
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/formal_summary.json": "0d3e4e1cb39f2ec62ba47c63594586134e28b3b5ea26e8e0c196c5fa76b3dfbc"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "nema-ehe-g4-5e10",
-      "status": "delivered",
+      "title": "NEMA原EHE矩阵 5e10：实际Geant4",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
       "jobs": {
         "formal": 1681346
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/formal_summary.json": "61c6d2bd20e5a1bef97a3481adf63cfd10c99c5c004a2c710bce6c2c28fca62e"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "nema-ehe-poisson-5e10",
-      "status": "reference-only",
+      "title": "NEMA EHE 5e10：矩阵前投影+Poisson参考",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "reference-only",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
       "jobs": {
         "formal": 1683357
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/formal_summary.json": "dcec91f9825229f368c9035ce2549334e56e08c45a130026875798cf944838c3"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/formal_summary.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "derenzo-jscc-218",
-      "status": "delivered",
+      "title": "Derenzo JSCC 218 keV：独立单能5e9",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
       "jobs": {
         "validation": 1705505,
         "validation_verify": 1705507,
         "formal": 1705508,
         "formal_verify": 1706056
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json": "c4f3c2c415bdff7c9a2c6c871b55c06f146a763622ef7b9d448ef580be12993b"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/formal_acceptance.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "derenzo-jscc-440",
-      "status": "formal-registered",
+      "title": "Derenzo JSCC440单能实际5e9：SC与SC+Compton正式10000次",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
       "jobs": {
-        "selection": 1705543,
-        "selection_verify": 1705544,
-        "validation": 1713939,
-        "validation_verify": 1713940,
-        "formal": 1713943
+        "formal": 1722673
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/formal_job.json": "aba5d17e652e74a3b626da90dcde574c597669a8efc0db546466f21e7c80b4eb"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623/final_queue.json",
+        "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022_v3/derenzo/JSCC_440/formal_job.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "derenzo-ehe-218",
-      "status": "delivered",
+      "title": "原EHE矩阵：Derenzo EHE 218 keV：独立单能5e9",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
       "jobs": {
         "validation": 1705509,
         "validation_verify": 1705510,
         "formal": 1705512,
         "formal_verify": 1705779
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json": "070eb2d4ac55757a653d37c4c47cc0cc3115954f2e105ecacf7118466a297112"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/formal_acceptance.json"
+      ],
+      "physical_calibration_passed": "not-established"
     },
     {
       "id": "derenzo-ehe-440",
-      "status": "delivered",
+      "title": "原EHE矩阵：Derenzo EHE 440 keV：独立单能5e9",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "delivered",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
       "jobs": {
         "validation": 1705578,
         "validation_verify": 1705579,
         "formal": 1705580,
         "formal_verify": 1705853
       },
-      "evidence_sha256": {
-        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json": "65902498dea4c2a7260e9ae87284e201aa3603d41c44e9b7acb60fddd7ca2ad7"
-      }
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/formal_acceptance.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-design-selected",
+      "title": "Derenzo等面积区域：实际输运采用的唯一设计",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "design-only",
+      "delivery_status": "local-design",
+      "visual_status": "design-figures",
+      "jobs": "not-established",
+      "evidence": [
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_218keV_geometry.json",
+        "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data/derenzo_440keV_geometry.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-completed-figures",
+      "title": "Derenzo已完成三组的真值、MIP、切片和迭代图",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/scientific_qa.json",
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-current-roi",
+      "title": "NEMA当前1.5mm内缩球中心ROI及统一完整背景",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/scientific_acceptance.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-source-truth",
+      "title": "NEMA H60球体、肺、218/440空间分布",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "authoritative-source",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/manifest.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-v5-legacy",
+      "title": "440连续材料能量核：legacy独立校准及2000次配对",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "accepted-reference",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-v5-ideal",
+      "title": "ideal 1e9连续核对照；与legacy剂量实验分开",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-reference",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "first-scatter-v2",
+      "title": "首散射事件定义配对研究",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-reference",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "event-physics-audit",
+      "title": "全局事件算子、测度及物理响应审计",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "accepted-diagnostic",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "spike-ablation",
+      "title": "边界绑定、Huber和尖峰历史消融",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "stopped-historical",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "response-cut3-old",
+      "title": "旧response mismatch门控：保留历史身份",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "retired-reference",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "fine-response-v3",
+      "title": "已停止精细响应场与清理证明",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "stopped-not-complete",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "advisor-progress",
+      "title": "成像场景、JSCC/EHE设计及既有NEMA结果说明图",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "presentation-reference",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-5e9",
+      "title": "5e9：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-nema-body-h60-1e9-1643142",
+      "title": "NEMA_Body_H60_1e9_1643142：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-nema-body-h60-5e9-1644876",
+      "title": "NEMA_Body_H60_5e9_1644876：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-nema-body-h60-5e9-bind-f010-formal-1651956-0",
+      "title": "NEMA_Body_H60_5e9_bind_f010_formal_1651956_0：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-nema-body-h60-5e9-huber-weak-formal-1651956-1",
+      "title": "NEMA_Body_H60_5e9_huber_weak_formal_1651956_1：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-process-list-audit",
+      "title": "process_list_audit：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-process-list-followup-20261004",
+      "title": "process_list_followup_20261004：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-spike-research",
+      "title": "spike_research：历史研究/诊断目录",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "historical-see-evidence",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-derenzo-218-440-design-20261014",
+      "title": "derenzo_218_440_design_20261014：未采用的历史设计",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "design-not-selected",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-derenzo-218-440-design-20261015",
+      "title": "derenzo_218_440_design_20261015：未采用的历史设计",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "design-not-selected",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "history-derenzo-218-440-design-20261015-sparse36",
+      "title": "derenzo_218_440_design_20261015_sparse36：未采用的历史设计",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "design-not-selected",
+      "delivery_status": "see-original-evidence",
+      "visual_status": "see-original-report",
+      "jobs": "not-established",
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-side-shield-design",
+      "title": "EHE NaI四侧10mm铅屏蔽框：加屏蔽前后设计",
+      "observed_at": "2026-10-29T12:42:52.493684+08:00",
+      "compute_status": "design-only",
+      "delivery_status": "local-design",
+      "visual_status": "design-figures",
+      "jobs": "not-established",
+      "evidence": [
+        "Analysis_Plots/research/ehe_side_shield_design_20261029/data/design.json",
+        "Analysis_Plots/research/ehe_side_shield_design_20261029/data/geometry_qa.json",
+        "Analysis_Plots/research/ehe_side_shield_design_20261029/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-ehe-dense-5e9",
+      "title": "NEMA EHE加密矩阵实际5e9",
+      "observed_at": "2026-11-03T11:31:24.565093+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          "1761244_0"
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-ehe-dense-5e10",
+      "title": "NEMA EHE加密矩阵实际5e10",
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          "1761244_1"
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-ehe-dense-5e9",
+      "title": "Derenzo EHE加密矩阵实际5e9",
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          "1761244_2",
+          "1761244_3"
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-dense-matrix",
+      "title": "EHE218/440加密系统矩阵",
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "matrix-identity-bound",
+      "visual_status": "not-an-image-study",
+      "jobs": {
+        "formal_original": 1749085,
+        "missing_block_repair": "1749513_7"
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_surface_20261029/latest_status.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/reconstruction_compact_freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/local_scientific_checks.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-nema-poisson-20view",
+      "title": "EHE NEMA20视角：5e9至5e12前投影＋Poisson",
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-selected-48;remote-all1600",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal_array": 1762238
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102/delivery_selected_strict.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102/final_delivery_qa.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/direct_visual_review.json",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/independent_selected_display_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-nema-poisson-60view",
+      "title": "EHE NEMA60视角：5e9至5e12前投影＋Poisson",
+      "observed_at": "2026-11-03T11:31:24.566092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-selected-48;remote-all1600",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal_array": 1762460
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_60view_poisson_20261102/delivery_selected_strict.json",
+        "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_60view_poisson_20261102/visual_delivery_summary_20261103.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/metadata.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/scientific_qa.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/direct_visual_review.json",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data/independent_selected_display_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-jscc-5e10-218",
+      "title": "Derenzo实际5e10：218 SC",
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "not-yet-indexed-gallery",
+      "jobs": {
+        "formal": 1752710
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_218/formal_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_218/formal_job.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-jscc-5e10-440-sc",
+      "title": "Derenzo实际5e10：440 SC成功输出保留",
+      "observed_at": "2026-11-12",
+      "compute_status": "SC-saved10000;parentFAILED",
+      "delivery_status": "strict-delivered",
+      "visual_status": "see-meeting-report",
+      "jobs": {
+        "parent_formal": 1752461
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/failure_1752461_root_cause_20261102.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_440/formal_job.json",
+        "experiments/ELLIPSE500x300_H120/generated/derenzo_sc440_5e10_1752461_20261112/strict_transfer.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-jscc-5e10-440-joint",
+      "title": "Derenzo实际5e10：440 JSCC联合64卡补算",
+      "observed_at": "2026-11-12",
+      "compute_status": "FAILED-at-9950",
+      "delivery_status": "strict-partial-199-frames",
+      "visual_status": "reviewed-preview",
+      "jobs": {
+        "formal": 1771220,
+        "parent": 1769020,
+        "historical_64gpu": 1761195
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_continue_20261104/preview_20261112.json",
+        "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/data/metadata.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "derenzo-ehe-dense-5e10",
+      "title": "Derenzo EHE实际5e10：输运完成、严格传输待修复",
+      "observed_at": "2026-11-04",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": [
+          1769915
+        ]
+      },
+      "evidence": [
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/data/metadata.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-prejune-compton",
+      "title": "NEMA实际5e9：旧Compton核回退对照",
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1739632
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_8x1_20261026/README.md",
+        "Analysis_Plots/research/nema_prejune_compton_1739632_20261026/data/metadata.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-ring",
+      "title": "Compton环状伪影",
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-transition",
+      "title": "Compton角点过渡与体积",
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-git-history",
+      "title": "Compton算法Git历史",
+      "observed_at": "2026-11-03T11:31:24.567092+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-legacy-backup",
+      "title": "旧Compton结果备份审计",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "compton-new-vs-old",
+      "title": "NEMA新旧Compton流程对比",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/data/metadata.json",
+        "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/data/scientific_qa.json",
+        "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-crystal-response",
+      "title": "EHE单晶体空间响应",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/ehe_crystal_response_20261029/data/metadata.json",
+        "Analysis_Plots/research/ehe_crystal_response_20261029/data/visual_qa.json"
+      ],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-collimator-audit",
+      "title": "EHE准直器响应与面积分",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-fov-clearance",
+      "title": "EHE准直器FOV间隙",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-dense-edge",
+      "title": "EHE加密矩阵边缘高值",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ehe-edge-original",
+      "title": "EHE原矩阵边缘高值历史诊断",
+      "observed_at": "2026-11-03T11:31:24.568093+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-analysis",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-bv-cnr-reference",
+      "title": "NEMA分能量BV–CNR历史图",
+      "observed_at": "2026-11-03T11:31:24.569091+08:00",
+      "compute_status": "analysis-complete",
+      "delivery_status": "source-bound-derived-metrics",
+      "visual_status": "dated-figure-report",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "ac225-meeting-slides",
+      "title": "225Ac成像汇报图与幻灯片材料",
+      "observed_at": "2026-11-03T11:31:24.569091+08:00",
+      "compute_status": "presentation-only",
+      "delivery_status": "local-presentation",
+      "visual_status": "see-dated-material",
+      "jobs": {},
+      "evidence": [],
+      "physical_calibration_passed": "not-established"
+    },
+    {
+      "id": "nema-cartesian-5090",
+      "title": "NEMA5e9原生Cartesian：5090正式三路",
+      "observed_at": "2026-11-17",
+      "compute_status": "FAILED",
+      "delivery_status": "not-delivered",
+      "visual_status": "not-started",
+      "jobs": {
+        "formal": 1822462
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_registration.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/matrix_strict_transfer.json",
+        "docs/organization/20261117/remote_readonly.json",
+        "docs/organization/20261117/remote_logs_readonly.json",
+        "docs/organization/20261117/remote_final_readonly.json",
+        "docs/organization/20261117/remote_logs_final_readonly.json",
+        "docs/organization/20261117/protection_final.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-cartesian-4090-r2",
+      "title": "NEMA5e9原生Cartesian：4090 r2失败保留",
+      "observed_at": "2026-11-17",
+      "compute_status": "FAILED",
+      "delivery_status": "not-delivered",
+      "visual_status": "not-started",
+      "jobs": {
+        "formal": 1822534,
+        "parent_5090": 1822462
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/formal_registration.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/execution_equivalence.json",
+        "docs/organization/20261117/remote_readonly.json",
+        "docs/organization/20261117/remote_logs_readonly.json",
+        "docs/organization/20261117/remote_final_readonly.json",
+        "docs/organization/20261117/remote_logs_final_readonly.json",
+        "docs/organization/20261117/protection_final.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-width-sweep",
+      "title": "NEMA5e9：100/80/60% Compton展宽",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "formal": 1814153,
+        "failed_predecessor": 1813383
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/strict_delivery_1814153.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/comparison_visual_qa_20261115.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/freeze_resume_r5.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "water-sc-first",
+      "title": "带水NEMA：四分支32路SC完整交付",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "pending-full-32-review",
+      "jobs": {},
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_corrections_20261103/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_corrections_20261103/formal_effective_routes_r5.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_corrections_20261103/strict_delivery.json",
+        "Analysis_Plots/research/ac225_water_corrections_20261103/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "water-scatter-v2",
+      "title": "带水NEMA：独立供体固定散射模型v2",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "see-dated-overview",
+      "jobs": {
+        "440": 1783495,
+        "218": 1783499
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107/frozen_projection_QA.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "opengate-ehe-5e9",
+      "title": "OpenGATE EHE NEMA 5e9有效输运",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_rotfix_20261113/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_rotfix_20261113/strict_delivery.json",
+        "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "opengate-ehe-5e10",
+      "title": "OpenGATE EHE NEMA 5e10有效输运",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e10_20261113/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e10_20261113/strict_delivery.json",
+        "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "opengate-he-nema",
+      "title": "OpenGATE HE NEMA 5e9/5e10",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {},
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_he_nema_20261114/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_he_nema_20261114/completed_execution_summary.json",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_he_nema_20261114/completed_visual_delivery.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "opengate-he-derenzo",
+      "title": "HE Derenzo：四路完成及PPT交付",
+      "observed_at": "2026-11-17",
+      "compute_status": "completed",
+      "delivery_status": "strict-delivered",
+      "visual_status": "reviewed",
+      "jobs": {
+        "imaging": [
+          16649504,
+          16649586,
+          16649668,
+          16650224
+        ]
+      },
+      "evidence": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/freeze.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/controller_exit.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/PPT_delivery_20261117.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e9_218/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e9_440/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e10_218/strict_delivery.json",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116/5e10_440/strict_delivery.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "jscc-uncertainty-performance",
+      "title": "JSCC v5不确定度与隔离等价执行优化",
+      "observed_at": "2026-11-17",
+      "compute_status": "analysis-complete",
+      "delivery_status": "local-report",
+      "visual_status": "see-original-report",
+      "jobs": {},
+      "evidence": [
+        "docs/research/jscc_uncertainty_optimization_20261115/delivery_manifest.json",
+        "docs/research/jscc_uncertainty_optimization_20261115/verification.json",
+        "docs/research/jscc_uncertainty_optimization_20261115/bench_cpu.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-roi-audit-20261115",
+      "title": "ROI/源对齐派生评价",
+      "observed_at": "2026-11-17",
+      "compute_status": "analysis-complete",
+      "delivery_status": "derived-report",
+      "visual_status": "see-metadata",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/nema_roi_audit_20261115/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-bg-out-error-20261115",
+      "title": "背景+体外误差派生评价",
+      "observed_at": "2026-11-17",
+      "compute_status": "analysis-complete",
+      "delivery_status": "derived-report",
+      "visual_status": "see-metadata",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-sc-jscc-he-gaussian-20261115",
+      "title": "五档3D高斯派生评价",
+      "observed_at": "2026-11-17",
+      "compute_status": "analysis-complete",
+      "delivery_status": "derived-report",
+      "visual_status": "see-metadata",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-sc-jscc-he-cnr-crc-bv-20261114",
+      "title": "CNR/CRC–BV派生评价",
+      "observed_at": "2026-11-17",
+      "compute_status": "analysis-complete",
+      "delivery_status": "derived-report",
+      "visual_status": "see-metadata",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
+    },
+    {
+      "id": "nema-sc-jscc-he-5e9-5e10-20261114",
+      "title": "SC/JSCC/HE综合派生评价",
+      "observed_at": "2026-11-17",
+      "compute_status": "analysis-complete",
+      "delivery_status": "derived-report",
+      "visual_status": "see-metadata",
+      "jobs": {},
+      "evidence": [
+        "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/data/metadata.json"
+      ],
+      "physical_calibration_passed": false
     }
   ]
 }

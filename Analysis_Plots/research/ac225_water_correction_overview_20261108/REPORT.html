@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>水 NEMA 衰减与散射修正总览</title>
+<style>
+body{font:16px/1.65 system-ui,sans-serif;color:#162b34;max-width:1160px;margin:34px auto;padding:0 20px}
+img{width:100%;height:auto} section{margin:32px 0} a{color:#126e70} .note{background:#eaf3f2;padding:12px 16px}
+</style>
+<h1>水 NEMA 衰减与散射修正总览</h1>
+<p class="note">旧版对照覆盖两种探头、两档发射量和两个能量。新版重建已有 8/8 路通过本地验收。
+两种探头的新版重建均已验收。新版的独立散射投影核对覆盖全部八组。</p>
+<p>行按探头和总发射量排列。EHE 取第 200 次，JSCC 探头取第 10000 次。所有图使用完整 XY、中心 72 mm MIP 和
+同一显示范围 0–10。1 代表本条件的理论背景活度密度，黑色表示高值，超出 10 的像素以黑色显示。
+重建图没有平滑，也没有用真值拟合亮度。真值来自该水 NEMA 实验登记的 3 mm 体模。</p>
+<section><h2>440 keV 最终图</h2><a href="final_mip_440.png"><img src="final_mip_440.png" alt="440 keV 五种方法对照"></a></section>
+<section><h2>218 keV 最终图</h2><a href="final_mip_218.png"><img src="final_mip_218.png" alt="218 keV 五种方法对照"></a></section>
+<section><h2>最终定量比较</h2><img src="ehe_final_metrics.png" alt="EHE 最终定量对照"><img src="jscc_final_metrics.png" alt="JSCC 最终定量对照">
+<p>定量指标使用三维数据。外围占比采用椭圆归一半径 ≥ 0.8 的活度。<a href="final_metrics.csv">下载最终指标</a></p></section>
+<section><h2>散射投影核对</h2><img src="../ac225_water_scatter_v2_20261107/held_out_scatter_projection.png" alt="八组散射投影与独立标签对照">
+<p>模板由同一已知体模的另一档发射量建立。独立标签用于检验散射投影，图像比较以已取回的重建为准。</p></section>
+<section><h2>逐组迭代与 BV–CNR</h2><ul><li>EHE 5e9 · 440 keV　<a href="../ac225_water_scatter_v2_20261107/EHE_5e9_fixed_mc_scatter_440_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/EHE_5e9_fixed_mc_scatter_440_BV_CNR.png">BV–CNR</a></li><li>EHE 5e9 · 218 keV　<a href="../ac225_water_scatter_v2_20261107/EHE_5e9_fixed_mc_scatter_218_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/EHE_5e9_fixed_mc_scatter_218_BV_CNR.png">BV–CNR</a></li><li>EHE 5e10 · 440 keV　<a href="../ac225_water_scatter_v2_20261107/EHE_5e10_fixed_mc_scatter_440_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/EHE_5e10_fixed_mc_scatter_440_BV_CNR.png">BV–CNR</a></li><li>EHE 5e10 · 218 keV　<a href="../ac225_water_scatter_v2_20261107/EHE_5e10_fixed_mc_scatter_218_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/EHE_5e10_fixed_mc_scatter_218_BV_CNR.png">BV–CNR</a></li><li>JSCC 5e9 · 440 keV　<a href="../ac225_water_scatter_v2_20261107/JSCC_5e9_fixed_mc_scatter_440_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/JSCC_5e9_fixed_mc_scatter_440_BV_CNR.png">BV–CNR</a></li><li>JSCC 5e9 · 218 keV　<a href="../ac225_water_scatter_v2_20261107/JSCC_5e9_fixed_mc_scatter_218_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/JSCC_5e9_fixed_mc_scatter_218_BV_CNR.png">BV–CNR</a></li><li>JSCC 5e10 · 440 keV　<a href="../ac225_water_scatter_v2_20261107/JSCC_5e10_fixed_mc_scatter_440_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/JSCC_5e10_fixed_mc_scatter_440_BV_CNR.png">BV–CNR</a></li><li>JSCC 5e10 · 218 keV　<a href="../ac225_water_scatter_v2_20261107/JSCC_5e10_fixed_mc_scatter_218_MIP.png">迭代 MIP</a> · <a href="../ac225_water_scatter_v2_20261107/JSCC_5e10_fixed_mc_scatter_218_BV_CNR.png">BV–CNR</a></li></ul></section>
+<p><a href="provenance.json">作业、源数据和图件 SHA</a></p></html>

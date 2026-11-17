@@ -1,0 +1,603 @@
+{
+  "study": "opengate_ehe_nema5e10_20261113",
+  "generated_utc": "2026-11-13T12:59:45.692899+00:00",
+  "status": "DELIVERED_WITH_PHYSICAL_MODEL_LIMITATIONS",
+  "baseline_job": "1761244_1",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "energies_separate_keV": [
+    218,
+    440
+  ],
+  "baseline_provenance": {
+    "passed": true,
+    "condition": 1,
+    "source_job": "1761244_1",
+    "dose": "5e10",
+    "formal_strict_receipt": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_strict_fetch.json",
+    "formal_strict_receipt_sha256": "875a3b8a54add874c1c58f18116ac0433b9e2f8a7cad6bf7c335c4b6a03b5a09",
+    "formal_numerical_QA": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_numerical_qa.json",
+    "formal_numerical_QA_sha256": "dcac969ac1d4d0d75a97b53e25553d60d4a201c39d217d3d6abf40f44ef12340",
+    "local_original_result": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\ehe_dense_results_1761244_20261102\\results\\condition_1",
+    "all400_history_frames_checked": true,
+    "selected12_frames_match_history_and_metadata": true,
+    "native_history_shape_per_energy": [
+      200,
+      78920
+    ],
+    "native_history_dtype": "<f4",
+    "native_history_bytes_per_energy": 63136000,
+    "full_history_sha256": {
+      "218": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+      "440": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2"
+    },
+    "actual_total_primary_gamma": 50000000000,
+    "primary_counts": [
+      14690373781,
+      35309626219,
+      0
+    ],
+    "normalization": {
+      "218": {
+        "normalization_density": 4563.984444925511,
+        "actual_own_energy_gamma": 14690373781,
+        "definition": "actual own-energy primaries / original own-energy activity integral; no fitted gain"
+      },
+      "440": {
+        "normalization_density": 10369.068524294238,
+        "actual_own_energy_gamma": 35309626219,
+        "definition": "actual own-energy primaries / original own-energy activity integral; no fitted gain"
+      }
+    },
+    "observed_window_counts": {
+      "218": 232888,
+      "440": 118846
+    },
+    "strict_delivery_reused_readonly": true,
+    "new_fetch_performed": false,
+    "new_reconstruction_performed": false
+  },
+  "actual_total_dual_energy_gamma": 50000000000,
+  "views": 20,
+  "input_sources_file": "data/input_sources_sha256.json",
+  "baseline_normalization": {
+    "218": {
+      "normalization_density": 4563.984444925511,
+      "actual_own_energy_gamma": 14690373781,
+      "definition": "actual own-energy primaries / original own-energy activity integral; no fitted gain"
+    },
+    "440": {
+      "normalization_density": 10369.068524294238,
+      "actual_own_energy_gamma": 35309626219,
+      "definition": "actual own-energy primaries / original own-energy activity integral; no fitted gain"
+    }
+  },
+  "new_reconstruction_execution": {
+    "execution_kind": "LOCAL_CPU",
+    "CPU_threads": 8,
+    "CUDA_used": false,
+    "versions": {
+      "torch": "2.14.0",
+      "pytomography": "3.4.0",
+      "numpy": "2.4.6",
+      "kornia": "0.9.0"
+    },
+    "gpu_name": null,
+    "reconstruction_slurm_job": null,
+    "scientific_base_release": "7f1354f52bc68cfd",
+    "frozen_execution_record": {
+      "passed": true,
+      "scientific_base_release": "7f1354f52bc68cfd",
+      "source_parent_release": "f7231adc45ed8607",
+      "corrected_transport_release": "e4917ca0af75a2b5",
+      "CPU_parent_execution_sha256": "3ee2725768c254a47c17ead21fce9d9740fc680574c9062efd37a3bdb0a4fe1e",
+      "CPU_source_release": "9dfdc5899137ea12",
+      "execution_change": "input budget gate only; MLEM/response/transpose/S/checkpoint loops unchanged",
+      "initial_density": 1.0,
+      "iterations": 200,
+      "channels": [
+        440,
+        218
+      ],
+      "threads": 8,
+      "image_filter": null,
+      "actual_imaging_primaries": 50000000000,
+      "actual_resume_used": false,
+      "files": {
+        "opengate_ehe_common_20261113.py": {
+          "bytes": 9848,
+          "sha256": "3ec83a97aefc1766a450132afa7e5eff2a66acfe8a21b884b313625dce50777c"
+        },
+        "opengate_ehe_projector_20261113.py": {
+          "bytes": 10254,
+          "sha256": "8f358fe0f5edca24ddcca1ded117d588beb2f833ff104d602afb5abf5c888469"
+        },
+        "opengate_ehe_recon_cpu_20261113.py": {
+          "bytes": 8923,
+          "sha256": "9dfdc5899137ea12e208472ca258014a2e27f2c908521111f3f2ca8ef268c09b"
+        }
+      }
+    },
+    "CPU_reference_source_release": "3ee2725768c254a4",
+    "actual_primary_guard": 50000000000,
+    "CPU_change_scope": "Only5B-to50B primary-budget guard and error label; reversing both restores reference3ee CPU source SHA",
+    "CPU_budget_guard_only_change_verified": true,
+    "actual_CPU_source_sha256": "9dfdc5899137ea12e208472ca258014a2e27f2c908521111f3f2ca8ef268c09b",
+    "initial_density": 1.0,
+    "fresh_histories": true,
+    "inherited_reconstruction_frames": 0,
+    "actual_resume_used": false,
+    "IO_retry_helper_reuse_is_not_resume": true,
+    "scientific_projector_byte_identity_verified": true,
+    "allocation_sha256": "b92ac49ffe3989cdd908702936b3fb86560b2b80178bde6689413079ec500247",
+    "execution_freeze_sha256": "5d48c923dfa9c3504f7875a850b62e2fe3ae36429b2afbf1735c4667014a3437"
+  },
+  "actual_new_scientific_peak_RSS_bytes": 1405124608,
+  "actual_new_scientific_peak_RSS_per_energy": {
+    "218": 1405124608,
+    "440": 1316507648
+  },
+  "strict_delivery_receipt": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e10_20261113/strict_delivery.json",
+  "actual_resume_used": false,
+  "inherited_reconstruction_frames": 0,
+  "corrected_source_gate": {
+    "passed": true,
+    "study": "opengate_ehe_nema5e10_20261113",
+    "source_transport_reference_release": "f7231adc45ed8607",
+    "source_transport_sha256": "46d9b8a8f9955073665fa8ba530a0a52ea969abb993e9c8914bcfebba9b9b37b",
+    "source_transport_byte_identity_verified": true,
+    "actual_primary_vertex_check": {
+      "passed": true,
+      "actual_primary_vertex_rotation_verified": true,
+      "records": [
+        {
+          "angle_deg": 0.0,
+          "events": 2000,
+          "expected_centroid_mm": [
+            9.0,
+            3.0,
+            0.0
+          ],
+          "actual_centroid_mm": [
+            9.00871627893114,
+            2.998123583963848,
+            -0.015569026713680118
+          ],
+          "centroid_error_mm": 0.017941266631914126,
+          "phase_space_sha256": "a0f59300307a0768e9089e1c976d547ebe4e4776c6cb4a3770a351a603032a2e"
+        },
+        {
+          "angle_deg": 18.0,
+          "events": 2000,
+          "expected_centroid_mm": [
+            7.63245766353154,
+            5.634322498259988,
+            0.0
+          ],
+          "actual_centroid_mm": [
+            7.654923465199111,
+            5.6147047116261755,
+            0.012073192971953833
+          ],
+          "centroid_error_mm": 0.03217657199756467,
+          "phase_space_sha256": "115792f8bbed5748d4759e39257cce388c5629475c4e10291d7b14d71d18aefe"
+        },
+        {
+          "angle_deg": 90.0,
+          "events": 2000,
+          "expected_centroid_mm": [
+            -2.9999999999999982,
+            9.0,
+            0.0
+          ],
+          "actual_centroid_mm": [
+            -3.00988552542975,
+            9.002107976924822,
+            -0.02485283507179557
+          ],
+          "centroid_error_mm": 0.026829658791041797,
+          "phase_space_sha256": "ff7c8a0b83845b796afc8385fa7ec9b76e4ecac1a1aea7bf058ecf4e4504c6c1"
+        }
+      ],
+      "role": "inline numerical source-coordinate check, not imaging budget",
+      "created_utc": "2026-11-12T23:05:31.737220+00:00"
+    },
+    "source_gate_role": "Reused implementation verification from5e9 rotfix; not new50B imaging events",
+    "reference_source_gate_report": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_rotfix_20261113/released_remaining.json",
+    "reference_source_gate_sha256": "a9d29547118eef1c7096476105328bd463730af604d495942fb9f1875bd887c3",
+    "inherited_science_sha256": "64cb2ac9287b50cc2d1b3d3d1e3df74b630ac76ad8fedbfbedfe463cde0b39ca",
+    "new_transport_release": "e4917ca0af75a2b5",
+    "independent_new_imaging_primary_gamma": 50000000000,
+    "independent_new_views": 20,
+    "inherited_imaging_primaries": 0,
+    "reused_imaging_observations": false,
+    "reused_reconstruction_frames": 0,
+    "reused_GenericSource_response_workers": 88,
+    "reused_absolute_response_kernel_sha256": "02d5a96e4e2682c20a76745aa06a9460f99dc1a42c79b4a8929722c97c4c1218",
+    "source_and_projector_angle_sign": "+theta",
+    "old_MC_angle_sign": "-theta",
+    "old_index_for_corrected_view": [
+      0,
+      19,
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "reference_gate_events_are_separate_from_imaging_budget": true,
+    "freeze_sha256": "dcef62ed2780043a100f53d8e001d3bd676689ccadd213edf8ef9a5d86cde8d3"
+  },
+  "script_archive": "scripts/plot_opengate_ehe_nema5e10_20261113_6955c1115670.py",
+  "truth_projection_diagnostic": {
+    "metrics_file": "data/truth_projection_diagnostic_metrics.csv",
+    "spatial_response_validated": false,
+    "four_phase_efficiency": {
+      "A218": {
+        "max_four_phase_efficiency_CV_percent": 8.460230339378978,
+        "gap_mm_at_max": 45,
+        "approximate_single_phase_Poisson_sigma_percent": 3.069304674073464
+      },
+      "A440": {
+        "max_four_phase_efficiency_CV_percent": 5.555788552827401,
+        "gap_mm_at_max": 95,
+        "approximate_single_phase_Poisson_sigma_percent": 3.7648830574892775
+      },
+      "C440to218": {
+        "max_four_phase_efficiency_CV_percent": 8.192044032676987,
+        "gap_mm_at_max": 95,
+        "approximate_single_phase_Poisson_sigma_percent": 4.2854956435548335
+      }
+    }
+  },
+  "old_new_transport_spatial_diagnostic": [
+    {
+      "energy_keV": 218,
+      "baseline_sha256": "e5b0d801b28c8ffb13fee5971b376ac1bb1c9991614e2c0e8d47147b64528567",
+      "old_counts": 232888,
+      "new_counts": 233167,
+      "spatial_relative_l2": 0.03977717343954633,
+      "independent_Poisson_expected_noise_l2": 0.03468064778601075,
+      "pooled_high_count_bins": 289,
+      "diagnostic_Poisson_standardized_difference_RMS": 1.0963183141330328,
+      "source_origin_counts": [
+        134847,
+        98320
+      ],
+      "baseline_layout": "stored[detector,view].T.reshape(20,68,34)",
+      "new_minus_old_total_fraction": 0.001198000755728179
+    },
+    {
+      "energy_keV": 440,
+      "baseline_sha256": "d0e6412da3064abbc9a8b4d9d85dafe487c721fc8849b002a66fe56dd10389d7",
+      "old_counts": 118846,
+      "new_counts": 128551,
+      "spatial_relative_l2": 0.09415850092911689,
+      "independent_Poisson_expected_noise_l2": 0.05085180067227316,
+      "pooled_high_count_bins": 289,
+      "diagnostic_Poisson_standardized_difference_RMS": 1.5235978737445177,
+      "source_origin_counts": [
+        0,
+        128551
+      ],
+      "baseline_layout": "stored[detector,view].T.reshape(20,68,34)",
+      "new_minus_old_total_fraction": 0.08166029988388335
+    }
+  ],
+  "boundary_query_diagnostic": {
+    "study": "opengate_ehe_nema5e10_20261113",
+    "analysis_only": true,
+    "arrays_modified": false,
+    "physical_calibration_passed": false,
+    "primary_physical_comparison_metrics": [
+      "common interior background BV",
+      "original3D hot-sphere recovery/CNR",
+      "native support-weighted activity bias",
+      "native weighted outer-FOV fraction"
+    ],
+    "global_query_NRMSE_is_primary_physical_comparison": false,
+    "rows": [
+      {
+        "energy_keV": 218,
+        "native_density_peak": 496.63992953599325,
+        "peak_support_fraction": 0.11362026268239636,
+        "peak_xyz_mm": [
+          186.0,
+          -102.0,
+          26.0
+        ],
+        "minimum_positive_support_fraction": 0.00019767541302961086,
+        "native_activity_integral_mm3": 3490681.6737022297,
+        "fractional_boundary_activity_fraction": 0.02919731933779081,
+        "linear_query_to_native_activity_integral_ratio": 1.074825871059636,
+        "global_query_NRMSE_diagnostic_only": 2.2948072162186133
+      },
+      {
+        "energy_keV": 440,
+        "native_density_peak": 383.59470875473073,
+        "peak_support_fraction": 0.0014577109714402957,
+        "peak_xyz_mm": [
+          -42.0,
+          150.0,
+          -54.0
+        ],
+        "minimum_positive_support_fraction": 0.00019767541302961086,
+        "native_activity_integral_mm3": 3640557.069283553,
+        "fractional_boundary_activity_fraction": 0.02839600549492353,
+        "linear_query_to_native_activity_integral_ratio": 1.0607807295053295,
+        "global_query_NRMSE_diagnostic_only": 1.7882792202541429
+      }
+    ],
+    "native_activity_formula": "sum(density_xyz * fraction_xyz * 4**3,dtype=float64)",
+    "query_activity_formula": "sum(linear XYZ concentration query on original 3 mm lattice,dtype=float64)*3**3",
+    "interpretation": "Linear concentration interpolation does not conserve physical-support-weighted activity near tiny-fraction edge cells. Global query NRMSE/outside-body metrics are grid-transfer diagnostics. Use original interior BG/hot ROIs and native weighted integrals/fractions as primary comparisons. Full-range image scales retain all edge outliers, which may make the body and baseline pale."
+  },
+  "dose_supplement": {
+    "supplement_only": true,
+    "accepted_5b_reference": {
+      "study": "opengate_ehe_nema5e9_rotfix_20261113",
+      "endpoint_iteration": 200,
+      "cache": "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113/data/selected_mips.npz",
+      "cache_sha256": "ca821e01db5e2aa7f36701bd436bc4e4c6434e8e1f4deb11dbb91c0add7b9679",
+      "original_strict_receipt": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_rotfix_20261113/strict_delivery.json",
+      "original_strict_receipt_sha256": "2fad33d5c75b4b76637d2fbb148356b2b38f79762f695c63b402f7fa2e60ff78",
+      "source_rotation_gate_passed": true,
+      "raw_reconstruction_arrays_modified": false,
+      "smoothing": false,
+      "fitted_gain": false,
+      "cross_energy_sum": false
+    },
+    "panels": [
+      {
+        "method": "EHE",
+        "dose": "5B",
+        "energy_keV": 218,
+        "iteration": 200,
+        "displayed_array_sha256": "ab5c352bbea206dccd278e54919e3e647c10921a76f01ddc47c93e5b2d73e64f",
+        "display_max": 70.79479360098408,
+        "fraction_display_pixels_above10": 0.13125
+      },
+      {
+        "method": "OpenGATE-PyTomography",
+        "dose": "5B",
+        "energy_keV": 218,
+        "iteration": 200,
+        "displayed_array_sha256": "dd06494ffc7a86607aaf69489f760e216accb8c20fcc2c093bebd24973f6881c",
+        "display_max": 158550.3639387966,
+        "fraction_display_pixels_above10": 0.1286549707602339
+      },
+      {
+        "method": "EHE",
+        "dose": "50B",
+        "energy_keV": 218,
+        "iteration": 200,
+        "displayed_array_sha256": "e90f0ab37c49580f4ff9a2240a06ead8c1681cc6a94202dd01d1059729fcb8c5",
+        "display_max": 20.054634315037386,
+        "fraction_display_pixels_above10": 0.005595238095238095
+      },
+      {
+        "method": "OpenGATE-PyTomography",
+        "dose": "50B",
+        "energy_keV": 218,
+        "iteration": 200,
+        "displayed_array_sha256": "6ec75d97b56fda488348b64eefd57208cc1d470257780202658788d397b8f594",
+        "display_max": 496.63992953599325,
+        "fraction_display_pixels_above10": 0.03540100250626566
+      },
+      {
+        "method": "EHE",
+        "dose": "5B",
+        "energy_keV": 440,
+        "iteration": 200,
+        "displayed_array_sha256": "d97ed86e0d1a3e76c4333f902828459fcbd69d1548f4e02dadf4ff15a2bac6be",
+        "display_max": 68.0963993927976,
+        "fraction_display_pixels_above10": 0.1075
+      },
+      {
+        "method": "OpenGATE-PyTomography",
+        "dose": "5B",
+        "energy_keV": 440,
+        "iteration": 200,
+        "displayed_array_sha256": "42b7eec2da42faa37531c0fe1154a8eca73f7757c2b41b59a8d67195f8f7b24c",
+        "display_max": 3625.316600259825,
+        "fraction_display_pixels_above10": 0.1286549707602339
+      },
+      {
+        "method": "EHE",
+        "dose": "50B",
+        "energy_keV": 440,
+        "iteration": 200,
+        "displayed_array_sha256": "f6d3ddb2dddad7ceabd65ca1cd498586f3a1b73d2a1be3b4b568b67a6ee5407a",
+        "display_max": 23.48338046754047,
+        "fraction_display_pixels_above10": 0.004404761904761904
+      },
+      {
+        "method": "OpenGATE-PyTomography",
+        "dose": "50B",
+        "energy_keV": 440,
+        "iteration": 200,
+        "displayed_array_sha256": "01832936f56ef8472d0182268931f0711b64937dca371d34973d0daeb2c28f12",
+        "display_max": 373.54559186807563,
+        "fraction_display_pixels_above10": 0.03905597326649958
+      }
+    ],
+    "concentration_range": [
+      0,
+      10
+    ],
+    "image_smoothing": false,
+    "fitted_gain": false,
+    "counts_resampled": false,
+    "raw_reconstruction_arrays_modified": false,
+    "old_artifacts_modified": false,
+    "physical_calibration_passed": false,
+    "boundary_note": "Same native-versus-query caveat as each core study. This endpoint image does not replace interior ROI or native weighted-integral comparisons."
+  },
+  "dose_sensitivity_scaling_check": {
+    "passed": true,
+    "source_report": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e10_20261113/dose_sensitivity_scaling_checks.json",
+    "source_report_sha256": "478a3177e56d9f051a8567e1621185e52fc5fb0adb7284f4eadf371d16b586b2",
+    "artifact_report": "data/dose_sensitivity_scaling_checks.json",
+    "energies": {
+      "440": {
+        "passed": true,
+        "emission_ratio_bounds_vs10x": [
+          0.9998704157873659,
+          1.0000371802776504
+        ],
+        "actual_relative_L2_vs10x": 1.2114515952808872e-05,
+        "lower_bound_max_absolute_violation": 0.0,
+        "upper_bound_max_absolute_violation": 0.0,
+        "roundoff_absolute_tolerance": 6.198220337502317e-13,
+        "old_sensitivity_sha256": "602ed2ac08963d2b75e16c6961cf506de5e09134696e66bd95e265d8ee66b10c",
+        "new_sensitivity_sha256": "526fab4732a6e11f110f5dcf778da1326a6389e6ea22a559a2ff7b49ac29f6b8",
+        "checked_at_iteration_initialization": true
+      },
+      "218": {
+        "passed": true,
+        "emission_ratio_bounds_vs10x": [
+          0.99991063890893,
+          1.0003115714941109
+        ],
+        "actual_relative_L2_vs10x": 2.9132774657996622e-05,
+        "lower_bound_max_absolute_violation": 0.0,
+        "upper_bound_max_absolute_violation": 0.0,
+        "roundoff_absolute_tolerance": 6.825909546162109e-13,
+        "old_sensitivity_sha256": "798ae4bbb9f599298606ba48d72640ecf2ebafc1e6a57ff5865813ae59abdd15",
+        "new_sensitivity_sha256": "e874e1fc716c6957a9e1551e6288a3ebe569fbd1729058147eaed0755d15f8c9",
+        "checked_at_iteration_initialization": true
+      }
+    },
+    "role": "new50B exposure/volume normalization against same-framework accepted5B, no response recalibration",
+    "image_scale_fitted": false,
+    "arrays_modified": false,
+    "physical_response_calibration": false,
+    "image_quality_proof": false
+  },
+  "primary_comparison_metrics": [
+    "common interior background BV",
+    "original3D hot-sphere recovery/CNR",
+    "native support-weighted activity bias",
+    "native weighted outer-FOV fraction"
+  ],
+  "global_query_NRMSE_is_primary_physical_comparison": false,
+  "new_density_units": "already relative concentration; no division by dose",
+  "selected_actual_iterations": [
+    10,
+    20,
+    40,
+    60,
+    100,
+    200
+  ],
+  "frames_measured": 800,
+  "sphere_rows": 4800,
+  "roi_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "common_background_voxels": 97604,
+  "central_MIP_slab_edges_mm": [
+    -36,
+    36
+  ],
+  "old_MIP_native_layers": 24,
+  "new_MIP_native_layers": 18,
+  "physical_FOV_mm": [
+    500,
+    300,
+    120
+  ],
+  "display_axes_xy_mm": [
+    -252,
+    252,
+    -152,
+    152
+  ],
+  "new_display_note": "Full native XY array, axes show complete physical ellipse including boundary-cell extents; only zero padding outside physical FOV is off-axis",
+  "quantitative_query": "Original 3mm [40,100,168] truth lattice; old polar XY Delaunay; new native 4mm XYZ linear interpolation, outside-grid queries zero",
+  "smoothing": false,
+  "fitted_gain": false,
+  "cross_energy_sum": false,
+  "colormap": "gray_r (white low; black high)",
+  "main_concentration_range": [
+    0,
+    10
+  ],
+  "native_outer_FOV_rule": "(x/250)^2+(y/150)^2 >= 0.8^2",
+  "full_range_common_vmax_by_energy": {
+    "218": 496.63992953599325,
+    "440": 373.54559186807563
+  },
+  "full_range_scale_scope": "One common per-energy maximum over both methods and all selected frames; retained edge outliers may wash out body contrast",
+  "full_range_companions": true,
+  "figures": [
+    "iteration_218kev_72mm",
+    "iteration_218kev_72mm_full_range",
+    "iteration_440kev_72mm",
+    "iteration_440kev_72mm_full_range",
+    "final_truth_ehe_opengate_72mm",
+    "final_truth_ehe_opengate_72mm_full_range",
+    "bv_cnr_trajectories",
+    "activity_bias_and_false_activity",
+    "absolute_sphere_recovery",
+    "observed_projection_counts",
+    "truth_projection_diagnostic",
+    "corrected_source_projection_centroids",
+    "old_new_transport_spatial_diagnostic",
+    "old_new_transport_angular_diagnostic",
+    "dose_5b_50b_final_72mm"
+  ],
+  "limitations": [
+    "Platform, response model, and reconstruction grid change together; this is not a single-cause comparison.",
+    "New response: absolute Monte Carlo 2D CDR, depth interpolation and four-phase mean; unmeasured tails, finite-collimator edges and shift dependence are not certified.",
+    "Corrected actual source and projector use +theta. Old MC uses -theta; per-view old/new comparisons explicitly use old index (-v) mod20. Summed20-view maps are unchanged by this permutation.",
+    "Original 3mm source truth and common 3mm query ROIs; new 4mm native density is linearly queried for ROI statistics only.",
+    "Native volume integrals use each grid's own physical-support fractions; common-query integrals are reported separately.",
+    "Linear concentration queries do not conserve support-weighted activity at tiny-fraction outer cells. Global query NRMSE is a grid-sensitive diagnostic, not the primary physical comparison; use interior BG/hot ROIs and native weighted integrals/fractions.",
+    "Full-range panels use one common per-energy scale across compared images; very large partial-support edge concentrations can dominate that scale and make the body and old baseline appear pale.",
+    "BV is spatial background sample CV, not NEMA variability of multiple background-ROI means.",
+    "Equal displayed iteration numbers do not establish equal convergence of the two models.",
+    "Numerical acceptance, delivery, visual inspection and physical calibration are separate decisions; physical calibration remains false.",
+    "Independent50B imaging transport covers all20 angles. Only source implementation, response kernels and projector are reused; no5e9 observations or reconstruction frames are reused.",
+    "The50B reconstruction executes on LOCAL_CPU with eight threads and PyTorch2.14 CPU, fresh all-one initialization for both full200-iteration histories. Only the actual-primary budget guard changes5B to50B; the reconstruction science and I/O retry helper remain unchanged.",
+    "Each 218 fixed background uses its own final440, response and grid; differences in old/new fixed-background totals cannot be attributed solely to the cross-window kernel.",
+    "外围阈值 r>=0.8 不是严格体模外或零真值区域，外围活度指标不全是假活度。"
+  ],
+  "saturation_fraction_denominator": "Each complete physical XY display grid including boundary cells, not a phantom-only ROI; pixel sizes differ",
+  "strict_new_delivery_accepted": true,
+  "numerical_data_integrity_passed": true,
+  "visual_QA_passed": true,
+  "image_quality_certified": false,
+  "physical_calibration_passed": false,
+  "original_scientific_analysis_script_archive": "scripts/plot_opengate_ehe_nema5e10_20261113_1ce72522c8ff.py",
+  "outer_FOV_activity_interpretation": {
+    "note": "外围阈值 r>=0.8 不是严格体模外或零真值区域，外围活度指标不全是假活度。",
+    "reference_grid": "Original3mm voxel centers; full3D truth, center-mask r>=0.8",
+    "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "truth_activity_fraction": {
+      "218": 0.0024850402803272232,
+      "440": 0.0023489228219037055
+    },
+    "applies_to_native_grid_as_exact_subtraction": false
+  },
+  "bounded_figure_revision": {
+    "figure": "activity_bias_and_false_activity",
+    "scope": "Second-column title removes false; metadata/HTML clarify nonzero truth at outer threshold",
+    "metrics_recomputed": false,
+    "metrics_CSV_sha256": "d94dad913c5d8151551b64e77362b315aae7ae29b9b1962ff4fbed02fa130ebe",
+    "history": "history/outer_fov_label_before_20261113",
+    "current_plot_script_sha256": "6955c11156709d2449314ad5e258f536bb9b84555bb26e3cd3100268675dcd8e"
+  },
+  "visual_QA_record": "data/visual_qa.json",
+  "final_reviewed_utc": "2026-11-13T13:12:05.534858+00:00"
+}

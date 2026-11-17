@@ -1,0 +1,60 @@
+{
+  "study": "ac225_water_corrections_20261103",
+  "routes": 32,
+  "histories": 6400,
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "roi_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "background_voxels": 97604,
+  "z_MIP_edges_mm": [
+    -36,
+    36
+  ],
+  "xy_crop": 0,
+  "image_smoothing": false,
+  "fitted_gain": false,
+  "cross_energy_image_sum": false,
+  "normalization": "actual own-energy gamma / original own activity integral",
+  "total_budget": "218+440 primary gammas, not Ac225 decays",
+  "native_outer_FOV": "ellipse normalized r>=0.8; all120mm",
+  "physical_calibration_passed": false,
+  "visual_review_pending": true,
+  "figures": [
+    "JSCC_5e9_218_iteration72mm.png",
+    "JSCC_5e9_218_iteration72mm_unclipped.png",
+    "JSCC_5e9_218_bv_cnr.png",
+    "JSCC_5e9_440_iteration72mm.png",
+    "JSCC_5e9_440_iteration72mm_unclipped.png",
+    "JSCC_5e9_440_bv_cnr.png",
+    "JSCC_5e10_218_iteration72mm.png",
+    "JSCC_5e10_218_iteration72mm_unclipped.png",
+    "JSCC_5e10_218_bv_cnr.png",
+    "JSCC_5e10_440_iteration72mm.png",
+    "JSCC_5e10_440_iteration72mm_unclipped.png",
+    "JSCC_5e10_440_bv_cnr.png",
+    "EHE_5e9_218_iteration72mm.png",
+    "EHE_5e9_218_iteration72mm_unclipped.png",
+    "EHE_5e9_218_bv_cnr.png",
+    "EHE_5e9_440_iteration72mm.png",
+    "EHE_5e9_440_iteration72mm_unclipped.png",
+    "EHE_5e9_440_bv_cnr.png",
+    "EHE_5e10_218_iteration72mm.png",
+    "EHE_5e10_218_iteration72mm_unclipped.png",
+    "EHE_5e10_218_bv_cnr.png",
+    "EHE_5e10_440_iteration72mm.png",
+    "EHE_5e10_440_iteration72mm_unclipped.png",
+    "EHE_5e10_440_bv_cnr.png"
+  ],
+  "interpolation_roundoff": {
+    "affected_saved_frames": 1029,
+    "native_arrays_unchanged": true,
+    "policy": "Derived view only: negative <=64*eps64*max(1,native_peak), relativeL2<=1e-12; larger deviations fail",
+    "maximum_relative_L2": 5.598095804694962e-17
+  },
+  "inputs": {
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\NEMA_Body_H60\\truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\nema_roi_policy.py": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\tools\\research\\plot_ac225_water_corrections_viewsafe_20261105.py": "00e0629fc6a62f637a38459a7d243d1ef133deee00b62fce4ce7664a771844b7"
+  }
+}

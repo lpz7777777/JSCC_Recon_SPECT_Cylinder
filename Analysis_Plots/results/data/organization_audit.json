@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "groups": 6,
+  "routes": 15,
+  "displayed_saved_frames": 90,
+  "all_subgallery_artifact_sha_passed": true,
+  "all_html_links_resolve": true,
+  "all_source_arrays_unchanged": true,
+  "source_arrays_moved": false,
+  "raw_history_copies_created": false,
+  "new_reconstruction_or_HPC": false,
+  "JSCC_display_label_is_joint_only": true,
+  "EHE_actual_Geant4_only": true,
+  "mip_and_scale_checks": [
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "displayed_frames": 18,
+      "all_selected_arrays_finite_nonnegative": true,
+      "method_channels_and_real_iterations_match": true,
+      "unclipped_scale_excludes_coordinate_arrays": true,
+      "source_image_MIP_max": 70.24811553955078
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "displayed_frames": 12,
+      "all_selected_arrays_finite_nonnegative": true,
+      "method_channels_and_real_iterations_match": true,
+      "unclipped_scale_excludes_coordinate_arrays": true,
+      "source_image_MIP_max": 65.77696990966797
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 440,
+      "displayed_frames": 18,
+      "all_selected_arrays_finite_nonnegative": true,
+      "method_channels_and_real_iterations_match": true,
+      "unclipped_scale_excludes_coordinate_arrays": true,
+      "source_image_MIP_max": 22.375473022460938
+    },
+    {
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 218,
+      "displayed_frames": 12,
+      "all_selected_arrays_finite_nonnegative": true,
+      "method_channels_and_real_iterations_match": true,
+      "unclipped_scale_excludes_coordinate_arrays": true,
+      "source_image_MIP_max": 20.518856048583984
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "displayed_frames": 18,
+      "all_selected_arrays_finite_nonnegative": true,
+      "method_channels_and_real_iterations_match": true,
+      "unclipped_scale_excludes_coordinate_arrays": true,
+      "source_image_MIP_max": 8.87330436706543
+    },
+    {
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "displayed_frames": 12,
+      "all_selected_arrays_finite_nonnegative": true,
+      "method_channels_and_real_iterations_match": true,
+      "unclipped_scale_excludes_coordinate_arrays": true,
+      "source_image_MIP_max": 5.013046741485596
+    }
+  ],
+  "build_script_sha256": "906a4f7db20f422a055d8c304431d6ba113761b4b8414234dcd359383b716630"
+}

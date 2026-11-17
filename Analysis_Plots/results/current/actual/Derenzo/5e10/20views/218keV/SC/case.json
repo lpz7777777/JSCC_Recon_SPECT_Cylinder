@@ -1,0 +1,28 @@
+{
+  "id": "actual-Derenzo-5e10-218-SC",
+  "kind": "actual",
+  "phantom": "Derenzo",
+  "dose": "5e10",
+  "energy_keV": 218,
+  "method": "SC",
+  "views": 20,
+  "job": {
+    "formal": 1752710
+  },
+  "channel": "218_SinglePhoton",
+  "matrix": "frozen JSCC study",
+  "status": "completed-delivered-awaiting-visualization",
+  "iterations": 10000,
+  "report": "docs/ac225/studies/derenzo/derenzo-jscc-5e10-218.md",
+  "evidence": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030/JSCC_218/formal_delivery.json",
+  "scope_note": "218单光子10000次完成并严格取回；本次目录整理不冒充已有统一新版画廊。",
+  "pointer": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV/SC/README.md",
+  "grid": "polar6x3mm",
+  "material": "no-water",
+  "correction": "none",
+  "projection_source": "real-Geant4",
+  "width_percent": 100,
+  "physical_certification": "not-certified",
+  "numerical_qa": "see-original-evidence",
+  "visual_qa": "see-original-evidence"
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "job": 1762460,
+  "all_four_array_elements_COMPLETED_0_0": true,
+  "energies": [
+    218,
+    440
+  ],
+  "dose_labels": [
+    "5e9",
+    "5e10",
+    "5e11",
+    "5e12"
+  ],
+  "views": 60,
+  "old_control_views": 20,
+  "all1600_remote_frames_verified": true,
+  "local_selected_frames": 48,
+  "strict_local_members": 238,
+  "full_history_local_QA": false,
+  "actual_figure_families_reviewed": 13,
+  "independent_MIP_ROI_oracle_passed": true,
+  "artifact_count": 66,
+  "artifact_manifest_sha256": "bcd2f7b35a094d4e350baa536d92c1bafc89fcd818f6cc67cace2fcdc5c51775",
+  "report_html_sha256": "7b7e29e3dafac507b43c25f2b571562da166a45c3af7a6f109a7c76c9f238a4b",
+  "manual_visual_review_pending": false,
+  "physical_calibration_passed": false,
+  "image_quality_certification_passed": false
+}

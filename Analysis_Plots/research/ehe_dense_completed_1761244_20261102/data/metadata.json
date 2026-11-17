@@ -1,0 +1,812 @@
+{
+  "protocol": "dense-EHE1761244-six-route72mm-v1",
+  "generated_at": "2026-11-02T19:04:20.836058+08:00",
+  "source_job": 1761244,
+  "routes": [
+    {
+      "condition": 0,
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1761244_0",
+      "normalization_density": 1036.9058469627134,
+      "normalization_definition": "actual energy primary photons / original activity integral",
+      "primary_counts": [
+        1469040802,
+        3530959198,
+        0
+      ],
+      "actual_primary_gamma_total": 5000000000,
+      "frames": [
+        {
+          "iteration": 10,
+          "history_index_zero_based": 9,
+          "active_sha256": "8f279bcd36dd8250004c8ce94e4776684e184774e066fea5f153ad933152fc13",
+          "full_sha256": "aa1020e27a8dd55ee76a7b70e8b87f71c1364e135f0bd84b25fc86069ddf7b78",
+          "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 20,
+          "history_index_zero_based": 19,
+          "active_sha256": "b2c83fba8a45619dc0310bde8c04fc10d5707843ac444ef38f3d136d1ce8e607",
+          "full_sha256": "a939402dabcd910498cb36d2222c4f285a021935fc93ac759a92f6986c8da0bc",
+          "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 40,
+          "history_index_zero_based": 39,
+          "active_sha256": "8e778d27d25040074d362bf3b2d415ec7273119a048563dad0697e236b71d900",
+          "full_sha256": "ca852c8feb6566c3d73b086c351bd7c4dadf07c98287581c38f0c5d301dc2907",
+          "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 60,
+          "history_index_zero_based": 59,
+          "active_sha256": "4ec26e3129c1549d04f6e69693297d87ac2e84ecec23a9e150f7c6ff485988a4",
+          "full_sha256": "5d49d84131aacd411ea02340955ea6b72ca46471fc6f1c7cdef8c061461f3814",
+          "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 100,
+          "history_index_zero_based": 99,
+          "active_sha256": "a34f34850f15b45562bfd39f1bc09455350fd58af1f8cb565206bcf124543cbf",
+          "full_sha256": "7d8bdbe9fd2b307168bbbb72b544e50eb900502262e25941f22bd5143bb39ee8",
+          "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+          "numerical_roundoff_cleanup_minimum": -3.586584994536496e-27,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 200,
+          "history_index_zero_based": 199,
+          "active_sha256": "e2f0a47d29f6b501794aadc8269914665d4d6bd05699dfc4352667b802c3e4ed",
+          "full_sha256": "e5230357953c11bc0ab544c7bd70abdc99040a86ee753ac859e1a598a53be1f8",
+          "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+          "numerical_roundoff_cleanup_minimum": -9.93610675287677e-18,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        }
+      ],
+      "original_full_history_sha256": "24a9ea16dc51ada4ba7d1643d3301e2cc558585e2e89a5aac3147eb9a19232f3",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.79702823421234e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      },
+      "source_geometry": {
+        "source": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz",
+        "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+        "energy_keV": 440,
+        "geometry": "Original three-dimensional NEMA Body spheres, H60; not legacy hot cylinders"
+      },
+      "physical_calibration_certified": false
+    },
+    {
+      "condition": 0,
+      "phantom": "NEMA",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "job": "1761244_0",
+      "normalization_density": 456.39950822493626,
+      "normalization_definition": "actual energy primary photons / original activity integral",
+      "primary_counts": [
+        1469040802,
+        3530959198,
+        0
+      ],
+      "actual_primary_gamma_total": 5000000000,
+      "frames": [
+        {
+          "iteration": 10,
+          "history_index_zero_based": 9,
+          "active_sha256": "60182642c756f20205a1a1ef1d754e8787dd54c415a47c9837ca62c8e9cf538b",
+          "full_sha256": "db2bbf8ee04d17426ec643d34ef1894f622bbe911b923fe9dafdbf94da3980c3",
+          "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 20,
+          "history_index_zero_based": 19,
+          "active_sha256": "ad42a1d60e25cc24547a7a9a43406ac477ddde8852c514a2d13b637fd866a42a",
+          "full_sha256": "05879b11356d0d3d625bfb1bf0da6996900e16d098edc39f0619dce808418f58",
+          "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 40,
+          "history_index_zero_based": 39,
+          "active_sha256": "7b792792e4410eb7179a275f7c2018b41210cb92501e4e90cb828c590ab7dda9",
+          "full_sha256": "cb9a200ca83e71ef586ef7ef43cc1e9afee62ecbb92f7a9a61c0f8f4076511e9",
+          "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 60,
+          "history_index_zero_based": 59,
+          "active_sha256": "960b36c8d8cf5d8aefdd04312976bb4d7a4ae82a05aa39d7222797294470260e",
+          "full_sha256": "5f4608cb7539047c0f7317017278e9c517ec1ebee263561bce3da1d5117dd685",
+          "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+          "numerical_roundoff_cleanup_minimum": -1.0025910671056987e-21,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 100,
+          "history_index_zero_based": 99,
+          "active_sha256": "ccc125770ba2af4a96215f8f59d46eb27ec8b2994dac38bf2af48b636f510d32",
+          "full_sha256": "6347ecb029b15cb2f118b49fb32bf617acbb9316476c385da3f6759a8e1d1c77",
+          "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+          "numerical_roundoff_cleanup_minimum": -2.431730882327518e-18,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 200,
+          "history_index_zero_based": 199,
+          "active_sha256": "ee3a397a2249edcbd2c9241b2f0135fc56d49db88076df86b64d4c664b4198d4",
+          "full_sha256": "0385bd83de191ac37f3c22798ca14a85fce35b565c95d26e60e5ea41c0b51482",
+          "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+          "numerical_roundoff_cleanup_minimum": -1.3745754006062351e-14,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        }
+      ],
+      "original_full_history_sha256": "f0998e504b31f4e8e1ea50564473d261e335fd7bc1d9ad2071a30c4499dcf364",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.147530185014287e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      },
+      "source_geometry": {
+        "source": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz",
+        "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+        "energy_keV": 218,
+        "geometry": "Original three-dimensional NEMA Body spheres, H60; not legacy hot cylinders"
+      },
+      "physical_calibration_certified": false
+    },
+    {
+      "condition": 1,
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1761244_1",
+      "normalization_density": 10369.068524294238,
+      "normalization_definition": "actual energy primary photons / original activity integral",
+      "primary_counts": [
+        14690373781,
+        35309626219,
+        0
+      ],
+      "actual_primary_gamma_total": 50000000000,
+      "frames": [
+        {
+          "iteration": 10,
+          "history_index_zero_based": 9,
+          "active_sha256": "748348926edd4ffa6605ce93e06eda173555cbef9c2e6ae725088ffb1f413f95",
+          "full_sha256": "6fc00c07c6f83537d762fd2273226624b99bd3c735b9e1f5e71c4e910d482d27",
+          "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 20,
+          "history_index_zero_based": 19,
+          "active_sha256": "9bb1188213407fef04b293eabb43077c59b81b37fb2cd0a9c08588a3462e705f",
+          "full_sha256": "fcfb941911715b57459bdbf101cc76651c2e095f5625e223676f1d0824fbc842",
+          "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 40,
+          "history_index_zero_based": 39,
+          "active_sha256": "2cca99c190f6a8c2dde2757dcfd8d605a0babd8728c692b3e7fb75411eafbefd",
+          "full_sha256": "d85e5ca09dd335a68c95809d758128d173f91de03aca139d8f11141c7c2e4c96",
+          "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 60,
+          "history_index_zero_based": 59,
+          "active_sha256": "9938f72150b4038036e1887152784dc1bc23be0d3e59a92b408b46616627edc7",
+          "full_sha256": "5411cdb289a8f85e46ae19ecc6cfa09cb956c40b8bc109ce2521253786214ef9",
+          "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 100,
+          "history_index_zero_based": 99,
+          "active_sha256": "a4eff9c452786857ba457bf5409a713c5444eaf2c8cdd7deb7b7d43ff75cc9ba",
+          "full_sha256": "8ff21a87049c2f8d97f4c6ffe616735baffb437b36591e67edd8a98a608ccf03",
+          "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 200,
+          "history_index_zero_based": 199,
+          "active_sha256": "d65bf104f08fab1317edae58f98def7a47e9f2fbbda5eed5d45153fcac90a761",
+          "full_sha256": "733bf4d6f5359645b2b95839980b3ebd7994ffe0d3caaf63117ef0b1deac265c",
+          "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        }
+      ],
+      "original_full_history_sha256": "ba32baac476b4155a8d41641cd63f778c49931d225403de59fcd22add49746c2",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.79702823421234e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      },
+      "source_geometry": {
+        "source": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz",
+        "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+        "energy_keV": 440,
+        "geometry": "Original three-dimensional NEMA Body spheres, H60; not legacy hot cylinders"
+      },
+      "physical_calibration_certified": false
+    },
+    {
+      "condition": 1,
+      "phantom": "NEMA",
+      "dose": "5e10",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "job": "1761244_1",
+      "normalization_density": 4563.984444925511,
+      "normalization_definition": "actual energy primary photons / original activity integral",
+      "primary_counts": [
+        14690373781,
+        35309626219,
+        0
+      ],
+      "actual_primary_gamma_total": 50000000000,
+      "frames": [
+        {
+          "iteration": 10,
+          "history_index_zero_based": 9,
+          "active_sha256": "a4d7fa69162d7078bb4183b3e2e47beefe78cfed095da7e1908aae3d5800c75c",
+          "full_sha256": "45311ed8739c574ada978ebe464b983d0e2a12db6849b0176a66b8d8a301d4e2",
+          "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 20,
+          "history_index_zero_based": 19,
+          "active_sha256": "f764f8b3f6201ece8b920ad5c8e4f66d4534ccf8bbc9dd7902cb11a5c2d64d5a",
+          "full_sha256": "86acbfae8c69ddff65b85718435d8545b1954fb651c7609ce14b619660006980",
+          "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 40,
+          "history_index_zero_based": 39,
+          "active_sha256": "f40f46ab029b8425d57a933d2dd2eb3bcee479aaaf2810f115a8a6660dc4f346",
+          "full_sha256": "c5def76e69fed4699e2ebd96498e8adec739499dcc27749c6959bef2f73a3e7a",
+          "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 60,
+          "history_index_zero_based": 59,
+          "active_sha256": "56fddc7d1acea67dfae409f47f68e5a981bd87a0f569eaa65fd53eeabe037f8a",
+          "full_sha256": "245f13f2f64749ab2484a843c13441968edef7324ffc2cb1f67af2b82535195a",
+          "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 100,
+          "history_index_zero_based": 99,
+          "active_sha256": "d68a32e9c26ebfde14f111060854f2c5721b626cfba87cfb72107c45bd5fafcd",
+          "full_sha256": "542d43987ad5e9d509ac04ea94d4fd0dba3f7d152faf127480f3905a891f9c7b",
+          "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 200,
+          "history_index_zero_based": 199,
+          "active_sha256": "a741e83c66b82ca96ad3b7b4405e407e4b0ee974a52e67d75ddb821b8dcb94eb",
+          "full_sha256": "7f0de061d04a0c04e62dfece49423f09bb5c3dfb960d61d4ab4c54e029cbe298",
+          "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        }
+      ],
+      "original_full_history_sha256": "0df1cb09b91d313addc1a2e7f61464a3ce8e762443e99bef725a229762c1ae2e",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.147530185014287e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      },
+      "source_geometry": {
+        "source": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz",
+        "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+        "energy_keV": 218,
+        "geometry": "Original three-dimensional NEMA Body spheres, H60; not legacy hot cylinders"
+      },
+      "physical_calibration_certified": false
+    },
+    {
+      "condition": 2,
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1761244_2",
+      "normalization_density": 9842.606251817895,
+      "normalization_definition": "actual monoenergy primary photons / exact analytic hot-rod volume",
+      "primary_counts": [
+        0,
+        5000000000,
+        0
+      ],
+      "actual_primary_gamma_total": 5000000000,
+      "frames": [
+        {
+          "iteration": 10,
+          "history_index_zero_based": 9,
+          "active_sha256": "42fcb2fac9eca400b75731b5ea2d3401451348284be529623c2accffd034eade",
+          "full_sha256": "490c68c146721138e39fc02a29349597f11298e5ee42efcd3f24270c0f8c3ced",
+          "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 20,
+          "history_index_zero_based": 19,
+          "active_sha256": "3c0af6e815901bae76730f2f296b42788083c22685a5b5f31cfd4a9d4558a816",
+          "full_sha256": "2a5d22bb6f1fb593698d27f6eff7037ebaa77bbb40d3924b33e9ccf61d4cb996",
+          "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 40,
+          "history_index_zero_based": 39,
+          "active_sha256": "4c26e491c7dde7b7ac25cb3c69d1355fd1134f368d18fa22c9e4420a027aabcb",
+          "full_sha256": "33ae7f8637b10f690c1ed6232ad839a083db27756a086bfd15d04ac5819964e0",
+          "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 60,
+          "history_index_zero_based": 59,
+          "active_sha256": "9d97a3932e034119985f8de24e2bb625b0dcd43147cc1644649df155fdb71a02",
+          "full_sha256": "f08a1332ebd1a9f7df843786db2eea7bcb4a44ebd776fbf43a0185a09c004bb8",
+          "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 100,
+          "history_index_zero_based": 99,
+          "active_sha256": "3488fb02094968c8692b0083a93927d1c8adca0ea6cfea7c73cfb3806d561a89",
+          "full_sha256": "1443035278371cc69f65f840fd8d061c35d7ad4e44bd9ca444290e83108ab404",
+          "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+          "numerical_roundoff_cleanup_minimum": -2.8813371535983765e-16,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 200,
+          "history_index_zero_based": 199,
+          "active_sha256": "af261415d34974d9ba1361aca1d3ade96802f39cb892e40b7e19a82059a87b34",
+          "full_sha256": "f7410e5f8ef4da74849bc8715d43db0a5190fced3d5ff37d91e61224febf3864",
+          "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+          "numerical_roundoff_cleanup_minimum": -9.857786380804492e-16,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        }
+      ],
+      "original_full_history_sha256": "4e99d4ea061a46e22361d2de742b979eedb69e0ebdc835ed5da0a9226510d8bd",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.79702823421234e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      },
+      "source_geometry": {
+        "subsamples_per_axis": 24,
+        "analytic_hot_volume_mm3": 507995.5320854695,
+        "sampled_hot_volume_mm3": 507915.00010946766,
+        "relative_volume_error": -0.00015852890609346915,
+        "source": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_440keV_geometry.json",
+        "sha256": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+        "diameters_mm": [
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "rod_count": 53
+      },
+      "physical_calibration_certified": false
+    },
+    {
+      "condition": 3,
+      "phantom": "Derenzo",
+      "dose": "5e9",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton",
+      "job": "1761244_3",
+      "normalization_density": 10774.09579555208,
+      "normalization_definition": "actual monoenergy primary photons / exact analytic hot-rod volume",
+      "primary_counts": [
+        5000000000,
+        0,
+        0
+      ],
+      "actual_primary_gamma_total": 5000000000,
+      "frames": [
+        {
+          "iteration": 10,
+          "history_index_zero_based": 9,
+          "active_sha256": "fec6c376ca1889eaa5634f8ca57291653d2cf4b871d9469920e12e3a32df57d2",
+          "full_sha256": "ffe70d4a8637b4df753acb1ed9f7028caaf838278fcf889fe32f585b46b3e95e",
+          "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 20,
+          "history_index_zero_based": 19,
+          "active_sha256": "b758892c24387cb2ad71f2cc21479b3856f9bfc6db287fc74fd7052709c09fb5",
+          "full_sha256": "3daddeb4cde4f5f6b74b19fe23bfe2552e4b7c56f98150f5d3e25a5b9dac7a03",
+          "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+          "numerical_roundoff_cleanup_minimum": 0.0,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 40,
+          "history_index_zero_based": 39,
+          "active_sha256": "ba3ca1f8b71164ccd2b6abf62c43ad41d56d884ae351102b5d20af861f2017e0",
+          "full_sha256": "822a6d055fa5d261de3e25d7f2e94962c4a990a6fee62385f53dd299d5adf205",
+          "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+          "numerical_roundoff_cleanup_minimum": -1.8436316476714773e-29,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 60,
+          "history_index_zero_based": 59,
+          "active_sha256": "32ba043b502e604f30bdca74cc16dd483adcef32aca3bc1c67a310b9a62ae594",
+          "full_sha256": "10f912641eba73857a014c62d54b0862a83a119ae34878496791010085efe4c2",
+          "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+          "numerical_roundoff_cleanup_minimum": -2.299615084615334e-30,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 100,
+          "history_index_zero_based": 99,
+          "active_sha256": "95d69a32e357f22b4e899c20d570be092837d2b05bf9ce724a06d304e936198c",
+          "full_sha256": "667338dd2f821e6a0112c822382b844cba30346a3412a0a3af5acf2942d068cb",
+          "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+          "numerical_roundoff_cleanup_minimum": -5.669551065654376e-30,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        },
+        {
+          "iteration": 200,
+          "history_index_zero_based": 199,
+          "active_sha256": "7c43dc0ee7ffa5c5a80db8b7827368a0a3eedc0503df88fd365a2542863bef88",
+          "full_sha256": "6cb82e56516c1a9c88e5e0702e203479c9e9d8506eba3e8fa5e2649f1e3df36f",
+          "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+          "numerical_roundoff_cleanup_minimum": -5.815388626947991e-43,
+          "history_match_evidence": "strict bundle receipt: remote exact byte equality at original history offset"
+        }
+      ],
+      "original_full_history_sha256": "cef0d979ac0fd41bff0152a20da3e673158ad8120a51631d3f078606df674794",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.147530185014287e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      },
+      "source_geometry": {
+        "subsamples_per_axis": 24,
+        "analytic_hot_volume_mm3": 464076.0667882842,
+        "sampled_hot_volume_mm3": 463976.24948544195,
+        "relative_volume_error": -0.0002150882365752338,
+        "source": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_218keV_geometry.json",
+        "sha256": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+        "diameters_mm": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "rod_count": 114
+      },
+      "physical_calibration_certified": false
+    }
+  ],
+  "source_input_sha256": {
+    "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_visual_bundle_strict.json": "4cae622dec4ea6bbf885bea24b06e1ec2880ef6c666a26b3c494bbd40cd70aba",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/completion.json": "1e3910ff54b06b9cf3c3cb524bf891654487073c57f598db510261075d3c5809",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/run_manifest.json": "5bd90e5e2cf55daf3dd58503942c917bb041b78bbe325c07c25381a4a8482609",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "8f279bcd36dd8250004c8ce94e4776684e184774e066fea5f153ad933152fc13",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "aa1020e27a8dd55ee76a7b70e8b87f71c1364e135f0bd84b25fc86069ddf7b78",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "1fd98131c174c733d47bf1632924d1b22536bae39794c425f34b26a92b82a772",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "b2c83fba8a45619dc0310bde8c04fc10d5707843ac444ef38f3d136d1ce8e607",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "a939402dabcd910498cb36d2222c4f285a021935fc93ac759a92f6986c8da0bc",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "9200acfe9f7374730bb6218f33fd9af7cb5ba0fcbc2bc543d64346fbbc850255",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "8e778d27d25040074d362bf3b2d415ec7273119a048563dad0697e236b71d900",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "ca852c8feb6566c3d73b086c351bd7c4dadf07c98287581c38f0c5d301dc2907",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "e24569c3351d25cfc4ab529a680b3253e68bda0e7515f2e1ccc4c3fdbcd9fede",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "4ec26e3129c1549d04f6e69693297d87ac2e84ecec23a9e150f7c6ff485988a4",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "5d49d84131aacd411ea02340955ea6b72ca46471fc6f1c7cdef8c061461f3814",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "e3b398cfe34b9aa65e6efec9d60b8081aa6c2197474c6bd2109f0c598fa28fbe",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "a34f34850f15b45562bfd39f1bc09455350fd58af1f8cb565206bcf124543cbf",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "7d8bdbe9fd2b307168bbbb72b544e50eb900502262e25941f22bd5143bb39ee8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "fe8dca26c1048564ef23a5813d9486168cd042d8174a29d3ca818f7681f65a4a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "e2f0a47d29f6b501794aadc8269914665d4d6bd05699dfc4352667b802c3e4ed",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "e5230357953c11bc0ab544c7bd70abdc99040a86ee753ac859e1a598a53be1f8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "5502ba40cabfcb8746b0070545f1237aea1d2f53753e5bc2d0a05653ff53e29a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/Image_440_SinglePhoton_active.float32": "e2f0a47d29f6b501794aadc8269914665d4d6bd05699dfc4352667b802c3e4ed",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/Image_440_SinglePhoton_full.float32": "e5230357953c11bc0ab544c7bd70abdc99040a86ee753ac859e1a598a53be1f8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/active.float32": "60182642c756f20205a1a1ef1d754e8787dd54c415a47c9837ca62c8e9cf538b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/full.float32": "db2bbf8ee04d17426ec643d34ef1894f622bbe911b923fe9dafdbf94da3980c3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/manifest.json": "c1dfb5ea0a94ddf11201b1df46dc982017bcdeb0bc6d58c712e693cf8adef7f9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/active.float32": "ad42a1d60e25cc24547a7a9a43406ac477ddde8852c514a2d13b637fd866a42a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/full.float32": "05879b11356d0d3d625bfb1bf0da6996900e16d098edc39f0619dce808418f58",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/manifest.json": "de089fa4bead6be957c48a7b817142fc97570888e72514a3ddfdc3e5a23ce3ea",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/active.float32": "7b792792e4410eb7179a275f7c2018b41210cb92501e4e90cb828c590ab7dda9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/full.float32": "cb9a200ca83e71ef586ef7ef43cc1e9afee62ecbb92f7a9a61c0f8f4076511e9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/manifest.json": "316ba871812f816fca7f1bd59ffbc9754589dec8e2ced2822af17887d80f58cd",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/active.float32": "960b36c8d8cf5d8aefdd04312976bb4d7a4ae82a05aa39d7222797294470260e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/full.float32": "5f4608cb7539047c0f7317017278e9c517ec1ebee263561bce3da1d5117dd685",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/manifest.json": "01059063d00413121d8b5170a42d5382550c196b80dae7bcc377a89b618e2366",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/active.float32": "ccc125770ba2af4a96215f8f59d46eb27ec8b2994dac38bf2af48b636f510d32",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/full.float32": "6347ecb029b15cb2f118b49fb32bf617acbb9316476c385da3f6759a8e1d1c77",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/manifest.json": "97d81e04922c4e77f111d8f62ef70457b34b48e1a62c2ea2a82be52891cc0365",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/active.float32": "ee3a397a2249edcbd2c9241b2f0135fc56d49db88076df86b64d4c664b4198d4",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/full.float32": "0385bd83de191ac37f3c22798ca14a85fce35b565c95d26e60e5ea41c0b51482",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/manifest.json": "7248f08506192d899063e45594b878fdbe1b12082e156eca4b3e2a30c01d8370",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/Image_218_SinglePhoton_CrossTalkCorrected_active.float32": "ee3a397a2249edcbd2c9241b2f0135fc56d49db88076df86b64d4c664b4198d4",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_0/Image_218_SinglePhoton_CrossTalkCorrected_full.float32": "0385bd83de191ac37f3c22798ca14a85fce35b565c95d26e60e5ea41c0b51482",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/completion.json": "dc864e9c2a2a835017467a9465801a67a97eb590f048c9a7c09cf3aab48bb259",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/run_manifest.json": "cf011bab3cb28cea32c6c2ad993e30896ae69eb4074945ca5c430a57e1e2cbee",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "748348926edd4ffa6605ce93e06eda173555cbef9c2e6ae725088ffb1f413f95",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "6fc00c07c6f83537d762fd2273226624b99bd3c735b9e1f5e71c4e910d482d27",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "a40c30b0ec5a3a6c45abca6740bfe19e987a3974e8b5e858f5a7781ae753d8ec",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "9bb1188213407fef04b293eabb43077c59b81b37fb2cd0a9c08588a3462e705f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "fcfb941911715b57459bdbf101cc76651c2e095f5625e223676f1d0824fbc842",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "b8d1b7f6af44091492ba6daec690a17eb0b8f349e15394a6eea6e2f6ca73c757",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "2cca99c190f6a8c2dde2757dcfd8d605a0babd8728c692b3e7fb75411eafbefd",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "d85e5ca09dd335a68c95809d758128d173f91de03aca139d8f11141c7c2e4c96",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "8bd3a2290c02a43f746b84c1d058d816e06b9491493fd2b7a8961ec47dfa8b5d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "9938f72150b4038036e1887152784dc1bc23be0d3e59a92b408b46616627edc7",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "5411cdb289a8f85e46ae19ecc6cfa09cb956c40b8bc109ce2521253786214ef9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "c0fc3199828120c6627572a37bac6f7c2b98ef7559066717a2245749badd68b3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "a4eff9c452786857ba457bf5409a713c5444eaf2c8cdd7deb7b7d43ff75cc9ba",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "8ff21a87049c2f8d97f4c6ffe616735baffb437b36591e67edd8a98a608ccf03",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "2414de5b3dfe51584a88f9b4f00be4e389451ca05e6cce8e34df1853ea900db2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "d65bf104f08fab1317edae58f98def7a47e9f2fbbda5eed5d45153fcac90a761",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "733bf4d6f5359645b2b95839980b3ebd7994ffe0d3caaf63117ef0b1deac265c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "e6fb14d89df800d5850b2b20cf865c5da1a8306ad76d0cad6b7c4d443ad0ea63",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/Image_440_SinglePhoton_active.float32": "d65bf104f08fab1317edae58f98def7a47e9f2fbbda5eed5d45153fcac90a761",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/Image_440_SinglePhoton_full.float32": "733bf4d6f5359645b2b95839980b3ebd7994ffe0d3caaf63117ef0b1deac265c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/active.float32": "a4d7fa69162d7078bb4183b3e2e47beefe78cfed095da7e1908aae3d5800c75c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/full.float32": "45311ed8739c574ada978ebe464b983d0e2a12db6849b0176a66b8d8a301d4e2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/manifest.json": "c6579d13b4b5bce490dd79436d5628b25db65545fb9a4a67c1898b636c1a3a84",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/active.float32": "f764f8b3f6201ece8b920ad5c8e4f66d4534ccf8bbc9dd7902cb11a5c2d64d5a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/full.float32": "86acbfae8c69ddff65b85718435d8545b1954fb651c7609ce14b619660006980",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/manifest.json": "20bc7b293a2733130cc8b12ce214136ebc618d6eca6fea95e0f713a591e97290",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/active.float32": "f40f46ab029b8425d57a933d2dd2eb3bcee479aaaf2810f115a8a6660dc4f346",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/full.float32": "c5def76e69fed4699e2ebd96498e8adec739499dcc27749c6959bef2f73a3e7a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/manifest.json": "21bb6b50bc823ae21631139aee707b342b6a2b8131addd0b7bf9fb5a7987b0d9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/active.float32": "56fddc7d1acea67dfae409f47f68e5a981bd87a0f569eaa65fd53eeabe037f8a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/full.float32": "245f13f2f64749ab2484a843c13441968edef7324ffc2cb1f67af2b82535195a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/manifest.json": "b8381c21921d4d20b3375c023c5debc6b79115b25b764fb495ca4254660fe556",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/active.float32": "d68a32e9c26ebfde14f111060854f2c5721b626cfba87cfb72107c45bd5fafcd",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/full.float32": "542d43987ad5e9d509ac04ea94d4fd0dba3f7d152faf127480f3905a891f9c7b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/manifest.json": "5107cb2c0e61a4648f65796c73a9c3fc6adf05975bea636416caa09bebc2797b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/active.float32": "a741e83c66b82ca96ad3b7b4405e407e4b0ee974a52e67d75ddb821b8dcb94eb",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/full.float32": "7f0de061d04a0c04e62dfece49423f09bb5c3dfb960d61d4ab4c54e029cbe298",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/manifest.json": "eadae8e387bf3c505b9a2d38250617bc9a4bfeca0485b2480bee8b92fa518e18",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/Image_218_SinglePhoton_CrossTalkCorrected_active.float32": "a741e83c66b82ca96ad3b7b4405e407e4b0ee974a52e67d75ddb821b8dcb94eb",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_1/Image_218_SinglePhoton_CrossTalkCorrected_full.float32": "7f0de061d04a0c04e62dfece49423f09bb5c3dfb960d61d4ab4c54e029cbe298",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/completion.json": "bc254ecb85321bc8b284f4f2582d0b896b4488816925ff8238c94283552066cf",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/run_manifest.json": "30cd2792cf02d363e6df347dd27631bfa6d14791c907584d255099ed6f1c8940",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "42fcb2fac9eca400b75731b5ea2d3401451348284be529623c2accffd034eade",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "490c68c146721138e39fc02a29349597f11298e5ee42efcd3f24270c0f8c3ced",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "abe1caf25cd2c681aa8c3c579df2e18fd3e598e4b3af010582919bf7428198b4",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "3c0af6e815901bae76730f2f296b42788083c22685a5b5f31cfd4a9d4558a816",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "2a5d22bb6f1fb593698d27f6eff7037ebaa77bbb40d3924b33e9ccf61d4cb996",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "c7fd7513de7e97cd59cae4504cfc94da9eba7b95f696dbda9f6337921e64be36",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "4c26e491c7dde7b7ac25cb3c69d1355fd1134f368d18fa22c9e4420a027aabcb",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "33ae7f8637b10f690c1ed6232ad839a083db27756a086bfd15d04ac5819964e0",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "b630c4665de7672e48844678ed2ca8e448f20fdeaec710e07ca676cebd0a5061",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "9d97a3932e034119985f8de24e2bb625b0dcd43147cc1644649df155fdb71a02",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "f08a1332ebd1a9f7df843786db2eea7bcb4a44ebd776fbf43a0185a09c004bb8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "8b2b14f552712bb51759468404cc4f8b81d64dbe1406b4d421f73016b18aa8d9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "3488fb02094968c8692b0083a93927d1c8adca0ea6cfea7c73cfb3806d561a89",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "1443035278371cc69f65f840fd8d061c35d7ad4e44bd9ca444290e83108ab404",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "e570223ecd394cdffb35edc1eacd1542c7f488c2d84d416ba2d0e33cae0a9bc5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "af261415d34974d9ba1361aca1d3ade96802f39cb892e40b7e19a82059a87b34",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "f7410e5f8ef4da74849bc8715d43db0a5190fced3d5ff37d91e61224febf3864",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "51923df6d18e8830ac6a2c4dd79babce52e5d62da64d783fb8e7544eaf8542f3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/Image_440_SinglePhoton_active.float32": "af261415d34974d9ba1361aca1d3ade96802f39cb892e40b7e19a82059a87b34",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_2/Image_440_SinglePhoton_full.float32": "f7410e5f8ef4da74849bc8715d43db0a5190fced3d5ff37d91e61224febf3864",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/completion.json": "57a32016bb66e1789aa771047b574e15945f9d7ec3bf52df0fd3727cd7e06a69",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/run_manifest.json": "2ad0f7d92b588c00b53f269b42d120efccf945a47cf544fa17a03810f7989aa6",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000010/active.float32": "fec6c376ca1889eaa5634f8ca57291653d2cf4b871d9469920e12e3a32df57d2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000010/full.float32": "ffe70d4a8637b4df753acb1ed9f7028caaf838278fcf889fe32f585b46b3e95e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000010/manifest.json": "3b1800f0105c88591333317c0cd37b1edfbf5844c450250b4fe3d949dd539bd1",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000020/active.float32": "b758892c24387cb2ad71f2cc21479b3856f9bfc6db287fc74fd7052709c09fb5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000020/full.float32": "3daddeb4cde4f5f6b74b19fe23bfe2552e4b7c56f98150f5d3e25a5b9dac7a03",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000020/manifest.json": "25bfe6147b9043f455261d47766e50f3d656122406112e7ebfac20e0554ec269",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000040/active.float32": "ba3ca1f8b71164ccd2b6abf62c43ad41d56d884ae351102b5d20af861f2017e0",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000040/full.float32": "822a6d055fa5d261de3e25d7f2e94962c4a990a6fee62385f53dd299d5adf205",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000040/manifest.json": "65be30759295a3fbcac1a32f763c51ed496dbad1008ca2d7ae232ed49d7117d9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000060/active.float32": "32ba043b502e604f30bdca74cc16dd483adcef32aca3bc1c67a310b9a62ae594",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000060/full.float32": "10f912641eba73857a014c62d54b0862a83a119ae34878496791010085efe4c2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000060/manifest.json": "2919185c11ca27df31143870bad3bb269952ecc21e71deca25dfbcb614e40db9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000100/active.float32": "95d69a32e357f22b4e899c20d570be092837d2b05bf9ce724a06d304e936198c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000100/full.float32": "667338dd2f821e6a0112c822382b844cba30346a3412a0a3af5acf2942d068cb",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000100/manifest.json": "a79fe699999a1e72ff6979a7e0788d2e2ceac6fdd90bfc064537fe544a04fc85",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000200/active.float32": "7c43dc0ee7ffa5c5a80db8b7827368a0a3eedc0503df88fd365a2542863bef88",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000200/full.float32": "6cb82e56516c1a9c88e5e0702e203479c9e9d8506eba3e8fa5e2649f1e3df36f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/checkpoints/218_SinglePhoton/checkpoint_000200/manifest.json": "cd13175df3b5205cea5e8ada2f4710f913a38c95acede92e65acccc836fb56e5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/Image_218_SinglePhoton_active.float32": "7c43dc0ee7ffa5c5a80db8b7827368a0a3eedc0503df88fd365a2542863bef88",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102/results/condition_3/Image_218_SinglePhoton_full.float32": "6cb82e56516c1a9c88e5e0702e203479c9e9d8506eba3e8fa5e2649f1e3df36f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/reconstruction_compact_payload/contract.json": "93e6913c024ab2c8655c7ed3ed00edb7567fa856758d6fff163e0a2f41a91421",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/reconstruction_compact_payload/release_manifest.json": "5ccc8f59fec7c8647269a81080d1503743073efd887488574aeee59c4a82d01d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/0/collection.json": "01c197485cf9a7bc5da2096a83302fc5be5a96a5522fcda225234909e38b14da",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/0/source_collection.json": "54146b05e864c12963ef6531223ac1cd60d86d86497f408aa26486885caff94a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/1/collection.json": "bb021e08a8e923c030d0ea6737e5a65e7dc4298917e02abe5da21cab4c6b0b04",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/1/source_collection.json": "1e1fc9af33285645a8bede62b073ae40830e9674c2648a0e1fce757b4af78fd8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/2/collection.json": "e33a80799563408be60b62dec6b7a152cd6b1811ff72e42f4e0d525922bd6e80",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/2/source_collection.json": "aa06a17e1514f482195b209f17a673ddeb0b5a0def8b989ef0b0ab365ec177a7",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/3/collection.json": "95c16de369775fec8e2ea01e1e32f2e9650b13d0c766b02db62a819df668e977",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102/compact_inputs/3/source_collection.json": "2328c3ccc222a86b7859234d10c0900507a5ed21f9cd6d3a936cb51e26157ac5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/payload/whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/manifest.json": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+    "experiments/ELLIPSE500x300_H120/analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "experiments/ELLIPSE500x300_H120/mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "tools/research/plot_derenzo_completed.py": "231d7b29e62f7e725f2057b7b6bf578f3c62aedbdeeebfcf9a62a0a4e8b3fe99",
+    "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/transport_freeze.json": "f497b3f9afa54bf791cfee6023830a883f72e0fe5f982848117a9e00dc6ac54e",
+    "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_440keV_geometry.json": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+    "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_218keV_geometry.json": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+    "tools/research/plot_ehe_dense_completed_1761244.py": "03e1a8f0898a1dbdbcba155d2b23151828c56444654565bc2c06d32ddf8f1357"
+  },
+  "selected_frame_receipt": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/delivery_1761244_visual_bundle_strict.json",
+  "selected_history_match": true,
+  "input_mode": "Actual selected checkpoints; no synthetic/sparse history file",
+  "actual_selected_iterations": [
+    10,
+    20,
+    40,
+    60,
+    100,
+    200
+  ],
+  "mip": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "full_physical_FOV_mm": [
+    500,
+    300,
+    120
+  ],
+  "display_extent_xy_mm": [
+    -252.0,
+    252.0,
+    -150.0,
+    150.0
+  ],
+  "native_grid": {
+    "full_points": 132040,
+    "active_points": 78920,
+    "radial_pitch_mm": 6,
+    "z_pitch_mm": 3
+  },
+  "display_grid_pitch_mm": 3,
+  "XY_crop_pixels": 0,
+  "smoothing_sigma": 0,
+  "fitted_gain": false,
+  "cross_energy_sum": false,
+  "color_map": "gray_r; white low, black high",
+  "main_display_ranges": {
+    "NEMA": [
+      0,
+      10.0
+    ],
+    "Derenzo": [
+      0,
+      2.0
+    ]
+  },
+  "common_unclipped_ranges": {
+    "NEMA": [
+      0,
+      70.79479217529298
+    ],
+    "Derenzo": [
+      0,
+      8.663682937622072
+    ]
+  },
+  "figures": [
+    {
+      "stem": "nema_5e9_iteration_mip_72mm",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "nema_5e9_iteration_mip_72mm_unclipped",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "nema_5e10_iteration_mip_72mm",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "nema_5e10_iteration_mip_72mm_unclipped",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "derenzo_5e9_iteration_mip_72mm",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "derenzo_5e9_iteration_mip_72mm_unclipped",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "six_results_final_mip_72mm",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "six_results_final_mip_72mm_unclipped",
+      "off_canvas_text": []
+    }
+  ],
+  "saturation_fraction_denominator": "Complete displayed XY grid, not a phantom-only ROI",
+  "truth_definition": "Original 3D NEMA spheres; original SHA-bound analytic Derenzo rods",
+  "deviations_from_generic_skill": "Project-approved72mm fullXY, no Gaussian filters/crop or fitted brightness scalar",
+  "full1200_frame_local_QA_claimed": false,
+  "visual_QA_status": "passed actual inspection: presentation/source fidelity only",
+  "physical_calibration_certified": false,
+  "independent_display_QA": "data/independent_display_qa.json",
+  "independent_display_verifier_sha256": "07c0ee791b9e2a6d9a0c2e07717a2bb206aca2283a050e65fc8ed82e2e93653e"
+}

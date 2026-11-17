@@ -1,0 +1,36 @@
+{
+  "job": 1740189,
+  "study": "nema_5e10_v5_joint_20261026",
+  "stage": "formal",
+  "nodes": 8,
+  "gpus_per_node": 3,
+  "world_size": 24,
+  "cpus_per_node": 24,
+  "channels": [
+    "440_SinglePlusCompton"
+  ],
+  "iterations": 10000,
+  "save_step": 50,
+  "initial_density": 1,
+  "regularization": "none",
+  "actual_primary_photons": 50000000000,
+  "selected_events": 4849087,
+  "model": "continuous_energy_v5",
+  "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema_5e10_v5_joint_20261026/formal_1740189",
+  "release_archive": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/nema_5e10_v5_joint_20261026/releases/33cd7bd4154e8592.zip",
+  "release_archive_sha256": "702a95c739ff507047affb22da4ae77e17d166e1ff2f9c17dfb5c3da89ab560f",
+  "contract_sha256": "c07fdadff9aa40b8498283216dd4c37df3c6ecb474602866a99bff54b8a9eb6f",
+  "script_sha256": "3fff1f1c29678fa75c4dddce1b9a172fef86d8a7b4d32a9e721eaccc764f87ae",
+  "authorization_sha256": "c0fdf802708f2b3feb65aee3ae6fbd8d0b8fd02d1dbbb301655c372d77b81c5a",
+  "separate_validation_required": false,
+  "full_input_gpu_validation_performed": false,
+  "walltime_minutes": 7737,
+  "source_jobs": [
+    1722760,
+    1686507,
+    1686546
+  ],
+  "new_transport": false,
+  "new_selection": false,
+  "submitted_epoch": 1793020230.2808259
+}

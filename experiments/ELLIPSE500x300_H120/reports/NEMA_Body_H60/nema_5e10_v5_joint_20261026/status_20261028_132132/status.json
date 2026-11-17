@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-28T13:19:02.581630+08:00",
+  "local_query_time": "2026-10-28T13:21:32.124111+08:00",
+  "time_basis": "remote UTC converted to Asia/Shanghai; local controller clock differs",
+  "job": 1740189,
+  "slurm_state": "RUNNING",
+  "reason": null,
+  "start_time": "2026-10-27T04:17:57+08:00",
+  "elapsed": "1-09:01:04",
+  "progress": {
+    "phase": "440_joint",
+    "iteration": 7150,
+    "limit": 10000,
+    "contract_sha256": "c07fdadff9aa40b8498283216dd4c37df3c6ecb474602866a99bff54b8a9eb6f",
+    "updated_epoch": 1793164416.7176769
+  },
+  "checkpoints": {
+    "count": 143,
+    "latest": "checkpoint_007150",
+    "latest_mtime": 1793164416.7126122,
+    "partial": []
+  },
+  "latest_checkpoint_at": "2026-10-28T13:13:36.717677+08:00",
+  "log_error_warning_match_count": {
+    "out": 0,
+    "err": 0
+  },
+  "run_manifest_present": false,
+  "complete_formal": false,
+  "full_result_retrieved": false,
+  "remote_read_only": true,
+  "source_directory": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026/status_20261028_132132",
+  "source_sha256": {
+    "slurm.txt": "1d7c381dc0e0f0a29ee4eb692788ff5dffe92f524392c0a3925e75ca85b859a0",
+    "queue.txt": "77322336d48438c81473903ad373df1b1f50b975daf4115b1e9f4a35c0c4bb60",
+    "accounting.txt": "012b59dfbe9ecd2fb824f12723c7b3ac2616896bc98497d646449dd8cfe4356b",
+    "runtime.json": "83fa3ebf2af47bfb2faf7dbc2abb9786f7bb4e0d423316817b1820f22c819444"
+  }
+}

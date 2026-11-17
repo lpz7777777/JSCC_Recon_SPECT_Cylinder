@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "completed_utc": "2026-11-14T11:50:30.060095+00:00",
+  "actual_HE_routes": 4,
+  "HE_checkpoints": 800,
+  "comparison_figures": 20,
+  "comparison_metrics_rows": 2400,
+  "metadata_sha256": "2c2fa22940586bc7b61158c84532d485bd4a4ad2b971d973e1a59441e5f58bfa",
+  "artifact_manifest_sha256": "10fa53ca7b0e1f6e71d8657975b4a234d18cd977f2ed6827767f97aa350e5288",
+  "parent_visual_QA_sha256": "dddcc7b4dba62f1775558bb5413495b61c56b8392d5716f154ec6702cf537fa2",
+  "strict_delivery_receipts_sha256": {
+    "5e9": "11c79d2e1c9ed745b526b5149eb485023b5e14e814185ddf3fa38883bd8892bf",
+    "5e10": "568fad3ede05c7732ff08b0db181345a213c3bf4b2752f1aca7a35ee71dd9e63"
+  },
+  "physical_calibration_passed": false,
+  "image_quality_certified": false,
+  "report": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/index.html"
+}

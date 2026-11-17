@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "study": "opengate_he_nema_20261114",
+  "release": "46d438089710a6ce",
+  "files": {
+    "cpu_python.sh": {
+      "bytes": 758,
+      "sha256": "4ce90673b00a8f4f42d430f23b56b89b45c448967e4c6c65e69132baca2ab538"
+    },
+    "geometry_checks.json": {
+      "bytes": 476,
+      "sha256": "7fd1170ecf8063bbee04dde6c5f126b269f14065ea3c114683e5eae0cb0a4308"
+    },
+    "HE_crystals_xyz_mm.csv": {
+      "bytes": 178040,
+      "sha256": "6660a455464cc1bee2ca499ba74a15d60e3a62e50f19d4c6e24c362103b9eb67"
+    },
+    "HE_holes_xz_mm.csv": {
+      "bytes": 92905,
+      "sha256": "e53b43ec8f0696645e52c673741da05990a3f632d10eff468e4d9c04e759aba9"
+    },
+    "inherited_science.json": {
+      "bytes": 2174,
+      "sha256": "e866a4ad6f71a11b2cecb2fd8ccdfb4dfed1b921a2b37a3d09a57da6d5809c56"
+    },
+    "inputs_5e10/activity_218.mha": {
+      "bytes": 29435,
+      "sha256": "ea88f8e91d8d723044b86ed216d79e4cb37a6eb5ed9f6a7103288b0d54d1e870"
+    },
+    "inputs_5e10/activity_440.mha": {
+      "bytes": 29599,
+      "sha256": "4fd84a181cdb734e87a109700e50102ca0484c3bbc781b8d28b832c17ad8c26f"
+    },
+    "inputs_5e10/config.json": {
+      "bytes": 8896,
+      "sha256": "ae0a32b9d7b130c801c9f4d3697921e6caf6608a7dafff71b5277bcc1f981e09"
+    },
+    "inputs_5e10/imaging_jobs.json": {
+      "bytes": 218043,
+      "sha256": "7bed84011a039469db01aff209a1ca434359f5b4a907dfa9c0625559d67c59dc"
+    },
+    "inputs_5e10/response_jobs.json": {
+      "bytes": 33937,
+      "sha256": "853db832df2d7f1648e856641582d08af7b0794b06029e5073f96d3b14d8beea"
+    },
+    "inputs_5e10/truth_3mm.npz": {
+      "bytes": 123700,
+      "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af"
+    },
+    "inputs_5e9/activity_218.mha": {
+      "bytes": 29435,
+      "sha256": "ea88f8e91d8d723044b86ed216d79e4cb37a6eb5ed9f6a7103288b0d54d1e870"
+    },
+    "inputs_5e9/activity_440.mha": {
+      "bytes": 29599,
+      "sha256": "4fd84a181cdb734e87a109700e50102ca0484c3bbc781b8d28b832c17ad8c26f"
+    },
+    "inputs_5e9/config.json": {
+      "bytes": 8854,
+      "sha256": "02f06ad81bb86c36be0e6654926736116fa097adbfbc32ffa6f683993aca54f0"
+    },
+    "inputs_5e9/imaging_jobs.json": {
+      "bytes": 43523,
+      "sha256": "670bc87e265e549d60b4be5a502d5a34438fc6d7f3738f461c9254fc314f4571"
+    },
+    "inputs_5e9/response_jobs.json": {
+      "bytes": 33937,
+      "sha256": "853db832df2d7f1648e856641582d08af7b0794b06029e5073f96d3b14d8beea"
+    },
+    "inputs_5e9/truth_3mm.npz": {
+      "bytes": 123700,
+      "sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af"
+    },
+    "opengate_ehe_archive_20261113.py": {
+      "bytes": 6911,
+      "sha256": "87e500cf8768b39522974bdb837ea345d555bb8ca0c323765b07adc6fa6c40dd"
+    },
+    "opengate_ehe_collect_20261113.py": {
+      "bytes": 4528,
+      "sha256": "a474713195f4e369eb8e4a8e5fb634f2e1ac42e75458d4a438c25e6507656317"
+    },
+    "opengate_ehe_common_20261113.py": {
+      "bytes": 9566,
+      "sha256": "7a5d80eeea66d3275edf3a2d7bafc9d2e163183f3d3ef65b694705dca8e858f3"
+    },
+    "opengate_ehe_guard_20261113.py": {
+      "bytes": 3439,
+      "sha256": "a4bfced3d832b5003261334fd4bec30f07efab1e7a3fda035cc3eb9209e931a3"
+    },
+    "opengate_ehe_projector_20261113.py": {
+      "bytes": 10252,
+      "sha256": "e27f7a725eedcf8e5043788f6e0c62d48f843064b4c6e87d84d42a19b1b82ee6"
+    },
+    "opengate_ehe_recon_cpu_20261113.py": {
+      "bytes": 8952,
+      "sha256": "4a947800d889b70ade2cfe36dbbc136d810a30ffd5826e8d767bd4b734ee5321"
+    },
+    "opengate_ehe_transport_20261113.py": {
+      "bytes": 14138,
+      "sha256": "27f26d5094fd37c1fe178dc4d9a77a50950869d6ce27c590256d7ae0d01920d5"
+    },
+    "opengate_he_archive_20261114.py": {
+      "bytes": 3829,
+      "sha256": "6b91cc344322b7eafe2e98da88a15fd8ae9f4f891baf0a26a1aad280952324d2"
+    },
+    "opengate_he_controller_20261114.py": {
+      "bytes": 6077,
+      "sha256": "3ad21077e00fe9f6c65e59eb08016aa4f25d3a8697b0942700886e20071bcc56"
+    },
+    "opengate_he_geometry_20261114.py": {
+      "bytes": 4631,
+      "sha256": "7f630688c793801f80136c6a08d232636c58426ff838be53e3321f96a5577c06"
+    },
+    "opengate_he_nema_20261114.py": {
+      "bytes": 23134,
+      "sha256": "9563621c100cc3ac59942b6e46c6e4b1ff2579493281603afa74794e38e664b2"
+    },
+    "scientific_provenance.json": {
+      "bytes": 2100,
+      "sha256": "37504905725cb0aabd9d1aa15eee9a8fe6ea5b6fb2891f80fbf7b1557962d2d0"
+    },
+    "test_opengate_he_20261114.py": {
+      "bytes": 2854,
+      "sha256": "c2b5434b39a0454bec959020ac665036e2e65e35cb1a7d7a1da8baf17e35031a"
+    }
+  },
+  "payload_relative": "payload_delivery_closure_r2",
+  "actual_imaging_budgets": [
+    5000000000,
+    50000000000
+  ],
+  "new_HE_response_primaries": 4400000000,
+  "independent_validation_jobs": false,
+  "reconstruction_CPU_parent_sha256": "3ee2725768c254a47c17ead21fce9d9740fc680574c9062efd37a3bdb0a4fe1e",
+  "geometry_checks": {
+    "passed": true,
+    "hole_count": 1787,
+    "flat_diameter_mm": 4.0,
+    "hole_length_mm": 66.0,
+    "minimum_septum_mm": 1.8,
+    "pitch_mm": 5.8,
+    "collimator_entrance_y_mm": 298.5,
+    "collimator_back_y_mm": 364.5,
+    "crystal_center_y_mm": 369.5,
+    "crystal_shift_from_EHE_mm": 15.5,
+    "source_frame_rotation_minimum_clearance_mm": 5.235614163601497,
+    "FOV_rotation_minimum_clearance_mm": 48.5,
+    "open_area_fraction": 0.4547547905418672,
+    "full_commercial_GE_camera": false
+  },
+  "created_utc": "2026-11-14T09:26:28.987729+00:00",
+  "supersedes_unsubmitted_release": "2554d323016d4c8e",
+  "change_scope": "delivery source SHA closure, explicit executed-release pointer, finite formal-job controller; transport and projector unchanged"
+}

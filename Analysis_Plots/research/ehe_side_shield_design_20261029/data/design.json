@@ -1,0 +1,104 @@
+{
+  "design_id": "EHE_NaI_four_side_Pb_t10_concept_20261029",
+  "status": "proposal-only; not implemented or transported",
+  "created_at": "2026-10-29T13:40:22.882325+08:00",
+  "source_sha256": {
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_GeometrySummary.txt": "3d44a6a2976a19f7b0acc43d8257c84fb18a684d9978c69578179bbd195c7a39",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_CollimatorHoles.csv": "9e089d6bda4de36396a269afe6079b6ecf457fa8dbdbc098ad5f2bd85029629b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport_payload_v4/Geant4Code_EHE/src/DetectorConstruction.cc": "49a4ae382197f8513f06b13b7e0aa0ea0c4b2e6b5101070aca892c8a60e9a76f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/transport_payload_v4/Geant4Code_EHE/include/DetectorConstruction.hh": "26171b72bc96c1218e6969530d53424cb9599a2121352667bcb3ee4d2115502b"
+  },
+  "existing": {
+    "collimator_material": "G4_Pb",
+    "collimator_x_y_z_mm": [
+      330,
+      50.5,
+      165
+    ],
+    "hole_count": 1250,
+    "hole_diameter_mm": 2.5,
+    "hole_pitch_mm": 5.9,
+    "detector_material": "G4_SODIUM_IODIDE",
+    "detector_array_x_z": [
+      68,
+      34
+    ],
+    "detector_count": 2312,
+    "detector_x_y_z_mm": [
+      272,
+      10,
+      136
+    ],
+    "detector_global_bounds_x_y_z_mm": [
+      -136.0,
+      136.0,
+      4.0,
+      14.0,
+      -68.0,
+      68.0
+    ],
+    "collimator_front_to_FOV_center_mm": 298.5,
+    "additional_side_shield": false
+  },
+  "proposed": {
+    "shield_material": "G4_Pb",
+    "side_thickness_mm": 10.0,
+    "inner_aperture_x_z_mm": [
+      272,
+      136
+    ],
+    "outer_x_z_mm": [
+      292,
+      156
+    ],
+    "depth_y_mm": 10,
+    "global_y_bounds_mm": [
+      4,
+      14
+    ],
+    "front_face_open": true,
+    "rear_face_open": true,
+    "detector_active_area_unchanged": true,
+    "collimator_holes_unchanged": true,
+    "ring_volume_mm3": 85600.0,
+    "four_nonoverlapping_bars_drawing_bounds_x_depth_z_mm": [
+      [
+        -146,
+        -136,
+        50.5,
+        60.5,
+        -78,
+        78
+      ],
+      [
+        136,
+        146,
+        50.5,
+        60.5,
+        -78,
+        78
+      ],
+      [
+        -136,
+        136,
+        50.5,
+        60.5,
+        -78,
+        -68
+      ],
+      [
+        -136,
+        136,
+        50.5,
+        60.5,
+        68,
+        78
+      ]
+    ]
+  },
+  "drawing_depth_origin_global_y_mm": -46.5,
+  "mechanical_packaging_and_clearance": "ideal geometry only; not a manufacturing assembly",
+  "attenuation_or_image_improvement_claimed": false,
+  "new_simulation_or_reconstruction": false
+}

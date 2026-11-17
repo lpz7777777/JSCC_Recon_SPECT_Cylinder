@@ -1,0 +1,908 @@
+{
+  "study": "ehe_dense_nema_low_noise_20261102",
+  "data_kind": "matched_native_matrix_forward_plus_independent_Poisson",
+  "synthetic": true,
+  "actual_Geant4_transport": false,
+  "source_job": 1762238,
+  "created_at": "2026-11-02T20:58:30.325240+08:00",
+  "doses": [
+    "5e9",
+    "5e10",
+    "5e11",
+    "5e12"
+  ],
+  "routes": [
+    {
+      "condition": 0,
+      "dose": "5e9",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1762238_0",
+      "normalization_density": 1036.898872389635,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "263350353f0b4f0572ba2ebf80f06e690ba4d708b13641ba70f86c9c49e17ed5",
+          "full_sha256": "ef49b0e89cb5bffd7adf7388d78f7d6d72e6ee725fb3bf60013a5631e59b6ae9"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "4bba149dc5d6031a2678a764fec70d3d12950213045d5165317383dc2fcffd28",
+          "full_sha256": "7e1c606b714748ed13778f4a17240492c02a61d8330ecb5cca68dfeaa693e7c2"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "6abfd628ce3ca87bc1f5b77d4e634046e0957de90e0a0e92a08e2265c3cc2886",
+          "full_sha256": "ced3fac7af114774357557a1a162016b1deaf6f22e8b3e7ed002d5802e5ac9ae"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "78437771059acc6dcb9470e948c2731e5385d0033d979bef06856676d0b80a9c",
+          "full_sha256": "e8457599b14928f7dd4796ed5162f0eb1070895ee19c651702d3e921e6137f1e"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "b3240dc5a70f04c4b43ddf21205aaa75c3a6f479341222ba79662d185e898380",
+          "full_sha256": "cc24f25492fb3507439ce68e4d6ec8f28575c7ad0dc71c01b0e5d156b935c8d0"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "645b654a3712c2ed20bfbf7bfe3a810e9c4c1e0bfad247c3f01a487d427a0304",
+          "full_sha256": "acc81066ae102716d05498f839b10486e9376dd11a596232b8a6c36f15d8e311"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 0,
+        "dose": "5e9",
+        "energy_keV": 440,
+        "channel": "440_SinglePhoton",
+        "iteration": 200,
+        "edge_peak_over_background": 68.96796456407725,
+        "edge_emission_fraction_72mm": 0.13417743394623635,
+        "full120_peak_over_background": 84.35267666067367,
+        "source_matched_native_NRMSE": 2.9708003635588516,
+        "own_S_weighted_signal_counts": 11941.0344953137
+      },
+      "expected_energy_primaries": 3530961006.5908637,
+      "projection_window_counts": 11941
+    },
+    {
+      "condition": 0,
+      "dose": "5e9",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "job": "1762238_0",
+      "normalization_density": 456.39346011887324,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "bb727be8e4e56e2426d95b39385b93815adc0667b070b43131a033889a4a596e",
+          "full_sha256": "4640e459503ba005c05b8bd78d88db8a397830b6cc2e421780f4adfda77fd999"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "2d829648896dc9ed351d75412450bc7d475f612261fcd11b80a7915cfa46faf0",
+          "full_sha256": "8c323b338ec3c9623713e86851cfd8563790dec55a9d8364bceafc7bd4619283"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "0f17ed2dbf7c420a31224307e92472f8ce03745928477a88309808afcfec434d",
+          "full_sha256": "a6424a8bc2c850113c9be8298b79de99a616a8da6c64887e9560fb36687adf02"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "6837e12153234b128c18866e9bac3fccba152679d9299b93e9ac492e19cb5ee8",
+          "full_sha256": "5ce45a835e55e0260d3d0f44258760f6f7d512b79500ebfd2bbb2c9c67bbe7a7"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "7c8985b0dfebacf87517ddf7496e0f78511321a60db145b19fc39782ed9d1773",
+          "full_sha256": "4ee0c0310cb5533dbef310ea8abd418dad3e4f29c37e4dd004a29bad73deb700"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "fc4331e6c5ea387c0969fc331223db95f67b0b8952e4f3d79263856b8c97565c",
+          "full_sha256": "8dc451cd157baa5332fc2bd4536d743f8a232d02581cc7aaa4ef6e3806d75fd3"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 0,
+        "dose": "5e9",
+        "energy_keV": 218,
+        "channel": "218_SinglePhoton_CrossTalkCorrected",
+        "iteration": 200,
+        "edge_peak_over_background": 60.46923561237452,
+        "edge_emission_fraction_72mm": 0.14047436401399388,
+        "full120_peak_over_background": 87.86625892284927,
+        "source_matched_native_NRMSE": 3.6498757701727023,
+        "own_S_weighted_signal_counts": 13869.589529894456
+      },
+      "expected_energy_primaries": 1469038993.4091363,
+      "projection_window_counts": 20798
+    },
+    {
+      "condition": 1,
+      "dose": "5e10",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1762238_1",
+      "normalization_density": 10368.988723896351,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "034cca76b6a4f559337112c79a562722dd1c1abff7d8ff883265c18fdf8f7cce",
+          "full_sha256": "3972b45d752e9d87ecef2d33296d075d110acfc28cc6d87e466cf254475f2b08"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "25f3b5d46cc0d2f8a38b9ac4697fcafe11e78740a6677542f19013edf4c4cc95",
+          "full_sha256": "f6cc65303d1dfca84511681e13e06587e92df017866f1efcd6f7d08762ab8468"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "4ec871c2fc22eb99b24b5d190a6fdc5894ed53530864f700557432a821a3b735",
+          "full_sha256": "714167f7176109685c519d014e28f5ead007bf4c2eedda695ff50087e5815804"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "1355e1813c938ec5521fd393358e2c2a1783ed8c2ddc0dd1150794f3ced67d01",
+          "full_sha256": "daa2a9f2a4ed70340e05bfc2346d64a514c59412ee24c3b6aefcf4ce67d32a4f"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "fc16ec844ac5f70410f866895ad2e81c85962b721f78bb2d4afc6bc1f3959137",
+          "full_sha256": "313d0aefac094c135e2e3bb8d86a7fcc4c8b9ca333f7a36a617588c4b46cc2ca"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "2c199c2af7d7f0b6c284a1e81d3805604b71b6eecb5d222a0c820585364d1b4f",
+          "full_sha256": "f17d70010e99ba332995c1b17ae2cc923d9e50e553879ee4d101afadf9b01263"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 1,
+        "dose": "5e10",
+        "energy_keV": 440,
+        "channel": "440_SinglePhoton",
+        "iteration": 200,
+        "edge_peak_over_background": 18.4466910267914,
+        "edge_emission_fraction_72mm": 0.048220486447551135,
+        "full120_peak_over_background": 19.404205147924436,
+        "source_matched_native_NRMSE": 0.8682658178122997,
+        "own_S_weighted_signal_counts": 118505.53882464519
+      },
+      "expected_energy_primaries": 35309610065.908646,
+      "projection_window_counts": 118505
+    },
+    {
+      "condition": 1,
+      "dose": "5e10",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "job": "1762238_1",
+      "normalization_density": 4563.934601188732,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "c49530c6a3031ae3079b3b155ada95589e6929caf619622a062aa4e766c0815a",
+          "full_sha256": "98d56c633b9f9c17e0788918725345635c063f6d0aaafdbfd3aa3f6010a6515a"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "380dd8efd31924161c91668147b0d9c6185a1d9f686ac01b625c78b51a5b5d89",
+          "full_sha256": "de7829c128f3a73cf4fb6a6b5722b97b9c6f8e85b635cacd6bbae5e13ef18734"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "09b7204f1a0c14d68bd69903b578e8fe0ebcda16b6600ccd478dcb9a2cb4c097",
+          "full_sha256": "83a534f854a3bb17fcbd3a25a331004dad91253ec06688167c0ae1b1ff7b1b44"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "f72911ef43868bb686028e3fbe024b6133d0f77492ca85b1624b0c0a7f61c961",
+          "full_sha256": "0d5fc30ae2c7989bb33b823de3af696b225b1ce602b17cb9974bb529e71bec53"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "85f324c30d9aa3710c3fea568ce98529890dd703a145235fc06c02b237b7258e",
+          "full_sha256": "7eebcc2c0f53757a1881c014d40fc8389ac7438e13808d3d4e39f2d922f90d10"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "b3e2d4ddec70ee66180e9f7d99037292f6104464086744ef5845b55f8f26272c",
+          "full_sha256": "17c0f36593e8d5ba6beee0d23abb8d2097a78fc85cb054e1cdccdb94585c9a76"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 1,
+        "dose": "5e10",
+        "energy_keV": 218,
+        "channel": "218_SinglePhoton_CrossTalkCorrected",
+        "iteration": 200,
+        "edge_peak_over_background": 16.615640218146083,
+        "edge_emission_fraction_72mm": 0.05308925433256959,
+        "full120_peak_over_background": 16.686203647104097,
+        "source_matched_native_NRMSE": 1.0846964494013656,
+        "own_S_weighted_signal_counts": 135065.2270414884
+      },
+      "expected_energy_primaries": 14690389934.091362,
+      "projection_window_counts": 208474
+    },
+    {
+      "condition": 2,
+      "dose": "5e11",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1762238_2",
+      "normalization_density": 103689.88723896349,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "dc9124b47fdfe4f54f43ec8dd5b82a70d3398492949521e706eec9aac5d8bc1c",
+          "full_sha256": "22d3f33e65b77fbf0b0a0442a1ff062008be1360b011a9435cf3710c725d69b9"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "bb89d7c773091ac3186950984312b80a54327e4c89b9c5e501e4d681149f81d5",
+          "full_sha256": "a61045aac58a431fa2b8411d0cc4c70a56b257334503899f055b2540000cdd41"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "3fdc099d8adf546491394611a58e669f6d8d77e916cc00534ec5d7daa36d9585",
+          "full_sha256": "de1e394a3d0d1470405e4d5b9edaf834b35cc39a75ed6d773b52422dc8848a6d"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "db7984d0a5f8e4be80b6b2b3ce4f6ee101995359a3b208581419b29c081d09fb",
+          "full_sha256": "b575363b1346a2fc57c192d87ea01a3fe499e73187440a72bebbebf87a971c27"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "c9db5a4b959b6d464e4b159d6d21699a4d99d23a735fc0ea06032c867143ae3a",
+          "full_sha256": "887cc8c97e36c738f1637b84d61cbf91a318ba157bb2a5ff5c589848af019524"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "446f6191fc2f8dbdb3bc548a286ce1142cbd5a3910a06a7f3711927860ead37a",
+          "full_sha256": "0f1104115022a12d82be82915f0840198d11aa56be45cce14fd51e984f635043"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 2,
+        "dose": "5e11",
+        "energy_keV": 440,
+        "channel": "440_SinglePhoton",
+        "iteration": 200,
+        "edge_peak_over_background": 4.214897835145614,
+        "edge_emission_fraction_72mm": 0.015190743721911407,
+        "full120_peak_over_background": 15.054931262509921,
+        "source_matched_native_NRMSE": 0.3572876453931183,
+        "own_S_weighted_signal_counts": 1188050.5401099112
+      },
+      "expected_energy_primaries": 353096100659.08636,
+      "projection_window_counts": 1188042
+    },
+    {
+      "condition": 2,
+      "dose": "5e11",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "job": "1762238_2",
+      "normalization_density": 45639.346011887326,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "5f8b291a437b939c2b6557826072b09ad847a0c5ae9dab66e8093a3255ffdd55",
+          "full_sha256": "773edcc389ed5f81d9b6f5eddff45b9090385d08f832352683cab74c621ac576"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "914bc4481aa38979250ba5a3d09969ca57bd25769f379f78d708e6bcf8a36b7a",
+          "full_sha256": "32605e5e0c4258baafc80eb4e255ff3f3d7947d14e92704d2ffffc458caea34c"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "d826b20f523a30db986cf6c837c1362008e7bd763216f051b0318f2e2c55c984",
+          "full_sha256": "23f8991f7f526e084687057a3f78279e9a924727d78081e77ba0bfa47c17d05f"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "b9578552fb2dfc65bfdb2ee4f6c6fee924914860054e1a0ab5686f910c7f188d",
+          "full_sha256": "cd934087033509242bed4cf19a9da20ed101df947b625e8c10716a0ad6a563b5"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "749d6d90dd82717015639fe01dedd2d38ecd26cbc609072414da54a75a391f5b",
+          "full_sha256": "9b6b4cb19e60ba0ae625444783d80bd9057fe7ccba75b9c06082c67c08718e9f"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "8b4673ddf4247a50b29e1fe79a5d2c43114ece3e9b3164b69a6b75f70274cb5c",
+          "full_sha256": "f87da755fdaf4929515734182fc4bb52cf032a799bc23d1008eb3f4ce04fb5ad"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 2,
+        "dose": "5e11",
+        "energy_keV": 218,
+        "channel": "218_SinglePhoton_CrossTalkCorrected",
+        "iteration": 200,
+        "edge_peak_over_background": 3.227520776954898,
+        "edge_emission_fraction_72mm": 0.016719404518847337,
+        "full120_peak_over_background": 16.99457141208772,
+        "source_matched_native_NRMSE": 0.38438650557649723,
+        "own_S_weighted_signal_counts": 1340583.8315236557
+      },
+      "expected_energy_primaries": 146903899340.91364,
+      "projection_window_counts": 2086804
+    },
+    {
+      "condition": 3,
+      "dose": "5e12",
+      "energy_keV": 440,
+      "channel": "440_SinglePhoton",
+      "job": "1762238_3",
+      "normalization_density": 1036898.872389635,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "c74e54870b4b648a3975e75a682d84d6473c10a77f42221147a457927e7303a8",
+          "full_sha256": "1334d5e896613caa897800d1cccc740526c6d3ff9979aa307413e618c4a97307"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "d3ceef1be22bc461bc087ef21603587cb534e0e69d7c58eac58f2c7e44740464",
+          "full_sha256": "850c3beb165d932a651fb7b6d0dfc8798d9a5f8952f4755f1dc71624730af787"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "fba55139d3ea16f6a6aa8245d4350a4e515e390e196cbf6049d2d128f735e16c",
+          "full_sha256": "540ef9197a2eff0cb05cc21bff545c2002c85fe5b71d35cd18d87502c732ee68"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "56e0a56a9643dfa0ba728ae745ea307a1cde7c9ce4adb8cb2557f91f5deb9e1a",
+          "full_sha256": "1acb9068a650a07f8daa7ed18abf6be9a8dbf0acfcc8c38f2b2092aef9e208df"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "759d7f23c9ef5b2994176b8690f16142c350ff340b75f6ee8d61a4eb7d3ace64",
+          "full_sha256": "b22cca5e3e41476b62bc3a6f9904f7827f85864bc11830e63417afc21f3cefa0"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "4602e75675da5c7b7a26dba7405e3d4324757ba601004bf59c739ca2f817dcd5",
+          "full_sha256": "bc12b86abecb33c2ccf7529b3498a700b886a9143759fe04a6ad4522188b8df7"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 3,
+        "dose": "5e12",
+        "energy_keV": 440,
+        "channel": "440_SinglePhoton",
+        "iteration": 200,
+        "edge_peak_over_background": 0.4439197975393625,
+        "edge_emission_fraction_72mm": 0.008829275637108789,
+        "full120_peak_over_background": 14.517250814738635,
+        "source_matched_native_NRMSE": 0.26302929823203725,
+        "own_S_weighted_signal_counts": 11871701.107734844
+      },
+      "expected_energy_primaries": 3530961006590.864,
+      "projection_window_counts": 11871603
+    },
+    {
+      "condition": 3,
+      "dose": "5e12",
+      "energy_keV": 218,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "job": "1762238_3",
+      "normalization_density": 456393.4601188732,
+      "checkpoints": [
+        {
+          "iteration": 10,
+          "active_sha256": "fba1c632f6904497ecefe620f8cabea232ea7df56a4a38481d5e376a84d75b83",
+          "full_sha256": "378d542951f766cf27807acb6d3b0452a6140ab84c7f22f069df158fa7e6aa15"
+        },
+        {
+          "iteration": 20,
+          "active_sha256": "bec956587fb398a1e94b6d85d7fba7e13a3a1c0a1a6d26c6710a91fc5991caf3",
+          "full_sha256": "c1e018ed03bb53070f0fe7969780977aaed25c4af3ba140ec8d374ed3a285b44"
+        },
+        {
+          "iteration": 40,
+          "active_sha256": "d9e37f16779f70274ed0c7ba8e101d03e134a15b7a921847b4f0a272ba197697",
+          "full_sha256": "435b5be2f2cad3b90b7461c5f24b0eabd1d18721343fb426ed7b58b7fd3a8e8b"
+        },
+        {
+          "iteration": 60,
+          "active_sha256": "4b38b4fe667e45113121122758688648bfb4b5581ac8360b3f188b0fe6467f34",
+          "full_sha256": "b21be3128800d32c29648a2c84d7d019a6041cb367bb2cc31543c69799997927"
+        },
+        {
+          "iteration": 100,
+          "active_sha256": "baa11a3a8e6e344b83a09c3aa144c771d682b709c6429ba6348a2853b283d75b",
+          "full_sha256": "d8980b2f3fa82ad2c51d0391fbf7d186d78e1f69f509c98f6b6b401a7136c8f5"
+        },
+        {
+          "iteration": 200,
+          "active_sha256": "29ac3a42469a2b74d0a9da2f5f33ff36d6d57758ca3e97326c8ca2381396fcaf",
+          "full_sha256": "c8493668f134827f8e3d2ecf7ca7f8e202fcb88f7919f3216268f85333764954"
+        }
+      ],
+      "final_native_metrics": {
+        "condition": 3,
+        "dose": "5e12",
+        "energy_keV": 218,
+        "channel": "218_SinglePhoton_CrossTalkCorrected",
+        "iteration": 200,
+        "edge_peak_over_background": 0.7077481454617419,
+        "edge_emission_fraction_72mm": 0.01041069856780372,
+        "full120_peak_over_background": 13.352187383256505,
+        "source_matched_native_NRMSE": 0.24843177383873674,
+        "own_S_weighted_signal_counts": 13382260.457041435
+      },
+      "expected_energy_primaries": 1469038993409.1362,
+      "projection_window_counts": 20865882
+    }
+  ],
+  "selected_iterations": [
+    10,
+    20,
+    40,
+    60,
+    100,
+    200
+  ],
+  "selected_local_frames": 48,
+  "all1600_frames_remote_numerical_QA": true,
+  "full1600_history_local_QA": false,
+  "full_local_BV_CNR_curves": false,
+  "local_3D_ROI_iterations": [
+    10,
+    20,
+    40,
+    60,
+    100,
+    200
+  ],
+  "ROI_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "MIP": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "display_extent_xy_mm": [
+    -252.0,
+    252.0,
+    -150.0,
+    150.0
+  ],
+  "full_FOV_mm": [
+    500,
+    300,
+    120
+  ],
+  "XY_crop_pixels": 0,
+  "smoothing_sigma": 0,
+  "fitted_gain": false,
+  "cross_energy_image_sum": false,
+  "main_color_range": [
+    0,
+    10
+  ],
+  "common_unclipped_range": [
+    0,
+    73.81791687011719
+  ],
+  "colormap": "gray_r; white low, black high",
+  "source_native_info": {
+    "passed": true,
+    "truth_3mm_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "source_native_sha256": "8b913c2fcc6e8ece8fc90e7c128851173c38d0cd854b62470343f0c2923b9568",
+    "code_sha256": "aaf500ab6e7efed0e3106eba935d88712a11812218d70b6ab2d077c50c670ba0",
+    "original_integral_mm3": {
+      "218": 3218760.703125,
+      "440": 3405284.296875
+    },
+    "native_integral_mm3": {
+      "218": 3218799.395211551,
+      "440": 3405308.946332846
+    },
+    "quadrature": [
+      {
+        "order": 32,
+        "native_integral_mm3": {
+          "218": 3218952.7876110645,
+          "440": 3405407.6394375768
+        },
+        "relative_integral_error": {
+          "218": 5.9676535095531946e-05,
+          "440": 3.622092953881051e-05
+        },
+        "relative_L2_vs_previous": null
+      },
+      {
+        "order": 64,
+        "native_integral_mm3": {
+          "218": 3218799.395211551,
+          "440": 3405308.946332846
+        },
+        "relative_integral_error": {
+          "218": 1.2020802451440105e-05,
+          "440": 7.238590289837532e-06
+        },
+        "relative_L2_vs_previous": {
+          "218": 0.0011576941433217342,
+          "440": 0.0012216069090090417
+        }
+      }
+    ],
+    "source_basis": "Native finite-volume average of original3mm piecewise-constant truth, Gauss in r²/theta, original40z layers",
+    "expected_gamma_split": "original3mm integrals times original .114/.259 yields; never fitted observed counts",
+    "source_normalization": "Native source normalized to probability mass for each energy; no gain fitted to data",
+    "matched_generation_reconstruction_basis": true,
+    "physical_calibration_passed": false,
+    "finite_volume_approximation_disclosed": true,
+    "elapsed_seconds": 3.030999999959022
+  },
+  "source_higher_order_check": {
+    "passed": true,
+    "scope": "HigherorderGauss r_squared/theta sourceaveraging sanitycheck only",
+    "source_native_unchanged": true,
+    "frozen_q64_source_sha256": "8b913c2fcc6e8ece8fc90e7c128851173c38d0cd854b62470343f0c2923b9568",
+    "checks": [
+      {
+        "energy_keV": 218,
+        "high_order": 128,
+        "frozen_order": 64,
+        "relative_L2_hi_vs_frozen": 0.00046682773634743713,
+        "volume_weighted_relative_L2_hi_vs_frozen": 0.0004529254978729314,
+        "max_absolute_density_difference": 0.01900457995966498,
+        "high_order_integral_mm3": 3218775.5426701177,
+        "high_integral_relative_error_vs_original": 4.610328783849482e-06,
+        "frozen_integral_relative_error_vs_original": 1.2020802451440105e-05
+      },
+      {
+        "energy_keV": 440,
+        "high_order": 128,
+        "frozen_order": 64,
+        "relative_L2_hi_vs_frozen": 0.000543859685030252,
+        "volume_weighted_relative_L2_hi_vs_frozen": 0.000541600619501535,
+        "max_absolute_density_difference": 0.02834344228374608,
+        "high_order_integral_mm3": 3405289.2297448707,
+        "high_integral_relative_error_vs_original": 1.4485926695950724e-06,
+        "frozen_integral_relative_error_vs_original": 7.238590289837532e-06
+      }
+    ],
+    "elapsed_seconds": 4.077999999979511,
+    "no_reconstruction": true,
+    "no_HPC_action": true,
+    "no_mock_figures": true,
+    "limitation": "Same finite-volume averaging formula at higherquadrature; not an independent physical truth or voxelbasis convergence study. Registered generation/reconstruction still uses originalfrozenq64source.",
+    "source_sha256": {
+      "experiments\\ELLIPSE500x300_H120\\generated\\NEMA_Body_H60\\truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+      "experiments\\ELLIPSE500x300_H120\\generated\\ehe_dense_nema_low_noise_20261102\\payload\\whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+      "experiments\\ELLIPSE500x300_H120\\generated\\ehe_dense_nema_low_noise_20261102\\payload\\source_native.npz": "8b913c2fcc6e8ece8fc90e7c128851173c38d0cd854b62470343f0c2923b9568",
+      "experiments\\ELLIPSE500x300_H120\\config.json": "5283f841be0d5ebf226a0475a4921386660372f6a159dda3399f7158148af334",
+      "experiments\\ELLIPSE500x300_H120\\ehe_nema_low_noise_source_20261102.py": "aaf500ab6e7efed0e3106eba935d88712a11812218d70b6ab2d077c50c670ba0",
+      "tools\\research\\check_ehe_low_noise_source_q128_20261102.py": "6320e240c40338e4d804e1859bed8a6ebb50980659f7e7be07bf56166215c776"
+    }
+  },
+  "truth_semantics": "Original3mm source is evaluation/reference; modelgeneration uses its fixed finite-volume native approximation, shown separately",
+  "dose_semantics": "Total expected emittedgamma budget, notAc225decays or detected counts; originalyields/sourceintegrals split energies",
+  "figures": [
+    {
+      "stem": "energy_440_four_dose_iterations_72mm",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "energy_440_four_dose_iterations_72mm_unclipped",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "energy_218_four_dose_iterations_72mm",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "energy_218_four_dose_iterations_72mm_unclipped",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "four_dose_final_mip_72mm",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "four_dose_final_mip_72mm_unclipped",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "all200_native_edge_and_source_error",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    },
+    {
+      "stem": "selected6_original3D_ROI_BV_CNR",
+      "off_canvas_text": [],
+      "manual_visual_review_pending": false
+    }
+  ],
+  "source_input_sha256": {
+    "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102/delivery_selected_strict.json": "ca5ca491ede731cfe169ec39d14bfbd54789c621c333b490b78ba29ce858704e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/collection.json": "2a79f6bb838edac2b2a1ce835f407a434fa079b917d0bcacb177d4f605ece34d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/completion.json": "454aa58a4c00d1468b5bb218736bba1af2fcf754e938302876f67c5152b94a8e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/run_manifest.json": "2435c4b7ea3bcf28cd2e1c23d9d556e7e74921c63cfd9717a517502009ad7548",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/allocation.json": "3063a6e784895ca7ecbc9f5e01d3b5dc0714b6c8b97fda29334bce44240fbd19",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/final_prediction_218.npy": "6a73f4c8fecc3b4d3745a85e486768aa633be69216f2ee1dd10d7c1846c3691a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/final_prediction_440.npy": "e67bdb8df4a0360483c25eaa8561cae6daaf5c05c339fcc43a92d775e89df263",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/fixed_cross_background.npy": "9d36aac37080c39e89ecdf33dc747480a559dc8c1e862dfbe6bcee7940f6aa87",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/mean_A218.npy": "379ad78e8aa5959537c82aea3fb9a85d0d6337e20a2bf143dbc92ee47e11e451",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/mean_A440.npy": "73dc7197f2daac1bdbea69388f81834aacfe87e31c4e7b8fe487c2bcdf8c10e5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/mean_C440to218.npy": "107a39e452933b14100966993df6c7a42d691bf9be43dc7332f14cf803398679",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/projection_218.npy": "44193b97e0141f30c334bd7b3c7e13d287fa30c24943a1dd0cd85fa2af83568b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/projection_440.npy": "8dfaa34f7246839a111e5aa9b1e618563aa3136b475408574915dc283c7c94f9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/sampled_A218.npy": "09fa4a5c091f0e99afa0f3efc1aa5ac09cc56471d78018a179e8a18a691c3ee7",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/sampled_A440.npy": "8dfaa34f7246839a111e5aa9b1e618563aa3136b475408574915dc283c7c94f9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/sampled_C440to218.npy": "e65af7af18e38a74c47f6bd2e26a0c334beec279699f8001818aa2acac92a807",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/Image_440_SinglePhoton_active.float32": "645b654a3712c2ed20bfbf7bfe3a810e9c4c1e0bfad247c3f01a487d427a0304",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/Image_440_SinglePhoton_full.float32": "acc81066ae102716d05498f839b10486e9376dd11a596232b8a6c36f15d8e311",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/S_440_SinglePhoton.float32": "41283a999bd133ba18df0f3f38bd454d2818c58713abe6b0d5ca5e2c5cd3fe53",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "263350353f0b4f0572ba2ebf80f06e690ba4d708b13641ba70f86c9c49e17ed5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "ef49b0e89cb5bffd7adf7388d78f7d6d72e6ee725fb3bf60013a5631e59b6ae9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "9718121c91cbdd4585bf0c87d7120fa1cb19ed663a6fa84f57d7a62afbf56255",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "4bba149dc5d6031a2678a764fec70d3d12950213045d5165317383dc2fcffd28",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "7e1c606b714748ed13778f4a17240492c02a61d8330ecb5cca68dfeaa693e7c2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "9fd861643e26ef03a4a0351612afbb181c2a0e0bd2102600211f36f35675959e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "6abfd628ce3ca87bc1f5b77d4e634046e0957de90e0a0e92a08e2265c3cc2886",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "ced3fac7af114774357557a1a162016b1deaf6f22e8b3e7ed002d5802e5ac9ae",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "fcdf975e45694670dd477b3f50dd642766a40071a7fae0e43dbc7c1a10508739",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "78437771059acc6dcb9470e948c2731e5385d0033d979bef06856676d0b80a9c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "e8457599b14928f7dd4796ed5162f0eb1070895ee19c651702d3e921e6137f1e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "253858d6b26db40ad00d62c782755ec2e061cef2b7b710e2c2fd2af7de3f87f4",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "b3240dc5a70f04c4b43ddf21205aaa75c3a6f479341222ba79662d185e898380",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "cc24f25492fb3507439ce68e4d6ec8f28575c7ad0dc71c01b0e5d156b935c8d0",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "64f8e8c82c1b42c6c3a474a92d426fb76e484aec067f1918d69b6defa831d786",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "645b654a3712c2ed20bfbf7bfe3a810e9c4c1e0bfad247c3f01a487d427a0304",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "acc81066ae102716d05498f839b10486e9376dd11a596232b8a6c36f15d8e311",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "0ed6cb04fbc2794a266b3fe834ea202f28c2ad19c48339cd17a9b616bc8ab2f6",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/Image_218_SinglePhoton_CrossTalkCorrected_active.float32": "fc4331e6c5ea387c0969fc331223db95f67b0b8952e4f3d79263856b8c97565c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/Image_218_SinglePhoton_CrossTalkCorrected_full.float32": "8dc451cd157baa5332fc2bd4536d743f8a232d02581cc7aaa4ef6e3806d75fd3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/S_218_SinglePhoton_CrossTalkCorrected.float32": "51b94cb64fd1aae37092be01b2b4edcc4d2f0d45023f2ede7cda8c0b3e92997e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/active.float32": "bb727be8e4e56e2426d95b39385b93815adc0667b070b43131a033889a4a596e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/full.float32": "4640e459503ba005c05b8bd78d88db8a397830b6cc2e421780f4adfda77fd999",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/manifest.json": "8464e9268cee5ec9047f415eff69e1dbf049f0d9b7bc64049221999167d94c80",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/active.float32": "2d829648896dc9ed351d75412450bc7d475f612261fcd11b80a7915cfa46faf0",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/full.float32": "8c323b338ec3c9623713e86851cfd8563790dec55a9d8364bceafc7bd4619283",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/manifest.json": "fcb8025e20503465e7d635c5bc38689b9fbce39cc1ea9fce8eead5295da4779f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/active.float32": "0f17ed2dbf7c420a31224307e92472f8ce03745928477a88309808afcfec434d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/full.float32": "a6424a8bc2c850113c9be8298b79de99a616a8da6c64887e9560fb36687adf02",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/manifest.json": "3ce3672aee33f1c1d4b70e79dc321edda58dfa2eca69b5d2d117bd3bafd4d1cf",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/active.float32": "6837e12153234b128c18866e9bac3fccba152679d9299b93e9ac492e19cb5ee8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/full.float32": "5ce45a835e55e0260d3d0f44258760f6f7d512b79500ebfd2bbb2c9c67bbe7a7",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/manifest.json": "4796e907cb6f5fbad919b58804857f64f8a224fd1f2a230d7b1c52dede788f0e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/active.float32": "7c8985b0dfebacf87517ddf7496e0f78511321a60db145b19fc39782ed9d1773",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/full.float32": "4ee0c0310cb5533dbef310ea8abd418dad3e4f29c37e4dd004a29bad73deb700",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/manifest.json": "9782ae9b6ee035df2ff89e7f43fcdc3b28c6463b5fc26e81f590b6be06d4c5d8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/active.float32": "fc4331e6c5ea387c0969fc331223db95f67b0b8952e4f3d79263856b8c97565c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/full.float32": "8dc451cd157baa5332fc2bd4536d743f8a232d02581cc7aaa4ef6e3806d75fd3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/manifest.json": "02a73e3542ce3cc5849f07fb8c19144bdf289e0cf8b8aa7520f0502bfbc95e01",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_0/native_history_metrics.csv": "745d6fcec5647eba9bb8829d76758a308a2f64da69fa16c86beb343e6988da0e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/collection.json": "97856e7533c09d8f7c45bef324c5861d49b099b480e6298bb769093d2b602b63",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/completion.json": "eca29ce4984773a74bdda342b85891b91478c0d164af073acd3fad287b2fe680",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/run_manifest.json": "79af28b6e9366f4c28550aa1d57ac4519faa1be95a28ac88de48a5af43c6774e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/allocation.json": "f02ef674bd171f0053f87a5452cf77761572c41305a7df8327f5674ed710921a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/final_prediction_218.npy": "e4c85bf7c65f3693a06328b44a42746c39c594c9091d67593903c05944c2f58f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/final_prediction_440.npy": "6e7bb6260d071d628f5044a870e516120b0baa10c09f10091eb058ba05881c03",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/fixed_cross_background.npy": "7e90f3d32aad4412707a5637032e3b052fbd8763de1ab427c99253502ce2e326",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/mean_A218.npy": "a9bff41e048a08c0c5733271709ba3653ddc128782d2e0f9cdd120f83d4a0739",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/mean_A440.npy": "f5f1ff5b39c5c9bdef0f82bd01eadcfbd4d9224cafe23c605e066d358eb9b693",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/mean_C440to218.npy": "c3f4ade0c5a00f7bc6be43d1a7c9150723666b61197b83feaf99d799b7efa68c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/projection_218.npy": "35dc42841b47939be2a5a5002665ac71cc72aafb7f32e07e5f9abad5bd34d9a6",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/projection_440.npy": "03969147a983f1bd5a09b117cd4f0e1e6100ddd049c17889910f6625d36271da",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/sampled_A218.npy": "6349b56a6b9f9a5a20ffdadf683faed698e5bad8366f74a642bc07d66c99a700",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/sampled_A440.npy": "03969147a983f1bd5a09b117cd4f0e1e6100ddd049c17889910f6625d36271da",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/sampled_C440to218.npy": "c295b93e2e86ed282729ac7f0739d9e691caf73f48cd258694b557f37af0e019",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/Image_440_SinglePhoton_active.float32": "2c199c2af7d7f0b6c284a1e81d3805604b71b6eecb5d222a0c820585364d1b4f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/Image_440_SinglePhoton_full.float32": "f17d70010e99ba332995c1b17ae2cc923d9e50e553879ee4d101afadf9b01263",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/S_440_SinglePhoton.float32": "41283a999bd133ba18df0f3f38bd454d2818c58713abe6b0d5ca5e2c5cd3fe53",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "034cca76b6a4f559337112c79a562722dd1c1abff7d8ff883265c18fdf8f7cce",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "3972b45d752e9d87ecef2d33296d075d110acfc28cc6d87e466cf254475f2b08",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "881d5b17aa40b5ab58c73443f6047ffe34be422aa839c1f2a73c6bfbf41bc120",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "25f3b5d46cc0d2f8a38b9ac4697fcafe11e78740a6677542f19013edf4c4cc95",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "f6cc65303d1dfca84511681e13e06587e92df017866f1efcd6f7d08762ab8468",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "647e4996eda9972af8b117169e3ce631adcf2ab0f16aef21a9661aa4de20b280",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "4ec871c2fc22eb99b24b5d190a6fdc5894ed53530864f700557432a821a3b735",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "714167f7176109685c519d014e28f5ead007bf4c2eedda695ff50087e5815804",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "f1ef8527a7be279e3869f2e2eadafaacf81c383bbc88cd6530069783c7002128",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "1355e1813c938ec5521fd393358e2c2a1783ed8c2ddc0dd1150794f3ced67d01",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "daa2a9f2a4ed70340e05bfc2346d64a514c59412ee24c3b6aefcf4ce67d32a4f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "7045027656ca6345ee9e605c9f62528cc0a041dcf16e728536748db8e3115872",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "fc16ec844ac5f70410f866895ad2e81c85962b721f78bb2d4afc6bc1f3959137",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "313d0aefac094c135e2e3bb8d86a7fcc4c8b9ca333f7a36a617588c4b46cc2ca",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "f1ae2373fe449a9300112ae5a4753247de61808611de4dab6c1aa897530aca5e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "2c199c2af7d7f0b6c284a1e81d3805604b71b6eecb5d222a0c820585364d1b4f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "f17d70010e99ba332995c1b17ae2cc923d9e50e553879ee4d101afadf9b01263",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "477827ebcf2e14b278ef78122dfd9f13e88d1bdb20fc664d974325a2c6553dd2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/Image_218_SinglePhoton_CrossTalkCorrected_active.float32": "b3e2d4ddec70ee66180e9f7d99037292f6104464086744ef5845b55f8f26272c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/Image_218_SinglePhoton_CrossTalkCorrected_full.float32": "17c0f36593e8d5ba6beee0d23abb8d2097a78fc85cb054e1cdccdb94585c9a76",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/S_218_SinglePhoton_CrossTalkCorrected.float32": "51b94cb64fd1aae37092be01b2b4edcc4d2f0d45023f2ede7cda8c0b3e92997e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/active.float32": "c49530c6a3031ae3079b3b155ada95589e6929caf619622a062aa4e766c0815a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/full.float32": "98d56c633b9f9c17e0788918725345635c063f6d0aaafdbfd3aa3f6010a6515a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/manifest.json": "4d64a9e2cd5e5848fd2bfd3b49a4c904029d723f5cd2449ed633251538a49508",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/active.float32": "380dd8efd31924161c91668147b0d9c6185a1d9f686ac01b625c78b51a5b5d89",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/full.float32": "de7829c128f3a73cf4fb6a6b5722b97b9c6f8e85b635cacd6bbae5e13ef18734",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/manifest.json": "853a814242280a46adcf78d9e12413e762b2db7e6f38c25eb4cc45b5d4eec318",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/active.float32": "09b7204f1a0c14d68bd69903b578e8fe0ebcda16b6600ccd478dcb9a2cb4c097",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/full.float32": "83a534f854a3bb17fcbd3a25a331004dad91253ec06688167c0ae1b1ff7b1b44",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/manifest.json": "54b4f0484de300defdf86fc12067f20c8e1f0f195a96f3f0921f8d8bf338ce6d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/active.float32": "f72911ef43868bb686028e3fbe024b6133d0f77492ca85b1624b0c0a7f61c961",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/full.float32": "0d5fc30ae2c7989bb33b823de3af696b225b1ce602b17cb9974bb529e71bec53",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/manifest.json": "f3d25cdaadf8ddfbf16a428231db9b6c33863d842bdca88f079c867f63fec8bc",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/active.float32": "85f324c30d9aa3710c3fea568ce98529890dd703a145235fc06c02b237b7258e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/full.float32": "7eebcc2c0f53757a1881c014d40fc8389ac7438e13808d3d4e39f2d922f90d10",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/manifest.json": "d5be6718a8574035cc0b8fa1287ca3de6e00cba2575a12e3715f579149177902",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/active.float32": "b3e2d4ddec70ee66180e9f7d99037292f6104464086744ef5845b55f8f26272c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/full.float32": "17c0f36593e8d5ba6beee0d23abb8d2097a78fc85cb054e1cdccdb94585c9a76",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/manifest.json": "27e487131c9a86b7f8287a19d96061fc5bd50f16ad2adbb21b6c914d205b755e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_1/native_history_metrics.csv": "ebdfa8a50834f250987490cdb3544b42049dedff95549208300d5218c0cd04da",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/collection.json": "7c0448f035b9890ad2887ca9dda7fa59246fabc608c8f41948fa2df2b446d7c0",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/completion.json": "df5972076d611c835f6f921c2d6d4265c627aef7f46eb68315789e609118ebed",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/run_manifest.json": "ea5a5ff3ac230428f305afcfed3ddf96760ef7fb02d012168bd7c0b5ef4b9dec",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/allocation.json": "94fa8b7f431b2500f00112eb8d40cb1a64e63cde27bb79e4f2a0eadf4df42b43",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/final_prediction_218.npy": "6eb827746e9ac6a75feb07026b107d2806fc8c3df4fb3d55658e89c0359a7ba4",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/final_prediction_440.npy": "6a89569d3ccc5bace9e8317e951c6adcb43151f7c144c822c4ed2b99054ad16e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/fixed_cross_background.npy": "a69f7aa035f0382ba93716d5c85e98f2096be22c928a77c04df494bf904b1e39",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/mean_A218.npy": "ea70dc8225d5910b7858b6e3e8a3da42df664fc1f687362d6cb2e2f9ec92b9ec",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/mean_A440.npy": "4e146b433244c18decd053123e8dfd052cf1671ad75513cc0a23f3b01ef47948",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/mean_C440to218.npy": "5d935db6e3fc9d3b176ce19b32c1203080bcda6beed4fb9001a7a2c4d54c667a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/projection_218.npy": "46a1d7ad84c4808eea4b0551b5fee74d2834371c9e870b0a9a0fca002d89e16c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/projection_440.npy": "8e229083f8f0597a9fe33c2cd3815053ef3df636ab311382273313ab39a44976",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/sampled_A218.npy": "9b656e5f96923a69bab5179f9929fb7ce87ad91e4063fe1db5cf44639a5e01ee",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/sampled_A440.npy": "8e229083f8f0597a9fe33c2cd3815053ef3df636ab311382273313ab39a44976",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/sampled_C440to218.npy": "a2e1b12b44b7392fd7d700aa5d486cda67399dc008324dd314e12fc6cde81109",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/Image_440_SinglePhoton_active.float32": "446f6191fc2f8dbdb3bc548a286ce1142cbd5a3910a06a7f3711927860ead37a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/Image_440_SinglePhoton_full.float32": "0f1104115022a12d82be82915f0840198d11aa56be45cce14fd51e984f635043",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/S_440_SinglePhoton.float32": "41283a999bd133ba18df0f3f38bd454d2818c58713abe6b0d5ca5e2c5cd3fe53",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "dc9124b47fdfe4f54f43ec8dd5b82a70d3398492949521e706eec9aac5d8bc1c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "22d3f33e65b77fbf0b0a0442a1ff062008be1360b011a9435cf3710c725d69b9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "3b783967793a3677da541f43f6201ccd4646174c8306a162e76fc0e53c36c053",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "bb89d7c773091ac3186950984312b80a54327e4c89b9c5e501e4d681149f81d5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "a61045aac58a431fa2b8411d0cc4c70a56b257334503899f055b2540000cdd41",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "d743c9413a45fc259cbcd312ca4b2541c038a65a3d3db438434339e5f85ab227",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "3fdc099d8adf546491394611a58e669f6d8d77e916cc00534ec5d7daa36d9585",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "de1e394a3d0d1470405e4d5b9edaf834b35cc39a75ed6d773b52422dc8848a6d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "c0e26d2e82d5abce9b6da9ec1b78655c3f933d3445c0d65edea0d7770021701b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "db7984d0a5f8e4be80b6b2b3ce4f6ee101995359a3b208581419b29c081d09fb",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "b575363b1346a2fc57c192d87ea01a3fe499e73187440a72bebbebf87a971c27",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "2efddd2612ce3e26bb3027de534b5d3c9936400ea2aa3eaf6eae35b5edb4d689",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "c9db5a4b959b6d464e4b159d6d21699a4d99d23a735fc0ea06032c867143ae3a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "887cc8c97e36c738f1637b84d61cbf91a318ba157bb2a5ff5c589848af019524",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "95b6be8a2f81a71c4398f248304127685e5f5c368aaf7acd8120a7a03f789e54",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "446f6191fc2f8dbdb3bc548a286ce1142cbd5a3910a06a7f3711927860ead37a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "0f1104115022a12d82be82915f0840198d11aa56be45cce14fd51e984f635043",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "f34a4ced30dbc61aa79c270f2fdbb2865883c2225e4268178246f20ff19a002f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/Image_218_SinglePhoton_CrossTalkCorrected_active.float32": "8b4673ddf4247a50b29e1fe79a5d2c43114ece3e9b3164b69a6b75f70274cb5c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/Image_218_SinglePhoton_CrossTalkCorrected_full.float32": "f87da755fdaf4929515734182fc4bb52cf032a799bc23d1008eb3f4ce04fb5ad",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/S_218_SinglePhoton_CrossTalkCorrected.float32": "51b94cb64fd1aae37092be01b2b4edcc4d2f0d45023f2ede7cda8c0b3e92997e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/active.float32": "5f8b291a437b939c2b6557826072b09ad847a0c5ae9dab66e8093a3255ffdd55",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/full.float32": "773edcc389ed5f81d9b6f5eddff45b9090385d08f832352683cab74c621ac576",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/manifest.json": "49567f1f5ea12ce8f3eff9cae73a0ea848d3360d4b18aaaa61220c90f1d1c8f5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/active.float32": "914bc4481aa38979250ba5a3d09969ca57bd25769f379f78d708e6bcf8a36b7a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/full.float32": "32605e5e0c4258baafc80eb4e255ff3f3d7947d14e92704d2ffffc458caea34c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/manifest.json": "4ae2720464e771b6b0b74776b1b115f7038f77d7dadb1c9a3c1885e061a91311",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/active.float32": "d826b20f523a30db986cf6c837c1362008e7bd763216f051b0318f2e2c55c984",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/full.float32": "23f8991f7f526e084687057a3f78279e9a924727d78081e77ba0bfa47c17d05f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/manifest.json": "cbb6e998b015e01079adf31e145f7c546692772512013c5829309b90a68d8cac",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/active.float32": "b9578552fb2dfc65bfdb2ee4f6c6fee924914860054e1a0ab5686f910c7f188d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/full.float32": "cd934087033509242bed4cf19a9da20ed101df947b625e8c10716a0ad6a563b5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/manifest.json": "bbf3ab8aa8166b130b7b0d15acc8293f1fe659c95729e864f9ec9a636c2b2ceb",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/active.float32": "749d6d90dd82717015639fe01dedd2d38ecd26cbc609072414da54a75a391f5b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/full.float32": "9b6b4cb19e60ba0ae625444783d80bd9057fe7ccba75b9c06082c67c08718e9f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/manifest.json": "4adb061349bd9353a2ee2846e60de6166d143afe8f76083d8a8736d71b060519",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/active.float32": "8b4673ddf4247a50b29e1fe79a5d2c43114ece3e9b3164b69a6b75f70274cb5c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/full.float32": "f87da755fdaf4929515734182fc4bb52cf032a799bc23d1008eb3f4ce04fb5ad",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/manifest.json": "5c1b3fcaf7727343bdb1c3707e5b2613a321a2d46f953f46a1d74a5d7567f988",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_2/native_history_metrics.csv": "5e3e781f5356a41851022dd90eb61dcefdf53a0f1dbefd87472477106512418d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/collection.json": "7b101b209826eb4915d34273b73b02b511c6049dfa01f1948b2ea22ad796a896",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/completion.json": "a557a05981aacac57a0fb081eb3d423f91ccb8dd84caad5d7268eebd0e69e9d5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/run_manifest.json": "ec3fa307c80d0c57a1e08bf5064d74e6f7fedec3fe9b6d4fca2e6d0c49950ce1",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/allocation.json": "8a8235cabf13c26c35e4ec0c6c69ed906b8e1ddeaa37cf6e12d80e4c7d8b643f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/final_prediction_218.npy": "abef9e474f097b3a1596d22873bb87c593d3d297b5ccafca1968f800c6c3560c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/final_prediction_440.npy": "2f84af12437c880c66f2deb45e0ab9e527d57c93b481b9c501a8eb98d7679284",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/fixed_cross_background.npy": "ad31b27ad555b9bf2caac860eeba408a2f1b9b1f561444b6c8d8cd9db195af9c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/mean_A218.npy": "b32b969a16115d26b633d016c034f98af5b4bb8cac6ecc2ee4d1689745d3d1d5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/mean_A440.npy": "ba3732eb1f0c05edd8323722dba8cb3f80755136152c53de52f880ad5102b5b9",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/mean_C440to218.npy": "cb772b59421254621722c8cde1a0e399b0a8ee14f12fb1e16410b877e0b060ae",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/projection_218.npy": "d54c4426ee6f1e6b08d892939900b1501c78255d10896b6f8a6f94ada145fb77",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/projection_440.npy": "f1eba9695afe4b65981d4ac8d3fe9aee42fff813cf743b667644ae8dbdd8b7b8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/sampled_A218.npy": "913ba1c5fdddc7442b4c97fa2e147ab7cd6df6364d586f393c040a3242df91ad",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/sampled_A440.npy": "f1eba9695afe4b65981d4ac8d3fe9aee42fff813cf743b667644ae8dbdd8b7b8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/sampled_C440to218.npy": "5a5f8d30033f2f524810b9ba452fd2bce8cecf1cd5e0b00253a47bf2e49ed325",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/Image_440_SinglePhoton_active.float32": "4602e75675da5c7b7a26dba7405e3d4324757ba601004bf59c739ca2f817dcd5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/Image_440_SinglePhoton_full.float32": "bc12b86abecb33c2ccf7529b3498a700b886a9143759fe04a6ad4522188b8df7",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/S_440_SinglePhoton.float32": "41283a999bd133ba18df0f3f38bd454d2818c58713abe6b0d5ca5e2c5cd3fe53",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000010/active.float32": "c74e54870b4b648a3975e75a682d84d6473c10a77f42221147a457927e7303a8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000010/full.float32": "1334d5e896613caa897800d1cccc740526c6d3ff9979aa307413e618c4a97307",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000010/manifest.json": "810cfdf7eba39e9d88d8c96999165a7b687c89ba84e48304c7a47657d228d431",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000020/active.float32": "d3ceef1be22bc461bc087ef21603587cb534e0e69d7c58eac58f2c7e44740464",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000020/full.float32": "850c3beb165d932a651fb7b6d0dfc8798d9a5f8952f4755f1dc71624730af787",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000020/manifest.json": "c60d32c5ad7e252e99f493c2dee3cb25b58ffcf3ec2530606d8680a65452f380",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000040/active.float32": "fba55139d3ea16f6a6aa8245d4350a4e515e390e196cbf6049d2d128f735e16c",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000040/full.float32": "540ef9197a2eff0cb05cc21bff545c2002c85fe5b71d35cd18d87502c732ee68",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000040/manifest.json": "e084ebdc86fe48ee2c8ecada23f13bb4b7db0e276d421fe52ec4b073b9a5594b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000060/active.float32": "56e0a56a9643dfa0ba728ae745ea307a1cde7c9ce4adb8cb2557f91f5deb9e1a",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000060/full.float32": "1acb9068a650a07f8daa7ed18abf6be9a8dbf0acfcc8c38f2b2092aef9e208df",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000060/manifest.json": "15d1015a7cedc1e2b8c0af1074f7ea7071c7a86b4d71485a64ae6c7f8bcbeb5e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000100/active.float32": "759d7f23c9ef5b2994176b8690f16142c350ff340b75f6ee8d61a4eb7d3ace64",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000100/full.float32": "b22cca5e3e41476b62bc3a6f9904f7827f85864bc11830e63417afc21f3cefa0",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000100/manifest.json": "f27a183002a5117aa56eda93d14a4f15dd0386607607cc4334dff878969ba84f",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000200/active.float32": "4602e75675da5c7b7a26dba7405e3d4324757ba601004bf59c739ca2f817dcd5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000200/full.float32": "bc12b86abecb33c2ccf7529b3498a700b886a9143759fe04a6ad4522188b8df7",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/440_SinglePhoton/checkpoint_000200/manifest.json": "b4853d119b6b6ac4b3f25b9fe7cf382254e8b83cb9d0c80957a7127c687e1975",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/Image_218_SinglePhoton_CrossTalkCorrected_active.float32": "29ac3a42469a2b74d0a9da2f5f33ff36d6d57758ca3e97326c8ca2381396fcaf",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/Image_218_SinglePhoton_CrossTalkCorrected_full.float32": "c8493668f134827f8e3d2ecf7ca7f8e202fcb88f7919f3216268f85333764954",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/S_218_SinglePhoton_CrossTalkCorrected.float32": "51b94cb64fd1aae37092be01b2b4edcc4d2f0d45023f2ede7cda8c0b3e92997e",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/active.float32": "fba1c632f6904497ecefe620f8cabea232ea7df56a4a38481d5e376a84d75b83",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/full.float32": "378d542951f766cf27807acb6d3b0452a6140ab84c7f22f069df158fa7e6aa15",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000010/manifest.json": "77b848e71bdd3c0866e163439e76d319422f9c4448ccffb46f259a42fb0e9111",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/active.float32": "bec956587fb398a1e94b6d85d7fba7e13a3a1c0a1a6d26c6710a91fc5991caf3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/full.float32": "c1e018ed03bb53070f0fe7969780977aaed25c4af3ba140ec8d374ed3a285b44",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000020/manifest.json": "6f052481dce181561eaec8c7af74a60185b8577f12822161fbcc59036ea78dde",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/active.float32": "d9e37f16779f70274ed0c7ba8e101d03e134a15b7a921847b4f0a272ba197697",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/full.float32": "435b5be2f2cad3b90b7461c5f24b0eabd1d18721343fb426ed7b58b7fd3a8e8b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000040/manifest.json": "6e53b9b8faf2889df1849b9d55f2096b3abaf98aa6da78c958ba851b61789ad8",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/active.float32": "4b38b4fe667e45113121122758688648bfb4b5581ac8360b3f188b0fe6467f34",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/full.float32": "b21be3128800d32c29648a2c84d7d019a6041cb367bb2cc31543c69799997927",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000060/manifest.json": "45307f91404ff922b189f13688c3fac14646b4dcb8bd8c6f44680a87172600d3",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/active.float32": "baa11a3a8e6e344b83a09c3aa144c771d682b709c6429ba6348a2853b283d75b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/full.float32": "d8980b2f3fa82ad2c51d0391fbf7d186d78e1f69f509c98f6b6b401a7136c8f5",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000100/manifest.json": "888a094332e8d08e785f65d6115ecea0aa9453db2da52cfb9d1b06a171520e1d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/active.float32": "29ac3a42469a2b74d0a9da2f5f33ff36d6d57758ca3e97326c8ca2381396fcaf",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/full.float32": "c8493668f134827f8e3d2ecf7ca7f8e202fcb88f7919f3216268f85333764954",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/checkpoints/218_SinglePhoton_CrossTalkCorrected/checkpoint_000200/manifest.json": "df25d32f7373c011d713014533a51c2f4b6a0b57d098d26e32858cde7fb5c09d",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/condition_3/native_history_metrics.csv": "d7a07462bdecaf33a2778bbe6444ae9959254a8f3fafab32c6b8f277155f0437",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/remote_full_numerical_qa.json": "fd781fc6112f256f8757b373958d542f8e5250a69010fbc3c7add9a2eb0a3935",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/release/contract.json": "341ef6bded934da8bd92d2fe4929dc24e9bc7ae56b1529ffcfa3a06d5cc793fe",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/release/release_manifest.json": "f23463afb4a7a1f9643bd0f7b3c0452dacb0b95b7d5e955655622cfc651ddf7b",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/release/source_native.npz": "8b913c2fcc6e8ece8fc90e7c128851173c38d0cd854b62470343f0c2923b9568",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/visual_results/release/source_native_manifest.json": "603d184bb0216e403f051cd4b474ad3a6c084dca65e79a86c9254f3e16c308ff",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102/payload/whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/manifest.json": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+    "experiments/ELLIPSE500x300_H120/nema_body_h60_config.json": "883bdca4cc006c7841d9e8818b015b5d4ddf7e42b1c79a39467d9d7bafd84216",
+    "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010/roi_definition.json": "2ca5effb713f822b0db7299ab3c8a6e5dc718f11c14d888db2ec2be64c219055",
+    "tools/research/plot_ehe_dense_nema_low_noise_20261102.py": "197a97350b0847e32c1b8f11d79d60c2f26b64295bb125e3797b737ab058aafd",
+    "experiments/ELLIPSE500x300_H120/nema_roi_policy.py": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+    "experiments/ELLIPSE500x300_H120/analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "experiments/ELLIPSE500x300_H120/mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data/source_q128_crosscheck.json": "b9524b53654eee3251c2f0be646d875f18fd8128ca983848b3d78c535b2247f3"
+  },
+  "manual_visual_review_pending": false,
+  "physical_calibration_passed": false,
+  "direct_visual_review": {
+    "path": "data/direct_visual_review.json",
+    "sha256": "683df9a2fb5134fde127126d66e7795ea4619b6bac818cea9ed68db611468bef"
+  },
+  "scientific_interpretation": "匹配原生矩阵合成数据在5e9/5e10也重现明显FOV边缘高值。在当前网格、视角、响应和无正则MLEM/背景估计流程下，Poisson采样即可形成这一类伪影，不需要真实Geant4输运与响应失配作为前提。提高到5e12后边缘高值显著减弱，但200次匹配原生源NRMSE仍为440约26.3%、218约24.8%，图像仍有模糊和小球对比不足。没有噪声实现集合、无噪声重建或独立网格实验，不能估计真实Geant4结果中各因素的因果贡献，也不排除已发现的物理响应失配。"
+}

@@ -1,0 +1,54 @@
+{
+  "time": "2026-11-17T06:01:10.645197+00:00",
+  "passed": true,
+  "parent": "95022158ffedcdd7",
+  "execution": "a502c70af71dea0e",
+  "changed_files": [
+    "bounded_matrix.py",
+    "run_reconstruction.py",
+    "study.json"
+  ],
+  "exact_allowed_replacements": [
+    [
+      "'5090' not in torch.cuda.get_device_name()",
+      "'4090' not in torch.cuda.get_device_name()"
+    ],
+    [
+      "Expected one visible ordinary 5090 per rank",
+      "Expected one visible ordinary 4090 per rank"
+    ],
+    [
+      "matrix(a.matrices, channel, release['key'])",
+      "matrix(a.matrices, channel, cfg['matrix_source_release'])"
+    ],
+    [
+      "matrix(a.matrices, 'A440', release['key'])",
+      "matrix(a.matrices, 'A440', cfg['matrix_source_release'])"
+    ],
+    [
+      "return np.memmap(p, dtype='<f4', mode='r', shape=(10496, 507000))",
+      "return BoundedReadOnlyMatrix(np.memmap(p, dtype='<f4', mode='r', shape=(10496, 507000)))"
+    ],
+    [
+      "cfg['response_cache_bytes']/world+(34<<30)",
+      "cfg['response_cache_bytes']/world+auxiliary_budget_bytes(geo, world)"
+    ],
+    [
+      "from adapters import OrderedTransferPool, ViewBlocks, current_cuda_budget",
+      "from adapters import OrderedTransferPool, ViewBlocks, current_cuda_budget\nfrom bounded_matrix import BoundedReadOnlyMatrix, auxiliary_budget_bytes"
+    ]
+  ],
+  "reverse_patch_restores_entire_original_source": true,
+  "normalized_entire_program_AST_equal": true,
+  "all_original_study_values_unchanged": true,
+  "unchanged_frozen_files": 58,
+  "host_predicted_peak_bytes": 66323189392.0,
+  "allocated_host_bytes": 83886080000,
+  "host_fraction": 0.7906340288162231,
+  "actual_resource_guard": 0.8,
+  "gpu_cache": "Original device-budget cache adapts to actual VRAM; actual 80% GPU guard unchanged",
+  "GPU_memory_prediction_is_not_measurement": true,
+  "matrix_strict_transfer_sha256": "0698c10ff5c1a33e3b8f95e06714121bc10dc272347634019df74c9558de86ef",
+  "parent_5090_registration_sha256": "e369c2844cf977cf8c61b16bd6e0c4af1ce31dfb33697a541177db4429c3cee4",
+  "authorization": "User explicitly requested an additional identical 8x1 formal job in the 4090 queue; retain original 5090 job"
+}

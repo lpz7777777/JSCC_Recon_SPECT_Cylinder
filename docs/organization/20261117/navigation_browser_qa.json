@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Navigation UI only; no scientific image QA",
+  "DOM": {
+    "initial": 98,
+    "failed4090": 3,
+    "width80": 1,
+    "waterV2": 8,
+    "synthetic": 16
+  },
+  "source_sha256": "cfd04f3841d51faf574e27b889c4204ae2e6e57f5faf7cca3bf3b6e98726c001",
+  "screenshot_sha256": "51ab571841921359a28e3ab97f4d90d54ece026020cb978d276eb4d61388c871",
+  "direct_visual_review_pending": false,
+  "direct_visual_review_passed": true,
+  "review_note": "Observed 1700x1100 rendered index; source/condition links readable, filters and table visible. Navigation UI only."
+}

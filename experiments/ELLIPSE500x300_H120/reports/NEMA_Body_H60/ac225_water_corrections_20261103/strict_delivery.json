@@ -1,0 +1,626 @@
+{
+  "passed": true,
+  "local": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\ac225_water_corrections_20261103\\formal_delivery",
+  "routes": 32,
+  "all_checkpoints": 6400,
+  "all_files_SHA_verified": true,
+  "full_histories_and_backgrounds_checked": true,
+  "conditions": {
+    "JSCC_5e9_none_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "9dfc02db098d27576bb511e92462ba8ea883eef221d082ee8b730f74a06dd0c6"
+    },
+    "JSCC_5e9_none_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "5b29206cf5ace4531accd54727e2af5f6da4d0426d8e72e56da699ca54b69309"
+    },
+    "JSCC_5e9_attenuation_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "e37f8516d60113e40c14c29745cf520e31875a1963a28a071395f71886e5989c"
+    },
+    "JSCC_5e9_attenuation_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "f9ec36a56f57fd0d413a27270c1dc0c70f94db4b2cf586b381017e7438123e0e"
+    },
+    "JSCC_5e9_attenuation_tew_raw_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "ad523bba2defbe9b2ff6aca0a01c3a341ef7166bb0656c9ef09ab4c542339571"
+    },
+    "JSCC_5e9_attenuation_tew_raw_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "1719135e4c4bd56a818390aaa6634110bb4d4204e6dc9c90ebb12dad44a90ff9"
+    },
+    "JSCC_5e9_attenuation_tew_pool3_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "8c1666524a2bed089499a7077a1a93a5a65040d6a2396a714e2b939285e6c4c4"
+    },
+    "JSCC_5e9_attenuation_tew_pool3_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "309c3777e06c8b41d3a3d389ce4c1c4b880721f40e8a896ed027c79b74b51d98"
+    },
+    "JSCC_5e10_none_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "95ffec3cb1c619ef8f14eafb8d57ffb73a5f1b9c88df5d3ef46c78ae1be64924"
+    },
+    "JSCC_5e10_none_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "5dba3fa91f53fe0868d807b440940430e98f68ef03742c2742654f00b45c3b72"
+    },
+    "JSCC_5e10_attenuation_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "516150acec7e9a5669045a9acce53abe6180aad2f60316c52a3fb2eda61a9797"
+    },
+    "JSCC_5e10_attenuation_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "e3058b3b22f73cd592cc0588482bcdc8f09c2f3d1ebde9fc491528c7bbdbcec1"
+    },
+    "JSCC_5e10_attenuation_tew_raw_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "a26f33ad102de98cd14f95f005fd41904136525efc3fdeb8345c66f3d567f739"
+    },
+    "JSCC_5e10_attenuation_tew_raw_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "2c73e00e1f73a746e042420e1e376104eda4dc6fcb1e6a80682a63e80b7ec765"
+    },
+    "JSCC_5e10_attenuation_tew_pool3_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "5762e7e30d46bcaa448674f53a42c60e929c56440bc9eeb291567c727b32d844"
+    },
+    "JSCC_5e10_attenuation_tew_pool3_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "57912f3e35940acca649a86d220bd596e0424cfe093a95d283bb3238c37ad024"
+    },
+    "EHE_5e9_none_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "eff8c11c89cbc224fe33401f588657adc05a34562eb4fc04f51157b8988d0246"
+    },
+    "EHE_5e9_none_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "116ad762fff5d9bb22a9c103b26597b9dcdb1b1764acc112e080607596d21a9c"
+    },
+    "EHE_5e9_attenuation_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "3f91f023840659dbe625ce1ca24bded39db9eeba37656de12d970ff5f01b6491"
+    },
+    "EHE_5e9_attenuation_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "83bb7a3433b494b6659eb25a0496957bc9a056a31d23f9a107d6708b51c702ce"
+    },
+    "EHE_5e9_attenuation_tew_raw_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "c6478804798ddb92caf9854586b5510c272b689d6d20c4a1520574edd078f43e"
+    },
+    "EHE_5e9_attenuation_tew_raw_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "6bfa770fe253a4e515a8bd763e6c7284cf0b580671cbbb54660f26a1c9e08b33"
+    },
+    "EHE_5e9_attenuation_tew_pool3_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "31734a5a5a3320f9337a10560ec93290457c61f397192fc1e6a63521d368dd97"
+    },
+    "EHE_5e9_attenuation_tew_pool3_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "899204814560fea58d94deee14294f9b112c4f5c006ca66ff15d59614cbe7a8a"
+    },
+    "EHE_5e10_none_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "da3cc2b3483873022db57727683562f84b3d4b1116bea661b2c92dc28908fca6"
+    },
+    "EHE_5e10_none_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "4cd7f7539cda9c3c806e4e0db09194c9a5773c98e7611ba839d29e1ef4388485"
+    },
+    "EHE_5e10_attenuation_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "3c61a700e7f1c01472c63399b8adce294257cba339425bbd20ea4743eb7c1798"
+    },
+    "EHE_5e10_attenuation_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "d2deac54724b563f014ed73b8298c00bf6b9384cb015dffc5298f232d5cda460"
+    },
+    "EHE_5e10_attenuation_tew_raw_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "6f877aee24c11c6efe8774f0be854f7bbe1511dd882dc1891261d0d6c30da945"
+    },
+    "EHE_5e10_attenuation_tew_raw_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "50b360e591836aef4d348706dfc6ad5498de9886c4f9ddf44ae561b2a1db2783"
+    },
+    "EHE_5e10_attenuation_tew_pool3_440": {
+      "all200_states_verified": true,
+      "completion_sha256": "d041dff15c63eb22424923b1333b240ffa0277a2ec6f2cfb7d42b9da3e831f50"
+    },
+    "EHE_5e10_attenuation_tew_pool3_218": {
+      "all200_states_verified": true,
+      "completion_sha256": "2c0b1ca66d55711ace82160bbc7a1e5319003b91bb09f09de63fa4dbc45a326c"
+    }
+  },
+  "accounting": {
+    "effective_rows": [
+      [
+        "1772388_0",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_0.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_0.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_2",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_2.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_2.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_3",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_3.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_3.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_4",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_4.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772388_4.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_1",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_1.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_1.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_5",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_5.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_5.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_6",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_6.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_6.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_7",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_7.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_7.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_8",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_8.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_8.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_9",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_9.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_9.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_10",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_10.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_10.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_11",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_11.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_11.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_12",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_12.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_12.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_13",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_13.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_13.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_14",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_14.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_14.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_15",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_15.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772573_15.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_0",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_0.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_0.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_1",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_1.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_1.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_2",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_2.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_2.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_3",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_3.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_3.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_4",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_4.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_4.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_5",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_5.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_5.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_6",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_6.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_6.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_7",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_7.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_7.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_8",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_8.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_8.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_9",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_9.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_9.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_10",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_10.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_10.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_11",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_11.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_11.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_12",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_12.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_12.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_13",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_13.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_13.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_14",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_14.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_14.extern",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_15",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_15.batch",
+        "COMPLETED",
+        "0:0"
+      ],
+      [
+        "1772574_15.extern",
+        "COMPLETED",
+        "0:0"
+      ]
+    ],
+    "original_failed_cancelled_excluded": true
+  },
+  "effective_routes_sha256": "9d7d066eb24c55e02fdce0c23ea61f518bd7c1e3dba9e848ca36ee12338122f9",
+  "physical_calibration_passed": false,
+  "visual_review_pending": true
+}

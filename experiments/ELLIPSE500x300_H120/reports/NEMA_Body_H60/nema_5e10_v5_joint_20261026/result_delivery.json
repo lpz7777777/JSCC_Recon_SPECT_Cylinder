@@ -1,0 +1,69 @@
+{
+  "source_job": 1740189,
+  "completed_at": "2026-10-29T02:59:15+08:00",
+  "all_steps_completed": true,
+  "strict_fetch_passed": true,
+  "result_files": 632,
+  "evidence_files": 67,
+  "frames": 200,
+  "local_result": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\nema_joint5e10_formal_1740189_20261029\\result",
+  "strict_transfer_sha256": "9c27e596b1eb20ca7435174fa5e804e771662bd70f4127340860ba3e5c1763c7",
+  "numerical_check_sha256": "e047091a8af430f1a32b7b38242de414fd5068db53ade040c2779c912e1a5414",
+  "resources": {
+    "gpu_peak_fraction": 0.7623036975326425,
+    "node_aggregate_peak_RSS_fraction": 0.5405936466600529,
+    "slurm_max_RSS_per_node_allocation_fraction": 0.5470627273478836,
+    "nodes": [
+      {
+        "node": "wqd10nah08g5",
+        "sum_rank_peak_RSS_fraction": 0.5405335958167989
+      },
+      {
+        "node": "wqd10nah09g4",
+        "sum_rank_peak_RSS_fraction": 0.5405269613921958
+      },
+      {
+        "node": "wqd10nah09g5",
+        "sum_rank_peak_RSS_fraction": 0.5405817935681216
+      },
+      {
+        "node": "wqd10nbj01g3",
+        "sum_rank_peak_RSS_fraction": 0.5404250165343916
+      },
+      {
+        "node": "wqd10nbj03g1",
+        "sum_rank_peak_RSS_fraction": 0.5405753761574074
+      },
+      {
+        "node": "wqd10nbj03g3",
+        "sum_rank_peak_RSS_fraction": 0.5404848400297619
+      },
+      {
+        "node": "wqd10nbj04g5",
+        "sum_rank_peak_RSS_fraction": 0.5405936466600529
+      },
+      {
+        "node": "wqd10nbl09g4",
+        "sum_rank_peak_RSS_fraction": 0.5405426277281746
+      }
+    ],
+    "all_available_sources_20pct_headroom": true
+  },
+  "source_run_manifest_sha256": "fb5c47c802d7f5a89ca57ffbdc92b98cd92508362cd05c9365d35d581dcd3876",
+  "visualization_status": "complete",
+  "new_HPC_job": false,
+  "figure_layout_review_complete": true,
+  "physical_image_quality_certified": false,
+  "visual_report": "Analysis_Plots/research/nema_joint5e10_1740189_20261029/REPORT.html",
+  "visual_report_sha256": "a64a377cf95703fdc2b26e444c52d2eaaa3f15b3f9e393361067818ff9ce88f3",
+  "visual_qa_files_sha256": {
+    "scientific_qa.json": "3d3876fb3e19931a54622330e8e437bb3c0277d2e0d078fc758440bab75c8b89",
+    "visual_qa.json": "00ca919ca7a0c90031281dbdda5eda08ce79e85ea401eabc87b0ce4df39a6076",
+    "independent_numeric_qa.json": "711f369b4bb990225acf23c360793f978b7420cdb0acc09f7118df8cdc1cdc20",
+    "artifact_sha256.json": "eaa71d0d8377dab0e27953daed316d49a4f67afa759aae88337523b7059540d0",
+    "endpoints.json": "9d9604e8f037bfd27ef04cfef27064633c33c01654e919b8762cac8ff2ffcc25"
+  },
+  "independent_3D_ROI_max_scaled_difference": 2.1340705257663709e-16,
+  "fetch_source_sha256": "d7c97a34157f0ccf3914511b508839755c7dfea9eced8319be9efbd975bf2ec2",
+  "numerical_verifier_sha256": "4e9ea0a87e9b2f56325b03d081c0aad3d2372a30e039f41ad11d1b04edf57fc6"
+}

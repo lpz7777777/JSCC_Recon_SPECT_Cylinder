@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NEMA Compton 环状伪影诊断</title><style>body{font-family:"Microsoft YaHei","Segoe UI",sans-serif;line-height:1.8;color:#152536;background:#f3f5f7;margin:0}main{max-width:1140px;margin:28px auto;padding:40px 50px;background:white;border-radius:12px}h1{font-size:32px;line-height:1.45}h2{font-size:23px;margin-top:42px;color:#143d58}p{margin:14px 0}a{color:#116da6}nav{display:flex;gap:16px;flex-wrap:wrap;padding:16px 0;border-block:1px solid #ddd}.lead{font-size:20px}.eyebrow,.small,figcaption{color:#526578;font-size:14px}table{border-collapse:collapse;width:100%;font-size:15px;margin:18px 0}th,td{border:1px solid #d8dfe5;padding:10px;text-align:left}th{background:#edf4f8}figure{margin:26px 0}figure img{width:100%;height:auto}figcaption{line-height:1.6}li{margin:12px 0}.small{overflow-wrap:anywhere}@media print{body{background:white}main{padding:0;margin:0;max-width:none}nav{display:none}figure,table{break-inside:avoid}h2{break-after:avoid}}</style></head><body><main><header><p class="eyebrow">NEMA · 440 keV · 2026-10-26 · 已完成正式结果的只读诊断</p>
+<h1>Compton 环状伪影：网格、响应与 sensitivity 的证据分析</h1>
+<p class="lead">柱坐标采样的怀疑有实质依据，但尚不能归结为一个确定的网格 bug。现有证据更支持：<strong>网格与20视角的共同离散结构、尚不完整的物理响应，以及无正则 MLEM 的后期噪声放大共同作用。</strong>本次没有发现 S 文件错配、单元体积重复计入或小 S 分母等直接实现错误。</p>
+<p>最强的新证据是：环纹在未经显示插值的原生系数中已存在；四条均匀背景圆环出现21%–36%的20阶角向模式；独立5e9/5e10的径向峰谷仍相关。S与当前核的小样本检查降低了若干简单解释的优先级，但没有证明完整物理模型正确。</p></header>
+<nav><a href="#evidence">实测现象</a><a href="#grid">柱坐标与视角</a><a href="#response">响应计算</a><a href="#sensitivity">Sensitivity</a><a href="#iteration">迭代放大</a><a href="#next">原因排序与下一步</a><a href="#sources">来源与可复核文件</a></nav>
+<section><h2>范围与数据身份</h2>
+<p>主体是正式任务1722760的440 keV Compton独立重建，比较同一任务的440 keV SC，并对照既有独立5e9正式任务1669255。5e10当前结果不包含SC+Compton联合图；本文不能替代对联合路线的单独诊断。原始事件、冻结模型、S、几何与结果均保持原字节。只读取结果和证据，并在本地CPU进行了有界核计算；没有提交、取消或重跑超算任务。</p>
+<p>1722760已完成10000次、每50次保存。实际选中Compton事件4,849,087个；5e9对照为483,743个。重建FOV为500×300×120 mm，完整网格132,040点，活动单元78,920个，20视角。5e10是本批初级gamma总发射数，并非5e10次Ac-225衰变；本批440 keV实际发射35,309,752,752个。幅度按实际440 keV预算与原体模积分换算，没有图像亮度拟合、平滑或跨能量叠加。</p>
+<p>图像指标采用两个明确分开的口径：既有正式BV沿用97,604个3 mm真值背景体素；新诊断采用9,630个距体模、球及肺边界至少8 mm的原生背景中心。后者用于隔离网格结构，不能当作正式BV。所有这些中心对应的原始源体素值都为1，但21个单元的子采样触及源边缘分数体素；额外12 mm距离控制包含6,680个单元，135个采样点/单元均为1，仍得到同样明显的环纹。有限子采样不是严格全单元积分证明。</p></section>
+
+<section id="evidence"><h2>1. 环纹在原始重建中已经存在</h2>
+<p>原生中心点图、同一层的3 mm显示插值图、中央72 mm MIP并排比较后，可以确定：显示插值不是环纹的唯一来源。MIP沿z取最大值，会进一步强调高值点；它不适合独自判断背景均匀性。后续数值分析直接使用原生3D系数或正式3D ROI。</p>
+<figure><a href="figures/native_vs_display.png"><img src="figures/native_vs_display.png" alt="同一最终结果：原生格点、3 mm显示层与中央72 mm MIP。固定0–10理论背景倍数；超过10的高值在此对比图中饱和，不影响原始数值分析。"></a><figcaption>同一最终结果：原生格点、3 mm显示层与中央72 mm MIP。固定0–10理论背景倍数；超过10的高值在此对比图中饱和，不影响原始数值分析。 · <a href="figures/native_vs_display.pdf">矢量 PDF</a></figcaption></figure>
+<p>最终原生背景径向均值在r=54 mm达到理论背景约2.61倍，r=90 mm低至约0.59倍，r=102–108 mm又升至约1.85倍。SC同网格的剖面明显平滑。径向壳层均值仅解释Compton最终背景总方差约10.1%，所以“环状伪影”还叠加了大量角向和轴向局部噪声，不能把全部高值都解释成同一个环。</p>
+<figure><a href="figures/native_radial_axial_evolution.png"><img src="figures/native_radial_axial_evolution.png" alt="原生背景按r、z分组的均值随迭代变化。没有XY显示插值；空白代表无合格背景单元。"></a><figcaption>原生背景按r、z分组的均值随迭代变化。没有XY显示插值；空白代表无合格背景单元。 · <a href="figures/native_radial_axial_evolution.pdf">矢量 PDF</a></figcaption></figure>
+</section><section id="grid"><h2>2. 柱坐标采样：有明显耦合证据，但不是坐标系本身必然错误</h2>
+<p>本网格径向间隔6 mm、轴向3 mm；每圈角点数分段增加：r=6–36 mm为20点，42–72 mm为40点，78–108 mm为60点，114–150 mm为80点，外侧继续增加。因而切向间距不是统一6 mm，例如r=90 mm一圈60点，弧长间距约9.42 mm，r=108 mm约11.31 mm。角点数改变处单元体积出现台阶。这种网格合法，但近似误差、可分辨的空间模式和旋转采样相位不均一。</p>
+<p><strong>最突出的指纹是20阶角向模式。</strong>在r=84、90、96、102 mm的完整均匀背景环上，以|z|≤19.5 mm汇总，计算 a₂₀=2|Σ I exp(−i20φ)|/ΣI。以下幅度是离散环上的相对谐波幅度，不是BV，也不是最大/最小比。</p>
+<table><thead><tr><th>半径 / mm</th><th>Compton a₂₀</th><th>SC a₂₀</th><th>Compton S/单元体积 a₂₀</th></tr></thead><tbody><tr><td>84</td><td>34.68%</td><td>1.97%</td><td>0.0104%</td></tr><tr><td>90</td><td>35.69%</td><td>2.76%</td><td>0.0142%</td></tr><tr><td>96</td><td>21.30%</td><td>1.34%</td><td>0.0129%</td></tr><tr><td>102</td><td>25.76%</td><td>2.79%</td><td>0.0238%</td></tr></tbody></table>
+<p>这些圆环的60角点间隔6°；20视角每次18°，旋转只移动3个格点。因此格点索引mod 3形成三个不互换的旋转相位组，m=20模式在这些旋转下不变。结果与这一离散对称性吻合，支持网格/视角/探头响应的耦合。<strong>这不是零空间或唯一因果的证明，也不能直接把径向环带等同于20阶角向纹理。</strong>更高连续角频率还可能在60点采样后混叠到该模式。</p>
+<figure><a href="figures/angular_20fold_signature.png"><img src="figures/angular_20fold_signature.png" alt="离散角谱、四条环的20阶模式、迭代增长与跨剂量比较。S中的对应模式很弱，但弱S误差在病态逆问题中仍可能被放大。"></a><figcaption>离散角谱、四条环的20阶模式、迭代增长与跨剂量比较。S中的对应模式很弱，但弱S误差在病态逆问题中仍可能被放大。 · <a href="figures/angular_20fold_signature.pdf">矢量 PDF</a></figcaption></figure>
+<p>系统矩阵原本来自6×6×3 mm Cartesian采样，随后双线性插值到极坐标中心并乘单元体积，未实际完成全场有限单元内的A(x)K(y,x)联合积分。这样的转换与20视角存在共同周期，是优先候选原因。不过几何上四个插值权重平方和的特征，与Compton角向剖面相关性在上述四环仅−0.035、0.339、0.306、0.375；r=84 mm该特征几乎恒定而伪影仍强。因此不能把双线性插值某一个简单特征宣布为根因。</p>
+<p>本轮活动单元的占比f实际只有0和1，不存在旧试验中的极小边缘分数单元；单元体积已含极坐标面积因子，旋转保体积。未发现“漏乘r”或“体积重复乘两次”。改成Cartesian显示或另除一次r都不是合理修复。</p>
+</section><section id="response"><h2>3. 康普顿响应：需要区分核近似与完整物理模型</h2>
+<p>当前冻结v5使用材料能量转移分布、电子学展宽、探测晶体位置不确定性与Klein–Nishina因子。几何角使用稳定的float64叉积/atan2计算；输入是已展宽的测量能量，没有重复随机展宽。前向核使用未按位置相关选择概率截断归一化的能量密度。逐行归一化本身也不能直接认定为bug：在列表MLEM的前向/转置比值中，同一事件的正比例因子相消，S则必须保持与所选响应测度匹配。</p>
+<p>本次重新用实际冻结v5核进行了小规模有界计算：24个真实接受事件，来自视角1/7/14；48个预定控制单元，r=12–144 mm、接近四个坐标轴方向、z=+1.5 mm；比较中心取值与按真实极坐标体积平均的4×4×2及8×8×4 Gauss积分。A在单元内固定，因此只检查K与KN，不是完整响应。</p>
+<table><thead><tr><th>本次K-only诊断</th><th>测得值</th></tr></thead><tbody><tr><td>事件×单元</td><td>24 × 48 = 1152</td></tr><tr><td>中心值相对积分的整体L2误差</td><td>0.1826%</td></tr><tr><td>逐对相对误差RMS</td><td>0.4533%</td></tr><tr><td>绝对相对误差95%分位 / 最大值</td><td>0.534% / 6.805%</td></tr><tr><td>低阶到高阶积分整体L2差异</td><td>0.000039%</td></tr></tbody></table>
+<p>该结果不支持“当前平滑K的中心近似单独造成巨大环纹”这一强解释，但样本只含24事件、控制位置不是随机全FOV样本，不能外推为所有事件/位置均准确。它没有检验A在单元内变化、A与K相乘后的相关变化，也没有证明能量/位置模型与Geant4真实事件分布完全一致。历史旧角度核的中心积分误差不得混作本次v5结论。</p>
+<p><strong>更值得继续查的是响应的物理含义。</strong>当前是校准过的响应代理：使用SC系统矩阵的第一击中探测通道权重，再乘方向/能量核，并通过均匀源校准S；它尚不是对所有C1、C2、E1、E2、晶体相互作用深度、材料多次散射与事件选择的完整联合输运模型。E2进入事件选择与参考事件分布，不能简单说“代码没有E2密度就是错”；但位置相关的二次探测接受率、多次散射和晶体内部位置分布仍可能没有被此代理完全表达。</p>
+<p>旧审计已经指出后层首相互作用深度存在偏心，统一晶体中心及均匀位置方差是假设；当前v5的材料能量规律改善了旧峰值，却没有完成全物理联合响应替换。该证据仅提高怀疑优先级，不能量化其对1722760环纹的贡献。文献也表明Doppler模型精度能影响Compton列表MLEM图像，但不能用文献代替本设备的因果对照。<a href="https://doi.org/10.1080/17415977.2021.2011863">Feng等，2021</a>。</p>
+</section><section id="sensitivity"><h2>4. Sensitivity：未发现直接错配，但细尺度风险仍存在</h2>
+<p>审计使用的是正式任务实际冻结的S，而非当前工作目录同名文件。实际active S与完整冻结S抽取结果逐值完全一致；探头坐标系S经20角度平均后的相对L2差仅2.73×10⁻⁸（float32存储舍入量级）；最小active S约0.004216，低于10⁻¹²的单元为0。体积只计一次、旋转逆映射正确，未发现错用能量、错用旧S或旋转重复平均。</p>
+<figure><a href="figures/radial_grid_sensitivity.png"><img src="figures/radial_grid_sensitivity.png" alt="裸S的径向台阶与单元体积相符；S/体积更平滑，且未复制最终图像的径向峰谷。上排形状归一仅用于比较曲线，不修改图像。"></a><figcaption>裸S的径向台阶与单元体积相符；S/体积更平滑，且未复制最终图像的径向峰谷。上排形状归一仅用于比较曲线，不修改图像。 · <a href="figures/radial_grid_sensitivity.pdf">矢量 PDF</a></figcaption></figure>
+<p>在本项目的密度基底约定下，用均匀校准源的事件测度μᵤ与归一化响应Q构造匹配S，可写为 Sⱼ≈(V/Nγ)Σ校准事件Qⱼ，再作视角平均；Q中已包含单元体积。不能把它不加分析地替换为本次物体事件行的直接和，也不应随成像剂量增大十倍而把S乘十。</p>
+<p>本批各检查点ΣSⱼρⱼ与4,849,087个Compton事件相符，最大相对偏差约1.9×10⁻⁹。这说明当前更新的计数归一闭合；它并不证明图像空间分布正确。一个位置依赖错误的响应也可以满足该总量约束。</p>
+<p>仍未排除的风险是<strong>校准统计与细尺度模型误差</strong>：这张S由实际10⁹个校准光子中170,247个接受事件生成；20次旋转复用同一批事件，不是20批独立统计。不能把接受事件数简单除以单元数解释成每格独立计数，因为每个事件对多个单元贡献权重，但有限统计与跨单元相关误差确实存在。</p>
+<p>既有独立校准在144个充分统计空间区上，连续v5的偏差RMS为1.136%、最大绝对偏差2.961%；192区中48区统计不足。联合类别只有58/504充分，446类未判定。那些径向区间和角区远粗于6 mm环纹/20阶模式，不能据其通过就宣称细尺度响应准确。反过来，最终图像与S/体积的简单相关接近零，也不能在病态逆问题中彻底排除S误差。</p>
+</section><section id="iteration"><h2>5. 无正则10000次迭代显著放大噪声和结构偏差</h2>
+<p>原算法从全1开始，无空间正则。下表保留正式BV与新诊断CV的不同定义：</p>
+<table><thead><tr><th>迭代</th><th>正式3D背景BV</th><th>原生背景中心CV</th><th>径向壳层均值CV</th></tr></thead><tbody><tr><td>1000</td><td>47.55%</td><td>30.75%</td><td>7.97%</td></tr><tr><td>2000</td><td>49.61%</td><td>35.41%</td><td>8.56%</td></tr><tr><td>5000</td><td>73.76%</td><td>67.92%</td><td>22.63%</td></tr><tr><td>10000</td><td>118.38%</td><td>123.53%</td><td>39.25%</td></tr></tbody></table>
+<p>1000–2000次以后，背景噪声与径向波动明显恶化；10000次不是“必然最好”的图像。这个事实支持后期MLEM放大统计噪声与模型偏差，但不能只凭四个检查点选出最优停止点，也不能据SC和Compton同迭代数认定相同收敛。列表MLEM对概率模型与离散表示的依赖、可估计性与噪声问题可参考原始理论文献 <a href="https://parralab.org/publications/lml.pdf">Parra &amp; Barrett，1998</a>。</p>
+<figure><a href="figures/two_dose_native_comparison.png"><img src="figures/two_dose_native_comparison.png" alt="独立5e9/5e10同网格、同核、同S：更高计数减少局部噪声，但共享径向峰谷仍在。同迭代比较用于诊断结构复现，不表示同等收敛。"></a><figcaption>独立5e9/5e10同网格、同核、同S：更高计数减少局部噪声，但共享径向峰谷仍在。同迭代比较用于诊断结构复现，不表示同等收敛。 · <a href="figures/two_dose_native_comparison.pdf">矢量 PDF</a></figcaption></figure>
+<p>5e9到5e10，最终Compton原生背景CV由286.3%降至123.5%，同位置原生值相关仅0.211；但19条径向壳层均值相关为0.812，1000次时甚至为0.950。说明随机噪声减弱后仍有共同的结构性成分。两批共用S和模型，故不能用这个对照分离S偏差与响应/网格偏差。</p>
+<p>其他因素的权重：MIP是视觉放大因素，不能解释原生环纹；本体模manifest明确material_attenuation=false，不能把该结果直接解释为水体模衰减未校正；当前f为0/1，旧极小边缘单元不是本次直接原因。实际运行的初始事件前向质量最小值高于10⁻¹²阈值，但后期是否触及前向截断未完整记录，不能声称10000次从未触发。有限精度与截断目前证据弱于上述结构性线索，仍属未做因果隔离项。</p>
+</section><section id="next"><h2>6. 原因排序与可区分原因的下一步</h2>
+<table><thead><tr><th>因素</th><th>当前证据</th><th>判断</th></tr></thead><tbody><tr><td>无正则MLEM后期放大</td><td>随迭代BV、原生CV、m20增长</td><td>已确认放大现象；不是唯一的初始误差来源</td></tr><tr><td>柱坐标/20视角/响应离散耦合</td><td>原生环纹、20阶模式、跨剂量重复径向结构</td><td>优先定位对象；尚非唯一因果证明</td></tr><tr><td>A×K有限单元表示与物理联合响应代理</td><td>当前仍中心插值A，未完成全A×K积分及联合输运模型</td><td>有明确模型局限；贡献待隔离</td></tr><tr><td>S细尺度统计或模型偏差</td><td>同S复用；校准细尺度未充分覆盖</td><td>未排除；需要独立校准误差传播</td></tr><tr><td>当前平滑K中心近似</td><td>24事件×48控制单元L2约0.183%</td><td>样本内较小，暂不作为单一主因</td></tr><tr><td>S错文件/漏r/重复体积/小S阈值</td><td>逐值与代数核对未发现</td><td>当前证据不支持</td></tr><tr><td>显示插值/MIP</td><td>原生点已见结构</td><td>影响视觉强度，不是全部来源</td></tr></tbody></table>
+<p>建议下一阶段按单一因素对照推进。以下均为研究建议，本次未提交任何验证或重建任务，也未恢复已暂停的历史工作。</p>
+<ol>
+<li><strong>先验证网格相位与有限单元表示。</strong>固定已收集的真实事件、事件策略、物理参数与迭代设置，改变极坐标基底的角相位或采用受控的单元内A×K积分，并为相应响应生成匹配S。检查环纹/20阶模式是否跟随网格改变、是否降低，同时观察正式3D BV与球对比恢复。只旋转显示图、重排标签或把3 mm显示图当细网格都不能回答因果问题。</li>
+<li><strong>单独量化S不确定性。</strong>使用既有校准事件按原独立worker分批或bootstrap，保留同一worker的全部旋转相关性，估计逐单元/模式的S波动，使用匹配响应比较其重建影响。不能把20个旋转当独立样本，也不能对S任意平滑来消除环纹。既有粗分区汇总不足以完成逐单元重采样。</li>
+<li><strong>区分响应代理的物理项。</strong>优先检查SC矩阵替代首散射探测权重的适用范围、有限晶体深度/位置分布、legacy多相互作用事件与材料规律的条件一致性；每次只改变一项，并保持对应S配套。当前K-only结果不能代替这一步。</li>
+<li><strong>将停止策略作为缓解，独立于模型修复。</strong>用预先规定的留出数据/对比恢复与噪声指标选择迭代范围；本批1000–2000次背景较平稳是可用线索，但不是最终最优迭代的证明。若采用正则，它是新的算法条件，需要与原始无正则结果分开展示。</li>
+</ol>
+<p>“更多视角”也是可研究方向，但必须有实际新增角度的数据或物理上正确重算的响应；重复已有20视角不会增加信息，直接改RotateNum还会破坏当前每圈点数与精确旋转映射。不要同时改网格、S、能量核、正则和视角数，否则难以知道哪个因素改善了环纹。</p>
+</section><section id="sources"><h2>来源、审计边界与复核</h2>
+<p>本报告区分：本次完成的实测诊断、冻结代码可直接确认的约定、历史独立校准，以及尚待执行的因果对照。未完成全事件A×K物理响应检验，也没有新的网格/S替换重建；因此没有宣称唯一根因或已经修复。</p>
+<ul>
+<li><a href="data/native_ring_summary.json">原生诊断汇总与源SHA</a>；<a href="data/native_background_iterations.csv">逐次原生指标</a>；<a href="data/native_radial_profiles.csv">径向剖面</a>；<a href="data/native_angular_harmonics.csv">角谐波</a>。</li>
+<li><a href="data/model_invariants.json">S/体积/旋转核对</a>；<a href="data/normalization_closure.csv">计数归一闭合</a>；<a href="data/kernel_cell_quadrature_summary.json">当前v5核的有限单元诊断</a>；<a href="data/kernel_cell_quadrature.csv">逐事件/单元结果</a>。</li>
+<li><a href="data/native_numeric_qa.json">独立数值QA</a>：三相分组独立复算m20，最大绝对差2.45×10⁻¹⁵；<a href="data/native_visual_qa.json">图像视觉QA</a>；<a href="data/native_artifact_manifest.json">图与数据哈希</a>；<a href="delivery_manifest.json">整份报告交付哈希</a>。</li>
+<li><a href="file:///D:/JSCC_Recon/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/CALIBRATION_ACCEPTANCE.md">既有独立校准说明（2026-10-06）</a>；<a href="file:///D:/JSCC_Recon/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_global_audit_v4/REPORT.md">历史响应模型审计（其旧核数值不代表当前v5）</a>；<a href="file:///D:/JSCC_Recon/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/README.md">历史有限单元积分工作范围与停止记录</a>。</li>
+<li>Parra, L. &amp; Barrett, H. H. (1998), List-mode likelihood: EM algorithm and image quality estimation demonstrated on 2-D PET, IEEE TMI 17(2), 228–235. <a href="https://parralab.org/publications/lml.pdf">作者原文</a>。用于一般列表MLEM、离散表示与可估计性背景，不是当前Compton设备实验证据。</li>
+<li>Feng et al. (2021, online), Influence of Doppler broadening model accuracy in Compton camera list-mode MLEM reconstruction. <a href="https://doi.org/10.1080/17415977.2021.2011863">出版商原始论文</a>。用于模型准确性可能影响图像的背景，不证明本项目的根因。</li>
+</ul>
+<p class="small">关键身份：geometry SHA 8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4；完整Compton S SHA 2140ec2be695a5bb1f18246db6e90872cd9bc9846b4146197f8fb1acec2cb56c。逐文件身份见机器可读清单。原始结果和历史报告未覆盖。</p></section>
+</main></body></html>

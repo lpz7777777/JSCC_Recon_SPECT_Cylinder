@@ -1,0 +1,62 @@
+{
+  "excluded": [
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/README.md",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/README.txt",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "tools/research/plot_derenzo_completed.py",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/scientific_qa.json",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data/visual_qa.json",
+      "reason": "Pre-existing unrelated scientific/report change; left unstaged"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000/formal_results/1669255/continuous_energy/verification.json",
+      "reason": "Ignored original artifact kept local; no force-add"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023/strict_transfer.json",
+      "reason": "Ignored original artifact kept local; no force-add"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_sc440_5e10_1752461_20261112/strict_transfer.json",
+      "reason": "Ignored original artifact kept local; no force-add"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/numerical_check.json",
+      "reason": "Ignored original artifact kept local; no force-add"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029/strict_transfer.json",
+      "reason": "Ignored original artifact kept local; no force-add"
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026/strict_transfer.json",
+      "reason": "Ignored original artifact kept local; no force-add"
+    }
+  ],
+  "additional_preexisting_work_not_selected": [
+    "experiments/ELLIPSE500x300_H120/AGENTS.md",
+    "Derenzo plot/artifact revisions",
+    "NEMA jscc_geant4_5e10_10000 report/contract revisions"
+  ],
+  "ignored_data_force_added": false
+}

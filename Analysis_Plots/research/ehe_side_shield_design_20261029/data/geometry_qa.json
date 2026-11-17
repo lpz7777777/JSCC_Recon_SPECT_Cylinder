@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "original_source_SHA_unchanged": true,
+  "actual_NaI_bounds_from_2312_pixels_verified": true,
+  "four_side_bars_pairwise_nonoverlapping": true,
+  "no_positive_volume_intersection_with_NaI_or_collimator": true,
+  "no_entrance_or_rear_plate_added": true,
+  "ring_volume_mm3": 85600.0,
+  "physical_attenuation_validation": false,
+  "visual_qa": "actual image review passed; figure layout and geometric labels checked",
+  "drawing_script_sha256": "30173e56987fbd0b175eac052839fce4ac89a318c1dc862dd29025c6e9b3c937"
+}

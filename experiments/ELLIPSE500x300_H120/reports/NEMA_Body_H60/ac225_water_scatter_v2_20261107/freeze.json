@@ -1,0 +1,122 @@
+{
+  "local_files": {
+    "bundle.tar.gz": "bd05b2096cf2831ac0b214503c21fc30673a9b19d4c0d46008b37fa36382155c",
+    "launcher.py": "fd4cfad5519b926948f4066d3326a6bc349b76d5aa4cdb6ed08989fbc3997347"
+  },
+  "release_sha256": "1d27e65945bb0b07bf319e802eae95c6c76ffd8dc5444bc543c7618b05a367ee",
+  "routes": {
+    "EHE_5e9_fixed_mc_scatter_440": {
+      "dataset": "EHE_5e9",
+      "system": "EHE",
+      "index": 0,
+      "energy": 440,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/EHE_5e9_fixed_mc_scatter_440",
+      "iterations": 200,
+      "save_step": 1,
+      "collection_sha256": "cbd33c8c151218be7bf96d29db4aae57b986dab8248b36d7e691c2e1a9e4f9fe",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_440/matched_sensitivity.npy",
+      "old_matched_S_sha256": "41825307362a9876bacc7424606ed2965685cd1b3c6b559f1c13becf8f2f6c74"
+    },
+    "EHE_5e9_fixed_mc_scatter_218": {
+      "dataset": "EHE_5e9",
+      "system": "EHE",
+      "index": 0,
+      "energy": 218,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/EHE_5e9_fixed_mc_scatter_218",
+      "iterations": 200,
+      "save_step": 1,
+      "collection_sha256": "cbd33c8c151218be7bf96d29db4aae57b986dab8248b36d7e691c2e1a9e4f9fe",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_218/matched_sensitivity.npy",
+      "old_matched_S_sha256": "6754ee6f804e7a73f5bedd1be49c23f1ca1eeda48a5e940e8e012f58e25752d3",
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/EHE_5e9_fixed_mc_scatter_440",
+      "parent440_condition": "EHE_5e9_fixed_mc_scatter_440"
+    },
+    "EHE_5e10_fixed_mc_scatter_440": {
+      "dataset": "EHE_5e10",
+      "system": "EHE",
+      "index": 1,
+      "energy": 440,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/EHE_5e10_fixed_mc_scatter_440",
+      "iterations": 200,
+      "save_step": 1,
+      "collection_sha256": "1e90931fbf717e673f1b6034eeba23d6cc46fcca529bcac65419f47195aeb82a",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_440/matched_sensitivity.npy",
+      "old_matched_S_sha256": "41825307362a9876bacc7424606ed2965685cd1b3c6b559f1c13becf8f2f6c74"
+    },
+    "EHE_5e10_fixed_mc_scatter_218": {
+      "dataset": "EHE_5e10",
+      "system": "EHE",
+      "index": 1,
+      "energy": 218,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/EHE_5e10_fixed_mc_scatter_218",
+      "iterations": 200,
+      "save_step": 1,
+      "collection_sha256": "1e90931fbf717e673f1b6034eeba23d6cc46fcca529bcac65419f47195aeb82a",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_218/matched_sensitivity.npy",
+      "old_matched_S_sha256": "6754ee6f804e7a73f5bedd1be49c23f1ca1eeda48a5e940e8e012f58e25752d3",
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/EHE_5e10_fixed_mc_scatter_440",
+      "parent440_condition": "EHE_5e10_fixed_mc_scatter_440"
+    },
+    "JSCC_5e9_fixed_mc_scatter_440": {
+      "dataset": "JSCC_5e9",
+      "system": "JSCC",
+      "index": 2,
+      "energy": 440,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/JSCC_5e9_fixed_mc_scatter_440",
+      "iterations": 10000,
+      "save_step": 50,
+      "collection_sha256": "176da8ed52fa47c0c5b56d2fd1e8cee7e5c34f6df12adcaa59ade331c209ef9f",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_440/matched_sensitivity.npy",
+      "old_matched_S_sha256": "452a002ae6f454ed691bff817e7b8cd1f11153016e122f145232fe9878ec5155"
+    },
+    "JSCC_5e9_fixed_mc_scatter_218": {
+      "dataset": "JSCC_5e9",
+      "system": "JSCC",
+      "index": 2,
+      "energy": 218,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/JSCC_5e9_fixed_mc_scatter_218",
+      "iterations": 10000,
+      "save_step": 50,
+      "collection_sha256": "176da8ed52fa47c0c5b56d2fd1e8cee7e5c34f6df12adcaa59ade331c209ef9f",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_218/matched_sensitivity.npy",
+      "old_matched_S_sha256": "6f4849903b5708e741eef6b23c108ab607ff32726c828eb7d961471155dab36b",
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/JSCC_5e9_fixed_mc_scatter_440",
+      "parent440_condition": "JSCC_5e9_fixed_mc_scatter_440"
+    },
+    "JSCC_5e10_fixed_mc_scatter_440": {
+      "dataset": "JSCC_5e10",
+      "system": "JSCC",
+      "index": 3,
+      "energy": 440,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/JSCC_5e10_fixed_mc_scatter_440",
+      "iterations": 10000,
+      "save_step": 50,
+      "collection_sha256": "0cd6a3ea78079b1a09c9b756d7e927824e3f51bd3d50935ac3b0a2df6658fe94",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_440/matched_sensitivity.npy",
+      "old_matched_S_sha256": "452a002ae6f454ed691bff817e7b8cd1f11153016e122f145232fe9878ec5155"
+    },
+    "JSCC_5e10_fixed_mc_scatter_218": {
+      "dataset": "JSCC_5e10",
+      "system": "JSCC",
+      "index": 3,
+      "energy": 218,
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/JSCC_5e10_fixed_mc_scatter_218",
+      "iterations": 10000,
+      "save_step": 50,
+      "collection_sha256": "0cd6a3ea78079b1a09c9b756d7e927824e3f51bd3d50935ac3b0a2df6658fe94",
+      "old_matched_S_path": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_218/matched_sensitivity.npy",
+      "old_matched_S_sha256": "6f4849903b5708e741eef6b23c108ab607ff32726c828eb7d961471155dab36b",
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107/formal/JSCC_5e10_fixed_mc_scatter_440",
+      "parent440_condition": "JSCC_5e10_fixed_mc_scatter_440"
+    }
+  },
+  "side_root": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/side_responses_r4"
+}

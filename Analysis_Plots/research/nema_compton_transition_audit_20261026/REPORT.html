@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>角点数过渡与Compton体积归一化审计</title>
+<style>body{font-family:"Microsoft YaHei",sans-serif;line-height:1.85;color:#193044;background:#f4f6f8;margin:0}main{max-width:1120px;margin:24px auto;padding:36px 44px;background:white}h1{font-size:30px;line-height:1.5}h2{font-size:22px;margin-top:34px}a{color:#126da3}table{border-collapse:collapse;width:100%;margin:18px 0}td,th{padding:10px;border:1px solid #d4dde5;text-align:left}th{background:#eef4f8}img{width:100%;height:auto}.lead{font-size:20px}.small,figcaption{font-size:14px;color:#536575}.math{padding:15px;background:#f1f6fa;font-family:"Segoe UI",sans-serif;overflow-wrap:anywhere}figure{margin:22px 0}li{margin:9px 0}@media print{body{background:white}main{margin:0;padding:0}table,figure{break-inside:avoid}}</style></head><body><main>
+<p class="small">2026-10-26 · 正式任务1722760 · 440 keV Compton独立重建 · 只读补充诊断</p>
+<h1>角点数变化的过渡带，与体积归一化是否有关？</h1>
+<p class="lead"><strong>应把“角点数突变引起的离散误差”作为重点候选，但当前未发现简单的漏乘、重复乘体积或S体积约定错误。</strong>体积权重正确，并不能保证用中心点代表有限单元时，响应积分误差在20→40→60→80角点的交界处连续。</p>
+<p>本次新增了精确边界对齐、全网格体积公式核对、调用实际冻结核与MLEM更新函数的等价单元分裂检查，以及过渡带附近的有界K-only积分计算。没有改动生产代码、原始结果、匹配S或事件选择，没有提交超算任务。此报告补充此前的<a href="../nema_compton_ring_diagnosis_20261026/REPORT.html">Compton环纹研究报告</a>，不覆盖旧报告。</p>
+
+<h2>1. 过渡位置与实际峰值对齐</h2>
+<p>网格单元径向宽6 mm、轴向高3 mm。中心位于36/42 mm的两圈之间，真实单元边界是39 mm；其他主要边界为75、111 mm。不能把外侧第一圈中心42、78、114 mm全部称作界面。</p>
+<table><tr><th>角点数变化</th><th>边界r</th><th>内侧→外侧中心r</th><th>单格体积 / mm³</th><th>外侧/内侧体积比</th></tr>
+<tr><td>20→40</td><td>39 mm</td><td>36→42 mm</td><td>203.575→118.752</td><td>0.58333</td></tr>
+<tr><td>40→60</td><td>75 mm</td><td>72→78 mm</td><td>203.575→147.027</td><td>0.72222</td></tr>
+<tr><td>60→80</td><td>111 mm</td><td>108→114 mm</td><td>203.575→161.164</td><td>0.79167</td></tr></table>
+<figure><a href="figures/compton_radial_transition_alignment.png"><img src="figures/compton_radial_transition_alignment.png" alt="真实边界、原生径向重建、单元体积与S除以体积对齐"></a><figcaption>原生背景中心ROI，不是正式论文BV ROI；不平滑、不拟合亮度。<a href="figures/compton_radial_transition_alignment.pdf">PDF</a>。左图和右图使用同一背景中心ROI；下文全圆环S审计的平均范围另有说明。</figcaption></figure>
+<p>实际明显结构位于48–54、78、102–108 mm。其中78 mm紧邻75 mm界面，102–108 mm位于111 mm界面内侧；48–54 mm距39 mm界面9–15 mm。它们与分段网格有观察性联系，但并非全部峰都恰好压在边界上。跨界面原生背景均值右/左分别为1.220、1.309、0.699，方向不统一。因此不能仅凭外观把它归为“体积减小一倍，图像便统一增亮一倍”的直接错误；这也不能彻底排除非局部误差传播。</p>
+
+<h2>2. 不等体积格子应怎样归一化？</h2>
+<p>当前未知量ρⱼ是<strong>每单位体积的源强密度</strong>。一个格子的总源强是ρⱼΔVⱼ。均匀体模中，大格子和小格子的ρ应相同，总源强则随格子体积变化。不能要求不同体积的格子包含相同总源强，也不能在显示ρ时再除一次体积。</p>
+<p>非中心圆盘的单元体积为：</p>
+<div class="math">ΔVⱼ = ½[(r+3)²−(r−3)²] × (2π/nθ) × 3 = 36πr/nθ mm³。</div>
+<p>全网格保存体积与解析公式一致，各圈角扇区完整覆盖对应圆环，径向单元连续，完整圆柱总体积与π×255²×120一致。单格体积在角点数增加处下降是合理的；整圈体积没有因为格子变多而凭空倍增或减少。</p>
+<p>当前实际响应链条可写成：</p>
+<div class="math">Bⱼ = A(xⱼ) ΔVⱼ<br>
+wᵢⱼ = Kᵢ(xⱼ) Bⱼ<br>
+Qᵢⱼ = wᵢⱼ / Σₖ wᵢₖ = Kᵢ(xⱼ)A(xⱼ)ΔVⱼ / Σₖ[Kᵢ(xₖ)A(xₖ)ΔVₖ]。</div>
+<p>这里K包括当前康普顿方向、能量与KN因子，A对应被选第一探测通道的权重。<strong>归一化分母是带单元体积的和，不是对不等体积格点做等权求和。</strong>虽然Compton函数里没有再显式乘一次ΔV，但输入B在矩阵转换阶段已经含有它。额外补乘会造成重复。</p>
+<p>匹配S由同一归一化响应Q作用于均匀校准事件生成，采用完整支持体积和实际校准发射数的系数，再作视角平均。当前并没有把每个体素的列单独归一到相同S，也没有在Compton阶段给每个半径环强行相同权重。</p>
+<div class="math">ρⱼ(new) = ρⱼ / Sⱼ × Σᵢ [Qᵢⱼ / (ΣₖQᵢₖρₖ)]。</div>
+<p>将Qᵢⱼ写为ΔVⱼhᵢⱼ、Sⱼ写为ΔVⱼsⱼ，可以看到更新分子和S中的同一个ΔVⱼ相消，而预测计数分母仍正确保留各格子的体积。因此<strong>“S里面有体积，所以S不该再用于相除”这一推断不成立</strong>；它正是密度变量与积分响应相匹配所需的约定。</p>
+
+<h2>3. 本次实际做了哪些体积检查？</h2>
+<p>除代码链条核对，还检查了保存的S。在完整圆环、z=−19.5至+19.5 mm范围平均后，S/ΔV从内侧中心到外侧中心的变化分别为：</p>
+<table><tr><th>边界</th><th>单格体积变化</th><th>S/ΔV变化</th></tr><tr><td>39 mm</td><td>−41.67%</td><td>+0.344%</td></tr><tr><td>75 mm</td><td>−27.78%</td><td>+0.694%</td></tr><tr><td>111 mm</td><td>−20.83%</td><td>+1.090%</td></tr></table>
+<p>可见S的主要台阶跟随体积，单位体积S并无相应骤降。图中右面板使用原生背景ROI，数值与完整圆环均值略有差异，但结论一致。平滑的S/ΔV只排弱简单体积错配解释，不能证明逐事件响应正确，也不能排除微小S误差被逆问题放大。</p>
+<p><strong>等价分裂代数检查：</strong>取8个实际冻结事件和过渡带附近48个控制位置，调用正式使用的核与更新函数。把42、78、114 mm的12个控制单元各复制成两个相同代表位置的半体积单元，B和S各减半，输入密度保持一致。48列变成60列后，子响应之和与父响应一致，三种正密度输入的一步更新最大相对差为2.34×10⁻⁷。故意保留未减半的父S，子单元密度立即错误地变为正确值的0.5倍。</p>
+<p class="small">这是一项等价表示的代数检查，不是新物理重建：A设为每单位体积常量以隔离体积因子；使用保存的正S值作控制；子单元代表坐标相同，没有模拟真实移动后的子中心。它说明实际核归一化与更新函数能够保持体积记账一致，不证明真实A×K在有限单元内的积分足够准确。</p>
+
+<h2>4. 体积正确，为何过渡处仍可能出现问题？</h2>
+<p>实际算法用格子中心的A、K乘体积近似整个格子内部积分。角点数改变时，格子的切向宽度和形状突然变化，中心近似的误差也可能突然改变。当前K的位置展宽来自探测晶体的不确定性；它不是对源格子内部的积分，不会自动根据20/40/60个角点的单元宽度做完整源单元平均。</p>
+<p>下面是<strong>解析示意，不是本实验响应拟合，也不是新的Geant4结果</strong>。假设某个事件的响应沿圆周为a(φ)=1+0.2cos(20φ)，真实整圈平均恰好为1：</p>
+<table><tr><th>每圈中心点数</th><th>正确体积权重下的中心采样平均</th><th>实际扇区积分平均</th></tr><tr><td>20</td><td>1.20</td><td>1.00</td></tr><tr><td>40</td><td>1.00</td><td>1.00</td></tr><tr><td>60</td><td>1.00</td><td>1.00</td></tr></table>
+<p>20个点恰好全部落在高值相位；40个点开始采到低值相位。<strong>这里体积权重完全正确，中心采样仍在20→40处产生偏差突变。</strong>把示例模式换成40阶或60阶，可分别演示其他角点数过渡的采样差异。这只是机制上的可行性证明；20%的幅度是示意值，不是对当前数据测得的响应幅度。匹配S可能补偿部分平均效应，但不能保证恢复所有事件的空间条件分布。</p>
+<p>此外，固定20视角下，每圈n个点会形成n/20个旋转相位组：20、40、60、80点分别对应1、2、3、4组。过渡处不仅格子体积变了，未知量个数、角向表示能力、响应列的相关结构也变了。这些差异不会仅靠乘对体积而消失，可能与后期无正则MLEM的误差放大耦合；当前尚未计算全算子的谱或完成改变网格的因果对照。</p>
+
+<h2>5. 新增过渡带K-only积分检查</h2>
+<p>为避免把上述示意当成真实证据，本次又针对30–48、66–84、102–120 mm的12条环、每环4个方向，使用同一批8个真实接受事件计算当前冻结K及KN的中心值与有限单元积分，共384对。</p>
+<table><tr><th>中心r / mm</th><th>K中心近似的整体相对L2误差</th></tr><tr><td>36→42</td><td>0.223%→0.109%</td></tr><tr><td>72→78</td><td>0.263%→0.147%</td></tr><tr><td>108→114</td><td>0.283%→0.177%</td></tr></table>
+<p>总体相对L2约0.200%，低阶到高阶积分差约0.000044%。样本内确实出现“格子变窄后中心误差减小”的变化，但K-only误差的绝对量级仍小，不能据此单独解释数倍的最终环带。样本只有视角1的8事件、横截面四个坐标轴方向，且未计算A在单元内部的变化；它不是全事件A×K认证，也不能证明小误差经病态迭代不会产生大影响。</p>
+
+<h2>6. 对下一步研究重点的调整</h2>
+<p>这次线索将“角点数过渡处的响应离散一致性”提高为优先研究对象。比先旋转整张网格更直接的下一步，是针对三条过渡带检验：<strong>同一片连续空间，采用粗扇区或细扇区表示时，逐事件A×K积分之和是否一致，以及匹配S是否保持同样的一致性。</strong></p>
+<p>需要明确分开两步：第一步是相同代表点的等价分裂（本次已经做，检查记账）；第二步是真实子单元的不同中心或积分（本次没有完成，检查物理与采样近似）。后者才可能确定过渡处是否是实际环纹的重要来源。应同时检查校准事件和成像事件的残差模式，不直接根据重建图像改S，不一并修改网格、物理核、正则和视角数。</p>
+<p>当前结论是：<strong>体积与归一化的代数约定一致；过渡带离散误差仍然可疑，而且比“少乘一个体积”更符合目前证据。</strong>不应把代码一致性扩大成“Compton响应完全正确”，也不应把边界关联扩大成“已确定根因”。</p>
+
+<h2>复核文件</h2><ul>
+<li><a href="data/geometry_volume_audit.json">全网格体积审计</a>、<a href="data/transitions.csv">准确边界与S/体积</a>。</li>
+<li><a href="data/equivalent_cell_split_control.json">原冻结函数的等价分裂控制及限制</a>。</li>
+<li><a href="data/transition_K_only_summary.json">过渡带K-only积分汇总</a>、<a href="data/transition_K_only_quadrature.csv">逐半径结果</a>。</li>
+<li><a href="data/analytic_aliasing_illustration.csv">解析采样示意</a>（明确不是实际响应）。</li>
+<li><a href="transition_visual_summary.json">原生峰位与图像QA</a>、<a href="data/normalization_source_identity.json">代码/数据身份</a>、<a href="delivery_manifest.json">本次交付清单</a>。</li>
+</ul><p class="small">图和诊断延续原始真值及事件SHA；不平滑、不拟合图像亮度，不混合218/440 keV。之前已经存在的工作区改动保持不动。</p>
+</main></body></html>

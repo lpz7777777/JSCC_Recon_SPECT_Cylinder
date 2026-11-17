@@ -1,0 +1,193 @@
+{
+  "scope": "Git-visible candidate file metadata at start, excluding node_modules. Ignored TB arrays were not traversed or read; report freezes and shallow generated/study directories were inspected separately.",
+  "candidate_files": 6714,
+  "known_node_modules_files_excluded": 25566,
+  "by_top": {
+    ".gitattributes": {
+      "files": 1,
+      "bytes": 7906
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 3810
+    },
+    "Analysis_Plots": {
+      "files": 1496,
+      "bytes": 396984892
+    },
+    "Auxiliary_Studies": {
+      "files": 203,
+      "bytes": 6724244
+    },
+    "Geant4Sim": {
+      "files": 466,
+      "bytes": 3680810
+    },
+    "GenProj": {
+      "files": 9,
+      "bytes": 112955
+    },
+    "README.md": {
+      "files": 1,
+      "bytes": 2250
+    },
+    "Reproduction": {
+      "files": 26,
+      "bytes": 228474
+    },
+    "Results": {
+      "files": 1,
+      "bytes": 3483
+    },
+    "compare_CNRCRC_JSCC_EHE_MultiOutput.m": {
+      "files": 1,
+      "bytes": 18753
+    },
+    "compton_event_response.py": {
+      "files": 1,
+      "bytes": 18993
+    },
+    "compton_sparse_ops.py": {
+      "files": 1,
+      "bytes": 15784
+    },
+    "detector_csv.py": {
+      "files": 1,
+      "bytes": 1777
+    },
+    "distributed": {
+      "files": 78,
+      "bytes": 531797
+    },
+    "docs": {
+      "files": 329,
+      "bytes": 57214655
+    },
+    "experiments": {
+      "files": 3925,
+      "bytes": 147766802
+    },
+    "fov_config.py": {
+      "files": 1,
+      "bytes": 6782
+    },
+    "main_local_cntstat.py": {
+      "files": 1,
+      "bytes": 13113
+    },
+    "main_local_multi_energy_cntstat.py": {
+      "files": 1,
+      "bytes": 34567
+    },
+    "main_local_sparse_jsccsd_only.py": {
+      "files": 1,
+      "bytes": 17720
+    },
+    "main_plane.py": {
+      "files": 1,
+      "bytes": 15705
+    },
+    "main_plane_sparse.py": {
+      "files": 1,
+      "bytes": 22989
+    },
+    "monitor_jscc_compton_validation.ps1": {
+      "files": 1,
+      "bytes": 1329
+    },
+    "monitor_uniform_kb_half_split_closure.ps1": {
+      "files": 1,
+      "bytes": 896
+    },
+    "process_list_plane.py": {
+      "files": 1,
+      "bytes": 10078
+    },
+    "process_list_plane_sparse.py": {
+      "files": 1,
+      "bytes": 5120
+    },
+    "process_list_plane_strict.py": {
+      "files": 1,
+      "bytes": 15517
+    },
+    "recon_osem_local_cntstat.py": {
+      "files": 1,
+      "bytes": 10926
+    },
+    "recon_osem_local_sparse_jsccsd_only.py": {
+      "files": 1,
+      "bytes": 13590
+    },
+    "recon_osem_plane.py": {
+      "files": 1,
+      "bytes": 20204
+    },
+    "recon_osem_plane_sparse.py": {
+      "files": 1,
+      "bytes": 18570
+    },
+    "run_local_jscc_compton_validation.py": {
+      "files": 1,
+      "bytes": 9282
+    },
+    "run_uniform_kb_half_split_closure.ps1": {
+      "files": 1,
+      "bytes": 3054
+    },
+    "sparse_main_utils.py": {
+      "files": 1,
+      "bytes": 7823
+    },
+    "tests": {
+      "files": 9,
+      "bytes": 49896
+    },
+    "tools": {
+      "files": 147,
+      "bytes": 2112980
+    }
+  },
+  "by_extension": {
+    ".json": 2852,
+    ".py": 1148,
+    ".png": 591,
+    ".md": 517,
+    ".txt": 347,
+    ".mac": 327,
+    ".csv": 310,
+    ".sh": 132,
+    ".m": 86,
+    ".html": 63,
+    ".cc": 43,
+    ".err": 40,
+    ".out": 40,
+    ".hh": 39,
+    "(no extension)": 29,
+    ".pptx": 24,
+    ".dat": 24,
+    ".ps1": 17,
+    ".log": 11,
+    ".h": 9,
+    ".mjs": 7,
+    ".pre_invalidation": 7,
+    ".jpg": 6,
+    ".cpp": 6,
+    ".ndjson": 5,
+    ".gz": 5,
+    ".pdf": 4,
+    ".cu": 4,
+    ".js": 4,
+    ".preflight_failed_341ccb80d8345605": 4,
+    ".diff": 3,
+    ".jsonl": 2,
+    ".preflight_squeue_2a119d1a87e3b181": 2,
+    ".preflight_terminal_5f17baaf6d601c8d": 2,
+    ".yhdr": 1,
+    ".lock": 1,
+    ".sacct": 1,
+    ".preflight_failed_import_dependency": 1
+  },
+  "not_a_data_volume_measurement": true,
+  "large_scientific_files_neither_read_nor_copied": true
+}

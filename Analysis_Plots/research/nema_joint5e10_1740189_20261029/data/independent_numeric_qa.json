@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "method": "Independent sparse ROI-only polar-to-3mm query, every saved raw history and all six sphere reductions",
+  "background_rows": 603,
+  "sphere_rows": 3618,
+  "max_scaled_absolute_difference": 2.1340705257663709e-16,
+  "tolerance": 1e-06,
+  "new_source_job": 1740189,
+  "comparison_source_job": 1722760,
+  "verifier_sha256": "b5cb3640cfcec150d1a8862da7b44233827141e5101a43e8a62d1cc1611d81e4",
+  "metric_files_sha256": {
+    "common_background_iteration_metrics.csv": "a55665c995064d41429c25b243ced438ca0d6099ef751103747cf35e214087b2",
+    "sphere_iteration_metrics.csv": "64d544564220b8e80ea65f3eebf8dd586a702eff9de5dbc93fe4f1c0e693bbab"
+  },
+  "no_reconstruction": true,
+  "no_HPC_jobs": true,
+  "elapsed_seconds": 0.640999999945052
+}

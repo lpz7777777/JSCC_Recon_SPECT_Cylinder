@@ -1,41 +1,26 @@
-# 代码分类与查询
+# 源码索引
 
-索引包含1251个现存源码/宏/脚本文件。完整路径及模块说明见[source_index.json](source_index.json)。
+现存源码/宏/脚本共1778个。模块说明、顶层函数/类和行号见[source_index.json](source_index.json)。查询不导入这些模块。
 
-| 分类 | 数量 |
-|---|---:|
-| `analysis-figures` | 86 |
-| `calibration-physics` | 45 |
-| `execution-control` | 36 |
-| `frozen-or-artifact-copy` | 196 |
-| `geometry-source` | 35 |
-| `reconstruction` | 137 |
-| `shared-or-legacy-source` | 578 |
-| `transport` | 41 |
-| `verification-tests` | 97 |
+| 职责 | 数量 | 分类入口 |
+|---|---:|---|
+| analysis-figures | 190 | [文件列表](code/analysis-figures/README.md) |
+| calibration-physics | 34 | [文件列表](code/calibration-physics/README.md) |
+| documentation-navigation | 14 | [文件列表](code/documentation-navigation/README.md) |
+| execution-control | 71 | [文件列表](code/execution-control/README.md) |
+| frozen-or-artifact-copy | 356 | [文件列表](code/frozen-or-artifact-copy/README.md) |
+| geometry-source | 40 | [文件列表](code/geometry-source/README.md) |
+| reconstruction | 152 | [文件列表](code/reconstruction/README.md) |
+| shared-or-legacy-source | 745 | [文件列表](code/shared-or-legacy-source/README.md) |
+| transport | 33 | [文件列表](code/transport/README.md) |
+| verification-tests | 143 | [文件列表](code/verification-tests/README.md) |
 
 ```powershell
-python tools/project_index.py files --group execution-control --topic derenzo
-python tools/project_index.py files --group verification-tests --topic 5e10
+python tools/project_index.py files --group reconstruction
 python tools/project_index.py find single_mlem
+python tools/project_index.py files --group execution-control --topic ehe
 ```
 
-分类是查找辅助；`frozen-or-artifact-copy`是冻结/绘图副本，不是新的执行入口。查询不导入、调用或提交这些脚本。
+[阅读代码路线](CODE_GUIDE.md)。`frozen-or-artifact-copy`为既有发布或图形副本；`retired-controller`保持停止。
 
-## 常用当前入口
-
-| 用途 | 文件 |
-|---|---|
-| execution-control | [derenzo_campaign_workflow.py](../../experiments/ELLIPSE500x300_H120/derenzo_campaign_workflow.py) |
-| transport | [derenzo_campaign_transport.py](../../experiments/ELLIPSE500x300_H120/derenzo_campaign_transport.py) |
-| reconstruction | [derenzo_campaign_reconstruction.py](../../experiments/ELLIPSE500x300_H120/derenzo_campaign_reconstruction.py) |
-| verification-tests | [derenzo_campaign_verify.py](../../experiments/ELLIPSE500x300_H120/derenzo_campaign_verify.py) |
-| execution-control | [resume_reconstruction_controllers_20261019.py](../../experiments/ELLIPSE500x300_H120/resume_reconstruction_controllers_20261019.py) |
-| execution-control | [jscc_5e10_5090_production_queue.py](../../experiments/ELLIPSE500x300_H120/jscc_5e10_5090_production_queue.py) |
-| execution-control | [jscc_5e10_formal_queue_gate.py](../../experiments/ELLIPSE500x300_H120/jscc_5e10_formal_queue_gate.py) |
-| reconstruction | [single_checkpoint_mlem.py](../../experiments/ELLIPSE500x300_H120/single_checkpoint_mlem.py) |
-| reconstruction | [torch_active_operator.py](../../experiments/ELLIPSE500x300_H120/torch_active_operator.py) |
-| shared-or-legacy-source | [nema_roi_policy.py](../../experiments/ELLIPSE500x300_H120/nema_roi_policy.py) |
-| reconstruction | [reconstruction_output_policy.py](../../experiments/ELLIPSE500x300_H120/reconstruction_output_policy.py) |
-| analysis-figures | [plot_derenzo_completed.py](../../tools/research/plot_derenzo_completed.py) |
-| analysis-figures | [analyze_nema_interior_roi.py](../../tools/research/analyze_nema_interior_roi.py) |
+[Python导入关系](source_dependencies.csv)通过source_id连接[source_index.json](source_index.json)中的完整路径。git_availability标明本地尚未提交文件，克隆后可能缺失；索引不声称它们已交付到Git。完全相同字节的[重复源码组](duplicate_source_groups.json)只用于追溯，不授权合并或删除。

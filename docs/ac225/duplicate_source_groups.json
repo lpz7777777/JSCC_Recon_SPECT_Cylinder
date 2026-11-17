@@ -1,0 +1,1261 @@
+{
+  "semantics": "Exact SHA copies only. Scientific implementations remain in place; copies may be frozen or externally referenced.",
+  "groups": [
+    {
+      "sha256": "a7d480e143d174bf7a8131f5e4ac2a2659315fd3bd420e6fa32c578280203ff8",
+      "paths": [
+        "Analysis_Plots/research/ac225_correction_methods_explainer_20261105/scripts/explain_ac225_corrections_20261105.py",
+        "tools/research/explain_ac225_corrections_20261105.py"
+      ]
+    },
+    {
+      "sha256": "28b9a1dbe49ec4a7248ece4fa0ad025992f2ee94dae3c43f2d3bfad83c60b69a",
+      "paths": [
+        "Analysis_Plots/research/ac225_water_completed_20261105/scripts/plot_ac225_water_completed_20261105.py",
+        "tools/research/plot_ac225_water_completed_20261105.py"
+      ]
+    },
+    {
+      "sha256": "00e0629fc6a62f637a38459a7d243d1ef133deee00b62fce4ce7664a771844b7",
+      "paths": [
+        "Analysis_Plots/research/ac225_water_corrections_20261103/scripts/plot_ac225_water_corrections_viewsafe_20261105.py",
+        "tools/research/plot_ac225_water_corrections_viewsafe_20261105.py"
+      ]
+    },
+    {
+      "sha256": "231d7b29e62f7e725f2057b7b6bf578f3c62aedbdeeebfcf9a62a0a4e8b3fe99",
+      "paths": [
+        "Analysis_Plots/research/derenzo_completed_5e9_20261019/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/research/derenzo_jscc440_5e9_20261023/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/results/Derenzo/5e9/218keV/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/results/Derenzo/5e9/440keV/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/results/Derenzo/summary_20261112/scripts/plot_derenzo_completed.py",
+        "Analysis_Plots/results/NEMA/summary_20261112/scripts/plot_derenzo_completed.py",
+        "tools/research/plot_derenzo_completed.py"
+      ]
+    },
+    {
+      "sha256": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+      "paths": [
+        "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/scripts/analyze_nema_result.py",
+        "Analysis_Plots/research/derenzo_jscc440_5e9_20261023/scripts/analyze_nema_result.py",
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/scripts/analyze_nema_result.py",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts/analyze_nema_result.py",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/analyze_nema_result.py",
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/analyze_nema_result.py",
+        "Analysis_Plots/results/Derenzo/5e9/218keV/scripts/analyze_nema_result.py",
+        "Analysis_Plots/results/Derenzo/5e9/440keV/scripts/analyze_nema_result.py",
+        "Analysis_Plots/results/Derenzo/summary_20261112/scripts/analyze_nema_result.py",
+        "Analysis_Plots/results/NEMA/summary_20261112/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/comparison/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/comparison_1667869/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/comparison_1660254/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_interim_1657887/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/analyze_nema_result.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/analyze_nema_result.py"
+      ]
+    },
+    {
+      "sha256": "d4292522728c8fc5fe78a79ba3b7706d9d98637b84b5fc92927c7a8df7b52028",
+      "paths": [
+        "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/scripts/preview_derenzo_joint5e10_1771220_20261112.py",
+        "tools/research/preview_derenzo_joint5e10_1771220_20261112.py"
+      ]
+    },
+    {
+      "sha256": "27f35d82fb330a398348c4883640945e1b3ac9db9fc0ccac55ff3bd113be0b9f",
+      "paths": [
+        "Analysis_Plots/research/derenzo_jscc440_5e9_20261023/scripts/plot_derenzo_jscc440_completed.py",
+        "tools/research/plot_derenzo_jscc440_completed.py"
+      ]
+    },
+    {
+      "sha256": "311aaccc16a4af5b46eee9b1ef4fe9f8c2015d49f039e74d72cb0968b9933761",
+      "paths": [
+        "Analysis_Plots/research/ehe_collimator_response_audit_20261029/scripts/audit_ehe_crystal_geometry.py",
+        "tools/research/audit_ehe_crystal_geometry.py"
+      ]
+    },
+    {
+      "sha256": "82a884e635f4d4fb9f60e3863664df17b648ab065833c7d92faef408f1c2a379",
+      "paths": [
+        "Analysis_Plots/research/ehe_collimator_response_audit_20261029/scripts/fetch_ehe_crystal_components.py",
+        "tools/research/fetch_ehe_crystal_components.py"
+      ]
+    },
+    {
+      "sha256": "8e673efb4b5c89a7a0f3ec78c89ceae322746eac6f8028720c0107c24b4a1956",
+      "paths": [
+        "Analysis_Plots/research/ehe_collimator_response_audit_20261029/scripts/plot_ehe_collimator_audit.py",
+        "tools/research/plot_ehe_collimator_audit.py"
+      ]
+    },
+    {
+      "sha256": "7d98c890be9805663af09c1e8e6004dd521f9af207019a5b43dc95ba8bc85310",
+      "paths": [
+        "Analysis_Plots/research/ehe_crystal_response_20261029/scripts/fetch_ehe_crystal_response_subset.py",
+        "tools/research/fetch_ehe_crystal_response_subset.py"
+      ]
+    },
+    {
+      "sha256": "b8e8dd078ba9796936924e3b53089c8d573635a7d15bce2d9e3cb838cab04533",
+      "paths": [
+        "Analysis_Plots/research/ehe_crystal_response_20261029/scripts/plot_ehe_crystal_response_fields.py",
+        "tools/research/plot_ehe_crystal_response_fields.py"
+      ]
+    },
+    {
+      "sha256": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/scripts/mip_projection.py",
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts/mip_projection.py",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/mip_projection.py",
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/mip_projection.py",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/scripts/mip_projection.py",
+        "Analysis_Plots/research/nema_jscc5e10_20261026/scripts/mip_projection.py",
+        "Analysis_Plots/results/NEMA/5e10/218keV/scripts/mip_projection.py",
+        "Analysis_Plots/results/NEMA/5e10/440keV/scripts/mip_projection.py",
+        "Analysis_Plots/results/NEMA/5e9/218keV/scripts/mip_projection.py",
+        "Analysis_Plots/results/NEMA/5e9/440keV/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/comparison_1667869/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/comparison_1660254/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_interim_1657887/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/mip_projection.py"
+      ]
+    },
+    {
+      "sha256": "03e1a8f0898a1dbdbcba155d2b23151828c56444654565bc2c06d32ddf8f1357",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/scripts/plot_ehe_dense_completed_1761244.py",
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/plot_ehe_dense_completed_1761244.py",
+        "tools/research/plot_ehe_dense_completed_1761244.py"
+      ]
+    },
+    {
+      "sha256": "07c0ee791b9e2a6d9a0c2e07717a2bb206aca2283a050e65fc8ed82e2e93653e",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/scripts/verify_ehe_dense_display_1761244.py",
+        "tools/research/verify_ehe_dense_display_1761244.py"
+      ]
+    },
+    {
+      "sha256": "42eb05e647de424ac85c847f59a422230440b049783392cb02c0f7784f4d4e87",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/scripts/analyze_ehe_dense_edge_forward_20261102.py",
+        "tools/research/analyze_ehe_dense_edge_forward_20261102.py"
+      ]
+    },
+    {
+      "sha256": "628be0dcb9fcb8c5504dbc676da3c96fd87ae253fc0787292c99c58bc1c6a8bd",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/scripts/ehe_dense_edge_forward_cpu_20261102.py",
+        "tools/research/ehe_dense_edge_forward_cpu_20261102.py"
+      ]
+    },
+    {
+      "sha256": "56428b400efef8c25b0f23930f74027c0bd34bf098e75e0f340484ee320141f6",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/scripts/report_ehe_dense_edge_diagnosis_20261102.py",
+        "tools/research/report_ehe_dense_edge_diagnosis_20261102.py"
+      ]
+    },
+    {
+      "sha256": "3b33910a0a6af4026e8e05f3e8be2f009e4e1bd52f6f67a3e5d2c363da9b907d",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/scripts/run_ehe_dense_edge_forward_20261102.py",
+        "tools/research/run_ehe_dense_edge_forward_20261102.py"
+      ]
+    },
+    {
+      "sha256": "bd6d192e667c39d4b3a3cafffeb6309c495df605b7014e874e271298affba77a",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/visuals_agent/scripts/audit_dense_ehe_transition_rings_20261102.py",
+        "tools/research/audit_dense_ehe_transition_rings_20261102.py"
+      ]
+    },
+    {
+      "sha256": "401bc999bfd0c09891c568aaf3c5d05e5801f6d9ff1e7a9e544d99653acf6942",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/visuals_agent/scripts/diagnose_dense_ehe_native_edges_20261102.py",
+        "tools/research/diagnose_dense_ehe_native_edges_20261102.py"
+      ]
+    },
+    {
+      "sha256": "49848efa9acbed210c8414851a4531d8d915d582fc6675f3e15af5f445e9b20a",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/visuals_agent/scripts/verify_dense_ehe_forward_independent_20261102.py",
+        "tools/research/verify_dense_ehe_forward_independent_20261102.py"
+      ]
+    },
+    {
+      "sha256": "f79389e096fbcf88254da1d5721b799c8ad7f1965f3969f4664da547791cb895",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts/nema_roi_policy.py",
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/nema_roi_policy.py",
+        "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/scripts/nema_roi_policy.py",
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/scripts/nema_roi_policy.py",
+        "Analysis_Plots/research/nema_jscc5e10_20261026/scripts/nema_roi_policy.py",
+        "experiments/ELLIPSE500x300_H120/nema_roi_policy.py"
+      ]
+    },
+    {
+      "sha256": "be5bc7ff0f6241aa2b2f6ad679e1fc6f97dface9669c5365f943c4b5109dc305",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts/plot_ehe_dense_nema_60view_poisson_20261102.py",
+        "tools/research/plot_ehe_dense_nema_60view_poisson_20261102.py"
+      ]
+    },
+    {
+      "sha256": "e7e814dbdb1639ed1d17edd87c127a0390edcd38d5041312ed7a2f9bb09a8dbd",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts/review_ehe_60view_comparison_20261103.py",
+        "tools/research/review_ehe_60view_comparison_20261103.py"
+      ]
+    },
+    {
+      "sha256": "1ae82916fe98ada0889dcb08b9ad7de9a563722cfe4df50ed07c9eddd2bfe237",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts/verify_ehe_60view_selected_display_20261102.py",
+        "tools/research/verify_ehe_60view_selected_display_20261102.py"
+      ]
+    },
+    {
+      "sha256": "6320e240c40338e4d804e1859bed8a6ebb50980659f7e7be07bf56166215c776",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/check_ehe_low_noise_source_q128_20261102.py",
+        "tools/research/check_ehe_low_noise_source_q128_20261102.py"
+      ]
+    },
+    {
+      "sha256": "197a97350b0847e32c1b8f11d79d60c2f26b64295bb125e3797b737ab058aafd",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/plot_ehe_dense_nema_low_noise_20261102.py",
+        "tools/research/plot_ehe_dense_nema_low_noise_20261102.py"
+      ]
+    },
+    {
+      "sha256": "88c1a1ec693eaa262fcd9904a467e85e1db31998b30da9afbf05b68c038b1184",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/review_ehe_low_noise_figures_20261102.py",
+        "tools/research/review_ehe_low_noise_figures_20261102.py"
+      ]
+    },
+    {
+      "sha256": "9429969cfb570b251c907f547529c1ab925d1d870b8580e642a1833c9d4c2753",
+      "paths": [
+        "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts/verify_ehe_low_noise_selected_display_20261102.py",
+        "tools/research/verify_ehe_low_noise_selected_display_20261102.py"
+      ]
+    },
+    {
+      "sha256": "c726a70a2cff1f7fc02195d407bbd259287ff9688f6ac7c1f7eeb79b810c7a44",
+      "paths": [
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/fetch_ehe_dense_completed_1761244.py",
+        "tools/research/fetch_ehe_dense_completed_1761244.py"
+      ]
+    },
+    {
+      "sha256": "7ef6b1f1cc4c2f549c5310f7020a6e3263052ebb186f1d91272d4207894fcb4d",
+      "paths": [
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/fetch_ehe_derenzo5e10_1769915.py",
+        "tools/research/fetch_ehe_derenzo5e10_1769915.py"
+      ]
+    },
+    {
+      "sha256": "1954952eb613e2e84885a16d57ccd21518286f372d26af21280b1390a4715745",
+      "paths": [
+        "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts/plot_ehe_derenzo5e10_1769915.py",
+        "tools/research/plot_ehe_derenzo5e10_1769915.py"
+      ]
+    },
+    {
+      "sha256": "d87328fdfd5d8969d6bf512600c83a20520c77252408de26a63e059ab6ff4d87",
+      "paths": [
+        "Analysis_Plots/research/ehe_edge_diagnosis_20261019/scripts/analyze_ehe_edge_noise.py",
+        "tools/research/analyze_ehe_edge_noise.py"
+      ]
+    },
+    {
+      "sha256": "cf18fffbfd522440a26ea8cdab2065e101f41d30680e58b2fc16066a3e4dbe1c",
+      "paths": [
+        "Analysis_Plots/research/ehe_fov_clearance_20261102/scripts/audit_ehe_fov_clearance_20261102.py",
+        "tools/research/audit_ehe_fov_clearance_20261102.py"
+      ]
+    },
+    {
+      "sha256": "30173e56987fbd0b175eac052839fce4ac89a318c1dc862dd29025c6e9b3c937",
+      "paths": [
+        "Analysis_Plots/research/ehe_side_shield_design_20261029/scripts/plot_ehe_side_shield_design.py",
+        "tools/research/plot_ehe_side_shield_design.py"
+      ]
+    },
+    {
+      "sha256": "c3f13550a2fd3379d8011e5e267767c410b722b7047f6c6a747a4337d94c2061",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_best_ssim_cnr_bars_20261115/scripts/plot_nema5e9_best_ssim_cnr_bars_20261115.py",
+        "tools/research/plot_nema5e9_best_ssim_cnr_bars_20261115.py"
+      ]
+    },
+    {
+      "sha256": "a0ad2886ac37688ae81d7ffe27100e5b8099c80a0af6c39e2fc53a62517fba5d",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_best_ssim_gaussian_20261115/scripts/plot_nema5e9_best_ssim_gaussian_20261115.py",
+        "tools/research/plot_nema5e9_best_ssim_gaussian_20261115.py"
+      ]
+    },
+    {
+      "sha256": "f448f179c68a429568b690def5b11f7214c162261004fccc3615b5be84d7c8bc",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_jscc10000_width_comparison_20261115/scripts/plot_nema_jscc10000_widths_20261115.py",
+        "tools/research/plot_nema_jscc10000_widths_20261115.py"
+      ]
+    },
+    {
+      "sha256": "8539c2c75142eded63d0d063e6853b0d5f38b6ac73c6c972d0fbd1a2f8e0e04a",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/scripts/compare_nema5e9_new_prejune_20261026.py",
+        "tools/research/compare_nema5e9_new_prejune_20261026.py"
+      ]
+    },
+    {
+      "sha256": "c999a09489a7e22473060854f6ee25d6422a2447968ccf407c1fcd8d99d72e4a",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_sc6300_jscc10000_he63_images_20261115/scripts/plot_nema_fixed_iteration_images_20261115.py",
+        "tools/research/plot_nema_fixed_iteration_images_20261115.py"
+      ]
+    },
+    {
+      "sha256": "3399990964212e56c7ca8f35049fcffbf98c327faa1948840f10661d25faa21b",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_sc_jscc_he_ssim_nrmse_20261115/scripts/plot_nema5e9_ssim_nrmse_20261115.py",
+        "tools/research/plot_nema5e9_ssim_nrmse_20261115.py"
+      ]
+    },
+    {
+      "sha256": "109bb806cf8600d899d49e904031173c72887acef0305497ff1bd836b9a50aff",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_width100_vs80_preview_20261115/scripts/compare_results_reference.py",
+        "Analysis_Plots/research/nema5e9_width_sweep_20261115/scripts/compare_results.py",
+        "experiments/ELLIPSE500x300_H120/studies/nema5e9_width_sweep_20261115/compare_results.py"
+      ]
+    },
+    {
+      "sha256": "db4765d0c13d640b850c5a5580a2b78b82569ae9edd8864fbf01be03757ec97e",
+      "paths": [
+        "Analysis_Plots/research/nema5e9_width100_vs80_preview_20261115/scripts/preview_100_80.py",
+        "experiments/ELLIPSE500x300_H120/studies/nema5e9_width_sweep_20261115/preview_100_80.py"
+      ]
+    },
+    {
+      "sha256": "3df68c441a06705df299cc3aa0a9850583993804180c3b4fbd66523ae64b52a6",
+      "paths": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/scripts/plot_nema_bg_out_error_20261115_3df68c441a06.py",
+        "tools/research/plot_nema_bg_out_error_20261115.py"
+      ]
+    },
+    {
+      "sha256": "adb068130004e83a4d8dd94cefec38b40458e930ffd15dfea71a94c052af8b3c",
+      "paths": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/scripts/verify_nema_bg_out_endpoints_20261115_adb068130004.py",
+        "tools/research/verify_nema_bg_out_endpoints_20261115.py"
+      ]
+    },
+    {
+      "sha256": "52c8eceb91f02f23ee51167cd18dc439e859c9950bc682c611a72ed29bed39fb",
+      "paths": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/scripts/verify_nema_bg_out_geometry_20261115_52c8eceb91f0.py",
+        "tools/research/verify_nema_bg_out_geometry_20261115.py"
+      ]
+    },
+    {
+      "sha256": "7587f311ce946566958a7bddb7be4b7a2049fb96efef22226624f1ae092107c8",
+      "paths": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/scripts/verify_nema_bg_out_metrics_20261115_7587f311ce94.py",
+        "tools/research/verify_nema_bg_out_metrics_20261115.py"
+      ]
+    },
+    {
+      "sha256": "2c63124a8783812f061b9de72810f50756c9764d74ed1f380127604408ad3fb0",
+      "paths": [
+        "Analysis_Plots/research/nema_bg_out_error_20261115/scripts/verify_nema_gaussian_endpoints_20261115_2c63124a8783.py",
+        "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/scripts/verify_nema_gaussian_endpoints_20261115_2c63124a8783.py",
+        "tools/research/verify_nema_gaussian_endpoints_20261115.py"
+      ]
+    },
+    {
+      "sha256": "45234cd7b83b51445a99565edde9e6c8d8d5a54aaffba4865bd23b7e817042bb",
+      "paths": [
+        "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/scripts/plot_nema_bv_cnr.py",
+        "tools/research/plot_nema_bv_cnr.py"
+      ]
+    },
+    {
+      "sha256": "f56179995992bb1b185bb0eb9d29d130d8de1dfae69ec70a07ae973d4e5e9004",
+      "paths": [
+        "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/scripts/prepare_nema_bv_cnr.py",
+        "tools/research/prepare_nema_bv_cnr.py"
+      ]
+    },
+    {
+      "sha256": "afbb6a1cb460b00387043180b0557fbbefa051f63cecfaf908e9397cedee8a8a",
+      "paths": [
+        "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/scripts/verify_nema_bv_cnr.py",
+        "tools/research/verify_nema_bv_cnr.py"
+      ]
+    },
+    {
+      "sha256": "e916d51f31ce59da42b8419fff1743162f1f27c80126b7749aa632c5ba2d6e66",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/historical_visuals/sources/d8f83c1/Reproduction/Step2_GenerateCntStat/GenProj_SPECT_PolarCoor.m",
+        "Reproduction/Step2_GenerateCntStat/GenProj_SPECT_PolarCoor.m"
+      ]
+    },
+    {
+      "sha256": "deaa04541ab8dcc71a3b4aa40cb17ad27671246ce1a56458f59a49f58262616a",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/historical_visuals/sources/d8f83c1/Reproduction/Step4_Visualization/get_img_JSCCSD_Dist_PolarCoor.m",
+        "Reproduction/Step4_Visualization/get_img_JSCCSD_Dist_PolarCoor.m"
+      ]
+    },
+    {
+      "sha256": "1dc980b07087d602ccb318f8ba3a9933453b1acc6322f246e42a1b76eeff9dca",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/historical_visuals/sources/d8f83c1/distributed/python/main_dist.py",
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/distributed/python/main_dist.py",
+        "distributed/python/main_dist.py",
+        "distributed/python/main_dist_3e10.py"
+      ]
+    },
+    {
+      "sha256": "2bcb5e5d0d40fb13fb08c3c2b55f5cc813a415971bac2347b90d22c3712c58df",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/historical_visuals/sources/d8f83c1/get_img_SPECT_PolarCoor.m",
+        "tools/evaluation/image_display/get_img_SPECT_PolarCoor.m"
+      ]
+    },
+    {
+      "sha256": "ef9158b4dad72c7fbd2e3f22fec6eeaa3f2e14e20d8ae211c958db96e5d17d19",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/historical_visuals/sources/d8f83c1/main_plane.py",
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/main_plane.py"
+      ]
+    },
+    {
+      "sha256": "98954bc6ee1941c7fedc791ca5c3bc6215d2cc24f97a8900c460173a22aa00df",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/3d1b817/process_list_plane.py",
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/process_list_plane.py"
+      ]
+    },
+    {
+      "sha256": "b211b692e1caac9acbd41626d36fa22018ce0955ac28a0c9b72404e265e05101",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/b39f1dc/Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/pipeline.py",
+        "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/spect_sensitivity/pipeline.py"
+      ]
+    },
+    {
+      "sha256": "b8308b077fc318c0205fad8e3354735ed3afb3532030ac13c6d7a1dd6f852a97",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/current_1722760/compton_energy_probability_v5.py",
+        "experiments/ELLIPSE500x300_H120/compton_energy_probability_v5.py"
+      ]
+    },
+    {
+      "sha256": "c0826a86aa9eb92ff0b0875881775b384d104ef8ecc1f533c0f83d0226afa328",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/current_1722760/compton_event_response.py",
+        "compton_event_response.py"
+      ]
+    },
+    {
+      "sha256": "f9f3e0eff6f8dca09c88eedd732562caded92683d22e8164bb41c1e072b3b76c",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/current_1722760/geometry.py",
+        "experiments/ELLIPSE500x300_H120/geometry.py"
+      ]
+    },
+    {
+      "sha256": "b66c901a18c14de42c9732848558beec55ac19df617321288a1cf081d93bf533",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/current_1722760/jscc_5e10_compton_mlem.py",
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_compton_mlem.py"
+      ]
+    },
+    {
+      "sha256": "fc237206d9c5940484ef84dd36f60d6e0085bd4c23f0ac19149f390b5f375d70",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/current_1722760/torch_active_operator.py",
+        "experiments/ELLIPSE500x300_H120/torch_active_operator.py"
+      ]
+    },
+    {
+      "sha256": "9ff1b31ce342d6443c8c4cdabc7a0173579ab10d10baf67520be76ed3c0e01dc",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/compton_sparse_ops.py",
+        "Reproduction/Step3_Reconstruction/JSCCSD_Recon/compton_sparse_ops.py",
+        "Reproduction/Step3_Reconstruction/SC_Recon/compton_sparse_ops.py"
+      ]
+    },
+    {
+      "sha256": "5d1f3a5959325079f988d2df9434e8ba56729dc453245d1ebd120be716909e0f",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/process_list_plane_sparse.py",
+        "Reproduction/Step3_Reconstruction/JSCCSD_Recon/process_list_plane_sparse.py",
+        "Reproduction/Step3_Reconstruction/SC_Recon/process_list_plane_sparse.py"
+      ]
+    },
+    {
+      "sha256": "a1141f0702a05d63c499eeff6746197a03f7f146a60023249b9c563da01fcb5e",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/process_list_plane_strict.py",
+        "Reproduction/Step3_Reconstruction/JSCCSD_Recon/process_list_plane_strict.py",
+        "Reproduction/Step3_Reconstruction/SC_Recon/process_list_plane_strict.py"
+      ]
+    },
+    {
+      "sha256": "1bdaf79b21e6c13363cdd91a35dceb19bc312e71814bc4d3becfed61bac52a35",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots/d8f83c1/sparse_main_utils.py",
+        "Reproduction/Step3_Reconstruction/JSCCSD_Recon/sparse_main_utils.py",
+        "Reproduction/Step3_Reconstruction/SC_Recon/sparse_main_utils.py",
+        "sparse_main_utils.py"
+      ]
+    },
+    {
+      "sha256": "c21f411f526c49fed4b0d2af73cbc08c7c00a3d004a3ede2d983737667fa47c1",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_ring_diagnosis_20261026/scripts/diagnose_nema_compton_rings.py",
+        "tools/research/diagnose_nema_compton_rings.py"
+      ]
+    },
+    {
+      "sha256": "b1ada1240d493587bc0620701779ce79bee64685a344361e69934f83bd7ed5ba",
+      "paths": [
+        "Analysis_Plots/research/nema_compton_transition_audit_20261026/scripts/plot_nema_compton_transitions_20261026.py",
+        "tools/research/plot_nema_compton_transitions_20261026.py"
+      ]
+    },
+    {
+      "sha256": "b4631e776748346d3045af9a05a45881e584e05837ba6da6e7b28295cdcddb36",
+      "paths": [
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/scripts/plot_nema_joint5e10_20261029.py",
+        "tools/research/plot_nema_joint5e10_20261029.py"
+      ]
+    },
+    {
+      "sha256": "b5cb3640cfcec150d1a8862da7b44233827141e5101a43e8a62d1cc1611d81e4",
+      "paths": [
+        "Analysis_Plots/research/nema_joint5e10_1740189_20261029/scripts/verify_nema_joint5e10_metrics_20261029.py",
+        "tools/research/verify_nema_joint5e10_metrics_20261029.py"
+      ]
+    },
+    {
+      "sha256": "929a6bda0b7eddfb81de5382419e0277aaa59f77a99560397f2da4339f672adc",
+      "paths": [
+        "Analysis_Plots/research/nema_jscc5e10_20261026/scripts/fetch_nema5e10_formal_1722760.py",
+        "tools/research/fetch_nema5e10_formal_1722760.py"
+      ]
+    },
+    {
+      "sha256": "ee970a98fab40259f4dc02f55514a0f4e5b35965a5d3d67f5253f3cdf463095b",
+      "paths": [
+        "Analysis_Plots/research/nema_jscc5e10_20261026/scripts/plot_nema_jscc5e10_20261026.py",
+        "tools/research/plot_nema_jscc5e10_20261026.py"
+      ]
+    },
+    {
+      "sha256": "796fe4d8470ca8e9e2614d8f7f923a96b3459c4645272818fdb4c047be4a2d8e",
+      "paths": [
+        "Analysis_Plots/research/nema_jscc5e10_20261026/scripts/verify_nema5e10_formal_1722760.py",
+        "tools/research/verify_nema5e10_formal_1722760.py"
+      ]
+    },
+    {
+      "sha256": "dfdf5feed602e5e03f6b78c7f6dcb9785d70ae0e517d9b68ed453e5f1493bd48",
+      "paths": [
+        "Analysis_Plots/research/nema_jscc5e10_20261026/scripts/verify_nema5e10_visual_metrics.py",
+        "tools/research/verify_nema5e10_visual_metrics.py"
+      ]
+    },
+    {
+      "sha256": "28b9a0ed295c9d736a5584d0e4a64769e91f8e49d1171cdb67a09f1ce9c2aba3",
+      "paths": [
+        "Analysis_Plots/research/nema_prejune_compton_1739632_20261026/scripts/review_prejune_1739632.py",
+        "tools/research/review_prejune_1739632.py"
+      ]
+    },
+    {
+      "sha256": "6e19de3e345ecc4b055bfeac183f7c4ed24b26c931e6eebeb714b023e86ab8ed",
+      "paths": [
+        "Analysis_Plots/research/nema_roi_audit_20261115/scripts/plot_nema_roi_audit_20261115_6e19de3e345e.py",
+        "tools/research/plot_nema_roi_audit_20261115.py"
+      ]
+    },
+    {
+      "sha256": "d18238246630322cdbf421ac3857019cc615f0ccd680554369e6e51260cf9772",
+      "paths": [
+        "Analysis_Plots/research/nema_roi_audit_20261115/scripts/verify_nema_roi_audit_20261115_d18238246630.py",
+        "tools/research/verify_nema_roi_audit_20261115.py"
+      ]
+    },
+    {
+      "sha256": "6abac207fcd1d15e8a0856fc20010cbd34a5d135bf29a6aff6b26acc451c8afa",
+      "paths": [
+        "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/scripts/plot_nema_sc_jscc_he_20261114_6abac207fcd1.py",
+        "tools/research/plot_nema_sc_jscc_he_20261114.py"
+      ]
+    },
+    {
+      "sha256": "3bee7d49419dc068a2cbc6a05eecd50d4610b4df76362894dca13fb4e804c61f",
+      "paths": [
+        "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114/scripts/plot_nema_sc_jscc_he_cnr_crc_bv_20261114_3bee7d49419d.py",
+        "tools/research/plot_nema_sc_jscc_he_cnr_crc_bv_20261114.py"
+      ]
+    },
+    {
+      "sha256": "ee5c1da45034915483f3a8b98c11de09f8559521183c09784055c9962bff7025",
+      "paths": [
+        "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/scripts/plot_nema_sc_jscc_he_gaussian_20261115_ee5c1da45034.py",
+        "tools/research/plot_nema_sc_jscc_he_gaussian_20261115.py"
+      ]
+    },
+    {
+      "sha256": "1ce72522c8ffbe83f3511cba9c4b8fe82bd33d688bc6b42bd29cdbcecfff9405",
+      "paths": [
+        "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/history/outer_fov_label_before_20261113/plot_opengate_ehe_nema5e10_20261113.py",
+        "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/scripts/plot_opengate_ehe_nema5e10_20261113_1ce72522c8ff.py"
+      ]
+    },
+    {
+      "sha256": "6955c11156709d2449314ad5e258f536bb9b84555bb26e3cd3100268675dcd8e",
+      "paths": [
+        "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/scripts/plot_opengate_ehe_nema5e10_20261113_6955c1115670.py",
+        "tools/research/plot_opengate_ehe_nema5e10_20261113.py"
+      ]
+    },
+    {
+      "sha256": "fa84eb3c9e686eaeb819e75a75ce9b2cd58d5ac12acd3c6a2bb528816bb9e046",
+      "paths": [
+        "Analysis_Plots/research/opengate_ehe_nema5e9_20261113/scripts/plot_opengate_ehe_nema5e9_20261113_fa84eb3c9e68.py",
+        "tools/research/plot_opengate_ehe_nema5e9_20261113.py"
+      ]
+    },
+    {
+      "sha256": "e7407e5575bcf1e4f62022f6187a1b47deaa3f199ab46af6b5431c8f8eecca43",
+      "paths": [
+        "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113/scripts/plot_opengate_ehe_nema5e9_rotfix_20261113_e7407e5575bc.py",
+        "tools/research/plot_opengate_ehe_nema5e9_rotfix_20261113.py"
+      ]
+    },
+    {
+      "sha256": "9c015215302d9a842366ec3a87edc456f3d5571c0e7ea52bf36789d072c38a19",
+      "paths": [
+        "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/scripts/plot_opengate_he_vs_ehe_nema_20261114_9c015215302d.py",
+        "tools/research/plot_opengate_he_vs_ehe_nema_20261114.py"
+      ]
+    },
+    {
+      "sha256": "de52557b18f5ff4417b04147f5b1bb8b672e18ee665197b69e49a9a081b1f5d4",
+      "paths": [
+        "Analysis_Plots/results/Derenzo/5e9/218keV/scripts/plot_derenzo_method_galleries_20261029.py",
+        "Analysis_Plots/results/Derenzo/5e9/440keV/scripts/plot_derenzo_method_galleries_20261029.py",
+        "tools/research/plot_derenzo_method_galleries_20261029.py"
+      ]
+    },
+    {
+      "sha256": "66f024e0a9fb5d9d6ca22a1fe985ec29130619c2cd8fd3d1253984cd002edca4",
+      "paths": [
+        "Analysis_Plots/results/Derenzo/summary_20261112/scripts/integrate_derenzo_results_20261112.py",
+        "tools/research/integrate_derenzo_results_20261112.py"
+      ]
+    },
+    {
+      "sha256": "a0d4d4752fd6c6341e4c901b5a9ddb42e70293573399e82eff07deeb677411e5",
+      "paths": [
+        "Analysis_Plots/results/NEMA/5e10/218keV/scripts/plot_nema_method_galleries_20261029.py",
+        "Analysis_Plots/results/NEMA/5e10/440keV/scripts/plot_nema_method_galleries_20261029.py",
+        "Analysis_Plots/results/NEMA/5e9/218keV/scripts/plot_nema_method_galleries_20261029.py",
+        "Analysis_Plots/results/NEMA/5e9/440keV/scripts/plot_nema_method_galleries_20261029.py",
+        "tools/research/plot_nema_method_galleries_20261029.py"
+      ]
+    },
+    {
+      "sha256": "9bdfa4f9ef91d224c48723aa650274e3dbe620e7e825b7655388ef720f00c952",
+      "paths": [
+        "Analysis_Plots/results/NEMA/summary_20261112/scripts/integrate_nema_results_20261112.py",
+        "tools/research/integrate_nema_results_20261112.py"
+      ]
+    },
+    {
+      "sha256": "3b665faa482e291ce7f0ce5e0d8566f03f9150571c7e7c75c6d2bb699c2549f5",
+      "paths": [
+        "Geant4Sim/Geant4Code/debug.mac",
+        "Geant4Sim/Geant4Code_CntStatOnly/debug.mac",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/debug.mac"
+      ]
+    },
+    {
+      "sha256": "0d8272d3de9224abdb497cc5ce8ef004c85c16cb69b1c2fab4559353b97649a4",
+      "paths": [
+        "Geant4Sim/Geant4Code/point.mac",
+        "Geant4Sim/Geant4Code_CntStatOnly/point.mac",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/point.mac"
+      ]
+    },
+    {
+      "sha256": "f8c9c573202582936a19e6b744c9e79bc92eeac45db118f82000ec66cb9eb42c",
+      "paths": [
+        "Geant4Sim/Geant4Code/src/ActionInitialization.cc",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/src/ActionInitialization.cc"
+      ]
+    },
+    {
+      "sha256": "42edc6e62b126cf5621a888d4f28d590e61c1ada08ba54e11dfefea869a60a2b",
+      "paths": [
+        "Geant4Sim/Geant4Code/src/DetectorConstruction.cc",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/src/DetectorConstruction.cc"
+      ]
+    },
+    {
+      "sha256": "c81cd9ddf4c495fbce280317481eba72f9c05537ccf3750fabd364dcda2ab457",
+      "paths": [
+        "Geant4Sim/Geant4Code/src/DetectorMessenger.cc",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/src/DetectorMessenger.cc"
+      ]
+    },
+    {
+      "sha256": "b366c63d45bff7707ea659a37946f05302e4b0decc87fec4dad623f09629effc",
+      "paths": [
+        "Geant4Sim/Geant4Code/src/SteppingVerbose.cc",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/src/SteppingVerbose.cc"
+      ]
+    },
+    {
+      "sha256": "651de73ce3f6d432206389be377ef41fe6af7a005dc553f1e95d72f8e35d174c",
+      "paths": [
+        "Geant4Sim/Geant4Code/vis.mac",
+        "Geant4Sim/Geant4Code_CntStatOnly/vis.mac",
+        "Geant4Sim/Geant4Code_CntStatResponseStudy/vis.mac"
+      ]
+    },
+    {
+      "sha256": "f7d0bcbef14c831b1fdf27abb99beb657d894087b68a61de01b7e3fdf6afc88c",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/1.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/1.mac"
+      ]
+    },
+    {
+      "sha256": "4d092795b272844343d4f822bbfb14e95b92b64a624b8a26c05f4bf2d53f3454",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/10.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/10.mac"
+      ]
+    },
+    {
+      "sha256": "de3052f187bdaef7d0540f66cd2442b2bb58d7663c8aa771e4ff31420a57f105",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/11.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/11.mac"
+      ]
+    },
+    {
+      "sha256": "0eafc1a3005906f3f43414db9577922dd8ba99e62df6c593a2c748fc78c9dc9f",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/12.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/12.mac"
+      ]
+    },
+    {
+      "sha256": "e8507cae353da7d336cd6cca731c9a07b760d20352ded644743d4d01a7f8474f",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/13.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/13.mac"
+      ]
+    },
+    {
+      "sha256": "d0072944c28e503c65f1fb29f4f87d06e2dae87adb6eb7031fb2ae1ad1e99249",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/14.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/14.mac"
+      ]
+    },
+    {
+      "sha256": "a770fb6726088009b8b998de7f5b120a3861488e2026db9ba62632e84b8f1848",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/15.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/15.mac"
+      ]
+    },
+    {
+      "sha256": "6015fa215aa210c2bcb97e56f8abc1c71201b9ffe28fba0091de1c45704c88ec",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/16.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/16.mac"
+      ]
+    },
+    {
+      "sha256": "375a683d0d961528c66f8ed1025d3b01a62ab4f608bf95166ab98ac8116b1e1e",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/17.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/17.mac"
+      ]
+    },
+    {
+      "sha256": "023c745a6e6547f92e5d35b85c8f6399dd3807a5398ceae8ef3eb71171cde8ce",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/18.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/18.mac"
+      ]
+    },
+    {
+      "sha256": "f7b6f165dd693ac238c0f5ccad58a2ffdf204c033fcb3ed8840c09cfa3c24a5d",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/19.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/19.mac"
+      ]
+    },
+    {
+      "sha256": "969d0438cc57354b7f42ee9513150f9e41bd9e79ad1166f6cdeb13b39d45b12a",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/2.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/2.mac"
+      ]
+    },
+    {
+      "sha256": "ed60048d1c373b57f49091c65bb002b89b06c638a7920411e93268b2b5ba72af",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/20.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/20.mac"
+      ]
+    },
+    {
+      "sha256": "f16caebf0ee687e0ab43e235da1ee6b73c8d10440f3c34437b4b833fe5e5eb09",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/3.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/3.mac"
+      ]
+    },
+    {
+      "sha256": "dbbfa95dc6e6baf83fca8c0683a7c0b283557da7703ecfb20222d5e6da31eb05",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/4.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/4.mac"
+      ]
+    },
+    {
+      "sha256": "501ea6e55a4e05317c74cb90cd3643fdb266d746562a329ada75357de066aee3",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/5.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/5.mac"
+      ]
+    },
+    {
+      "sha256": "9b2c4c8c470172807ac62c41cc3dbeb5b72643f441d6e19425cebe7ce913fd14",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/6.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/6.mac"
+      ]
+    },
+    {
+      "sha256": "7cd527668ed89a3e5b3c1d937c68388f6a3028997c6bccacc751da9f3b4100b6",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/7.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/7.mac"
+      ]
+    },
+    {
+      "sha256": "59853c87f9979f855f050e2a216a154fc3f590deed86fd8f18b98d452b1f6632",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/8.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/8.mac"
+      ]
+    },
+    {
+      "sha256": "b5b951f76b932b2565ec00996f3c22aa11314b9721b8c45044ba105b27086f26",
+      "paths": [
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_1e11/9.mac",
+        "Geant4Sim/Macro/HotRodPhantom_10_30_30_511keV_5e10/9.mac"
+      ]
+    },
+    {
+      "sha256": "98dbf80885933a811fc80b0dce6b5826fdaafbe8b9be394c3343f21e1bf24cd1",
+      "paths": [
+        "Reproduction/Step3_Reconstruction/JSCCSD_Recon/main_local_sparse_jsccsd_only.py",
+        "main_local_sparse_jsccsd_only.py"
+      ]
+    },
+    {
+      "sha256": "59edddeb66296ba9ec3d2fadccc1e911f838b7183635d923d16d290109ef28c5",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_ehe_jscc_full_trajectories.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_full_trajectories/compare_ehe_jscc_full_trajectories.py"
+      ]
+    },
+    {
+      "sha256": "813215aed9d0dcce914d1d0cb1a6585f872b4d8f6850c0b4099d7d7ef3a27b6f",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_energy_5e9_v5.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9/comparison_1667869/scripts/compare_energy_5e9_v5.py"
+      ]
+    },
+    {
+      "sha256": "d8c66df2cb4eefe2196f2465169b2a102b8de2e73b39e255c6767ba55ccc9868",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_energy_formal_v5.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5/comparison_1666673/scripts/compare_energy_formal_v5.py"
+      ]
+    },
+    {
+      "sha256": "a916e4f604c04964ca4d01fc5d6c57ea75fb738ee276292d5ee37d28524abfd8",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_energy_full10000_v5.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/comparison_1669255/compare_energy_full10000_v5.py"
+      ]
+    },
+    {
+      "sha256": "aee5e57d4f9d83cad645ba31d6b561099f2fd038a54c7ed3d2c13993cb806ae4",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_first_scatter.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/comparison_1660254/scripts/compare_first_scatter.py"
+      ]
+    },
+    {
+      "sha256": "a5c164c29db7ae6496c05a80a52e95ac2b722d95d940a0627554421c55e31fe6",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_nema_counts.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/comparison/scripts/compare_nema_counts.py"
+      ]
+    },
+    {
+      "sha256": "8d8d4a54f21b65255419dafef37fd7657538b9d42cace44b14166c2135100351",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_response_mismatch.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1/comparison_interim_1657887/scripts/compare_response_mismatch.py"
+      ]
+    },
+    {
+      "sha256": "147fe197d83537a486af48ad37d2c62dd09f9a406a80933cbd124ee4b08d10ae",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/compare_spike_ablation.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/compare_spike_ablation.py"
+      ]
+    },
+    {
+      "sha256": "eec2c8598ace1ccce0b2bd36938cb3a3625197b72e46b10ade3460bc391573bf",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/derenzo_campaign_common.py",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_common.py"
+      ]
+    },
+    {
+      "sha256": "f4e8231a209110d7cdfe37deffef5e2b8281e341f79d57aaf601e555296b26f5",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/derenzo_campaign_gate.py",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_gate.py"
+      ]
+    },
+    {
+      "sha256": "7dfdf0fa0d39afd7508e3134b930a42a4416e909eb56e5084bcb0b892e5f9ebf",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/derenzo_campaign_reconstruction.py",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_reconstruction.py"
+      ]
+    },
+    {
+      "sha256": "820fa85df69a1043be6d902965eba59370893cd9221a706f480750a348a5fc6c",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/derenzo_campaign_transport.py",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_transport.py"
+      ]
+    },
+    {
+      "sha256": "e754906b34805a4e1f31954b02e60c693a943689a23418f226cd8aa3f5865d79",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/derenzo_campaign_verify.py",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_verify.py"
+      ]
+    },
+    {
+      "sha256": "7c1d03a17171c571320afdf0ad39d68462e1afbc497916cd15d3f65dc02efa97",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/derenzo_campaign_workflow.py",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/derenzo_campaign_workflow.py"
+      ]
+    },
+    {
+      "sha256": "5c4fe73fbcca37510eff530d7a0c2798e8ca4f291660f77e479f4e3973790967",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/diagnose_ehe_cuboid_fold.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/physical_cuboid_read_only/diagnose_ehe_cuboid_fold.py"
+      ]
+    },
+    {
+      "sha256": "eacf5bea10214a0734f0645412137ffe88cf55ef462815112427b920dd21d127",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/fetch_nema_results.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/fetch_nema_results.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/fetch_nema_results.py"
+      ]
+    },
+    {
+      "sha256": "be9ec0296a7f12c949bf75211141d7f3f20d3b29dcf633136769582f8fc82a1b",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_5090_production_queue.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/watch_jscc_5e10_5090_production_queue.py"
+      ]
+    },
+    {
+      "sha256": "6a8bb7c024d7d7be0a69ba5360f2f31cacfe2f1b257d513435e69025bb4d36bb",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_8x2_selection_verification.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_verification_sources/jscc_5e10_8x2_selection_verification.py"
+      ]
+    },
+    {
+      "sha256": "dc16ac95ac216e2628b9d388d2bbb2dffe43f316ef8daf6ac1418e4bcb8b1965",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_formal_queue_gate.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/jscc_5e10_formal_queue_gate.py"
+      ]
+    },
+    {
+      "sha256": "84f6807c9766b885f1179ad5f4823880a528439bd6ca865e0b979f59742c6a75",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_gpu_uuid.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_sources/jscc_5e10_gpu_uuid.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x4_monitor_repair_sources/jscc_5e10_gpu_uuid.py"
+      ]
+    },
+    {
+      "sha256": "eb0f03b30264ab8e8d6888d6a3739034e8ab5f7bc3ddd79085d4bd817ed53527",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_runtime.py",
+        "experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011/jscc_5e10_runtime.py"
+      ]
+    },
+    {
+      "sha256": "12fdef0f807fa30faea287d0831059107978f39289d9c1257b369bcdfe6c9108",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_selection.py",
+        "experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011/jscc_5e10_selection.py"
+      ]
+    },
+    {
+      "sha256": "fe0077152508d9f460095f26d374b6aa6f1cd85f234f50cbe30f360661b7a3e6",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/jscc_5e10_selection_parts.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_verification_sources/jscc_5e10_selection_parts.py"
+      ]
+    },
+    {
+      "sha256": "2756fe0c796042d85d68771c63fa70b5cc49a048aad0759863dd335efbbf68bc",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/plot_ehe_5e10.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200/comparison/plot_ehe_5e10.py"
+      ]
+    },
+    {
+      "sha256": "b8770de7efa65dc7066ef6b93bc438b700b4da436473803d7467a19d8d1199cf",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/plot_ehe_forward_poisson.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200/comparison/plot_ehe_forward_poisson.py"
+      ]
+    },
+    {
+      "sha256": "09275092bea7b5d8457c866f60b6181510896801e646cff5283f61bd68ed1134",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/plot_ehe_forward_poisson_5e10.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200/comparison/plot_ehe_forward_poisson_5e10.py"
+      ]
+    },
+    {
+      "sha256": "a8933a3c0bdb0fb350bd4b6103bfb80cd296373b61792093140b0c85984da20a",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/plot_energy_four_iterations_v5.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000/four_channel_iterations_1669255/plot_energy_four_iterations_v5.py"
+      ]
+    },
+    {
+      "sha256": "f869244a4ce3c7cfffbc74fdad7d96e6737489c7306c1951c5cc2db63fd68196",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/plot_first_scatter_supplement.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2/comparison_1660254/scripts/plot_first_scatter_supplement.py"
+      ]
+    },
+    {
+      "sha256": "4f2b545e2470796e274da2b4e25d9251527478ce41dc28475385712ed3bd164c",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_218/pilot/source.mac",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_218/pilot/source.mac"
+      ]
+    },
+    {
+      "sha256": "d47a662703d147603465a47b8f93ec357de6c4f1c132a3ce9f8ddd961fba015b",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/EHE_440/pilot/source.mac",
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/JSCC_440/pilot/source.mac"
+      ]
+    },
+    {
+      "sha256": "0ef51b84de65bee4f9fab0fc44e620d71b833dbd477f1300075a16a621b255c2",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/recovery_20261019/resume_reconstruction_controllers_20261019.py",
+        "experiments/ELLIPSE500x300_H120/resume_reconstruction_controllers_20261019.py"
+      ]
+    },
+    {
+      "sha256": "f949ee2f94bc1fa107b1877934f10189d631db6b2e646ee7071d368477dddae4",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/test_derenzo_campaign.py",
+        "experiments/ELLIPSE500x300_H120/test_derenzo_campaign.py"
+      ]
+    },
+    {
+      "sha256": "19ae18e8a4a74e1b7873e95e6f98f18e2fdbfd0632ea4b610a3f257a3f010310",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/sources/test_derenzo_campaign_controller.py",
+        "experiments/ELLIPSE500x300_H120/test_derenzo_campaign_controller.py"
+      ]
+    },
+    {
+      "sha256": "8a06779240bc61bc362542e3d5f6de841b0e5fc936913af67ce4e5927a9218c1",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9/comparison/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/scripts/plot_nema_iterations.py"
+      ]
+    },
+    {
+      "sha256": "0df86012811f12cdc04ce6a10a6c35c5c84462a8aa390d3ab65742a13fae0726",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/mip_trim3/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/mip_projection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/mip_projection.py"
+      ]
+    },
+    {
+      "sha256": "4fd2639f1b6f67482a93b7f0e1f12e0b4613ce5b982698ce714605cff31bd3b9",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142/mip_trim3/scripts/plot_nema_mip.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim3/scripts/plot_nema_mip.py"
+      ]
+    },
+    {
+      "sha256": "87f1c1bb218dab0b04d542d7d70cbaef2864857c79179239ce26d33327fe44dd",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_20261004/scripts/plot_nema_iterations.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation/comparison_mip72_20261004/scripts/plot_nema_iterations.py"
+      ]
+    },
+    {
+      "sha256": "14ce627228e0140c30bb3daded4f3e33212195ee75f651310fc89531084ee90e",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876/mip_trim8/scripts/plot_nema_mip.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0/mip_trim8/scripts/plot_nema_mip.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1/mip_trim8/scripts/plot_nema_mip.py"
+      ]
+    },
+    {
+      "sha256": "e5bd6655a46f103b7f6298de2c324ede207d73ec342fd7aa9a7cbfef359d26f7",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/4eddb1bc22ad467e/validate_compton_regional_a_v3.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bf9d1f8f3d9b2abd/validate_compton_regional_a_v3.py"
+      ]
+    },
+    {
+      "sha256": "e84f34a7c6e20f71b40bf11ee9b5df31f58e2be41e638a7946404ae2078dad5f",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/792340bc34b3aa3c/compton_cell_response_field.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/7c448245a9569df4/compton_cell_response_field.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3/frozen_execution/bebe6050681e11ee/compton_cell_response_field.py"
+      ]
+    },
+    {
+      "sha256": "f75cb36b18e3cefac91241ab196c60d9c0d60f533e605cc41dfaa6b24d314ddc",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/comparison_full_trajectories/verify_ehe_jscc_trajectory_atlas.py",
+        "experiments/ELLIPSE500x300_H120/verify_ehe_jscc_trajectory_atlas.py"
+      ]
+    },
+    {
+      "sha256": "b844bb0c66f257dcd68f6e2babc3e10e0752ed4042de49224f43103f2dbdeae0",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/test_jscc_5e10_formal_queue_gate.py",
+        "experiments/ELLIPSE500x300_H120/test_jscc_5e10_formal_queue_gate.py"
+      ]
+    },
+    {
+      "sha256": "1ca3abe648191a5cd7bb8e2dd72df98f8c8706ea13d7c50e4d0424e883e045e1",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/production_5090_8x4_queue_sources/watch_test_jscc_5e10_queue_controller.py",
+        "experiments/ELLIPSE500x300_H120/test_jscc_5e10_queue_controller.py"
+      ]
+    },
+    {
+      "sha256": "efa75407c28fc997a747b58002840765366e11f35750c5b3887d021c0be90ba0",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_sources/jscc_5e10_contract.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_trial_sources/jscc_5e10_contract.py"
+      ]
+    },
+    {
+      "sha256": "34c7f196693e23757c2ec8a62360b99e7a8c8e41c485be8df732647813f3ce08",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_sources/jscc_5e10_selection.py",
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_trial_sources/jscc_5e10_selection.py"
+      ]
+    },
+    {
+      "sha256": "c46c1fee866888b38a92957b2efbbc707891a76109533942613b7fcfe113fdd7",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_monitor_repair_verification_sources/test_jscc_5e10_selection_parts.py",
+        "experiments/ELLIPSE500x300_H120/test_jscc_5e10_selection_parts.py"
+      ]
+    },
+    {
+      "sha256": "6280a3b4f284b0b8e62351c737bb9b4350887c11e5e49c0abeb35e34ae186443",
+      "paths": [
+        "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/selection_5090_8x2_trial_sources/test_jscc_5e10_5090_8x2_trial.py",
+        "experiments/ELLIPSE500x300_H120/test_jscc_5e10_5090_8x2_trial.py"
+      ]
+    },
+    {
+      "sha256": "ac74af027b1ad7d929d4f7af4f2d5103f954f91c2bcfd052ec468c53920284c1",
+      "paths": [
+        "tools/research/build_project_catalog.py",
+        "tools/research/build_reconstruction_results_index.py"
+      ]
+    },
+    {
+      "sha256": "487775cb0a4392ba11049b4361d5dbbd9c4ce1291fa6f905edba86e67f79b373",
+      "paths": [
+        "tools/research/prepare_ac225_registry_20261103.py",
+        "tools/research/verify_ac225_navigation.py"
+      ]
+    }
+  ]
+}

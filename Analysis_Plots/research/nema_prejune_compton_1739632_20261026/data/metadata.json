@@ -1,0 +1,51 @@
+{
+  "source_job": 1739632,
+  "transfer_receipt_sha256": "991bfa0d6e8b93c5bb4a5d637861bf998a4c5d6080cae2d7737a587f7e8b0efe",
+  "geometry_sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "truth_path": "D:\\JSCC_Recon\\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\\experiments\\ELLIPSE500x300_H120\\generated\\NEMA_Body_H60\\truth_3mm.npz",
+  "iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "mip": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "xy_sampling": "3 mm barycentric linear interpolation, matching z centers",
+  "smoothing": false,
+  "brightness_fit": false,
+  "scale": 1036.9020496292537,
+  "common_full_color_max": 33.52742385864258,
+  "resources": {
+    "gpu_peak_GiB": 18.0703125,
+    "gpu_peak_fraction": 0.5762825354064639,
+    "host_rss_peak_GiB": 20.20111846923828,
+    "host_peak_fraction": 0.1641741691468254,
+    "cache_max_GiB": 17.993676513433456,
+    "nodes": 8
+  },
+  "numerical_interpolation_roundoff": "Tiny negatives below 1e-14 of image maximum set to zero only in display/ROI copy; raw arrays unchanged; counts/minima recorded per frame",
+  "source_point_activity_not_confused_with_density": true,
+  "comparison_to_v5_not_yet_performed": true
+}

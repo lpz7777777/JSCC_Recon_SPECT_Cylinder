@@ -1,46 +1,31 @@
-# JSCC / EHE 三维SPECT重建工程
+# JSCC与EHE三维SPECT工程
 
-本工程研究218/440 keV双能、单光子与Compton观测、极坐标密度重建及响应校准。当前三维主实验位于 **ELLIPSE500x300_H120**：椭圆FOV500×300 mm、完整轴向120 mm、20视角。
+当前工程研究218/440keV的225Ac代理gamma成像：JSCC探头的单光子及同能量SC+Compton联合重建，EHE、OpenGATE/HE单光子成像，以及物理响应和离散化诊断。
 
-## 从这里开始
+**[打开工程与研究目录](docs/ac225/INDEX.html)** · **[打开成像结果](Analysis_Plots/results/REPORT.html)** · **[查看当前状态](docs/ac225/CURRENT_STATUS.md)**
 
-| 要查什么 | 入口 |
+| 查询内容 | 说明 |
 |---|---|
-| **225Ac标签下的218/440双能成像总览** | [双能研究导航](docs/ac225/README.md) |
-| 各组完成情况、作业号和当前阻点 | [带日期的状态快照](docs/ac225/CURRENT_STATUS.md) |
-| 按体模、探头、剂量和数据来源找实验 | [实验与证据索引](docs/ac225/EXPERIMENTS.md) |
-| 目录职责、原始数据及结果放在哪里 | [工程目录图](docs/ac225/DIRECTORY_MAP.md) |
-| 查源码、脚本及冻结副本 | [代码索引](docs/ac225/SOURCE_INDEX.md) |
-| 通道、光子数、串窗、ROI和成像单位 | [科学约定](docs/ac225/SCIENCE_CONVENTIONS.md) |
-| 查状态、继续既有流程的前置条件 | [操作说明](docs/ac225/OPERATIONS.md) |
-| 已完成Derenzo图像 | [绘图与可视化入口](Analysis_Plots/README.md) |
-| 后续信息响应与系统优化研究 | [跨工程研究桥接](docs/RESEARCH_STRATEGY.md) |
-| 其他说明与历史复现 | [文档目录](docs/README.md) |
+| [225Ac总导航](docs/ac225/README.md) | 研究类别、数据口径与查询示例 |
+| [完整工作流与运行边界](docs/ac225/WORKFLOW.md) | 环境、各阶段实际入口、输入输出、只读与有副作用命令 |
+| [研究结论](docs/ac225/CONCLUSIONS.md) | 已确认的现象、候选机制和剩余限制 |
+| [代码路线](docs/ac225/CODE_GUIDE.md) | 体模→输运→系统矩阵→重建→ROI/图像 |
+| [工程目录图](docs/ac225/DIRECTORY_MAP.md) | 源码、证据、运行数据、图形与历史位置 |
+| [实验与证据](docs/ac225/EXPERIMENTS.md) | 每个研究的参数、作业及交付状态 |
+| [科学口径](docs/ac225/SCIENCE_CONVENTIONS.md) | SC/JSCC命名、gamma预算、密度/体积、72mm MIP |
+| [操作和数据管理](docs/ac225/OPERATIONS.md) | 只读查询、冻结保护与目录维护 |
+| [其他工程文档](docs/README.md) | 基准、复现与跨工程研究 |
+
+当前三维主工程位于[experiments/ELLIPSE500x300_H120](experiments/ELLIPSE500x300_H120/README.md)，FOV为500×300×120mm；真实输运默认20角，60角仅指独立EHE前投影＋Poisson研究。NEMA及两种单能Derenzo的输入、几何、剂量分别登记。
+
+SC表示单光子，图中JSCC表示同能量SC+Compton联合；纯Compton单列。218和440不做跨能量图像求和。实际Geant4、矩阵合成投影和旧矩阵参考在结果目录中分开。当前光子数不是225Ac衰变数。
 
 ```powershell
-python tools/project_index.py list
-python tools/project_index.py show nema-jscc-5e10
-python tools/project_index.py list --topic derenzo
-python tools/project_index.py find compton
-python tools/project_index.py dirs --topic derenzo
+python tools/project_index.py list --topic nema
+python tools/project_index.py show ehe-nema-poisson-60view
+python tools/project_index.py find Compton
+python tools/project_index.py results --phantom NEMA --grid Cartesian4mm
 python tools/project_index.py check
 ```
 
-以上命令仅查询本地目录索引，不连接超算、不提交计算。状态是注明时间的证据快照，实时情况需查看相应登记与验收。
-
-## 重要语义
-
-- 工程中的“225Ac/双能”指文档定义的218/440 gamma代理源；当前模拟光子数不是Ac225衰变次数，也不是完整衰变链符合事件。
-- **SC=单光子成像**。JSCC可以指探头或440 keV下SC+Compton重建，须看具体通道；218/440不是同一个通道。
-- 后续不生成218与440的跨能量求和图。历史六路结果保留，当前生产以每个实验自己的合同为准。
-- EHE实际Geant4投影与矩阵前投影+Poisson是独立实验，索引中分开标注。
-
-## 工程与数据分层
-
-`Geant4Sim/`负责输运；`Auxiliary_Studies/`和`GenProj/`保留系统矩阵/测度研究；`experiments/`保存实验源码与小型证据；`Analysis_Plots/`保存可复现的图形工程；`docs/ac225/`统一导航。运行数据仍在各实验`generated/`，已冻结科学代码、验收和活跃任务路径保持原位。
-
-矩阵、事件数组、完整历史、大型归档、图像二进制和凭据不随本轮Git交付。源码、绘图脚本、几何参数、证据SHA与目录索引进入Git；详见[数据与Git规则](docs/ac225/DATA_POLICY.md)。
-
-[2026-10-19整理前的完整项目README](docs/history/PROJECT_README_20261019.md)保留旧双语教程和兼容入口；旧60 mm/FOV120说明不能替代当前椭圆实验合同。
-
-English: start with the [project map](docs/ac225/DIRECTORY_MAP.md), [experiment catalog](docs/ac225/EXPERIMENTS.md), and [legacy reproduction guide](Reproduction/README.md). Scientific execution paths and frozen results are preserved.
+原始源码、矩阵、事件、完整历史和已冻结发布保留原路径；新增分层目录保存说明及查询指针。旧本地60mm/FOV120接口继续从[Reproduction](Reproduction/README.md)和[Results](Results/README.md)查询。本轮实际迁移、保护清单与验收见[2026-11-17整理记录](docs/organization/20261117/README.md)。

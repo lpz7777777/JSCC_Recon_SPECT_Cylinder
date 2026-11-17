@@ -1,0 +1,233 @@
+{
+  "study": "ehe_crystal_response_20261029",
+  "generated_at": "2026-10-29T14:02:44.043372+08:00",
+  "detectors": [
+    {
+      "id_1based": 1139,
+      "letter": "A",
+      "label": "中央",
+      "x_mm": -2.0,
+      "z_mm": -2.0
+    },
+    {
+      "id_1based": 1717,
+      "letter": "B",
+      "label": "偏右中部",
+      "x_mm": 66.0,
+      "z_mm": -2.0
+    },
+    {
+      "id_1based": 2295,
+      "letter": "C",
+      "label": "右侧缘",
+      "x_mm": 134.0,
+      "z_mm": -2.0
+    },
+    {
+      "id_1based": 1156,
+      "letter": "D",
+      "label": "上缘",
+      "x_mm": -2.0,
+      "z_mm": 66.0
+    },
+    {
+      "id_1based": 2312,
+      "letter": "E",
+      "label": "右上角",
+      "x_mm": 134.0,
+      "z_mm": 66.0
+    },
+    {
+      "id_1based": 17,
+      "letter": "F",
+      "label": "左侧缘",
+      "x_mm": -134.0,
+      "z_mm": -2.0
+    }
+  ],
+  "energies_keV": [
+    218,
+    440
+  ],
+  "response_definition": "Existing production matched-energy window response, PE-windowed plus scatter; A=B/cell_volume_mm3",
+  "view_index_zero_based": 0,
+  "head_direction_in_FOV": "+y",
+  "rotation_views_combined": false,
+  "native_full_points": 132040,
+  "native_active_points": 78920,
+  "native_xy_points_per_layer": 3301,
+  "z_layers": 40,
+  "MIP_z_bounds_mm": [
+    -60,
+    60
+  ],
+  "MIP_native_center_z_range_mm": [
+    -58.5,
+    58.5
+  ],
+  "central_XY_slice_z_mm": 1.5,
+  "central_XZ_slice_y_mm": 1.5,
+  "physical_FOV_mm": [
+    500,
+    300,
+    120
+  ],
+  "ellipse_mask_applied_after_interpolation": true,
+  "whole_circle_unweighted_response_used_before_ellipse_query_mask": true,
+  "display_xy_pitch_mm": 3,
+  "color_map": "gray_r; absolute shared LogNorm across all crystals and both energies",
+  "log_display_range": [
+    1.0000000000000001e-11,
+    1e-05
+  ],
+  "values_below_display_minimum": "near-white display only; saved data retained",
+  "per_crystal_normalization": false,
+  "smoothing_sigma": 0,
+  "reconstruction_image": false,
+  "added_side_shield": false,
+  "new_transport_or_response_generation": false,
+  "B_equals_volume_times_A_relative_L2": {
+    "A218": [
+      4.781855757129938e-08,
+      5.785041747968572e-08,
+      5.4205615950372623e-08,
+      4.516432247503414e-08,
+      5.2409612689780704e-08,
+      5.8895417959627974e-08
+    ],
+    "A440": [
+      4.1982439568756124e-08,
+      5.5582001004962546e-08,
+      5.17951201732053e-08,
+      5.517953005616862e-08,
+      5.318992364525876e-08,
+      5.282473557155554e-08
+    ]
+  },
+  "source_matrix_evidence": {
+    "source": "Existing production EHE PE-windowed plus scatter matrices; no added shield",
+    "detector_ids_1based": [
+      1139,
+      1717,
+      2295,
+      1156,
+      2312,
+      17
+    ],
+    "matrix_order_polar": "[full_native_point132040,detector2312]",
+    "matrix_order_cartesian": "[detector2312,z40,y85,x85]",
+    "evidence": {
+      "A218": {
+        "factor_manifest_sha256": "fc6420503ca3bde86be7ef6ee6d96f467639a6103c74108ad5a3377d30f87a40",
+        "directory": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses_conversion_b02df58a9d3fd48c/A218",
+        "files": {
+          "SysMat_cartesian": {
+            "sha256": "aedafbac55179da95ad287e752c745803510d3049c96340198102c95640561dd",
+            "bytes": 2672672000,
+            "mtime_ns": 1791400433087656718,
+            "selected_shape": [
+              6,
+              40,
+              85,
+              85
+            ],
+            "selected_sha256": "5094c182e39ddd5b03dbf10c86d9d63ba396e20a1d2be3043fdd809ef82bbece"
+          },
+          "SysMat_polar": {
+            "sha256": "8378992380f5128ca73e19e7012a6c7f60e341124ee43afb49ba4460cd715425",
+            "bytes": 1221105920,
+            "mtime_ns": 1791407780963823596,
+            "selected_shape": [
+              6,
+              132040
+            ],
+            "selected_sha256": "f990dc99dd9ac4b5d41e059e1062439bc1738274161a994c942f070f7027f401"
+          },
+          "Params_Detector.dat": {
+            "sha256": "356f4dbafb5d832985ac86864fcb5d4404ce96f49263bca9e9402e0915ab4429",
+            "bytes": 110980
+          },
+          "Params_Image.dat": {
+            "sha256": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+            "bytes": 48
+          },
+          "Params_Collimator.dat": {
+            "sha256": "37021ce1bfe446c8e4a49f43314d21b5500a21fb5ae19d32cc9c10d84e57b267",
+            "bytes": 45400
+          },
+          "Params_Physics.dat": {
+            "sha256": "fcc8b091d2d3645f15af467a7a86227db282e4ef3f9735d4d074890b6402d15d",
+            "bytes": 48
+          },
+          "whole_geometry.npz": {
+            "sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+            "bytes": 2541077
+          }
+        }
+      },
+      "A440": {
+        "factor_manifest_sha256": "561cf66adf1e91f1f0040d406a33427e6cc814e2e5b109380930f7a5f2e8394b",
+        "directory": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/responses_conversion_b02df58a9d3fd48c/A440",
+        "files": {
+          "SysMat_cartesian": {
+            "sha256": "a62d1c86fc93dec5990284fc4adc564cacf8b82ae24e10acdff67b8f40c123b4",
+            "bytes": 2672672000,
+            "mtime_ns": 1791422803968764629,
+            "selected_shape": [
+              6,
+              40,
+              85,
+              85
+            ],
+            "selected_sha256": "9cd44d670d5ed0ffb8c7cfa83a81a6aff48b1b78f9e90e035ed8570de60a7482"
+          },
+          "SysMat_polar": {
+            "sha256": "e34bf81485508a4dc2543311d23a23e491b554faf076e1844b21c6cb6b22c163",
+            "bytes": 1221105920,
+            "mtime_ns": 1791422811741553246,
+            "selected_shape": [
+              6,
+              132040
+            ],
+            "selected_sha256": "5202f1889a0bfbafbd91b5cdb35862b9d7d41e2496ccd5bc8eaf2df2c751a309"
+          },
+          "Params_Detector.dat": {
+            "sha256": "49be34f0f72a5f129e4a32cabd93cf880aec887ddd2870ee04553ad40547b854",
+            "bytes": 110980
+          },
+          "Params_Image.dat": {
+            "sha256": "52d3522c3a071ca4e7e0c29019c05648449a3a222626b4b680aba5c0d1718f2d",
+            "bytes": 48
+          },
+          "Params_Collimator.dat": {
+            "sha256": "0ca1ece7c472dc284ab8b428e702928d89489526fad45fac7ac32b2ed25c4287",
+            "bytes": 45400
+          },
+          "Params_Physics.dat": {
+            "sha256": "cbf9de71d6b145fdccd08f8cb6bfcc25f29152c181b00fd5603d219173e933e3",
+            "bytes": 48
+          },
+          "whole_geometry.npz": {
+            "sha256": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+            "bytes": 2541077
+          }
+        }
+      }
+    },
+    "remote_read_only": true,
+    "new_Slurm_job": false,
+    "new_response_or_transport": false,
+    "remote_utc": "2026-10-29T05:59:29.876845+00:00"
+  },
+  "input_sha256": {
+    "experiments/ELLIPSE500x300_H120/generated/ehe_crystal_response_inspection_20261029/subset_receipt.json": "31dbb881b1a4ffb69932721199a00e2832bf898b297c00da96a189f025927bc1",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_crystal_response_inspection_20261029/response_subset.npz": "989a6ca07006f5cc8df8659b6ec36d1b92e558cee4bd024f9a0b22e58522a347",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_crystal_response_inspection_20261029/source_matrix_evidence.json": "bc7c9844fa940ff00df4bd9beb7bf038b0ba2fd3cdd50295ef35895dce2ff7e2",
+    "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/payload/whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200/geometry_evidence/raw/EHE_DetectorGeometry.csv": "9a17f4b4491daa36cc808a762af87709f168b057a41752f3f384c08a3201e160",
+    "experiments/ELLIPSE500x300_H120/analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "tools/research/plot_ehe_crystal_response_fields.py": "b8e8dd078ba9796936924e3b53089c8d573635a7d15bce2d9e3cb838cab04533"
+  },
+  "physical_model_calibration_limitations_retained": true,
+  "new_independent_single_crystal_Geant4_validation": false
+}

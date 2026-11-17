@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>旧纯Compton原始结果：备份证据与归因修订</title>
+<style>body{max-width:1180px;margin:36px auto;padding:0 28px 70px;background:#f6f8fb;color:#243744;font:17px/1.85 "Microsoft YaHei",sans-serif}h1{font-size:34px;line-height:1.4;color:#123c50}h2{font-size:24px;color:#12617b;margin-top:40px}p{margin:15px 0}.eyebrow,.caption{font-size:14px;color:#5d7180}.lead{font-size:21px}.note{border-left:5px solid #d99742;background:#fff7e9;padding:17px 23px;margin:24px 0}.good{border-left-color:#1d8791;background:#eaf5f7}table{width:100%;border-collapse:collapse;background:white;font-size:15px}th,td{padding:11px 14px;border:1px solid #d5e1e8;vertical-align:top;text-align:left}th{background:#e6eff4}img{width:100%;height:auto;background:white;border:1px solid #dde5eb}code{overflow-wrap:anywhere;font-size:14px}a{color:#116a8b}li{margin:10px 0}strong{color:#9d4e26}.scroll{overflow:auto}details{padding:14px 0}summary{cursor:pointer;font-weight:bold}pre{padding:18px;background:#e8eff4;overflow:auto}nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}@media(max-width:720px){body{padding:0 14px}h1{font-size:27px}th,td{padding:8px}}</style></head><body>
+<p class="eyebrow">2026-10-26 · 只读检查用户提供的F盘备份 · Image_JSCCD＝纯Compton</p>
+<h1>旧结果更少“成圈”，但并不更少尖峰</h1>
+<p class="lead">这批原始输出补上了上一轮Git审计缺少的证据。指定旧组的内部主要表现为后期颗粒尖峰；当前NEMA有更突出的径向明暗不均。你的视觉观察有依据，但不能据此把旧版称为无伪影，或把某个新提交直接定为原因。</p>
+<div class="note good"><b>需要修订上一轮判断：</b>指定旧组确实是纯Compton，20视角，角度/z stride均为1，使用已有文件S。联合SC的约束、粗网格插值、40视角、由本次成像事件现场重算S，这几种解释都不适用于这个具体运行。它们在历史代码中存在，不等于本组启用。</div>
+<nav><a href="#identity">运行身份</a><a href="#images">原始图像</a><a href="#metrics">颗粒与径向变化</a><a href="#broader">其他旧组</a><a href="#causes">原因排序</a><a href="#evidence">证据与下载</a></nav>
+
+<h2 id="identity">1. 从原始数组与日志确认的条件</h2>
+<div class="scroll"><table><tr><th>项目</th><th>指定旧组的实际证据</th><th>当前NEMA参照</th></tr>
+<tr><td>路线</td><td>Image_JSCCD，纯Compton；用户说明与JSCCD日志相符</td><td>440_ComptonOnly，作业1722760</td></tr>
+<tr><td>能量与输入标记</td><td>511 keV / ContrastPhantom_240_30 / count_level=5e9</td><td>440 keV / NEMA Body / 本次混合gamma实际5e10输运中的440支路</td></tr>
+<tr><td>网格与视角</td><td>20视角，1280点/层×20层；r=6…150 mm，Δr=6 mm，Δz=3 mm；FOV高度60 mm</td><td>20视角，500×300×120 mm，132040全域点、78920活动单元；内25环分段规则相同</td></tr>
+<tr><td>稀疏近似</td><td>名称含Sparse，但实际stride=(1,1)，fine=sparse=25600；本组没有粗化响应</td><td>无损float32分批载入，非粗网格插值</td></tr>
+<tr><td>迭代</td><td>纯Compton为5000次，每100次保存，共50帧；OSEM8。目录中ITER10000不能当成JSCCD的实际终点</td><td>MLEM10000次，每50次保存，200帧</td></tr>
+<tr><td>S</td><td>日志明确读取Factors/511keV_RotateNum20/Sensi_d；recompute_sparse_sensi_d=False</td><td>独立均匀源、相同当前核/筛选、密度基底对应的S</td></tr></table></div>
+<p>旧文件5,120,000字节，恰好为50×25600×4。全部50帧的最大值、均值和总和均与相邻执行日志相符；末帧与单独的Image_JSCCD逐值相等；全部有限且非负。CSV与MAT坐标一致，原始输入SHA在检查前后不变。<a href="data/primary_numerical_qa.json">数值核对</a> · <a href="data/primary_log_frame_checks.csv">50帧明细</a>。</p>
+<p>日志中use_file_sensi_d=False是旧的兼容参数，不能孤立解读为“没有读文件S”；实际执行消息已明确使用file-defined Sensi_d。旧5e9在这里仅作为运行标记，不将它追认为5e9次225Ac衰变，更不把511旧组与440当前组当成同物理条件。</p>
+
+<h2 id="images">2. 直接看指定旧组：中心切片与完整60 mm MIP</h2>
+<a href="figures/primary_cartesian_detail_fixed.png"><img src="figures/primary_cartesian_detail_fixed_preview.png" alt="旧纯Compton随100到5000次迭代的中心切片和完整60毫米MIP"></a>
+<p class="caption">上排z=+1.5 mm；下排覆盖原生20层完整60 mm。只对XY做线性显示插值到3 mm网格，无平滑和拟合增益。全序列固定0…1,000,000，细节版存在高值截色；5000次切片/MIP分别0.61%/4.78%显示点超出色标。每幅都有比例，原始值未截断。完整动态范围0…5,737,946、零截色版见下方。</p>
+<p>早期热棒可辨，后期越来越多孤立高点；MIP把不同z层的高点叠在同一个平面上，因此比单层杂乱。完整域最外r≈150 mm还有细圈。原生点同样有外圈高值，不能全归因于Cartesian插值。它属于外FOV边界现象，不能直接当成当前内部过渡区环纹的同一机制。</p>
+<details><summary>展开无截色版本与原生点版本</summary>
+<img src="figures/primary_cartesian_fullrange_preview.png" alt="旧组完整动态范围显示，无截色">
+<img src="figures/primary_native_detail_fixed_preview.png" alt="旧组原生代表点显示">
+<p class="caption">原生点本来就位于同心环上，“看见点排成环”本身不是环状伪影证据；判断的是数值颜色是否出现异常的整圈明暗。原生z最大值与先插值各层再求MIP的运算顺序不同，两者不冒充同一图。<a href="figures/primary_native_fullrange.png">原生点零截色全范围</a> · <a href="data/primary_display_saturation.csv">全部面板截色比例</a>。</p></details>
+
+<h2 id="metrics">3. 把颗粒起伏与整圈明暗分开看</h2>
+<p>在新旧两组完全对应的1920个原生中心上计算：r=84、90、96、102 mm；z=−10.5…+10.5 mm，共8层；每环60角度点。<b>原生点CV</b>衡量所有点的起伏，<b>径向CV</b>先将每一整圈和8层取均值，再衡量四圈之间的差异。后者也包含平滑径向梯度，单靠它不能证明周期环纹；需要结合图像和完整径向曲线。</p>
+<table><tr><th>组别</th><th>保存迭代号</th><th>全部原生点CV</th><th>四圈均值的径向CV</th></tr><tr><td>指定旧组 · 511 keV · OSEM8</td><td>5000</td><td>432.0%</td><td>13.1%</td></tr><tr><td>当前NEMA · 440 keV · MLEM</td><td>5000</td><td>74.5%</td><td>30.6%</td></tr><tr><td>当前NEMA · 440 keV · MLEM</td><td>10000</td><td>147.4%</td><td>60.3%</td></tr></table>
+<a href="figures/matched_native_morphology.png"><img src="figures/matched_native_morphology_preview.png" alt="原生点起伏与径向环平均起伏的不同演变"></a>
+<p>旧组虽然点与点之间起伏很大，但这些尖峰没有同样集中为四圈均值的强差异；当前结果则在后期发展出更明显的径向不均衡。这支持“旧图多颗粒、当前图更像明显环带”的描述，<strong>不是新旧算法质量排名或因果证明</strong>。</p>
+<div class="note"><b>这些数不是正式BV：</b>旧体模同名历史宏提示背景半径120 mm、高30 mm、六棒最外r=78 mm，但尚无宏SHA绑定到这组5e9原始事件。因此这里是探索性几何环带。新旧能量、体模、计数、未知量基底、响应核和求解不同；相同迭代号也不表示相同收敛。旧原值与当前密度值的绝对亮度不直接比较。图C的除均值仅定义无量纲曲线形状，未用于拟合或修改重建图像。</div>
+<p>角向频谱也不能只盯“20次周期”。旧5000次在r84/90/96/102的m20振幅虽为46.7%/81.6%/20.1%/29.5%，但在m1…29中只排第15/3/25/15，多数位置属于宽频颗粒。当前10000次在r84的m20排第1、占所列频谱功率24.0%，旧同半径仅2.8%。<b>旧版也不是完全没有20次周期：r108处m20已排第1、振幅75.1%。</b>因此不能写成“以前毫无网格印记、现在才突然出现”。r108未纳入上述共同环带，以减小当前NEMA体模边缘影响。<a href="data/matched_angular_spectral_selectivity.json">共同环带频谱</a> · <a href="data/primary_native_radial_angular_metrics.csv">旧全半径指标</a>。</p>
+
+<h2 id="broader">4. 不只检查一个文件</h2>
+<p>清点到97个Polar/Image_JSCCD_Iter历史文件（不是97个已认证独立实验）。按目录名和点数筛出27个20视角、511 keV、ContrastPhantom_240_30候选，读取原生最后一帧。2组有一致的相邻日志，23组只有目录条件，另2组存在目录/日志冲突。后两组已标注排除；未把其余不同体模或网格强行套用本次ROI。</p>
+<a href="figures/additional_native_finals_detail_fixed.png"><img src="figures/additional_native_finals_detail_fixed_preview.png" alt="另外两组旧纯Compton和指定主组的原生最后一帧"></a>
+<p class="caption">三个文件均为纯Compton；前两列的运行条件仅来自目录标签。共同固定色标0…1,000,000，有截色比例标注；<a href="figures/additional_native_finals_fullrange.png">查看共同完整动态范围，零截色</a>。保存原值与接受事件集合不同，不能由面板明暗比较算法效率。这里用于说明旧输出也有强尖峰、角向不均和外边界高值。</p>
+<table><tr><th>清单编号 / 目录条件</th><th>实际历史终点</th><th>原生点CV</th><th>五圈均值CV</th><th>条件可信度</th></tr><tr><td>59 · 5e9 / OSEM1</td><td>10000</td><td>216.3%</td><td>34.6%</td><td>条件仅据目录标签</td></tr><tr><td>60 · 5e9 / OSEM8</td><td>10000</td><td>483.3%</td><td>45.2%</td><td>条件仅据目录标签</td></tr><tr><td>72 · 5e9 / OSEM8，指定主组</td><td>5000</td><td>415.5%</td><td>17.1%</td><td>日志逐帧核对</td></tr><tr><td>56 · 5e10 / OSEM1</td><td>10000</td><td>92.0%</td><td>31.3%</td><td>条件仅据目录标签</td></tr><tr><td>57 · 5e10 / OSEM8</td><td>10000</td><td>253.1%</td><td>46.7%</td><td>条件仅据目录标签</td></tr></table>
+<p class="caption">本表沿用旧组扫描定义r84、90、96、102、108 mm，共2400点，故与上一节四圈1920点的数字不同。OSEM8与OSEM1的差异只能提示求解条件值得控制，事件接受数和执行版本未完全对齐，不能当作严格OSEM对照实验。</p>
+<details><summary>两个条件冲突的目录</summary><ul><li>清单编号92：<code>[Select]Sparse_2_2_SE_RotNum20_ContrastPhantom_240_30_511keV_5e10_1.0_SMap1.0_Delta0.0_Alpha1.0_ER0.1_OSEM8_ITER10000_SDU96667186_DDU10945986</code><br>冲突：count_level：目录 5e10 / 日志 1e11; compton_theta_stride：目录 2 / 日志 4。保留原文件，排除条件比较。</li><li>清单编号93：<code>[Select]Sparse_4_2_SE_RotNum20_ContrastPhantom_240_30_511keV_1e11_1.0_SMap1.0_Delta0.0_Alpha1.0_ER0.1_OSEM8_ITER10000_SDU193308374_DDU21875842</code><br>冲突：data_file_name：目录 ContrastPhantom_240_30 / 日志 HotRodPhantom_10_30_30; count_level：目录 1e11 / 日志 5e10; compton_theta_stride：目录 4 / 日志 2。保留原文件，排除条件比较。</li></ul></details>
+
+<h2 id="causes">5. 新证据如何改变原因排序</h2>
+<table><tr><th>候选解释</th><th>这次能确认什么</th><th>修订后的判断</th></tr>
+<tr><td>以前看的是SC+Compton</td><td>指定文件及本次清单均为Image_JSCCD纯Compton；主组日志和输出逐帧闭合</td><td><b>排除为本例解释。</b></td></tr>
+<tr><td>以前靠粗网格插值压低高频</td><td>主组实际stride1/1，fine=sparse=25600</td><td><b>排除为本例解释。</b>其他stride4/2旧组需另算，不能混入。</td></tr>
+<tr><td>以前是40视角、没有这些过渡圈</td><td>主组20视角；内圈20→40→60→80，过渡在r≈39、75、111 mm，与当前对应</td><td><b>排除“过渡是后来新加的”。</b>仍支持网格与模型相互作用的可能。</td></tr>
+<tr><td>旧S由成像事件现场构造，把不均匀性吸收了</td><td>日志明确使用已有文件S，未开启现场recompute</td><td><b>排除现场重算分支。</b>该S最初怎么生成、是否严格匹配当时核/筛选，仍需来源证明。</td></tr>
+<tr><td>筛选Neff≥50→≥1</td><td>Git代码变化存在；4月strict/sparse分支有50门槛。但本组未保存实际执行源SHA</td><td><b>保留候选，降低确定性。</b>不能把“本组实际一定使用50”写成事实，更不能认定它已证明根因。</td></tr>
+<tr><td>体积因子漏乘、重复乘</td><td>上一轮当前冻结源码审计为响应与S同密度基底、V只乘一次。旧点基底代码没有显式V</td><td><b>目前无直接漏乘/重复证据。</b>正确基底变换本身不应制造新物理图像；但旧未知量单位、初始化和S一致性需区分。</td></tr>
+<tr><td>A×K代表点近似与不均匀柱单元</td><td>旧与当前都没有完成整个单元内A×K积分；主组已经排除了粗化插值这一干扰</td><td><b>仍是优先隔离对象。</b>相同网格不同核、筛选与事件统计可显露不同空间模式。</td></tr>
+<tr><td>角度高斯核→连续能量v5核、首晶体响应代理及S校准改变</td><td>Git与当前冻结源码有实质差异；旧备份输出显示尖峰与角向模式早已存在</td><td><b>需要同条件配套S对照。</b>不支持“v5从零创造了所有伪影”，也不能据旧组宣称v5已经更好。</td></tr>
+<tr><td>OSEM8→全批MLEM、迭代与显示范围</td><td>旧纯Compton5000/OSEM8/FOV60；当前10000/MLEM/FOV120。旧中心切片比完整MIP干净</td><td><b>明确混杂因素。</b>当前环带不应仅归于显示；共同中心24mm原生统计仍有径向差异。</td></tr></table>
+<p>一种待检验的解释是：旧图中很强的宽频颗粒，使有组织的环带不那么显眼；核与求解改变后，颗粒和系统性网格误差的相对强弱发生变化。这与以前10月同事件局部对照“v5显著压低极端尖峰、整体背景CV改善很小”的记录相容，<strong>但这次不同能量/体模的历史比较不能证明这条因果链</strong>。</p>
+
+<h2>6. 这次找回的S比Git快照更接近运行证据，但仍有边界</h2>
+<p>备份的Sensi_d：min=1.8783535×10⁻⁴，max=3.2634125×10⁻⁴，mean=2.3736313×10⁻⁴，与主组日志打印精度内一致，SHA-256为<code>48026966b1faeffb36688fe0624771a139d7167b46e85404e08881a3cb86c462</code>。它不同于上一轮图中读取的5月Git S（min≈1.952784×10⁻⁴、max≈3.150909×10⁻⁴）。因此，本组分析使用备份S，不再拿5月Git S冒充实际旧S。</p>
+<p>日志没有记录S文件SHA，统计一致不能替代当年逐字节身份绑定。当前F盘仓库HEAD为7月27日，strict处理脚本修改时间在7月，连续核文件在10月；主组输出的文件时间却在4月。这个备份混合多个时点，<b>不能拿备份根目录当前源码直接认定4月执行代码</b>。文件时间也不是不可伪造的执行日期。<a href="data/backup_code_dates.json">备份代码时点</a>。</p>
+<p>体积问题仍要保持同一物理含义：若旧变量为单元总量x，新变量为浓度ρ，x=Vρ，则响应、S和初值都应配套变换。只给结果除V、或只删除当前响应里的V，会改变模型，不能当成修复。这里未擅自给旧图做体积重标定或拟合亮度。</p>
+
+<h2>7. 下一步最有判别力的对照</h2>
+<p>我会把下一步优先级放在<b>固定当前真实事件和求解，仅改变基底角相位或完整A×K单元积分，并重配S</b>；随后固定网格，分开比较角度核/连续能量核，以及Neff筛选策略。这样才能区分网格采样、核的近似和筛选各自的作用。旧组提供了现象和排除证据，但不能替代这一控制变量实验。</p>
+<p>仅旋转角相位主要检验角向锁定，它不移动径向分段边界；若要直接验证“20→40等环数跳变”导致径向环纹，还需独立设计改变径向分段位置或保持角采样密度平滑的对照，同样匹配S。不能把一次角相位实验未改变环纹解释成排除全部柱坐标网格因素。</p>
+<div class="note good">本轮已完成备份读取、原始可视化与证据修订；没有运行新的重建或提交超算作业，没有修改旧数组、备份或上一轮报告。尚未找到唯一根因。</div>
+
+<h2 id="evidence">8. 可追溯材料</h2>
+<ul><li><a href="data/primary_summary.json">主组输入SHA、坐标、帧数、科学检查</a> · <a href="data/primary_readme.txt">主组说明</a> · <a href="data/primary_visual_qa.json">主组视觉QA</a></li>
+<li><a href="data/inventory.json">97项原生历史清单</a> · <a href="data/contrast_20view_final_native_scan.csv">27候选最后一帧指标</a> · <a href="data/contrast_20view_final_native_scan.json">条件冲突、日志和SHA详情</a></li>
+<li><a href="data/matched_geometric_shell_old_current.csv">共同四圈指标CSV</a> · <a href="data/comparison_identity.json">当前/旧原始输入SHA、对应中心检查与指标定义</a></li>
+<li><a href="evidence/run_072_print_log.txt">指定旧组完整日志</a> · <a href="evidence/contrast_macro_git_64ff63a.m">同名历史体模宏，未绑定本组原事件</a></li>
+<li><a href="figures/primary_native_metrics.png">旧全径向与角向指标图</a> · <a href="artifact_sha256.json">本报告文件SHA清单</a></li>
+<li><a href="../nema_compton_git_history_20261026/REPORT.html">上一轮Git审计（其中本例不适用的候选已在本报告修订）</a> · <a href="../nema_compton_transition_audit_20261026/REPORT.html">过渡区与体积审计</a> · <a href="../nema_compton_ring_diagnosis_20261026/REPORT.html">当前NEMA原生环纹诊断</a></li></ul>
+<details><summary>指定旧组目录</summary><code>F:\12345备份\JSCC_Recon\20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor\Results\Legacy\Figure\Sparse_1_1_SE_RotNum20_ContrastPhantom_240_30_511keV_5e9_1.0_SMap1.0_Delta0.0_Alpha1.0_ER0.1_OSEM8_ITER10000_SDU1.17e7_DDU1.09e6</code></details>
+</body></html>

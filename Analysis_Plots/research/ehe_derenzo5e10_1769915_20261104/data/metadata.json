@@ -1,0 +1,146 @@
+{
+  "source_job": 1769915,
+  "actual_monoenergy_gamma_per_energy": 50000000000,
+  "not_Ac225_decays": true,
+  "iterations": [
+    10,
+    20,
+    40,
+    60,
+    100,
+    200
+  ],
+  "MIP": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "full_XY": true,
+  "smoothing": false,
+  "fitted_intensity_gain": false,
+  "colormap": "gray_r white low black high",
+  "display_vmax": 2.0,
+  "unclipped_shared_vmax": 3.5279037952423096,
+  "sources": {
+    "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200/payload/whole_geometry.npz": "8e7a5f54e59b7bd7ce0db723a42d71b131e8c840f22982d541deb5e77df72aa4",
+    "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60/truth_3mm.npz": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+    "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/manifest.json": "18e6552337a911e98fcdc47917dac035aa937d917e13c08e4757db0d8fa11c4c",
+    "experiments/ELLIPSE500x300_H120/analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874",
+    "experiments/ELLIPSE500x300_H120/mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "tools/research/plot_derenzo_completed.py": "231d7b29e62f7e725f2057b7b6bf578f3c62aedbdeeebfcf9a62a0a4e8b3fe99",
+    "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016/transport_freeze.json": "f497b3f9afa54bf791cfee6023830a883f72e0fe5f982848117a9e00dc6ac54e",
+    "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_440keV_geometry.json": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+    "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_218keV_geometry.json": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_dense_reruns_20261102\\EHE_440\\input\\collection.json": "f53732d1effdf2514b8df7f5b1878c62ebd149dc076600ee054d42f12757fd54",
+    "experiments\\ELLIPSE500x300_H120\\generated\\ehe_dense_reruns_20261102\\EHE_218\\input\\collection.json": "b2da4c2b67b5dbb7f519d51e97d422d625d6d897d0c380eda488a394aa496118",
+    "tools\\research\\plot_ehe_derenzo5e10_1769915.py": "1954952eb613e2e84885a16d57ccd21518286f372d26af21280b1390a4715745",
+    "tools\\research\\plot_ehe_dense_completed_1761244.py": "03e1a8f0898a1dbdbcba155d2b23151828c56444654565bc2c06d32ddf8f1357",
+    "tools\\research\\plot_derenzo_completed.py": "231d7b29e62f7e725f2057b7b6bf578f3c62aedbdeeebfcf9a62a0a4e8b3fe99",
+    "experiments\\ELLIPSE500x300_H120\\mip_projection.py": "29d4665ef92032984e8ccad58216054442e9114f645bc6731520501622b2e594",
+    "experiments\\ELLIPSE500x300_H120\\analyze_nema_result.py": "69b6d6ddac64ace0359db354f03ae22386c67d6b9872f398432818e2aec2e874"
+  },
+  "strict_receipt_sha256": "536a104f728576b89f30891ab52964cce987ac03ca6a5893b484c07812a7e01b",
+  "all400_frames_numerical_QA_passed": true,
+  "physical_calibration_passed": false,
+  "spatial_resolution_certified": false,
+  "original_radial_grid_mm": 6.0,
+  "layout": [
+    {
+      "stem": "derenzo_5e10_iteration_mip_72mm",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "derenzo_5e10_iteration_mip_72mm_unclipped",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "derenzo_5e10_final_mip_72mm",
+      "off_canvas_text": []
+    },
+    {
+      "stem": "derenzo_5e10_final_mip_72mm_unclipped",
+      "off_canvas_text": []
+    }
+  ],
+  "cases": [
+    {
+      "condition": 4,
+      "energy_keV": 440,
+      "phantom": "Derenzo",
+      "dose": "5e10",
+      "normalization_density": 98426.06251817894,
+      "normalization": "actual monoenergy gamma / exact frozen hot-rod volume; no fitted gain",
+      "truth_metadata": {
+        "subsamples_per_axis": 24,
+        "analytic_hot_volume_mm3": 507995.5320854695,
+        "sampled_hot_volume_mm3": 507915.00010946766,
+        "relative_volume_error": -0.00015852890609346915,
+        "source": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_440keV_geometry.json",
+        "sha256": "1f6b0d8a3e0bd8d0fefcdac4e76d150d9dab37c3e4832028d39cc002225fa17b",
+        "diameters_mm": [
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "rod_count": 53
+      },
+      "source_history_sha256": "393b34c8d2bc58832db78e1de70e15343c623204597d916839fba1090e45f114",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.79702823421234e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      }
+    },
+    {
+      "condition": 5,
+      "energy_keV": 218,
+      "phantom": "Derenzo",
+      "dose": "5e10",
+      "normalization_density": 107740.95795552082,
+      "normalization": "actual monoenergy gamma / exact frozen hot-rod volume; no fitted gain",
+      "truth_metadata": {
+        "subsamples_per_axis": 24,
+        "analytic_hot_volume_mm3": 464076.0667882842,
+        "sampled_hot_volume_mm3": 463976.24948544195,
+        "relative_volume_error": -0.0002150882365752338,
+        "source": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016/transport_payload/designs/derenzo_218keV_geometry.json",
+        "sha256": "ab54e37d767d59bc7e20f2628ff9871dddd99f2ed0a9f2cb3ad71d7173b75591",
+        "diameters_mm": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "rod_count": 114
+      },
+      "source_history_sha256": "5a441a780647be2ef0447e7c1d19f0e08de730adfeea6f55eb07f083eb772a50",
+      "numerical_checks": {
+        "matched_s_relative_L2": 7.147530185014287e-08,
+        "finite_nonnegative": true,
+        "domain_outside_zero": true,
+        "checkpoints": 200
+      }
+    }
+  ]
+}

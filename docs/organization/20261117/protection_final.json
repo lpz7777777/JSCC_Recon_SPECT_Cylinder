@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-11-17T06:46:18.137182+00:00",
+  "passed": true,
+  "protected_files": 621,
+  "protected_changed": [],
+  "frozen_payload_checks": [
+    {
+      "release": "95022158ffedcdd7",
+      "files_checked": 60,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "release": "a502c70af71dea0e",
+      "files_checked": 61,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "controllers": [
+    {
+      "registration": "experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/completion_transfer_r6_registration_20261117.json",
+      "pid": 18108,
+      "registration_status": "STOPPED_FAILURE",
+      "registration_stage": "FORMAL_FAILED",
+      "actual_exists": false,
+      "identity_matches": false
+    },
+    {
+      "registration": "experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115/formal_4090_8x1_r2_20261117/controller_registration.json",
+      "pid": 22172,
+      "registration_status": "STOPPED_FAILURE",
+      "registration_stage": "FORMAL_FAILED",
+      "actual_exists": false,
+      "identity_matches": false
+    }
+  ],
+  "large_matrices_not_rehashed": "Existing strict SHA receipts used; no TB content reads or scientific recomputation.",
+  "scientific_jobs_submitted_or_cancelled": 0,
+  "scientific_data_moved_or_deleted": 0
+}

@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "scope": "Direct actual preview layout/source-faithful display review only",
+  "reviewed_at": "2026-11-02T21:02:27.651935+08:00",
+  "manual_visual_review_pending": false,
+  "actual_preview_SHA256": {
+    "figures/four_dose_final_mip_72mm_preview.png": "289d4ae3487040ce028e561729e075cc1272007a5755536c37d453681929b9d7",
+    "figures/four_dose_final_mip_72mm_unclipped_preview.png": "95ff8b0cb25d4fcfb7635b96f898dd71c5cd95d07cb8e7bb11f1fb16d4bf5799",
+    "figures/energy_440_four_dose_iterations_72mm_preview.png": "d070ab859b415709c15d5bfb48df91a32e84db2bc0edcd083aeec5ebb2cd8a15",
+    "figures/energy_440_four_dose_iterations_72mm_unclipped_preview.png": "779eca055e0c5e9b06185e9edd2c048777b3285a089f40523f32dc2b435b4add",
+    "figures/energy_218_four_dose_iterations_72mm_preview.png": "d1c497208b0549aeeb40aea31e0e74bf28cfe0a96014c093b3478da38f167673",
+    "figures/energy_218_four_dose_iterations_72mm_unclipped_preview.png": "533f34b1036b40a821a4d3df11764b7f15b3dc6516f62284deede85b843050f4",
+    "figures/all200_native_edge_and_source_error_preview.png": "87b7589b863440e5b2294371dfe93876282da626e9f8b9a467d13ab17ae18ab4",
+    "figures/selected6_original3D_ROI_BV_CNR_preview.png": "8df4a557bc0b7777f8805e8c3c9c198ea614f85a173dc2379d4ccef9bc53acb1"
+  },
+  "checked": [
+    "All8actualpreviewfamilies viewed via image tool",
+    "Dose,energy,synthetic labels clear",
+    "All titles,legends,axes,colorbars visible",
+    "Main common0to10 and commonunclipped0to73.81791687011719 ranges shown",
+    "FullXY and72mmMIP retained",
+    "Original3mmtruth andmatchednativequerytruth separatelyshown",
+    "Real low-count edge artifacts andhigh-count blur preserved",
+    "BV-CNR onlyactual6frames andfull3DROI; all200nativecurvesboundtoCSV"
+  ],
+  "original_plot_metadata_sha256": "993fb20e4173c907c3c43af7199dc13286d8247de2b211ff3417a3fc3cf5afda",
+  "independent_selected_display_qa_sha256": "65a5605ac9b4759f28e56fdd294de9f599186856cd55a0deaed633a6d14f64c8",
+  "final_native_summary": [
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "iteration": 200,
+      "edge_peak_over_background": 68.96796456407725,
+      "edge_emission_fraction_72mm": 0.13417743394623635,
+      "source_matched_native_NRMSE": 2.9708003635588516
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 218,
+      "iteration": 200,
+      "edge_peak_over_background": 60.46923561237452,
+      "edge_emission_fraction_72mm": 0.14047436401399388,
+      "source_matched_native_NRMSE": 3.6498757701727023
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "iteration": 200,
+      "edge_peak_over_background": 18.4466910267914,
+      "edge_emission_fraction_72mm": 0.048220486447551135,
+      "source_matched_native_NRMSE": 0.8682658178122997
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 218,
+      "iteration": 200,
+      "edge_peak_over_background": 16.615640218146083,
+      "edge_emission_fraction_72mm": 0.05308925433256959,
+      "source_matched_native_NRMSE": 1.0846964494013656
+    },
+    {
+      "dose": "5e11",
+      "energy_keV": 440,
+      "iteration": 200,
+      "edge_peak_over_background": 4.214897835145614,
+      "edge_emission_fraction_72mm": 0.015190743721911407,
+      "source_matched_native_NRMSE": 0.3572876453931183
+    },
+    {
+      "dose": "5e11",
+      "energy_keV": 218,
+      "iteration": 200,
+      "edge_peak_over_background": 3.227520776954898,
+      "edge_emission_fraction_72mm": 0.016719404518847337,
+      "source_matched_native_NRMSE": 0.38438650557649723
+    },
+    {
+      "dose": "5e12",
+      "energy_keV": 440,
+      "iteration": 200,
+      "edge_peak_over_background": 0.4439197975393625,
+      "edge_emission_fraction_72mm": 0.008829275637108789,
+      "source_matched_native_NRMSE": 0.26302929823203725
+    },
+    {
+      "dose": "5e12",
+      "energy_keV": 218,
+      "iteration": 200,
+      "edge_peak_over_background": 0.7077481454617419,
+      "edge_emission_fraction_72mm": 0.01041069856780372,
+      "source_matched_native_NRMSE": 0.24843177383873674
+    }
+  ],
+  "conclusion": "匹配原生矩阵合成数据在5e9/5e10也重现明显FOV边缘高值。在当前网格、视角、响应和无正则MLEM/背景估计流程下，Poisson采样即可形成这一类伪影，不需要真实Geant4输运与响应失配作为前提。提高到5e12后边缘高值显著减弱，但200次匹配原生源NRMSE仍为440约26.3%、218约24.8%，图像仍有模糊和小球对比不足。没有噪声实现集合、无噪声重建或独立网格实验，不能估计真实Geant4结果中各因素的因果贡献，也不排除已发现的物理响应失配。",
+  "physical_calibration_passed": false,
+  "image_quality_certification_passed": false,
+  "full1600_history_local_QA": false,
+  "causal_contribution_fraction_estimated": false
+}

@@ -1,0 +1,52 @@
+{
+  "reviewed_at": "2026-10-29T12:55:56.378996+08:00",
+  "review_method": "Actual view_image inspection of all six previews; final_mip_unclipped full-resolution PNG also viewed",
+  "layout_passed": true,
+  "all_labels_and_legends_readable": true,
+  "no_text_or_image_clipping": true,
+  "all_expected_panels_present": true,
+  "gray_r_direction_correct": true,
+  "center72mm_and_no_fit_disclosed": true,
+  "main_common_scale_0_10": true,
+  "unclipped_companion_shared_range": [
+    0,
+    55.36633682250977
+  ],
+  "figure_files_sha256": {
+    "figures\\final_mip_comparison_preview.png": "b01c4d9ac26e5c541b62a41b7a26580653cc2b91fdfbe7439b8775c786182c98",
+    "figures\\iteration_mip_gallery_preview.png": "74b58d0919c84ae36cbcb7efbab2ecbe21015f931d8bb69344c716e2575c379d",
+    "figures\\cnr_bv_iterations_preview.png": "d72534a7231bad2ee4b547a00d5445926d198e9a12cc9a1898d63691efb521a9",
+    "figures\\bv_cnr_trajectory_preview.png": "c89795e1e0aba721613d4886e17a9f091213477c94e194fc3aee60d09dbc2021",
+    "figures\\central_slices_preview.png": "5b3e3d4eb0bec8b91c3da7a793f31d8d99fd5d2585b84fd0d2b9760b4a78a0ae",
+    "figures\\final_mip_unclipped_preview.png": "de50818f0be7ed3231ffd692abb0a3c8189e3a7a91d19784c2faba736ad6a6d4"
+  },
+  "observations": [
+    "PureCompton shows strong concentric rings and spotted peaks that become more prominent with iteration.",
+    "The joint final MIP is visually close to SC; strong pureCompton ring/spot features are substantially reduced, while blurred boundaries and nonuniform background remain.",
+    "13mm hot-sphere recovery is limited in both SC and joint; no 13mm resolution certification is claimed.",
+    "CNR/BV curves preserve the pureCompton negative13mm CNR, late BV increase, and BV-CNR trajectory turns.",
+    "Shared unclipped scale makes all methods lighter but exposes the pureCompton maximum55.37 without per-image rescaling."
+  ],
+  "fixed_10000_iteration_findings": {
+    "SC_BV_percent": 40.50102587482149,
+    "joint_BV_percent": 35.937728034960806,
+    "joint_BV_relative_reduction_percent": 11.267116674932353,
+    "SC_hot_CNR_13_22_37": [
+      1.7161183040062713,
+      7.164660911833572,
+      20.11693140039897
+    ],
+    "joint_hot_CNR_13_22_37": [
+      1.2204352473030007,
+      7.146141212898624,
+      20.946506491527085
+    ]
+  },
+  "scientific_image_quality_certified": false,
+  "limitations": [
+    "Execution/transfer/numerical QA is separate from physical response validation.",
+    "Improvement is not uniform across sphere sizes:13mm CNR decreases,22mm is similar,37mm slightly improves.",
+    "These displays do not establish that the cause of Compton rings has been fixed.",
+    "No smoothing, brightness fitting, XY crop, or218/440cross-energy sum was applied."
+  ]
+}

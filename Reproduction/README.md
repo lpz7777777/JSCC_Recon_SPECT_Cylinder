@@ -1,5 +1,7 @@
 # JSCC-SPECT 圆柱面探测器极坐标重建 — 完整复现指南
 
+这是历史511keV/旧本地接口教程；下述版本、目录与示例不是当前225Ac正式研究入口。当前500×300×120mm、HE/Cartesian、实际投影及匹配S请从[完整工作流](../docs/ac225/WORKFLOW.md)和[各研究冻结](../docs/ac225/EXPERIMENTS.md)进入。旧Step4说明只供历史参照，现有图形统一从[Analysis_Plots](../Analysis_Plots/README.md)查询；不要按旧教程重复成功计算。
+
 ## 项目简介
 
 本项目实现了基于联合康普顿散射编码（JSCC）的 SPECT 成像重建流程，使用圆柱面探测器（32x64x4 晶体阵列）和极坐标系统矩阵。

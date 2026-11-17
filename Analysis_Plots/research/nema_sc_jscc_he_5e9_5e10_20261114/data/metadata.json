@@ -1,0 +1,363 @@
+{
+  "study": "nema_sc_jscc_he_5e9_5e10_20261114",
+  "created_utc": "2026-11-14T12:03:08.693133+00:00",
+  "routes": [
+    {
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "SC",
+      "source_job": 1669255,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "normalization_density": 456.4035256096357,
+      "primary_counts": [
+        1469053733,
+        3530946267,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "345772b82959e979b870a7b01039bd4cda627d12e652d1ea04bf5540d8f2a68a"
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "SC",
+      "source_job": 1669255,
+      "channel": "440_SinglePhoton",
+      "normalization_density": 1036.9020496292537,
+      "primary_counts": [
+        1469053733,
+        3530946267,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "acbc91640100fa2f452ae276f33cd9a08eb5e2596107f03908043952dd85da6b"
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "source_job": 1669255,
+      "channel": "440_SinglePlusCompton",
+      "normalization_density": 1036.9020496292537,
+      "primary_counts": [
+        1469053733,
+        3530946267,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "4e2bafc39fdd7232a9bcf6ff2e0ccbf9579ce4b96fd14f12ba69e29f664e29af"
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "SC",
+      "source_job": 1722760,
+      "channel": "218_SinglePhoton_CrossTalkCorrected",
+      "normalization_density": 4563.945133832929,
+      "primary_counts": [
+        14690247248,
+        35309752752,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "be434694a16cf81efc163b52a59efb3dea99e132e334618eecc14378e2ca1da5"
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "SC",
+      "source_job": 1722760,
+      "channel": "440_SinglePhoton",
+      "normalization_density": 10369.105682131578,
+      "primary_counts": [
+        14690247248,
+        35309752752,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "5341918d2936cc1634efa88a341c0039a85bd99385af03c58d7495cea7526eb3"
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "source_job": 1740189,
+      "channel": "440_SinglePlusCompton",
+      "normalization_density": 10369.105682131578,
+      "primary_counts": [
+        14690247248,
+        35309752752,
+        0
+      ],
+      "endpoint": 10000,
+      "selected": [
+        100,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "raw_history_sha256": "eb94088696bcccc3c355839928ecafb13d207ce731974d71143eaf9deb9ab1a9"
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "218_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "440_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "218_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "HE",
+      "source_job": "LOCAL_CPU_8",
+      "channel": "440_SinglePhoton",
+      "normalization_density": 1.0,
+      "endpoint": 200,
+      "selected": [
+        1,
+        10,
+        25,
+        50,
+        100,
+        200
+      ]
+    }
+  ],
+  "route_count": 10,
+  "figures": [
+    "final_440keV_5e9_vs_5e10",
+    "final_440keV_5e9_vs_5e10_unclipped",
+    "final_218keV_5e9_vs_5e10",
+    "final_218keV_5e9_vs_5e10_unclipped",
+    "iterations_5e9_440keV",
+    "iterations_5e9_440keV_unclipped",
+    "bv_cnr_5e9_440keV",
+    "iterations_5e9_218keV",
+    "iterations_5e9_218keV_unclipped",
+    "bv_cnr_5e9_218keV",
+    "hot_sphere_recovery_5e9",
+    "iterations_5e10_440keV",
+    "iterations_5e10_440keV_unclipped",
+    "bv_cnr_5e10_440keV",
+    "iterations_5e10_218keV",
+    "iterations_5e10_218keV_unclipped",
+    "bv_cnr_5e10_218keV",
+    "hot_sphere_recovery_5e10"
+  ],
+  "main_figures": [
+    "final_440keV_5e9_vs_5e10",
+    "final_218keV_5e9_vs_5e10",
+    "iterations_5e9_440keV",
+    "iterations_5e10_440keV"
+  ],
+  "truth_sha256": "2612f0ed6839f9460722711e1017a10102e83adf77cf715d5c2553cfaec948af",
+  "ROI_policy": "nema_h60_sphere_center_margin15_common_background_20261010",
+  "background_mask_sha256": "917c9988880c592d17314e040133feebe241ad3b966f4e105efd27b0130c5f35",
+  "background_voxels": 97604,
+  "sphere_rule": "Original3D centers; distance <= radius-1.5mm; equal3mm voxel weights",
+  "background_std_ddof": 1,
+  "SC_JSCC_selected_actual_iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "HE_selected_actual_iterations": [
+    1,
+    10,
+    25,
+    50,
+    100,
+    200
+  ],
+  "central_MIP_slab_edges_mm": [
+    -36,
+    36
+  ],
+  "SC_JSCC_MIP_query_layers": 24,
+  "HE_native_MIP_layers": 18,
+  "physical_FOV_mm": [
+    500,
+    300,
+    120
+  ],
+  "display_xy_limits_mm": [
+    -252,
+    252,
+    -152,
+    152
+  ],
+  "smoothing": false,
+  "fitted_gain": false,
+  "cross_energy_sum": false,
+  "main_relative_density_range": [
+    0,
+    10
+  ],
+  "full_range_companions": true,
+  "color_map": "gray_r",
+  "raw_count_density_normalized_once": true,
+  "HE_density_normalization_reapplied": false,
+  "metric_provenance": [
+    {
+      "dose": "5e9",
+      "energy_keV": 218,
+      "method": "SC",
+      "full_saved_metric_points": 200,
+      "initial_state_rows_retained": 1,
+      "raw_original_ROI_source": "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010",
+      "intensity_divided_by_normalization_once": true,
+      "CNR_BV_ratios_unchanged": true
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "SC",
+      "full_saved_metric_points": 200,
+      "initial_state_rows_retained": 1,
+      "raw_original_ROI_source": "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010",
+      "intensity_divided_by_normalization_once": true,
+      "CNR_BV_ratios_unchanged": true
+    },
+    {
+      "dose": "5e9",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "full_saved_metric_points": 200,
+      "initial_state_rows_retained": 1,
+      "raw_original_ROI_source": "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010",
+      "intensity_divided_by_normalization_once": true,
+      "CNR_BV_ratios_unchanged": true
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 218,
+      "method": "SC",
+      "full_saved_metric_points": 200,
+      "initial_state_rows_retained": 1,
+      "raw_original_ROI_source": "Analysis_Plots/research/nema_jscc5e10_20261026/data",
+      "intensity_divided_by_normalization_once": true,
+      "CNR_BV_ratios_unchanged": true
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "SC",
+      "full_saved_metric_points": 200,
+      "initial_state_rows_retained": 1,
+      "raw_original_ROI_source": "Analysis_Plots/research/nema_jscc5e10_20261026/data",
+      "intensity_divided_by_normalization_once": true,
+      "CNR_BV_ratios_unchanged": true
+    },
+    {
+      "dose": "5e10",
+      "energy_keV": 440,
+      "method": "JSCC",
+      "full_saved_metric_points": 200,
+      "initial_state_rows_retained": 1,
+      "raw_original_ROI_source": "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data",
+      "intensity_divided_by_normalization_once": true,
+      "CNR_BV_ratios_unchanged": true
+    }
+  ],
+  "old_initial_parameter_all1_is_not_same_physical_density_as_HE": true,
+  "undefined_initial_CNR_retained": true,
+  "iteration_metric_rows": 2006,
+  "sphere_metric_rows": 12036,
+  "selected_images": 60,
+  "script_archive": "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/scripts/plot_nema_sc_jscc_he_20261114_6abac207fcd1.py",
+  "numerical_QA_passed": true,
+  "visual_QA_passed": true,
+  "physical_calibration_passed": false,
+  "spatial_resolution_certified": false,
+  "parent_visual_QA": "data/parent_visual_qa.json",
+  "parent_normalization_audit": "data/parent_normalization_audit.json"
+}

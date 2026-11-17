@@ -1,447 +1,4909 @@
 {
-  "schema_version": 1,
-  "snapshot_at": "2026-10-19T13:10:49.801628+08:00",
+  "schema_version": 3,
   "directories": [
     {
       "path": "Analysis_Plots",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "Analysis_Plots/README.md",
+      "description": "图形工程；当前条件入口与按日期保留的原科学图集。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Analysis_Plots/research/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_correction_methods_explainer_20261105",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_correction_methods_explainer_20261105/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_correction_methods_explainer_20261105/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_correction_methods_explainer_20261105/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_meeting_slides_20261029",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/reference/ac225-meeting-slides.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ac225-meeting-slides"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_meeting_slides_20261029/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_meeting_slides_20261029/output",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/assets",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/build",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/output",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/reference",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/rendered",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/rendered_final",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_20261116/rendered_v2",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/README.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/assets",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/build",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/output",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/rendered_final",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_results_meeting_he_derenzo_20261116/source_backup",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_completed_20261105",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_completed_20261105/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_completed_20261105/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_completed_20261105/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_correction_overview_20261108",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/water-scatter-v2.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "water-scatter-v2"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_corrections_20261103",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/water-sc-first.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "water-sc-first"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_corrections_20261103/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_corrections_20261103/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_corrections_20261103/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_final_overview_20261107",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_scatter_audit_20261107",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ac225_water_scatter_v2_20261107",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/advisor_progress_20261014",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/reference/advisor-progress.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "advisor-progress"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/advisor_progress_20261014/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/derenzo_218_440_design_20261014",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/history/history-derenzo-218-440-design-20261014.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "history-derenzo-218-440-design-20261014"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261014/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/derenzo_218_440_design_20261015",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/history/history-derenzo-218-440-design-20261015.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "history-derenzo-218-440-design-20261015"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/design/derenzo-design-selected.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "derenzo-design-selected"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_equal_regions/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/history/history-derenzo-218-440-design-20261015-sparse36.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "history-derenzo-218-440-design-20261015-sparse36"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_218_440_design_20261015_sparse36/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/derenzo/derenzo-completed-figures.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "derenzo-completed-figures"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/history",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_completed_5e9_20261019/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/derenzo/derenzo-jscc-5e10-440-joint.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "derenzo-jscc-5e10-440-joint"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_joint5e10_1771220_20261112/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_jscc440_5e9_20261023",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_jscc440_5e9_20261023/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_jscc440_5e9_20261023/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/derenzo_jscc440_5e9_20261023/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_collimator_response_audit_20261029",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/ehe-collimator-audit.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-collimator-audit"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_collimator_response_audit_20261029/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_collimator_response_audit_20261029/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_collimator_response_audit_20261029/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_crystal_response_20261029",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/ehe-crystal-response.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-crystal-response"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_crystal_response_20261029/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_crystal_response_20261029/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_crystal_response_20261029/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_completed_1761244_20261102",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/nema-ehe-dense-5e9.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "derenzo-ehe-dense-5e9",
+        "nema-ehe-dense-5e10",
+        "nema-ehe-dense-5e9"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_completed_1761244_20261102/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/ehe-dense-edge.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-dense-edge"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/forward_cpu",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_edge_diagnosis_20261102/visuals_agent",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/synthetic/ehe-nema-poisson-60view.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-nema-poisson-60view"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/history",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_60view_poisson_20261102/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/synthetic/ehe-nema-poisson-20view.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-nema-poisson-20view"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_dense_nema_low_noise_20261102/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/derenzo/derenzo-ehe-dense-5e10.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "derenzo-ehe-dense-5e10"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_derenzo5e10_1769915_20261104/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_edge_diagnosis_20261019",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/ehe-edge-original.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-edge-original"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_edge_diagnosis_20261019/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_edge_diagnosis_20261019/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_edge_diagnosis_20261019/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_fov_clearance_20261102",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/ehe-fov-clearance.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-fov-clearance"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_fov_clearance_20261102/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_fov_clearance_20261102/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_fov_clearance_20261102/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_side_shield_design_20261029",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/design/ehe-side-shield-design.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "ehe-side-shield-design"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_side_shield_design_20261029/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_side_shield_design_20261029/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/ehe_side_shield_design_20261029/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/legacy_compton_backup_audit_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/compton-legacy-backup.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "compton-legacy-backup"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/legacy_compton_backup_audit_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/legacy_compton_backup_audit_20261026/evidence",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/legacy_compton_backup_audit_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/legacy_compton_backup_audit_20261026/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_cnr_bars_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_cnr_bars_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_cnr_bars_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_cnr_bars_20261115/qa",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_cnr_bars_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_gaussian_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_gaussian_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_gaussian_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_gaussian_20261115/qa",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_best_ssim_gaussian_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_jscc10000_width_comparison_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_jscc10000_width_comparison_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_jscc10000_width_comparison_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_jscc10000_width_comparison_20261115/qa",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_jscc10000_width_comparison_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/compton-new-vs-old.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "compton-new-vs-old"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_new_vs_prejune_20261026/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc6300_jscc10000_he63_images_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc6300_jscc10000_he63_images_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc6300_jscc10000_he63_images_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc6300_jscc10000_he63_images_20261115/qa",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc6300_jscc10000_he63_images_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc_jscc_he_ssim_nrmse_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc_jscc_he_ssim_nrmse_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc_jscc_he_ssim_nrmse_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc_jscc_he_ssim_nrmse_20261115/qa",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_sc_jscc_he_ssim_nrmse_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width100_vs80_preview_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width100_vs80_preview_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width100_vs80_preview_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width100_vs80_preview_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width_sweep_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/nema-width-sweep.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "nema-width-sweep"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width_sweep_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width_sweep_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width_sweep_20261115/qa",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema5e9_width_sweep_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bg_out_error_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/nema-bg-out-error-20261115.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "nema-bg-out-error-20261115"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bg_out_error_20261115/cache",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bg_out_error_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bg_out_error_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bg_out_error_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bv_cnr_218_440_20261023",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_bv_cnr_218_440_20261023/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_git_history_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/compton-git-history.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "compton-git-history"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_git_history_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_git_history_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_git_history_20261026/historical_visuals",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_git_history_20261026/source_snapshots",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_ring_diagnosis_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/compton-ring.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "compton-ring"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_ring_diagnosis_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_ring_diagnosis_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_ring_diagnosis_20261026/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_transition_audit_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/compton-transition.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "compton-transition"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_transition_audit_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_transition_audit_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_compton_transition_audit_20261026/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_joint5e10_1740189_20261029",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_joint5e10_1740189_20261029/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_joint5e10_1740189_20261029/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_joint5e10_1740189_20261029/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_jscc5e10_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_jscc5e10_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_jscc5e10_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_jscc5e10_20261026/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_prejune_compton_1739632_20261026",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_prejune_compton_1739632_20261026/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_prejune_compton_1739632_20261026/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_prejune_compton_1739632_20261026/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_roi_audit_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/nema-roi-audit-20261115.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "nema-roi-audit-20261115"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_roi_audit_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_roi_audit_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_roi_audit_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/nema-sc-jscc-he-5e9-5e10-20261114.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "nema-sc-jscc-he-5e9-5e10-20261114"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_5e9_5e10_20261114/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/nema-sc-jscc-he-cnr-crc-bv-20261114.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "nema-sc-jscc-he-cnr-crc-bv-20261114"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_cnr_crc_bv_20261114/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/diagnostics/nema-sc-jscc-he-gaussian-20261115.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "nema-sc-jscc-he-gaussian-20261115"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/cache",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_sc_jscc_he_gaussian_20261115/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
     },
     {
       "path": "Analysis_Plots/research/nema_structure_20261014",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "dated-scientific-artifact",
+      "guide": "Analysis_Plots/research/nema_structure_20261014/README.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/nema_structure_20261014/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e10_20261113",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/opengate-ehe-5e10.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "opengate-ehe-5e10"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/history",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e10_20261113/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_20261113",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_20261113/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_20261113/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_20261113/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/opengate-ehe-5e9.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "opengate-ehe-5e9"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_ehe_nema5e9_rotfix_20261113/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": "docs/ac225/studies/nema/opengate-he-nema.md",
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": [
+        "opengate-he-nema"
+      ]
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/5e9_preview",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/cache",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/data",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/figures",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/scripts",
+      "local_only": false,
+      "role": "dated-scientific-artifact",
+      "guide": null,
+      "description": "按日期保留的原图集/指标/脚本，结果与QA范围按metadata。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Analysis_Plots/results/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/218keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/JSCC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/JSCC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e10/20views/440keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/218keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/218keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/JSCC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/JSCC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/Derenzo/5e9/20views/440keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/218keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/218keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/JSCC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/JSCC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e10/20views/440keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/218keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/218keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/JSCC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/JSCC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/actual/NEMA/5e9/20views/440keV/SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/Cartesian-4090r2-218-SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/Cartesian-4090r2-218-SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/Cartesian-4090r2-440-JSCC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/Cartesian-4090r2-440-JSCC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/Cartesian-4090r2-440-SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/Cartesian-4090r2-440-SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/Cartesian-5090-218-SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/Cartesian-5090-218-SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/Cartesian-5090-440-JSCC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/Cartesian-5090-440-JSCC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/Cartesian-5090-440-SC",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/Cartesian-5090-440-SC/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e10-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e10-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e10-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e10-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e9-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e9-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e9-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-Derenzo-5e9-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-NEMA-5e10-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-NEMA-5e10-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-NEMA-5e10-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-NEMA-5e10-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-NEMA-5e9-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-NEMA-5e9-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/HE-NEMA-5e9-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/HE-NEMA-5e9-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e10-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e10-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e10-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e10-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e9-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e9-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e9-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/OpenGATE-EHE-NEMA-5e9-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/actual-NEMA-5e10-440-Compton",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/actual-NEMA-5e10-440-Compton/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_pool3_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_pool3_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_pool3_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_pool3_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_raw_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_raw_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_raw_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_attenuation_tew_raw_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_none_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_none_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e10_none_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e10_none_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_pool3_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_pool3_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_pool3_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_pool3_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_raw_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_raw_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_raw_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_attenuation_tew_raw_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_none_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_none_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-EHE_5e9_none_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-EHE_5e9_none_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_pool3_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_pool3_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_pool3_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_pool3_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_raw_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_raw_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_raw_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_attenuation_tew_raw_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_none_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_none_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_none_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e10_none_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_pool3_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_pool3_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_pool3_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_pool3_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_raw_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_raw_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_raw_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_attenuation_tew_raw_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_none_218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_none_218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_none_440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-JSCC_5e9_none_440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e10-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e10-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e10-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e10-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e9-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e9-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e9-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-EHE-5e9-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e10-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e10-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e10-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e10-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e9-218",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e9-218/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e9-440",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/water-v2-JSCC-5e9-440/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/width-100",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/width-100/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/width-60",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/width-60/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/conditions/width-80",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/conditions/width-80/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e10/60views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e11/60views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e12/60views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/20views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/218keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/218keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/218keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/218keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/440keV",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/440keV/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/440keV/EHE",
+      "local_only": false,
+      "role": "current-result-pointer",
+      "guide": "Analysis_Plots/results/current/synthetic/NEMA/5e9/60views/440keV/EHE/README.md",
+      "description": "条件分类与指针；README/case.json连接原结果，不复制科学数组。",
+      "related_study_ids": []
     },
     {
       "path": "Auxiliary_Studies",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "Auxiliary_Studies/README.md",
+      "description": "系统矩阵、因子转换、Compton灵敏度及独立辅助研究。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/CRCVAR_SinglePhoton",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Auxiliary_Studies/CRCVAR_SinglePhoton/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/ComptonSystemMatrixPrototype",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Auxiliary_Studies/ComptonSystemMatrixPrototype/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/EventOrderInference_Experiment",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Auxiliary_Studies/EventOrderInference_Experiment/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/FreePath",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Auxiliary_Studies/GPU-Based-System-Matrix-Calculation-for-SPECT-PET-main/ReadMe.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/LinePofile",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/Reference",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Auxiliary_Studies/Sensitivity_SPECT_PolarCoor/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "CntStat",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "旧本地计数输入位置，不能等同当前独立generated投影。",
+      "related_study_ids": []
     },
     {
       "path": "Factors",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "旧本地矩阵接口，当前系统矩阵按具体冻结合同。",
+      "related_study_ids": []
     },
     {
       "path": "Geant4Sim",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/README.md",
+      "description": "真实Geant4输运实现、宏和各探头代码；源身份由研究合同绑定。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/3D_DRO_Hoffman_v6_20160331_DICOM",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/3D_DRO_Hoffman_v6_raw",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Geant4Code",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/Geant4Code/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_CntStatOnly",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/Geant4Code_CntStatOnly/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_CntStatResponseStudy",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/Geant4Code_CntStatResponseStudy/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_EHE",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/Geant4Code_EHE/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Geant4Code_GAGGIntrinsicResponse",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/Geant4Code_GAGGIntrinsicResponse/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Macro",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/Preview",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/UniformFovCntStat_Run",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "Geant4Sim/UniformFovCntStat_Run/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/run",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "Geant4Sim/tests",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "GenProj",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "GenProj/README.md",
+      "description": "极坐标源测度与历史前投影，密度/体积约定的参考。",
+      "related_study_ids": []
     },
     {
       "path": "List",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "旧本地事件列表接口，当前事件身份按原研究SHA。",
+      "related_study_ids": []
     },
     {
       "path": "Reproduction",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "Reproduction/README.md",
+      "description": "历史本地复现教程，与当前500×300×120mm工程分开。",
+      "related_study_ids": []
     },
     {
       "path": "Results",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "Results/README.md",
+      "description": "旧本地60mm结果接口；当前结果查Analysis_Plots/results。",
+      "related_study_ids": []
     },
     {
       "path": "distributed",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "distributed/README.md",
+      "description": "历史通用分布式重建入口，不代替当前正式发布。",
+      "related_study_ids": []
     },
     {
       "path": "docs",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "docs/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/analysis-figures",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/analysis-figures/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/calibration-physics",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/calibration-physics/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/documentation-navigation",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/documentation-navigation/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/execution-control",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/execution-control/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/frozen-or-artifact-copy",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/frozen-or-artifact-copy/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/geometry-source",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/geometry-source/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/reconstruction",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/reconstruction/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/shared-or-legacy-source",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/shared-or-legacy-source/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/transport",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/transport/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/code/verification-tests",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/code/verification-tests/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/history",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/derenzo",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/derenzo/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/design",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/design/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/diagnostics",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/diagnostics/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/ehe",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/ehe/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/history",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/history/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/nema",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/nema/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/reference",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/reference/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "docs/ac225/studies/synthetic",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/synthetic/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "experiments",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "experiments/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "experiments/ELLIPSE500x300_H120/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/ac225_corrections",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "experiments/ELLIPSE500x300_H120/ac225_corrections/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/Diagnostics",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/GalleryFrames",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/Geometry",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/HistorySelected",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_Body_H60",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-source-truth.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-source-truth"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/NEMA_upload_5e9",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/PilotInputs",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/PointQA",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/PointScan",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/PointSelectedCntStat",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/RemoteResults",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/Simulation",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/SpikeAblation",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/TransportCounts",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/XCAT_1e9",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/XCAT_1e9_fullx",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/water-sc-first.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "water-sc-first"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ac225_water_scatter_v2_20261107",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/water-scatter-v2.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "water-scatter-v2"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/baseline_validation_tmp",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/collections",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/compton_energy_probability_v5_5e9_full10000",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-jscc-5e9-v5.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-jscc-5e9-v5"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/compton_first_scatter_v2",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/compton_response_geometry_v3",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_equal_regions_mono_5e9_20261016",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/derenzo/derenzo-jscc-218.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "derenzo-design-selected",
+        "derenzo-ehe-218",
+        "derenzo-ehe-440",
+        "derenzo-jscc-218",
+        "derenzo-jscc-440"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_joint5e10_preview_1771220_20261112",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc440_formal_1722673_20261023",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_joint_5e10_8x3_20261104",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_joint_5e10_continue_20261104",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_joint_5e10_retry_20261102",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/derenzo/derenzo-jscc-5e10-440-joint.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "derenzo-jscc-5e10-440-joint"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_jscc_mono_5e10_20261030",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/derenzo/derenzo-jscc-5e10-218.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "derenzo-jscc-5e10-218"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/derenzo_sc440_5e10_1752461_20261112",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_crystal_geometry_audit_20261029",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_crystal_response_inspection_20261029",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_60view_poisson_20261102",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/synthetic/ehe-nema-poisson-60view.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "ehe-nema-poisson-60view"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_dense_nema_low_noise_20261102",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/synthetic/ehe-nema-poisson-20view.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "ehe-nema-poisson-20view"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_dense_reruns_20261102",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/derenzo/derenzo-ehe-dense-5e10.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "derenzo-ehe-dense-5e10"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_dense_results_1761244_20261102",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_dense_surface_20261029",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/ehe/ehe-dense-matrix.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "ehe-dense-matrix"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_dense_visual_frames_1761244_20261102",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/ehe_derenzo5e10_results_1769915_20261104",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e10_200",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/reference/nema-ehe-poisson-5e10.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-ehe-poisson-5e10"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/ehe_forward_poisson_5e9_200",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/reference/nema-ehe-poisson-5e9.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-ehe-poisson-5e9"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e10_200",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-ehe-g4-5e10.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-ehe-g4-5e10"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/ehe_spect_5e9_200",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-ehe-g4-5e9.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-ehe-g4-5e9"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/execution_repair_20261020",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/formal_only_20261022_135623",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/jscc_geant4_5e10_10000",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-jscc-5e10.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-jscc-5e10"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema5e9_cartesian_he_20261115",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-cartesian-5090.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-cartesian-4090-r2",
+        "nema-cartesian-5090"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema5e9_width_sweep_20261115",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-width-sweep.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-width-sweep"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_5e10_v5_joint_20261026",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_5e9_prejune_compton_20261026",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_5e9_prejune_compton_8x1_20261026",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_joint5e10_formal_1740189_20261029",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/nema-5e10-v5-joint.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "nema-5e10-v5-joint"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_jscc5e10_formal_1722760_20261026",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_prejune_1739632_delivered_20261026",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/nema_vram_repair_20261022",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/opengate_ehe_nema5e10_20261113",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/opengate-ehe-5e10.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "opengate-ehe-5e10"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/opengate_ehe_nema5e9_20261113",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/opengate_ehe_nema5e9_rotfix_20261113",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/opengate-ehe-5e9.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "opengate-ehe-5e9"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/opengate_he_derenzo_20261116",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/derenzo/opengate-he-derenzo.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "opengate-he-derenzo"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/opengate_he_nema_20261114",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": "docs/ac225/studies/nema/opengate-he-nema.md",
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": [
+        "opengate-he-nema"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/process_list_global_audit_v4",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/resource_rebalance_20261022",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/resource_rebalance_20261022_v2",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/generated/resource_rebalance_20261022_v3",
+      "local_only": true,
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/generated/response_mismatch_cut3_v1",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "原运行数据位置；按同名研究reports及manifest查证，不移动或自动清理。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/history",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "experiments/ELLIPSE500x300_H120/history/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/nema/nema-jscc-5e10.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": [
+        "derenzo-jscc-440",
+        "nema-current-roi",
+        "nema-jscc-5e10",
+        "nema-source-truth"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/Derenzo/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_equal_regions_mono_5e9_20261016",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/derenzo/derenzo-jscc-218.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "derenzo-ehe-218",
+        "derenzo-ehe-440",
+        "derenzo-jscc-218"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_8x3_20261104",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_8x3_20261104/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_continue_20261104",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_continue_20261104/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_retry_20261102",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_joint_5e10_retry_20261102/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/derenzo_jscc_mono_5e10_20261030",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/derenzo/derenzo-jscc-5e10-218.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "derenzo-jscc-5e10-218",
+        "derenzo-jscc-5e10-440-sc"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/Derenzo/opengate_he_derenzo_20261116",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/EHE",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/EHE/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_60view_poisson_20261102",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_60view_poisson_20261102/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_nema_low_noise_20261102/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_reruns_20261102/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_dense_surface_20261029",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/ehe/ehe-dense-matrix.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "ehe-dense-matrix"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/EHE/ehe_fov_clearance_20261102",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-source-truth.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-source-truth"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/5e9",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-5e9.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-5e9"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_1e9_1643142",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-nema-body-h60-1e9-1643142.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-nema-body-h60-1e9-1643142"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_1644876",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-nema-body-h60-5e9-1644876.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-nema-body-h60-5e9-1644876"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_bind_f010_formal_1651956_0",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-nema-body-h60-5e9-bind-f010-formal-1651956-0.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-nema-body-h60-5e9-bind-f010-formal-1651956-0"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/NEMA_Body_H60_5e9_huber_weak_formal_1651956_1",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-nema-body-h60-5e9-huber-weak-formal-1651956-1.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-nema-body-h60-5e9-huber-weak-formal-1651956-1"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_corrections_20261103",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/water-sc-first.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "water-sc-first"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ac225_water_scatter_v2_20261107",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/water-scatter-v2.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "water-scatter-v2"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/diagnostics/compton-v5-ideal.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "compton-v5-ideal"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/diagnostics/compton-v5-legacy.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "compton-v5-legacy"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_energy_probability_v5_5e9_full10000",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-jscc-5e9-v5.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-jscc-5e9-v5"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_first_scatter_v2",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/diagnostics/first-scatter-v2.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "first-scatter-v2"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/compton_response_geometry_v3",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/fine-response-v3.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "fine-response-v3"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e10_200",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/reference/nema-ehe-poisson-5e10.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-ehe-poisson-5e10"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_forward_poisson_5e9_200",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/reference/nema-ehe-poisson-5e9.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-ehe-poisson-5e9"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e10_200",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-ehe-g4-5e10.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-ehe-g4-5e10"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/ehe_spect_5e9_200",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-ehe-g4-5e9.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-ehe-g4-5e9"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/jscc_geant4_5e10_10000/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_cartesian_he_20261115/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema5e9_width_sweep_20261115/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e10_v5_joint_20261026",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-5e10-v5-joint.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-5e10-v5-joint"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_20261026",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_20261026/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_4x1_20261026",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_8x1_20261026",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_5e9_prejune_compton_8x1_20261026/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_bg_out_error_20261115",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_roi_audit_20261115",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_sc_jscc_he_20261114",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_sc_jscc_he_cnr_crc_bv_20261114",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_sc_jscc_he_cnr_crc_bv_20261114/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_sc_jscc_he_gaussian_20261115",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/nema_sc_jscc_he_gaussian_20261115/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e10_20261113",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/opengate-ehe-5e10.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "opengate-ehe-5e10"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_20261113",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_20261113/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_ehe_nema5e9_rotfix_20261113",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/opengate-ehe-5e9.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "opengate-ehe-5e9"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/opengate_he_nema_20261114",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/opengate-he-nema.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "opengate-he-nema"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_audit",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-process-list-audit.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-process-list-audit"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_followup_20261004",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-process-list-followup-20261004.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-process-list-followup-20261004"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/process_list_global_audit_v4",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/diagnostics/event-physics-audit.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "event-physics-audit"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/response_mismatch_cut3_v1",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/response-cut3-old.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "response-cut3-old"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_ablation",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/spike-ablation.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "spike-ablation"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/NEMA_Body_H60/spike_research",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/history/history-spike-research.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "history-spike-research"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/ac225_progress_20261116",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/dual_energy_review_20261010/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/execution_repair_20261020",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/execution_repair_20261020/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/formal_only_20261022_135623",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-jscc-5e10.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "derenzo-jscc-440",
+        "nema-jscc-5e10"
+      ]
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/iteration_galleries",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/iteration_galleries/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/nema_interior_roi_20261010",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "docs/ac225/studies/nema/nema-current-roi.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": [
+        "nema-current-roi"
+      ]
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/nema_vram_repair_20261022",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/nema_vram_repair_20261022/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/nema_vram_repair_20261022_134028",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/reconstruction_status_20261020_2232",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/reconstruction_status_20261021_154326",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/reconstruction_status_20261022_132548",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/rerun_dense_ehe_jscc_20261102",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/rerun_dense_ehe_jscc_20261102/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022_v2",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022_v2/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022_v3",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/resource_rebalance_20261022_v3/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/resource_reschedule_20261022_125233",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/selection_1685272_manual_review_20261011/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_20261011/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
     },
     {
       "path": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "stage-evidence",
+      "guide": "experiments/ELLIPSE500x300_H120/reports/storage_cleanup_zxc_20261011/README.md",
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/reports/storage_migration_n56_20261111",
+      "local_only": false,
+      "role": "stage-evidence",
+      "guide": null,
+      "description": "研究合同、冻结、登记与阶段证明，原字节保留。",
+      "related_study_ids": []
+    },
+    {
+      "path": "experiments/ELLIPSE500x300_H120/studies",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "docs/ac225/studies/nema/nema-cartesian-5090.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": [
+        "nema-cartesian-4090-r2",
+        "nema-cartesian-5090",
+        "nema-width-sweep",
+        "opengate-he-derenzo"
+      ]
     },
     {
       "path": "experiments/FOV120",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "experiments/FOV120/README.md",
+      "description": "另一代几何/历史实验，不能和当前源、矩阵混用。",
+      "related_study_ids": []
     },
     {
       "path": "tests",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     },
     {
       "path": "tmp",
       "local_only": true,
-      "role": "local-runtime-data"
+      "role": "local-runtime-data",
+      "guide": null,
+      "description": "本地临时工作文件；目录存在不表示可自动删除。",
+      "related_study_ids": []
     },
     {
       "path": "tools",
       "local_only": false,
-      "role": "source-report-or-artifact-directory"
+      "role": "source-or-documentation",
+      "guide": "tools/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/baseline",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/diagnostics",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/evaluation",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/legacy",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/navigation",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "tools/navigation/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/research",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": "tools/research/README.md",
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/runners",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/security",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
+    },
+    {
+      "path": "tools/visualization",
+      "local_only": false,
+      "role": "source-or-documentation",
+      "guide": null,
+      "description": "源码、组件或说明目录；按已有README及相关研究入口阅读。",
+      "related_study_ids": []
     }
   ],
-  "note": "Shallow directory inventory only; ignored runtime arrays are not scanned or moved."
+  "note": "Shallow metadata discovery, no recursive TB data content scan"
 }

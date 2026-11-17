@@ -1,0 +1,382 @@
+{
+  "jobs": {
+    "440": {
+      "command": "sbatch --parsable -p gpu_5090 --account=scxi717 --qos=gpugpu -N1 -n1 -c8 --gres=gpu:1 --time=4320 --array=1,5-15%1 --dependency=afterany:1772388_0 --job-name=ACW_formal440_cache_r5 --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/logs/ACW_formal440_cache_r5_%A_%a.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/logs/ACW_formal440_cache_r5_%A_%a.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/scripts/ACW_formal440_cache_r5.sh",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5",
+      "script_sha256": "ece638b3ad55c5e294eaa7847161055ddd8778c3cc91ef793dfb479f262b1781",
+      "host": "gpu",
+      "submitted_epoch": 1793785241.0595746,
+      "job": 1772573,
+      "sbatch_result": "1772573"
+    },
+    "218": {
+      "command": "sbatch --parsable -p gpu_5090 --account=scxi717 --qos=gpugpu -N1 -n1 -c8 --gres=gpu:1 --time=4320 --array=0-15%4 --dependency=afterok:1772388_0:1772388_2:1772388_3:1772388_4:1772573 --job-name=ACW_formal218_cache_r5 --output=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/logs/ACW_formal218_cache_r5_%A_%a.out --error=/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/logs/ACW_formal218_cache_r5_%A_%a.err /data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/scripts/ACW_formal218_cache_r5.sh",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5",
+      "script_sha256": "c798cbbc1655f5e70249649d2c45a491b042bd383ca3fc678716dab874d0ecb7",
+      "host": "gpu",
+      "submitted_epoch": 1793785255.8822622,
+      "job": 1772574,
+      "sbatch_result": "1772574"
+    }
+  },
+  "routes": {
+    "JSCC_5e9_none_440": {
+      "index": 0,
+      "energy_keV": 440,
+      "execution": "original_r4",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e9_none_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772388_0"
+    },
+    "JSCC_5e9_attenuation_440": {
+      "index": 1,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772573_1"
+    },
+    "JSCC_5e9_attenuation_tew_raw_440": {
+      "index": 2,
+      "energy_keV": 440,
+      "execution": "original_r4",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e9_attenuation_tew_raw_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772388_2"
+    },
+    "JSCC_5e9_attenuation_tew_pool3_440": {
+      "index": 3,
+      "energy_keV": 440,
+      "execution": "original_r4",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e9_attenuation_tew_pool3_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772388_3"
+    },
+    "JSCC_5e10_none_440": {
+      "index": 4,
+      "energy_keV": 440,
+      "execution": "original_r4",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e10_none_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772388_4"
+    },
+    "JSCC_5e10_attenuation_440": {
+      "index": 5,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772573_5"
+    },
+    "JSCC_5e10_attenuation_tew_raw_440": {
+      "index": 6,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_tew_raw_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772573_6"
+    },
+    "JSCC_5e10_attenuation_tew_pool3_440": {
+      "index": 7,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_tew_pool3_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "job_root": "1772573_7"
+    },
+    "EHE_5e9_none_440": {
+      "index": 8,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_none_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_8"
+    },
+    "EHE_5e9_attenuation_440": {
+      "index": 9,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_9"
+    },
+    "EHE_5e9_attenuation_tew_raw_440": {
+      "index": 10,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_tew_raw_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_10"
+    },
+    "EHE_5e9_attenuation_tew_pool3_440": {
+      "index": 11,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_tew_pool3_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_11"
+    },
+    "EHE_5e10_none_440": {
+      "index": 12,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_none_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_12"
+    },
+    "EHE_5e10_attenuation_440": {
+      "index": 13,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_13"
+    },
+    "EHE_5e10_attenuation_tew_raw_440": {
+      "index": 14,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_tew_raw_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_14"
+    },
+    "EHE_5e10_attenuation_tew_pool3_440": {
+      "index": 15,
+      "energy_keV": 440,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_tew_pool3_440",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "job_root": "1772573_15"
+    },
+    "JSCC_5e9_none_218": {
+      "index": 0,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_none_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e9_none_440",
+      "parent440_condition": "JSCC_5e9_none_440",
+      "job_root": "1772574_0"
+    },
+    "JSCC_5e9_attenuation_218": {
+      "index": 1,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_440",
+      "parent440_condition": "JSCC_5e9_attenuation_440",
+      "job_root": "1772574_1"
+    },
+    "JSCC_5e9_attenuation_tew_raw_218": {
+      "index": 2,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_tew_raw_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e9_attenuation_tew_raw_440",
+      "parent440_condition": "JSCC_5e9_attenuation_tew_raw_440",
+      "job_root": "1772574_2"
+    },
+    "JSCC_5e9_attenuation_tew_pool3_218": {
+      "index": 3,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e9_attenuation_tew_pool3_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e9",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e9_attenuation_tew_pool3_440",
+      "parent440_condition": "JSCC_5e9_attenuation_tew_pool3_440",
+      "job_root": "1772574_3"
+    },
+    "JSCC_5e10_none_218": {
+      "index": 4,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_none_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal/JSCC_5e10_none_440",
+      "parent440_condition": "JSCC_5e10_none_440",
+      "job_root": "1772574_4"
+    },
+    "JSCC_5e10_attenuation_218": {
+      "index": 5,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_440",
+      "parent440_condition": "JSCC_5e10_attenuation_440",
+      "job_root": "1772574_5"
+    },
+    "JSCC_5e10_attenuation_tew_raw_218": {
+      "index": 6,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_tew_raw_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_tew_raw_440",
+      "parent440_condition": "JSCC_5e10_attenuation_tew_raw_440",
+      "job_root": "1772574_6"
+    },
+    "JSCC_5e10_attenuation_tew_pool3_218": {
+      "index": 7,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_tew_pool3_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/JSCC_5e10",
+      "iterations": 10000,
+      "save_step": 50,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/JSCC_5e10_attenuation_tew_pool3_440",
+      "parent440_condition": "JSCC_5e10_attenuation_tew_pool3_440",
+      "job_root": "1772574_7"
+    },
+    "EHE_5e9_none_218": {
+      "index": 8,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_none_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_none_440",
+      "parent440_condition": "EHE_5e9_none_440",
+      "job_root": "1772574_8"
+    },
+    "EHE_5e9_attenuation_218": {
+      "index": 9,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_440",
+      "parent440_condition": "EHE_5e9_attenuation_440",
+      "job_root": "1772574_9"
+    },
+    "EHE_5e9_attenuation_tew_raw_218": {
+      "index": 10,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_tew_raw_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_tew_raw_440",
+      "parent440_condition": "EHE_5e9_attenuation_tew_raw_440",
+      "job_root": "1772574_10"
+    },
+    "EHE_5e9_attenuation_tew_pool3_218": {
+      "index": 11,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_tew_pool3_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e9",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e9_attenuation_tew_pool3_440",
+      "parent440_condition": "EHE_5e9_attenuation_tew_pool3_440",
+      "job_root": "1772574_11"
+    },
+    "EHE_5e10_none_218": {
+      "index": 12,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_none_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_none_440",
+      "parent440_condition": "EHE_5e10_none_440",
+      "job_root": "1772574_12"
+    },
+    "EHE_5e10_attenuation_218": {
+      "index": 13,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_440",
+      "parent440_condition": "EHE_5e10_attenuation_440",
+      "job_root": "1772574_13"
+    },
+    "EHE_5e10_attenuation_tew_raw_218": {
+      "index": 14,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_tew_raw_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_tew_raw_440",
+      "parent440_condition": "EHE_5e10_attenuation_tew_raw_440",
+      "job_root": "1772574_14"
+    },
+    "EHE_5e10_attenuation_tew_pool3_218": {
+      "index": 15,
+      "energy_keV": 218,
+      "execution": "cache_r5",
+      "output": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_tew_pool3_218",
+      "input": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/inputs/EHE_5e10",
+      "iterations": 200,
+      "save_step": 1,
+      "parent440": "/data/run01/scxi717/lpz/20250307_JSCCGC_32x32x4_Shield_DiffEne_SPECT_PolarCoor/experiments/ELLIPSE500x300_H120/generated/ac225_water_corrections_20261103/formal_cache_r5/EHE_5e10_attenuation_tew_pool3_440",
+      "parent440_condition": "EHE_5e10_attenuation_tew_pool3_440",
+      "job_root": "1772574_15"
+    }
+  },
+  "execution_freeze": "afdb7ed238a3d8ca",
+  "plan_sha256": "5693c9326f899d4e2e057faba8ef67b9ecc89a35babc102759641335bd0920c7",
+  "maximum_concurrent_GPU_routes": 4,
+  "original_failed_and_cancelled_jobs_preserved": true,
+  "dependency218": "successful retained440 elements AND entire replacement440 array",
+  "submitted_epoch": 1793785257.1734326
+}

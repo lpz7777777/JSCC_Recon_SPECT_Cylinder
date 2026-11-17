@@ -1,0 +1,64 @@
+{
+  "flows": {
+    "new": {
+      "job": 1669255,
+      "algorithm": "v5 continuous-energy MLEM",
+      "events": 483743
+    },
+    "old": {
+      "job": 1739632,
+      "algorithm": "pre-June strict angular-kernel adaptation; OSEM8, full S per subset",
+      "events": 484815
+    }
+  },
+  "channel": "440_ComptonOnly",
+  "actual_primary_counts": [
+    1469053733,
+    3530946267,
+    0
+  ],
+  "gamma_total": 5000000000,
+  "iterations": [
+    100,
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "scale": 1036.9020496292537,
+  "basis": "density; old delivered density already equals point activity / effective volume",
+  "mip": {
+    "trim_layers_each_end": 8,
+    "removed_mm_each_end": 24.0,
+    "retained_indices_zero_based": [
+      8,
+      31
+    ],
+    "retained_layer_count": 24,
+    "retained_slab_height_mm": 72.0,
+    "retained_center_range_mm": [
+      -34.5,
+      34.5
+    ],
+    "retained_slab_bounds_mm": [
+      -36.0,
+      36.0
+    ],
+    "only_mip_display_selection": true,
+    "reconstruction_and_quantitative_metrics_unchanged": true
+  },
+  "common_full_color_max": 88.58770751953125,
+  "fixed_color_max": 10,
+  "smoothing": false,
+  "brightness_fit": false,
+  "cross_energy_sum": false,
+  "xy_sampling_mm": 3,
+  "interpolation": "same XY barycentric linear interpolation; no axial interpolation; tiny roundoff negatives corrected in display/ROI copy",
+  "limitations": [
+    "Different kernels, matched S, event selection, variable basis/initialization and solver; not a single-factor causal experiment.",
+    "OSEM8 iterations have eight subset updates; equal iteration numbers do not imply equal convergence.",
+    "Historical full-S-per-subset convention preserved; no extra factor 8 applied.",
+    "Current 440-keV/FOV120 adaptation, not an exact replay of original historical 511-keV S."
+  ]
+}

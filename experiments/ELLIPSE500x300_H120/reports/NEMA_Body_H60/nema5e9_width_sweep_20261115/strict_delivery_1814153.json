@@ -1,0 +1,63 @@
+{
+  "time": "2026-11-15T12:33:20.242849+00:00",
+  "passed": true,
+  "job": "1814153",
+  "execution_key": "0063d1f7dc9ddd01",
+  "frames": 600,
+  "branches": [
+    {
+      "width_percent": 100,
+      "frames": 200,
+      "seconds_per_iteration": 0.8537510112673045,
+      "chosen": "grouped_sync",
+      "final_sha256": "2507847e8be7a3571738e754a3588b9659dd6a1f810badcf56b554e1db31b9b8"
+    },
+    {
+      "width_percent": 80,
+      "frames": 200,
+      "seconds_per_iteration": 0.8525011657319963,
+      "chosen": "grouped_sync",
+      "final_sha256": "da3e382d48a73a17565a618e8f946eccca0af52c74c091d28341d245fd6caa0f"
+    },
+    {
+      "width_percent": 60,
+      "frames": 200,
+      "seconds_per_iteration": 0.8437240209385752,
+      "chosen": "grouped_sync",
+      "final_sha256": "009fb7b9d5334a8a982ca7643ec4cb6bf069f48bf739f4e62a0d0d727229178b"
+    }
+  ],
+  "benchmark": {
+    "chosen": "grouped_sync",
+    "times": {
+      "baseline": 246.46673584450036,
+      "cache": 245.20071576163173,
+      "grouped_sync": 41.77943190932274,
+      "grouped_prefetch": 40.99363678600639
+    },
+    "bitwise_gates": {
+      "baseline": true,
+      "cache": true,
+      "grouped_sync": true,
+      "grouped_prefetch": true
+    },
+    "cache_equivalent": true,
+    "no_width_model_comparison_in_timing": true
+  },
+  "physical_resolution_certified": false,
+  "image_comparison_completed": false,
+  "inherited_checkpoint_count": 199,
+  "historical_comparison": {
+    "relative_L2": 0.00040162409911915126,
+    "bitwise": false,
+    "threshold": 1e-05,
+    "reference_job": 1669255,
+    "within_original_threshold": false,
+    "continuation_authorized": true,
+    "policy": "Record original 1e-5 threshold and actual error; nonfinite remains fatal. User explicitly accepts the historical discrepancy; do not relabel it as a passing regression."
+  },
+  "accepted_continuation_does_not_change_historical_pass_status": true,
+  "member_count": 791,
+  "accounting": "1814153|COMPLETED|0:0\n1814153.batch|COMPLETED|0:0\n1814153.extern|COMPLETED|0:0\n1814153.0|COMPLETED|0:0\n",
+  "archive_sha256": "759b7c51b76eb0f2b01d58031e78b9599c0b9494b27ca813ce1299f1ab25242c"
+}

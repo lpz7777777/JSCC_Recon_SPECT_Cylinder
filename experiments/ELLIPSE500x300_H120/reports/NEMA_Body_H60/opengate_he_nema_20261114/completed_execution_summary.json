@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "status": "COMPLETED",
+  "actual_same_process": false,
+  "controller_registration": "controller_delivery_r4_registration.json",
+  "controller_exit": "controller_delivery_r4_exit.json",
+  "scientific_release": "46d438089710a6ce",
+  "delivery_repair_release": "3770ff37dd2427ce",
+  "actual_imaging_primaries": 55000000000,
+  "additional_response_primaries": 4400000000,
+  "routes": 4,
+  "checkpoints": 800,
+  "visual_QA_pending": false,
+  "physical_calibration_passed": false,
+  "completed_Asia_Shanghai": "2026-11-14T19:42:01.568811+08:00",
+  "dose_delivery": {
+    "5e9": {
+      "actual_imaging_primaries": 5000000000,
+      "checkpoints": 400,
+      "CPU_elapsed_seconds": 814.5,
+      "numerical_QA": {
+        "440": {
+          "passed": true,
+          "iterations": 200,
+          "log_likelihood_minimum_increment": 1.0232657234882936
+        },
+        "218": {
+          "passed": true,
+          "iterations": 200,
+          "log_likelihood_minimum_increment": 1.1139612733823014
+        }
+      }
+    },
+    "5e10": {
+      "actual_imaging_primaries": 50000000000,
+      "checkpoints": 400,
+      "CPU_elapsed_seconds": 782.6560000000027,
+      "numerical_QA": {
+        "440": {
+          "passed": true,
+          "iterations": 200,
+          "log_likelihood_minimum_increment": 2.6837554073426872
+        },
+        "218": {
+          "passed": true,
+          "iterations": 200,
+          "log_likelihood_minimum_increment": 3.2711936505511403
+        }
+      }
+    }
+  },
+  "visual_QA_passed": true,
+  "result_report": "Analysis_Plots/research/opengate_he_vs_ehe_nema_20261114/index.html"
+}
